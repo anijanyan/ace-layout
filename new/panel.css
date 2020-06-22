@@ -1,0 +1,50 @@
+.panelbar {
+    display:flex;
+    height:30px;
+    background: #665a82;
+    background: #cecece;
+    color: #111;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    position: absolute;
+}
+.panelbar.vertical {
+}
+
+.panelbar.vertical .panelButton {
+}
+.panelbar.vertical.right .panelButton {
+}
+
+.panelButton {
+    cursor: default;
+    display:flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    transition: 0.5s background-color;
+    border-left: #b3b3b3 solid 1px;
+    user-select: none;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+.panelButton:hover {
+    background: #e0e0e0;
+/border-radius: 10px 10px 0 0;
+}
+.panelButton.selected {
+    background-color: #e7e7e7;
+}
+.panelButton.active {
+    background-color: whitesmoke!important;//rgb(14, 98, 165);
+    border-radius: 10px 10px 0 0;
+}
+.panelTitle {
+    flex: 1;
+    padding: 0 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

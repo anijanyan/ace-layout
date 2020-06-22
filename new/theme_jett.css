@@ -1,0 +1,453 @@
+
+
+.c9-menu-bar .c9-mbar-cont {
+    border-bottom: 0 !important;
+    z-index: 30000;
+}
+.c9-menu-btn {
+    color: #dcdfe5 !important;
+    line-height: 42px;
+}
+.c9-menu-btnDown,
+.c9-menu-btnOver {
+    background-color: #1c1d21 !important;
+    color: #dcdfe5;
+    border-color: #1c1d21;
+}
+
+
+
+/* @file @c9/ide/plugins/c9.ide.layout.classic/less/c9-menu-bar.less */
+.c9-menu-bar {
+    position: relative;
+    overflow: visible;
+    -webkit-user-select: none"; -moz-user-select: none; -ms-user-select: none"; user-select: none;
+}
+.c9-menu-bar:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background-repeat: 'repeat-x';
+    background-image: url(c9-repeat-x_flat_light@1x.png);
+    background-size: 32px 1500px;
+    background-color: #49a8fa;
+    content: "";
+    display: none;
+}
+.c9-menu-bar .c9-mbar-bcont {
+    position: relative;
+    overflow: visible;
+}
+.c9-menu-bar .c9-mbar-cont > *,
+.c9-menu-bar .c9-mbar-cont .c9-mbar-minimize {
+    height: 100% !important;
+}
+.c9-menu-bar .c9-mbar-cont {
+    position: relative;
+    overflow: hidden;
+    padding: 0 11px 0 33px;
+    margin: 0;
+    height: 40px;
+    background: #1c1d21;
+    box-shadow: 0 1px 0 0 transparent inset;
+    border-bottom: 1px solid #1c1d21;
+    border-top: 0px solid transparent;
+}
+.fullscreen .c9-menu-bar .c9-mbar-cont {
+    box-shadow: none;
+}
+.bartools {
+    padding-top: 0 !important;
+    padding-left: 50px !important;
+}
+.c9-menu-bar .c9-mbar-cont > div {
+    display: inline-block;
+    vertical-align: top;
+}
+.c9-menu-bar .c9-mbar-cont .c9-divider-double,
+.c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize {
+    border-right: 1px solid transparent !important;
+    box-shadow: 1px 0 0 0 transparent;
+}
+.c9-menu-bar .c9-mbar-cont .c9-divider-double {
+    border-left-width: 0;
+    height: 16px;
+    top: 1px;
+}
+.c9-menu-bar .c9-mbar-cont .c9-divider-double div {
+    border: 0 !important;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize {
+    cursor: pointer;
+    height: 25px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 31px;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:before {
+    content: "";
+    display: block;
+    border: 10px solid red;
+    border-color: transparent transparent #acacac transparent;
+    border-width: 5px 5px;
+    width: 0px;
+    margin: 5px 0 0 5px;
+    z-index: 0;
+    position: relative;
+    box-shadow: 0px 1px #949494;
+    top: 7px;
+    left: 10px;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:after {
+    content: "";
+    display: block;
+    border: 10px solid red;
+    border-color: transparent transparent #acacac transparent;
+    border-width: 4px 4px;
+    width: 0px;
+    margin: 7px 0 0 6px;
+    box-shadow: 0px 1px #949494;
+    position: relative;
+    left: 0px;
+    top: -15px;
+    top: -8px;
+    left: 10px;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:hover:before {
+    border-color: transparent transparent #999999 transparent;
+    box-shadow: 0px 1px #777777;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:hover:after {
+    border-color: transparent transparent #999999 transparent;
+    box-shadow: 0px 1px #777777;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-simple-btnDisabled.c9-mbar-minimize:hover {
+    background-position: 0 -70px;
+    cursor: default;
+}
+.c9-mbar-round {
+    background-repeat: no-repeat;
+    background-image: url(c9-no-repeat_flat_light@1x.png);
+    background-size: 480px 580px;
+    height: 37px;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 74px;
+    z-index: 999;
+    display: none;
+}
+.c9-mbar-round .mainlogo {
+    background-image: url("AWSCloud9_icon_white.svg");
+    display: block;
+    width: 31px;
+    height: 31px;
+    left: 36px;
+    pointer-events: all;
+    position: absolute;
+    text-indent: 100%;
+    outline: none;
+}
+.c9-mbar-round .mainlogo.update {
+    background-position: -96px -44px;
+}
+.updateAvailable .c9-mbar-round .mainlogo {
+    background: url("c9-no-repeat_flat_light@1x.png") no-repeat -96px -44px;
+    cursor: pointer;
+}
+.not-loggedin .c9-menu-bar .c9-mbar-bcont .c9-mbar-round {
+    top: 55px;
+}
+.readonly .c9-menu-bar .c9-mbar-bcont .c9-mbar-round {
+    top: 35px;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-activity {
+    background: url("c9-no-repeat_flat_light@1x.png") no-repeat -84px 0;
+    height: 10px;
+    left: 24px;
+    pointer-events: all;
+    position: absolute;
+    top: 4px;
+    width: 10px;
+    display: none;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-activity .light {
+    background: url("c9-no-repeat_flat_light@1x.png") no-repeat -102px -19px;
+    /* nothing */
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 10px;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-activity.saving .light {
+    animation: saving .4s linear 0 infinite;
+    background-position: -102px 0px !important;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-activity.saved .light {
+    background-position: -102px -19px !important;
+}
+.c9-menu-bar .c9-mbar-bcont .c9-activity.error .light {
+    background-position: -84px -19px !important;
+}
+.c9-menu-bar.minimized .c9-mbar-cont,
+.c9-menu-bar.minimized .c9-mbar-bcont .c9-mbar-minimize {
+    background-color: #131416;
+    background-image: url("c9-repeat-x_flat_light@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50% -13px;
+    cursor: pointer;
+    height: 7px;
+    box-shadow: 0 1px transparent inset;
+}
+.c9-menu-bar.minimized .c9-mbar-cont:hover,
+.c9-menu-bar.minimized .c9-mbar-bcont .c9-mbar-minimize:hover {
+    background-color: #0c0c0e;
+    background-position: 50% -21px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.08) inset, 0 6px 0 0 rgba(255, 255, 255, 0.05) inset;
+}
+.c9-menu-bar.minimized .c9-mbar-cont * {
+    display: none;
+}
+.c9-menu-bar.minimized .c9-mbar-bcont .c9-mbar-minimize {
+    top: 1px;
+}
+/* @file @c9/ide/plugins/c9.ide.layout.classic/less/c9-menu-btn.less */
+.c9-menu-btn {
+    height: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    cursor: default;
+    position: relative;
+    display: inline-block;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+    padding: 0px 9px 0 9px;
+    text-shadow: 0px 0px 0px transparent;
+    -webkit-user-select: none"; -moz-user-select: none; -ms-user-select: none"; user-select: none;
+}
+.c9-menu-btnOver {
+    background-color: #e6e6e6;
+    box-shadow: none;
+    color: #313236;
+}
+.c9-menu-btnDown {
+    font-weight: 300;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+    border: 1px solid #dedede;
+    border-width: 0 1px;
+    padding: 0px 8px 0 8px;
+}
+.c9-menu-btnDown.submenu {
+    z-index: 100000000;
+}
+.c9-menu-btnDisabled.c9-menu-btn .c9-label {
+    color: #bdbdbd;
+}
+.c9-menu-btn .icon {
+    background-image: url(c9-repeat-x_flat_light@1x.png);
+    background-size: 32px 1500px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 4px;
+    right: 0;
+    top: 4px;
+    bottom: 0;
+    display: none;
+}
+.c9-menu-btn.nosize .icon {
+    background-size: auto;
+}
+.c9-menu-btn.float-right {
+    float: right;
+}
+.c9-menu-btn.preferences {
+    padding: 21px !important;
+    margin-left: 0;
+}
+.c9-menu-btn.preferences .icon {
+    background-position: 50% -364px;
+    display: block;
+    top: 5px !important;
+    height: 25px !important;
+}
+.c9-menu-btn.share .icon {
+    background-position: 50% -1367px;
+    display: block;
+}
+.c9-menu-btn.notifications .icon {
+    background-position: 50% -1400px;
+    display: block;
+}
+.c9-menu-btnIcon {
+    padding-left: 24px;
+}
+.c9-menu-btnIcon .icon {
+    display: block;
+}
+.c9-menu-btnEmpty {
+    padding-left: 7px;
+}
+.c9-menu-btnEmpty .icon {
+    left: 0;
+    top: 0;
+}
+.c9-menu-btnDisabled {
+    color: gray;
+}
+.c9-menu-btn.c9btn {
+    min-width: 12px;
+    font-weight: bold;
+    background-position: 2px 50%;
+}
+.c9-menu-btn.c9btn.update {
+    color: #BFD34F;
+}
+.c9-menu-btn.c9btn.offline {
+    color: #d22a3f;
+    text-shadow: 0 1px black;
+}
+
+
+/* @file @c9/ide/plugins/c9.ide.layout.classic/less/menu.less */
+.c9menu {
+    margin: -1px 0 0 0;
+    padding: 7px 0 7px 0;
+    z-index: 10000;
+    position: absolute;
+    overflow: visible;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #313236;
+    cursor: default;
+    display: none;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
+    background-color: #ffffff;
+    text-shadow: none;
+    border-radius: 0 4px 4px 4px;
+}
+.c9menu > div.menu_item {
+    padding: 4px 22px 4px 26px;
+    white-space: nowrap;
+    cursor: default;
+    z-index: 1100000;
+    height: 13px;
+}
+.c9menu > div.menu_item.update {
+    background-color: #63acff;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: none;
+}
+.c9menu > div.menu_item.hover {
+    background-color: #63acff;
+    color: #ffffff;
+}
+.c9menu > div.menu_divider {
+    overflow: visible;
+    padding: 0;
+    font-size: 1px;
+    margin: 6px 9px;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid transparent;
+    height: 0;
+}
+.c9menu > div.menu_item > span {
+    right: 15px;
+    margin-top: 0px;
+    z-index: 10;
+    text-align: right;
+    padding-left: 15px;
+    float: right;
+}
+.c9menu > div.submenu > span {
+    background: url("submenu_arrow.gif") no-repeat right 0;
+    width: 4px;
+    height: 7px;
+    display: block;
+    position: absolute;
+    right: 11px;
+    margin: 4px 0 0 0;
+    z-index: 10;
+}
+.c9menu > div.submenu.hover > span {
+    background: url("submenu_arrow.gif") no-repeat right -15px;
+}
+.c9menu > div.menu_item.disabled {
+    color: #9c9c9c;
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+}
+.c9menu > div.menu_item > u {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 6px;
+    margin-top: -1px;
+}
+.c9menu > div.menu_item > a {
+    float: left;
+}
+.c9menu > div.menu_item.selected > u {
+    background: url("radio.gif") no-repeat 0 0;
+}
+.c9menu > div.menu_item.selected:hover > u {
+    background: url("radio.gif") no-repeat 0 -16px;
+}
+.c9menu > div.menu_item.checked > u {
+    background: url("check.gif") no-repeat 0 0;
+}
+.c9menu > div.menu_item.checked:hover > u {
+    background: url("check.gif") no-repeat 0 -16px;
+}
+.c9menu > div.menu_item.disabled > u {
+    opacity: 0.2;
+}
+.c9menu > div.menu_item.checked.disabled > u {
+    background: url("check.gif") no-repeat 0 0;
+}
+.c9menu > div.menu_item.selected.disabled > u {
+    background: url("radio.gif") no-repeat 0 0;
+}
+
+/* Menu Cloud 9 Icon */
+.c9-menu-btn.c9btn {
+    font-size: 0px !important;
+    padding: 4px 11px 11px 11px !important;
+    z-index: inherit;
+    line-height: 28px;
+}
+.c9-menu-btn.c9btn {
+    background-image: url("AWSCloud9_icon_white.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 50% !important;
+}
+.c9-menu-btnDown.c9btn {
+    border: 0 !important;
+}
+/* Menu hover animate bottom border */
+.c9-menu-bar .c9-menu-btn:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+.c9-menu-bar .c9-menu-btnOver:after {
+    visibility: visible;
+    transform: scaleX(1);
+}

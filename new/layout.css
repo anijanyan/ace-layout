@@ -1,0 +1,125 @@
+.splitter {
+    background: #000;
+    z-index:10;
+    position: absolute;
+}
+
+.splitter-h {
+    width: 1px;
+    cursor: ew-resize;
+    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);
+}
+
+.splitter-v {
+    height: 1px;
+    cursor: ns-resize;
+    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);
+}
+.splitter-h div {
+    margin-left: -2px;
+    width: 5px;
+//     background-color: #cccc;
+    height: 100%
+}
+.splitter-v div {
+    margin-top: -2px;
+    height: 5px;
+//     background-color: #cccc;
+}
+.splitter-h:hover {
+//  margin-left: -2px;
+//  width:3px;
+}
+.splitter-v:hover {
+//     margin-top: -1px;
+//     height:3px;
+}
+.splitter:hover {
+//     border-color: #000;
+//    background-color: #f00;
+}
+.box {
+    overflow: hidden;
+/opacity: 0.9
+}
+
+.menuToolBar {
+    display: flex;
+    height: 30px;
+    background: #665a82;
+    background: #cecece;
+    color: #111;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    position: absolute;
+}
+
+.findbar {
+    display:flex;
+    height:30px;
+    background: #665a82;
+    background: #cecece;
+    color: #111;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+.fullScreenParent {overflow: visible}
+.fullScreenNode {
+    position: fixed!important;
+    z-index: 1!important;
+}
+.fullScreenSibling {
+    z-index: 0!important;
+}
+
+
+body {
+    overflow: hidden!important;
+    width: 100%;
+    height: 100%;
+}
+
+.consoleCloseBtn {
+    background-repeat: no-repeat;
+    background-size: 22px 66px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1000;
+    padding: 0px;
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    height: 24px;
+}
+
+.animateBoxes {
+    transition-duration: 0.15s;
+    transition-property: top, left, width, height, transform;
+    transition-timing-function: cubic-bezier(.10, .10, .25, .90);
+}
+
+
+.animateBoxes * {
+    transition-duration: inherit;
+    transition-property: top, left, width, height, transform;
+    transition-timing-function: inherit;
+}
+
+
+.tabPanel {
+    background: whitesmoke;
+}
+
+.inheritCursor *{
+    cursor: inherit;
+}
+

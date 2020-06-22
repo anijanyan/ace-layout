@@ -1,0 +1,51 @@
+.toggle-block {
+    position: absolute;
+    /*border: 1px solid black;*/
+}
+
+
+.toggle-bar {
+    display:flex;
+    background: #cecece;
+    color: #111;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+    position: absolute;
+    user-select: none;
+    cursor: pointer;
+}
+.toggleBlockDragging {
+    pointer-events: none;
+    overflow-y: hidden;
+}
+.toggleBlockDragging  .title{
+    pointer-events: none;
+}
+
+.toggle-bar .title {
+    position: absolute;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+}
+
+.toggle-bar-h {
+    width: 20px;
+    height: 100%;
+}
+
+.toggle-bar-v {
+    height: 20px;
+    width: 100%;
+}
+.toggle-bar-h div {
+    margin-left: -2px;
+    width: 5px;
+    height: 100%
+}
+.toggle-bar-v div {
+    margin-top: -2px;
+    height: 5px;
+}
