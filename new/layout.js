@@ -153,6 +153,7 @@ define(function(require, exports, module) {
                     new Panel({
                         panelTitle: "Navigate",
                         panelBody: new Box({
+                            size: "200px",
                             color: "yellow"
                         }),
                         location: "left",
@@ -161,6 +162,7 @@ define(function(require, exports, module) {
                     new Panel({
                         panelTitle: "Commands",
                         panelBody: new Box({
+                            size: "200px",
                             color: "orange"
                         }),
                         location: "left",
@@ -169,6 +171,7 @@ define(function(require, exports, module) {
                     new Panel({
                         panelTitle: "Changes",
                         panelBody: new Box({
+                            size: "200px",
                             color: "violet"
                         }),
                         location: "left",
@@ -181,6 +184,7 @@ define(function(require, exports, module) {
                     new Panel({
                         panelTitle: "Outline",
                         panelBody: new Box({
+                            size: "200px",
                             color: "red"
                         }),
                         location: "right"
@@ -188,6 +192,7 @@ define(function(require, exports, module) {
                     new Panel({
                         panelTitle: "Debugger",
                         panelBody: new Box({
+                            size: "200px",
                             color: "yellow"
                         }),
                         location: "right"
@@ -323,15 +328,11 @@ try {
         tabState = JSON.parse(localStorage.tabs);
     if (localStorage.panels)
         panelState = JSON.parse(localStorage.panels);
-    console.log(localStorage);
 } catch(e) {}
 tabManager.setState(tabState);
-// onResize();
-console.log(panelState);
 panelManager.setState(panelState);
+
 onResize();
 
 mainBox[1].addButtonsToChildPane();
-
-
 });
