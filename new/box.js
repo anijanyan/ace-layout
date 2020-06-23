@@ -314,9 +314,9 @@ define(function(require, exports, module) {
             this.ratio = Math.max(this.minRatio, Math.min(this.ratio, this.maxRatio));
 
             var ratio = this.ratio;
-            if (this[0] && this[0].hidden) {
+            if (!this[0] || this[0].hidden) {
                 ratio = 0;
-            } else if (this[1] && this[1].hidden) {
+            } else if (!this[1] || this[1].hidden) {
                 ratio = 1;
             }
 
@@ -525,13 +525,16 @@ define(function(require, exports, module) {
             if (previousBox && previousBox.parent === this) {
                 if (this.fixedChild && this.fixedChild == previousBox) {
                     box.fixedSize = previousBox.fixedSize;
-                    box.size = previousBox.size;
+                    if (!box.size) box.size = previousBox.size;
                     previousBox.fixedSize = previousBox.size = null;
                     this.fixedChild = box;
                 }
 
                 previousBox.remove();
             }
+
+            if (!this.fixedChild)
+                this.calculateChildRatio(box);
 
             this.recalculateAllMinSizes();
             this.resize();
