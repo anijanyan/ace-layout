@@ -10,28 +10,7 @@ define(function(require, exports, module) {
         constructor(options) {
             this.base = options.base;
             this.locations = options.locations;
-            // this.initLocations(options.locations);
         }
-
-        // initLocations(locations) {
-        //     this.locations = {};
-        //
-        //     for (var location in locations) {
-        //         this.initLocation(location, locations[location])
-        //
-        //     }
-        // }
-        //
-        // initLocation(location, locationBox) {
-        //     var parent = locationBox.parent;
-        //     this.locations[location] = {
-        //         parent: parent,
-        //         index: parent[0] === locationBox ? 0 : 1,
-        //         box: locationBox,
-        //         fixedSize: locationBox.fixedSize,
-        //         size: locationBox.size
-        //     };
-        // }
 
         toJSON() {
             return {
@@ -114,14 +93,12 @@ define(function(require, exports, module) {
 
             var index = locationData.index;
             var parent = locationData.parent;
+            panel.panelBody.size = locationData.size;
 
             var newBox = parent.addChildBox(index, panel.panelBody);
 
-            if (locationData.fixedSize) {
-                newBox.fixedSize = locationData.fixedSize;
-                newBox.size = locationData.size;
+            if (newBox.fixedSize && !parent.fixedChild)
                 parent.fixedChild = newBox;
-            }
 
             this.locations[location].box = newBox;
 
@@ -129,14 +106,11 @@ define(function(require, exports, module) {
         }
 
         inactivatePanel(panel) {
-            // var location = panel.location;
             var location = panel.parent.position;
             if (!this.locations[location])
                 return;
 
             var locationBox = this.locations[location].box;
-
-            // this.initLocation(location, locationBox);
 
             locationBox.hide();
         }
