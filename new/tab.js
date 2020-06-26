@@ -30,6 +30,7 @@ var Tab = class Tab {
         tabManager.inactivateTab(this);
     }
     close() {
+        tabManager.inactivateTab(this);
         this.element.remove();
     }
     set caption(value) {
