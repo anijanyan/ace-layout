@@ -22,10 +22,12 @@ var Tab = class Tab {
     activate() {
         this.active = true;
         this.element.classList.add("active");
+        tabManager.activateTab(this);
     }
     inactivate() {
         this.active = false;
         this.element.classList.remove("active");
+        tabManager.inactivateTab(this);
     }
     close() {
         this.element.remove();

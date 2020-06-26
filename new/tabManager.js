@@ -2,6 +2,11 @@ define(function(require, exports, module) {
     var dom = require("ace/lib/dom");
     var lib = require("new/lib");
 
+    var Editor = require("ace/editor").Editor;
+    var EditSession = require("ace/edit_session").EditSession;
+    var Renderer = require("ace/virtual_renderer").VirtualRenderer;
+    var theme = require("ace/theme/textmate");
+
     var {Box, Pane} = require("new/box");
 
     exports.TabManager = class TabManager {
@@ -81,6 +86,53 @@ define(function(require, exports, module) {
         }
         getTabs() {
 
+        }
+
+        activateTab(tab) {
+            var parentBox = tab.parent.parent;
+
+            function initBoxTabEditor() {
+                tab.editorType = tab.editorType || "default";
+                if (!parentBox.tabEditorElements) parentBox.tabEditorElements = {};
+                if (!parentBox.tabEditors) parentBox.tabEditors = {};
+                var tabEditorType = tab.editorType;
+
+                if (!parentBox.tabEditorElements[tabEditorType]) {
+                    parentBox.currentTabEditorElement = document.createElement("div");
+                    parentBox.currentTabEditorElement.style.cssText = "position: absolute; top:0px; bottom:0px";
+                    parentBox.tabEditor = new Editor(new Renderer(parentBox.currentTabEditorElement, theme));
+
+                    if (!tab.session)
+                        tab.session = parentBox.tabEditor.getSession();
+
+                    parentBox.tabEditorElements[tabEditorType] = parentBox.currentTabEditorElement;
+                    parentBox.tabEditors[tabEditorType] = parentBox.tabEditor;
+                } else {
+                    parentBox.currentTabEditorElement = parentBox.tabEditorElements[tabEditorType];
+                    parentBox.tabEditor = parentBox.tabEditors[tabEditorType];
+                }
+
+                parentBox.tabEditorBoxElement.appendChild(parentBox.currentTabEditorElement);
+            }
+
+            function initTabSession() {
+                if (!tab.session)
+                    tab.session = new EditSession("");
+
+                parentBox.tabEditor.setSession(tab.session);
+            }
+
+            initBoxTabEditor();
+            initTabSession();
+
+            parentBox.resize();
+        }
+
+        inactivateTab(tab) {
+            var parentBox = tab.parent.parent;
+
+            parentBox.currentTabEditorElement.remove();
+            parentBox.tabEditor = null;
         }
 
     }

@@ -32,10 +32,98 @@ define(function(require, exports, module) {
         }
         close() {
             var element = this.element;
-            
+
             var rect = element.getBoundingClientRect();
             element.style.top = rect.top + rect.height + "px";
         }
+    }
+
+    class AceEditor {
+        draw() {
+
+        }
+        setBox() {
+
+        }
+        focus() {
+
+        }
+    }
+
+    class PreviewEditor {
+        draw() {
+
+        }
+        setBox() {
+
+        }
+        focus() {
+
+        }
+    }
+
+    class ImageEditor {
+        draw() {
+
+        }
+        setBox() {
+
+        }
+        focus() {
+
+        }
+    }
+
+    class Terminal {
+        draw() {
+
+        }
+        setBox() {
+
+        }
+        focus() {
+
+        }
+    }
+
+    class HexEditor {
+        draw() {
+
+        }
+        setBox() {
+
+        }
+        focus() {
+
+        }
+    }
+
+    class TextAreaEditor {
+        draw() {
+
+        }
+        setBox() {
+
+        }
+        focus() {
+
+        }
+    }
+
+    class OutputEditor {
+        draw() {
+
+        }
+        setBox() {
+
+        }
+        focus() {
+
+        }
+    }
+
+    class OptionsEditor {
+
     }
 
     document.body.innerHTML = "";
@@ -126,8 +214,8 @@ define(function(require, exports, module) {
                     isMain: true,
                     size: "100px",
                     buttonList: [{class: "consoleCloseBtn", title: "F6", onclick: function () {
-                        mainBox[1].hide();
-                    }}],
+                            mainBox[1].hide();
+                        }}],
                 }),
             }),
             toolBars: {},
@@ -150,7 +238,7 @@ define(function(require, exports, module) {
         addTransitioningToElement(element) {
             Box.enableAnimation()
             // window.addEventListener('transitionend', function x(e) {
-                // console.log(e)
+            // console.log(e)
             // })
             element.addEventListener('transitionend', function x() {
                 element.removeEventListener('transitionend', x);
@@ -199,45 +287,52 @@ define(function(require, exports, module) {
         }
     });
 
-window.onbeforeunload = function() {
-    localStorage.tabs = JSON.stringify(tabManager.toJSON());
-    localStorage.panels = JSON.stringify(panelManager.toJSON());
-};
+    window.ondblclick = function(e) {
+        var host = lib.findHost(e.target, Pane);
+        if (!host) return;
+        console.log(host);
+        host.toggleMaximize()
+    };
 
-tabManager = new TabManager({
-    main: mainBox[0],
-    console: mainBox[1],
-});
+    window.onbeforeunload = function() {
+        localStorage.tabs = JSON.stringify(tabManager.toJSON());
+        localStorage.panels = JSON.stringify(panelManager.toJSON());
+    };
 
-panelManager = new PanelManager({
-    base: base,
-    locations: {
-        left: {
-            parent: base,
-            index: 0,
-            size: "200px"
-        },
-        right: {
-            parent: base[1],
-            index: 1,
-            size: "200px"
+    tabManager = new TabManager({
+        main: mainBox[0],
+        console: mainBox[1],
+    });
+
+    panelManager = new PanelManager({
+        base: base,
+        locations: {
+            left: {
+                parent: base,
+                index: 0,
+                size: "200px"
+            },
+            right: {
+                parent: base[1],
+                index: 1,
+                size: "200px"
+            }
         }
-    }
 
-});
+    });
 
-var tabState = {};
-var panelState = {};
-try {
-    if (localStorage.tabs)
-        tabState = JSON.parse(localStorage.tabs);
-    if (localStorage.panels)
-        panelState = JSON.parse(localStorage.panels);
-} catch(e) {}
-tabManager.setState(tabState);
-panelManager.setState(panelState);
+    var tabState = {};
+    var panelState = {};
+    try {
+        if (localStorage.tabs)
+            tabState = JSON.parse(localStorage.tabs);
+        if (localStorage.panels)
+            panelState = JSON.parse(localStorage.panels);
+    } catch(e) {}
+    tabManager.setState(tabState);
+    panelManager.setState(panelState);
 
-onResize();
+    onResize();
 
-mainBox[1].addButtonsToChildPane();
+    mainBox[1].addButtonsToChildPane();
 });

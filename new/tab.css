@@ -135,3 +135,7 @@
     box-shadow: 0 0 200px rgba(255, 255, 255, 0.15) inset;
     outline: 1px solid black;
 }
+
+.tab-editor {
+    position: absolute;
+}

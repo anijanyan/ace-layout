@@ -304,6 +304,14 @@ define(function(require, exports, module) {
             h -= this.padding.top + this.padding.bottom;
             x = this.padding.left;
             y = this.padding.top;
+
+            if (this.tabEditor) {
+                lib.setBox(this.currentTabEditorElement, x, y, w, h);
+
+                this.tabEditor.resize();
+            }
+
+
             if (this.fixedChild) {
                 var size = this.fixedChild.fixedSize;
                 if (this.fixedChild === this[1]) {
@@ -572,6 +580,11 @@ define(function(require, exports, module) {
         draw() {
             super.draw();
             this.element.classList.add("tabPanel");
+
+            this.tabEditorBoxElement = dom.buildDom(["div", {
+                class: `tab-editor`
+            }]);
+            this.element.appendChild(this.tabEditorBoxElement);
 
             return this.element;
         }
