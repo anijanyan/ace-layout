@@ -311,7 +311,6 @@ define(function(require, exports, module) {
                 this.tabEditor.resize();
             }
 
-
             if (this.fixedChild) {
                 var size = this.fixedChild.fixedSize;
                 if (this.fixedChild === this[1]) {
@@ -645,6 +644,8 @@ define(function(require, exports, module) {
                 if (wrapper.isMain) {
                     root = wrapper;
                     wrapper = null;
+                    if (this.currentTabEditorElement)
+                        this.currentTabEditorElement.remove();//TODO
                 }
                 root.ratio = 1;
             }

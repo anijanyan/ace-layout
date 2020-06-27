@@ -333,8 +333,6 @@ define(function(require, exports, module) {
             } else {
                 finishDragging();
             }
-
-
         };
 
         event.capture(window, onMouseMove, onMouseUp);

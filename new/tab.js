@@ -30,7 +30,7 @@ var Tab = class Tab {
         tabManager.inactivateTab(this);
     }
     close() {
-        tabManager.inactivateTab(this);
+        if (this.active) tabManager.inactivateTab(this);
         this.element.remove();
     }
     set caption(value) {
@@ -225,6 +225,9 @@ var TabBar = class TabBar {
         var isAnchorTab = this.anchorTab === tab;
         this.removeTab(tab);
         this.removeSelection(tab);
+
+        tab.close();
+
         if (isActiveTab) {
             this.activeTab = null;
             this.activatePrevious(index);
@@ -232,8 +235,6 @@ var TabBar = class TabBar {
         if (isAnchorTab) {
             this.anchorTab = null;
         }
-
-        tab.close();
 
         this.render();
     }
