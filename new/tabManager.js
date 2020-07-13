@@ -73,7 +73,7 @@ define(function(require, exports, module) {
             var normalize = (box) => {
                 if (!box[0] && box.isMain)
                     this.setChildBoxData(box, [{type: "pane"}], 0)
-            }
+            };
 
             normalize(this.containers.main);
             normalize(this.containers.console);
@@ -101,6 +101,10 @@ define(function(require, exports, module) {
                     parentBox.currentTabEditorElement = document.createElement("div");
                     parentBox.currentTabEditorElement.style.cssText = "position: absolute; top:0px; bottom:0px";
                     parentBox.tabEditor = new Editor(new Renderer(parentBox.currentTabEditorElement, theme));
+
+                    parentBox.tabEditor.on("focus", function() {
+                        activeBox = parentBox;
+                    });
 
                     if (!tab.session)
                         tab.session = parentBox.tabEditor.getSession();

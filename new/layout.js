@@ -4,6 +4,9 @@ define(function(require, exports, module) {
     var lib = require("new/lib");
     var HashHandler = require("ace/keyboard/hash_handler").HashHandler;
     var keyUtil = require("ace/lib/keys");
+    var prompt = require("ace/ext/prompt").prompt;
+    var FilteredList= require("ace/autocomplete").FilteredList;
+    var whitespace = require("ace/ext/whitespace");
 
     dom.importCssString(require("ace/requirejs/text!new/layout.css"), "layout.css");
 
@@ -180,19 +183,90 @@ define(function(require, exports, module) {
     }
     searchManager = new SearchManager();
 
-    var menuKb = new HashHandler([
+    var hashHandler = new HashHandler([
         {
             bindKey: "F6",
             name: "F6",
             exec: function () {
                 mainBox[1].toggleShowHide();
             }
-        }
+        }, {
+            bindKey: {win: "Ctrl-P", mac: "Command-P"},
+            name: "openChangeMode",
+            exec: function () {
+                var editor = activeBox && activeBox.tabEditor;
+
+                var doclist = require("demo/kitchen-sink/doclist");
+                prompt.doclist = function(editor, callback) {
+                    var docsArray = doclist.docs;
+                    console.log(doclist);
+                    docsArray = docsArray.map(function(item) {
+                        return {value: item.name, path: item.path};
+                    });
+                    prompt(editor, "",  {
+                        name: "doclist",
+                        selection: [0, Number.MAX_VALUE],
+                        onAccept: function(data) {
+                            if (!data.item) return;
+
+                            var name = data.item.value;
+                            var tabBar = activeBox.tabBar;
+
+                            var found = false;
+                            tabBar.removeSelections();
+                            for (var tab of tabBar.tabList) {
+                                if (tab.tabTitle === name) {
+                                    tabBar.activateTab(tab);
+                                    found = true;
+                                    break;
+                                }
+                            }
+                            if (!found) {
+                                doclist.loadDoc(name, function(session) {
+                                    if (!session)
+                                        return;
+                                    whitespace.detectIndentation(session);
+
+                                    var tab = new Tab({
+                                        tabTitle: name,
+                                        active: true
+                                    });
+                                    tab.session = session;
+                                    tabBar.addTab(tab);
+                                });
+                            }
+                        },
+                        getPrefix: function(cmdLine) {
+                            var currentPos = cmdLine.getCursorPosition();
+                            var filterValue = cmdLine.getValue();
+                            return filterValue.substring(0, currentPos.column);
+                        },
+                        getCompletions: function(cmdLine) {
+                            function getFilteredCompletions(docs, prefix) {
+                                var resultCommands = JSON.parse(JSON.stringify(docs));
+
+                                var filtered = new FilteredList(resultCommands);
+                                return filtered.filterCompletions(resultCommands, prefix);
+                            }
+
+                            var prefix = this.getPrefix(cmdLine);
+                            var completions = getFilteredCompletions(docsArray, prefix);
+                            return completions.length > 0 ? completions : [{
+                                "value": "No mode matching",
+                                "error": 1
+                            }];
+                        }
+                    });
+                };
+
+                new prompt(editor, "", { $type: "doclist" });
+            }
+        },
     ]);
 
     event.addCommandKeyListener(window, function (e, hashId, keyCode) {
         var keyString = keyUtil.keyCodeToString(keyCode);
-        var command = menuKb.findKeyCommand(hashId, keyString);
+        var command = hashHandler.findKeyCommand(hashId, keyString);
         if (command) {
             event.stopEvent(e);
             command.exec();
@@ -203,6 +277,8 @@ window.onbeforeunload = function() {
     localStorage.tabs = JSON.stringify(tabManager.toJSON());
     localStorage.panels = JSON.stringify(panelManager.toJSON());
 };
+
+activeBox = null;//TODO
 
 tabManager = new TabManager({
     main: mainBox[0],
