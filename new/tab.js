@@ -1,22 +1,27 @@
-define(function(require, exports, module) {
-var dom = require("ace/lib/dom");
-var lib = require("new/lib");
-dom.importCssString(require("ace/requirejs/text!new/tab.css"), "tab.css");
-dom.importCssString(require("ace/requirejs/text!new/panel.css"), "panel.css");
+var ace = require("ace-builds");
+var dom = ace.require("ace/lib/dom");
+var lib = require("./lib");
+var oop = ace.require("ace/lib/oop");
+var {EventEmitter} = ace.require("ace/lib/event_emitter");
 
-var newTabCount = 1;//TODO
+dom.importCssString(require("text-loader!./tab.css"), "tab.css");
 
-var Tab = class Tab {
+
+class Tab {
     constructor(options) {
         this.active = options.active;
         this.tabIcon = options.tabIcon;
         this.tabTitle = options.tabTitle;
+        this.path = options.path;
+        this.preview = options.preview;
     }
     toJSON() {
         return {
-            tabTitle: this.tabTitle,
-            tabIcon: this.tabIcon,
+            tabTitle: this.tabTitle || undefined,
+            tabIcon: this.tabIcon || undefined,
             active: this.active || undefined,
+            path: this.path || undefined,
+            preview: this.preview || undefined,
         };
     }
     activate() {
@@ -24,14 +29,13 @@ var Tab = class Tab {
         this.element.classList.add("active");
         tabManager.activateTab(this);
     }
-    inactivate() {
+    deactivate() {
         this.active = false;
         this.element.classList.remove("active");
-        tabManager.inactivateTab(this);
+        tabManager.deactivateTab(this);
     }
     close() {
-        if (this.active) tabManager.inactivateTab(this);
-        this.element.remove();
+        if (this.parent) this.parent.closeTab(this);
     }
     set caption(value) {
         this.$caption = value
@@ -47,16 +51,18 @@ var Tab = class Tab {
     }
 
     draw() {
-        this.element = dom.buildDom(["div", {
-            class: "tab" + (this.active ? " active" : ""),
-            title: this.tabTitle
-        }, ["span", {
-            class: "tabIcon"
-        }, this.tabIcon], ["span", {
-            class: "tabTitle"
-        }, this.tabTitle], ["span", {
-            class: "tabCloseButton"
-        }]]);
+        this.element = dom.buildDom(["div", 
+            {
+                class: "tab" + (this.active ? " active" : ""),
+                title: this.path
+            }, 
+            ["span", { class: "tabIcon" }, this.tabIcon], 
+            ["span", { class: "tabTitle", ref: "$title" }, this.tabTitle], 
+            ["span", { class: "tabCloseButton" }],
+        ], null, this);
+        
+        if (this.preview)
+            this.element.style.fontStyle =  "italic"
 
         this.element.$host = this;
         return this.element;
@@ -64,11 +70,16 @@ var Tab = class Tab {
 
     update() {
     }
+    
+    get editor() {
+        if (this.parent.activeTab == this)
+            return this.parent.parent.editor
+    }
 };
 
-var {tabbarMouseDown} = require("new/mouse/tabbar_handler");
+var {tabbarMouseDown} = require("./mouse/tabbar_handler");
 
-var TabBar = class TabBar {
+class TabBar {
     activeTab = null;
     selectedTabs = [];
     box = [];
@@ -182,6 +193,11 @@ var TabBar = class TabBar {
         this.selectedTabs = [];
     }
 
+    scrollTabIntoView(tab) {
+        var index = this.tabList.indexOf(tab);
+        this.setScrollPosition((index + 1) * this.tabWidth);
+    }
+    
     activateTab(tab) {
         this.activeTabClicked = false;
         this.addSelection(tab);
@@ -195,7 +211,7 @@ var TabBar = class TabBar {
                 this.activeTabHistory.splice(this.activeTabHistory.indexOf(this.activeTab), 1);
 
             this.activeTabHistory.push(this.activeTab);
-            this.activeTab.inactivate();
+            this.activeTab.deactivate();
         }
         this.activeTab = tab;
         tab.activate();
@@ -208,6 +224,7 @@ var TabBar = class TabBar {
         var index = this.tabList.indexOf(tab);
         if (index >= 0)
             this.tabList.splice(index, 1);
+        tab.parent = null;
     }
 
     activatePrevious(index) {//TODO active tab history
@@ -221,13 +238,11 @@ var TabBar = class TabBar {
 
     closeTab(tab) {
         var index = this.tabList.indexOf(tab);
+        tabManager.deactivateTab(tab);
         var isActiveTab = this.activeTab === tab;
         var isAnchorTab = this.anchorTab === tab;
         this.removeTab(tab);
         this.removeSelection(tab);
-
-        tab.close();
-
         if (isActiveTab) {
             this.activeTab = null;
             this.activatePrevious(index);
@@ -235,6 +250,9 @@ var TabBar = class TabBar {
         if (isAnchorTab) {
             this.anchorTab = null;
         }
+
+        if (tab.element)
+            tab.element.remove();
 
         this.render();
     }
@@ -249,6 +267,9 @@ var TabBar = class TabBar {
     }
 
     addTab(tab, index) {
+        if (!(tab instanceof Tab)) {
+            tab = new Tab(tab);
+        }
         if (!tab.element) {
             tab.draw();
         }
@@ -266,6 +287,7 @@ var TabBar = class TabBar {
         }
 
         this.render();
+        return tab;
     }
 
     scrollLeft = 0;
@@ -333,9 +355,8 @@ var TabBar = class TabBar {
                     class: "tabContainer",
                     ref: "tabContainer",
                     onclick: this.onTabClick,
-                    onmousedown: function (e) {
-                        tabbarMouseDown(e, Tab, TabBar, true)
-                    },
+                    onmouseup: this.onTabMouseUp,
+                    onmousedown: this.onTabMouseDown,
                 }]
             ],
             ["span", {
@@ -385,7 +406,7 @@ var TabBar = class TabBar {
     }
 
     render() {
-        if (!this.width)
+        if (!this.width || this.freeze)
             return;
 
         var shadowWidth = 4;
@@ -416,8 +437,11 @@ var TabBar = class TabBar {
                 if (pos < min) {
                     pos = min;
                     min += shadowWidth;
+                    el.classList.add("scrolledLeft");
                 } else if (pos > maxPos) {
                     break;
+                } else {
+                    el.classList.remove("scrolledLeft");
                 }
 
                 el.style.width = this.tabWidth + "px";
@@ -443,6 +467,9 @@ var TabBar = class TabBar {
                 if (pos > max) {
                     pos = max;
                     max -= shadowWidth;
+                    el.classList.add("scrolledLeft");
+                } else {
+                    el.classList.remove("scrolledLeft");
                 }
 
                 el.style.width = this.tabWidth + "px";
@@ -569,24 +596,39 @@ var TabBar = class TabBar {
         var target = e.target;
         var tab = lib.findHost(target, Tab);
         if (tab) {
-            if (target.classList.contains("tabCloseButton")) {
+            if (e.button == 0 && target.classList.contains("tabCloseButton")) {
                 this.closeTab(tab);
+            } else if (e.button == 0 && tab.editor) {
+                tab.editor.focus();
+            } else if (e.button == 1) {
+                tab.close();
             }
         }
     }
     onTabClick = this.onTabClick.bind(this);
-
+    
+    onTabMouseUp(e) {
+        if (e.button == 1) {
+            var tab = lib.findHost(e.target, Tab);
+            if (tab)
+                tab.close();
+        }
+    }
+    onTabMouseUp = this.onTabMouseUp.bind(this);
+    
+    onTabMouseDown(e) {
+        if (e.button == 0)
+            tabbarMouseDown(e, Tab, TabBar, true)
+    }
+    onTabMouseDown = this.onTabMouseDown.bind(this)
+    
     onTabPlusClick(e) {
         this.removeSelections();
-        var tab = new Tab({
-            tabIcon: "J",
-            tabTitle: "Untitled " + newTabCount++,
-            active: true
-        });
-        this.addTab(tab);
+        tabManager.addNewTab(this.parent);
     }
     onTabPlusClick = this.onTabPlusClick.bind(this);
 };
+oop.implement(TabBar.prototype, EventEmitter);
 
 var Panel = class Panel {
     constructor(options) {
@@ -601,10 +643,10 @@ var Panel = class Panel {
         this.element.classList.add("active");
         panelManager.activatePanel(this);
     }
-    inactivate(autohide) {
+    deactivate(autohide) {
         this.active = false;
         this.element.classList.remove("active");
-        panelManager.inactivatePanel(this, autohide);
+        panelManager.deactivatePanel(this, autohide);
     }
 
     draw() {
@@ -686,7 +728,7 @@ var PanelBar = class PanelBar extends TabBar{
                     if (this.activeTabClicked) {
                         var activeTab = this.activeTab;
                         this.removeSelection(this.activeTab);
-                        this.activeTab.inactivate();
+                        this.activeTab.deactivate();
                         this.activeTab = null;
 
                         if (this.activeTabHistory.length && activeTab.autohide) {
@@ -729,4 +771,4 @@ exports.Tab = Tab;
 exports.TabBar = TabBar;
 exports.Panel = Panel;
 exports.PanelBar = PanelBar;
-});
+ 

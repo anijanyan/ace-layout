@@ -1,4 +1,3 @@
-define(function(require, exports, module) {
     exports.findHost = function(el, constructor) {
         while (el) {
             if (el.$host && (!constructor || el.$host.constructor === constructor)) return el.$host;
@@ -29,4 +28,3 @@ define(function(require, exports, module) {
         s.width = w + "px";
         s.height = h + "px";
     };
-});

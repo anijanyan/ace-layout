@@ -1,11 +1,12 @@
-define(function(require, exports, module) {
-var dom = require("ace/lib/dom");
-var HashHandler = require("ace/keyboard/hash_handler").HashHandler;
-var event = require("ace/lib/event");
-var keyUtil = require("ace/lib/keys");
-var lib = require("new/lib");
+var ace = require("ace-builds")
 
-dom.importCssString(require("ace/requirejs/text!new/theme_dark.css"), "x.css");
+var dom = ace.require("ace/lib/dom");
+var HashHandler = ace.require("ace/keyboard/hash_handler").HashHandler;
+var event = ace.require("ace/lib/event");
+var keyUtil = ace.require("ace/lib/keys");
+var lib = require("./lib");
+
+dom.importCssString(require("text-loader!./menu.css"), "menu.css");
 
 function getEdge(style, dir) {
     return parseInt(style["padding" + dir], 10) +
@@ -55,6 +56,7 @@ function getNextSibling(node, conditionFn, parentElement) {
 }
 
 class MenuManager {
+    static findHost = lib.findHost;
     menus = {};
     activeMenu = null;
 
@@ -68,7 +70,7 @@ class MenuManager {
         return item;
     }
 
-    addBypath(path, options) {
+    addByPath(path, options) {
         if (typeof path == "string") path = path.split("/");
         var item = this.menus;
         path.forEach(function(part) {
@@ -86,6 +88,7 @@ class MenuManager {
         item.checked = options.checked;
         item.disabled = options.disabled;
         item.className = options.className;
+        item.exec = options.exec;
     }
 
     getTarget(target) {
@@ -98,7 +101,7 @@ class MenuManager {
 
     bindKeys() {
         function isMenuBarItem(node) {
-            return node.classList.contains("c9-menu-btn");
+            return node.classList.contains("menuButton");
         }
         function isMenuPopupActiveItem(node) {
             return node.classList.contains("menu_item") && !node.classList.contains("disabled") && !node.isFiltered;
@@ -126,11 +129,11 @@ class MenuManager {
                     var activeMenu = menuManager.activeMenu;
                     if (!activeMenu.menuPopup && activeMenu !== menuManager.menuBar) {
                         activeMenu.close();
-                        menuManager.inactivateMenu();
+                        menuManager.closeMenu();
                     } else {
                         activeMenu.closeLastMenu();
                         if (!activeMenu.menuPopup && activeMenu === menuManager.menuBar) {
-                            menuManager.inactivateMenu();
+                            menuManager.closeMenu();
                         }
                     }
                 }
@@ -147,7 +150,7 @@ class MenuManager {
                                 activeMenu.moveOnTarget(prevMenu);
                             }
                         } else if (!activeMenu.element) {
-                            menuManager.inactivateMenu();
+                            menuManager.closeMenu();
                         }
 
                     }
@@ -273,13 +276,13 @@ class MenuManager {
             this.activeMenu.activateMenu();
         }
     }
-    inactivateMenu() {
+    closeMenu() {
         this.isActive = false;
         window.removeEventListener("mousedown", this.onMouseDown);
         window.removeEventListener("mousemove", this.onMouseMove);
         window.removeEventListener("resize", this.onWindowResize);
-        if (this.activeMenu.inactivateMenu) {
-            this.activeMenu.inactivateMenu();
+        if (this.activeMenu.closeMenu) {
+            this.activeMenu.closeMenu();
         }
         this.activeMenu = null;
         if (this.searchBox) {
@@ -289,11 +292,15 @@ class MenuManager {
 
     //event handlers
     onMouseDown(e) {
-        if (this.getTarget(e.target)) {
-            return;
+        var host = lib.findHost(e.target);
+        if (host && host.buttonElement) {
+            if (host.exec) {
+                host.exec()
+            }
+            
         }
 
-        this.inactivateMenu();
+        this.closeMenu();
     }
     onMouseDown = this.onMouseDown.bind(this);
 
@@ -347,6 +354,8 @@ class MenuManager {
         this.searchBox.open();
     }
 }
+MenuManager.prototype.add = MenuManager.prototype.addByPath
+
 
 class Menu {
     menuManager;
@@ -458,7 +467,7 @@ class Menu {
 }
 
 class MenuBar extends Menu {
-    selectedClass = "c9-menu-btnDown";
+    selectedClass = "menuButtonDown";
     menus;
     build(parent) {
         this.element = parent;
@@ -467,7 +476,7 @@ class MenuBar extends Menu {
             return item1.position - item2.position;
         }).map(item => {
             item.$buttonElement = dom.buildDom(["div", {
-                class: "c9-menu-btn" + (item.className ? " " + item.className : ""),
+                class: "menuButton" + (item.className ? " " + item.className : ""),
                 $host: item,
                 onmousedown: e => this.onMouseDown(e),
             }, item.label + ""], this.element);
@@ -479,7 +488,7 @@ class MenuBar extends Menu {
     activateMenu() {
         this.element.addEventListener("mousemove", this.onMouseMove);
     }
-    inactivateMenu() {
+    closeMenu() {
         this.unselectMenu();
         this.closeMenu();
         this.element.removeEventListener("mousemove", this.onMouseMove);
@@ -490,7 +499,7 @@ class MenuBar extends Menu {
         var activate = true;
         if (this.menuManager.isActive) {
             activate = this.menuManager.activeMenu !== this;
-            this.menuManager.inactivateMenu();
+            this.menuManager.closeMenu();
         }
         if (activate) {
             var target = e.target;
@@ -524,7 +533,7 @@ class MenuPopup extends Menu{
     position;
     isSubMenu = false;
     direction;
-    inactivateMenu() {
+    closeMenu() {
         this.close();
     }
     open() {
@@ -590,7 +599,7 @@ class MenuPopup extends Menu{
             [
                 "blockquote",
                 {
-                    class: "c9menu",
+                    class: "menu",
                     style: "display:block",
                     $host: this.menu,
                     onmousemove: this.onMouseMove,
@@ -737,7 +746,7 @@ class MenuPopup extends Menu{
 
         var host = target.$host;
         if (host.hotKey) {
-            this.menuManager.inactivateMenu();
+            this.menuManager.closeMenu();
         }
     }
     onClick = this.onClick.bind(this);
@@ -1196,7 +1205,7 @@ class MenuToolBar {
 
 
                     menuManager.addBypath(path, {
-                        className: path == "AWS Cloud9" ? "c9btn" : undefined,
+                        className: path == "AWS Cloud9" ? "btn" : undefined,
                         type: parts[2],
                         checked: parts[3] == "true",
                         disabled: parts[4] == "true",
@@ -1218,5 +1227,3 @@ class MenuToolBar {
 
 exports.MenuManager = MenuManager;
 exports.MenuToolBar = MenuToolBar;
-
-});

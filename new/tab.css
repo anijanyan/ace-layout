@@ -1,18 +1,30 @@
 .tabContainer {
-    height: 30px;
     align-items: stretch;
     justify-content: stretch;
 }
 
 .tabPlusButton {
+    --color: #ababab;
     cursor: pointer;
     display: flex;
     align-items: center;
     padding: 8px;
+    color: transparent;
 }
-.tabPlusButton:hover {
-    color: green;
+.tabPlusButton:after {
+    content: "";
+    background-image: linear-gradient(to bottom, transparent 40%, var(--color) 40%, var(--color) 60%,  transparent 60%),
+        linear-gradient(to right, transparent 40%, var(--color) 40%, var(--color) 60%, transparent 60%);
+        position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 8px;
+} 
+.tabPlusButton:hover:after {
+    --color: #35cc95
+    
 }
+
 .tabPlusButton:active {
     color: darkgreen
 }
@@ -21,14 +33,15 @@
     overflow: hidden;
     position: relative;
 }
-
+.tab.changed>.tabCloseButton {
+    background: #afafaf;
+    border: transparent;
+}
 
 .tabbar {
     display:flex;
-    height:30px;
-    background: #665a82;
-    background: #cecece;
-    color: #111;
+    background: var(--toolbar-background);
+    color: #333;
     align-items: stretch;
     justify-content: stretch;
     overflow: hidden;
@@ -36,22 +49,44 @@
     user-select: none;
 }
 .tab {
-    height: 30px;
-    /*min-width: 100px;*/
+    font-size: 12px;
+    height: 100%;
+     /*min-width: 100px;*/
     cursor: default;
     display:flex;
     align-items: center;
     padding: 0 10px;
     box-sizing: border-box;
-    background: #cecece;
-    transition: 0.5s background-color;
-    border-left: #b3b3b3 solid 1px;
-    border-right: #b3b3b3 solid 1px;
-    user-select: none;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    background: var(--toolbar-background); 
+    border-left: transparent solid 1px;
+    border-right: transparent solid 1px;
+    user-select: none; 
     position: absolute;
 }
+
+.tab.selected.active:after {
+    content: "";
+    border-bottom: 2px solid rgb(127, 127, 191);
+    width: calc(100% - 22px);
+    bottom: 0;
+    position: absolute;
+}
+.tab.focused.active:after {
+    content: "";
+    border-bottom: 3px solid rgb(127, 127, 191);
+    width: calc(100% - 22px);
+    bottom: 0;
+    position: absolute;
+}
+
+.tab.scrolledLeft {
+    border-color: var(--splitter-color);
+    box-shadow: 0px 0px 2px 0px #d0d0d0;
+}
+.tabIcon {
+    display: none;
+} 
+
 .tabLeftOverflow {
 
 }
@@ -69,31 +104,45 @@
 }
 
 .tab:hover {
-    background: #e0e0e0;
-    /border-radius: 10px 10px 0 0;
+    background: var(--hover-background); 
 }
 .tab.selected {
     background-color: #e7e7e7;
 }
 .tab.active {
-    background-color: whitesmoke!important;//rgb(14, 98, 165);
-    border-radius: 10px 10px 0 0;
+    background-color: whitesmoke;
+ }
+ .tabDragging > .tab.active {
+    background-color: #e7e7e7;
 }
+ 
 .tabCloseButton {
-    width:10px;
-    height:10px;
-    background-color: green;
+    transform: rotate(45deg);
+    width: 11px;
+    height: 11px;
     display: inline-block;
     border-radius: 10px;
     cursor: pointer;
-}
-.tabCloseButton:hover {
-    background-color: red;
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent 40%, #ababab 40%, #ababab 60%,  transparent 60%),
+        linear-gradient(to right, transparent 40%, #ababab 40%, #ababab 60%, transparent 60%);
 }
 
-.tabPlusButton {
-    cursor: pointer;
+
+.tabCloseButton:hover {
+    background-color: #ababab;
+    border: 1px solid #ababab;
+    background-image: linear-gradient(to bottom, transparent 40%, #fff 40%, #fff 60%,  transparent 60%),
+        linear-gradient(to right, transparent 40%, #fff 40%, #fff 60%, transparent 60%);
+
 }
+
+.tab.active .tabCloseButton,
+.tab:hover .tabCloseButton,
+.tabCloseButton.changed {
+    opacity: 1
+}
+
 .tabIcon {
     color: yellow;
     padding: 0 4px 0 0;
@@ -109,10 +158,7 @@
     white-space: nowrap;
 }
 
-.tabbar.vertical {
-    transform: rotate(90deg);
-    transform-origin: 0 100%;
-}
+ 
 
 .tabbar.vertical .tab {
     transform: rotate(180deg);

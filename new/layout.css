@@ -1,5 +1,9 @@
+body {
+    font-family: Tahoma, sans-serif;
+}
+
 .splitter {
-    background: #000;
+    background: var(--splitter-color);
     z-index:10;
     position: absolute;
 }
@@ -7,7 +11,6 @@
 .splitter-h {
     width: 1px;
     cursor: ew-resize;
-    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);
 }
 
 .splitter-v {
@@ -18,14 +21,12 @@
 .splitter-h div {
     margin-left: -2px;
     width: 5px;
-//     background-color: #cccc;
-    height: 100%
+     height: 100%
 }
 .splitter-v div {
     margin-top: -2px;
     height: 5px;
-//     background-color: #cccc;
-}
+ }
 .splitter-h:hover {
 //  margin-left: -2px;
 //  width:3px;
@@ -40,7 +41,6 @@
 }
 .box {
     overflow: hidden;
-/opacity: 0.9
 }
 
 .menuToolBar {
@@ -121,5 +121,75 @@ body {
 
 .inheritCursor *{
     cursor: inherit;
+}
+
+.panelbar {
+    background-color: var(--toolbar-background);
+    position: absolute;
+    box-sizing: border-box;
+}
+.panelbar.top, .tabbar {
+    border-bottom: 1px solid var(--splitter-color);
+    box-sizing: border-box;
+}
+.panelbar.bottom {
+    border-top: 1px solid var(--splitter-color);
+}
+
+body {
+    --toolbar-background: #f3f3f3;
+    --splitter-color: #d0d0d0;
+    --hover-background: #eaeaea;
+}
+
+.spacer {
+    flex: 1
+}
+.panelbar {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+.panelbar>* {
+    margin: 0 4px
+}
+.panelbar> button {
+    padding: 5px;
+}
+.panelbar> button, .panelbar> input  {
+    border: none;
+    color: #333
+}
+.panelbar> *:active,
+.panelbar> *:focus {
+    outline: 1px solid lightblue;
+    outline-offset: 1px
+}
+.panelbar> button {
+    background: transparent;
+    color: #0da6ff;
+}
+.panelbar> button:hover  {
+    background: var(--hover-background);
+    color: black
+}
+.panelbar> button[disabled] {
+    pointer-events: none;
+    color: gray!important;
+}
+
+.ace_editor.ace_listBox {
+    background: var(--toolbar-background)!important;
+    font-family: inherit;
+    border: none;
+}
+
+
+.ace_listBox .ace_ {
+    margin-left: 1em;
+}
+.ace_listBox .ace_header {
+    font-weight: bold;
+    margin-left: 0;
 }
 

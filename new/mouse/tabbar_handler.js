@@ -1,7 +1,8 @@
-define(function(require, exports, module) {
-    var event = require("ace/lib/event");
-    var dom = require("ace/lib/dom");
-    var lib = require("new/lib");
+import ace from "ace-builds";
+
+    var event = ace.require("ace/lib/event");
+    var dom = ace.require("ace/lib/dom");
+    var lib = require("../lib");
 
     var tabbarMouseDown = function(e, tabConstructor, tabBarConstructor, showSplit) {
         var divSplit, splitPosition, pane;
@@ -9,70 +10,70 @@ define(function(require, exports, module) {
             divSplit && divSplit.remove();
             divSplit = splitPosition = pane = null;
         }
-        if (showSplit) {
-            function showSplitPosition(e) {
-                var el = e.target;
-                if (tabBar) {
-                    if (divSplit) hideSplitPosition();
-                    return;
-                }
 
-                pane = lib.findHost(el);
+        function showSplitPosition(e) {
+            var el = e.target;
+            if (tabBar) {
+                if (divSplit) hideSplitPosition();
+                return;
+            }
 
-                // If aml is not the pane we seek, lets abort
-                if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
-                    if (divSplit) hideSplitPosition();
-                    return;
-                }
-                // Cannot split pane that would be removed later
-                if (pane.tabBar.tabList.length === 0) {
-                    if (divSplit) hideSplitPosition();
-                    return;
-                }
+            pane = lib.findHost(el);
 
-                var dark = false; // !tab || tab.classList.constains("dark");
-                if (!divSplit) {
-                    divSplit = document.createElement("div");
-                    document.body.appendChild(divSplit);
-                }
+            // If aml is not the pane we seek, lets abort
+            if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
+                if (divSplit) hideSplitPosition();
+                return;
+            }
+            // Cannot split pane that would be removed later
+            if (pane.tabBar.tabList.length === 0) {
+                if (divSplit) hideSplitPosition();
+                return;
+            }
 
-                divSplit.className = "split-area" + (dark ? " dark" : "");
+            var dark = false; // !tab || tab.classList.constains("dark");
+            if (!divSplit) {
+                divSplit = document.createElement("div");
+                document.body.appendChild(divSplit);
+            }
 
-                // Find the rotated quarter that we're in
-                var rect = pane.element.getBoundingClientRect();
-                // TODO add getContentRect?
-                // Get buttons height
-                var bHeight = pane.tabBar.element.clientHeight - 1;
-                rect = {
-                    left: rect.left,
-                    top: rect.top + bHeight,
-                    width: rect.width,
-                    height: rect.height - bHeight,
-                };
+            divSplit.className = "split-area" + (dark ? " dark" : "");
 
-                var left = (e.clientX - rect.left) / rect.width;
-                var right = 1 - left;
-                var top = (e.clientY - rect.top) / rect.height;
-                var bottom = 1 - top;
+            // Find the rotated quarter that we're in
+            var rect = pane.element.getBoundingClientRect();
+            // TODO add getContentRect?
+            // Get buttons height
+            var bHeight = pane.tabBar.element.clientHeight - 1;
+            rect = {
+                left: rect.left,
+                top: rect.top + bHeight,
+                width: rect.width,
+                height: rect.height - bHeight,
+            };
 
-                // Anchor to closes side
-                var min = Math.min(left, top, right, bottom);
+            var left = (e.clientX - rect.left) / rect.width;
+            var right = 1 - left;
+            var top = (e.clientY - rect.top) / rect.height;
+            var bottom = 1 - top;
 
-                if (min == left) {
-                    splitPosition = [true, false]; // Left
-                    lib.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
-                } else if (min == right) {
-                    splitPosition = [false, false];// Right
-                    lib.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
-                } else if (min == top) {
-                    splitPosition = [true, true];// Top
-                    lib.setBox(divSplit, rect.left, rect.top, rect.width, rect.height/ 2);
-                } else if (min == bottom) {
-                    splitPosition = [false, true]; // Bottom
-                    lib.setBox(divSplit, rect.left, rect.top+ rect.height / 2, rect.width, rect.height / 2);
-                }
+            // Anchor to closes side
+            var min = Math.min(left, top, right, bottom);
+
+            if (min == left) {
+                splitPosition = [true, false]; // Left
+                lib.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
+            } else if (min == right) {
+                splitPosition = [false, false];// Right
+                lib.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
+            } else if (min == top) {
+                splitPosition = [true, true];// Top
+                lib.setBox(divSplit, rect.left, rect.top, rect.width, rect.height / 2);
+            } else if (min == bottom) {
+                splitPosition = [false, true]; // Bottom
+                lib.setBox(divSplit, rect.left, rect.top + rect.height / 2, rect.width, rect.height / 2);
             }
         }
+
 
 
         if (e.target.classList.contains("tabCloseButton")) {//TODO not sure
@@ -333,6 +334,8 @@ define(function(require, exports, module) {
             } else {
                 finishDragging();
             }
+
+
         };
 
         event.capture(window, onMouseMove, onMouseUp);
@@ -341,4 +344,3 @@ define(function(require, exports, module) {
 
 
     exports.tabbarMouseDown = tabbarMouseDown;
-});

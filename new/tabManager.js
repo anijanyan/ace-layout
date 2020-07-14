@@ -1,139 +1,179 @@
-define(function(require, exports, module) {
-    var dom = require("ace/lib/dom");
-    var lib = require("new/lib");
+var ace = require("ace-builds");
 
-    var Editor = require("ace/editor").Editor;
-    var EditSession = require("ace/edit_session").EditSession;
-    var Renderer = require("ace/virtual_renderer").VirtualRenderer;
-    var theme = require("ace/theme/textmate");
+var lib = require("./lib");
+var dom = ace.require("ace/lib/dom");
+var oop = ace.require("ace/lib/oop");
+var {EventEmitter} = ace.require("ace/lib/event_emitter");
 
-    var {Box, Pane} = require("new/box");
+var Editor = ace.require("ace/editor").Editor;
+var EditSession = ace.require("ace/edit_session").EditSession;
+var Renderer = ace.require("ace/virtual_renderer").VirtualRenderer;
+var theme = ace.require("ace/theme/textmate");
 
-    exports.TabManager = class TabManager {
-        constructor(options) {
-            this.containers = {};
-            this.containers.console = options.console;
-            this.containers.main = options.main;
-        }
-        toJSON() {
-            return {
-                console: this.containers.console.toJSON(),
-                main: this.containers.main.toJSON(),
-            };
-        }
+var {Box, Pane} = require("./box");
 
-        setChildBoxData(box, boxData, index) {
-            if (!boxData[index])
-                return;
+class TabManager {
+    constructor(options) {
+        this.containers = {};
+        this.containers.console = options.console;
+        this.containers.main = options.main;
+        this.tabs = {};
+    }
+    toJSON() {
+        var containers = this.containers
+        return {
+            console: containers.console && containers.console.toJSON(),
+            main: containers.main && containers.main.toJSON(),
+        };
+    }
 
-            var boxType = boxData[index].type;
-            if (!box[index])
-                box.addChildBox(index, boxType === "pane" ? new Pane({tabList: {}}) : new Box({vertical: boxType === "vbox"}))
+    setChildBoxData(box, boxData, index) {
+        if (!boxData[index])
+            return;
 
-            this.setBoxData(box[index], boxData[index]);
+        var boxType = boxData[index].type;
+        if (!box[index])
+            box.addChildBox(index, boxType === "pane" ? new Pane({tabList: {}}) : new Box({vertical: boxType === "vbox"}))
 
-        }
-        setBoxData(box, boxData) {
-            if (!boxData) return;
-
-            var boxType = boxData.type;
-            if (boxData.fixedSize)
-                box.fixedSize = boxData.fixedSize;
-
-            if (boxType === "pane") {
-                if (boxData.tabBar) {
-                    box.tabBar.addTabList(boxData.tabBar.tabList);
-                    box.tabBar.scrollLeft = boxData.tabBar.scrollLeft;
-                }
-            } else {
-                box.hidden = boxData.hidden;
-                box.ratio = boxData.ratio;
-                this.setChildBoxData(box, boxData, 0);
-                this.setChildBoxData(box, boxData, 1);
-            }
-        }
-        setState(json) {
-            //TODO
-            if (this.containers.main[0]) {
-                this.containers.main[0].remove();
-            }
-            if (this.containers.main[1]) {
-                this.containers.main[1].remove();
-            }
-            if (this.containers.console[0]) {
-                this.containers.console[0].remove();
-            }
-            if (this.containers.console[1]) {
-                this.containers.console[1].remove();
-            }
-            //TODO
-            this.setBoxData(this.containers.main, json && json.main);
-            this.setBoxData(this.containers.console, json && json.console);
-
-            var normalize = (box) => {
-                if (!box[0] && box.isMain)
-                    this.setChildBoxData(box, [{type: "pane"}], 0)
-            }
-
-            normalize(this.containers.main);
-            normalize(this.containers.console);
-        }
-        clear() {
-
-        }
-        getPanes() {
-
-        }
-        getTabs() {
-
-        }
-
-        activateTab(tab) {
-            var parentBox = tab.parent.parent;
-
-            function initBoxTabEditor() {
-                tab.editorType = tab.editorType || "default";
-                if (!parentBox.tabEditorElements) parentBox.tabEditorElements = {};
-                if (!parentBox.tabEditors) parentBox.tabEditors = {};
-                var tabEditorType = tab.editorType;
-
-                if (!parentBox.tabEditorElements[tabEditorType]) {
-                    parentBox.currentTabEditorElement = document.createElement("div");
-                    parentBox.currentTabEditorElement.style.cssText = "position: absolute; top:0px; bottom:0px";
-                    parentBox.tabEditor = new Editor(new Renderer(parentBox.currentTabEditorElement, theme));
-
-                    if (!tab.session)
-                        tab.session = parentBox.tabEditor.getSession();
-
-                    parentBox.tabEditorElements[tabEditorType] = parentBox.currentTabEditorElement;
-                    parentBox.tabEditors[tabEditorType] = parentBox.tabEditor;
-                } else {
-                    parentBox.currentTabEditorElement = parentBox.tabEditorElements[tabEditorType];
-                    parentBox.tabEditor = parentBox.tabEditors[tabEditorType];
-                }
-
-                parentBox.tabEditorBoxElement.appendChild(parentBox.currentTabEditorElement);
-            }
-
-            function initTabSession() {
-                if (!tab.session)
-                    tab.session = new EditSession("");
-
-                parentBox.tabEditor.setSession(tab.session);
-            }
-
-            initBoxTabEditor();
-            initTabSession();
-
-            parentBox.resize();
-        }
-
-        inactivateTab(tab) {
-            var parentBox = tab.parent.parent;
-
-            parentBox.currentTabEditorElement.remove();
-            parentBox.tabEditor = null;
-        }
+        this.setBoxData(box[index], boxData[index]);
 
     }
-});
+    setBoxData(box, boxData) {
+        if (!boxData) return;
+
+        var boxType = boxData.type;
+        if (boxData.fixedSize)
+            box.fixedSize = boxData.fixedSize;
+
+        if (boxType === "pane") {
+            if (boxData.tabBar) {
+                box.tabBar.scrollLeft = boxData.tabBar.scrollLeft;
+                if (boxData.tabBar.tabList) {
+                    box.tabBar.freeze = true;
+                    boxData.tabBar.tabList.forEach((tab) => {
+                        tab = box.tabBar.addTab(tab)
+                        this.tabs[tab.path] = tab;
+                        if (tab.preview)
+                            this.previewTab = tab;
+                    })
+                    box.tabBar.freeze = false;
+                    box.tabBar.render();
+                }
+            }
+        } else {
+            box.hidden = boxData.hidden;
+            box.ratio = boxData.ratio;
+            this.setChildBoxData(box, boxData, 0);
+            this.setChildBoxData(box, boxData, 1);
+        }
+    }
+    setState(json) {
+        var setState = (box, json) => {
+            if (!box) return
+            box.removeAllChildren();
+            this.setBoxData(box, json);
+            if (!box[0] && box.isMain)
+                this.setChildBoxData(box, [{type: "pane"}], 0)
+            
+        };
+        
+        setState(this.containers.main, json && json.main);
+        setState(this.containers.console, json && json.console);
+    }
+    clear() {
+
+    }
+    getPanes() {
+
+    }
+    getTabs() {
+
+    }
+    get activePane() {
+        return this.containers.main.element.querySelector(".tabPanel").host
+    }
+    get activeTab() {
+        return this.activePane.tabBar.activeTab;
+    }
+    get focussedTab() {
+        return this.activePane.tabBar.activeTab;
+    }
+
+    activateTab(tab) {
+        var pane = tab.parent.parent;
+
+        function initBoxTabEditor() {
+            tab.editorType = tab.editorType || "ace";
+            if (!pane.editors) pane.editors = {};
+            var editorType = tab.editorType;
+
+            if (!pane.editors[editorType]) {
+                pane.editor = new Editor(new Renderer(null, theme));
+                pane.editor.container.style.position = "absolute";
+                pane.editors[editorType] = pane.editor;
+                pane.editor.setSession(null)
+            } else {
+                pane.editor = pane.editors[editorType];
+            }
+            pane.editor.container.style.display = "";
+
+            pane.element.appendChild(pane.editor.container);
+        }
+        initBoxTabEditor();
+        tabManager.loadFile(tab);
+
+        pane.resize();
+    }
+
+    deactivateTab(tab) {
+        var pane = tab.parent.parent;
+        if (tab.parent.activeTab == tab && pane.editor) {
+            pane.editor.container.style.display = "none";
+        }
+    }
+    
+    open(options) {
+        var tab = this.tabs[options.path]
+        if (!tab || !tab.parent) {
+            var pane = this.activePane
+            if (this.previewTab)
+                this.previewTab.close();
+            
+            var tabTitle = options.path.split("/").pop();
+            
+            tab = pane.tabBar.addTab({
+                preview: options.preview,
+                tabTitle: tabTitle,
+                path: options.path,
+                active: true,
+            });
+            if (options.preview)
+                this.previewTab = tab;
+            tab.parent.scrollTabIntoView(tab)
+            this.tabs[tab.path] = tab
+        }
+        if (!options.preview) {
+            if (this.previewTab == tab) {
+                this.clearPreviewStatus(tab);
+            } else if (this.previewTab) {
+                this.previewTab.close();
+            }
+        }
+        tab.parent.removeSelections()
+        tab.parent.activateTab(tab);
+        return tab;
+    }
+    
+    clearPreviewStatus(tab) {
+        tab.preview = false;
+        tab.element.style.fontStyle = ""
+        if (this.previewTab == tab)
+            this.previewTab = null;
+        
+    }
+}
+
+
+oop.implement(TabManager.prototype, EventEmitter);
+
+exports.TabManager = TabManager
