@@ -1,0 +1,215 @@
+.menuButton {
+    height: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+    cursor: default;
+    position: relative;
+    display: inline-block;
+    font-family: Tahoma, Arial;
+    font-size: 12px;
+    line-height: 14px;
+    color: #cecece;
+    padding: 4px 7px 0 7px;
+    text-shadow: #292a2b 0px 1px 0px;
+    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+.menuButtonOver, .menuButton:hover {
+    background-color: #333333;
+    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;
+    color: #d4d4d4;
+}
+.menuButton.menuButtonDown {
+    font-weight: normal;
+    background-color: #494949;
+    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;
+    border: 0;
+    border-width: 0;
+    padding: 4px 7px 0 7px;
+    z-index: 100000000;
+}
+.menuButtonDisabled.menuButton .label {
+    color: #999999;
+}
+.menuButtonIcon {
+    padding-left: 24px;
+}
+.menuButtonIcon .icon {
+    display: block;
+}
+.menuButtonEmpty {
+    padding-left: 7px;
+}
+.menuButtonEmpty .icon {
+    left: 0;
+    top: 0;
+}
+.menuButtonDisabled {
+    color: gray;
+}
+.menuButton.btn {
+    min-width: 12px;
+    font-weight: bold;
+    background-position: 2px 50%;
+}
+
+
+.menu {
+    margin: -1px 0 0 0;
+    padding: 3px 0 3px 0;
+    z-index: 10000;
+    position: absolute;
+    overflow: visible;
+    font-family: Tahoma, Arial;
+    font-size: 11px;
+    line-height: 14px;
+    color: #f1f1f1;
+    cursor: default;
+    display: none;
+    border: 1px solid #00040a;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);
+    background-color: #494949;
+    text-shadow: 0px 1px 0px #2c2c2c;
+    border-radius: 0;
+}
+.menu > div.menu_item {
+    padding: 3px 16px 5px 23px;
+    white-space: nowrap;
+    cursor: default;
+    z-index: 1100000;
+    height: 13px;
+}
+.menu > div.menu_item.update {
+    background-color: #748512;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-shadow: none;
+}
+.menu > div.menu_item.hover {
+    background-color: #262626;
+    color: #a0b42a;
+}
+.menu > div.menu_divider {
+    overflow: visible;
+    padding: 0;
+    font-size: 1px;
+    margin: 2px 3px;
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #565656;
+    height: 0;
+}
+.menu > div.menu_item > .shortcut {
+    right: 15px;
+    margin-top: 0px;
+    z-index: 10;
+    text-align: right;
+    padding-left: 15px;
+    float: right;
+}
+.menu > div.submenu > .shortcut {
+    background: url("submenu_arrow.gif") no-repeat right -15px;
+    width: 4px;
+    height: 7px;
+    display: block;
+    position: absolute;
+    right: 8px;
+    margin: 4px 0 0 0;
+    z-index: 10;
+}
+.menu > div.submenu.hover > span {
+    background: url("submenu_arrow.gif") no-repeat right -15px;
+}
+.menu > div.menu_item.disabled {
+    color: #808080;
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
+}
+.menu > div.menu_item > u {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 3px;
+    margin-top: -1px;
+}
+.menu > div.menu_item > a {
+    float: left;
+}
+.menu > div.menu_item.selected > u {
+    background: url("radio.gif") no-repeat 0 -16px;
+}
+.menu > div.menu_item.selected:hover > u {
+    background: url("radio.gif") no-repeat 0 -16px;
+}
+.menu > div.menu_item.checked > u {
+    background: url("check.gif") no-repeat 0 -16px;
+}
+.menu > div.menu_item.checked:hover > u {
+    background: url("check.gif") no-repeat 0 -16px;
+}
+.menu > div.menu_item.disabled > u {
+    opacity: 0.2;
+}
+.menu > div.menu_item.checked.disabled > u {
+    background: url("check.gif") no-repeat 0 -16px;
+}
+.menu > div.menu_item.selected.disabled > u {
+    background: url("radio.gif") no-repeat 0 -16px;
+}
+
+.menu_searchbox {
+    height: auto;
+    width: auto;
+    border: 1px solid #be1100;
+    background-color: #653b13;
+    color: white;
+    position: absolute;
+    font-family: Tahoma, Arial;
+    font-size: 12px;
+}
+
+.menu-completion-highlight {
+    color: #2d69c7;
+}
+.searchbtn_close {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;
+    border-radius: 50%;
+    border: 0 none;
+    color: #656565;
+    cursor: pointer;
+    font: 16px/16px Arial;
+    padding: 0;
+    height: 14px;
+    width: 14px; 
+    display: inline-block;
+}
+.searchbtn_close:hover {
+    background-color: #656565;
+    background-position: 50% 100%;
+    color: white;
+}
+
+.searchbtn_filter {
+    background: url("check.gif") no-repeat 50% 0;
+    border-radius: 50%;
+    border: 0 none;
+    color: #656565;
+    cursor: pointer;
+    font: 16px/16px Arial;
+    padding: 0;
+    height: 14px;
+    width: 14px; 
+    display: inline-block;
+}
+
+.searchbtn_filter:hover {
+    background-color: #656565;
+    background-position: 50% 100%;
+    color: white;
+}
+
+.menu_no_result {
+    padding: 3px 10px 5px 20px;
+    white-space: nowrap;
+    cursor: default;
+    z-index: 1100000;
+    height: 13px;
+}

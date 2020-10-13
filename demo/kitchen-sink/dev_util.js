@@ -1,34 +1,3 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Distributed under the BSD license:
- *
- * Copyright (c) 2010, Ajax.org B.V.
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *     * Redistributions of source code must retain the above copyright
- *       notice, this list of conditions and the following disclaimer.
- *     * Redistributions in binary form must reproduce the above copyright
- *       notice, this list of conditions and the following disclaimer in the
- *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of Ajax.org B.V. nor the
- *       names of its contributors may be used to endorse or promote products
- *       derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL AJAX.ORG B.V. BE LIABLE FOR ANY
- * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * ***** END LICENSE BLOCK ***** */
-
-define(function(require, exports, module) {
 var dom = require("ace/lib/dom");
 var event = require("ace/lib/event");
 var Range = require("ace/range").Range;
@@ -55,6 +24,23 @@ def(window, "split", function(){  return window.env.split });
 
 
 def(window, "devUtil", function(){ return exports });
+exports.showTextArea = function(argument) {
+    dom.importCssString("\
+      .ace_text-input {\
+        position: absolute;\
+        z-index: 10!important;\
+        width: 6em!important;\
+        height: 1em;\
+        opacity: 1!important;\
+        background: rgba(0, 92, 255, 0.11);\
+        border: none;\
+        font: inherit;\
+        padding: 0 1px;\
+        margin: 0 -1px;\
+        text-indent: 0em;\
+    }\
+    ");
+};
 
 exports.addGlobals = function() {
     window.oop = require("ace/lib/oop");
@@ -73,7 +59,6 @@ exports.addGlobals = function() {
     window.testSelection = testSelection;
     window.setValue = setValue;
     window.testValue = testValue;
-    window.logToAce = exports.log;
 };
 
 function getSelection(editor) {
@@ -293,13 +278,13 @@ function toString(x) {
 }
 
 exports.getUI = function(container) {
-    return ["div", {role: "group", "aria-label": "Test"},
+    return ["div", {},
         " Test ", 
-        ["button", {"aria-label": "Open Log View", onclick: exports.openLogView}, "O"],
+        ["button", {onclick: exports.openLogView}, "O"],
         ["button", {onclick: exports.record}, "Record"],
         ["button", {onclick: exports.stop}, "Stop"],
         ["button", {onclick: exports.play}, "Play"],
-        ["button", {"aria-label": "Close Log View", onclick: exports.closeLogView}, "X"],
+        ["button", {onclick: exports.closeLogView}, "X"],
     ];
 };
 
@@ -307,7 +292,6 @@ exports.getUI = function(container) {
 var ignoreEvents = false;
 exports.textInputDebugger = {
     position: 2000,
-    path: "textInputDebugger",
     onchange: function(value) {
         var sp = env.split;
         if (sp.getSplits() == 2) {
@@ -325,7 +309,11 @@ exports.textInputDebugger = {
         }
     },
     showConsole: function() {
-        var editor = env.split.$editors[0];
+        var sp = env.split;
+        sp.setSplits(2);
+        sp.setOrientation(sp.BELOW);
+        
+        var editor = sp.$editors[0];
         var text = editor.textInput.getElement();
         text.oldParent = text.parentNode;
         text.oldClassName = text.className;
@@ -337,7 +325,6 @@ exports.textInputDebugger = {
             if (ignoreEvents) return;
             var data = {
                 _: e.type, 
-                inputType: e.inputType,
                 range: [text.selectionStart, text.selectionEnd], 
                 value: text.value, 
                 key: e.key && {
@@ -347,8 +334,10 @@ exports.textInputDebugger = {
                 },
                 modifier: event.getModifierString(e) || undefined
             };
+            log.navigateFileEnd();
             var str = JSON.stringify(data).replace(/"(\w+)":/g, " $1: ");
-            exports.log(str);
+            log.insert(str + ",\n");
+            log.renderer.scrollCursorIntoView();
         };
         var events = ["select", "input", "keypress", "keydown", "keyup", 
             "compositionstart", "compositionupdate", "compositionend", "cut", "copy", "paste"
@@ -384,45 +373,16 @@ exports.textInputDebugger = {
             this.__proto__.setSelectionRange.call(this, start, end)
             ignoreEvents = false;
         }
-        exports.openConsole();
+        
+        var log = sp.$editors[1];
+        if (!this.session)
+            this.session = new EditSession("");
+        log.setSession(this.session);
         editor.focus();
     },
     getValue: function() {
         return !!env.textarea;
     }
-};
-
-exports.textPositionDebugger = {
-    position: 2000,
-    path: "textPositionDebugger",
-    onchange: function(value) {
-        document.body.classList[value ? "add" : "remove"]("show-text-input")
-    },
-    getValue: function() {
-        return document.body.classList.contains("show-text-input");
-    }
-};
-
-exports.openConsole = function() {
-    var sp = env.split;
-    var logEditor = sp.$editors[1];
-    if (!logEditor) {
-        sp.setSplits(2);
-        sp.setOrientation(sp.BELOW);
-        logEditor = sp.$editors[1];
-    }
-    if (!exports.session)
-        exports.session = new EditSession("");
-    logEditor.setSession(exports.session);
-    return logEditor
-};
-exports.log = function(str) {   
-    var logEditor = exports.openConsole();
-    logEditor.navigateFileEnd();
-    logEditor.insert(str + ",\n");
-    logEditor.renderer.scrollCursorIntoView();
-};
+}
 
 exports.addGlobals();
-
-});

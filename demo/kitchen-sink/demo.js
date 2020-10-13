@@ -1,35 +1,3 @@
-/* ***** BEGIN LICENSE BLOCK *****
- * Distributed under the BSD license:
- *
- * Copyright (c) 2010, Ajax.org B.V.
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *     * Redistributions of source code must retain the above copyright
- *       notice, this list of conditions and the following disclaimer.
- *     * Redistributions in binary form must reproduce the above copyright
- *       notice, this list of conditions and the following disclaimer in the
- *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of Ajax.org B.V. nor the
- *       names of its contributors may be used to endorse or promote products
- *       derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL AJAX.ORG B.V. BE LIABLE FOR ANY
- * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * ***** END LICENSE BLOCK ***** */
-
-
-define(function(require, exports, module) {
 "use strict";
 
 require("ace/lib/fixoldbrowsers");
@@ -42,7 +10,12 @@ var devUtil = require("./dev_util");
 require("./file_drop");
 
 var config = require("ace/config");
-config.init();
+config.setLoader(function(moduleName, cb) {
+    require([moduleName], function(module) {
+        cb(null, module)
+    })
+});
+
 var env = {};
 
 var dom = require("ace/lib/dom");
@@ -121,7 +94,6 @@ consoleEl.style.cssText = "position:fixed; bottom:1px; right:0;\
 border:1px solid #baf; z-index:100";
 
 var cmdLine = new layout.singleLineEditor(consoleEl);
-cmdLine.setOption("placeholder", "Enter a command...");
 cmdLine.editor = env.editor;
 env.editor.cmdLine = cmdLine;
 
@@ -255,47 +227,16 @@ commands.addCommand({
 
 
 /*********** manage layout ***************************/
-function handleToggleActivate(target) {
-    if (dom.hasCssClass(sidePanelContainer, "closed"))
-        onResize(null, false);
-    else if (dom.hasCssClass(target, "toggleButton"))
-        onResize(null, true);
-};
-var sidePanelContainer = document.getElementById("sidePanel");
-sidePanelContainer.onclick = function(e) {
-    handleToggleActivate(e.target);
-};
-var optionToggle = document.getElementById("optionToggle");
-optionToggle.onkeydown = function(e) {
-    if (e.code === "Space" || e.code === "Enter") {
-        handleToggleActivate(e.target);
-    }
-};
 var consoleHeight = 20;
-function onResize(e, closeSidePanel) {
-    var left = 280;
-    var width = document.documentElement.clientWidth;
-    var height = document.documentElement.clientHeight;
-    if (closeSidePanel == null)
-        closeSidePanel = width < 2 * left;
-    if (closeSidePanel) {
-        left = 20;
-        document.getElementById("optionToggle").setAttribute("aria-label", "Show Options");
-    } else
-        document.getElementById("optionToggle").setAttribute("aria-label", "Hide Options");
-    width -= left;
+function onResize() {
+    var left = env.split.$container.offsetLeft;
+    var width = document.documentElement.clientWidth - left;
     container.style.width = width + "px";
-    container.style.height = height - consoleHeight + "px";
-    container.style.left = left + "px";
+    container.style.height = document.documentElement.clientHeight - consoleHeight + "px";
     env.split.resize();
 
     consoleEl.style.width = width + "px";
-    consoleEl.style.left = left + "px";
     cmdLine.resize();
-    
-    sidePanel.style.width = left + "px";
-    sidePanel.style.height = height + "px";
-    dom.setCssClass(sidePanelContainer, "closed", closeSidePanel);
 }
 
 window.onresize = onResize;
@@ -398,8 +339,7 @@ optionsPanel.add({
             path: "showTokenInfo",
             position: 2000
         },
-        "Show Textarea Position": devUtil.textPositionDebugger,
-        "Text Input Debugger": devUtil.textInputDebugger,
+        "Text Input Debugger": devUtil.textInputDebugger
     }
 });
 
@@ -554,5 +494,3 @@ function moveFocus() {
     else
         env.editor.focus();
 }
-
-});
