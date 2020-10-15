@@ -105,10 +105,9 @@ define(function(require, exports, module) {
                 topMaxY = prevTab && (parseInt(prevTab.style.top, 10) + parseInt(prevTab.style.height, 10) / 2 + parentRect.top);
                 bottomMaxY = nextTab && (parseInt(nextTab.style.top, 10) + parseInt(nextTab.style.height, 10) / 2 + parentRect.top);
             } else {
-                leftMaxX = prevTab && (parseInt(prevTab.style.left, 10) + parseInt(prevTab.style.width, 10) / 2 + parentRect.left);
-                if (prevTab && prevTab.classList.contains("scrolledLeft")) {
-                    var prevSibling = prevTab.previousSibling
-                    leftMaxX = prevSibling ? parseInt(prevSibling.style.left, 10) + parseInt(prevSibling.style.width, 10) + parentRect.left : parentRect.left
+                if (prevTab) {
+                    var prevSibling = prevTab.previousSibling;
+                    leftMaxX = prevSibling ? parseInt(prevSibling.style.left, 10) + parseInt(prevSibling.style.width, 10) + parentRect.left : parentRect.left;
                 }
 
                 rightMaxX = nextTab && (parseInt(nextTab.style.left, 10) + parseInt(nextTab.style.width, 10) / 2 + parentRect.left);
