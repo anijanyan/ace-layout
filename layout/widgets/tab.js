@@ -1,8 +1,8 @@
 define(function(require, exports, module) {
 var dom = require("ace/lib/dom");
 var lib = require("layout/lib");
-dom.importCssString(require("ace/requirejs/text!layout/tab.css"), "tab.css");
-dom.importCssString(require("ace/requirejs/text!layout/panel.css"), "panel.css");
+dom.importCssString(require("ace/requirejs/text!layout/styles/tab.css"), "tab.css");
+dom.importCssString(require("ace/requirejs/text!layout/styles/panel.css"), "panel.css");
 
 class Tab {
     constructor(options) {
@@ -74,7 +74,7 @@ class Tab {
     }
 };
 
-var {tabbarMouseDown} = require("./mouse/tabbar_handler");
+var {tabbarMouseDown} = require("../mouse/tabbar_handler");
 
 class TabBar {
     activeTab = null;

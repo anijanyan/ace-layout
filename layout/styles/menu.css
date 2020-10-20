@@ -106,7 +106,7 @@
     float: right;
 }
 .menu > div.submenu > .shortcut {
-    background: url("submenu_arrow.gif") no-repeat right -15px;
+    background: url("../images/submenu_arrow.gif") no-repeat right -15px;
     width: 4px;
     height: 7px;
     display: block;
@@ -116,7 +116,7 @@
     z-index: 10;
 }
 .menu > div.submenu.hover > span {
-    background: url("submenu_arrow.gif") no-repeat right -15px;
+    background: url("../images/submenu_arrow.gif") no-repeat right -15px;
 }
 .menu > div.menu_item.disabled {
     color: #808080;
@@ -134,25 +134,25 @@
     float: left;
 }
 .menu > div.menu_item.selected > u {
-    background: url("radio.gif") no-repeat 0 -16px;
+    background: url("../images/radio.gif") no-repeat 0 -16px;
 }
 .menu > div.menu_item.selected:hover > u {
-    background: url("radio.gif") no-repeat 0 -16px;
+    background: url("../images/radio.gif") no-repeat 0 -16px;
 }
 .menu > div.menu_item.checked > u {
-    background: url("check.gif") no-repeat 0 -16px;
+    background: url("../images/check.gif") no-repeat 0 -16px;
 }
 .menu > div.menu_item.checked:hover > u {
-    background: url("check.gif") no-repeat 0 -16px;
+    background: url("../images/check.gif") no-repeat 0 -16px;
 }
 .menu > div.menu_item.disabled > u {
     opacity: 0.2;
 }
 .menu > div.menu_item.checked.disabled > u {
-    background: url("check.gif") no-repeat 0 -16px;
+    background: url("../images/check.gif") no-repeat 0 -16px;
 }
 .menu > div.menu_item.selected.disabled > u {
-    background: url("radio.gif") no-repeat 0 -16px;
+    background: url("../images/radio.gif") no-repeat 0 -16px;
 }
 
 .menu_searchbox {
@@ -188,7 +188,7 @@
 }
 
 .searchbtn_filter {
-    background: url("check.gif") no-repeat 50% 0;
+    background: url("../images/check.gif") no-repeat 50% 0;
     border-radius: 50%;
     border: 0 none;
     color: #656565;

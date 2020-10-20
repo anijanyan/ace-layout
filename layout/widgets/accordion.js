@@ -3,9 +3,9 @@ define(function(require, exports, module) {
     var lib = require("layout/lib");
     var event = require("ace/lib/event");
 
-    var {Box} = require("layout/box");
+    var {Box} = require("layout/widgets/box");
 
-    dom.importCssString(require("ace/requirejs/text!layout/accordion.css"), "accordion.css");
+    dom.importCssString(require("ace/requirejs/text!layout/styles/accordion.css"), "accordion.css");
 
     var {toggleBarMouseDown, toggleBarOnClick, splitterMouseDown} = require("layout/mouse/accordion_handler");
     var BOX_MIN_SIZE = 80;//TODO

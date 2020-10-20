@@ -10,7 +10,7 @@ var EditSession = require("ace/edit_session").EditSession;
 var Renderer = require("ace/virtual_renderer").VirtualRenderer;
 var theme = require("ace/theme/textmate");
 
-var {Box, Pane} = require("layout/box");
+var {Box, Pane} = require("layout/widgets/box");
 var newTabCounter = 1;
 
 

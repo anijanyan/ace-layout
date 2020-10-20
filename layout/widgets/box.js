@@ -5,8 +5,8 @@ define(function(require, exports, module) {
     // var oop = require("ace/lib/oop");
     var {EventEmitter} = require("ace/lib/event_emitter");
 
-    var {Tab, TabBar, Panel, PanelBar} = require("layout/tab");
-    var {Widget} = require("layout/widget");
+    var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
+    var {Widget} = require("layout/widgets/widget");
 
 
     var SPLITTER_SIZE = 1;

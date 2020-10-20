@@ -3,7 +3,7 @@ define(function(require, exports, module) {
     var dom = require("ace/lib/dom");
     var lib = require("layout/lib");
 
-    var {Box} = require("layout/box");
+    var {Box} = require("layout/widgets/box");
 
     var toggleBarMouseDown = function(e, accordionConstructor) {
         var toggleBlock = lib.findNode(e.target, "toggle-block");

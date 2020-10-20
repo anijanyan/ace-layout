@@ -2,9 +2,9 @@ define(function(require, exports, module) {
     var dom = require("ace/lib/dom");
     var lib = require("layout/lib");
 
-    var {Tab, TabBar, Panel, PanelBar} = require("layout/tab");
-    var {Accordion} = require("layout/accordion");
-    var {Box, Pane} = require("layout/box");
+    var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
+    var {Accordion} = require("layout/widgets/accordion");
+    var {Box, Pane} = require("layout/widgets/box");
 
     exports.PanelManager = class PanelManager {
         constructor(options) {

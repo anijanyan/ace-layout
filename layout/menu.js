@@ -5,7 +5,7 @@ var event = require("ace/lib/event");
 var keyUtil = require("ace/lib/keys");
 var lib = require("layout/lib");
 
-dom.importCssString(require("ace/requirejs/text!./menu.css"), "menu.css");
+dom.importCssString(require("ace/requirejs/text!./styles/menu.css"), "menu.css");
 
 function getEdge(style, dir) {
     return parseInt(style["padding" + dir], 10) +

@@ -4,14 +4,14 @@ var lib = require("layout/lib");
 var HashHandler = require("ace/keyboard/hash_handler").HashHandler;
 var keyUtil = require("ace/lib/keys");
 
-dom.importCssString(require("ace/requirejs/text!layout/layout.css"), "layout.css");
+dom.importCssString(require("ace/requirejs/text!layout/styles/layout.css"), "layout.css");
 
 
-var {Box, Pane} = require("layout/box");
-var {Tab, TabBar, Panel, PanelBar} = require("layout/tab");
-var {TabManager} = require("layout/tabManager");
-var {PanelManager} = require("layout/panelManager");
-var {Accordion} = require("layout/accordion");
+var {Box, Pane} = require("layout/widgets/box");
+var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
+var {TabManager} = require("layout/widgets/tabManager");
+var {PanelManager} = require("layout/widgets/panelManager");
+var {Accordion} = require("layout/widgets/accordion");
 var {MenuManager, MenuToolBar} = require("layout/menu");
 
 class FindBar {
