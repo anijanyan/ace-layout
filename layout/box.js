@@ -6,13 +6,18 @@ define(function(require, exports, module) {
     var {EventEmitter} = require("ace/lib/event_emitter");
 
     var {Tab, TabBar, Panel, PanelBar} = require("layout/tab");
+    var {Widget} = require("layout/widget");
 
 
     var SPLITTER_SIZE = 1;
     var BOX_MIN_SIZE = 40;
     var barHeight = 27;
 
-    var Box = class {
+    /**
+     *
+     * @type {Box}
+     */
+    class Box extends Widget {
         static enableAnimation() {
             document.documentElement.classList.add("animateBoxes");
         }
@@ -26,7 +31,15 @@ define(function(require, exports, module) {
                 document.documentElement.classList.remove("inheritCursor");
             document.documentElement.style.cursor = value;
         }
+
+        /**
+         *
+         * @param {Object} options
+         * @param {Boolean} options.vertical
+         */
         constructor(options) {
+            super()
+
             if (options.splitter !== false) {}
             this.vertical = options.vertical || false;
             this.color = options.color;
