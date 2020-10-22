@@ -1,15 +1,17 @@
 define(function(require, exports, module) {
-
+    /**
+     * Interface for classes that represent a color.
+     *
+     * @interface
+     */
     class Widget {
         render() {}
+        resize() {}
         remove() {}
-        addItem() {}
-        removeItem() {}
         toJSON() {}
-        get children() {}
     }
 
-    const WidgetType = {
+/*    const WidgetType = {
         "Accordion": 1,
         "Box": 2,
         "ListBox": 3,
@@ -22,5 +24,5 @@ define(function(require, exports, module) {
     Object.freeze(WidgetType);
 
     exports.WidgetType = WidgetType;
-    exports.Widget = Widget;
+    exports.Widget = Widget;*/
 })

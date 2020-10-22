@@ -2,28 +2,30 @@ define(function(require, exports, module) {
     var dom = require("ace/lib/dom");
     var lib = require("layout/lib");
     var event = require("ace/lib/event");
-    // var oop = require("ace/lib/oop");
-    var {EventEmitter} = require("ace/lib/event_emitter");
 
     var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
-    var {Widget} = require("layout/widgets/widget");
-
 
     var SPLITTER_SIZE = 1;
     var BOX_MIN_SIZE = 40;
     var barHeight = 27;
 
     /**
-     *
+     * @param {Box|undefined} 0
+     * @param {Box|undefined} 1
      * @type {Box}
+     * @implements {Widget}
      */
-    class Box extends Widget {
+    class Box {
+        fixedSize;
+        editor;
         static enableAnimation() {
             document.documentElement.classList.add("animateBoxes");
         }
+
         static disableAnimation() {
             document.documentElement.classList.remove("animateBoxes");
         }
+
         static setGlobalCursor(value) {
             if (value)
                 document.documentElement.classList.add("inheritCursor");
@@ -35,12 +37,23 @@ define(function(require, exports, module) {
         /**
          *
          * @param {Object} options
-         * @param {Boolean} options.vertical
+         * @param {Boolean|undefined} options.vertical
+         * @param {Boolean|undefined} options.splitter
+         * @param {String|undefined} options.color
+         * @param {Boolean|undefined} options.isMain
+         * @param {Number|undefined} options.ratio
+         * @param {Object|undefined} options.toolBars
+         * @param {String|undefined} options.size
+         * @param {Array|undefined} options.buttonList
+         * @param {Number|undefined} options.minSize
+         * @param {Number|undefined} options.minVerticalSize
+         * @param {Number|undefined} options.minHorizontalSize
+         * @param {Box|undefined} options[0]
+         * @param {Box|undefined} options[1]
          */
         constructor(options) {
-            super()
-
-            if (options.splitter !== false) {}
+            if (options.splitter !== false) {
+            }
             this.vertical = options.vertical || false;
             this.color = options.color;
             this.isMain = options.isMain || false;
@@ -59,6 +72,7 @@ define(function(require, exports, module) {
             this.minVerticalSize = options.minVerticalSize || this.minSize;
             this.minHorizontalSize = options.minHorizontalSize || this.minSize;
         }
+
         toJSON() {
             return {
                 0: this[0] && this[0].toJSON(),
@@ -71,6 +85,7 @@ define(function(require, exports, module) {
                 size: this.size
             }
         }
+
         onMouseDown(e) {
             var button = e.button;
             if (button !== 0)
@@ -83,7 +98,7 @@ define(function(require, exports, module) {
 
             document.body.classList.add('dragging')
 
-            var onMouseMove = function(e) {
+            var onMouseMove = function (e) {
                 x = e.clientX - rect.left - box.padding.left;
                 y = e.clientY - rect.top - box.padding.top;
                 var height = rect.height - box.padding.top - box.padding.bottom;
@@ -108,7 +123,7 @@ define(function(require, exports, module) {
 
                 box.resize();
             };
-            var onResizeEnd = function(e) {
+            var onResizeEnd = function (e) {
                 Box.setGlobalCursor("");
                 document.body.classList.remove('dragging')
             };
@@ -117,12 +132,14 @@ define(function(require, exports, module) {
             event.capture(window, onMouseMove, onResizeEnd);
             return e.preventDefault();
         }
+
         resize() {
             if (!this.box)
                 return;
 
             this.setBox(...this.box);
         }
+
         calculateMinMaxRatio() {
             if (!this.box || (!this[0] && !this[1]))
                 return;
@@ -133,7 +150,8 @@ define(function(require, exports, module) {
             this.minRatio = this[0] ? this[0][propertyName] / size : 0;
             this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
         }
-        draw() {
+
+        render() {
             if (this.element)
                 return this.element;
 
@@ -153,21 +171,22 @@ define(function(require, exports, module) {
             this.element.style.backgroundColor = this.color;
             this.element.style.position = "absolute";
 
-            this.drawBarList();
-            this.drawChildren();
+            this.renderToolBarList();
+            this.renderChildren();
             if (!this.ratio)
                 this.calculateRatio();
 
-            this.drawButtons();
+            this.renderButtons();
 
             return this.element;
         }
-        drawBarList() {
-            var bar;
+
+        renderToolBarList() {
             for (var position in this.toolBars) {
                 this.addToolBar(position, this.toolBars[position]);
             }
         }
+
         addToolBar(position, bar) {
             if (position == "left" || position == "right") {
                 bar.direction = "vertical";
@@ -182,16 +201,19 @@ define(function(require, exports, module) {
             this.element.appendChild(bar.draw());
             this.toolBars[position] = bar;
         }
-        removeBar(position) {
+
+        removeToolBar(position) {
             delete this.toolBars[position];
             this.padding[position] = 0;
         }
-        drawChildren() {
-            if (this[0]) this.element.appendChild(this[0].draw());
-            if (this[1]) this.element.appendChild(this[1].draw());
+
+        renderChildren() {
+            if (this[0]) this.element.appendChild(this[0].render());
+            if (this[1]) this.element.appendChild(this[1].render());
 
             this.calculateMinSize();
         }
+
         calculateMinSize(forceChildrenSize) {
             var childrenMinVerticalSize = 0;
             var childrenMinHorizontalSize = 0;
@@ -220,6 +242,7 @@ define(function(require, exports, module) {
             this.minSize = this.vertical ? this.minVerticalSize : this.minHorizontalSize;
             this.calculateMinMaxRatio();
         }
+
         calculateRatio() {
             if (this[0]) {
                 this.calculateChildRatio(this[0]);
@@ -234,6 +257,12 @@ define(function(require, exports, module) {
                 this.ratio = 0.5;
             }
         }
+
+        /**
+         *
+         * @param {Box} childBox
+         * @param {Boolean} [isSecond]
+         */
         calculateChildRatio(childBox, isSecond) {
             if (!childBox.size) {
                 return;
@@ -252,10 +281,12 @@ define(function(require, exports, module) {
                     }
                     this.ratio = Math.min(size / 100, 1);
                     break;
-                default: break;
+                default:
+                    break;
             }
         }
-        drawButtons() {
+
+        renderButtons() {
             if (!this.buttonList.length)
                 return;
 
@@ -275,15 +306,24 @@ define(function(require, exports, module) {
                 this.buttons.appendChild(buttonElement);
             }
         }
-        addButtonsToChildPane() {
-            if (this.buttonsHostChildPane)
-                this.buttonsHostChildPane.removeButtons();
 
-            this.buttonsHostChildPane = this.getButtonsHostChildPane();
-            if (this.buttonsHostChildPane)
-                this.buttonsHostChildPane.addButtons(this.buttons);
+        /**
+         * Adds buttons to top-right tabBar of this box
+         */
+        addButtons() {
+            if (this.topRightPane)
+                this.topRightPane.removeButtons();
+
+            this.topRightPane = this.getTopRightPane();
+            if (this.topRightPane)
+                this.topRightPane.addButtons(this.buttons);
         }
-        getButtonsHostChildPane() {
+
+        /**
+         * Finds the most top-right Pane
+         * @returns {Box|null|*}
+         */
+        getTopRightPane() {
             if (this.constructor === Pane) {
                 return this;
             } else {
@@ -291,9 +331,10 @@ define(function(require, exports, module) {
                 if (!childBox)
                     return null;
 
-                return childBox.getButtonsHostChildPane();
+                return childBox.getTopRightPane();
             }
         }
+
         setBox(x, y, w, h) {
             this.box = [x, y, w, h];
             if (this.isMaximized) {
@@ -306,6 +347,7 @@ define(function(require, exports, module) {
             this.calculateMinMaxRatio();
             this.$updateChildSize(x, y, w, h);
         }
+
         $updateChildSize(x, y, w, h) {
             var splitterSize = SPLITTER_SIZE;
             if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
@@ -314,7 +356,7 @@ define(function(require, exports, module) {
             } else {
                 this.splitter.style.display = "";
             }
-            this.updateBarSize(w, h);
+            this.updateToolBarSize(w, h);
             w -= this.padding.left + this.padding.right;
             h -= this.padding.top + this.padding.bottom;
             x = this.padding.left;
@@ -360,7 +402,8 @@ define(function(require, exports, module) {
                     this[1].setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
             }
         }
-        updateBarSize(width, height) {
+
+        updateToolBarSize(width, height) {
             var bar, x, y, w, h;
             for (var type in this.toolBars) {
                 x = 0;
@@ -385,7 +428,8 @@ define(function(require, exports, module) {
                             x = width - barHeight;
 
                         break;
-                    default: continue;
+                    default:
+                        continue;
                 }
                 bar.setBox(x, y, w, h);
             }
@@ -393,20 +437,22 @@ define(function(require, exports, module) {
 
         restore(disableAnimation) {
             var node = this.element;
+
             function rmClass(ch, cls) {
                 for (var i = 0; i < ch.length; i++) {
                     if (ch[i].classList)
                         ch[i].classList.remove(cls)
                 }
             }
+
             var finishRestore = () => {
-                classes.forEach(function(className) {
+                classes.forEach(function (className) {
                     rmClass(document.querySelectorAll("." + className), className);
                 });
                 this.setBox(...this.box);
             };
             var classes = [
-                "fullScreenSibling","fullScreenNode","fullScreenParent"
+                "fullScreenSibling", "fullScreenNode", "fullScreenParent"
             ];
             this.isMaximized = false;
 
@@ -431,6 +477,7 @@ define(function(require, exports, module) {
 
         maximize(disableAnimation) {
             var node = this.element;
+
             function addClasses() {
                 node.classList.add("fullScreenNode");
                 var parent = node;
@@ -446,6 +493,7 @@ define(function(require, exports, module) {
                     }
                 }
             }
+
             var rect = node.getBoundingClientRect();
 
             lib.setBox(node, rect.left, rect.top, rect.width, rect.height);
@@ -470,6 +518,7 @@ define(function(require, exports, module) {
             if (this.isMaximized) this.restore();
             else this.maximize();
         }
+
         remove() {
             if (this.element) this.element.remove();
             if (this.parent) {
@@ -479,6 +528,7 @@ define(function(require, exports, module) {
                 this.parent = null;
             }
         }
+
         removeAllChildren() {
             this[0] && this[0].remove();
             this[1] && this[1].remove();
@@ -517,6 +567,12 @@ define(function(require, exports, module) {
             });
         }
 
+        /**
+         *
+         * @param {Number} previousBoxIndex
+         * @param {Box} box
+         * @returns {Box}
+         */
         addChildBox(previousBoxIndex, box) {
             var previousBox, index;
             if (previousBoxIndex instanceof Box) {
@@ -541,7 +597,7 @@ define(function(require, exports, module) {
 
             this[index] = box;
             box.parent = this;
-            this.element.appendChild(box.draw());
+            this.element.appendChild(box.render());
 
             if (previousBox && previousBox.isMaximized) {
                 previousBox.restore(true);
@@ -577,9 +633,12 @@ define(function(require, exports, module) {
         }
     };
 
-// oop.implement(Box.prototype, EventEmitter);
-
-    var Pane = class Pane extends Box {
+    /**
+     *
+     * @type {Pane}
+     * @implements {Widget}
+     */
+    class Pane extends Box {
         constructor(options) {
             var tabBar = new TabBar({
                 tabList: options.tabList
@@ -597,8 +656,9 @@ define(function(require, exports, module) {
                 tabBar: this.tabBar.toJSON()
             };
         }
-        draw() {
-            super.draw();
+
+        render() {
+            super.render();
             this.element.classList.add("tabPanel");
 
             this.tabEditorBoxElement = dom.buildDom(["div", {
@@ -608,16 +668,18 @@ define(function(require, exports, module) {
 
             return this.element;
         }
+
         acceptsTab(tab) {
             // TODO accept editor tabs, and not sidebar buttons
             return true;
         }
+
         split(far, vertical) {
             var newPane = new Pane({});
             var root = this.parent;
             var wrapper = new Box({
                 [far ? 1 : 0]: this,
-                [far ? 0 : 1]:  newPane,
+                [far ? 0 : 1]: newPane,
                 vertical: vertical,
                 ratio: 0.5
             });
@@ -627,7 +689,7 @@ define(function(require, exports, module) {
             if (this.isButtonHost) {
                 wrapper.buttons = this.buttons;
                 this.removeButtons();
-                wrapper.addButtonsToChildPane();
+                wrapper.addButtons();
             }
             return newPane;
         }
@@ -676,7 +738,7 @@ define(function(require, exports, module) {
 
             if (this.isButtonHost) {
                 root.buttons = this.buttons;
-                root.addButtonsToChildPane();
+                root.addButtons();
             }
 
         }

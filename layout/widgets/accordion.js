@@ -10,7 +10,12 @@ define(function(require, exports, module) {
     var {toggleBarMouseDown, toggleBarOnClick, splitterMouseDown} = require("layout/mouse/accordion_handler");
     var BOX_MIN_SIZE = 80;//TODO
 
-    exports.Accordion = class Accordion {
+    /**
+     *
+     * @type {Accordion}
+     * @implements {Widget}
+     */
+    class Accordion {
         toggleBarList = [];
         splitterList = [];
         toggleBlockList = [];
@@ -18,6 +23,18 @@ define(function(require, exports, module) {
         boxMinSize = 30;
         toggleBarHeight = 20;
         splitterSize = 1;
+
+        /**
+         *
+         * @param options
+         * @param {Boolean|undefined} options.vertical
+         * @param {String|undefined} options.color
+         * @param {{title:String, obj: Widget}[]|undefined} options.boxes
+         * @param {Number|undefined} options.minSize
+         * @param {Object|undefined} options.minVerticalSize
+         * @param {Object|undefined} options.minHorizontalSize
+         * @param {Number|undefined} options.size
+         */
         constructor(options) {
             this.vertical = options.vertical || false;
             this.color = options.color;
@@ -25,14 +42,13 @@ define(function(require, exports, module) {
             this.minSize = options.minSize || BOX_MIN_SIZE;
             this.minVerticalSize = options.minVerticalSize || this.minSize;
             this.minHorizontalSize = options.minHorizontalSize || this.minSize;
-
             this.padding = {top: 0, right: 0, bottom: 0, left: 0};
             this.size = options.size;
         }
 
         hasNextOpenedBoxes(index) {
             for (var i = index; i < this.toggleBlockList.length; i++) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     return true;
                 }
             }
@@ -42,7 +58,7 @@ define(function(require, exports, module) {
 
         hasPrevOpenedBoxes(index) {
             for (var i = index - 1; i >= 0; i--) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     return true;
                 }
             }
@@ -50,7 +66,7 @@ define(function(require, exports, module) {
             return false;
         }
 
-        isOpenedIndex(index) {
+        isOpenedByIndex(index) {
             return this.isOpenedBlock(this.toggleBlockList[index]);
         }
 
@@ -62,7 +78,7 @@ define(function(require, exports, module) {
             this.nextChangedBoxes = [];
             this.prevChangedBoxes = [];
             for (var i = 0; i < this.toggleBlockList.length; i++) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     this.boxList[i].$prevSize = this.boxList[i].$size;
                 }
             }
@@ -72,7 +88,7 @@ define(function(require, exports, module) {
             this.nextChangedBoxes = null;
             this.prevChangedBoxes = null;
             for (var i = 0; i < this.toggleBlockList.length; i++) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     this.boxList[i].$prevSize = null;
                 }
             }
@@ -89,7 +105,7 @@ define(function(require, exports, module) {
             var changedSize = 0;
             var done = false;
             for (var i = index - 1; i >= 0; i--) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     box = this.boxList[i];
                     rect = box.element.getBoundingClientRect();
                     prevSize = rect.height;
@@ -124,7 +140,7 @@ define(function(require, exports, module) {
             var changedSize = 0;
             var done = false;
             for (var i = index; i < this.toggleBlockList.length; i++) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     box = this.boxList[i];
                     rect = box.element.getBoundingClientRect();
                     prevSize = rect.height;
@@ -182,7 +198,7 @@ define(function(require, exports, module) {
             }
             var boxList = [];
             for (var i = index - 1; i >= 0; i--) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     boxList.push(this.boxList[i]);
                 }
             }
@@ -206,7 +222,7 @@ define(function(require, exports, module) {
             }
             var boxList = [];
             for (var i = index; i < this.toggleBlockList.length; i++) {
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     boxList.push(this.boxList[i]);
                 }
             }
@@ -226,7 +242,8 @@ define(function(require, exports, module) {
         resize() {
             this.$updateChildSize(...this.box);
         }
-        draw() {
+
+        render() {
             if (this.element)
                 return this.element;
             this.element = dom.buildDom(["div", {
@@ -278,7 +295,7 @@ define(function(require, exports, module) {
 
                 toggleBlock.appendChild(toggleBar);
                 this.toggleBarList.push(toggleBar);
-                toggleBlock.appendChild(box.draw());
+                toggleBlock.appendChild(box.render());
 
                 this.element.appendChild(toggleBlock);
                 this.toggleBlockList.push(toggleBlock);
@@ -291,14 +308,15 @@ define(function(require, exports, module) {
 
             return this.element;
         }
+        //TODO: rename
         calculateChildrenSizePercents() {
             var box;
             var totalSize = 0;
 
             for (var i = 0; i < this.boxList.length; i++) {
                 box = this.boxList[i];
-                box.boxSize = this.isOpenedIndex(i) ? box.$size : box._$size;
-                totalSize += this.isOpenedIndex(i) ? box.$size : box._$size;
+                box.boxSize = this.isOpenedByIndex(i) ? box.$size : box._$size;
+                totalSize += this.isOpenedByIndex(i) ? box.$size : box._$size;
             }
 
 
@@ -318,12 +336,14 @@ define(function(require, exports, module) {
                 box.$sizePercent += (100 - totalPercent);
             }
         }
+
         setBox(x, y, w, h) {
             this.box = [x, y, w, h];
             lib.setBox(this.element, x, y, w, h);
             this.recalculateChildrenSizes();
             this.$updateChildSize(x, y, w, h);
         }
+
         recalculateChildrenSizes(index) {
             var height = this.box[3];
             height -= this.toggleBarHeight * this.toggleBarList.length;
@@ -336,7 +356,7 @@ define(function(require, exports, module) {
                 box = this.boxList[i];
 
                 box.$size = Math.max(Math.floor((height * box.$sizePercent) / 100), this.boxMinSize);
-                if (this.isOpenedIndex(i)) {
+                if (this.isOpenedByIndex(i)) {
                     totalSize += box.$size;
                     openedIndexes.push(i);
                 } else {
@@ -388,6 +408,7 @@ define(function(require, exports, module) {
                 openedIndexes = changedIndexes;
             }
         }
+
         $updateChildSize(x, y, w, h) {
             x = 0;
             y = 0;
@@ -412,6 +433,7 @@ define(function(require, exports, module) {
                 }
             }
         }
+
         toggleShowHide() {
             Box.enableAnimation();
             this.hidden = !this.hidden;
@@ -477,4 +499,6 @@ define(function(require, exports, module) {
             }
         }
     };
+
+    exports.Accordion = Accordion;
 });

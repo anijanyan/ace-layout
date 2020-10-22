@@ -12,7 +12,7 @@ var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
 var {TabManager} = require("layout/widgets/tabManager");
 var {PanelManager} = require("layout/widgets/panelManager");
 var {Accordion} = require("layout/widgets/accordion");
-var {MenuManager, MenuToolBar} = require("layout/menu");
+var {MenuManager, MenuToolBar} = require("layout/widgets/menu");
 
 class FindBar {
     constructor(options) {
@@ -137,7 +137,7 @@ var base = new Box({
     }),
 });
 
-base.draw();
+base.render();
 
 var onResize = function () {
     base.setBox(0, 0, window.innerWidth, window.innerHeight)
@@ -179,7 +179,7 @@ class SearchManager {
     closeFindBar() {
         this.animateBox(this.mainBox);
 
-        this.mainBox.removeBar("bottom");
+        this.mainBox.removeToolBar("bottom");
         this.findBar.close();
         this.mainBox.resize();
     }
@@ -247,4 +247,4 @@ panelManager.setState(panelState);
 
 onResize();
 
-mainBox[1].addButtonsToChildPane();
+mainBox[1].addButtons();

@@ -13,7 +13,7 @@ define(function(require, exports, module) {
     var {TabManager} = require("layout/widgets/tabManager");
     var {PanelManager} = require("layout/widgets/panelManager");
     var {Accordion} = require("layout/widgets/accordion");
-    var {MenuManager, MenuToolBar} = require("layout/menu");
+    var {MenuManager, MenuToolBar} = require("layout/widgets/menu");
 
     class FindBar {
         constructor(options) {
@@ -214,15 +214,15 @@ define(function(require, exports, module) {
                     isMain: true,
                     size: "100px",
                     buttonList: [{class: "consoleCloseBtn", title: "F6", onclick: function () {
-                            mainBox[1].hide();
-                        }}],
+                        mainBox[1].hide();
+                    }}],
                 }),
             }),
             toolBars: {},
         }),
     });
 
-    base.draw();
+    base.render();
 
     var onResize = function() {
         base.setBox(0, 0, window.innerWidth, window.innerHeight)
@@ -261,7 +261,7 @@ define(function(require, exports, module) {
         closeFindBar() {
             this.animateBox(this.mainBox);
 
-            this.mainBox.removeBar("bottom");
+            this.mainBox.removeToolBar("bottom");
             this.findBar.close();
             this.mainBox.resize();
         }
@@ -334,5 +334,5 @@ define(function(require, exports, module) {
 
     onResize();
 
-    mainBox[1].addButtonsToChildPane();
+    mainBox[1].addButtons();
 });
