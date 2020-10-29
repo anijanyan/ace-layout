@@ -235,8 +235,12 @@ panelManager = new PanelManager({
 var tabState = {};
 var panelState = {};
 try {
-    if (localStorage.tabs)
+    if (localStorage.tabs) {
         tabState = JSON.parse(localStorage.tabs);
+    } else {
+        let initialTabs = '{"console":{"0":{"type":"pane","tabBar":{"tabList":[],"scrollLeft":0}},"ratio":1,"type":"hbox","fixedSize":100,"size":"100px"},"main":{"0":{"0":{"type":"pane","tabBar":{"tabList":[{"tabTitle":"Untitled 1"},{"tabTitle":"Untitled 2"},{"tabTitle":"Untitled 3"},{"tabTitle":"Untitled 4"},{"tabTitle":"Untitled 5"},{"tabTitle":"Untitled 6"},{"tabTitle":"Untitled 7"},{"tabTitle":"Untitled 8"},{"tabTitle":"Untitled 9"},{"tabTitle":"Untitled 10"},{"tabTitle":"Untitled 11"},{"tabTitle":"Untitled 12"},{"tabTitle":"Untitled 13"},{"tabTitle":"Untitled 14"},{"tabTitle":"Untitled 15","active":true}],"scrollLeft":895.640625}},"1":{"type":"pane","tabBar":{"tabList":[{"tabTitle":"Untitled 16","active":true},{"tabTitle":"Untitled 17"}],"scrollLeft":0}},"ratio":0.5,"type":"hbox","fixedSize":null},"ratio":1,"type":"hbox","fixedSize":null}}';
+        tabState = JSON.parse(initialTabs);
+    }
     if (localStorage.panels)
         panelState = JSON.parse(localStorage.panels);
 } catch (e) {
