@@ -5,7 +5,7 @@ var event = require("ace/lib/event");
 var keyUtil = require("ace/lib/keys");
 var lib = require("layout/lib");
 
-dom.importCssString(require("ace/requirejs/text!./styles/menu.css"), "menu.css");
+dom.importCssString(require("ace/requirejs/text!../styles/menu.css"), "menu.css");
 
 function getEdge(style, dir) {
     return parseInt(style["padding" + dir], 10) +
@@ -57,6 +57,10 @@ function getNextSibling(node, conditionFn, parentElement) {
 class MenuManager {
     static findHost = lib.findHost;
     menus = {};
+    /**
+     *
+     * @type {MenuPopup|MenuBar|null}
+     */
     activeMenu = null;
 
     find(path, item) {
@@ -241,7 +245,7 @@ class MenuManager {
     }
 
     build() {
-        window.addEventListener("contextmenu", this.onContextMenu);
+        window.addEventListener("contextmenu", this.onContextMenuOpen);
     }
 
     buildMenuBar(parent) {
@@ -275,6 +279,7 @@ class MenuManager {
             this.activeMenu.activateMenu();
         }
     }
+
     inactivateMenu() {
         this.isActive = false;
         window.removeEventListener("mousedown", this.onMouseDown);
@@ -328,7 +333,7 @@ class MenuManager {
     }
     onWindowResize = this.onWindowResize.bind(this);
 
-    onContextMenu(e) {
+    onContextMenuOpen(e) {
         e.preventDefault();
         if (this.getTarget(e.target)) {
             return;
@@ -337,7 +342,7 @@ class MenuManager {
         var pos = {x: e.clientX + 2, y: e.clientY + 2};
         this.openMenuByPath("/context", pos);
     }
-    onContextMenu = this.onContextMenu.bind(this);
+    onContextMenuOpen = this.onContextMenuOpen.bind(this);
 
     addSymbolToSearchBox(symbol) {
         if (!this.searchBox || !this.searchBox.isOpen) {
@@ -361,7 +366,15 @@ MenuManager.prototype.add = MenuManager.prototype.addByPath
 
 class Menu {
     menuManager;
+    /**
+     *
+     * @type {MenuPopup|MenuBar|null}
+     */
     selectedMenu = null;
+    /**
+     *
+     * @type {MenuPopup|null}
+     */
     menuPopup = null;
     selectedClass;
     element;
@@ -387,6 +400,7 @@ class Menu {
         menu.buttonElement.classList.add(this.selectedClass);
         this.selectedMenu = menu;
     }
+
     unselectMenu() {
         if (!this.selectedMenu) {
             return;
@@ -420,6 +434,7 @@ class Menu {
 
         return this.menuPopup;
     }
+
     closeMenu() {
         if (!this.menuPopup) {
             return;
@@ -451,6 +466,7 @@ class Menu {
     }
 
     getMenuByPath(path){}
+
     openMenuByPath(path) {
         if (typeof path === "string") path = path.split("/");
         var menu = this.getMenuByPath(path.shift());
@@ -471,6 +487,7 @@ class Menu {
 class MenuBar extends Menu {
     selectedClass = "menuButtonDown";
     menus;
+
     build(parent) {
         this.element = parent;
         var items = this.menus.map;
@@ -490,11 +507,13 @@ class MenuBar extends Menu {
     activateMenu() {
         this.element.addEventListener("mousemove", this.onMouseMove);
     }
+
     inactivateMenu() {
         this.unselectMenu();
         this.closeMenu();
         this.element.removeEventListener("mousemove", this.onMouseMove);
     }
+
     /*** event handlers ***/
     onMouseDown(e) {
         e.preventDefault();
@@ -512,18 +531,21 @@ class MenuBar extends Menu {
             this.menuManager.activateMenu();
         }
     }
+
     moveOnTarget(target) {
         super.moveOnTarget(target);
         if (this.selectedMenu.map) {
             this.openMenu();
         }
     }
+
     onMouseMove(e) {
         var target = this.menuManager.getTarget(e.target);
 
         this.moveOnTarget(target);
     }
     onMouseMove = this.onMouseMove.bind(this);
+
     getMenuByPath(path) {
         return this.menuManager.find(path);
     }
@@ -535,13 +557,17 @@ class MenuPopup extends Menu{
     position;
     isSubMenu = false;
     direction;
+    prevMaxHeight;
+
     inactivateMenu() {
         this.close();
     }
+
     open() {
         this.build();
         this.render();
     }
+
     build() {
         if (this.element) {
             return;
@@ -613,6 +639,7 @@ class MenuPopup extends Menu{
         );
         this.element = this.menu.element;
     }
+
     render() {
         if (this.element.style.maxWidth){
             this.element.style.maxWidth = window.innerWidth + "px";
@@ -683,6 +710,7 @@ class MenuPopup extends Menu{
         this.element.style.zIndex = 195055;
         this.element.style.overflowY = "auto";
     }
+
     close() {
         if (this.menuPopup) {
             this.closeMenu();
@@ -712,6 +740,7 @@ class MenuPopup extends Menu{
             item.scrollIntoView(false);
         }
     }
+
     moveOnTarget(target) {
         super.moveOnTarget(target);
     }
@@ -803,6 +832,10 @@ class MenuPopup extends Menu{
 }
 
 class MenuSearchBox {
+    /**
+     *
+     * @type {MenuPopup|null}
+     */
     parentPopup = null;
     isOpen = false;
     hideFiltered = false;
@@ -840,6 +873,10 @@ class MenuSearchBox {
         this.element.remove();
     }
 
+    /**
+     *
+     * @param {MenuPopup} parentPopup
+     */
     setParentPopup(parentPopup) {
         if (this.parentPopup && this.parentPopup.element) {
             if (this.parentPopup.prevMaxHeight) {
@@ -1164,7 +1201,8 @@ class MenuToolBar {
         lib.setBox(this.element, x, y, w, h);
         this.box = [x, y, w, h];
     }
-    draw() {
+
+    render() {
         if (!this.element) {
             this.element = dom.buildDom(["div", {
                 class: "menuToolBar",

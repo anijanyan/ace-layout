@@ -23,7 +23,7 @@ class FindBar {
         this.box = [x, y, w, h];
     }
 
-    draw() {
+    render() {
         if (this.element) this.element;
         this.element = dom.buildDom(["div", {
             class: "findbar",
@@ -217,7 +217,7 @@ tabManager = new TabManager({
 });
 
 panelManager = new PanelManager({
-    base: base,
+    layout: base,
     locations: {
         left: {
             parent: base,
@@ -230,7 +230,6 @@ panelManager = new PanelManager({
             size: "200px"
         }
     }
-
 });
 
 var tabState = {};

@@ -305,7 +305,7 @@ define(function(require, exports, module) {
     });
 
     panelManager = new PanelManager({
-        base: base,
+        layout: base,
         locations: {
             left: {
                 parent: base,
