@@ -10,29 +10,37 @@ var EditSession = require("ace/edit_session").EditSession;
 var Renderer = require("ace/virtual_renderer").VirtualRenderer;
 var theme = require("ace/theme/textmate");
 
-var {Box, Pane} = require("layout/box");
+var {Box, Pane} = require("layout/widgets/box");
 var newTabCounter = 1;
 
 
 
-    function getJson(name) {
-        try {
-            return JSON.parse(localStorage[name]);
-        } catch(e) {
-            return null;
-        }
+function parseJson(name) {
+    try {
+        return JSON.parse(localStorage[name]);
+    } catch(e) {
+        return null;
     }
-    function saveJson(name, value) {
-        localStorage[name] = JSON.stringify(value);
-    }
+}
+
+function saveJson(name, value) {
+    localStorage[name] = JSON.stringify(value);
+}
 
 class TabManager {
+    /**
+     *
+     * @param {Object} options
+     * @param {Box} options.console
+     * @param {Box} options.main
+     */
     constructor(options) {
         this.containers = {};
         this.containers.console = options.console;
         this.containers.main = options.main;
         this.tabs = {};
     }
+
     toJSON() {
         var containers = this.containers
         return {
@@ -41,6 +49,12 @@ class TabManager {
         };
     }
 
+    /**
+     *
+     * @param {Box} box
+     * @param {Object} boxData
+     * @param {Number} index
+     */
     setChildBoxData(box, boxData, index) {
         if (!boxData[index])
             return;
@@ -52,6 +66,12 @@ class TabManager {
         this.setBoxData(box[index], boxData[index]);
 
     }
+
+    /**
+     *
+     * @param {Box} box
+     * @param {Object} boxData
+     */
     setBoxData(box, boxData) {
         if (!boxData) return;
 
@@ -71,7 +91,7 @@ class TabManager {
                             this.previewTab = tab;
                     })
                     box.tabBar.freeze = false;
-                    box.tabBar.render();
+                    box.tabBar.configurate();
                 }
             }
         } else {
@@ -81,38 +101,45 @@ class TabManager {
             this.setChildBoxData(box, boxData, 1);
         }
     }
-    setState(json) {
-        var setState = (box, json) => {
+
+    setState(state) {
+        var setState = (box, state) => {
             if (!box) return
             box.removeAllChildren();
-            this.setBoxData(box, json);
+            this.setBoxData(box, state);
             if (!box[0] && box.isMain)
                 this.setChildBoxData(box, [{type: "pane"}], 0)
 
         };
 
-        setState(this.containers.main, json && json.main);
-        setState(this.containers.console, json && json.console);
+        setState(this.containers.main, state && state.main);
+        setState(this.containers.console, state && state.console);
     }
+
     clear() {
 
     }
+
     getPanes() {
 
     }
+
     getTabs() {
 
     }
+
     get activePane() {
         return this.containers.main.element.querySelector(".tabPanel").host
     }
+
     get activeTab() {
         return this.activePane.tabBar.activeTab;
     }
-    get focussedTab() {
-        return this.activePane.tabBar.activeTab;
-    }
 
+    /**
+     *
+     * @param {Tab} tab
+     */
     activateTab(tab) {
         var pane = tab.parent.parent;
 
@@ -139,6 +166,10 @@ class TabManager {
         pane.resize();
     }
 
+    /**
+     *
+     * @param {Tab} tab
+     */
     deactivateTab(tab) {
         var pane = tab.parent.parent;
         if (tab.parent.activeTab == tab && pane.editor) {
@@ -151,7 +182,7 @@ class TabManager {
         if (!tab || !tab.parent) {
             var pane = this.activePane
             if (this.previewTab)
-                this.previewTab.close();
+                this.previewTab.remove();
 
             var tabTitle = options.path.split("/").pop();
 
@@ -165,12 +196,12 @@ class TabManager {
                 this.previewTab = tab;
             tab.parent.scrollTabIntoView(tab)
             this.tabs[tab.path] = tab
-    }
+        }
         if (!options.preview) {
             if (this.previewTab == tab) {
                 this.clearPreviewStatus(tab);
             } else if (this.previewTab) {
-                this.previewTab.close();
+                this.previewTab.remove();
             }
         }
         tab.parent.removeSelections()
@@ -186,8 +217,11 @@ class TabManager {
 
     }
 
-
-    saveMetadataForTab(tab) {
+    /**
+     *
+     * @param {Tab} tab
+     */
+    saveMetadata(tab) {
         if (!tab.path || !tab.session) return;
 
         var session = tab.session
@@ -220,12 +254,17 @@ class TabManager {
         }
     }*/
 
+    /**
+     *
+     * @param {Tab} tab
+     * @param {String|undefined} value
+     */
     setSession(tab, value) {
         var editor = tab.editor
         if (!editor) return;
 
         if (editor.session && editor.session.tab) {
-            this.saveMetadataForTab(editor.session.tab);
+            this.saveMetadata(editor.session.tab);
         }
 
         if (typeof value == "string") {
@@ -234,19 +273,9 @@ class TabManager {
             // tab.editor.on("input", updateSaveButton)
             this.loadMetadata(tab)
         }
-        // var readOnly = tab.path?.startsWith("defaults/");
-        // tab.session.$readOnly = readOnly;
-        editor.setSession(tab.session);
-        // editor.$options.readOnly.set.call(editor, editor.$readOnly);
 
-        /*if (sharedWorker.$doc)
-            sharedWorker.$doc.off("change", sharedWorker.changeListener);
-        if (tab.session) {
-            sharedWorker.deltaQueue = sharedWorker.$doc = null;
-            sharedWorker.attachToDocument(editor.session.getDocument());
-            editor.session.$worker = sharedWorker;
-            sharedWorker.session = tab.session;
-        }*/
+        editor.setSession(tab.session);
+
         editor.container.style.display = "";
 
         editor.setOptions({
@@ -255,15 +284,16 @@ class TabManager {
             enableBasicAutocompletion: true,
             showPrintMargin: false,
         });
-        // editor.completers = cvuCompleters
-
-        // updateSaveButton(false, editor);
     }
 
+    /**
+     *
+     * @param {Tab} tab
+     */
     loadMetadata(tab) {
         var path = tab.path;
         var session = tab.session;
-        var metadata = getJson("@file@" + path)
+        var metadata = parseJson("@file@" + path)
         if (!metadata) return;
         try {
             if (typeof metadata.value == "string" && metadata.value != session.getValue()) {
@@ -277,29 +307,35 @@ class TabManager {
                 session.setScrollTop(metadata.scroll[1]);
             }
 
-        }catch(e) {
+        } catch(e) {
             console.error(e)
         }
     }
 
+    /**
+     *
+     * @param {Pane} pane
+     */
     addNewTab(pane) {
         pane.tabBar.addTab({
             tabTitle: `Untitled ${newTabCounter++}`,
             active: true,
         });
     };
+
+    /**
+     * TODO: needs to actually load files
+     * @param {Tab} tab
+     */
     loadFile(tab) {
         if (!tab.editor) return;
 
         if (tab.session) {
-            return this.setSession(tab, tab.session)
+            this.setSession(tab, tab.session)
         } else if (!tab.path) {
-            return this.setSession(tab, "")
+            this.setSession(tab, "")
         } else if (tab.path) {
             tab.editor.container.style.display = "none";
-            // loadCVUDefinition(tab.path, function(err, value) {
-            //     setSession(tab, value)
-            // });
         } else {
             tab.editor.container.style.display = "none";
         }

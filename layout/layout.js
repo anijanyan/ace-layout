@@ -4,15 +4,15 @@ var lib = require("layout/lib");
 var HashHandler = require("ace/keyboard/hash_handler").HashHandler;
 var keyUtil = require("ace/lib/keys");
 
-dom.importCssString(require("ace/requirejs/text!layout/layout.css"), "layout.css");
+dom.importCssString(require("ace/requirejs/text!layout/styles/layout.css"), "layout.css");
 
 
-var {Box, Pane} = require("layout/box");
-var {Tab, TabBar, Panel, PanelBar} = require("layout/tab");
-var {TabManager} = require("layout/tabManager");
-var {PanelManager} = require("layout/panelManager");
-var {Accordion} = require("layout/accordion");
-var {MenuManager, MenuToolBar} = require("layout/menu");
+var {Box, Pane} = require("layout/widgets/box");
+var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
+var {TabManager} = require("layout/widgets/tabManager");
+var {PanelManager} = require("layout/widgets/panelManager");
+var {Accordion} = require("layout/widgets/accordion");
+var {MenuManager, MenuToolBar} = require("layout/widgets/menu");
 
 class FindBar {
     constructor(options) {
@@ -23,7 +23,7 @@ class FindBar {
         this.box = [x, y, w, h];
     }
 
-    draw() {
+    render() {
         if (this.element) this.element;
         this.element = dom.buildDom(["div", {
             class: "findbar",
@@ -137,7 +137,7 @@ var base = new Box({
     }),
 });
 
-base.draw();
+base.render();
 
 var onResize = function () {
     base.setBox(0, 0, window.innerWidth, window.innerHeight)
@@ -179,7 +179,7 @@ class SearchManager {
     closeFindBar() {
         this.animateBox(this.mainBox);
 
-        this.mainBox.removeBar("bottom");
+        this.mainBox.removeToolBar("bottom");
         this.findBar.close();
         this.mainBox.resize();
     }
@@ -217,7 +217,7 @@ tabManager = new TabManager({
 });
 
 panelManager = new PanelManager({
-    base: base,
+    layout: base,
     locations: {
         left: {
             parent: base,
@@ -230,14 +230,17 @@ panelManager = new PanelManager({
             size: "200px"
         }
     }
-
 });
 
 var tabState = {};
 var panelState = {};
 try {
-    if (localStorage.tabs)
+    if (localStorage.tabs) {
         tabState = JSON.parse(localStorage.tabs);
+    } else {
+        let initialTabs = '{"console":{"0":{"type":"pane","tabBar":{"tabList":[],"scrollLeft":0}},"ratio":1,"type":"hbox","fixedSize":100,"size":"100px"},"main":{"0":{"0":{"type":"pane","tabBar":{"tabList":[{"tabTitle":"Untitled 1"},{"tabTitle":"Untitled 2"},{"tabTitle":"Untitled 3"},{"tabTitle":"Untitled 4"},{"tabTitle":"Untitled 5"},{"tabTitle":"Untitled 6"},{"tabTitle":"Untitled 7"},{"tabTitle":"Untitled 8"},{"tabTitle":"Untitled 9"},{"tabTitle":"Untitled 10"},{"tabTitle":"Untitled 11"},{"tabTitle":"Untitled 12"},{"tabTitle":"Untitled 13"},{"tabTitle":"Untitled 14"},{"tabTitle":"Untitled 15","active":true}],"scrollLeft":895.640625}},"1":{"type":"pane","tabBar":{"tabList":[{"tabTitle":"Untitled 16","active":true},{"tabTitle":"Untitled 17"}],"scrollLeft":0}},"ratio":0.5,"type":"hbox","fixedSize":null},"ratio":1,"type":"hbox","fixedSize":null}}';
+        tabState = JSON.parse(initialTabs);
+    }
     if (localStorage.panels)
         panelState = JSON.parse(localStorage.panels);
 } catch (e) {
@@ -247,4 +250,4 @@ panelManager.setState(panelState);
 
 onResize();
 
-mainBox[1].addButtonsToChildPane();
+mainBox[1].addButtons();

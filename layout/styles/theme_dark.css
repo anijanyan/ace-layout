@@ -1,22 +1,84 @@
 
-
-.c9-menu-bar .c9-mbar-cont {
-    border-bottom: 0 !important;
-    z-index: 30000;
-}
-.c9-menu-btn {
-    color: #dcdfe5 !important;
-    line-height: 42px;
-}
-.c9-menu-btnDown,
-.c9-menu-btnOver {
-    background-color: #1c1d21 !important;
-    color: #dcdfe5;
-    border-color: #1c1d21;
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #2d2d2d;
+}
 
 
+/* @file @c9/ide/plugins/c9.ide.layout.classic/less/c9-divider-double.less */
+.c9-divider-double {
+    position: relative;
+    overflow: hidden;
+    width: 2px;
+    height: 23px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.c9-divider-double DIV {
+    position: relative;
+    width: 1px;
+    height: 23px;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: 1px solid #000000;
+}
+.menudivider {
+    border-right: 1px solid #000000 !important;
+    margin-left: 10px !important;
+    margin-top: -2px !important;
+    height: 25px !important;
+    width: 0 !important;
+    margin-right: 3px;
+}
+.extrasdivider {
+    border-right: 1px solid #000000 !important;
+    height: 25px !important;
+    width: 0 !important;
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+}
+/* @file @c9/ide/plugins/c9.ide.layout.classic/less/c9-divider-hor.less */
+.c9-divider-hor {
+    position: relative;
+    height: 0px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.c9-divider-hor span {
+    color: #606060;
+    text-shadow: #000000 0px 1px 0px;
+    background: #1d1d1d;
+    font-size: 7pt;
+    top: -8px;
+    position: relative;
+    left: 4px;
+    padding: 0 3px 0 3px;
+    display: none;
+}
+.c9-divider-horCaption span {
+    display: block;
+}
+/* @file @c9/ide/plugins/c9.ide.layout.classic/less/c9-divider.less */
+.c9-divider {
+    position: relative;
+    overflow: hidden;
+    width: 0px;
+    height: 23px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.expandedpanel .c9-divider.runcommandsdivider {
+    display: none;
+}
 /* @file @c9/ide/plugins/c9.ide.layout.classic/less/c9-menu-bar.less */
 .c9-menu-bar {
     position: relative;
@@ -30,15 +92,18 @@
     top: 0;
     height: 4px;
     background-repeat: 'repeat-x';
-    background-image: url(c9-repeat-x_flat_light@1x.png);
+    background-image: url(c9-repeat-x@1x.png);
     background-size: 32px 1500px;
     background-color: #49a8fa;
     content: "";
-    display: none;
+    display: block;
 }
 .c9-menu-bar .c9-mbar-bcont {
     position: relative;
     overflow: visible;
+}
+.c9-mbar-logo {
+    padding-top: 4px;
 }
 .c9-menu-bar .c9-mbar-cont > *,
 .c9-menu-bar .c9-mbar-cont .c9-mbar-minimize {
@@ -47,20 +112,20 @@
 .c9-menu-bar .c9-mbar-cont {
     position: relative;
     overflow: hidden;
-    padding: 0 11px 0 33px;
+    padding: 0 74px 0 22px;
     margin: 0;
-    height: 40px;
-    background: #1c1d21;
-    box-shadow: 0 1px 0 0 transparent inset;
-    border-bottom: 1px solid #1c1d21;
-    border-top: 0px solid transparent;
+    height: 25px;
+    background: #252525;
+    box-shadow: 0 1px 0 0 #353535 inset;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
 }
 .fullscreen .c9-menu-bar .c9-mbar-cont {
     box-shadow: none;
 }
 .bartools {
-    padding-top: 0 !important;
-    padding-left: 50px !important;
+    padding-top: 1px !important;
+    padding-left: 0 !important;
 }
 .c9-menu-bar .c9-mbar-cont > div {
     display: inline-block;
@@ -68,8 +133,8 @@
 }
 .c9-menu-bar .c9-mbar-cont .c9-divider-double,
 .c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize {
-    border-right: 1px solid transparent !important;
-    box-shadow: 1px 0 0 0 transparent;
+    border-right: 1px solid #000000 !important;
+    box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.06);
 }
 .c9-menu-bar .c9-mbar-cont .c9-divider-double {
     border-left-width: 0;
@@ -85,44 +150,40 @@
     left: 0;
     position: absolute;
     top: 0px;
-    width: 31px;
+    width: 20px;
 }
 .c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:before {
     content: "";
     display: block;
     border: 10px solid red;
-    border-color: transparent transparent #acacac transparent;
+    border-color: transparent transparent #848488 transparent;
     border-width: 5px 5px;
     width: 0px;
     margin: 5px 0 0 5px;
     z-index: 0;
     position: relative;
-    box-shadow: 0px 1px #949494;
-    top: 7px;
-    left: 10px;
+    box-shadow: 0px 1px #151515;
 }
 .c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:after {
     content: "";
     display: block;
     border: 10px solid red;
-    border-color: transparent transparent #acacac transparent;
+    border-color: transparent transparent #65656a transparent;
     border-width: 4px 4px;
     width: 0px;
     margin: 7px 0 0 6px;
-    box-shadow: 0px 1px #949494;
+    box-shadow: 0px 1px #151515;
     position: relative;
     left: 0px;
     top: -15px;
-    top: -8px;
-    left: 10px;
 }
 .c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:hover:before {
-    border-color: transparent transparent #999999 transparent;
-    box-shadow: 0px 1px #777777;
+    border-color: transparent transparent #9c9c9f transparent;
+    box-shadow: 0px 1px #151515;
 }
 .c9-menu-bar .c9-mbar-bcont .c9-mbar-minimize:hover:after {
-    border-color: transparent transparent #999999 transparent;
-    box-shadow: 0px 1px #777777;
+    border-color: transparent transparent #838387 transparent;
+    box-shadow: 0px 1px #151515;
 }
 .c9-menu-bar .c9-mbar-bcont .c9-simple-btnDisabled.c9-mbar-minimize:hover {
     background-position: 0 -70px;
@@ -130,7 +191,7 @@
 }
 .c9-mbar-round {
     background-repeat: no-repeat;
-    background-image: url(c9-no-repeat_flat_light@1x.png);
+    background-image: url(c9-no-repeat@1x.png);
     background-size: 480px 580px;
     height: 37px;
     pointer-events: none;
@@ -139,7 +200,7 @@
     top: 0;
     width: 74px;
     z-index: 999;
-    display: none;
+    display: block;
 }
 .c9-mbar-round .mainlogo {
     background-image: url("AWSCloud9_icon_white.svg");
@@ -156,7 +217,7 @@
     background-position: -96px -44px;
 }
 .updateAvailable .c9-mbar-round .mainlogo {
-    background: url("c9-no-repeat_flat_light@1x.png") no-repeat -96px -44px;
+    background: url("c9-no-repeat@1x.png") no-repeat -96px -44px;
     cursor: pointer;
 }
 .not-loggedin .c9-menu-bar .c9-mbar-bcont .c9-mbar-round {
@@ -166,7 +227,7 @@
     top: 35px;
 }
 .c9-menu-bar .c9-mbar-bcont .c9-activity {
-    background: url("c9-no-repeat_flat_light@1x.png") no-repeat -84px 0;
+    background: url("c9-no-repeat@1x.png") no-repeat -84px 0;
     height: 10px;
     left: 24px;
     pointer-events: all;
@@ -176,7 +237,7 @@
     display: none;
 }
 .c9-menu-bar .c9-mbar-bcont .c9-activity .light {
-    background: url("c9-no-repeat_flat_light@1x.png") no-repeat -102px -19px;
+    background: url("c9-no-repeat@1x.png") no-repeat -102px -19px;
     /* nothing */
     height: 10px;
     left: 0;
@@ -196,17 +257,17 @@
 }
 .c9-menu-bar.minimized .c9-mbar-cont,
 .c9-menu-bar.minimized .c9-mbar-bcont .c9-mbar-minimize {
-    background-color: #131416;
-    background-image: url("c9-repeat-x_flat_light@1x.png");
+    background-color: #262626;
+    background-image: url("c9-repeat-x@1x.png");
     background-repeat: no-repeat;
     background-position: 50% -13px;
     cursor: pointer;
     height: 7px;
-    box-shadow: 0 1px transparent inset;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.06) inset;
 }
 .c9-menu-bar.minimized .c9-mbar-cont:hover,
 .c9-menu-bar.minimized .c9-mbar-bcont .c9-mbar-minimize:hover {
-    background-color: #0c0c0e;
+    background-color: #262626;
     background-position: 50% -21px;
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.08) inset, 0 6px 0 0 rgba(255, 255, 255, 0.05) inset;
 }
@@ -224,35 +285,33 @@
     cursor: default;
     position: relative;
     display: inline-block;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Tahoma, Arial;
     font-size: 12px;
     line-height: 14px;
-    color: #333333;
-    padding: 0px 9px 0 9px;
-    text-shadow: 0px 0px 0px transparent;
+    color: #cecece;
+    padding: 4px 7px 0 7px;
+    text-shadow: #292a2b 0px 1px 0px;
     -webkit-user-select: none"; -moz-user-select: none; -ms-user-select: none"; user-select: none;
 }
-.c9-menu-btnOver {
-    background-color: #e6e6e6;
-    box-shadow: none;
-    color: #313236;
+.c9-menu-btnOver, .c9-menu-btn:hover {
+    background-color: #333333;
+    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;
+    color: #d4d4d4;
 }
-.c9-menu-btnDown {
-    font-weight: 300;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
-    border: 1px solid #dedede;
-    border-width: 0 1px;
-    padding: 0px 8px 0 8px;
-}
-.c9-menu-btnDown.submenu {
+.c9-menu-btn.c9-menu-btnDown {
+    font-weight: normal;
+    background-color: #494949;
+    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;
+    border: 0;
+    border-width: 0;
+    padding: 4px 7px 0 7px;
     z-index: 100000000;
 }
 .c9-menu-btnDisabled.c9-menu-btn .c9-label {
-    color: #bdbdbd;
+    color: #999999;
 }
 .c9-menu-btn .icon {
-    background-image: url(c9-repeat-x_flat_light@1x.png);
+    background-image: url(c9-repeat-x@1x.png);
     background-size: 32px 1500px;
     background-repeat: no-repeat;
     position: absolute;
@@ -269,14 +328,14 @@
     float: right;
 }
 .c9-menu-btn.preferences {
-    padding: 21px !important;
+    padding: 13px 9px 0 7px !important;
     margin-left: 0;
 }
 .c9-menu-btn.preferences .icon {
     background-position: 50% -364px;
     display: block;
-    top: 5px !important;
-    height: 25px !important;
+    top: 0 !important;
+    height: auto !important;
 }
 .c9-menu-btn.share .icon {
     background-position: 50% -1367px;
@@ -319,49 +378,49 @@
 /* @file @c9/ide/plugins/c9.ide.layout.classic/less/menu.less */
 .c9menu {
     margin: -1px 0 0 0;
-    padding: 7px 0 7px 0;
+    padding: 3px 0 3px 0;
     z-index: 10000;
     position: absolute;
     overflow: visible;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-family: Tahoma, Arial;
+    font-size: 11px;
     line-height: 14px;
-    color: #313236;
+    color: #f1f1f1;
     cursor: default;
     display: none;
-    border: 1px solid #dfdfdf;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.09);
-    background-color: #ffffff;
-    text-shadow: none;
-    border-radius: 0 4px 4px 4px;
+    border: 1px solid #00040a;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);
+    background-color: #494949;
+    text-shadow: 0px 1px 0px #2c2c2c;
+    border-radius: 0;
 }
 .c9menu > div.menu_item {
-    padding: 4px 22px 4px 26px;
+    padding: 3px 16px 5px 23px;
     white-space: nowrap;
     cursor: default;
     z-index: 1100000;
     height: 13px;
 }
 .c9menu > div.menu_item.update {
-    background-color: #63acff;
+    background-color: #748512;
     font-weight: bold;
-    color: #ffffff;
+    color: #f1f1f1;
     text-shadow: none;
 }
 .c9menu > div.menu_item.hover {
-    background-color: #63acff;
-    color: #ffffff;
+    background-color: #262626;
+    color: #a0b42a;
 }
 .c9menu > div.menu_divider {
     overflow: visible;
     padding: 0;
     font-size: 1px;
-    margin: 6px 9px;
-    border-top: 1px solid #f1f1f1;
-    border-bottom: 1px solid transparent;
+    margin: 2px 3px;
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #565656;
     height: 0;
 }
-.c9menu > div.menu_item > span {
+.c9menu > div.menu_item > .shortcut {
     right: 15px;
     margin-top: 0px;
     z-index: 10;
@@ -369,21 +428,21 @@
     padding-left: 15px;
     float: right;
 }
-.c9menu > div.submenu > span {
-    background: url("submenu_arrow.gif") no-repeat right 0;
+.c9menu > div.submenu > .shortcut {
+    background: url("../images/submenu_arrow.gif") no-repeat right -15px;
     width: 4px;
     height: 7px;
     display: block;
     position: absolute;
-    right: 11px;
+    right: 8px;
     margin: 4px 0 0 0;
     z-index: 10;
 }
 .c9menu > div.submenu.hover > span {
-    background: url("submenu_arrow.gif") no-repeat right -15px;
+    background: url("../images/submenu_arrow.gif") no-repeat right -15px;
 }
 .c9menu > div.menu_item.disabled {
-    color: #9c9c9c;
+    color: #808080;
     text-shadow: none;
     -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
 }
@@ -391,63 +450,89 @@
     width: 16px;
     height: 16px;
     position: absolute;
-    left: 6px;
+    left: 3px;
     margin-top: -1px;
 }
 .c9menu > div.menu_item > a {
     float: left;
 }
 .c9menu > div.menu_item.selected > u {
-    background: url("radio.gif") no-repeat 0 0;
+    background: url("../images/radio.gif") no-repeat 0 -16px;
 }
 .c9menu > div.menu_item.selected:hover > u {
-    background: url("radio.gif") no-repeat 0 -16px;
+    background: url("../images/radio.gif") no-repeat 0 -16px;
 }
 .c9menu > div.menu_item.checked > u {
-    background: url("check.gif") no-repeat 0 0;
+    background: url("../images/check.gif") no-repeat 0 -16px;
 }
 .c9menu > div.menu_item.checked:hover > u {
-    background: url("check.gif") no-repeat 0 -16px;
+    background: url("../images/check.gif") no-repeat 0 -16px;
 }
 .c9menu > div.menu_item.disabled > u {
     opacity: 0.2;
 }
 .c9menu > div.menu_item.checked.disabled > u {
-    background: url("check.gif") no-repeat 0 0;
+    background: url("../images/check.gif") no-repeat 0 -16px;
 }
 .c9menu > div.menu_item.selected.disabled > u {
-    background: url("radio.gif") no-repeat 0 0;
+    background: url("../images/radio.gif") no-repeat 0 -16px;
 }
 
-/* Menu Cloud 9 Icon */
-.c9-menu-btn.c9btn {
-    font-size: 0px !important;
-    padding: 4px 11px 11px 11px !important;
-    z-index: inherit;
-    line-height: 28px;
-}
-.c9-menu-btn.c9btn {
-    background-image: url("AWSCloud9_icon_white.svg") !important;
-    background-repeat: no-repeat !important;
-    background-position: 50% 50% !important;
-}
-.c9-menu-btnDown.c9btn {
-    border: 0 !important;
-}
-/* Menu hover animate bottom border */
-.c9-menu-bar .c9-menu-btn:after {
-    content: "";
+.menu_searchbox {
+    height: auto;
+    width: auto;
+    border: 1px solid #be1100;
+    background-color: #653b13;
+    color: white;
     position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
+    font-family: Tahoma, Arial;
+    font-size: 12px;
 }
-.c9-menu-bar .c9-menu-btnOver:after {
-    visibility: visible;
-    transform: scaleX(1);
+
+.menu-completion-highlight {
+    color: #2d69c7;
+}
+.searchbtn_close {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;
+    border-radius: 50%;
+    border: 0 none;
+    color: #656565;
+    cursor: pointer;
+    font: 16px/16px Arial;
+    padding: 0;
+    height: 14px;
+    width: 14px; 
+    display: inline-block;
+}
+.searchbtn_close:hover {
+    background-color: #656565;
+    background-position: 50% 100%;
+    color: white;
+}
+
+.searchbtn_filter {
+    background: url("../images/check.gif") no-repeat 50% 0;
+    border-radius: 50%;
+    border: 0 none;
+    color: #656565;
+    cursor: pointer;
+    font: 16px/16px Arial;
+    padding: 0;
+    height: 14px;
+    width: 14px; 
+    display: inline-block;
+}
+
+.searchbtn_filter:hover {
+    background-color: #656565;
+    background-position: 50% 100%;
+    color: white;
+}
+
+.menu_no_result {
+    padding: 3px 10px 5px 20px;
+    white-space: nowrap;
+    cursor: default;
+    z-index: 1100000;
+    height: 13px;
 }
