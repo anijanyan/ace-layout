@@ -1,6 +1,7 @@
 .tabContainer {
     align-items: stretch;
     justify-content: stretch;
+    height: 30px;
 }
 
 .tabPlusButton {

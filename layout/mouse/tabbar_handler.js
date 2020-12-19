@@ -3,6 +3,8 @@ define(function(require, exports, module) {
     var dom = require("ace/lib/dom");
     var lib = require("layout/lib");
 
+    var Tooltip = require("ace/tooltip").Tooltip;
+
     var tabbarMouseDown = function(e, tabConstructor, tabBarConstructor, showSplit) {
         var divSplit, splitPosition, pane;
         function hideSplitPosition(e) {
@@ -10,68 +12,68 @@ define(function(require, exports, module) {
             divSplit = splitPosition = pane = null;
         }
 
-            function showSplitPosition(e) {
-                var el = e.target;
-                if (tabBar) {
-                    if (divSplit) hideSplitPosition();
-                    return;
-                }
-
-                pane = lib.findHost(el);
-
-                // If aml is not the pane we seek, lets abort
-                if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
-                    if (divSplit) hideSplitPosition();
-                    return;
-                }
-                // Cannot split pane that would be removed later
-                if (pane.tabBar.tabList.length === 0) {
-                    if (divSplit) hideSplitPosition();
-                    return;
-                }
-
-                var dark = false; // !tab || tab.classList.constains("dark");
-                if (!divSplit) {
-                    divSplit = document.createElement("div");
-                    document.body.appendChild(divSplit);
-                }
-
-                divSplit.className = "split-area" + (dark ? " dark" : "");
-
-                // Find the rotated quarter that we're in
-                var rect = pane.element.getBoundingClientRect();
-                // TODO add getContentRect?
-                // Get buttons height
-                var bHeight = pane.tabBar.element.clientHeight - 1;
-                rect = {
-                    left: rect.left,
-                    top: rect.top + bHeight,
-                    width: rect.width,
-                    height: rect.height - bHeight,
-                };
-
-                var left = (e.clientX - rect.left) / rect.width;
-                var right = 1 - left;
-                var top = (e.clientY - rect.top) / rect.height;
-                var bottom = 1 - top;
-
-                // Anchor to closes side
-                var min = Math.min(left, top, right, bottom);
-
-                if (min == left) {
-                    splitPosition = [true, false]; // Left
-                    lib.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
-                } else if (min == right) {
-                    splitPosition = [false, false];// Right
-                    lib.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
-                } else if (min == top) {
-                    splitPosition = [true, true];// Top
-                    lib.setBox(divSplit, rect.left, rect.top, rect.width, rect.height/ 2);
-                } else if (min == bottom) {
-                    splitPosition = [false, true]; // Bottom
-                    lib.setBox(divSplit, rect.left, rect.top+ rect.height / 2, rect.width, rect.height / 2);
-                }
+        function showSplitPosition(e) {
+            var el = e.target;
+            if (tabBar) {
+                if (divSplit) hideSplitPosition();
+                return;
             }
+
+            pane = lib.findHost(el);
+
+            // If aml is not the pane we seek, lets abort
+            if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
+                if (divSplit) hideSplitPosition();
+                return;
+            }
+            // Cannot split pane that would be removed later
+            if (pane.tabBar.tabList.length === 0) {
+                if (divSplit) hideSplitPosition();
+                return;
+            }
+
+            var dark = false; // !tab || tab.classList.constains("dark");
+            if (!divSplit) {
+                divSplit = document.createElement("div");
+                document.body.appendChild(divSplit);
+            }
+
+            divSplit.className = "split-area" + (dark ? " dark" : "");
+
+            // Find the rotated quarter that we're in
+            var rect = pane.element.getBoundingClientRect();
+            // TODO add getContentRect?
+            // Get buttons height
+            var bHeight = pane.tabBar.element.clientHeight - 1;
+            rect = {
+                left: rect.left,
+                top: rect.top + bHeight,
+                width: rect.width,
+                height: rect.height - bHeight,
+            };
+
+            var left = (e.clientX - rect.left) / rect.width;
+            var right = 1 - left;
+            var top = (e.clientY - rect.top) / rect.height;
+            var bottom = 1 - top;
+
+            // Anchor to closes side
+            var min = Math.min(left, top, right, bottom);
+
+            if (min == left) {
+                splitPosition = [true, false]; // Left
+                lib.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
+            } else if (min == right) {
+                splitPosition = [false, false];// Right
+                lib.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
+            } else if (min == top) {
+                splitPosition = [true, true];// Top
+                lib.setBox(divSplit, rect.left, rect.top, rect.width, rect.height / 2);
+            } else if (min == bottom) {
+                splitPosition = [false, true]; // Bottom
+                lib.setBox(divSplit, rect.left, rect.top + rect.height / 2, rect.width, rect.height / 2);
+            }
+        }
 
 
 
@@ -343,6 +345,52 @@ define(function(require, exports, module) {
         return e.preventDefault();
     };
 
+    var tooltip
+    var currentTab
+
+    var tabbarMouseMove = function(e, tabConstructor, tabBarConstructor) {
+        var tab = lib.findHost(e.target, tabConstructor);
+        if (!tab) {
+            tooltip && tooltip.hide();
+            currentTab = null;
+            return;
+        }
+
+        currentTab = tab
+
+        var tooltipTitle = tab.tooltip || tab.tabTitle;
+
+        if (!tooltip)
+            tooltip = new Tooltip(document.body);
+
+
+        var rect = tab.element.getBoundingClientRect();
+        var style = tooltip.getElement().style;
+        style.top = rect.bottom + 10 + "px";
+        style.textAlign = "center";
+        style.minWidth = rect.width + "px";
+        style.maxWidth = "40em";
+        style.whiteSpace = "pre-wrap";
+        style.wordWrap = "normal";
+
+        tooltip.setText(tooltipTitle.replace(/[/.-]/g, "\u200b$&"));
+        tooltip.show();
+        var tooltipRect = tooltip.getElement().getBoundingClientRect();
+        var left = rect.left + rect.width / 2 - tooltipRect.width / 2;
+        if (left + tooltipRect.width > window.innerWidth - 2)
+            left = Math.max(0, window.innerWidth - 2 - tooltipRect.width);
+        if (left < 2)
+            left = 2;
+        if (tooltipRect.width > window.innerWidth - 4)
+            style.maxWidth = window.innerWidth - 4 + "px";
+        style.left = left + "px";
+    };
+    var tabbarMouseOut = function(e, tabConstructor, tabBarConstructor) {
+        console.log(e)
+        tooltip && tooltip.hide();
+    };
 
     exports.tabbarMouseDown = tabbarMouseDown;
+    exports.tabbarMouseMove = tabbarMouseMove;
+    exports.tabbarMouseOut = tabbarMouseOut;
 });

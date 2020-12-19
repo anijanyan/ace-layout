@@ -100,7 +100,7 @@ class Tab {
     }
 }
 
-var {tabbarMouseDown} = require("../mouse/tabbar_handler");
+var {tabbarMouseDown, tabbarMouseMove, tabbarMouseOut} = require("../mouse/tabbar_handler");
 
 /**
  * @type {TabBar}
@@ -402,6 +402,8 @@ class TabBar {
                     onclick: this.onTabClick,
                     onmouseup: this.onTabMouseUp,
                     onmousedown: this.onTabMouseDown,
+                    onmousemove: this.onMouseMove,
+                    onmouseout: this.onMouseOut,
                 }]
             ],
             ["span", {
@@ -663,6 +665,18 @@ class TabBar {
             tabbarMouseDown(e, Tab, TabBar, true)
     }
     onTabMouseDown = this.onTabMouseDown.bind(this)
+
+    onMouseMove(e) {
+        if (e.button == 0)
+            tabbarMouseMove(e, Tab, TabBar)
+    }
+    onMouseMove = this.onMouseMove.bind(this)
+
+    onMouseOut(e) {
+        if (e.button == 0)
+            tabbarMouseOut(e, Tab, TabBar)
+    }
+    onMouseOut = this.onMouseOut.bind(this)
 
     onTabPlusClick(e) {
         this.removeSelections();
