@@ -25,6 +25,7 @@ class Button {
         this.element = dom.buildDom(["div", {
             class: this.className + (this.disabled ? this.className + "Disabled" : ""),
             onmousedown: (e) => {
+                e.preventDefault();
                 e.target.className = this.className + " " + this.className + "Down";
             },
             onmouseup: (e) => {
