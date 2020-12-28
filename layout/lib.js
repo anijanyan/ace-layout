@@ -14,6 +14,14 @@ define(function(require, exports, module) {
         return null;
     };
 
+    exports.findHostTarget = function(target) {
+        while (target) {
+            if (target.$host) return target;
+            target = target.parentElement;
+        }
+        return null;
+    };
+
     exports.setBox = function(el, x, y, w, h) {
         if (w) {
             w = Math.max(w, 0);

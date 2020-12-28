@@ -1048,29 +1048,31 @@ window.$prefs = [
         }
     },
     {
-        "File": {
-            "position": 150,
-            "Save": {
-                "position": 100,
-                "Auto-Save Files": {
-                    "type": "dropdown",
+        "Experimental": {
+            "File": {
+                "position": 150,
+                "Save": {
                     "position": 100,
-                    "path": "user/general/@autosave",
-                    "width": 130,
-                    "items": [
-                        {
-                            "caption": "Off",
-                            "value": false
-                        },
-                        {
-                            "caption": "On Focus Change",
-                            "value": "onFocusChange"
-                        },
-                        {
-                            "caption": "After Delay",
-                            "value": "afterDelay"
-                        }
-                    ]
+                    "Auto-Save Files": {
+                        "type": "dropdown",
+                        "position": 100,
+                        "path": "user/general/@autosave",
+                        "width": 130,
+                        "items": [
+                            {
+                                "caption": "Off",
+                                "value": false
+                            },
+                            {
+                                "caption": "On Focus Change",
+                                "value": "onFocusChange"
+                            },
+                            {
+                                "caption": "After Delay",
+                                "value": "afterDelay"
+                            }
+                        ]
+                    }
                 }
             }
         }
@@ -1094,42 +1096,8 @@ window.$prefs = [
 </script>
 <script>
 
-require(["layout/widgets/menu.js"], function({MenuManager}) {
-    var {buildDom} = require("ace/lib/dom")
-    function add(state) {
-        // First Level
-        for (var name in state) {
-            if (!prefModel[name])
-                prefModel[name] = state[name];
-        }
-    }
-    
-    var prefModel = {}
-    
-    $prefs.forEach(function(s) {
-        add(s)
-    })
-    
-    function render() {
-        var html = []
-        Object.keys(prefModel).forEach(function(e) {
-            html.push(["div", {}, e])
-            console.log(prefModel[e])
-        })
-        buildDom(html, document.body)
-    }
-    
-    render()
-    
-        // var menuManager = new MenuManager();
-        // window.menuManager = menuManager;
-        // 
-        // menuManager.build();
-        // menuManager.buildMenuBar(document.querySelector(".menubar"));
-        // menuManager.bindKeys();
-        
-        
-        
+require(["layout/preferences.js"], function() {
+
 });
 </script>
 

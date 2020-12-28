@@ -88,6 +88,10 @@
     background-color: #262626;
     color: #a0b42a;
 }
+.menu > div.menu_item.selected {
+    color: #d8fc68;
+}
+
 .menu > div.menu_divider {
     overflow: visible;
     padding: 0;
