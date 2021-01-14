@@ -5,10 +5,15 @@ var {Box, Pane} = require("layout/widgets/box");
 var {Button} = require("layout/widgets/button");
 var {Switcher} = require("layout/widgets/switcher");
 var {Dropdown} = require("layout/widgets/dropdown");
+var {PanelBar} = require("layout/widgets/tab");
+var {SettingsSearchBox} = require("layout/widgets/search");
 
 dom.importCssString(require("ace/requirejs/text!layout/styles/layout.css"), "layout.css");
 
 var preferences = new Box({
+    toolBars: {
+        top: new PanelBar({}),
+    },
     0: navigation = new Box({
         size: "200px",
     }),
@@ -72,7 +77,10 @@ function render() {
     renderGroup(resultPreferences)
 
     dom.buildDom(["div", {style: "overflow-y: scroll; height: 100%"}, navigationHtml], navigation.element)
-    dom.buildDom(["div", {style: "overflow-y: scroll; height: 100%"}, appHtml], app.element)
+    let preferencesNode = dom.buildDom(["div", {style: "overflow-y: scroll; height: 100%"}, appHtml], app.element)
+    let searchBox = new SettingsSearchBox(preferencesNode);
+    searchBox.build();
+    dom.buildDom([searchBox.element], preferences.toolBars.top.element)
 }
 
 function renderGroup(preferences) {
