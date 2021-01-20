@@ -121,15 +121,18 @@ class TabBar {
     tabContainer;
     tabPlusButton;
     freeze;
+    size;
 
     /**
      *
      * @param {Object} options
      * @param {String|undefined} options.direction
+     * @param {Number|undefined} options.size
      * @param {Tab[]} options.tabList
      */
     constructor(options) {
         this.direction = options.direction || "";
+        this.size = options.size || 27;//TODO
         this.initTabList = options.tabList;
     }
 

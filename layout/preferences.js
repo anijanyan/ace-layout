@@ -14,7 +14,7 @@ dom.importCssString(require("ace/requirejs/text!layout/styles/preferences.css"),
 var preferences = new Box({
     classNames: "bar-preferences",
     toolBars: {
-        top: new PanelBar({}),
+        top: new PanelBar({size: 31}),
     },
     0: navigation = new Box({
         size: "200px",

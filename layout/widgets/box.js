@@ -7,7 +7,6 @@ var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
 
 var SPLITTER_SIZE = 1;
 var BOX_MIN_SIZE = 40;
-var barHeight = 27;
 
 /**
  * @param {Box|undefined} 0
@@ -199,7 +198,7 @@ class Box {
         }
 
         bar.position = position;
-        this.padding[position] = barHeight;
+        this.padding[position] = bar.size;
         this.element.appendChild(bar.render());
         this.toolBars[position] = bar;
     }
@@ -416,18 +415,18 @@ class Box {
             switch (type) {
                 case "top":
                 case "bottom":
-                    h = barHeight;
+                    h = bar.size;
                     if (type === "bottom")
-                        y = height - barHeight;
+                        y = height - bar.size;
 
                     break;
                 case "left":
                 case "right":
-                    w = barHeight;
+                    w = bar.size;
                     y = this.padding.top;
                     h -= (this.padding.top + this.padding.bottom);
                     if (type === "right")
-                        x = width - barHeight;
+                        x = width - bar.size;
 
                     break;
                 default:
