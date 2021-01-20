@@ -42,7 +42,7 @@ define(function(require, exports, module) {
             this.items = items;
             this.value = value ?? items[0].value;
             this.className = className || "black_dropdown";
-            this.width = width ?? 500/*TODO*/
+            this.width = width ?? 200/*TODO*/
             this.options = other;
         }
 
@@ -51,6 +51,7 @@ define(function(require, exports, module) {
                 class: this.className + (this.disabled ? this.className + "Disabled" : ""),
                 style: "width: " + this.width + "px",
                 onmousedown: (e) => {
+                    e.preventDefault();
                     this.element.className = this.className + " " + this.className + "Down";
                     this.togglePopup()
                 },
