@@ -2,6 +2,7 @@
     width: 55px;
     height: 21px;
     background: url("../layout/images/sync.png") no-repeat 0 -21px;
+    display: inline-block;
 }
 .cbofflineDown {
     background-position: 0 0px;

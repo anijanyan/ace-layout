@@ -117,7 +117,7 @@ class SettingsSearchBox {
 
     build() {
         this.element = dom.buildDom(["div", {},
-            ["input", {class: "search_field"}],
+            ["input", {class: "search_field tbsimple", placeholder: "Search preferences"}],
             ["span", {class: "search_results"}],
             ["span", {class: "searchbtn_close"}]
         ]);

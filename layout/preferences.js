@@ -9,8 +9,10 @@ var {PanelBar} = require("layout/widgets/tab");
 var {SettingsSearchBox} = require("layout/widgets/search");
 
 dom.importCssString(require("ace/requirejs/text!layout/styles/layout.css"), "layout.css");
+dom.importCssString(require("ace/requirejs/text!layout/styles/preferences.css"), "preferences.css");
 
 var preferences = new Box({
+    classNames: "bar-preferences",
     toolBars: {
         top: new PanelBar({}),
     },
@@ -89,6 +91,8 @@ function renderGroup(preferences) {
             appHtml.push(renderItem(item["groupName"], item["groupData"]))
         }
         if (item["subGroups"]) {
+            if (item["subGroups"].length > 0 && item["subGroups"][0]["groupData"])
+                appHtml.push(renderItem(item["groupName"]))
             navigationHtml.push(["div", {}, item["groupName"]])
             renderGroup(item["subGroups"])
         }
@@ -97,36 +101,40 @@ function renderGroup(preferences) {
 }
 
 function renderItem(title, item) {
-    switch (item["type"]) {
-        case "checkbox":
-            return ["div", {class: "preferenceItem"}, ["span", {}, title], new Switcher({}).render()];
-        case "textbox":
-            return ["div", {class: "preferenceItem"}, ["span", {}, title], ["input", {}]];
-        case "spinner":
-            return ["div", {class: "preferenceItem"}, ["span", {}, title], ["input", {
-                type: "number",
-                min: item["min"],
-                max: item["max"]
-            }]];
-        case "checked-spinner":
-            return ["div", {class: "preferenceItem"}, ["input", {type: "checkbox"}], ["span", {}, title], ["input", {
-                type: "number",
-                min: item["min"],
-                max: item["max"]
-            }]];
-        case "button":
-            //TODO:
-            return ["div", {class: "preferenceItem"}, new Button({}).render()];
-        case "dropdown":
-            //TODO:
-            return ["div", {class: "preferenceItem"}, ["span", {}, title], new Dropdown({
-                items: item["items"],
-                width: item["width"]
-            }).render()];
-        case "custom":
-            return ["div", {class: "preferenceItem"}, item["node"][2]];
-        default:
-            return [];
+    if (item) {
+        switch (item["type"]) {
+            case "checkbox":
+                return ["div", {class: "preferenceItem"}, ["span", {}, title], new Switcher({}).render()];
+            case "textbox":
+                return ["div", {class: "preferenceItem"}, ["span", {}, title], ["input", {class: "tbsimple"}]];
+            case "spinner":
+                return ["div", {class: "preferenceItem"}, ["span", {}, title], ["div", {class: "spinner"}, ["input", {
+                    type: "number",
+                    min: item["min"],
+                    max: item["max"]
+                }]]];
+            case "checked-spinner":
+                return ["div", {class: "preferenceItem"}, ["div", {class: "label"}, ["input", {type: "checkbox"}], ["span", {}, title]], ["div", {class: "spinner"}, ["input", {
+                    type: "number",
+                    min: item["min"],
+                    max: item["max"]
+                }]]];
+            case "button":
+                //TODO:
+                return ["div", {class: "preferenceItem"}, new Button({}).render()];
+            case "dropdown":
+                //TODO:
+                return ["div", {class: "preferenceItem"}, ["span", {}, title], new Dropdown({
+                    items: item["items"],
+                    width: item["width"]
+                }).render()];
+            case "custom":
+                return ["div", {class: "preferenceItem"}, item["node"][2]];
+            default:
+                return [];
+        }
+    } else {
+        return ["div", {class: "preferenceItem header"}, ["div", {}, title]]
     }
 }
 

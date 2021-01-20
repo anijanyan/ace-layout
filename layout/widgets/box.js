@@ -48,6 +48,7 @@ class Box {
      * @param {Number|undefined} options.minSize
      * @param {Number|undefined} options.minVerticalSize
      * @param {Number|undefined} options.minHorizontalSize
+     * @param {String|undefined} options.classNames
      * @param {Box|undefined} options[0]
      * @param {Box|undefined} options[1]
      */
@@ -71,6 +72,7 @@ class Box {
         this.minSize = options.minSize || BOX_MIN_SIZE;
         this.minVerticalSize = options.minVerticalSize || this.minSize;
         this.minHorizontalSize = options.minHorizontalSize || this.minSize;
+        this.classNames = (" " + options.classNames) || "";
     }
 
     toJSON() {
@@ -156,7 +158,7 @@ class Box {
             return this.element;
 
         this.element = dom.buildDom(["div", {
-            class: "box",
+            class: "box" + this.classNames,
             $host: this,
         }]);
         this.splitter = dom.buildDom(["div", {
