@@ -24,11 +24,15 @@ class Switcher {
 
     render() {
         this.element = dom.buildDom(["div", {
-            class: this.className + (this.checked ? " " + this.className + "Down" : ""),
+            class: this.className + (this.checked ? " " + this.className + "Checked" : ""),
             onmousedown: (e) => {
                 e.preventDefault();
                 this.checked = !this.checked;
                 e.target.className = this.className + (this.checked ? " " + this.className + "Down" : "");
+            },
+            onclick: (e) => {
+                e.preventDefault();
+                e.target.className = this.className + (this.checked ? " " + this.className + "Checked" : "");
             },
             ...this.options
         }, ""]);

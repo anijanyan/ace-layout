@@ -10,3 +10,25 @@
 .cbofflineChecked {
     background-position: 0 0px;
 }
+
+.checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-image: url("../layout/images/checkbox_black@1x.png");
+    background-size: 16px 136px;
+    background-position: 0 0;
+}
+
+.checkboxOver {
+    background-position: 0 -17px;
+}
+
+.checkboxDown {
+    background-position: 0 -34px;
+}
+
+.checkboxChecked {
+    background-position: 0 -51px;
+}

@@ -114,7 +114,7 @@ function renderItem(title, item) {
                     max: item["max"]
                 }]]];
             case "checked-spinner":
-                return ["div", {class: "preferenceItem"}, ["div", {class: "label"}, ["input", {type: "checkbox"}], ["span", {}, title]], ["div", {class: "spinner"}, ["input", {
+                return ["div", {class: "preferenceItem"}, ["div", {class: "label"}, new Switcher({className: "checkbox"}).render(), ["span", {}, title]], ["div", {class: "spinner"}, ["input", {
                     type: "number",
                     min: item["min"],
                     max: item["max"]
