@@ -1,6 +1,7 @@
 var dom = require("ace/lib/dom");
-var lib = require("layout/lib");
-
+var net = require("ace/lib/net");
+var EditSession = require("ace/edit_session").EditSession;
+var JSMode = require("ace/mode/javascript").Mode;
 dom.importCssString(require("ace/requirejs/text!layout/styles/layout.css"), "layout.css");
 
 var {Box, Pane} = require("layout/widgets/box");
@@ -59,6 +60,50 @@ tabManager = new TabManager({
     main: mainBox,
 });
 
+tabManager.loadFile = function (tab) {
+    if (!tab.editor) return;
+
+    if (tab.session) {
+        return setSession(tab, tab.session)
+    } else if (!tab.path) {
+        return setSession(tab, "")
+    } else if (tab.path) {
+        tab.editor.container.style.display = "none";
+        net.get(tab.path, function (value) {
+            setSession(tab, value);
+        });
+    } else {
+        tab.editor.container.style.display = "none";
+    }
+};
+
+function setSession(tab, value) {
+    var editor = tab.editor
+    if (!editor) return;
+
+    if (editor.session && editor.session.tab) {
+        //TODO: do we need this?
+        //saveMetadataForTab(editor.session.tab);
+    }
+
+    if (typeof value == "string") {
+        tab.session = new EditSession(value || "", new JSMode());
+        tab.session.tab = tab;
+    }
+
+    tab.session.$readOnly = true;
+    editor.setSession(tab.session);
+    editor.$options.readOnly.set.call(editor, editor.$readOnly);
+    editor.container.style.display = "";
+
+    editor.setOptions({
+        newLineMode: "unix",
+        enableLiveAutocompletion: true,
+        enableBasicAutocompletion: true,
+        showPrintMargin: false,
+    });
+}
+
 panelManager = new PanelManager({
     layout: base,
     locations: {
@@ -79,24 +124,33 @@ function open(data, preview) {
 
 onResize();
 
-listBox.on("select", function(data) {
+listBox.on("select", function (data) {
     if (data.className) return;
     open(data, true);
 });
 
-listBox.on("choose", function(data) {
+listBox.on("choose", function (data) {
     if (data.className) return;
     open(data, false);
 });
 
 function updateTree() {
     var selected = listBox.popup.getData(listBox.popup.getRow());
-    var data = [{className: "header", name: "User"}];
+    var data = [{className: "header", name: "Modules"}];
     var files = [];
-    if (define != undefined && define.modules != undefined) {
+    if (define !== undefined && define.modules !== undefined) {
         var modules = define.modules;
-        for (let i in modules) {
-            files.push({name: i, path: i, readOnly: true})
+
+        for (let name in modules) {
+            if (["require", "exports", "module"].includes(name)) continue;
+            var path = name;
+            var parts = path.split("/");
+            if (parts[0] === "docs")
+                path = "demo/kitchen-sink/" + path;
+            else if (parts[0] === "ace")
+                path = 'src/' + parts.slice(1).join('/');
+            if (!/\.js$/.test(path)) path += '.js';
+            files.push({name: name, path: path, readOnly: true})
         }
     }
     data = data.concat(files);
@@ -104,7 +158,7 @@ function updateTree() {
     listBox.popup.resize(true);
     listBox.popup.session.setScrollTop(0)
     if (selected) {
-        data.some(function(item, i) {
+        data.some(function (item, i) {
             if (item.name == selected.name) {
                 listBox.popup.setRow(i);
                 return true
