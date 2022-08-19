@@ -288,8 +288,11 @@ class TabManager {
 
         editor.setSession(tab.session);
 
-        var mode = modeList.getModeForPath(tab.path)
-        if (mode.name === "javascript") editor.session.setMode(new JSMode());
+        if (tab.path !== undefined) {
+            var mode = modeList.getModeForPath(tab.path)
+            if (mode.name === "javascript") editor.session.setMode(new JSMode());
+        }
+
         editor.container.style.display = "";
 
         editor.setOptions({
