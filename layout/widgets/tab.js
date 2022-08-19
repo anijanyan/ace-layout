@@ -575,6 +575,9 @@ class TabBar {
     }
 
     addButtons(buttons) {
+        if (!buttons) {
+            return;
+        }
         this.buttons = buttons;
         this.element.appendChild(this.buttons);
         var rect = this.buttons.getBoundingClientRect();

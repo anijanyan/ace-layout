@@ -2,6 +2,8 @@ define(function(require, exports, module) {
 var dom = require("ace/lib/dom");
 var lib = require("layout/lib");
 var event = require("ace/lib/event");
+var oop = require("ace/lib/oop");
+var {EventEmitter} = require("ace/lib/event_emitter");
 
 var {Tab, TabBar, Panel, PanelBar} = require("layout/widgets/tab");
 
@@ -631,7 +633,9 @@ class Box {
             node = node.parent;
         }
     }
-};
+}
+
+oop.implement(Box.prototype, EventEmitter);
 
 /**
  *

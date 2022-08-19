@@ -1,4 +1,3 @@
-/*
 define(function(require, exports, module) {
 var Range = require("ace/range").Range;
 var dom = require("ace/lib/dom");
@@ -8,7 +7,9 @@ var AcePopup = require('ace/autocomplete/popup').AcePopup;
 var $singleLineEditor = require('ace/autocomplete/popup').$singleLineEditor;
 var UndoManager = require("ace/undomanager").UndoManager;
 var Tokenizer = require("ace/tokenizer").Tokenizer;
- 
+var {Box} = require("./box");
+var lib = require("layout/lib");
+
 function prompt(editor, message, options, callback) {
     if (typeof message == "object") {
         return prompt(editor, "", message, options);
@@ -137,14 +138,11 @@ function prompt(editor, message, options, callback) {
  
  
 }
-  
-var {Box} = require("./box");
-var lib = require("./lib");
 
 class ListBox extends Box {
-    draw() {
+    render() {
         if (this.element) return this.element;
-        super.draw();
+        super.render();
         
         var popup = new AcePopup();
         popup.renderer.setStyle("ace_listBox");
@@ -192,4 +190,4 @@ class ListBox extends Box {
 
 exports.ListBox = ListBox;
 
-});*/
+});
