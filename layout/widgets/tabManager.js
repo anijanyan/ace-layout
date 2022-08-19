@@ -4,11 +4,14 @@ var lib = require("layout/lib");
 var oop = require("ace/lib/oop");
 var {EventEmitter} = require("ace/lib/event_emitter");
 var ace = require("ace/ace");
+var net = require("ace/lib/net");
 
 var Editor = require("ace/editor").Editor;
 var EditSession = require("ace/edit_session").EditSession;
 var Renderer = require("ace/virtual_renderer").VirtualRenderer;
 var theme = require("ace/theme/textmate");
+var modeList = require("ace/ext/modelist");
+var JSMode = require("ace/mode/javascript").Mode;
 
 var {Box, Pane} = require("layout/widgets/box");
 var newTabCounter = 1;
@@ -124,8 +127,12 @@ class TabManager {
 
     }
 
+    /**
+     *
+     * @returns {Tab[]}
+     */
     getTabs() {
-
+        return this.tabs;
     }
 
     get activePane() {
@@ -177,6 +184,11 @@ class TabManager {
         }
     }
 
+    /**
+     *
+     * @param options
+     * @returns {Tab}
+     */
     open(options) {
         var tab = this.tabs[options.path]
         if (!tab || !tab.parent) {
@@ -276,6 +288,8 @@ class TabManager {
 
         editor.setSession(tab.session);
 
+        var mode = modeList.getModeForPath(tab.path)
+        if (mode.name === "javascript") editor.session.setMode(new JSMode());
         editor.container.style.display = "";
 
         editor.setOptions({
@@ -324,7 +338,6 @@ class TabManager {
     };
 
     /**
-     * TODO: needs to actually load files
      * @param {Tab} tab
      */
     loadFile(tab) {
@@ -336,6 +349,10 @@ class TabManager {
             this.setSession(tab, "")
         } else if (tab.path) {
             tab.editor.container.style.display = "none";
+            var self = this;
+            net.get(tab.path, function (value) {
+                self.setSession(tab, value);
+            });
         } else {
             tab.editor.container.style.display = "none";
         }

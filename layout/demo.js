@@ -1,7 +1,4 @@
 var dom = require("ace/lib/dom");
-var net = require("ace/lib/net");
-var EditSession = require("ace/edit_session").EditSession;
-var JSMode = require("ace/mode/javascript").Mode;
 dom.importCssString(require("ace/requirejs/text!layout/styles/layout.css"), "layout.css");
 
 var {Box, Pane} = require("layout/widgets/box");
@@ -57,52 +54,8 @@ window.onbeforeunload = function () {
 };
 
 tabManager = new TabManager({
-    main: mainBox,
+    main: mainBox
 });
-
-tabManager.loadFile = function (tab) {
-    if (!tab.editor) return;
-
-    if (tab.session) {
-        return setSession(tab, tab.session)
-    } else if (!tab.path) {
-        return setSession(tab, "")
-    } else if (tab.path) {
-        tab.editor.container.style.display = "none";
-        net.get(tab.path, function (value) {
-            setSession(tab, value);
-        });
-    } else {
-        tab.editor.container.style.display = "none";
-    }
-};
-
-function setSession(tab, value) {
-    var editor = tab.editor
-    if (!editor) return;
-
-    if (editor.session && editor.session.tab) {
-        //TODO: do we need this?
-        //saveMetadataForTab(editor.session.tab);
-    }
-
-    if (typeof value == "string") {
-        tab.session = new EditSession(value || "", new JSMode());
-        tab.session.tab = tab;
-    }
-
-    tab.session.$readOnly = true;
-    editor.setSession(tab.session);
-    editor.$options.readOnly.set.call(editor, editor.$readOnly);
-    editor.container.style.display = "";
-
-    editor.setOptions({
-        newLineMode: "unix",
-        enableLiveAutocompletion: true,
-        enableBasicAutocompletion: true,
-        showPrintMargin: false,
-    });
-}
 
 panelManager = new PanelManager({
     layout: base,
@@ -117,9 +70,8 @@ panelManager = new PanelManager({
 
 function open(data, preview) {
     tabManager.open({
-        path: data.path,
-        preview,
-    })
+        path: data.path, preview,
+    });
 }
 
 onResize();

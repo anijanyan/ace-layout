@@ -241,7 +241,7 @@ class TabBar {
         this.setScrollPosition((index + 1) * this.tabWidth);
     }
 
-    activateTab(tab) {
+    activateTab(tab, callback) {
         this.activeTabClicked = false;
         this.addSelection(tab);
         if (this.activeTab) {
@@ -309,6 +309,12 @@ class TabBar {
         }
     }
 
+    /**
+     *
+     * @param {Tab|Panel|Object} tab
+     * @param [index]
+     * @returns {Tab}
+     */
     addTab(tab, index) {
         if (!(tab instanceof Tab) && !(tab instanceof Panel)) {//TODO
             tab = new Tab(tab);
