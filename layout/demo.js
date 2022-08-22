@@ -16,9 +16,7 @@ document.body.innerHTML = "";
 var base = new Box({
     vertical: false,
     toolBars: {
-        top: new MenuToolBar({
-            menus: []
-        }),
+        top: menuToolBar = new MenuToolBar(),
     },
     0: new Box({
         vertical: false,
@@ -38,6 +36,13 @@ var base = new Box({
         toolBars: {},
     }),
 });
+window.menuManager.addByPath("AWS Cloud9", {
+    className: "c9btn",
+    position: 50,
+})
+window.menuManager.addByPath("File", {
+    position: 100,
+})
 
 base.render();
 

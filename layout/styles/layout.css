@@ -48,8 +48,7 @@ body.dragging iframe {pointer-events: none;}
 .menuToolBar {
     display: flex;
     height: 30px;
-    background: #665a82;
-    background: #cecece;
+    background: #787878;
     color: #111;
     align-items: stretch;
     justify-content: stretch;

@@ -5,6 +5,9 @@ var oop = require("ace/lib/oop");
 var {EventEmitter} = require("ace/lib/event_emitter");
 var ace = require("ace/ace");
 var net = require("ace/lib/net");
+var HashHandler = require("ace/keyboard/hash_handler").HashHandler;
+var event = require("ace/lib/event");
+var keyUtil = require("ace/lib/keys");
 
 var Editor = require("ace/editor").Editor;
 var EditSession = require("ace/edit_session").EditSession;
@@ -20,7 +23,8 @@ var newTabCounter = 1;
 
 function parseJson(name) {
     try {
-        return JSON.parse(localStorage[name]);
+        let data = localStorage[name];
+        return data && JSON.parse(data);
     } catch(e) {
         return null;
     }
@@ -42,6 +46,33 @@ class TabManager {
         this.containers.console = options.console;
         this.containers.main = options.main;
         this.tabs = {};
+        window.menuManager.addByPath("/context/tabs");
+        window.menuManager.addByPath("/context/tabs/Close Tab", {
+            position: 300,
+            hotKey: "Alt-W",
+            exec: (tab) => {
+                tab.remove();
+            }
+        });
+
+        var menuKb = new HashHandler([
+            {
+                bindKey: {win: "Alt-W", mac: "Alt-W"},
+                exec: (tabManager) => {
+                    tabManager.activeTab.remove();
+                }
+            }
+        ]);
+
+        var _this = this;
+        event.addCommandKeyListener(window, function (e, hashId, keyCode) {
+            var keyString = keyUtil.keyCodeToString(keyCode);
+            var command = menuKb.findKeyCommand(hashId, keyString);
+            if (command) {
+                event.stopEvent(e);
+                command.exec(_this);
+            }
+        });
     }
 
     toJSON() {

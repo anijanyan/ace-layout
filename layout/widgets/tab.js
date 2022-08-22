@@ -13,6 +13,7 @@ class Tab {
      * @type {String|Ace.EditSession}
      */
     session;
+    contextMenu = "tabs";
 
     /**
      *

@@ -73,7 +73,7 @@ class MenuManager {
         return item;
     }
 
-    addByPath(path, options) {
+    addByPath(path, options = {}) {
         if (typeof path == "string") path = path.split("/");
         var item = this.menus;
         path.forEach(function(part) {
@@ -94,9 +94,9 @@ class MenuManager {
         item.exec = options.exec;
     }
 
-    getTarget(target) {
+    getTarget(target, callback) {
         while (target) {
-            if (target.$host) return target;
+            if (target.$host && (!callback || callback(target))) return target;
             target = target.parentElement;
         }
         return null;
@@ -292,21 +292,18 @@ class MenuManager {
         if (this.searchBox) {
             this.searchBox.close();
         }
+        this.currentHost = null;
     }
 
     //event handlers
     onMouseDown(e) {
         var host = lib.findHost(e.target);
         if (host && host.buttonElement) {
+            e.preventDefault();
             if (host.exec) {
-                host.exec()
+                host.exec(this.currentHost);
             }
         }
-
-        if (this.getTarget(e.target)) {
-            return;
-        }
-
         this.inactivateMenu();
     }
     onMouseDown = this.onMouseDown.bind(this);
@@ -335,12 +332,14 @@ class MenuManager {
 
     onContextMenuOpen(e) {
         e.preventDefault();
-        if (this.getTarget(e.target)) {
+        let target = this.getTarget(e.target, (target) => target.$host.contextMenu);
+        if (!target) {
             return;
         }
 
         var pos = {x: e.clientX + 2, y: e.clientY + 2};
-        this.openMenuByPath("/context", pos);
+        this.openMenuByPath("/context/" + target.$host.contextMenu , pos);
+        this.currentHost = target.$host;
     }
     onContextMenuOpen = this.onContextMenuOpen.bind(this);
 
@@ -1092,7 +1091,7 @@ class MenuSearchBox {
     setHighlights(menu) {
         var text = menu.$host.label;
         var menuTitle = menu.querySelector("a");
-        if (!this.currValue.length) {
+        if (!this.currValue || !this.currValue.length) {
             menuTitle.innerHTML = text;
             this.showHideMenuNode(menu, true);
             return;
@@ -1193,8 +1192,12 @@ class MenuSearchBox {
 }
 
 class MenuToolBar {
+    /**
+     * MenuBar
+     */
+    menuBar;
     constructor(options) {
-        this.menus = options.menus;
+        window.menuManager ??= new MenuManager();
     }
 
     setBox(x, y, w, h) {
@@ -1212,50 +1215,6 @@ class MenuToolBar {
                     ref: "menuBar"
                 }
             ]], null, this);
-
-            var menuManager = new MenuManager();
-            window.menuManager = menuManager;
-
-            var $menuDefs = {
-                "AWS Cloud9": "50,,,,",
-                "File": "100,,,,",
-                "Edit": "200,,,,",
-                "Find": "300,,,,",
-                "View": "400,,,,",
-                "Go": "500,,,,",
-                "Tools": "700,,,,",
-                "Window": "800,,,,",
-                "File/~1000000": "1000000,,,,",
-                "File/Download Project": "1300,,false,, ",
-                "File/Open Recent": "500,,false,, ",
-                "File/Open Recent/~1000000": "1000000,,,,",
-                "File/Open Recent/Clear Menu": "2000000,,false,true, ",
-                "View/Console": "700,check,false,false,F6",
-            };
-
-
-            function addDefs(menuDefs, root) {
-                Object.keys(menuDefs).forEach(function(x) {
-                    var item = menuDefs[x];
-                    if (typeof item == "object") {
-                        return addDefs(item, x);
-                    }
-                    var parts = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item);
-                    var path = root ? root + "/" + x : x;
-
-
-                    menuManager.addByPath(path, {
-                        className: path == "AWS Cloud9" ? "btn" : undefined,
-                        type: parts[2],
-                        checked: parts[3] == "true",
-                        disabled: parts[4] == "true",
-                        position: parseInt(parts[1]),
-                        hotKey: (parts[5] || "").trim(),
-                    });
-                });
-            }
-
-            addDefs($menuDefs);
 
             menuManager.build();
             menuManager.buildMenuBar(this.menuBar);
