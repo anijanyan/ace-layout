@@ -30,7 +30,8 @@ function goToTab(el, tabNum) {
     var currentPaneTabs = getCurrentPaneTabs(el);
     var tabs = currentPaneTabs.tabs;
     var activeTab = currentPaneTabs.activeTab;
-    if (tabs.length > tabNum) activeTab.parent.activateTab(tabs[tabNum]);
+    var index = tabNum || tabs.indexOf(activeTab);
+    window.tabManager.navigateToTab(index, activeTab, tabs);
 }
 
 exports.tabCommands = [
@@ -58,16 +59,10 @@ exports.tabCommands = [
         win: "Alt-Shift-W",
         desc: "Close all opened tabs",
         position: 310,
-        exec: (el) => {
-            var tabs;
-            if (el instanceof Tab) {
-                tabs = [...el.parent.tabList];
-            }
-            else {
-                tabs = [...el.activePane.tabBar.tabList];
-            }
-            for (var tab of tabs) {
-                tab.remove();
+        exec: () => {
+            var tabs = window.tabManager.tabs;
+            for (var i in tabs) {
+                tabs[i].remove();
             }
         }
     }, {
@@ -95,10 +90,8 @@ exports.tabCommands = [
             var currentPaneTabs = getCurrentPaneTabs(el);
             var tabs = currentPaneTabs.tabs;
             var activeTab = currentPaneTabs.activeTab;
-
             var index = tabs.indexOf(activeTab);
-            if (index < tabs.length - 1) activeTab.parent.activateTab(tabs[index + 1]);
-            //TODO: seems we need better `activate` method for Tab
+            window.tabManager.navigateToTab(index + 1, activeTab, tabs);
         }
     }, {
         name: "Go to tab left",
@@ -110,10 +103,8 @@ exports.tabCommands = [
             var currentPaneTabs = getCurrentPaneTabs(el);
             var tabs = currentPaneTabs.tabs;
             var activeTab = currentPaneTabs.activeTab;
-
             var index = tabs.indexOf(activeTab);
-            if (index > 0) activeTab.parent.activateTab(tabs[index - 1]);
-            //TODO: seems we need better `activate` method for Tab
+            window.tabManager.navigateToTab(index - 1, activeTab, tabs);
         }
     }, {
         name: "movetabright",
@@ -158,7 +149,7 @@ exports.tabCommands = [
             goToTab(el, 1);
         }
     }, {
-        name: "tab3",
+        name: "Go to third tab",
         mac: "Command-3",
         win: "Ctrl-3",
         desc: "navigate to the third tab",
@@ -247,10 +238,10 @@ exports.tabCommands = [
 
             var index = tabs.indexOf(activeTab);
             if (index < tabs.length - 1) {
-                activeTab.parent.activateTab(tabs[index + 1]);
+                window.tabManager.navigateToTab(index + 1, activeTab, tabs);
             }
             else {
-                activeTab.parent.activateTab(tabs[0]);
+                window.tabManager.navigateToTab(0, activeTab, tabs);
             }
         }
     }, {
@@ -266,10 +257,10 @@ exports.tabCommands = [
 
             var index = tabs.indexOf(activeTab);
             if (index > 0) {
-                activeTab.parent.activateTab(tabs[index - 1]);
+                window.tabManager.navigateToTab(index - 1, activeTab, tabs);
             }
             else {
-                activeTab.parent.activateTab(tabs[tabs.length - 1]);
+                window.tabManager.navigateToTab(tabs.length - 1, activeTab, tabs);
             }
         }
     }, {
@@ -311,37 +302,57 @@ exports.tabCommands = [
         },*/
         desc: "reopen last closed tab"
     }, {
-        name: "closealltotheright",
+        name: "Close all to the right",
         mac: "",
         win: "",
-        /*exec: function () {
-            var tab = mnuContext.$tab || mnuContext.$pane && mnuContext.$pane.getTab();
-            if (tab) {
-                var pages = tab.pane.getTabs();
-                return pages.pop() != tab;
+        desc: "close all tabs to the right of the focussed tab",
+        position: 340,
+        exec: (el) => {
+            var currentPaneTabs = getCurrentPaneTabs(el);
+            var tabs = currentPaneTabs.tabs;
+            var activeTab = currentPaneTabs.activeTab;
+            var index = tabs.indexOf(activeTab);
+            if (index < tabs.length - 1) {
+                for (var i = index + 1; i < tabs.length; i++) {
+                    tabs[i].remove();
+                }
             }
-        },*/
-        desc: "close all tabs to the right of the focussed tab"
+        }
     }, {
-        name: "closealltotheleft",
+        name: "Close all to the left",
         mac: "",
         win: "",
-        /*exec: function () {
-            var tab = mnuContext.$tab || mnuContext.$pane && mnuContext.$pane.getTab();
-            if (tab) {
-                var pages = tab.pane.getTabs();
-                return pages.length > 1 && pages[0] != tab;
+        desc: "close all tabs to the left of the focussed tab",
+        position: 340,
+        exec: (el) => {
+            var currentPaneTabs = getCurrentPaneTabs(el);
+            var tabs = currentPaneTabs.tabs;
+            var activeTab = currentPaneTabs.activeTab;
+            var index = tabs.indexOf(activeTab);
+            if (index > 0) {
+                for (var i = 0; i < index; i++) {
+                    tabs[i].remove();
+                }
             }
-        },*/
-        desc: "close all tabs to the left of the focussed tab"
+        }
     }, {
-        name: "closepane",
+        name: "Close pane",
         mac: "Command-Ctrl-W",
         win: "Ctrl-W",
-        /*exec: function () {
-            return mnuContext.$tab || mnuContext.$pane || tabs.getTabs().length;
-        },*/
-        desc: "close this pane"
+        desc: "close this pane",
+        position: 340,
+        exec: (el) => {
+            var tabs;
+            if (el instanceof Tab) {
+                tabs = [...el.parent.tabList];
+            }
+            else {
+                tabs = [...el.activePane.tabBar.tabList];
+            }
+            for (var tab of tabs) {
+                tab.remove();
+            }
+        }
     }, {
         name: "nosplit",
         mac: "",

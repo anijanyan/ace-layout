@@ -58,7 +58,7 @@ window.onbeforeunload = function () {
     localStorage.panels = JSON.stringify(panelManager.toJSON());
 };
 
-tabManager = new TabManager({
+window.tabManager = tabManager = new TabManager({
     main: mainBox
 });
 

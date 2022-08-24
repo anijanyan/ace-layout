@@ -16,7 +16,7 @@ var Renderer = require("ace/virtual_renderer").VirtualRenderer;
 var theme = require("ace/theme/textmate");
 var modeList = require("ace/ext/modelist");
 var JSMode = require("ace/mode/javascript").Mode;
-var {tabCommands} = require("../model/commands");
+var {tabCommands} = require("../models/commands");
 var {Box, Pane} = require("layout/widgets/box");
 var newTabCounter = 1;
 
@@ -111,7 +111,7 @@ class TabManager {
 
     /**
      *
-     * @param {Box} box
+     * @param {Box|Pane} box
      * @param {Object} boxData
      */
     setBoxData(box, boxData) {
@@ -393,6 +393,19 @@ class TabManager {
             tab.editor.container.style.display = "none";
         }
     };
+
+    /**
+     *
+     * @param {number} index
+     * @param {Tab} [tab]
+     * @param {Tab[]} [tabs]
+     */
+    navigateToTab(index,tab, tabs) {
+        var tabsList = tabs || this.tabs;
+        var activeTab = tab || this.activeTab;
+        //TODO: seems we need better `activate` method for Tab
+        if (index >= 0 && tabsList.length > index) activeTab.parent.activateTab(tabsList[index]);
+    }
 }
 
 oop.implement(TabManager.prototype, EventEmitter);
