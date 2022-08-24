@@ -7,6 +7,7 @@ var ace = require("ace/ace");
 var net = require("ace/lib/net");
 var HashHandler = require("ace/keyboard/hash_handler").HashHandler;
 var event = require("ace/lib/event");
+var useragent = require("ace/lib/useragent");
 var keyUtil = require("ace/lib/keys");
 
 var Editor = require("ace/editor").Editor;
@@ -15,7 +16,7 @@ var Renderer = require("ace/virtual_renderer").VirtualRenderer;
 var theme = require("ace/theme/textmate");
 var modeList = require("ace/ext/modelist");
 var JSMode = require("ace/mode/javascript").Mode;
-
+var {tabCommands} = require("../model/commands");
 var {Box, Pane} = require("layout/widgets/box");
 var newTabCounter = 1;
 
@@ -46,23 +47,30 @@ class TabManager {
         this.containers.console = options.console;
         this.containers.main = options.main;
         this.tabs = {};
-        window.menuManager.addByPath("/context/tabs");
-        window.menuManager.addByPath("/context/tabs/Close Tab", {
-            position: 300,
-            hotKey: "Alt-W",
-            exec: (tab) => {
-                tab.remove();
-            }
-        });
+        this.commandsInit();
+    }
 
-        var menuKb = new HashHandler([
-            {
-                bindKey: {win: "Alt-W", mac: "Alt-W"},
-                exec: (tabManager) => {
-                    tabManager.activeTab.remove();
-                }
+    commandsInit() {
+        window.menuManager.addByPath("/context/tabs");
+        var commandsKeys = [];
+        for (var command of tabCommands) {
+            if (command.exec !== undefined) {
+                window.menuManager.addByPath("/context/tabs/" + command.name, {
+                    position: command.position,
+                    hotKey: (useragent.isMac ? command.mac : command.win),
+                    exec: command.exec
+                });
+                commandsKeys.push({
+                    bindKey: {
+                        win: command.win,
+                        mac: command.mac
+                    },
+                    exec: command.exec
+                });
             }
-        ]);
+        }
+
+        var menuKb = new HashHandler(commandsKeys);
 
         var _this = this;
         event.addCommandKeyListener(window, function (e, hashId, keyCode) {
@@ -158,16 +166,8 @@ class TabManager {
 
     }
 
-    /**
-     *
-     * @returns {Tab[]}
-     */
     getTabs() {
         return this.tabs;
-    }
-
-    get activePane() {
-        return this.containers.main.element.querySelector(".tabPanel").host
     }
 
     get activeTab() {
@@ -180,6 +180,7 @@ class TabManager {
      */
     activateTab(tab) {
         var pane = tab.parent.parent;
+        this.activePane = pane;
 
         function initBoxTabEditor() {
             tab.editorType = tab.editorType || "ace";
@@ -223,7 +224,8 @@ class TabManager {
     open(options) {
         var tab = this.tabs[options.path]
         if (!tab || !tab.parent) {
-            var pane = this.activePane
+            var pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane
+                : this.containers.main.element.querySelector(".tabPanel").host;
             if (this.previewTab)
                 this.previewTab.remove();
 
