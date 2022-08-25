@@ -83,7 +83,7 @@ exports.tabCommands = [
     }, {
         name: "Go to tab right",
         mac: "Command-}",
-        win: "Ctrl-}", //TODO: doesn't work with current ace
+        win: "Ctrl-}", //TODO: used by ace
         desc: "navigate to the next tab, right to the tab that is currently active",
         position: 330,
         exec: (el) => {
@@ -96,7 +96,7 @@ exports.tabCommands = [
     }, {
         name: "Go to tab left",
         mac: "Command-{",
-        win: "Ctrl-{",
+        win: "Ctrl-{", //TODO: used by ace
         desc: "navigate to the next tab, left to the tab that is currently active",
         position: 340,
         exec: (el) => {
@@ -221,10 +221,27 @@ exports.tabCommands = [
             goToTab(el, 9);
         }
     }, {
-        name: "revealtab",
+        name: "Reveal tab",
         mac: "Command-Shift-L",
-        win: "Ctrl-Shift-L",
-        desc: "reveal current tab in the file tree"
+        win: "Ctrl-Shift-L", //TODO: used by ace
+        desc: "reveal current tab in the file tree",
+        position: 340,
+        exec: (el) => {
+            var path;
+            if (el instanceof Tab) {
+                path = el.path;
+            } else {
+                path = el.activeTab.path;
+            }
+            var fileTree = window.fileTree;
+            fileTree.popup.data.some((item, i) => {
+                if (item.path === path) {
+                    var scrollTo = fileTree.popup.session.documentToScreenRow(i, 0);
+                    fileTree.popup.session.setScrollTop(scrollTo)
+                    fileTree.popup.setRow(i);
+                }
+            });
+        }
     }, {
         name: "Go to next tab",
         mac: "Option-Tab",

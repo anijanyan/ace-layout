@@ -36,6 +36,9 @@ var base = new Box({
         toolBars: {},
     }),
 });
+
+window.fileTree = listBox;
+
 window.menuManager.addByPath("AWS Cloud9", {
     className: "c9btn",
     position: 50,
@@ -107,7 +110,7 @@ function updateTree() {
             else if (parts[0] === "ace")
                 path = 'src/' + parts.slice(1).join('/');
             if (!/\.js$/.test(path)) path += '.js';
-            files.push({name: name, path: path, readOnly: true})
+            files.push({name: path, path: path, readOnly: true})
         }
     }
     data = data.concat(files);
