@@ -1,0 +1,21 @@
+{
+  "name": "layout",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "ace-code": "latest",
+    "copy-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "webpack": "latest",
+    "webpack-dev-server": "latest",
+    "text-loader": "latest"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  }
+}
