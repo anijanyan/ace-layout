@@ -2,17 +2,13 @@ import {AccordionHandler} from "../mouse/accordion_handler";
 import {Box} from "./box";
 import {Utils} from "../lib";
 
-var dom = require("ace-code/src/lib/dom");
+import dom = require("ace-code/src/lib/dom");
+import {AccordionOptions, Widget} from "./widget";
 
 dom.importCssString(require("text-loader!../styles/accordion.css"), "accordion.css");
 
-var BOX_MIN_SIZE = 80;//TODO
+const BOX_MIN_SIZE = 80;
 
-/**
- *
- * @type {Accordion}
- * @implements {Widget}
- */
 export class Accordion implements Widget {
     toggleBarList = [];
     splitterList = [];
@@ -21,27 +17,22 @@ export class Accordion implements Widget {
     boxMinSize = 30;
     toggleBarHeight = 20;
     splitterSize = 1;
-    private vertical: boolean;
-    private color: any;
-    private boxes: any;
-    private minSize: any;
-    private minVerticalSize: any;
-    private minHorizontalSize: any;
-    private padding: { top: number; left: number; bottom: number; right: number };
-    private size: any;
+    vertical: boolean;
+    color: any;
+    boxes: any;
+    minSize: any;
+    minVerticalSize: any;
+    minHorizontalSize: any;
+    padding: { top: number; left: number; bottom: number; right: number };
+    size: number;
+    nextChangedBoxes: any[];
+    prevChangedBoxes: any[];
+    box: any[];
+    element: HTMLElement;
+    hidden: boolean;
+    parent: any;
 
-    /**
-     *
-     * @param options
-     * @param {Boolean|undefined} options.vertical
-     * @param {String|undefined} options.color
-     * @param {{title:String, obj: Widget}[]|undefined} options.boxes
-     * @param {String|undefined} options.minSize
-     * @param {String|undefined} options.minVerticalSize
-     * @param {String|undefined} options.minHorizontalSize
-     * @param {String|undefined} options.size
-     */
-    constructor(options) {
+    constructor(options: AccordionOptions) {
         this.vertical = options.vertical || false;
         this.color = options.color;
         this.boxes = options.boxes;
@@ -221,7 +212,7 @@ export class Accordion implements Widget {
         boxList[0].$size += remainder;
     }
 
-    expandNextBoxes(index, size) {
+    expandNextBoxes(index: number, size: number) {
         size = this.restoreChangedSizes(size, this.nextChangedBoxes);
         if (size <= 0) {
             return;
@@ -246,6 +237,7 @@ export class Accordion implements Widget {
     }
 
     resize() {
+        // @ts-ignore
         this.$updateChildSize(...this.box);
     }
 
@@ -351,7 +343,7 @@ export class Accordion implements Widget {
         this.$updateChildSize(x, y, w, h);
     }
 
-    recalculateChildrenSizes(index) {
+    recalculateChildrenSizes(index?: number) {
         var height = this.box[3];
         height -= this.toggleBarHeight * this.toggleBarList.length;
         height -= this.splitterSize * this.splitterList.length;
