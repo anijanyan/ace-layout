@@ -1,5 +1,7 @@
 import {TabbarHandler} from "../mouse/tabbar_handler";
 import {Utils} from "../lib";
+import {Widget} from "./widget";
+import {TabManager} from "./tabManager";
 
 var dom = require("ace-code/src/lib/dom");
 dom.importCssString(require("text-loader!../styles/tab.css"), "tab.css");
@@ -46,13 +48,13 @@ export class Tab implements Widget {
     activate() {
         this.active = true;
         this.element.classList.add("active");
-        tabManager.activateTab(this);
+        TabManager.getInstance().activateTab(this);
     }
 
     deactivate() {
         this.active = false;
         this.element.classList.remove("active");
-        tabManager.deactivateTab(this);
+        TabManager.getInstance().deactivateTab(this);
     }
 
     remove() {
@@ -281,7 +283,7 @@ export class TabBar implements Widget {
 
     closeTab(tab) {
         var index = this.tabList.indexOf(tab);
-        tabManager.deactivateTab(tab);
+        TabManager.getInstance().deactivateTab(tab);
         var isActiveTab = this.activeTab === tab;
         var isAnchorTab = this.anchorTab === tab;
         this.removeTab(tab);
@@ -678,7 +680,7 @@ export class TabBar implements Widget {
 
     onTabPlusClick(e) {
         this.removeSelections();
-        tabManager.addNewTab(this.parent);
+        TabManager.getInstance().addNewTab(this.parent);
     }
 
     onTabPlusClick = this.onTabPlusClick.bind(this);

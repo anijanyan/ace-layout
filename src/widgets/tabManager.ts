@@ -30,13 +30,24 @@ function saveJson(name, value) {
 }
 
 export class TabManager {
+    private static _instance: TabManager;
+    private containers: {};
+
+    static getInstance(options?: {}) {
+        if (!TabManager._instance) {
+            TabManager._instance = new TabManager(options);
+        }
+
+        return TabManager._instance;
+    }
+
     /**
      *
      * @param {Object} options
      * @param {Box} options.console
      * @param {Box} options.main
      */
-    constructor(options) {
+    private constructor(options) {
         this.containers = {};
         this.containers.console = options.console;
         this.containers.main = options.main;
@@ -195,7 +206,7 @@ export class TabManager {
         }
 
         initBoxTabEditor();
-        tabManager.loadFile(tab);
+        TabManager.getInstance().loadFile(tab);
 
         pane.resize();
     }

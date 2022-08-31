@@ -26,7 +26,7 @@ var base = new Box({
         0: new Box({
             vertical: false,
             0: listBox = new ListBox({
-                size: "200px",
+                size: 200,
             }),
             1: new Box({
                 isMain: true,
@@ -58,7 +58,7 @@ var onResize = function () {
 window.onresize = onResize;
 
 document.body.appendChild(base.element);
-var tabManager = window.tabManager = new TabManager({
+var tabManager = TabManager.getInstance({
     main: mainBox
 });
 
@@ -95,7 +95,6 @@ listBox.on("choose", function (data) {
     if (data.className) return;
     open(data, false);
 });
-
 
 
 function updateTree() {

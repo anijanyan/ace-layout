@@ -1,6 +1,7 @@
 import {Utils} from "../lib";
 import {TabBar} from "./tab";
 import {BoxOptions, Widget} from "./widget";
+import {SizeUnit} from "../models/params";
 
 var dom = require("ace-code/src/lib/dom");
 var event = require("ace-code/src/lib/event");
@@ -24,7 +25,8 @@ export class Box implements Widget {
     ratio: number;
     toolBars: any;
     padding: { top: number; right: number; bottom: number; left: number; };
-    size: any;
+    size: number;
+    sizeUnit: SizeUnit;
     buttonList: any;
     minSize: number;
     minVerticalSize: number;
@@ -92,6 +94,7 @@ export class Box implements Widget {
         this.toolBars = options.toolBars || {};
         this.padding = {top: 0, right: 0, bottom: 0, left: 0};
         this.size = options.size;
+        this.sizeUnit = options.sizeUnit ?? SizeUnit.px;
         this.buttonList = options.buttonList || [];
         this.minSize = options.minSize || BOX_MIN_SIZE;
         this.minVerticalSize = options.minVerticalSize || this.minSize;
@@ -288,21 +291,17 @@ export class Box implements Widget {
         if (!childBox.size) {
             return;
         }
-        var sizeStr = childBox.size;
-        var size = parseInt(sizeStr, 10);
-        var sizeType = sizeStr.substring(size.toString().length);
-        switch (sizeType) {
-            case "px":
+        var size = childBox.size;
+        switch (this.sizeUnit) {
+            case SizeUnit.px:
                 childBox.fixedSize = size;
                 this.fixedChild = childBox;
                 break;
-            case "%":
+            case SizeUnit.procent:
                 if (isSecond) {
                     size = 100 - size;
                 }
                 this.ratio = Math.min(size / 100, 1);
-                break;
-            default:
                 break;
         }
     }

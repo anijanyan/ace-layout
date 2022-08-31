@@ -1,9 +1,10 @@
 import {Utils} from "../lib";
 
-var dom = require("ace-code/src/lib/dom");
-var HashHandler = require("ace-code/src/keyboard/hash_handler").HashHandler;
-var event = require("ace-code/src/lib/event");
-var keyUtil = require("ace-code/src/lib/keys");
+import dom = require("ace-code/src/lib/dom");
+import {HashHandler} from "ace-code/src/keyboard/hash_handler";
+
+import event = require("ace-code/src/lib/event");
+import keyUtil = require("ace-code/src/lib/keys");
 
 dom.importCssString(require("text-loader!../styles/menu.css"), "menu.css");
 
@@ -15,13 +16,12 @@ function getEdge(style, dir) {
 
 function getElementEdges(element) {
     var style = getComputedStyle(element);
-    var edge = {};
-    edge.top = getEdge(style, "Top");
-    edge.bottom = getEdge(style, "Bottom");
-    edge.left = getEdge(style, "Left");
-    edge.right = getEdge(style, "Right");
-
-    return edge;
+    return {
+        "top": getEdge(style, "Top"),
+        "bottom": getEdge(style, "Bottom"),
+        "left": getEdge(style, "Left"),
+        "right": getEdge(style, "Right")
+    };
 }
 
 function getPrevSibling(node, conditionFn, parentElement) {

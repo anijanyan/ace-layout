@@ -3,6 +3,7 @@
  *
  */
 import {Box} from "./box";
+import {SizeUnit} from "../models/params";
 
 interface Widget {
     render()
@@ -45,7 +46,8 @@ interface BoxOptions {
     minSize?: number
     minVerticalSize?: any
     minHorizontalSize?: any
-    size?: number
+    size?: number,
+    sizeUnit?: SizeUnit
     0?: Box;
     1?: Box;
 }

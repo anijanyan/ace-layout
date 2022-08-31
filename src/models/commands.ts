@@ -1,4 +1,5 @@
 import {Tab} from "../widgets/tab";
+import {TabManager} from "../widgets/tabManager";
 
 /**
  *
@@ -29,7 +30,7 @@ function goToTab(el, tabNum) {
     var tabs = currentPaneTabs.tabs;
     var activeTab = currentPaneTabs.activeTab;
     var index = tabNum || tabs.indexOf(activeTab);
-    window.tabManager.navigateToTab(index, activeTab, tabs);
+    TabManager.getInstance().navigateToTab(index, activeTab, tabs);
 }
 
 export var tabCommands = [

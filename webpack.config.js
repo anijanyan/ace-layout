@@ -51,7 +51,10 @@ module.exports = (env, argv) => {
         },
         devServer: {
             compress: true,
-            port: 9000
+            port: 9000,
+            client: {
+                overlay: false
+            }
         },
         plugins: [
             new CopyPlugin({
