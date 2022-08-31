@@ -1,24 +1,47 @@
 import {Utils} from "../lib";
 import {TabBar} from "./tab";
+import {BoxOptions, Widget} from "./widget";
 
 var dom = require("ace-code/src/lib/dom");
 var event = require("ace-code/src/lib/event");
 var oop = require("ace-code/src/lib/oop");
 var {EventEmitter} = require("ace-code/src/lib/event_emitter");
 
-var SPLITTER_SIZE = 1;
-var BOX_MIN_SIZE = 40;
-var barHeight = 27;
+const SPLITTER_SIZE = 1;
+const BOX_MIN_SIZE = 40;
+const barHeight = 27;
 
 /**
  * @param {Box|undefined} 0
  * @param {Box|undefined} 1
- * @type {Box}
- * @implements {Widget}
  */
 export class Box implements Widget {
     fixedSize;
     editor;
+    vertical: boolean;
+    color: string;
+    isMain: boolean;
+    ratio: number;
+    toolBars: any;
+    padding: { top: number; right: number; bottom: number; left: number; };
+    size: any;
+    buttonList: any;
+    minSize: number;
+    minVerticalSize: number;
+    minHorizontalSize: number;
+    element: any;
+    fixedChild: any;
+    box: number[];
+    splitter: any;
+    buttons: any;
+    topRightPane: any;
+    parent: any;
+    hidden: boolean;
+    minRatio: number;
+    maxRatio: number;
+    isMaximized: any;
+    0: Box;
+    1: Box;
 
     static enableAnimation() {
         document.documentElement.classList.add("animateBoxes");
@@ -53,7 +76,7 @@ export class Box implements Widget {
      * @param {Box|undefined} options[0]
      * @param {Box|undefined} options[1]
      */
-    constructor(options) {
+    constructor(options: BoxOptions) {
         if (options.splitter !== false) {
         }
         this.vertical = options.vertical || false;
@@ -139,6 +162,7 @@ export class Box implements Widget {
         if (!this.box)
             return;
 
+        // @ts-ignore
         this.setBox(...this.box);
     }
 
@@ -216,7 +240,7 @@ export class Box implements Widget {
         this.calculateMinSize();
     }
 
-    calculateMinSize(forceChildrenSize) {
+    calculateMinSize(forceChildrenSize = false) {
         var childrenMinVerticalSize = 0;
         var childrenMinHorizontalSize = 0;
 
@@ -260,12 +284,7 @@ export class Box implements Widget {
         }
     }
 
-    /**
-     *
-     * @param {Box} childBox
-     * @param {Boolean} [isSecond]
-     */
-    calculateChildRatio(childBox, isSecond) {
+    calculateChildRatio(childBox: Box, isSecond = false) {
         if (!childBox.size) {
             return;
         }
@@ -312,13 +331,13 @@ export class Box implements Widget {
     /**
      * Adds buttons to top-right tabBar of this box
      */
-    addButtons() {
+    addButtons(buttons?: any) {
         if (this.topRightPane)
             this.topRightPane.removeButtons();
 
         this.topRightPane = this.getTopRightPane();
         if (this.topRightPane)
-            this.topRightPane.addButtons(this.buttons);
+            this.topRightPane.addButtons(buttons ?? this.buttons);
     }
 
     /**
@@ -337,7 +356,7 @@ export class Box implements Widget {
         }
     }
 
-    setBox(x, y, w, h) {
+    setBox(x: number, y: number, w: number, h: number) {
         this.box = [x, y, w, h];
         if (this.isMaximized) {
             x = 0;
@@ -392,8 +411,9 @@ export class Box implements Widget {
                 Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
             if (this[0])
                 this[0].setBox(x, y, w, splitY);
+            //TODO: here was 5th param
             if (this[1])
-                this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize, 0);
+                this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
         } else {
             var splitX = w * ratio - splitterSize;
             if (this.splitter)
@@ -437,7 +457,7 @@ export class Box implements Widget {
         }
     }
 
-    restore(disableAnimation) {
+    restore(disableAnimation = false) {
         var node = this.element;
 
         function rmClass(ch, cls) {
@@ -451,6 +471,7 @@ export class Box implements Widget {
             classes.forEach(function (className) {
                 rmClass(document.querySelectorAll("." + className), className);
             });
+            // @ts-ignore
             this.setBox(...this.box);
         };
         var classes = [
@@ -477,7 +498,7 @@ export class Box implements Widget {
         Utils.setBox(node, left, top, this.box[2], this.box[3]);
     }
 
-    maximize(disableAnimation) {
+    maximize(disableAnimation = false) {
         var node = this.element;
 
         function addClasses() {
@@ -513,6 +534,7 @@ export class Box implements Widget {
             });
         }
 
+        // @ts-ignore
         this.setBox(...this.box);
     }
 
@@ -643,10 +665,9 @@ oop.implement(Box.prototype, EventEmitter);
  * @implements {Widget}
  */
 export class Pane extends Box {
-    /**
-     * @type {TabBar}
-     */
-    tabBar;
+    tabBar: TabBar;
+    private tabEditorBoxElement: any;
+    isButtonHost: any;
 
     /**
      *
@@ -689,7 +710,7 @@ export class Pane extends Box {
         return true;
     }
 
-    split(far, vertical) {
+    split(far, vertical?: boolean) {
         var newPane = new Pane({});
         var root = this.parent;
         var wrapper = new Box({
