@@ -17,6 +17,7 @@ module.exports = (env, argv) => {
         devtool: 'source-map',
         entry: {
             simple: './src/demo.ts',
+            preferences: './src/preferences.ts'
         },
         mode: "production",
         module: {

@@ -29,5 +29,22 @@ export namespace Utils {
         s.width = w + "px";
         s.height = h + "px";
     };
+
+
+    export function getEdge(style, dir) {
+        return parseInt(style["padding" + dir], 10) +
+            parseInt(style["margin" + dir], 10) +
+            parseInt(style["border" + dir], 10);
+    }
+
+    export function getElementEdges(element) {
+        var style = getComputedStyle(element);
+        return {
+            "top": getEdge(style, "Top"),
+            "bottom": getEdge(style, "Bottom"),
+            "left": getEdge(style, "Left"),
+            "right": getEdge(style, "Right")
+        };
+    }
 }
 

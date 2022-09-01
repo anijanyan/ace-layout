@@ -10,7 +10,6 @@ import {EventEmitter} from "ace-code/src/lib/event_emitter";
 
 const SPLITTER_SIZE = 1;
 const BOX_MIN_SIZE = 40;
-const barHeight = 27;
 
 /**
  * @param {Box|undefined} 0
@@ -31,6 +30,7 @@ export class Box implements Widget {
     minSize: number;
     minVerticalSize: number;
     minHorizontalSize: number;
+    classNames: string;
     element: any;
     fixedChild: any;
     box: number[];
@@ -82,6 +82,7 @@ export class Box implements Widget {
         this.minSize = options.minSize || BOX_MIN_SIZE;
         this.minVerticalSize = options.minVerticalSize || this.minSize;
         this.minHorizontalSize = options.minHorizontalSize || this.minSize;
+        this.classNames = options.classNames || "";
     }
 
     toJSON() {
@@ -168,7 +169,7 @@ export class Box implements Widget {
             return this.element;
 
         this.element = dom.buildDom(["div", {
-            class: "box",
+            class: "box" + this.classNames,
             $host: this,
         }]);
         this.splitter = dom.buildDom(["div", {
@@ -209,7 +210,7 @@ export class Box implements Widget {
         }
 
         bar.position = position;
-        this.padding[position] = barHeight;
+        this.padding[position] = bar.size;
         this.element.appendChild(bar.render());
         this.toolBars[position] = bar;
     }
@@ -418,18 +419,18 @@ export class Box implements Widget {
             switch (type) {
                 case "top":
                 case "bottom":
-                    h = barHeight;
+                    h = bar.size;
                     if (type === "bottom")
-                        y = height - barHeight;
+                        y = height - bar.size;
 
                     break;
                 case "left":
                 case "right":
-                    w = barHeight;
+                    w = bar.size;
                     y = this.padding.top;
                     h -= (this.padding.top + this.padding.bottom);
                     if (type === "right")
-                        x = width - barHeight;
+                        x = width - bar.size;
 
                     break;
                 default:

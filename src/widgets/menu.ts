@@ -5,24 +5,9 @@ import {HashHandler} from "ace-code/src/keyboard/hash_handler";
 
 import event = require("ace-code/src/lib/event");
 import keyUtil = require("ace-code/src/lib/keys");
+import {ToolBar} from "./widget";
 
 dom.importCssString(require("text-loader!../styles/menu.css"), "menu.css");
-
-function getEdge(style, dir) {
-    return parseInt(style["padding" + dir], 10) +
-        parseInt(style["margin" + dir], 10) +
-        parseInt(style["border" + dir], 10);
-}
-
-function getElementEdges(element) {
-    var style = getComputedStyle(element);
-    return {
-        "top": getEdge(style, "Top"),
-        "bottom": getEdge(style, "Bottom"),
-        "left": getEdge(style, "Left"),
-        "right": getEdge(style, "Right")
-    };
-}
 
 function getPrevSibling(node, conditionFn, parentElement) {
     parentElement = node ? node.parentElement : parentElement;
@@ -659,7 +644,7 @@ export class MenuPopup extends Menu {
 
         var elRect = this.element.getBoundingClientRect();
 
-        var edge = getElementEdges(this.element);
+        var edge = Utils.getElementEdges(this.element);
 
         var parentRect, top, left;
 
@@ -1004,7 +989,7 @@ export class MenuSearchBox {
         this.secondarySelectMenu = null;
         if (this.hideFiltered) {
             var rect = this.currPopupMenu.element.getBoundingClientRect();
-            var edges = getElementEdges(this.currPopupMenu.element);
+            var edges = Utils.getElementEdges(this.currPopupMenu.element);
             var width = rect.width - edges.left - edges.right;
         }
         var afterDivider = true;
@@ -1202,7 +1187,7 @@ export class MenuSearchBox {
     }
 }
 
-export class MenuToolBar {
+export class MenuToolBar implements ToolBar{
     /**
      * MenuBar
      */
@@ -1211,6 +1196,8 @@ export class MenuToolBar {
     constructor() {
         window.menuManager ??= new MenuManager();
     }
+
+    size = 27;
 
     setBox(x, y, w, h) {
         Utils.setBox(this.element, x, y, w, h);

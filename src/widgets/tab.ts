@@ -1,6 +1,6 @@
 import {TabbarHandler} from "../mouse/tabbar_handler";
 import {Utils} from "../lib";
-import {TabOptions, Widget} from "./widget";
+import {TabOptions, ToolBar, Widget} from "./widget";
 import {TabManager} from "./tabManager";
 import {Ace} from "ace-code";
 
@@ -103,14 +103,14 @@ export class Tab implements Widget {
     }
 }
 
-export class TabBar implements Widget {
+export class TabBar implements Widget, ToolBar {
     activeTab: Tab = null;
     selectedTabs = [];
     box = [];
     inverted = true;
     buttonsWidth = 0;
     activeTabHistory = [];
-    tabList: Array<Panel | Tab> = [];
+    tabList: Array<Tab> = [];
     tabContainer: HTMLElement;
     tabPlusButton: HTMLElement;
     freeze: boolean;
@@ -133,9 +133,11 @@ export class TabBar implements Widget {
     isDragging: boolean;
     tabDraggingElement: HTMLElement;
     draggingElementIndex: number;
+    size: number;
 
     constructor(options) {
         this.direction = options.direction || "";
+        this.size = options.size || 27;//TODO
         this.initTabList = options.tabList;
     }
 
@@ -675,6 +677,18 @@ export class TabBar implements Widget {
     }
 
     onTabMouseDown = this.onTabMouseDown.bind(this)
+
+    /*onMouseMove(e) {
+        if (e.button == 0)
+            TabbarHandler.tabbarMouseMove(e, Tab, TabBar)
+    }
+    onMouseMove = this.onMouseMove.bind(this)
+
+    onMouseOut(e) {
+        if (e.button == 0)
+            TabbarHandler.tabbarMouseOut(e, Tab, TabBar)
+    }
+    onMouseOut = this.onMouseOut.bind(this)*/
 
     onTabPlusClick(e) {
         this.removeSelections();

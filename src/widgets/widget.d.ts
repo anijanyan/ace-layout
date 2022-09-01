@@ -69,3 +69,7 @@ interface TabOptions {
 interface TabList {
     [path: string]: Tab;
 }
+
+interface ToolBar {
+    size: number;
+}
