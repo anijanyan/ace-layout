@@ -3,10 +3,10 @@ import {TabBar} from "./tab";
 import {BoxOptions, Widget} from "./widget";
 import {SizeUnit} from "../models/params";
 
-var dom = require("ace-code/src/lib/dom");
-var event = require("ace-code/src/lib/event");
-var oop = require("ace-code/src/lib/oop");
-var {EventEmitter} = require("ace-code/src/lib/event_emitter");
+import dom = require("ace-code/src/lib/dom");
+import event = require("ace-code/src/lib/event");
+import oop = require("ace-code/src/lib/oop");
+import {EventEmitter} from "ace-code/src/lib/event_emitter";
 
 const SPLITTER_SIZE = 1;
 const BOX_MIN_SIZE = 40;
@@ -61,23 +61,6 @@ export class Box implements Widget {
         document.documentElement.style.cursor = value;
     }
 
-    /**
-     *
-     * @param {Object} options
-     * @param {Boolean|undefined} options.vertical
-     * @param {Boolean|undefined} options.splitter
-     * @param {String|undefined} options.color
-     * @param {Boolean|undefined} options.isMain
-     * @param {Number|undefined} options.ratio
-     * @param {Object|undefined} options.toolBars
-     * @param {String|undefined} options.size
-     * @param {Array|undefined} options.buttonList
-     * @param {Number|undefined} options.minSize
-     * @param {Number|undefined} options.minVerticalSize
-     * @param {Number|undefined} options.minHorizontalSize
-     * @param {Box|undefined} options[0]
-     * @param {Box|undefined} options[1]
-     */
     constructor(options: BoxOptions) {
         if (options.splitter !== false) {
         }

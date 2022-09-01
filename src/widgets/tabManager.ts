@@ -2,17 +2,19 @@ import {tabCommands} from "../models/commands";
 import {Box, Pane} from "./box";
 import * as ace from "ace-code";
 
-var oop = require("ace-code/src/lib/oop");
-var {EventEmitter} = require("ace-code/src/lib/event_emitter");
-var HashHandler = require("ace-code/src/keyboard/hash_handler").HashHandler;
-var event = require("ace-code/src/lib/event");
-var useragent = require("ace-code/src/lib/useragent");
-var keyUtil = require("ace-code/src/lib/keys");
+import oop = require("ace-code/src/lib/oop");
+import {EventEmitter} from "ace-code/src/lib/event_emitter";
+import {HashHandler} from "ace-code/src/keyboard/hash_handler";
+import event = require("ace-code/src/lib/event");
+import useragent = require("ace-code/src/lib/useragent");
+import keyUtil = require("ace-code/src/lib/keys");
 
-var Editor = require("ace-code/src/editor").Editor;
-var Renderer = require("ace-code/src/virtual_renderer").VirtualRenderer;
-var theme = require("ace-code/src/theme/textmate");
+import {Editor} from "ace-code/src/editor";
+import {VirtualRenderer as Renderer} from "ace-code/src/virtual_renderer";
+import theme = require("ace-code/src/theme/textmate");
 import modeList = require("ace-code/src/ext/modelist");
+import {TabList, TabManagerOptions} from "./widget";
+import {Tab} from "./tab";
 
 var newTabCounter = 1;
 
@@ -31,9 +33,12 @@ function saveJson(name, value) {
 
 export class TabManager {
     private static _instance: TabManager;
-    private containers: {};
+    containers: { "console"?: Box, "main": Box };
+    tabs: TabList;
+    previewTab: Tab;
+    activePane: Pane;
 
-    static getInstance(options?: {}) {
+    static getInstance(options?: TabManagerOptions) {
         if (!TabManager._instance) {
             TabManager._instance = new TabManager(options);
         }
@@ -41,16 +46,8 @@ export class TabManager {
         return TabManager._instance;
     }
 
-    /**
-     *
-     * @param {Object} options
-     * @param {Box} options.console
-     * @param {Box} options.main
-     */
-    private constructor(options) {
-        this.containers = {};
-        this.containers.console = options.console;
-        this.containers.main = options.main;
+    private constructor(options: TabManagerOptions) {
+        this.containers = {console: options.console, main: options.main};
         this.tabs = {};
         this.commandsInit();
     }
@@ -96,13 +93,7 @@ export class TabManager {
         };
     }
 
-    /**
-     *
-     * @param {Box} box
-     * @param {Object} boxData
-     * @param {Number} index
-     */
-    setChildBoxData(box, boxData, index) {
+    setChildBoxData(box: Box, boxData, index: number) {
         if (!boxData[index])
             return;
 
@@ -114,12 +105,7 @@ export class TabManager {
 
     }
 
-    /**
-     *
-     * @param {Box|Pane} box
-     * @param {Object} boxData
-     */
-    setBoxData(box, boxData) {
+    setBoxData(box: Box | Pane, boxData) {
         if (!boxData) return;
 
         var boxType = boxData.type;
@@ -131,7 +117,7 @@ export class TabManager {
                 box.tabBar.scrollLeft = boxData.tabBar.scrollLeft;
                 if (boxData.tabBar.tabList) {
                     box.tabBar.freeze = true;
-                    boxData.tabBar.tabList.forEach((tab) => {
+                    boxData.tabBar.tabList.forEach((tab: Tab) => {
                         tab = box.tabBar.addTab(tab)
                         this.tabs[tab.path] = tab;
                         if (tab.preview)
@@ -175,15 +161,11 @@ export class TabManager {
         return this.tabs;
     }
 
-    get activeTab() {
+    get activeTab(): Tab {
         return this.activePane.tabBar.activeTab;
     }
 
-    /**
-     *
-     * @param {Tab} tab
-     */
-    activateTab(tab) {
+    activateTab(tab: Tab) {
         var pane = tab.parent.parent;
         this.activePane = pane;
 
@@ -211,23 +193,14 @@ export class TabManager {
         pane.resize();
     }
 
-    /**
-     *
-     * @param {Tab} tab
-     */
-    deactivateTab(tab) {
+    deactivateTab(tab: Tab) {
         var pane = tab.parent.parent;
         if (tab.parent.activeTab == tab && pane.editor) {
             pane.editor.container.style.display = "none";
         }
     }
 
-    /**
-     *
-     * @param options
-     * @returns {Tab}
-     */
-    open(options) {
+    open(options: { path: string, preview?: boolean }): Tab {
         var tab = this.tabs[options.path]
         if (!tab || !tab.parent) {
             var pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane
@@ -260,7 +233,7 @@ export class TabManager {
         return tab;
     }
 
-    clearPreviewStatus(tab) {
+    clearPreviewStatus(tab: Tab) {
         tab.preview = false;
         tab.element.style.fontStyle = ""
         if (this.previewTab == tab)
@@ -268,11 +241,7 @@ export class TabManager {
 
     }
 
-    /**
-     *
-     * @param {Tab} tab
-     */
-    saveMetadata(tab) {
+    saveMetadata(tab: Tab) {
         if (!tab.path || !tab.session) return;
 
         var session = tab.session
@@ -305,12 +274,7 @@ export class TabManager {
         }
     }*/
 
-    /**
-     *
-     * @param {Tab} tab
-     * @param {String|undefined} value
-     */
-    setSession(tab, value) {
+    setSession(tab: Tab, value?: string) {
         var editor = tab.editor
         if (!editor) return;
 
@@ -345,11 +309,7 @@ export class TabManager {
         });
     }
 
-    /**
-     *
-     * @param {Tab} tab
-     */
-    loadMetadata(tab) {
+    loadMetadata(tab: Tab) {
         var path = tab.path;
         var session = tab.session;
         var metadata = parseJson("@file@" + path)
@@ -371,21 +331,14 @@ export class TabManager {
         }
     }
 
-    /**
-     *
-     * @param {Pane} pane
-     */
-    addNewTab(pane) {
+    addNewTab(pane: Pane) {
         pane.tabBar.addTab({
             tabTitle: `Untitled ${newTabCounter++}`,
             active: true,
         });
     };
 
-    /**
-     * @param {Tab} tab
-     */
-    loadFile(tab) {
+    loadFile(tab: Tab) {
         if (!tab.editor) return;
 
         if (tab.session) {
@@ -401,13 +354,7 @@ export class TabManager {
         }
     };
 
-    /**
-     *
-     * @param {number} index
-     * @param {Tab} [tab]
-     * @param {Tab[]} [tabs]
-     */
-    navigateToTab(index, tab, tabs) {
+    navigateToTab(index: number, tab?: Tab, tabs?: Tab[]) {
         var tabsList = tabs || this.tabs;
         var activeTab = tab || this.activeTab;
         //TODO: seems we need better `activate` method for Tab

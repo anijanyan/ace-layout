@@ -4,6 +4,7 @@
  */
 import {Box} from "./box";
 import {SizeUnit} from "../models/params";
+import {Tab} from "./tab";
 
 interface Widget {
     render()
@@ -50,4 +51,21 @@ interface BoxOptions {
     sizeUnit?: SizeUnit
     0?: Box;
     1?: Box;
+}
+
+interface TabManagerOptions {
+    console?: Box;
+    main: Box;
+}
+
+interface TabOptions {
+    preview: boolean;
+    path: string;
+    tabTitle: string;
+    tabIcon: string;
+    active: boolean;
+}
+
+interface TabList {
+    [path: string]: Tab;
 }

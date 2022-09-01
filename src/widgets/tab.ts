@@ -1,33 +1,32 @@
 import {TabbarHandler} from "../mouse/tabbar_handler";
 import {Utils} from "../lib";
-import {Widget} from "./widget";
+import {TabOptions, Widget} from "./widget";
 import {TabManager} from "./tabManager";
+import {Ace} from "ace-code";
 
-var dom = require("ace-code/src/lib/dom");
+import dom = require("ace-code/src/lib/dom");
+import {Accordion} from "./accordion";
+import {Box} from "./box";
+
 dom.importCssString(require("text-loader!../styles/tab.css"), "tab.css");
 dom.importCssString(require("text-loader!../styles/panel.css"), "panel.css");
 
-/**
- * @type {Tab}
- * @implements {Widget}
- */
 export class Tab implements Widget {
-    /**
-     * @type {String|Ace.EditSession}
-     */
-    session;
+    session: string | Ace.EditSession;
     contextMenu = "tabs";
+    active: boolean;
+    tabIcon: string;
+    tabTitle: string;
+    path: string;
+    preview: boolean;
+    element: HTMLElement;
+    parent: any;
+    $caption: string;
+    $icon: string;
+    autohide: boolean;
+    editorType: string;
 
-    /**
-     *
-     * @param {Object} options
-     * @param {Boolean} options.active
-     * @param {String} options.tabIcon
-     * @param {String} options.tabTitle
-     * @param {String} options.path
-     * @param {String} options.preview
-     */
-    constructor(options) {
+    constructor(options: TabOptions) {
         this.active = options.active;
         this.tabIcon = options.tabIcon;
         this.tabTitle = options.tabTitle;
@@ -104,32 +103,37 @@ export class Tab implements Widget {
     }
 }
 
-/**
- * @type {TabBar}
- * @implements {Widget}
- */
 export class TabBar implements Widget {
-    /**
-     *
-     * @type {Tab|undefined}
-     */
-    activeTab = null;
+    activeTab: Tab = null;
     selectedTabs = [];
     box = [];
     inverted = true;
     buttonsWidth = 0;
     activeTabHistory = [];
-    tabList = [];
-    tabContainer;
-    tabPlusButton;
-    freeze;
+    tabList: Array<Panel | Tab> = [];
+    tabContainer: HTMLElement;
+    tabPlusButton: HTMLElement;
+    freeze: boolean;
+    //TODO: enum
+    direction: string;
+    initTabList: Tab[];
+    element: HTMLElement;
+    width: any;
+    anchorTab: any;
+    tabWidth: number;
+    activeTabClicked: boolean;
+    parent: any;
+    vX: number;
+    animationTimer: any;
+    animationScrollLeft: any;
+    draggingElementSize: any;
+    plusButtonWidth: number;
+    containerWidth: number;
+    buttons: any;
+    isDragging: boolean;
+    tabDraggingElement: HTMLElement;
+    draggingElementIndex: number;
 
-    /**
-     *
-     * @param {Object} options
-     * @param {String|undefined} options.direction
-     * @param {Tab[]} options.tabList
-     */
     constructor(options) {
         this.direction = options.direction || "";
         this.initTabList = options.tabList;
@@ -243,7 +247,7 @@ export class TabBar implements Widget {
         this.setScrollPosition((index + 1) * this.tabWidth);
     }
 
-    activateTab(tab, callback) {
+    activateTab(tab) {
         this.activeTabClicked = false;
         this.addSelection(tab);
         if (this.activeTab) {
@@ -311,13 +315,7 @@ export class TabBar implements Widget {
         }
     }
 
-    /**
-     *
-     * @param {Tab|Panel|Object} tab
-     * @param [index]
-     * @returns {Tab}
-     */
-    addTab(tab, index) {
+    addTab(tab: any, index?: number):Tab|Panel {
         if (!(tab instanceof Tab) && !(tab instanceof Panel)) {//TODO
             tab = new Tab(tab);
         }
@@ -495,7 +493,7 @@ export class TabBar implements Widget {
                 }
 
                 el.style.width = this.tabWidth + "px";
-                el.style.zIndex = zIndex;
+                el.style.zIndex = String(zIndex);
                 zIndex--;
 
                 this.transform(el, pos, 0);
@@ -523,7 +521,7 @@ export class TabBar implements Widget {
                 }
 
                 el.style.width = this.tabWidth + "px";
-                el.style.zIndex = zIndex;
+                el.style.zIndex = String(zIndex);
                 zIndex--;
 
                 this.transform(el, pos, 0);
@@ -684,13 +682,19 @@ export class TabBar implements Widget {
     }
 
     onTabPlusClick = this.onTabPlusClick.bind(this);
+
+    remove() {
+    }
 }
 
-/**
- * @type {Panel}
- * @implements {Widget}
- */
-export class Panel implements Widget {
+export class Panel extends Tab {
+    active: boolean;
+    location: any;
+    panelTitle: any;
+    panelBody: Accordion|Box;
+    autohide: boolean;
+    element: HTMLElement;
+    parent: any;
     /**
      *
      * @param {Object} options
@@ -700,7 +704,8 @@ export class Panel implements Widget {
      * @param {Accordion|Box} options.panelBody
      * @param {Boolean|undefined} options.autohide
      */
-    constructor(options) {
+    constructor(options: TabOptions) {
+        super(options);
         this.active = options.active;
         this.location = options.location;
         this.panelTitle = options.panelTitle;
@@ -739,6 +744,9 @@ export class Panel implements Widget {
             panelBody: this.panelBody.toJSON(),
         };
     }
+
+    remove() {
+    }
 }
 
 /**
@@ -746,6 +754,7 @@ export class Panel implements Widget {
  * @implements {Widget}
  */
 export class PanelBar extends TabBar implements Widget {
+    position: any;
     /**
      *
      * @param {Object} options

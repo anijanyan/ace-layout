@@ -6,7 +6,7 @@ import {TabManager} from "../widgets/tabManager";
  * @param {Tab|TabManager} element
  * @returns {{tabs: Tab[], activeTab: Tab}}}
  */
-function getCurrentPaneTabs(element) {
+function getCurrentPaneTabs(element: Tab|TabManager): {tabs: Tab[], activeTab: Tab} {
     if (element instanceof Tab) {
         return {
             tabs: [...element.parent.tabList],
@@ -59,7 +59,7 @@ export var tabCommands = [
         desc: "Close all opened tabs",
         position: 310,
         exec: () => {
-            var tabs = window.tabManager.tabs;
+            var tabs = TabManager.getInstance().tabs;
             for (var i in tabs) {
                 tabs[i].remove();
             }
@@ -90,7 +90,7 @@ export var tabCommands = [
             var tabs = currentPaneTabs.tabs;
             var activeTab = currentPaneTabs.activeTab;
             var index = tabs.indexOf(activeTab);
-            window.tabManager.navigateToTab(index + 1, activeTab, tabs);
+            TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
         }
     }, {
         name: "Go to tab left",
@@ -103,7 +103,7 @@ export var tabCommands = [
             var tabs = currentPaneTabs.tabs;
             var activeTab = currentPaneTabs.activeTab;
             var index = tabs.indexOf(activeTab);
-            window.tabManager.navigateToTab(index - 1, activeTab, tabs);
+            TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
         }
     }, {
         name: "movetabright",
@@ -254,9 +254,9 @@ export var tabCommands = [
 
             var index = tabs.indexOf(activeTab);
             if (index < tabs.length - 1) {
-                window.tabManager.navigateToTab(index + 1, activeTab, tabs);
+                TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
             } else {
-                window.tabManager.navigateToTab(0, activeTab, tabs);
+                TabManager.getInstance().navigateToTab(0, activeTab, tabs);
             }
         }
     }, {
@@ -272,9 +272,9 @@ export var tabCommands = [
 
             var index = tabs.indexOf(activeTab);
             if (index > 0) {
-                window.tabManager.navigateToTab(index - 1, activeTab, tabs);
+                TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
             } else {
-                window.tabManager.navigateToTab(tabs.length - 1, activeTab, tabs);
+                TabManager.getInstance().navigateToTab(tabs.length - 1, activeTab, tabs);
             }
         }
     }, {
