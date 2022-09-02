@@ -1,26 +1,27 @@
 import {TabbarHandler} from "../mouse/tabbar_handler";
 import {Utils} from "../lib";
-import {TabOptions, ToolBar, Widget} from "./widget";
+import {LayoutHTMLElement, PanelOptions, TabOptions, ToolBar, Widget} from "./widget";
 import {TabManager} from "./tabManager";
 import {Ace} from "ace-code";
 
 import dom = require("ace-code/src/lib/dom");
 import {Accordion} from "./accordion";
 import {Box} from "./box";
+import {PanelManager} from "./panelManager";
 
 dom.importCssString(require("text-loader!../styles/tab.css"), "tab.css");
 dom.importCssString(require("text-loader!../styles/panel.css"), "panel.css");
 
 export class Tab implements Widget {
-    session: string | Ace.EditSession;
+    session: Ace.EditSession;
     contextMenu = "tabs";
     active: boolean;
     tabIcon: string;
-    tabTitle: string;
+    title: string;
     path: string;
     preview: boolean;
-    element: HTMLElement;
-    parent: any;
+    element: LayoutHTMLElement;
+    parent: TabBar | PanelBar;
     $caption: string;
     $icon: string;
     autohide: boolean;
@@ -29,14 +30,14 @@ export class Tab implements Widget {
     constructor(options: TabOptions) {
         this.active = options.active;
         this.tabIcon = options.tabIcon;
-        this.tabTitle = options.tabTitle;
+        this.title = options.title;
         this.path = options.path;
         this.preview = options.preview;
     }
 
-    toJSON() {
+    toJSON(): Object {
         return {
-            tabTitle: this.tabTitle || undefined,
+            title: this.title || undefined,
             tabIcon: this.tabIcon || undefined,
             active: this.active || undefined,
             path: this.path || undefined,
@@ -83,7 +84,7 @@ export class Tab implements Widget {
                 title: this.path
             },
             ["span", {class: "tabIcon"}, this.tabIcon],
-            ["span", {class: "tabTitle", ref: "$title"}, this.tabTitle],
+            ["span", {class: "title", ref: "$title"}, this.title],
             ["span", {class: "tabCloseButton"}],
         ], null, this);
 
@@ -117,7 +118,7 @@ export class TabBar implements Widget, ToolBar {
     //TODO: enum
     direction: string;
     initTabList: Tab[];
-    element: HTMLElement;
+    element: LayoutHTMLElement;
     width: any;
     anchorTab: any;
     tabWidth: number;
@@ -139,6 +140,12 @@ export class TabBar implements Widget, ToolBar {
         this.direction = options.direction || "";
         this.size = options.size || 27;//TODO
         this.initTabList = options.tabList;
+
+        this.onMouseWheel = this.onMouseWheel.bind(this);
+        this.onTabClick = this.onTabClick.bind(this);
+        this.onTabMouseUp = this.onTabMouseUp.bind(this);
+        this.onTabMouseDown = this.onTabMouseDown.bind(this);
+        this.onTabPlusClick = this.onTabPlusClick.bind(this);
     }
 
     setBox(x, y, w, h) {
@@ -249,7 +256,7 @@ export class TabBar implements Widget, ToolBar {
         this.setScrollPosition((index + 1) * this.tabWidth);
     }
 
-    activateTab(tab) {
+    activateTab(tab: Tab) {
         this.activeTabClicked = false;
         this.addSelection(tab);
         if (this.activeTab) {
@@ -317,7 +324,7 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    addTab(tab: any, index?: number):Tab|Panel {
+    addTab(tab: any, index?: number): Tab | Panel {
         if (!(tab instanceof Tab) && !(tab instanceof Panel)) {//TODO
             tab = new Tab(tab);
         }
@@ -352,7 +359,7 @@ export class TabBar implements Widget, ToolBar {
             this.setScrollPosition((this.scrollLeft || 0) + d)
         }
     };
-    onMouseWheel = this.onMouseWheel.bind(this);
+
 
     setScrollPosition(scrollLeft) {
         this.scrollLeft = scrollLeft;
@@ -659,8 +666,6 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    onTabClick = this.onTabClick.bind(this);
-
     onTabMouseUp(e) {
         if (e.button == 1) {
             var tab = Utils.findHost(e.target, Tab);
@@ -669,14 +674,10 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    onTabMouseUp = this.onTabMouseUp.bind(this);
-
     onTabMouseDown(e) {
         if (e.button == 0)
             TabbarHandler.tabbarMouseDown(e, Tab, TabBar, true)
     }
-
-    onTabMouseDown = this.onTabMouseDown.bind(this)
 
     /*onMouseMove(e) {
         if (e.button == 0)
@@ -695,34 +696,20 @@ export class TabBar implements Widget, ToolBar {
         TabManager.getInstance().addNewTab(this.parent);
     }
 
-    onTabPlusClick = this.onTabPlusClick.bind(this);
-
     remove() {
     }
 }
 
 export class Panel extends Tab {
     active: boolean;
-    location: any;
-    panelTitle: any;
-    panelBody: Accordion|Box;
+    location: string;
+    panelBody: Accordion | Box;
     autohide: boolean;
-    element: HTMLElement;
-    parent: any;
-    /**
-     *
-     * @param {Object} options
-     * @param {Boolean|undefined} options.active
-     * @param {String} options.location
-     * @param {String} options.panelTitle
-     * @param {Accordion|Box} options.panelBody
-     * @param {Boolean|undefined} options.autohide
-     */
-    constructor(options: TabOptions) {
+
+    constructor(options: PanelOptions) {
         super(options);
         this.active = options.active;
         this.location = options.location;
-        this.panelTitle = options.panelTitle;
         this.panelBody = options.panelBody;
         this.autohide = options.autohide;
     }
@@ -730,21 +717,21 @@ export class Panel extends Tab {
     activate() {
         this.active = true;
         this.element.classList.add("active");
-        panelManager.activatePanel(this);
+        PanelManager.getInstance().activatePanel(this);
     }
 
-    deactivate(autohide) {
+    deactivate() {
         this.active = false;
         this.element.classList.remove("active");
-        panelManager.deactivatePanel(this, autohide);
+        PanelManager.getInstance().deactivatePanel(this);
     }
 
     render() {
         this.element = dom.buildDom(["div", {
             class: "panelButton" + (this.active ? " active" : ""),
         }, ["span", {
-            class: "panelTitle"
-        }, this.panelTitle]]);
+            class: "title"
+        }, this.title]]);
 
         this.element.$host = this;
         return this.element;
@@ -753,7 +740,7 @@ export class Panel extends Tab {
     toJSON() {
         return {
             active: this.active || undefined,
-            panelTitle: this.panelTitle,
+            title: this.title,
             autohide: this.autohide,
             panelBody: this.panelBody.toJSON(),
         };
@@ -763,12 +750,9 @@ export class Panel extends Tab {
     }
 }
 
-/**
- * @type {PanelBar}
- * @implements {Widget}
- */
 export class PanelBar extends TabBar implements Widget {
     position: any;
+
     /**
      *
      * @param {Object} options

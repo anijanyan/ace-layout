@@ -5,6 +5,7 @@
 import {Box} from "./box";
 import {SizeUnit} from "../models/params";
 import {Tab} from "./tab";
+import {Accordion} from "./accordion";
 
 interface Widget {
     render()
@@ -61,13 +62,29 @@ interface TabManagerOptions {
 interface TabOptions {
     preview: boolean;
     path: string;
-    tabTitle: string;
+    title: string;
     tabIcon: string;
     active: boolean;
 }
 
+
+interface PanelOptions extends TabOptions {
+    panelBody: Accordion | Box;
+    location: string;
+    autohide: boolean;
+}
+
 interface TabList {
     [path: string]: Tab;
+}
+
+interface LayoutHTMLElement extends HTMLElement {
+    $host: any;  //TODO:
+}
+
+interface SwitcherOptions {
+    checked?: boolean;
+    className?: string;
 }
 
 interface ToolBar {

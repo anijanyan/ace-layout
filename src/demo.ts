@@ -1,7 +1,7 @@
 "use strict";
 
 import {Box} from "./widgets/box";
-import {MenuToolBar} from "./widgets/menu";
+import {MenuManager, MenuToolBar} from "./widgets/menu";
 import {ListBox} from "./widgets/listBox";
 import {TabManager} from "./widgets/tabManager";
 import {PanelManager} from "./widgets/panelManager";
@@ -42,11 +42,11 @@ var base = new Box({
 
 window.fileTree = listBox;
 
-window.menuManager.addByPath("AWS Cloud9", {
+MenuManager.getInstance().addByPath("AWS Cloud9", {
     className: "c9btn",
     position: 50,
 })
-window.menuManager.addByPath("File", {
+MenuManager.getInstance().addByPath("File", {
     position: 100,
 })
 
@@ -62,7 +62,7 @@ var tabManager = TabManager.getInstance({
     main: mainBox
 });
 
-var panelManager = new PanelManager({
+var panelManager = PanelManager.getInstance({
     layout: base,
     locations: {
         left: {

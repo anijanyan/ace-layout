@@ -15,6 +15,7 @@ import theme = require("ace-code/src/theme/textmate");
 import modeList = require("ace-code/src/ext/modelist");
 import {TabList, TabManagerOptions} from "./widget";
 import {Tab} from "./tab";
+import {MenuManager} from "./menu";
 
 var newTabCounter = 1;
 
@@ -53,11 +54,11 @@ export class TabManager {
     }
 
     commandsInit() {
-        window.menuManager.addByPath("/context/tabs");
+        MenuManager.getInstance().addByPath("/context/tabs");
         var commandsKeys = [];
         for (var command of tabCommands) {
             if (command.exec !== undefined) {
-                window.menuManager.addByPath("/context/tabs/" + command.name, {
+                MenuManager.getInstance().addByPath("/context/tabs/" + command.name, {
                     position: command.position,
                     hotKey: (useragent.isMac ? command.mac : command.win),
                     exec: command.exec
@@ -112,7 +113,7 @@ export class TabManager {
         if (boxData.fixedSize)
             box.fixedSize = boxData.fixedSize;
 
-        if (boxType === "pane") {
+        if (box instanceof Pane) {
             if (boxData.tabBar) {
                 box.tabBar.scrollLeft = boxData.tabBar.scrollLeft;
                 if (boxData.tabBar.tabList) {
@@ -212,7 +213,7 @@ export class TabManager {
 
             tab = pane.tabBar.addTab({
                 preview: options.preview,
-                tabTitle: tabTitle,
+                title: tabTitle,
                 path: options.path,
                 active: true,
             });
@@ -333,7 +334,7 @@ export class TabManager {
 
     addNewTab(pane: Pane) {
         pane.tabBar.addTab({
-            tabTitle: `Untitled ${newTabCounter++}`,
+            title: `Untitled ${newTabCounter++}`,
             active: true,
         });
     };
@@ -342,7 +343,7 @@ export class TabManager {
         if (!tab.editor) return;
 
         if (tab.session) {
-            this.setSession(tab, tab.session)
+            this.setSession(tab, tab.session.getValue())
         } else if (!tab.path) {
             this.setSession(tab, "")
         } else if (tab.path) {

@@ -63,6 +63,9 @@ module.exports = (env, argv) => {
                     {
                         from: "src/demo.html",
                         to: "."
+                    }, {
+                        from: "src/preferences.html",
+                        to: "."
                     }
                 ]
             })

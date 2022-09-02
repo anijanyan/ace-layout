@@ -1,16 +1,15 @@
 import dom = require("ace-code/src/lib/dom");
+import {LayoutHTMLElement, SwitcherOptions, Widget} from "./widget";
 
 dom.importCssString(require("text-loader!../styles/switcher.css"), "switcher.css");
 
-export class Switcher{
-    /**
-     *
-     * @param {Object} options
-     * @param {String|undefined} options.value
-     * @param {String|undefined} options.className
-     * @param {Boolean|undefined} options.checked
-     */
-    constructor(options) {
+export class Switcher implements Widget {
+    className?: string;
+    element: LayoutHTMLElement;
+    checked: boolean;
+    private options: any;
+
+    constructor(options: SwitcherOptions) {
         let {className, checked, ...other} = options;
         this.className = className || "cboffline";
         this.options = other;
@@ -37,5 +36,8 @@ export class Switcher{
     }
 
     toJSON() {
+    }
+
+    remove() {
     }
 }

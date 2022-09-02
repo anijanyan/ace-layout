@@ -1,8 +1,10 @@
 import {Box} from "./box";
 import {Accordion} from "./accordion";
-import {PanelBar} from "./tab";
+import {Panel, PanelBar} from "./tab";
 
 export class PanelManager {
+    private static _instance: PanelManager;
+
     /**
      *
      * @param {Object} options
@@ -12,6 +14,14 @@ export class PanelManager {
     constructor(options) {
         this.layout = options.layout;
         this.locations = options.locations;
+    }
+
+    static getInstance(options?) {
+        if (!PanelManager._instance) {
+            PanelManager._instance = new PanelManager(options);
+        }
+
+        return PanelManager._instance;
     }
 
     toJSON() {
@@ -36,7 +46,7 @@ export class PanelManager {
 
     setState(state) {
         var panelBars = state.panelBars;
-        var panelBar, panelList, panel;
+        var panelBar, panelList: Panel[], panel: Panel;
         var panelBody, panelBodyData, accordionBoxes;
 
         for (var position in panelBars) {
@@ -70,7 +80,7 @@ export class PanelManager {
                 }
                 panelList.push({
                     active: panel.active,
-                    panelTitle: panel.panelTitle,
+                    title: panel.title,
                     autohide: panel.autohide,
                     panelBody: panelBody,
                 });
@@ -116,5 +126,3 @@ export class PanelManager {
         locationBox.hide();
     }
 }
-
-exports.PanelManager = PanelManager;

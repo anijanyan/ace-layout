@@ -1,7 +1,7 @@
 .cboffline {
     width: 55px;
     height: 21px;
-    background: url("../layout/images/sync.png") no-repeat 0 -21px;
+    background: url("../images/sync.png") no-repeat 0 -21px;
     display: inline-block;
 }
 .cbofflineDown {
@@ -16,7 +16,7 @@
     width: 16px;
     height: 17px;
     background-repeat: no-repeat;
-    background-image: url("../layout/images/checkbox_black@1x.png");
+    background-image: url("../images/checkbox_black@1x.png");
     background-size: 16px 136px;
     background-position: 0 0;
 }

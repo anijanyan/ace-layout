@@ -1,18 +1,17 @@
 import dom = require("ace-code/src/lib/dom");
+import {LayoutHTMLElement} from "./widget";
 
 export class SettingsSearchBox {
-
     hideFiltered = false;
     value = "";
     currValue = "";
-    prefsParentNode;
+    prefsParentNode: LayoutHTMLElement;
     searchResultsCount = 0;
+    searchResults: any;
+    element: any;
+    searchField: any;
 
-    /**
-     *
-     * @param {HTMLElement} prefsParentNode
-     */
-    constructor(prefsParentNode) {
+    constructor(prefsParentNode: LayoutHTMLElement) {
         this.prefsParentNode = prefsParentNode;
     }
 
@@ -31,7 +30,7 @@ export class SettingsSearchBox {
 
         }
         if (this.currValue != "") {
-            this.searchResults.innerHTML = " "+ this.searchResultsCount + " Preferences Found";
+            this.searchResults.innerHTML = " " + this.searchResultsCount + " Preferences Found";
         } else {
             this.searchResults.innerHTML = "";
         }
@@ -44,11 +43,7 @@ export class SettingsSearchBox {
         item.style.display = show ? "block" : "none";
     }
 
-    /**
-     *
-     * @param {HTMLElement} item
-     */
-    updateVisibility(item) {
+    updateVisibility(item: LayoutHTMLElement) {
         var text = item.innerText;
         var tokens = this.getTokens(text);
         var show = true;
@@ -134,7 +129,7 @@ export class SettingsSearchBox {
     }
 
     clear() {
-        if (this.currValue.length){
+        if (this.currValue.length) {
             this.searchField.value = "";
             this.currValue = "";
             this.filter();

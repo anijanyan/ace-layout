@@ -40,6 +40,16 @@ function getNextSibling(node, conditionFn, parentElement) {
 }
 
 export class MenuManager {
+    private static _instance: MenuManager;
+
+    static getInstance() {
+        if (!MenuManager._instance) {
+            MenuManager._instance = new MenuManager();
+        }
+
+        return MenuManager._instance;
+    }
+
     static findHost = Utils.findHost;
     menus = {};
     /**
@@ -1193,8 +1203,8 @@ export class MenuToolBar implements ToolBar{
      */
     menuBar;
 
-    constructor() {
-        window.menuManager ??= new MenuManager();
+    constructor() {//TODO:?
+        MenuManager.getInstance();
     }
 
     size = 27;
@@ -1214,7 +1224,7 @@ export class MenuToolBar implements ToolBar{
                     ref: "menuBar"
                 }
             ]], null, this);
-
+            let menuManager = MenuManager.getInstance();
             menuManager.build();
             menuManager.buildMenuBar(this.menuBar);
             menuManager.bindKeys();
