@@ -20,12 +20,12 @@ export class ListBox extends Box {
         popup.autoSelect = false;
         popup.renderer.$maxLines = null;
         popup.setRow(-1);
-        popup.on("click", function (e) {
+        popup.on("click", (e) => {
             e.stop();
             var data = popup.getData(popup.getRow());
             this._signal("select", data);
         });
-        popup.on("dblclick", function (e) {
+        popup.on("dblclick", (e) => {
             e.stop();
             var data = popup.getData(popup.getRow());
             this._signal("choose", data);
