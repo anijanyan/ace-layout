@@ -1,19 +1,27 @@
 import {TabbarHandler} from "../mouse/tabbar_handler";
 import {Utils} from "../lib";
-import {LayoutHTMLElement, PanelOptions, TabOptions, ToolBar, Widget} from "./widget";
+import {
+    LayoutEditor,
+    LayoutEditSession,
+    LayoutHTMLElement,
+    PanelOptions,
+    TabOptions,
+    ToolBar,
+    Widget
+} from "./widget";
 import {TabManager} from "./tabManager";
-import {Ace} from "ace-code";
 
 import dom = require("ace-code/src/lib/dom");
 import {Accordion} from "./accordion";
 import {Box} from "./box";
 import {PanelManager} from "./panelManager";
+import {Ace} from "ace-code";
 
 dom.importCssString(require("text-loader!../styles/tab.css"), "tab.css");
 dom.importCssString(require("text-loader!../styles/panel.css"), "panel.css");
 
 export class Tab implements Widget {
-    session: Ace.EditSession;
+    session: LayoutEditSession;
     contextMenu = "tabs";
     active: boolean;
     tabIcon: string;
@@ -98,7 +106,7 @@ export class Tab implements Widget {
     update() {
     }
 
-    get editor() {
+    get editor(): LayoutEditor {
         if (this.parent.activeTab == this)
             return this.parent.parent.editor
     }
@@ -130,7 +138,7 @@ export class TabBar implements Widget, ToolBar {
     draggingElementSize: any;
     plusButtonWidth: number;
     containerWidth: number;
-    buttons: any;
+    buttons: LayoutHTMLElement;
     isDragging: boolean;
     tabDraggingElement: HTMLElement;
     draggingElementIndex: number;
@@ -167,7 +175,7 @@ export class TabBar implements Widget, ToolBar {
         return this.direction === "vertical";
     }
 
-    tabMouseDown(tab, expand, toggle) {
+    tabMouseDown(tab: Tab, expand = false, toggle = false) {
         if (expand) {
             this.expandSelection(tab, toggle);
         } else {
@@ -183,7 +191,7 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    expandSelection(tab, toggle) {
+    expandSelection(tab: Tab, toggle = false) {
         if (!this.anchorTab) {
             this.anchorTab = this.activeTab;
         }
@@ -212,7 +220,7 @@ export class TabBar implements Widget, ToolBar {
         this.activateTab(tab);
     }
 
-    toggleSelection(tab) {
+    toggleSelection(tab: Tab) {
         var index = this.selectedTabs.indexOf(tab);
         if (index < 0) {
             this.activateTab(tab);
@@ -221,22 +229,22 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    addSelection(tab) {
+    addSelection(tab: Tab) {
         if (this.selectedTabs.indexOf(tab) < 0) {
             this.selectTab(tab);
             this.selectedTabs.push(tab);
         }
     }
 
-    selectTab(tab) {
+    selectTab(tab: Tab) {
         tab.element.classList.add("selected");
     }
 
-    deselectTab(tab) {
+    deselectTab(tab: Tab) {
         tab.element.classList.remove("selected");
     }
 
-    removeSelection(tab) {
+    removeSelection(tab: Tab) {
         if (this.selectedTabs.indexOf(tab) < 0) {
             return;
         }
@@ -251,7 +259,7 @@ export class TabBar implements Widget, ToolBar {
         this.selectedTabs = [];
     }
 
-    scrollTabIntoView(tab) {
+    scrollTabIntoView(tab: Tab) {
         var index = this.tabList.indexOf(tab);
         this.setScrollPosition((index + 1) * this.tabWidth);
     }
@@ -276,7 +284,7 @@ export class TabBar implements Widget, ToolBar {
         this.configurate();
     }
 
-    removeTab(tab) {
+    removeTab(tab: Tab) {
         if (tab === this.activeTab)
             this.activeTab = null;
         var index = this.tabList.indexOf(tab);
@@ -285,7 +293,7 @@ export class TabBar implements Widget, ToolBar {
         tab.parent = null;
     }
 
-    activatePrevious(index) {//TODO active tab history
+    activatePrevious(index: number) {//TODO active tab history
         if (this.tabList.length) {
             var tab = this.tabList[index - 1] || this.tabList[this.tabList.length - 1];
             this.activateTab(tab);
@@ -294,7 +302,7 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    closeTab(tab) {
+    closeTab(tab: Tab) {
         var index = this.tabList.indexOf(tab);
         TabManager.getInstance().deactivateTab(tab);
         var isActiveTab = this.activeTab === tab;
@@ -315,7 +323,7 @@ export class TabBar implements Widget, ToolBar {
         this.configurate();
     }
 
-    addTabList(tabList, index) {
+    addTabList(tabList: Tab[], index: number) {
         index = index || this.tabList.length;
         var tab;
         for (var i = 0; i < tabList.length; i++) {
@@ -324,10 +332,7 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    addTab(tab: any, index?: number): Tab | Panel {
-        if (!(tab instanceof Tab) && !(tab instanceof Panel)) {//TODO
-            tab = new Tab(tab);
-        }
+    addTab(tab: Tab, index?: number): Tab {
         if (!tab.element) {
             tab.render();
         }
@@ -349,7 +354,7 @@ export class TabBar implements Widget, ToolBar {
     }
 
     scrollLeft = 0;
-    onMouseWheel = function (e) {
+    onMouseWheel = (e) => {
         var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
 
         if (Math.abs(d) > 50) {
@@ -360,8 +365,7 @@ export class TabBar implements Widget, ToolBar {
         }
     };
 
-
-    setScrollPosition(scrollLeft) {
+    setScrollPosition(scrollLeft: number) {
         this.scrollLeft = scrollLeft;
 
         this.configurate();
@@ -369,7 +373,7 @@ export class TabBar implements Widget, ToolBar {
 
     animationSteps = 0;
 
-    animateScroll(v) {
+    animateScroll(v: number) {
         this.vX = v / 80;
         this.animationSteps += 15;
         if (this.animationSteps > 15) {
@@ -438,7 +442,7 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    transform(el, dx, dy) {
+    transform(el: LayoutHTMLElement, dx: number, dy: number) {
         el.style.left = Math.round(dx) + "px";
         el.dx = dx;
         el.dy = dy;
@@ -589,7 +593,7 @@ export class TabBar implements Widget, ToolBar {
         }
     }
 
-    addButtons(buttons) {
+    addButtons(buttons?: LayoutHTMLElement) {
         if (!buttons) {
             return;
         }
@@ -606,7 +610,7 @@ export class TabBar implements Widget, ToolBar {
         this.configurate();
     }
 
-    startTabDragging(element, index) {
+    startTabDragging(element: HTMLElement, index: number) {
         if (this.isDragging) {
             return;
         }

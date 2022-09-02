@@ -211,12 +211,12 @@ export class TabManager {
 
             var tabTitle = options.path.split("/").pop();
 
-            tab = pane.tabBar.addTab({
+            tab = pane.tabBar.addTab(new Tab({
                 preview: options.preview,
                 title: tabTitle,
                 path: options.path,
                 active: true,
-            });
+            }));
             if (options.preview)
                 this.previewTab = tab;
             tab.parent.scrollTabIntoView(tab)
@@ -246,11 +246,12 @@ export class TabManager {
         if (!tab.path || !tab.session) return;
 
         var session = tab.session
-        var undoManager = tab.session.$undoManager;
+        var undoManager = tab.session.getUndoManager();
         localStorage["@file@" + tab.path] = JSON.stringify({
             selection: session.selection.toJSON(),
+            //@ts-ignore
             undoManager: undoManager.toJSON(),
-            value: undoManager.isClean() ? undefined : session.getValue(),
+            value: undoManager.isAtBookmark() ? undefined : session.getValue(),
             scroll: [
                 session.getScrollLeft(),
                 session.getScrollTop()
@@ -284,6 +285,7 @@ export class TabManager {
         }
 
         if (typeof value == "string") {
+            // @ts-ignore
             tab.session = ace.createEditSession(value || "");
 
             tab.session.tab = tab;
@@ -333,10 +335,10 @@ export class TabManager {
     }
 
     addNewTab(pane: Pane) {
-        pane.tabBar.addTab({
+        pane.tabBar.addTab(new Tab({
             title: `Untitled ${newTabCounter++}`,
             active: true,
-        });
+        }));
     };
 
     loadFile(tab: Tab) {

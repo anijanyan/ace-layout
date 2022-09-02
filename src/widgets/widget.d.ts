@@ -1,13 +1,22 @@
-/**
- * Interface for classes that represent a widgets.
- *
- */
 import {Box} from "./box";
 import {SizeUnit} from "../models/params";
 import {Tab} from "./tab";
 import {Accordion} from "./accordion";
+import {Ace} from "ace-code";
 
-interface Widget {
+export interface LayoutEditSession extends Ace.EditSession {
+    tab?: Tab;
+}
+
+export interface LayoutEditor extends Ace.Editor {
+    session: LayoutEditSession;
+}
+
+/**
+ * Interface for classes that represent a widgets.
+ *
+ */
+export interface Widget {
     render()
 
     remove()
@@ -59,34 +68,36 @@ interface TabManagerOptions {
     main: Box;
 }
 
-interface TabOptions {
-    preview: boolean;
-    path: string;
+export interface TabOptions {
+    preview?: boolean;
+    path?: string;
     title: string;
-    tabIcon: string;
+    tabIcon?: string;
     active: boolean;
 }
 
 
-interface PanelOptions extends TabOptions {
+export interface PanelOptions extends TabOptions {
     panelBody: Accordion | Box;
     location: string;
     autohide: boolean;
 }
 
-interface TabList {
+export interface TabList {
     [path: string]: Tab;
 }
 
-interface LayoutHTMLElement extends HTMLElement {
+export interface LayoutHTMLElement extends HTMLElement {
+    dx?: number;
+    dy?: number;
     $host: any;  //TODO:
 }
 
-interface SwitcherOptions {
+export interface SwitcherOptions {
     checked?: boolean;
     className?: string;
 }
 
-interface ToolBar {
+export interface ToolBar {
     size: number;
 }
