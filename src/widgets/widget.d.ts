@@ -37,7 +37,7 @@ interface PanelLocation {
 
 interface AccordionOptions {
     vertical?: boolean;
-    color: any
+    color?: string;
     boxes: any
     minSize?: number
     minVerticalSize?: any
@@ -83,8 +83,17 @@ export interface PanelOptions extends TabOptions {
     autohide: boolean;
 }
 
+export interface PanelManagerOptions {
+    locations: LocationList;
+    layout: Box;
+}
+
 export interface TabList {
     [path: string]: Tab;
+}
+
+export interface LocationList {
+    [direction: string]: PanelLocation;
 }
 
 export interface LayoutHTMLElement extends HTMLElement {

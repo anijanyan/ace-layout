@@ -1,10 +1,11 @@
 import {Utils} from "../lib";
+import {Tab, TabBar} from "../widgets/tab";
 
 var event = require("ace-code/src/lib/event");
 var dom = require("ace-code/src/lib/dom");
 
 export namespace TabbarHandler {
-    export var tabbarMouseDown = function (e, tabConstructor, tabBarConstructor, showSplit: boolean = false) {
+    export var tabbarMouseDown = function (e, tabConstructor: typeof Tab, tabBarConstructor: typeof TabBar, showSplit: boolean = false) {
         var divSplit, splitPosition, pane;
 
         function hideSplitPosition() {
@@ -80,11 +81,11 @@ export namespace TabbarHandler {
             return
         }
 
-        var tab = Utils.findHost(e.target, tabConstructor);
+        var tab: Tab = Utils.findHost(e.target, tabConstructor);
         if (!tab)
             return;
 
-        var tabBar = Utils.findHost(e.target, tabBarConstructor);
+        var tabBar: TabBar = Utils.findHost(e.target, tabBarConstructor);
         var isVertical = tabBar.isVertical();
         tabBar.tabMouseDown(tab, e.shiftKey, e.ctrlKey);
         if (e.shiftKey || e.ctrlKey) {
@@ -232,7 +233,7 @@ export namespace TabbarHandler {
         };
 
 
-        function distance(dx, dy) {
+        function distance(dx: number, dy: number): number {
             return dx * dx + dy * dy
         }
 

@@ -15,7 +15,6 @@ import dom = require("ace-code/src/lib/dom");
 import {Accordion} from "./accordion";
 import {Box} from "./box";
 import {PanelManager} from "./panelManager";
-import {Ace} from "ace-code";
 
 dom.importCssString(require("text-loader!../styles/tab.css"), "tab.css");
 dom.importCssString(require("text-loader!../styles/panel.css"), "panel.css");
@@ -754,6 +753,7 @@ export class Panel extends Tab {
     }
 }
 
+//TODO: ?
 export class PanelBar extends TabBar implements Widget {
     position: any;
 

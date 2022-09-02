@@ -14,7 +14,7 @@ export namespace Utils {
         return null;
     };
 
-    export var setBox = function (el, x, y, w, h) {
+    export var setBox = function (el: HTMLElement, x: number, y: number, w: number, h: number) {
         if (w) {
             w = Math.max(w, 0);
         }
@@ -31,13 +31,13 @@ export namespace Utils {
     };
 
 
-    export function getEdge(style, dir) {
+    export function getEdge(style: CSSStyleDeclaration, dir: string) {
         return parseInt(style["padding" + dir], 10) +
             parseInt(style["margin" + dir], 10) +
             parseInt(style["border" + dir], 10);
     }
 
-    export function getElementEdges(element) {
+    export function getElementEdges(element: HTMLElement) {
         var style = getComputedStyle(element);
         return {
             "top": getEdge(style, "Top"),

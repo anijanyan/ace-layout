@@ -1,22 +1,19 @@
 import {Box} from "./box";
 import {Accordion} from "./accordion";
 import {Panel, PanelBar} from "./tab";
+import {LocationList, PanelManagerOptions} from "./widget";
 
 export class PanelManager {
     private static _instance: PanelManager;
+    private layout: Box;
+    private locations: LocationList;
 
-    /**
-     *
-     * @param {Object} options
-     * @param {Box} options.layout
-     * @param {Object.<String, PanelLocation>} options.locations
-     */
-    constructor(options) {
+    constructor(options: PanelManagerOptions) {
         this.layout = options.layout;
         this.locations = options.locations;
     }
 
-    static getInstance(options?) {
+    static getInstance(options?: PanelManagerOptions) {
         if (!PanelManager._instance) {
             PanelManager._instance = new PanelManager(options);
         }
@@ -95,7 +92,7 @@ export class PanelManager {
 
     }
 
-    activatePanel(panel) {
+    activatePanel(panel: Panel) {
         var location = panel.parent.position;
         var locationData = this.locations[location];
 
@@ -116,7 +113,7 @@ export class PanelManager {
         newBox.show();
     }
 
-    deactivatePanel(panel) {
+    deactivatePanel(panel: Panel) {
         var location = panel.parent.position;
         if (!this.locations[location])
             return;
