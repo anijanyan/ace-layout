@@ -1,7 +1,7 @@
 import {Box} from "./box";
 import {Accordion} from "./accordion";
 import {Panel, PanelBar} from "./tab";
-import {LocationList, PanelManagerOptions} from "./widget";
+import {LocationList, PanelManagerOptions, PanelOptions} from "./widget";
 
 export class PanelManager {
     private static _instance: PanelManager;
@@ -43,7 +43,7 @@ export class PanelManager {
 
     setState(state) {
         var panelBars = state.panelBars;
-        var panelBar, panelList: Panel[], panel: Panel;
+        var panelBar: PanelBar, panelList: PanelOptions[], panel: Panel;
         var panelBody, panelBodyData, accordionBoxes;
 
         for (var position in panelBars) {

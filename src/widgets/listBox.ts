@@ -23,11 +23,13 @@ export class ListBox extends Box {
         popup.on("click", (e) => {
             e.stop();
             var data = popup.getData(popup.getRow());
+            //@ts-ignore
             this._signal("select", data);
         });
         popup.on("dblclick", (e) => {
             e.stop();
             var data = popup.getData(popup.getRow());
+            //@ts-ignore
             this._signal("choose", data);
         });
         popup.on("tripleclick", (e) => {

@@ -16,7 +16,7 @@ const BOX_MIN_SIZE = 40;
  * @param {Box|undefined} 1
  */
 export class Box implements Widget {
-    fixedSize;
+    fixedSize: number;
     editor;
     vertical: boolean;
     color: string;
@@ -83,6 +83,8 @@ export class Box implements Widget {
         this.minVerticalSize = options.minVerticalSize || this.minSize;
         this.minHorizontalSize = options.minHorizontalSize || this.minSize;
         this.classNames = options.classNames ?? "";
+        this.hidden = options.hidden ?? false;
+        this.fixedSize = options.fixedSize;
     }
 
     toJSON() {

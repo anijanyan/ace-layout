@@ -68,7 +68,7 @@ var panelManager = PanelManager.getInstance({
         left: {
             parent: base,
             index: 0,
-            size: "200px"
+            size: 200
         }
     }
 });

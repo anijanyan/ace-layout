@@ -28,7 +28,7 @@ export class Tab implements Widget {
     path: string;
     preview: boolean;
     element: LayoutHTMLElement;
-    parent: TabBar | PanelBar;
+    parent: TabBar;
     $caption: string;
     $icon: string;
     autohide: boolean;
@@ -322,7 +322,7 @@ export class TabBar implements Widget, ToolBar {
         this.configurate();
     }
 
-    addTabList(tabList: Tab[], index: number) {
+    addTabList(tabList: TabOptions[], index: number) {
         index = index || this.tabList.length;
         var tab;
         for (var i = 0; i < tabList.length; i++) {
@@ -705,9 +705,10 @@ export class TabBar implements Widget, ToolBar {
 
 export class Panel extends Tab {
     active: boolean;
-    location: string;
+    location?: string;
     panelBody: Accordion | Box;
     autohide: boolean;
+    parent: PanelBar;
 
     constructor(options: PanelOptions) {
         super(options);
@@ -852,7 +853,7 @@ export class PanelBar extends TabBar implements Widget {
         return this.element
     }
 
-    addTabList(tabList, index) {
+    addTabList(tabList:PanelOptions[], index?: number) {
         index = index || this.tabList.length;
         var tab;
         for (var i = 0; i < tabList.length; i++) {

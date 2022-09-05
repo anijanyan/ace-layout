@@ -31,7 +31,7 @@ export interface Widget {
 interface PanelLocation {
     parent: Box
     index: number
-    size: string
+    size: number
     box?: Box
 }
 
@@ -46,6 +46,8 @@ interface AccordionOptions {
 }
 
 interface BoxOptions {
+    fixedSize?: number;
+    hidden?: boolean;
     buttonList?: any[];
     toolBars?: {};
     ratio?: number;
@@ -80,7 +82,7 @@ export interface TabOptions {
 
 export interface PanelOptions extends TabOptions {
     panelBody: Accordion | Box;
-    location: string;
+    location?: string;
     autohide: boolean;
 }
 
@@ -135,4 +137,20 @@ interface DropdownElement {
     checked: any;
     caption: any;
     position: number;
+}
+
+interface MenuOptions {
+    exec?: any;
+    className?: string;
+    disabled?: boolean;
+    checked?: boolean;
+    type?: string;
+    hotKey?: any;
+    label?: string;
+    position?: number;
+}
+
+interface Position {
+    x: number,
+    y: number
 }

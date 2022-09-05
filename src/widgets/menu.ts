@@ -5,11 +5,11 @@ import {HashHandler} from "ace-code/src/keyboard/hash_handler";
 
 import event = require("ace-code/src/lib/event");
 import keyUtil = require("ace-code/src/lib/keys");
-import {ToolBar} from "./widget";
+import {LayoutHTMLElement, MenuOptions, Position, ToolBar} from "./widget";
 
 dom.importCssString(require("text-loader!../styles/menu.css"), "menu.css");
 
-function getPrevSibling(node, conditionFn, parentElement) {
+function getPrevSibling(node, conditionFn, parentElement?: HTMLElement) {
     parentElement = node ? node.parentElement : parentElement;
     var wrapped = false;
     do {
@@ -24,7 +24,7 @@ function getPrevSibling(node, conditionFn, parentElement) {
     return node;
 }
 
-function getNextSibling(node, conditionFn, parentElement) {
+function getNextSibling(node, conditionFn, parentElement?: HTMLElement) {
     parentElement = node ? node.parentElement : parentElement;
     var wrapped = false;
     do {
@@ -41,6 +41,16 @@ function getNextSibling(node, conditionFn, parentElement) {
 
 export class MenuManager {
     private static _instance: MenuManager;
+    static findHost = Utils.findHost;
+    menus = new MenuItems();
+
+    activeMenu: MenuPopup | MenuBar = null;
+    isActive: boolean;
+    menuBar: MenuBar;
+    searchBox: any;
+    currentHost: any;
+    lastPos: Position;
+    prevPos: Position;
 
     static getInstance() {
         if (!MenuManager._instance) {
@@ -50,15 +60,7 @@ export class MenuManager {
         return MenuManager._instance;
     }
 
-    static findHost = Utils.findHost;
-    menus = {};
-    /**
-     *
-     * @type {MenuPopup|MenuBar|null}
-     */
-    activeMenu = null;
-
-    find(path, item) {
+    find(path, item?: MenuItems) {
         if (typeof path === "string") path = path.split("/");
         item = item || this.menus;
         path.forEach(function (part) {
@@ -68,11 +70,11 @@ export class MenuManager {
         return item;
     }
 
-    addByPath(path, options = {}) {
+    addByPath(path, options: MenuOptions = {}) {
         if (typeof path == "string") path = path.split("/");
         var item = this.menus;
         path.forEach(function (part) {
-            if (!item.map) item.map = {};
+            if (!item.map) item.map = new MenuItems();
             if (!item.map[part]) item.map[part] = {};
             item = item.map[part];
         });
@@ -238,7 +240,7 @@ export class MenuManager {
             if (command) {
                 command.exec(_this);
             } else if (e.key.length === 1) {
-                menuManager.addSymbolToSearchBox(e.key);
+                MenuManager.getInstance().addSymbolToSearchBox(e.key);
             }
         });
     }
@@ -295,7 +297,7 @@ export class MenuManager {
     }
 
     //event handlers
-    onMouseDown(e) {
+    onMouseDown = (e) => {
         var host = Utils.findHost(e.target);
         if (host && host.buttonElement) {
             e.preventDefault();
@@ -306,9 +308,7 @@ export class MenuManager {
         this.inactivateMenu();
     }
 
-    onMouseDown = this.onMouseDown.bind(this);
-
-    onMouseMove(e) {
+    onMouseMove = (e) => {
         var lastPos = {x: e.clientX, y: e.clientY};
         if (this.lastPos && this.lastPos.x === lastPos.x && this.lastPos.y === lastPos.y) {
             return;
@@ -317,21 +317,17 @@ export class MenuManager {
         this.lastPos = lastPos;
     }
 
-    onMouseMove = this.onMouseMove.bind(this);
-
-    onWindowResize(e) {
+    onWindowResize = (e) => {
         if (!this.activeMenu) {
             return;
         }
-        var menuPopup = this.activeMenu.constructor.name === "MenuPopup" ? this.activeMenu : this.activeMenu.menuPopup;
+        var menuPopup = this.activeMenu instanceof MenuPopup ? this.activeMenu : this.activeMenu.menuPopup;
         if (menuPopup) {
             menuPopup.renderRecursive();
         }
     }
 
-    onWindowResize = this.onWindowResize.bind(this);
-
-    onContextMenuOpen(e) {
+    onContextMenuOpen = (e) => {
         e.preventDefault();
         let target = this.getTarget(e.target, (target) => target.$host.contextMenu);
         if (!target) {
@@ -342,8 +338,6 @@ export class MenuManager {
         this.openMenuByPath("/context/" + target.$host.contextMenu, pos);
         this.currentHost = target.$host;
     }
-
-    onContextMenuOpen = this.onContextMenuOpen.bind(this);
 
     addSymbolToSearchBox(symbol) {
         if (!this.searchBox || !this.searchBox.isOpen) {
@@ -361,25 +355,16 @@ export class MenuManager {
         this.searchBox.setParentPopup(this.activeMenu.getLastOpenPopup());
         this.searchBox.open();
     }
+
+    add = this.addByPath;
 }
-
-MenuManager.prototype.add = MenuManager.prototype.addByPath
-
 
 export class Menu {
     menuManager;
-    /**
-     *
-     * @type {MenuPopup|MenuBar|null}
-     */
     selectedMenu = null;
-    /**
-     *
-     * @type {MenuPopup|null}
-     */
-    menuPopup = null;
-    selectedClass;
-    element;
+    menuPopup: MenuPopup = null;
+    selectedClass: string;
+    element: HTMLElement;
 
     getLastOpenPopup() {
         return !this.menuPopup ? this : this.menuPopup.getLastOpenPopup();
@@ -411,7 +396,7 @@ export class Menu {
         this.selectedMenu = null;
     }
 
-    openMenu(direction) {
+    openMenu(direction?: string) {
         if (!direction && this.constructor.name === "MenuPopup") {
             direction = "right";
         }
@@ -467,7 +452,9 @@ export class Menu {
         this.selectMenu(host);
     }
 
+    //TODO:
     getMenuByPath(path) {
+        return null;
     }
 
     openMenuByPath(path) {
@@ -482,7 +469,7 @@ export class Menu {
         if (!menu.$host.map) return;
         this.openMenu();
         if (path.length) {
-            this.menuPopup.openMenuByPath(path, menu);
+            this.menuPopup.openMenuByPath(path);
         }
     }
 }
@@ -490,6 +477,7 @@ export class Menu {
 export class MenuBar extends Menu {
     selectedClass = "menuButtonDown";
     menus;
+    bottom: number;
 
     build(parent) {
         this.element = parent;
@@ -542,13 +530,12 @@ export class MenuBar extends Menu {
         }
     }
 
-    onMouseMove(e) {
+    onMouseMove = (e) => {
         var target = this.menuManager.getTarget(e.target);
 
         this.moveOnTarget(target);
     }
 
-    onMouseMove = this.onMouseMove.bind(this);
 
     getMenuByPath(path) {
         return this.menuManager.find(path);
@@ -562,6 +549,7 @@ export class MenuPopup extends Menu {
     isSubMenu = false;
     direction;
     prevMaxHeight;
+    parentMenu: Menu;
 
     inactivateMenu() {
         this.close();
@@ -582,8 +570,8 @@ export class MenuPopup extends Menu {
         }
 
         var result = {};
-
         if (this.menu.map) {
+            //TODO: ?
             var items = Object.values(this.menu.map).sort(function (item1, item2) {
                 return item1.position - item2.position;
             });
@@ -710,7 +698,7 @@ export class MenuPopup extends Menu {
         this.element.style.top = top + "px";
         this.element.style.left = left + "px";
         this.element.style.position = "absolute";
-        this.element.style.zIndex = 195055;
+        this.element.style.zIndex = String(195055);
         this.element.style.overflowY = "auto";
     }
 
@@ -749,7 +737,7 @@ export class MenuPopup extends Menu {
     }
 
     //handle events
-    onMouseMove(e) {
+    onMouseMove = (e) => {
         if (e.target === this.element) {
             return;
         }
@@ -769,9 +757,8 @@ export class MenuPopup extends Menu {
         }
     }
 
-    onMouseMove = this.onMouseMove.bind(this);
 
-    onClick(e) {
+    onClick = (e) => {
         if (e.target === this.element)
             return;
 
@@ -784,8 +771,6 @@ export class MenuPopup extends Menu {
             this.menuManager.closeMenu();
         }
     }
-
-    onClick = this.onClick.bind(this);
 
     isDirectedToSubMenu(e) {
         var currPos = {x: e.clientX, y: e.clientY};
@@ -848,6 +833,12 @@ export class MenuSearchBox {
     currValue = "";
     currPopupMenu;
     menuManager = null;
+    element: LayoutHTMLElement;
+    isChanged: boolean;
+    searchField: any;
+    suggestionPopup: any;
+    selectMenu: any;
+    secondarySelectMenu: any;
 
     open() {
         if (!this.element) {
@@ -1197,11 +1188,13 @@ export class MenuSearchBox {
     }
 }
 
-export class MenuToolBar implements ToolBar{
+export class MenuToolBar implements ToolBar {
     /**
      * MenuBar
      */
     menuBar;
+    element: LayoutHTMLElement;
+    box: any[];
 
     constructor() {//TODO:?
         MenuManager.getInstance();
@@ -1231,4 +1224,19 @@ export class MenuToolBar implements ToolBar{
         }
         return this.element
     }
+}
+
+class MenuItems {
+    map: MenuItems;
+    path: any;
+    id: any;
+    label: any;
+    position: any;
+    hotKey: any;
+    type: any;
+    checked: any;
+    disabled: any;
+    className: any;
+    exec: any;
+
 }
