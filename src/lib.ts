@@ -14,6 +14,14 @@ export namespace Utils {
         return null;
     };
 
+    export var findHostTarget = function(target) {
+        while (target) {
+            if (target.$host) return target;
+            target = target.parentElement;
+        }
+        return null;
+    };
+
     export var setBox = function (el: HTMLElement, x: number, y: number, w: number, h: number) {
         if (w) {
             w = Math.max(w, 0);

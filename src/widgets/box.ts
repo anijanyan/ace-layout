@@ -82,7 +82,7 @@ export class Box implements Widget {
         this.minSize = options.minSize || BOX_MIN_SIZE;
         this.minVerticalSize = options.minVerticalSize || this.minSize;
         this.minHorizontalSize = options.minHorizontalSize || this.minSize;
-        this.classNames = options.classNames || "";
+        this.classNames = options.classNames ?? "";
     }
 
     toJSON() {
@@ -99,7 +99,7 @@ export class Box implements Widget {
     }
 
     onMouseDown(e) {
-        var button = e.button;
+            var button = e.button;
         if (button !== 0)
             return;
 

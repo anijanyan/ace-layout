@@ -1,26 +1,31 @@
 import {Utils} from "../lib";
 
 import dom = require("ace-code/src/lib/dom");
+import {DropdownConst} from "../constants/constants";
+import {DropdownElement, DropdownOptions} from "./widget";
 
 dom.importCssString(require("text-loader!../styles/dropdown.css"), "dropdown.css");
 dom.importCssString(require("text-loader!../styles/menu.css"), "menu.css");
 
 export class Dropdown {
-    lbl
-    /**
-     *
-     * @param {Object} options
-     * @param {Boolean|undefined} options.disabled
-     * @param {String|undefined} options.value
-     * @param {String|undefined} options.className
-     */
-    constructor(options) {
+    lbl: any;
+    disabled: boolean;
+    items: any;
+    value?: string;
+    className?: string;
+    width: number;
+    options: any;
+    element: any;
+    popup: Popup;
+    isPopupOpen: boolean;
+
+    constructor(options: DropdownOptions) {
         let {disabled, items, value, className, width, ...other} = options;
         this.disabled = disabled;
         this.items = items;
         this.value = value ?? items[0].value;
         this.className = className || "black_dropdown";
-        this.width = width ?? 200/*TODO*/
+        this.width = width ?? DropdownConst.DEFAULT_WIDTH;
         this.options = other;
     }
 
@@ -31,7 +36,7 @@ export class Dropdown {
             onmousedown: (e) => {
                 e.preventDefault();
                 this.element.className = this.className + " " + this.className + "Down";
-                this.togglePopup()
+                this.togglePopup();
             },
             onmouseup: (e) => {
                 this.element.className = this.className;
@@ -64,21 +69,19 @@ export class Dropdown {
         return this.element;
     }
 
-    onMouseDown(e) {
+    onMouseDown = (e) => {
         e.preventDefault()
-        let node = lib.findNode(e.target, this.className)
+        let node = Utils.findNode(e.target, this.className)
         if (node && node == this.element) return;
-        node = lib.findNode(e.target, this.popup.element.className)
+        node = Utils.findNode(e.target, this.popup.element.className)
         if (node && node == this.popup.element) return;
 
         this.closePopup()
     }
-    onMouseDown = this.onMouseDown.bind(this)
 
-    onMouseWheel(e) {
+    onMouseWheel = (e) => {
         this.closePopup()
     }
-    onMouseWheel = this.onMouseWheel.bind(this)
 
     togglePopup() {
         if (this.isPopupOpen) {
@@ -90,7 +93,7 @@ export class Dropdown {
 
     openPopup() {
         if (this.isPopupOpen) return;
-        this.popup = new Popup()
+        this.popup = new Popup();
         // this.popup.direction = direction;
         this.popup.items = this.items;
         this.popup.selectedItem = this.value;
@@ -107,7 +110,7 @@ export class Dropdown {
 
     closePopup() {
         if (!this.isPopupOpen) return;
-        this.popup.close()
+        this.popup.close();
         this.isPopupOpen = false;
         window.removeEventListener("mousedown", this.onMouseDown);
         window.removeEventListener("wheel", this.onMouseWheel);
@@ -119,18 +122,18 @@ export class Dropdown {
 
     setValue(value) {
         if (this.value !== value) {
-            this.value = value
-            this.updateLabel()
+            this.value = value;
+            this.updateLabel();
         }
     }
 
     updateLabel() {
         let items = this.items
-        for (var i = 0; i < items.length; i++) {
-            var x = items[i];
-            var itemValue = x.value;
+        for (let i = 0; i < items.length; i++) {
+            let x = items[i];
+            let itemValue = x.value;
             if (this.value === itemValue) {
-                this.lbl.innerHTML = x.caption
+                this.lbl.innerHTML = x.caption;
                 return;
             }
         }
@@ -143,11 +146,16 @@ export class Dropdown {
 
 
 class Popup {
-    items
-    selectedItem
-    parent
-    selectCallback
-    activeItem
+    items: DropdownElement[];
+    selectedItem: string;
+    parent: Dropdown;
+    selectCallback: (host) => void;
+    activeItem;
+    element: any;
+    isSubMenu: any;
+    position: any;
+    direction: string;
+    selectedMenu: any;
 
     open() {
         this.build();
@@ -159,14 +167,14 @@ class Popup {
             return;
         }
 
-        var result = {};
+        let result = [];
 
         if (this.items) {
-            var items = Object.values(this.items).sort(function(item1, item2) {
+            let items = Object.values(this.items).sort(function(item1, item2) {
                 return item1.position - item2.position;
             });
-            var afterDivider = true;
-            var result = items
+            let afterDivider = true;
+            result = items
                 .map((item) => {
                     if (item.caption[0] === "~") {
                         if (afterDivider) return;
@@ -180,7 +188,7 @@ class Popup {
                         ];
                     }
                     afterDivider = false;
-                    var classList = ["menu_item"];
+                    let classList = ["menu_item"];
                     if (item.checked) classList.push(item.type === "check" ? "checked" : "selected");
                     if (item.map) classList.push("submenu");
                     if (item.disabled) classList.push("disabled");
@@ -213,8 +221,8 @@ class Popup {
                     class: "menu",
                     style: "display:block",
                     $host: this.parent,
-                    onmousemove: this.onMouseMove,
-                    onclick: this.onClick
+                    onmousemove: this.onMouseMove.bind(this),
+                    onclick: this.onClick.bind(this)
                 },
                 result,
             ],
@@ -230,11 +238,11 @@ class Popup {
             this.element.style.maxHeight = window.innerHeight + "px";
         }
 
-        var elRect = this.element.getBoundingClientRect();
+        let elRect = this.element.getBoundingClientRect();
 
-        var edge = Utils.getElementEdges(this.element);
+        let edge = Utils.getElementEdges(this.element);
 
-        var parentRect, top, left;
+        let parentRect, top, left;
 
         if (this.parent && this.parent.element) {
             parentRect = this.parent.element.getBoundingClientRect();
@@ -253,24 +261,22 @@ class Popup {
             left = this.position.x
         }
 
-
-
-        var targetH = Math.min(elRect.height, window.innerHeight);
-        var availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
+        let targetH = Math.min(elRect.height, window.innerHeight);
+        let availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
 
         if (availableH < targetH && (!parentRect || this.isSubMenu)) {
-            var tmpTop = parentRect ? window.innerHeight : top;
+            let tmpTop = parentRect ? window.innerHeight : top;
             top = tmpTop - targetH - edge.top;
-            top = Math.max(top, this.menuManager.menuBar.bottom);
+            // top = Math.max(top, this.menuManager.menuBar.bottom);//TODO menuManager
             availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
         }
         this.element.style.maxHeight = (availableH - 10) + "px";
         elRect = this.element.getBoundingClientRect();
 
-        var availableW = window.innerWidth - left - edge.left - edge.right - 2;
+        let availableW = window.innerWidth - left - edge.left - edge.right - 2;
         if (availableW < elRect.width) {
             if (parentRect) {
-                var tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
+                let tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
                 if (tmpLeft > availableW) {
                     this.direction = "left";
                     left = tmpLeft - elRect.width + edge.left;
@@ -304,10 +310,10 @@ class Popup {
         if (!this.selectedMenu) {
             return;
         }
-        var menu = this.element;
-        var item = this.selectedMenu.buttonElement;
-        var menuRect = menu.getBoundingClientRect();
-        var itemRect = item.getBoundingClientRect();
+        let menu = this.element;
+        let item = this.selectedMenu.buttonElement;
+        let menuRect = menu.getBoundingClientRect();
+        let itemRect = item.getBoundingClientRect();
 
         if (itemRect.top < menuRect.top) {
             item.scrollIntoView(true);
@@ -316,17 +322,13 @@ class Popup {
         }
     }
 
-    moveOnTarget(target) {
-        super.moveOnTarget(target);
-    }
-
     //handle events
     onMouseMove(e) {
         if (e.target === this.element) {
             return;
         }
 
-        var target = lib.findHostTarget(e.target);
+        let target = Utils.findHostTarget(e.target);
         if (target === this.element) {
             return;
         }
@@ -341,18 +343,16 @@ class Popup {
         this.activeItem = target
         this.activeItem.classList.add("hover")
     }
-    onMouseMove = this.onMouseMove.bind(this);
 
     onClick(e) {
         if (e.target === this.element)
             return;
 
-        var target = lib.findHostTarget(e.target);
+        let target = Utils.findHostTarget(e.target);
         if (target === this.element)
             return;
 
-        var host = target.$host;
+        let host = target.$host;
         this.selectCallback && this.selectCallback(host)
     }
-    onClick = this.onClick.bind(this);
 }

@@ -51,14 +51,15 @@ interface BoxOptions {
     ratio?: number;
     isMain?: boolean;
     vertical?: boolean;
-    splitter?: boolean
-    color?: string
-    boxes?: any
-    minSize?: number
-    minVerticalSize?: any
-    minHorizontalSize?: any
-    size?: number,
-    sizeUnit?: SizeUnit
+    splitter?: boolean;
+    color?: string;
+    boxes?: any;
+    minSize?: number;
+    minVerticalSize?: any;
+    minHorizontalSize?: any;
+    size?: number;
+    sizeUnit?: SizeUnit;
+    classNames?: string;
     0?: Box;
     1?: Box;
 }
@@ -109,4 +110,29 @@ export interface SwitcherOptions {
 
 export interface ToolBar {
     size: number;
+}
+
+interface ButtonOptions {
+    disabled?: boolean;
+    value?: string;
+    className?: string;
+}
+
+interface DropdownOptions {
+    disabled?: boolean;
+    items: any;
+    value?: string;
+    className?: string;
+    width: number;
+}
+
+interface DropdownElement {
+    hotKey: any | string;
+    value: string;
+    disabled: any;
+    map: any;
+    type: string;
+    checked: any;
+    caption: any;
+    position: number;
 }

@@ -1,4 +1,5 @@
 import dom = require("ace-code/src/lib/dom");
+import {ButtonOptions} from "./widget";
 
 dom.importCssString(require("text-loader!../styles/button.css"), "button.css");
 
@@ -7,14 +8,13 @@ dom.importCssString(require("text-loader!../styles/button.css"), "button.css");
  * @implements {Widget}
  */
 export class Button {
-    /**
-     *
-     * @param {Object} options
-     * @param {Boolean|undefined} options.disabled
-     * @param {String|undefined} options.value
-     * @param {String|undefined} options.className
-     */
-    constructor(options) {
+    disabled?: boolean;
+    value?: string;
+    className: string;
+    options: any;
+    element: any;
+
+    constructor(options: ButtonOptions) {
         let {disabled, value, className, ...other} = options;
         this.disabled = disabled;
         this.value = value;
