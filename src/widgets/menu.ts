@@ -74,8 +74,8 @@ export class MenuManager {
         if (typeof path == "string") path = path.split("/");
         var item = this.menus;
         path.forEach(function (part) {
-            if (!item.map) item.map = new MenuItems();
-            if (!item.map[part]) item.map[part] = {};
+            item.map ??= {};
+            item.map[part] ??= new MenuItems();
             item = item.map[part];
         });
         item.path = path.join("/");
@@ -472,6 +472,10 @@ export class Menu {
             this.menuPopup.openMenuByPath(path);
         }
     }
+
+    activateMenu() {
+        //TODO implementation
+    }
 }
 
 export class MenuBar extends Menu {
@@ -569,15 +573,15 @@ export class MenuPopup extends Menu {
             return;
         }
 
-        var result = {};
+        var result = [];
         if (this.menu.map) {
             //TODO: ?
-            var items = Object.values(this.menu.map).sort(function (item1, item2) {
+            var items = Object.values(this.menu.map).sort(function (item1: MenuItems, item2: MenuItems) {
                 return item1.position - item2.position;
             });
             var afterDivider = true;
-            var result = items
-                .map((item) => {
+            result = items
+                .map((item: MenuItems) => {
                     if (item.label[0] === "~") {
                         if (afterDivider) return;
                         afterDivider = true;
@@ -1227,7 +1231,7 @@ export class MenuToolBar implements ToolBar {
 }
 
 class MenuItems {
-    map: MenuItems;
+    map: { [part: string]: MenuItems };
     path: any;
     id: any;
     label: any;

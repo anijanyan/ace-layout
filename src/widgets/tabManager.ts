@@ -13,7 +13,7 @@ import {Editor} from "ace-code/src/editor";
 import {VirtualRenderer as Renderer} from "ace-code/src/virtual_renderer";
 import theme = require("ace-code/src/theme/textmate");
 import modeList = require("ace-code/src/ext/modelist");
-import {TabList, TabManagerOptions} from "./widget";
+import {TabList, TabManagerOptions, TabOptions} from "./widget";
 import {Tab} from "./tab";
 import {MenuManager} from "./menu";
 
@@ -109,7 +109,6 @@ export class TabManager {
     setBoxData(box: Box | Pane, boxData) {
         if (!boxData) return;
 
-        var boxType = boxData.type;
         if (boxData.fixedSize)
             box.fixedSize = boxData.fixedSize;
 
@@ -118,8 +117,8 @@ export class TabManager {
                 box.tabBar.scrollLeft = boxData.tabBar.scrollLeft;
                 if (boxData.tabBar.tabList) {
                     box.tabBar.freeze = true;
-                    boxData.tabBar.tabList.forEach((tab: Tab) => {
-                        tab = box.tabBar.addTab(tab)
+                    boxData.tabBar.tabList.forEach((tabData: TabOptions) => {
+                        let tab = box.tabBar.addTab(new Tab(tabData))
                         this.tabs[tab.path] = tab;
                         if (tab.preview)
                             this.previewTab = tab;
