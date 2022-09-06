@@ -1,12 +1,7 @@
 import {Tab} from "../widgets/tab";
 import {TabManager} from "../widgets/tabManager";
 
-/**
- *
- * @param {Tab|TabManager} element
- * @returns {{tabs: Tab[], activeTab: Tab}}}
- */
-function getCurrentPaneTabs(element: Tab|TabManager): {tabs: Tab[], activeTab: Tab} {
+function getCurrentPaneTabs(element: Tab | TabManager): { tabs: Tab[], activeTab: Tab } {
     if (element instanceof Tab) {
         return {
             tabs: [...element.parent.tabList],
@@ -20,12 +15,7 @@ function getCurrentPaneTabs(element: Tab|TabManager): {tabs: Tab[], activeTab: T
     }
 }
 
-/**
- *
- * @param {Tab|TabManager} el
- * @param {number} tabNum
- */
-function goToTab(el, tabNum) {
+function goToTab(el: Tab | TabManager, tabNum: number) {
     var currentPaneTabs = getCurrentPaneTabs(el);
     var tabs = currentPaneTabs.tabs;
     var activeTab = currentPaneTabs.activeTab;

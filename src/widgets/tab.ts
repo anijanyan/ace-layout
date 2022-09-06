@@ -91,7 +91,7 @@ export class Tab implements Widget {
                 title: this.path
             },
             ["span", {class: "tabIcon"}, this.tabIcon],
-            ["span", {class: "title", ref: "$title"}, this.title],
+            ["span", {class: "tabTitle", ref: "$title"}, this.title],
             ["span", {class: "tabCloseButton"}],
         ], null, this);
 
@@ -734,7 +734,7 @@ export class Panel extends Tab {
         this.element = dom.buildDom(["div", {
             class: "panelButton" + (this.active ? " active" : ""),
         }, ["span", {
-            class: "title"
+            class: "panelTitle"
         }, this.title]]);
 
         this.element.$host = this;
