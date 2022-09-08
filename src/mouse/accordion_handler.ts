@@ -1,4 +1,4 @@
-import {Box} from "../widgets/box";
+import {Box} from "../widgets/boxes/box";
 import {Utils} from "../lib";
 
 var event = require("ace-code/src/lib/event");

@@ -1,5 +1,5 @@
 import dom = require("ace-code/src/lib/dom");
-import {LayoutHTMLElement} from "./widget";
+import {LayoutHTMLElement} from "../widget";
 
 export class SettingsSearchBox {
     hideFiltered = false;

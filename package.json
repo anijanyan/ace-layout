@@ -8,7 +8,6 @@
   "dependencies": {
     "ace-code": "latest",
     "copy-webpack-plugin": "latest",
-    "file-loader": "latest",
     "ts-loader": "latest",
     "typescript": "latest",
     "webpack": "latest",

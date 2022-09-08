@@ -1,7 +1,7 @@
-import {Box} from "./box";
-import {Accordion} from "./accordion";
-import {Panel, PanelBar} from "./tab";
-import {LocationList, PanelManagerOptions, PanelOptions} from "./widget";
+import {Box} from "../boxes/box";
+import {Accordion} from "../boxes/accordion";
+import {LocationList, PanelManagerOptions, PanelOptions} from "../widget";
+import {Panel, PanelBar} from "./panel";
 
 export class PanelManager {
     private static _instance: PanelManager;

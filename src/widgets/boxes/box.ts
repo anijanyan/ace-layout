@@ -1,20 +1,16 @@
-import {Utils} from "../lib";
-import {TabBar} from "./tab";
-import {BoxOptions, Widget} from "./widget";
-import {SizeUnit} from "../models/params";
+import {Utils} from "../../lib";
+import {BoxOptions, Widget} from "../widget";
+import {SizeUnit} from "../../models/params";
 
 import dom = require("ace-code/src/lib/dom");
 import event = require("ace-code/src/lib/event");
 import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
+import type {Pane} from "./pane";
 
 const SPLITTER_SIZE = 1;
 const BOX_MIN_SIZE = 40;
 
-/**
- * @param {Box|undefined} 0
- * @param {Box|undefined} 1
- */
 export class Box implements Widget {
     fixedSize: number;
     editor;
@@ -327,18 +323,13 @@ export class Box implements Widget {
 
     /**
      * Finds the most top-right Pane
-     * @returns {Box|null|*}
      */
-    getTopRightPane() {
-        if (this.constructor === Pane) {
-            return this;
-        } else {
-            var childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
-            if (!childBox)
-                return null;
+    getTopRightPane(): Pane {
+        var childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
+        if (!childBox)
+            return null;
 
-            return childBox.getTopRightPane();
-        }
+        return childBox.getTopRightPane();
     }
 
     setBox(x: number, y: number, w: number, h: number) {
@@ -643,124 +634,3 @@ export class Box implements Widget {
 }
 
 oop.implement(Box.prototype, EventEmitter);
-
-/**
- *
- * @type {Pane}
- * @implements {Widget}
- */
-export class Pane extends Box {
-    tabBar: TabBar;
-    private tabEditorBoxElement: any;
-    isButtonHost: any;
-
-    /**
-     *
-     * @param {Object} options
-     * @param {Tab[]} options.tabList
-     * @param {Object|undefined} options.toolBars
-     */
-    constructor(options) {
-        var tabBar = new TabBar({
-            tabList: options.tabList
-        });
-        options.toolBars = options.toolBars || {};
-        options.toolBars.top = tabBar;
-        super(options);
-        tabBar.parent = this;
-        this.tabBar = tabBar;
-    }
-
-    toJSON() {
-        return {
-            type: "pane",
-            tabBar: this.tabBar.toJSON()
-        };
-    }
-
-    render() {
-        super.render();
-        this.element.classList.add("tabPanel");
-
-        this.tabEditorBoxElement = dom.buildDom(["div", {
-            class: `tab-editor`
-        }]);
-        this.element.appendChild(this.tabEditorBoxElement);
-
-        return this.element;
-    }
-
-    acceptsTab(tab) {
-        // TODO accept editor tabs, and not sidebar buttons
-        return true;
-    }
-
-    split(far, vertical?: boolean) {
-        var newPane = new Pane({});
-        var root = this.parent;
-        var wrapper = new Box({
-            [far ? 1 : 0]: this,
-            [far ? 0 : 1]: newPane,
-            vertical: vertical,
-            ratio: 0.5
-        });
-
-        root.addChildBox(this, wrapper);
-
-        if (this.isButtonHost) {
-            wrapper.buttons = this.buttons;
-            this.removeButtons();
-            wrapper.addButtons();
-        }
-        return newPane;
-    }
-
-    addButtons(buttons) {
-        this.buttons = buttons;
-        this.tabBar.addButtons(this.buttons);
-        this.isButtonHost = true;
-    }
-
-    removeButtons() {
-        this.buttons = null;
-        this.tabBar.removeButtons();
-        this.isButtonHost = false;
-    }
-
-    remove() {
-        var wrapper = this.parent;
-        var root = wrapper.parent;
-        var paneIndex = wrapper[0] == this ? 1 : 0;
-        var pane = wrapper[paneIndex] || null;
-        var rootIndex = root[0] == wrapper ? 0 : 1;
-
-        if (pane) {
-            pane.parent = root;
-            root[rootIndex] = pane;
-            root.element.appendChild(pane.element);
-
-            if (root.fixedChild && root.fixedChild == wrapper) {
-                pane.fixedSize = wrapper.fixedSize;
-                pane.size = wrapper.size;
-                root.fixedChild = pane;
-            }
-        } else {
-            if (wrapper.isMain) {
-                root = wrapper;
-                wrapper = null;
-            }
-            root.ratio = 1;
-        }
-
-        wrapper && wrapper.element.remove();
-
-        root.recalculateAllMinSizes();
-        root.resize();
-
-        if (this.isButtonHost) {
-            root.buttons = this.buttons;
-            root.addButtons();
-        }
-
-    }
-}

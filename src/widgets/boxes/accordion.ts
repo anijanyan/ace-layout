@@ -1,11 +1,11 @@
-import {AccordionHandler} from "../mouse/accordion_handler";
+import {AccordionHandler} from "../../mouse/accordion_handler";
 import {Box} from "./box";
-import {Utils} from "../lib";
+import {Utils} from "../../lib";
 
 import dom = require("ace-code/src/lib/dom");
-import {AccordionOptions, Widget} from "./widget";
+import {AccordionOptions, Widget} from "../widget";
 
-dom.importCssString(require("text-loader!../styles/accordion.css"), "accordion.css");
+dom.importCssString(require("text-loader!../../../styles/accordion.css"), "accordion.css");
 
 const BOX_MIN_SIZE = 80;
 

@@ -1,5 +1,5 @@
 import {Utils} from "../lib";
-import {Tab, TabBar} from "../widgets/tab";
+import {Tab, TabBar} from "../widgets/tabs/tab";
 
 var event = require("ace-code/src/lib/event");
 var dom = require("ace-code/src/lib/dom");

@@ -1,5 +1,5 @@
-import {tabCommands} from "../models/commands";
-import {Box, Pane} from "./box";
+import {tabCommands} from "../../models/commands";
+import {Box} from "../boxes/box";
 import * as ace from "ace-code";
 
 import oop = require("ace-code/src/lib/oop");
@@ -13,9 +13,10 @@ import {Editor} from "ace-code/src/editor";
 import {VirtualRenderer as Renderer} from "ace-code/src/virtual_renderer";
 import theme = require("ace-code/src/theme/textmate");
 import modeList = require("ace-code/src/ext/modelist");
-import {TabList, TabManagerOptions, TabOptions} from "./widget";
+import {TabList, TabManagerOptions, TabOptions} from "../widget";
 import {Tab} from "./tab";
-import {MenuManager} from "./menu";
+import {MenuManager} from "../menu/menu";
+import {Pane} from "../boxes/pane";
 
 var newTabCounter = 1;
 
@@ -100,7 +101,7 @@ export class TabManager {
 
         var boxType = boxData[index].type;
         if (!box[index])
-            box.addChildBox(index, boxType === "pane" ? new Pane({tabList: {}}) : new Box({vertical: boxType === "vbox"}))
+            box.addChildBox(index, boxType === "pane" ? new Pane() : new Box({vertical: boxType === "vbox"}))
 
         this.setBoxData(box[index], boxData[index]);
 
@@ -340,6 +341,7 @@ export class TabManager {
         }));
     };
 
+    //TODO: move to separate class
     loadFile(tab: Tab) {
         if (!tab.editor) return;
 
@@ -349,7 +351,7 @@ export class TabManager {
             this.setSession(tab, "")
         } else if (tab.path) {
             tab.editor.container.style.display = "none";
-            var fileContent = require("text-loader!../../node_modules/ace-code/src/" + tab.path)
+            var fileContent = require("text-loader!../../../node_modules/ace-code/src/" + tab.path)
             this.setSession(tab, fileContent);
         } else {
             tab.editor.container.style.display = "none";

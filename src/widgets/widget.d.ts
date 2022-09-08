@@ -1,8 +1,8 @@
-import {Box} from "./box";
-import {SizeUnit} from "../models/params";
-import {Tab} from "./tab";
-import {Accordion} from "./accordion";
-import {Ace} from "ace-code";
+import type {Box} from "./boxes/box";
+import type {SizeUnit} from "../models/params";
+import type {Tab} from "./tabs/tab";
+import type {Accordion} from "./boxes/accordion";
+import type {Ace} from "ace-code";
 
 export interface LayoutEditSession extends Ace.EditSession {
     tab?: Tab;
@@ -49,7 +49,7 @@ interface BoxOptions {
     fixedSize?: number;
     hidden?: boolean;
     buttonList?: any[];
-    toolBars?: {};
+    toolBars?: { [place: string]: ToolBar };
     ratio?: number;
     isMain?: boolean;
     vertical?: boolean;
@@ -64,6 +64,11 @@ interface BoxOptions {
     classNames?: string;
     0?: Box;
     1?: Box;
+}
+
+interface PaneOptions extends BoxOptions {
+    tabList?: Tab[];
+
 }
 
 interface TabManagerOptions {

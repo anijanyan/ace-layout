@@ -1,13 +1,13 @@
 "use strict";
 
-import {Box} from "./widgets/box";
-import {MenuManager, MenuToolBar} from "./widgets/menu";
-import {ListBox} from "./widgets/listBox";
-import {TabManager} from "./widgets/tabManager";
-import {PanelManager} from "./widgets/panelManager";
+import {Box} from "./widgets/boxes/box";
+import {MenuManager, MenuToolBar} from "./widgets/menu/menu";
+import {ListBox} from "./widgets/boxes/listBox";
+import {TabManager} from "./widgets/tabs/tabManager";
+import {PanelManager} from "./widgets/tabs/panelManager";
 
 var dom = require("ace-code/src/lib/dom");
-dom.importCssString(require("text-loader!./styles/layout.css"), "layout.css");
+dom.importCssString(require("text-loader!../styles/layout.css"), "layout.css");
 
 var mainBox
 var listBox
@@ -40,6 +40,7 @@ var base = new Box({
     }),
 });
 
+//@ts-ignore
 window.fileTree = listBox;
 
 MenuManager.getInstance().addByPath("AWS Cloud9", {

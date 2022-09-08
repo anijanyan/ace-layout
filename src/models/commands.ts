@@ -1,5 +1,5 @@
-import {Tab} from "../widgets/tab";
-import {TabManager} from "../widgets/tabManager";
+import {Tab} from "../widgets/tabs/tab";
+import {TabManager} from "../widgets/tabs/tabManager";
 
 function getCurrentPaneTabs(element: Tab | TabManager): { tabs: Tab[], activeTab: Tab } {
     if (element instanceof Tab) {
@@ -222,6 +222,7 @@ export var tabCommands = [
             } else {
                 path = el.activeTab.path;
             }
+            //@ts-ignore
             var fileTree = window.fileTree;
             fileTree.popup.data.some((item, i) => {
                 if (item.path === path) {

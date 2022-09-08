@@ -1,13 +1,9 @@
 import dom = require("ace-code/src/lib/dom");
-import {ButtonOptions} from "./widget";
+import {ButtonOptions, Widget} from "../widget";
 
-dom.importCssString(require("text-loader!../styles/button.css"), "button.css");
+dom.importCssString(require("text-loader!../../../styles/button.css"), "button.css");
 
-/**
- * @type {Button}
- * @implements {Widget}
- */
-export class Button {
+export class Button implements Widget {
     disabled?: boolean;
     value?: string;
     className: string;
@@ -20,6 +16,9 @@ export class Button {
         this.value = value;
         this.className = className || "blackbutton";
         this.options = other;
+    }
+
+    remove() {
     }
 
     render() {

@@ -1,5 +1,5 @@
 import {Box} from "./box";
-import {Utils} from "../lib";
+import {Utils} from "../../lib";
 
 import {AcePopup} from 'ace-code/src/autocomplete/popup';
 

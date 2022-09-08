@@ -1,7 +1,7 @@
 import dom = require("ace-code/src/lib/dom");
-import {LayoutHTMLElement, SwitcherOptions, Widget} from "./widget";
+import {LayoutHTMLElement, SwitcherOptions, Widget} from "../widget";
 
-dom.importCssString(require("text-loader!../styles/switcher.css"), "switcher.css");
+dom.importCssString(require("text-loader!../../../styles/switcher.css"), "switcher.css");
 
 export class Switcher implements Widget {
     className?: string;

@@ -1,13 +1,13 @@
-import {Utils} from "../lib";
+import {Utils} from "../../lib";
 
 import dom = require("ace-code/src/lib/dom");
 import {HashHandler} from "ace-code/src/keyboard/hash_handler";
 
 import event = require("ace-code/src/lib/event");
 import keyUtil = require("ace-code/src/lib/keys");
-import {LayoutHTMLElement, MenuOptions, Position, ToolBar} from "./widget";
+import {LayoutHTMLElement, MenuOptions, Position, ToolBar} from "../widget";
 
-dom.importCssString(require("text-loader!../styles/menu.css"), "menu.css");
+dom.importCssString(require("text-loader!../../../styles/menu.css"), "menu.css");
 
 function getPrevSibling(node, conditionFn, parentElement?: HTMLElement) {
     parentElement = node ? node.parentElement : parentElement;
