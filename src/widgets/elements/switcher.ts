@@ -1,5 +1,5 @@
-import dom = require("ace-code/src/lib/dom");
 import {LayoutHTMLElement, SwitcherOptions, Widget} from "../widget";
+import {dom} from "../../utils/dom";
 
 dom.importCssString(require("text-loader!../../../styles/switcher.css"), "switcher.css");
 

@@ -1,11 +1,11 @@
 import {Utils} from "../../lib";
 
-import dom = require("ace-code/src/lib/dom");
 import {HashHandler} from "ace-code/src/keyboard/hash_handler";
 
 import event = require("ace-code/src/lib/event");
 import keyUtil = require("ace-code/src/lib/keys");
 import {LayoutHTMLElement, MenuOptions, Position, ToolBar} from "../widget";
+import {dom} from "../../utils/dom";
 
 dom.importCssString(require("text-loader!../../../styles/menu.css"), "menu.css");
 

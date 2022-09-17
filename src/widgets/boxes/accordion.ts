@@ -2,8 +2,8 @@ import {AccordionHandler} from "../../mouse/accordion_handler";
 import {Box} from "./box";
 import {Utils} from "../../lib";
 
-import dom = require("ace-code/src/lib/dom");
 import {AccordionOptions, Widget} from "../widget";
+import {dom} from "../../utils/dom";
 
 dom.importCssString(require("text-loader!../../../styles/accordion.css"), "accordion.css");
 

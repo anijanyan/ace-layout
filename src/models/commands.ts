@@ -216,21 +216,20 @@ export var tabCommands = [
         desc: "reveal current tab in the file tree",
         position: 340,
         exec: (el) => {
-            var path;
+            //TODO: 
+            /*var path;
             if (el instanceof Tab) {
                 path = el.path;
             } else {
                 path = el.activeTab.path;
-            }
-            //@ts-ignore
-            var fileTree = window.fileTree;
-            fileTree.popup.data.some((item, i) => {
+            }*/
+            /*fileTree.popup.data.some((item, i) => {
                 if (item.path === path) {
                     var scrollTo = fileTree.popup.session.documentToScreenRow(i, 0);
                     fileTree.popup.session.setScrollTop(scrollTo)
                     fileTree.popup.setRow(i);
                 }
-            });
+            });*/
         }
     }, {
         name: "Go to next tab",

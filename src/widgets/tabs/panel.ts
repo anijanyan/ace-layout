@@ -5,8 +5,8 @@ import {PanelManager} from "./panelManager";
 import {Utils} from "../../lib";
 import {TabbarHandler} from "../../mouse/tabbar_handler";
 import {Tab, TabBar} from "./tab";
+import {dom} from "../../utils/dom";
 
-import dom = require("ace-code/src/lib/dom");
 
 dom.importCssString(require("text-loader!../../../styles/panel.css"), "panel.css");
 

@@ -3,6 +3,7 @@ import type {SizeUnit} from "../models/params";
 import type {Tab} from "./tabs/tab";
 import type {Accordion} from "./boxes/accordion";
 import type {Ace} from "ace-code";
+import {FileSystemWeb} from "../file-system/file-system-web";
 
 export interface LayoutEditSession extends Ace.EditSession {
     tab?: Tab;
@@ -74,6 +75,7 @@ interface PaneOptions extends BoxOptions {
 interface TabManagerOptions {
     console?: Box;
     main: Box;
+    fileSystem: FileSystemWeb;
 }
 
 export interface TabOptions {
