@@ -6,44 +6,53 @@ import {Tab} from "../tabs/tab";
 import * as ace from "ace-code";
 import modeList = require("ace-code/src/ext/modelist");
 import {Mode as JSMode} from "ace-code/src/mode/javascript";
+import {LayoutEditor} from "../widget";
 
-export namespace AceEditor {
+export class AceEditor implements LayoutEditor {
+    private editor: Ace.Editor;
+    container: HTMLElement;
+    tab?: Tab;
 
-    export function create(): Ace.Editor {
-        this.editor = new Editor(new Renderer(null, theme));
-        this.editor.container.style.position = "absolute";
-        return this.editor;
+    resize() {
+        this.editor.resize();
     }
 
-    export function setSession(tab: Tab, value?: string) {
-        var editor = tab.editor
-        if (!editor) return;
+    focus() {
+        this.editor.focus();
+    }
 
-        if (editor.session && editor.session.tab) {
-            editor.session.tab.saveMetadata();
+    constructor() {
+        this.editor = new Editor(new Renderer(null, theme));
+        this.container = this.editor.container;
+        this.container.style.position = "absolute";
+    }
+
+    setSession(tab: Tab, value?: string) {
+        if (this.tab) {
+            this.tab.saveMetadata();
         }
 
         if (typeof value == "string") {
             tab.session = ace.createEditSession(value || "", null);
 
-            tab.session.tab = tab;
+            this.tab = tab;
             // tab.editor.on("input", updateSaveButton)
             tab.loadMetadata();
         }
 
-        editor.setSession(tab.session);
+        this.editor.setSession(tab.session);
 
         if (tab.path !== undefined) {
             var mode = modeList.getModeForPath(tab.path).mode
 
             //TODO: set mode
             if (mode == "ace/mode/javascript") mode = new JSMode();
-            editor.session.setMode(mode);
+            this.editor.session.setMode(mode);
         }
 
-        editor.container.style.display = "";
+        this.editor.container.style.display = "";
 
-        editor.setOptions({
+        this.editor.setOptions({
             newLineMode: "unix",
             enableLiveAutocompletion: true,
             enableBasicAutocompletion: true,

@@ -15,7 +15,7 @@
     "events": "^3.3.0",
     "webpack": "latest",
     "webpack-dev-server": "latest",
-    "copy-webpack-plugin": "latest",
+    "copy-webpack-plugin": "9.1.0",
     "text-loader": "latest",
     "ts-loader": "latest",
     "typescript": "latest"

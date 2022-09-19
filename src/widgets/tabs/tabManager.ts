@@ -234,18 +234,16 @@ export class TabManager {
 
     //TODO: move to separate class
     loadFile(tab: Tab, fileContent?: string) {
-        if (!tab.editor) {
-            tab.parent.parent.initBoxTabEditor(tab);
-        }
+        let editor = tab.editor ?? tab.parent.parent.initEditor(tab.editorType);
         if (tab.session) {
-            AceEditor.setSession(tab, tab.session.getValue());
+            editor.setSession(tab, tab.session.getValue());
         } else if (!tab.path) {
-            AceEditor.setSession(tab, "");
+            editor.setSession(tab, "");
         } else if (tab.path) {
-            tab.editor.container.style.display = "none";
-            AceEditor.setSession(tab, fileContent ?? "");
+            editor.container.style.display = "none";
+            editor.setSession(tab, fileContent ?? "");
         } else {
-            tab.editor.container.style.display = "none";
+            editor.container.style.display = "none";
         }
     };
 

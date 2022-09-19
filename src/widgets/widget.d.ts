@@ -5,12 +5,12 @@ import type {Accordion} from "./boxes/accordion";
 import type {Ace} from "ace-code";
 import {FileSystemWeb} from "../file-system/file-system-web";
 
-export interface LayoutEditSession extends Ace.EditSession {
+export interface LayoutEditor {
+    container: HTMLElement;
+    setSession;
     tab?: Tab;
-}
-
-export interface LayoutEditor extends Ace.Editor {
-    session: LayoutEditSession;
+    resize;
+    focus;
 }
 
 /**

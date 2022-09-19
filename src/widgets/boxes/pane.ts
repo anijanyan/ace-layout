@@ -1,6 +1,6 @@
 import {Tab, TabBar} from "../tabs/tab";
 import {Box} from "./box";
-import {LayoutHTMLElement, PaneOptions} from "../widget";
+import {LayoutEditor, LayoutHTMLElement, PaneOptions} from "../widget";
 import {dom} from "../../utils/dom";
 import {AceEditor} from "../editors/aceEditor";
 
@@ -119,17 +119,21 @@ export class Pane extends Box {
     }
 
     //TODO: move
-    initBoxTabEditor(tab: Tab) {
-        tab.editorType = tab.editorType || "ace";
+    initEditor(editorType: string = "ace"): LayoutEditor {
         if (!this.editors) this.editors = {};
-        var editorType = tab.editorType;
+        var editorType = editorType;
         if (!this.editors[editorType]) {
-            this.editor = AceEditor.create();
+            switch (editorType) {
+                case "ace":
+                default:
+                    this.editor = new AceEditor();
+            }
             this.editors[editorType] = this.editor;
         } else {
             this.editor = this.editors[editorType];
         }
         this.editor.container.style.display = "";
         this.element.appendChild(this.editor.container);
+        return this.editor;
     }
 }

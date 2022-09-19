@@ -2,7 +2,6 @@ import {TabbarHandler} from "../../mouse/tabbar_handler";
 import {Utils} from "../../lib";
 import {
     LayoutEditor,
-    LayoutEditSession,
     LayoutHTMLElement,
     TabOptions,
     ToolBar,
@@ -11,6 +10,7 @@ import {
 import {TabManager} from "./tabManager";
 import {dom} from "../../utils/dom";
 import type {Pane} from "../boxes/pane";
+import {Ace} from "ace-code";
 
 
 dom.importCssString(require("text-loader!../../../styles/tab.css"), "tab.css");
@@ -25,7 +25,7 @@ function parseJson(name) {
 }
 
 export class Tab implements Widget {
-    session: LayoutEditSession;
+    session: Ace.EditSession;
     contextMenu = "tabs";
     active: boolean;
     tabIcon: string;
@@ -117,7 +117,7 @@ export class Tab implements Widget {
 
     get editor(): LayoutEditor {
         if (this.parent.activeTab == this)
-            return this.parent.parent.editor
+            return this.parent.parent.editor;
     }
 
     //TODO: move to separate class
@@ -146,7 +146,7 @@ export class Tab implements Widget {
     saveMetadata() {
         if (!this.path || !this.session) return;
 
-        var session = this.session
+        var session = this.session;
         var undoManager = this.session.getUndoManager();
         localStorage["@file@" + this.path] = JSON.stringify({
             selection: session.selection.toJSON(),

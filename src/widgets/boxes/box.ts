@@ -1,5 +1,5 @@
 import {Utils} from "../../lib";
-import {BoxOptions, Widget} from "../widget";
+import {BoxOptions, LayoutEditor, Widget} from "../widget";
 import {SizeUnit} from "../../models/params";
 
 import event = require("ace-code/src/lib/event");
@@ -14,7 +14,7 @@ const BOX_MIN_SIZE = 40;
 
 export class Box implements Widget {
     fixedSize: number;
-    editor: Ace.Editor;
+    editor: LayoutEditor;
     vertical: boolean;
     color: string;
     isMain: boolean;
