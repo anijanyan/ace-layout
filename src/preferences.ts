@@ -1,10 +1,10 @@
-import dom = require("ace-code/src/lib/dom");
 import {Box} from "./widgets/boxes/box";
 import {SettingsSearchBox} from "./widgets/elements/search";
 import {Switcher} from "./widgets/elements/switcher";
 import {Button} from "./widgets/elements/button";
 import {Dropdown} from "./widgets/elements/dropdown";
 import {PanelBar} from "./widgets/tabs/panel";
+import {dom} from "./utils/dom";
 
 dom.importCssString(require("text-loader!../styles/layout.css"), "layout.css");
 dom.importCssString(require("text-loader!../styles/preferences.css"), "preferences.css");

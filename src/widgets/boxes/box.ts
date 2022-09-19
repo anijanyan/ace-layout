@@ -1,19 +1,20 @@
 import {Utils} from "../../lib";
-import {BoxOptions, Widget} from "../widget";
+import {BoxOptions, LayoutEditor, Widget} from "../widget";
 import {SizeUnit} from "../../models/params";
 
-import dom = require("ace-code/src/lib/dom");
 import event = require("ace-code/src/lib/event");
 import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import type {Pane} from "./pane";
+import {dom} from "../../utils/dom";
+import {Ace} from "ace-code";
 
 const SPLITTER_SIZE = 1;
 const BOX_MIN_SIZE = 40;
 
 export class Box implements Widget {
     fixedSize: number;
-    editor;
+    editor: LayoutEditor;
     vertical: boolean;
     color: string;
     isMain: boolean;

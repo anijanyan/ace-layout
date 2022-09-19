@@ -1,12 +1,14 @@
-import {TabBar} from "../tabs/tab";
+import {Tab, TabBar} from "../tabs/tab";
 import {Box} from "./box";
-import dom = require("ace-code/src/lib/dom");
-import {LayoutHTMLElement, PaneOptions} from "../widget";
+import {LayoutEditor, LayoutHTMLElement, PaneOptions} from "../widget";
+import {dom} from "../../utils/dom";
+import {AceEditor} from "../editors/aceEditor";
 
 export class Pane extends Box {
     tabBar: TabBar;
     private tabEditorBoxElement: LayoutHTMLElement;
     isButtonHost: any;
+    editors: { [editorName: string]: any }
 
     constructor(options: PaneOptions = {}) {
         var tabBar = new TabBar({
@@ -114,5 +116,24 @@ export class Pane extends Box {
 
     getTopRightPane(): Pane {
         return this;
+    }
+
+    //TODO: move
+    initEditor(editorType: string = "ace"): LayoutEditor {
+        if (!this.editors) this.editors = {};
+        var editorType = editorType;
+        if (!this.editors[editorType]) {
+            switch (editorType) {
+                case "ace":
+                default:
+                    this.editor = new AceEditor();
+            }
+            this.editors[editorType] = this.editor;
+        } else {
+            this.editor = this.editors[editorType];
+        }
+        this.editor.container.style.display = "";
+        this.element.appendChild(this.editor.container);
+        return this.editor;
     }
 }

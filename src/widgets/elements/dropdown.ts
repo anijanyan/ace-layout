@@ -1,8 +1,8 @@
 import {Utils} from "../../lib";
 
-import dom = require("ace-code/src/lib/dom");
 import {DropdownConst} from "../../constants/constants";
 import {DropdownElement, DropdownOptions} from "../widget";
+import {dom} from "../../utils/dom";
 
 dom.importCssString(require("text-loader!../../../styles/dropdown.css"), "dropdown.css");
 dom.importCssString(require("text-loader!../../../styles/menu.css"), "menu.css");

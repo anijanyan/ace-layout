@@ -2,17 +2,17 @@
 
 import {Box} from "./widgets/boxes/box";
 import {MenuManager, MenuToolBar} from "./widgets/menu/menu";
-import {ListBox} from "./widgets/boxes/listBox";
 import {TabManager} from "./widgets/tabs/tabManager";
 import {PanelManager} from "./widgets/tabs/panelManager";
+import {Button} from "./widgets/elements/button";
+import {FileSystemWeb} from "./file-system/file-system-web";
+import {AceTreeWrapper} from "./widgets/trees/ace-tree";
+import {dom} from "./utils/dom";
 
-var dom = require("ace-code/src/lib/dom");
 dom.importCssString(require("text-loader!../styles/layout.css"), "layout.css");
 
 var mainBox
-var listBox
-
-
+var fileTree
 document.body.innerHTML = "";
 
 let menuToolBar;
@@ -25,8 +25,8 @@ var base = new Box({
         vertical: false,
         0: new Box({
             vertical: false,
-            0: listBox = new ListBox({
-                size: 200,
+            0: fileTree = new Box({
+                size: 200
             }),
             1: new Box({
                 isMain: true,
@@ -40,8 +40,23 @@ var base = new Box({
     }),
 });
 
-//@ts-ignore
-window.fileTree = listBox;
+window["fileTreeWrapper"] = fileTree;
+let fileSystem = new FileSystemWeb();
+
+function renderFileTree() {
+    let button = new Button({value: "Open Folder"});
+    let buttonWrapper = ["div", {}, button.render()];
+    var aceTree = new AceTreeWrapper();
+    var aceTreeWrapper = ["div", {style: "height: 100%"}, aceTree.element];
+    button.element.addEventListener("mousedown", async (e) => {
+        var nodes = await fileSystem.open();
+        aceTree.updateTreeData(nodes);
+        aceTree.element.addEventListener("item-click", (evt: CustomEvent) => {
+            fileSystem.openFile(evt.detail);
+        });
+    })
+    dom.buildDom(["div", {style: "height: 100%"}, buttonWrapper, aceTreeWrapper], fileTree.element);
+}
 
 MenuManager.getInstance().addByPath("AWS Cloud9", {
     className: "c9btn",
@@ -60,7 +75,14 @@ window.onresize = onResize;
 
 document.body.appendChild(base.element);
 var tabManager = TabManager.getInstance({
-    main: mainBox
+    main: mainBox,
+    fileSystem: fileSystem
+});
+tabManager.fileSystem.on("openFile", (treeNode, fileContent) => {
+    tabManager.open({
+        path: treeNode.path,
+        fileContent: fileContent
+    });
 });
 
 var panelManager = PanelManager.getInstance({
@@ -79,48 +101,7 @@ window.onbeforeunload = function () {
     localStorage.panels = JSON.stringify(panelManager.toJSON());
 };
 
-function open(data, preview) {
-    tabManager.open({
-        path: data.path, preview,
-    });
-}
-
 onResize();
-
-listBox.on("select", function (data) {
-    if (data.className) return;
-    open(data, true);
-});
-
-listBox.on("choose", function (data) {
-    if (data.className) return;
-    open(data, false);
-});
-
-
-function updateTree() {
-    var selected = listBox.popup.getData(listBox.popup.getRow());
-    var data = [{className: "header", name: "Modules"}];
-    var files = [];
-    //TODO: this is just example
-    var modules = ["anchor.js", "apply_delta.js"];
-    for (let name of modules) {
-        var path = name;
-        files.push({name: path, path: path, readOnly: true})
-    }
-    data = data.concat(files);
-    listBox.popup.setData(data);
-    listBox.popup.resize(true);
-    listBox.popup.session.setScrollTop(0)
-    if (selected) {
-        data.some(function (item, i) {
-            if (item.name == selected.name) {
-                listBox.popup.setRow(i);
-                return true
-            }
-        })
-    }
-}
 
 var tabState = {};
 var panelState = {};
@@ -136,4 +117,4 @@ tabManager.setState(tabState);
 panelManager.setState(panelState);
 
 mainBox.addButtons();
-updateTree()
+renderFileTree();

@@ -1,6 +1,5 @@
 import {tabCommands} from "../../models/commands";
 import {Box} from "../boxes/box";
-import * as ace from "ace-code";
 
 import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
@@ -9,25 +8,14 @@ import event = require("ace-code/src/lib/event");
 import useragent = require("ace-code/src/lib/useragent");
 import keyUtil = require("ace-code/src/lib/keys");
 
-import {Editor} from "ace-code/src/editor";
-import {VirtualRenderer as Renderer} from "ace-code/src/virtual_renderer";
-import theme = require("ace-code/src/theme/textmate");
-import modeList = require("ace-code/src/ext/modelist");
 import {TabList, TabManagerOptions, TabOptions} from "../widget";
 import {Tab} from "./tab";
 import {MenuManager} from "../menu/menu";
 import {Pane} from "../boxes/pane";
+import {FileSystemWeb} from "../../file-system/file-system-web";
+import {AceEditor} from "../editors/aceEditor";
 
 var newTabCounter = 1;
-
-function parseJson(name) {
-    try {
-        let data = localStorage[name];
-        return data && JSON.parse(data);
-    } catch (e) {
-        return null;
-    }
-}
 
 function saveJson(name, value) {
     localStorage[name] = JSON.stringify(value);
@@ -39,6 +27,7 @@ export class TabManager {
     tabs: TabList;
     previewTab: Tab;
     activePane: Pane;
+    fileSystem?: FileSystemWeb;
 
     static getInstance(options?: TabManagerOptions) {
         if (!TabManager._instance) {
@@ -51,6 +40,7 @@ export class TabManager {
     private constructor(options: TabManagerOptions) {
         this.containers = {console: options.console, main: options.main};
         this.tabs = {};
+        this.fileSystem = options.fileSystem;
         this.commandsInit();
     }
 
@@ -166,34 +156,6 @@ export class TabManager {
         return this.activePane.tabBar.activeTab;
     }
 
-    activateTab(tab: Tab) {
-        var pane = tab.parent.parent;
-        this.activePane = pane;
-
-        function initBoxTabEditor() {
-            tab.editorType = tab.editorType || "ace";
-            if (!pane.editors) pane.editors = {};
-            var editorType = tab.editorType;
-
-            if (!pane.editors[editorType]) {
-                pane.editor = new Editor(new Renderer(null, theme));
-                pane.editor.container.style.position = "absolute";
-                pane.editors[editorType] = pane.editor;
-                pane.editor.setSession(null)
-            } else {
-                pane.editor = pane.editors[editorType];
-            }
-            pane.editor.container.style.display = "";
-
-            pane.element.appendChild(pane.editor.container);
-        }
-
-        initBoxTabEditor();
-        TabManager.getInstance().loadFile(tab);
-
-        pane.resize();
-    }
-
     deactivateTab(tab: Tab) {
         var pane = tab.parent.parent;
         if (tab.parent.activeTab == tab && pane.editor) {
@@ -201,7 +163,7 @@ export class TabManager {
         }
     }
 
-    open(options: { path: string, preview?: boolean }): Tab {
+    open(options: { path: string, preview?: boolean, fileContent?: string }): Tab {
         var tab = this.tabs[options.path]
         if (!tab || !tab.parent) {
             var pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane
@@ -216,7 +178,7 @@ export class TabManager {
                 title: tabTitle,
                 path: options.path,
                 active: true,
-            }));
+            }), undefined, options.fileContent);
             if (options.preview)
                 this.previewTab = tab;
             tab.parent.scrollTabIntoView(tab)
@@ -230,7 +192,8 @@ export class TabManager {
             }
         }
         tab.parent.removeSelections()
-        tab.parent.activateTab(tab);
+        //TODO: duplicate of activateTab?
+        tab.parent.activateTab(tab, options.fileContent);
         return tab;
     }
 
@@ -242,22 +205,6 @@ export class TabManager {
 
     }
 
-    saveMetadata(tab: Tab) {
-        if (!tab.path || !tab.session) return;
-
-        var session = tab.session
-        var undoManager = tab.session.getUndoManager();
-        localStorage["@file@" + tab.path] = JSON.stringify({
-            selection: session.selection.toJSON(),
-            //@ts-ignore
-            undoManager: undoManager.toJSON(),
-            value: undoManager.isAtBookmark() ? undefined : session.getValue(),
-            scroll: [
-                session.getScrollLeft(),
-                session.getScrollTop()
-            ],
-        });
-    }
 
     /*updateSaveButton(e, editor) {
         var tab = editor.session.tab;
@@ -276,63 +223,7 @@ export class TabManager {
         }
     }*/
 
-    setSession(tab: Tab, value?: string) {
-        var editor = tab.editor
-        if (!editor) return;
 
-        if (editor.session && editor.session.tab) {
-            this.saveMetadata(editor.session.tab);
-        }
-
-        if (typeof value == "string") {
-            // @ts-ignore
-            tab.session = ace.createEditSession(value || "");
-
-            tab.session.tab = tab;
-            // tab.editor.on("input", updateSaveButton)
-            this.loadMetadata(tab)
-        }
-
-        editor.setSession(tab.session);
-
-        if (tab.path !== undefined) {
-            var mode = modeList.getModeForPath(tab.path).mode
-
-            //TODO: set mode
-            //editor.session.setMode(mode);
-        }
-
-        editor.container.style.display = "";
-
-        editor.setOptions({
-            newLineMode: "unix",
-            enableLiveAutocompletion: true,
-            enableBasicAutocompletion: true,
-            showPrintMargin: false,
-        });
-    }
-
-    loadMetadata(tab: Tab) {
-        var path = tab.path;
-        var session = tab.session;
-        var metadata = parseJson("@file@" + path)
-        if (!metadata) return;
-        try {
-            if (typeof metadata.value == "string" && metadata.value != session.getValue()) {
-                session.doc.setValue(metadata.value);
-            }
-            if (metadata.selection) {
-                session.selection.fromJSON(metadata.selection);
-            }
-            if (metadata.scroll) {
-                session.setScrollLeft(metadata.scroll[0]);
-                session.setScrollTop(metadata.scroll[1]);
-            }
-
-        } catch (e) {
-            console.error(e)
-        }
-    }
 
     addNewTab(pane: Pane) {
         pane.tabBar.addTab(new Tab({
@@ -342,19 +233,17 @@ export class TabManager {
     };
 
     //TODO: move to separate class
-    loadFile(tab: Tab) {
-        if (!tab.editor) return;
-
+    loadFile(tab: Tab, fileContent?: string) {
+        let editor = tab.editor ?? tab.parent.parent.initEditor(tab.editorType);
         if (tab.session) {
-            this.setSession(tab, tab.session.getValue())
+            editor.setSession(tab, tab.session.getValue());
         } else if (!tab.path) {
-            this.setSession(tab, "")
+            editor.setSession(tab, "");
         } else if (tab.path) {
-            tab.editor.container.style.display = "none";
-            var fileContent = require("text-loader!../../../node_modules/ace-code/src/" + tab.path)
-            this.setSession(tab, fileContent);
+            editor.container.style.display = "none";
+            editor.setSession(tab, fileContent ?? "");
         } else {
-            tab.editor.container.style.display = "none";
+            editor.container.style.display = "none";
         }
     };
 

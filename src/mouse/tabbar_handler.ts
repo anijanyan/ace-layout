@@ -1,8 +1,8 @@
 import {Utils} from "../lib";
 import {Tab, TabBar} from "../widgets/tabs/tab";
+import {dom} from "../utils/dom";
 
 var event = require("ace-code/src/lib/event");
-var dom = require("ace-code/src/lib/dom");
 
 export namespace TabbarHandler {
     export var tabbarMouseDown = function (e, tabConstructor: typeof Tab, tabBarConstructor: typeof TabBar, showSplit: boolean = false) {

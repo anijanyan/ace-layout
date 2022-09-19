@@ -1,5 +1,5 @@
-import dom = require("ace-code/src/lib/dom");
-import {ButtonOptions, Widget} from "../widget";
+import {ButtonOptions, LayoutHTMLElement, Widget} from "../widget";
+import {dom} from "../../utils/dom";
 
 dom.importCssString(require("text-loader!../../../styles/button.css"), "button.css");
 
@@ -8,7 +8,7 @@ export class Button implements Widget {
     value?: string;
     className: string;
     options: any;
-    element: any;
+    element: LayoutHTMLElement;
 
     constructor(options: ButtonOptions) {
         let {disabled, value, className, ...other} = options;
