@@ -40,7 +40,7 @@ export class Tab implements Widget {
     editorType: string;
 
     constructor(options: TabOptions) {
-        this.active = options.active;
+        this.active = options.active ?? false;
         this.tabIcon = options.tabIcon;
         this.title = options.title;
         this.path = options.path;

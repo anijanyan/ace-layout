@@ -7,7 +7,6 @@ import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import type {Pane} from "./pane";
 import {dom} from "../../utils/dom";
-import {Ace} from "ace-code";
 
 const SPLITTER_SIZE = 1;
 const BOX_MIN_SIZE = 40;

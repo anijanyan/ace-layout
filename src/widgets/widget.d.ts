@@ -2,7 +2,6 @@ import type {Box} from "./boxes/box";
 import type {SizeUnit} from "../models/params";
 import type {Tab} from "./tabs/tab";
 import type {Accordion} from "./boxes/accordion";
-import type {Ace} from "ace-code";
 import {FileSystemWeb} from "../file-system/file-system-web";
 
 export interface LayoutEditor {
@@ -83,14 +82,14 @@ export interface TabOptions {
     path?: string;
     title: string;
     tabIcon?: string;
-    active: boolean;
+    active?: boolean;
 }
 
 
 export interface PanelOptions extends TabOptions {
     panelBody: Accordion | Box;
     location?: string;
-    autohide: boolean;
+    autohide?: boolean;
 }
 
 export interface PanelManagerOptions {

@@ -88,6 +88,12 @@ body {
 .consoleCloseBtn {
     background-repeat: no-repeat;
     background-size: 22px 66px;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+div.consoleCloseBtn:hover {
+    color: #35cc95;
 }
 
 .buttons {

@@ -6,7 +6,7 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "ace-code": "1.10.1",
+    "ace-code": "1.11.0",
     "ace-tree": "latest",
     "browser-fs-access": "latest"
   },

@@ -23,6 +23,7 @@ export class AceEditor implements LayoutEditor {
 
     constructor() {
         this.editor = new Editor(new Renderer(null, theme));
+        this.editor.setOptions({"customScrollbar": true})
         this.container = this.editor.container;
         this.container.style.position = "absolute";
     }

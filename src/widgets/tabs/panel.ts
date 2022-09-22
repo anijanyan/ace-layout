@@ -19,10 +19,10 @@ export class Panel extends Tab {
 
     constructor(options: PanelOptions) {
         super(options);
-        this.active = options.active;
+        this.active = options.active ?? false;
         this.location = options.location;
         this.panelBody = options.panelBody;
-        this.autohide = options.autohide;
+        this.autohide = options.autohide ?? false;
     }
 
     activate() {
@@ -50,7 +50,7 @@ export class Panel extends Tab {
 
     toJSON() {
         return {
-            active: this.active || undefined,
+            active: this.active,
             title: this.title,
             autohide: this.autohide,
             panelBody: this.panelBody.toJSON(),

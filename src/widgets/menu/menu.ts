@@ -1199,11 +1199,6 @@ export class MenuToolBar implements ToolBar {
     menuBar;
     element: LayoutHTMLElement;
     box: any[];
-
-    constructor() {//TODO:?
-        MenuManager.getInstance();
-    }
-
     size = 27;
 
     setBox(x, y, w, h) {
