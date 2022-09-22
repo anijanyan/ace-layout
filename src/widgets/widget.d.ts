@@ -109,6 +109,7 @@ export interface LayoutHTMLElement extends HTMLElement {
     dx?: number;
     dy?: number;
     $host: any;  //TODO:
+    parentElement: LayoutHTMLElement
 }
 
 export interface SwitcherOptions {

@@ -10,10 +10,9 @@ import keyUtil = require("ace-code/src/lib/keys");
 
 import {TabList, TabManagerOptions, TabOptions} from "../widget";
 import {Tab} from "./tab";
-import {MenuManager} from "../menu/menu";
 import {Pane} from "../boxes/pane";
 import {FileSystemWeb} from "../../file-system/file-system-web";
-import {AceEditor} from "../editors/aceEditor";
+import {MenuManager} from "../menu/menuManager";
 
 var newTabCounter = 1;
 
