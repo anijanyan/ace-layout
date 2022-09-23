@@ -1,3 +1,6 @@
+import {Ace} from "ace-code";
+import {CommandManager} from "./commands/commandManager";
+
 export var menuDefs = {
     "AWS Cloud9": "50,,,,",
     "File": "100,,,,",
@@ -524,6 +527,7 @@ export var menuDefs = {
 };
 
 export function addExampleMenuItems(menuManager, root, menuDefinitions = menuDefs) {
+    var commands: Ace.Command[] = [];
     Object.keys(menuDefinitions).forEach(function (x) {
         var item = menuDefinitions[x];
         var exec;
@@ -537,6 +541,16 @@ export function addExampleMenuItems(menuManager, root, menuDefinitions = menuDef
         }
         var parts = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item);
         var path = root ? root + "/" + x : x;
+        var hotKey = (parts[5] || "").trim();
+        if (exec && hotKey) {
+            commands.push({
+                bindKey: {
+                    win: hotKey,
+                    mac: hotKey
+                },
+                exec: exec
+            })
+        }
 
         menuManager.addByPath(path, {
             className: path == "AWS Cloud9" ? "c9btn" : undefined,
@@ -544,8 +558,9 @@ export function addExampleMenuItems(menuManager, root, menuDefinitions = menuDef
             checked: parts[3] == "true",
             disabled: parts[4] == "true",
             position: parseInt(parts[1]),
-            hotKey: (parts[5] || "").trim(),
+            hotKey: hotKey,
             exec: exec
         });
     });
+    CommandManager.registerCommands(commands);
 }

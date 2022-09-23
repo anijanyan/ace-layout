@@ -1,4 +1,4 @@
 export enum SizeUnit {
     "px",
-    "procent"
+    "percent"
 }

@@ -1,6 +1,6 @@
 import {Utils} from "../../lib";
 import {BoxOptions, LayoutEditor, Widget} from "../widget";
-import {SizeUnit} from "../../models/params";
+import {SizeUnit} from "../../utils/params";
 
 import event = require("ace-code/src/lib/event");
 import oop = require("ace-code/src/lib/oop");
@@ -279,7 +279,7 @@ export class Box implements Widget {
                 childBox.fixedSize = size;
                 this.fixedChild = childBox;
                 break;
-            case SizeUnit.procent:
+            case SizeUnit.percent:
                 if (isSecond) {
                     size = 100 - size;
                 }
