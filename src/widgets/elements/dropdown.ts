@@ -1,11 +1,12 @@
 import {Utils} from "../../lib";
 
-import {DropdownConst} from "../../constants/constants";
 import {DropdownElement, DropdownOptions} from "../widget";
 import {dom} from "../../utils/dom";
 
 dom.importCssString(require("text-loader!../../../styles/dropdown.css"), "dropdown.css");
 dom.importCssString(require("text-loader!../../../styles/menu.css"), "menu.css");
+
+const DEFAULT_WIDTH = 200;
 
 export class Dropdown {
     lbl: any;
@@ -25,7 +26,7 @@ export class Dropdown {
         this.items = items;
         this.value = value ?? items[0].value;
         this.className = className || "black_dropdown";
-        this.width = width ?? DropdownConst.DEFAULT_WIDTH;
+        this.width = width ?? DEFAULT_WIDTH;
         this.options = other;
     }
 
@@ -144,7 +145,6 @@ export class Dropdown {
 }
 
 
-
 class Popup {
     items: DropdownElement[];
     selectedItem: string;
@@ -170,7 +170,7 @@ class Popup {
         let result = [];
 
         if (this.items) {
-            let items = Object.values(this.items).sort(function(item1, item2) {
+            let items = Object.values(this.items).sort(function (item1, item2) {
                 return item1.position - item2.position;
             });
             let afterDivider = true;
@@ -231,10 +231,10 @@ class Popup {
     }
 
     render() {
-        if (this.element.style.maxWidth){
+        if (this.element.style.maxWidth) {
             this.element.style.maxWidth = window.innerWidth + "px";
         }
-        if (this.element.style.maxHeight){
+        if (this.element.style.maxHeight) {
             this.element.style.maxHeight = window.innerHeight + "px";
         }
 
