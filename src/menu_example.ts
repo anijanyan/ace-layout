@@ -1,4 +1,4 @@
-const menuDefs = {
+export var menuDefs = {
     "AWS Cloud9": "50,,,,",
     "File": "100,,,,",
     "Edit": "200,,,,",
@@ -227,7 +227,6 @@ const menuDefs = {
     "Edit/Keyboard Mode/Vim": "1200,radio,false,, ",
     "Edit/Keyboard Mode/Emacs": "1300,radio,false,, ",
     "Edit/Keyboard Mode/Sublime": "1400,radio,false,, ",
-    "View/Console": "700,check,false,false,F6",
     "Find/~10000": "10000,,,,",
     "Find/Find in Files...": "20000,,false,false,Ctrl-Shift-F",
     "Find/Find...": "100,,false,false,Ctrl-F",
@@ -527,8 +526,14 @@ const menuDefs = {
 export function addExampleMenuItems(menuManager, root, menuDefinitions = menuDefs) {
     Object.keys(menuDefinitions).forEach(function (x) {
         var item = menuDefinitions[x];
+        var exec;
         if (typeof item == "object") {
-            return addExampleMenuItems(menuManager, x, item);
+            if (item.properties != undefined) {
+                exec = item.exec;
+                item = item.properties;
+            } else {
+                return addExampleMenuItems(menuManager, x, item);
+            }
         }
         var parts = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item);
         var path = root ? root + "/" + x : x;
@@ -540,6 +545,7 @@ export function addExampleMenuItems(menuManager, root, menuDefinitions = menuDef
             disabled: parts[4] == "true",
             position: parseInt(parts[1]),
             hotKey: (parts[5] || "").trim(),
+            exec: exec
         });
     });
 }

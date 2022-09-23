@@ -9,7 +9,7 @@ import {FileSystemWeb} from "./file-system/file-system-web";
 import {AceTreeWrapper} from "./widgets/trees/ace-tree";
 import {dom} from "./utils/dom";
 import {PanelBar} from "./widgets/tabs/panel";
-import {addExampleMenuItems} from "./menu_example";
+import {addExampleMenuItems, menuDefs} from "./menu_example";
 import {MenuManager} from "./widgets/menu/menuManager";
 
 dom.importCssString(require("text-loader!../styles/layout.css"), "layout.css");
@@ -69,7 +69,11 @@ function renderFileTree() {
     dom.buildDom(["div", {style: "height: 100%"}, buttonWrapper, aceTreeWrapper], fileTree.element);
 }
 
-addExampleMenuItems(MenuManager.getInstance(), "");
+menuDefs["View/Console"] = {
+    properties: "700,check,false,false,F6",
+    exec: () => outerBox[1].toggleShowHide()
+};
+addExampleMenuItems(MenuManager.getInstance(), "", menuDefs);
 
 base.render();
 
