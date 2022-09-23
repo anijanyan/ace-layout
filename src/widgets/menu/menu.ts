@@ -95,7 +95,7 @@ export abstract class Menu {
         if (this.menuPopup) {
             this.closeMenu();
         }
-        host.buttonElement ??= target;
+        host.buttonElement = host.$buttonElement || target;
         this.selectMenu(host);
     }
 
@@ -131,7 +131,7 @@ export class MenuBar extends Menu {
         Object.keys(items).filter(Boolean).map(key => items[key]).sort(function (item1, item2) {
             return item1.position - item2.position;
         }).map(item => {
-            item.buttonElement = dom.buildDom(["div", {
+            item.$buttonElement = dom.buildDom(["div", {
                 class: "menuButton" + (item.className ? " " + item.className : ""),
                 $host: item,
                 onmousedown: e => this.onMouseDown(e),
@@ -161,6 +161,7 @@ export class MenuBar extends Menu {
         }
         if (activate) {
             var target = e.target;
+            target.$host.buttonElement = target.$host.$buttonElement;
             this.selectMenu(target.$host);
             this.openMenu();
             this.menuManager.activeMenu = this;

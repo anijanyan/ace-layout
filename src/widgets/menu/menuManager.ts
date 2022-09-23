@@ -303,11 +303,8 @@ export class MenuManager {
             }
         }
 
-        if (this.getTarget(e.target)) {
-            return;
-        }
-
-        this.inactivateMenu();
+        if (e.target !== this.getTarget(e.target))
+            this.inactivateMenu();
     }
 
     onMouseMove = (e) => {
@@ -375,4 +372,5 @@ export class MenuItems {
     exec: Function;
     element: LayoutHTMLElement;
     buttonElement?: HTMLElement;
+    $buttonElement?: HTMLElement;
 }
