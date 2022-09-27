@@ -539,9 +539,11 @@ export class Box implements Widget {
         this.hidden = !this.hidden;
         this.parent.resize();
         var node = this.element;
+        var self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
+            self.parent.resize();
         });
     }
 
@@ -550,9 +552,11 @@ export class Box implements Widget {
         this.hidden = true;
         this.parent.resize();
         var node = this.element;
+        var self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
+            self.parent.resize();
         });
     }
 
@@ -561,9 +565,11 @@ export class Box implements Widget {
         this.hidden = false;
         this.parent.resize();
         var node = this.element;
+        var self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
+            self.parent.resize();
         });
     }
 
