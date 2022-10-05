@@ -1,5 +1,5 @@
 import type {Box} from "./boxes/box";
-import type {SizeUnit} from "../models/params";
+import type {SizeUnit} from "../utils/params";
 import type {Tab} from "./tabs/tab";
 import type {Accordion} from "./boxes/accordion";
 import {FileSystemWeb} from "../file-system/file-system-web";
@@ -109,6 +109,7 @@ export interface LayoutHTMLElement extends HTMLElement {
     dx?: number;
     dy?: number;
     $host: any;  //TODO:
+    parentElement: LayoutHTMLElement
 }
 
 export interface SwitcherOptions {

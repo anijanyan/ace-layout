@@ -1,19 +1,16 @@
-import {tabCommands} from "../../models/commands";
+import {tabCommands} from "../../commands/tabCommands";
 import {Box} from "../boxes/box";
 
 import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
-import {HashHandler} from "ace-code/src/keyboard/hash_handler";
-import event = require("ace-code/src/lib/event");
 import useragent = require("ace-code/src/lib/useragent");
-import keyUtil = require("ace-code/src/lib/keys");
 
 import {TabList, TabManagerOptions, TabOptions} from "../widget";
 import {Tab} from "./tab";
-import {MenuManager} from "../menu/menu";
 import {Pane} from "../boxes/pane";
 import {FileSystemWeb} from "../../file-system/file-system-web";
-import {AceEditor} from "../editors/aceEditor";
+import {MenuManager} from "../menu/menuManager";
+import {CommandManager} from "../../commands/commandManager";
 
 var newTabCounter = 1;
 
@@ -64,17 +61,7 @@ export class TabManager {
             }
         }
 
-        var menuKb = new HashHandler(commandsKeys);
-
-        var _this = this;
-        event.addCommandKeyListener(window, function (e, hashId, keyCode) {
-            var keyString = keyUtil.keyCodeToString(keyCode);
-            var command = menuKb.findKeyCommand(hashId, keyString);
-            if (command) {
-                event.stopEvent(e);
-                command.exec(_this);
-            }
-        });
+        CommandManager.registerCommands(commandsKeys, this);
     }
 
     toJSON() {

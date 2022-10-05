@@ -1,6 +1,6 @@
 import {Utils} from "../../lib";
 import {BoxOptions, LayoutEditor, Widget} from "../widget";
-import {SizeUnit} from "../../models/params";
+import {SizeUnit} from "../../utils/params";
 
 import event = require("ace-code/src/lib/event");
 import oop = require("ace-code/src/lib/oop");
@@ -279,7 +279,7 @@ export class Box implements Widget {
                 childBox.fixedSize = size;
                 this.fixedChild = childBox;
                 break;
-            case SizeUnit.procent:
+            case SizeUnit.percent:
                 if (isSecond) {
                     size = 100 - size;
                 }
@@ -539,9 +539,11 @@ export class Box implements Widget {
         this.hidden = !this.hidden;
         this.parent.resize();
         var node = this.element;
+        var self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
+            self.parent.resize();
         });
     }
 
@@ -550,9 +552,11 @@ export class Box implements Widget {
         this.hidden = true;
         this.parent.resize();
         var node = this.element;
+        var self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
+            self.parent.resize();
         });
     }
 
@@ -561,9 +565,11 @@ export class Box implements Widget {
         this.hidden = false;
         this.parent.resize();
         var node = this.element;
+        var self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
+            self.parent.resize();
         });
     }
 
