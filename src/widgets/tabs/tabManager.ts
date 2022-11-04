@@ -238,7 +238,7 @@ export class TabManager {
         var tabsList = tabs || this.tabs;
         var activeTab = tab || this.activeTab;
         //TODO: seems we need better `activate` method for Tab
-        if (index >= 0 && tabsList.length > index) activeTab.parent.activateTab(tabsList[index]);
+        if (index >= 0 && tabsList.length > index) activeTab.parent.activateTab(tabsList[index], "", true);
     }
 }
 
