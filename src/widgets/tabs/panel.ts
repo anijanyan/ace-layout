@@ -6,9 +6,9 @@ import {Utils} from "../../lib";
 import {TabbarHandler} from "../../mouse/tabbar_handler";
 import {Tab, TabBar} from "./tab";
 import {dom} from "../../utils/dom";
+import * as panelCSS from "../../../styles/panel.css";
 
-
-dom.importCssString(require("text-loader!../../../styles/panel.css"), "panel.css");
+dom.importCssString(panelCSS, "panel.css");
 
 export class Panel extends Tab {
     active: boolean;

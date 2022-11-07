@@ -2,9 +2,11 @@ import {Utils} from "../../lib";
 
 import {DropdownElement, DropdownOptions} from "../widget";
 import {dom} from "../../utils/dom";
+import * as dropdownCSS from "../../../styles/dropdown.css";
+import * as menuCSS from "../../../styles/menu.css";
 
-dom.importCssString(require("text-loader!../../../styles/dropdown.css"), "dropdown.css");
-dom.importCssString(require("text-loader!../../../styles/menu.css"), "menu.css");
+dom.importCssString(dropdownCSS, "dropdown.css");
+dom.importCssString(menuCSS, "menu.css");
 
 const DEFAULT_WIDTH = 200;
 

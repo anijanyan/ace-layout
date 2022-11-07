@@ -11,9 +11,9 @@ import {TabManager} from "./tabManager";
 import {dom} from "../../utils/dom";
 import type {Pane} from "../boxes/pane";
 import {Ace} from "ace-code";
+import * as tabCSS from "../../../styles/tab.css";
 
-
-dom.importCssString(require("text-loader!../../../styles/tab.css"), "tab.css");
+dom.importCssString(tabCSS, "tab.css");
 
 function parseJson(name) {
     try {
@@ -238,7 +238,7 @@ export class TabBar implements Widget, ToolBar {
             if (toggle) {
                 this.toggleSelection(tab);
             } else {
-                this.activateTab(tab, "",this.selectedTabs.indexOf(tab) < 0);
+                this.activateTab(tab, "", this.selectedTabs.indexOf(tab) < 0);
             }
         }
     }

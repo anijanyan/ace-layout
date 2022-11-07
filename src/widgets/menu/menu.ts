@@ -3,8 +3,9 @@ import {Utils} from "../../lib";
 import {LayoutHTMLElement, Position, ToolBar} from "../widget";
 import {dom} from "../../utils/dom";
 import {MenuItems, MenuManager} from "./menuManager";
+import * as menuCSS from "../../../styles/menu.css";
 
-dom.importCssString(require("text-loader!../../../styles/menu.css"), "menu.css");
+dom.importCssString(menuCSS, "menu.css");
 
 export abstract class Menu {
     menuManager: MenuManager;

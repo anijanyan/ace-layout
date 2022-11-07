@@ -1,7 +1,8 @@
 import {LayoutHTMLElement, SwitcherOptions, Widget} from "../widget";
 import {dom} from "../../utils/dom";
+import * as switcherCSS from "../../../styles/switcher.css";
 
-dom.importCssString(require("text-loader!../../../styles/switcher.css"), "switcher.css");
+dom.importCssString(switcherCSS, "switcher.css");
 
 export class Switcher implements Widget {
     className?: string;
