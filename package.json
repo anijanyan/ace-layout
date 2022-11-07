@@ -1,6 +1,7 @@
 {
-  "name": "layout",
+  "name": "ace-layout",
   "version": "1.0.0",
+  "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server"
@@ -19,5 +20,6 @@
     "text-loader": "latest",
     "ts-loader": "latest",
     "typescript": "latest"
-  }
+  },
+  "license": "MIT"
 }
