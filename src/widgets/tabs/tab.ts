@@ -61,12 +61,17 @@ export class Tab implements Widget {
         this.active = true;
         this.element.classList.add("active");
 
-        let tabManager = TabManager.getInstance();
-        tabManager.activePane = this.parent.parent;
+        this.activatePane();
 
+        let tabManager = TabManager.getInstance();
         tabManager.loadFile(this, content);
         tabManager.activePane.resize();
     }
+
+    activatePane() {
+        TabManager.getInstance().activePane = this.parent.parent;
+    }
+
 
     deactivate() {
         this.active = false;
@@ -233,10 +238,7 @@ export class TabBar implements Widget, ToolBar {
             if (toggle) {
                 this.toggleSelection(tab);
             } else {
-                if (this.selectedTabs.indexOf(tab) < 0) {
-                    this.removeSelections();
-                }
-                this.activateTab(tab);
+                this.activateTab(tab, "",this.selectedTabs.indexOf(tab) < 0);
             }
         }
     }
@@ -314,12 +316,15 @@ export class TabBar implements Widget, ToolBar {
         this.setScrollPosition((index + 1) * this.tabWidth);
     }
 
-    activateTab(tab: Tab, content?: string) {
+    activateTab(tab: Tab, content?: string, removeSelections: boolean = false) {
+        removeSelections && this.removeSelections();
+
         this.activeTabClicked = false;
         this.addSelection(tab);
         if (this.activeTab) {
             if (this.activeTab === tab) {
                 this.activeTabClicked = true;
+                tab.activatePane();
                 return;
             }
 
@@ -396,7 +401,7 @@ export class TabBar implements Widget, ToolBar {
         }
 
         if (tab.active) {
-            this.activateTab(tab, content);
+            this.activateTab(tab, content, true);
         }
 
         this.configurate();

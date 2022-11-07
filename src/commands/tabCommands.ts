@@ -15,11 +15,11 @@ function getCurrentPaneTabs(element: Tab | TabManager): { tabs: Tab[], activeTab
     }
 }
 
-function goToTab(el: Tab | TabManager, tabNum: number) {
+function goToTab(el: Tab | TabManager, tabNum?: number) {
     var currentPaneTabs = getCurrentPaneTabs(el);
     var tabs = currentPaneTabs.tabs;
     var activeTab = currentPaneTabs.activeTab;
-    var index = tabNum || tabs.indexOf(activeTab);
+    var index = tabNum ?? tabs.indexOf(activeTab);
     TabManager.getInstance().navigateToTab(index, activeTab, tabs);
 }
 
