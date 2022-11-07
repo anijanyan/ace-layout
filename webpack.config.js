@@ -17,7 +17,8 @@ module.exports = (env, argv) => {
         devtool: 'source-map',
         entry: {
             simple: './src/demo.ts',
-            preferences: './src/preferences.ts'
+            preferences: './src/preferences.ts',
+            index: './src/index.ts'
         },
         mode: "production",
         module: {
@@ -46,7 +47,8 @@ module.exports = (env, argv) => {
         },
         output: {
             filename: 'bundle.[name].js',
-            path: __dirname + '/built'
+            path: __dirname + '/built',
+            libraryTarget: 'commonjs2'
         },
         optimization: {
             minimize: false
