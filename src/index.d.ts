@@ -3,6 +3,7 @@ export * from './widgets/boxes/box';
 export * from './widgets/boxes/listBox';
 export * from './widgets/boxes/pane';
 export * from './widgets/editors/aceEditor';
+export * from './widgets/editors/previewEditor';
 export * from './widgets/elements/button';
 export * from './widgets/elements/dropdown';
 export * from './widgets/elements/search';

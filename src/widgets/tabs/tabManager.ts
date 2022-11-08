@@ -20,7 +20,7 @@ function saveJson(name, value) {
 
 export class TabManager {
     private static _instance: TabManager;
-    containers: { "console"?: Box, "main": Box };
+    containers: { "main": Box, [containerName: string]: Box };
     tabs: TabList;
     previewTab: Tab;
     activePane: Pane;
@@ -35,7 +35,7 @@ export class TabManager {
     }
 
     private constructor(options: TabManagerOptions) {
-        this.containers = {console: options.console, main: options.main};
+        this.containers = options.containers;
         this.tabs = {};
         this.fileSystem = options.fileSystem;
         this.commandsInit();
@@ -65,11 +65,8 @@ export class TabManager {
     }
 
     toJSON() {
-        var containers = this.containers
-        return {
-            console: containers.console && containers.console.toJSON(),
-            main: containers.main && containers.main.toJSON(),
-        };
+        var containers = this.containers;
+        return Object.fromEntries(Object.keys(containers).map(container => [container, containers[container] && containers[container].toJSON()]));
     }
 
     setChildBoxData(box: Box, boxData, index: number) {
@@ -119,12 +116,12 @@ export class TabManager {
             box.removeAllChildren();
             this.setBoxData(box, state);
             if (!box[0] && box.isMain)
-                this.setChildBoxData(box, [{type: "pane"}], 0)
-
+                this.setChildBoxData(box, [{type: "pane"}], 0);
         };
 
-        setState(this.containers.main, state && state.main);
-        setState(this.containers.console, state && state.console);
+        for (let container in this.containers) {
+            setState(this.containers[container], state && state[container]);
+        }
     }
 
     clear() {
@@ -211,11 +208,10 @@ export class TabManager {
     }*/
 
 
-    addNewTab(pane: Pane, title?: string) {
-        return pane.tabBar.addTab(new Tab({
-            title: title ?? `Untitled ${newTabCounter++}`,
-            active: true,
-        }));
+    addNewTab(pane: Pane, options?: TabOptions) {
+        options = options ?? {title: `Untitled ${newTabCounter++}`};
+        options.active = true;
+        return pane.tabBar.addTab(new Tab(options));
     };
 
     //TODO: move to separate class

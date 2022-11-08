@@ -45,6 +45,7 @@ export class Tab implements Widget {
         this.title = options.title;
         this.path = options.path;
         this.preview = options.preview;
+        this.editorType = options.editorType ?? "ace";
     }
 
     toJSON(): Object {

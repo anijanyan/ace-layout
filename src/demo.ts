@@ -84,8 +84,10 @@ window.onresize = onResize;
 
 document.body.appendChild(base.element);
 var tabManager = TabManager.getInstance({
-    main: mainBox,
-    console: outerBox[1],
+    containers: {
+        main: mainBox,
+        console: outerBox[1]
+    },
     fileSystem: fileSystem
 });
 tabManager.fileSystem.on("openFile", (treeNode, fileContent) => {

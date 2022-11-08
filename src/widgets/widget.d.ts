@@ -8,8 +8,8 @@ export interface LayoutEditor {
     container: HTMLElement;
     setSession;
     tab?: Tab;
-    resize;
-    focus;
+    resize();
+    focus();
 }
 
 /**
@@ -72,8 +72,7 @@ interface PaneOptions extends BoxOptions {
 }
 
 interface TabManagerOptions {
-    console?: Box;
-    main: Box;
+    containers: { "main": Box, [containerName: string]: Box };
     fileSystem?: FileSystemWeb;
 }
 
@@ -83,6 +82,7 @@ export interface TabOptions {
     title: string;
     tabIcon?: string;
     active?: boolean;
+    editorType?: string;
 }
 
 
