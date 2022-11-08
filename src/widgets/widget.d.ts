@@ -74,7 +74,7 @@ interface PaneOptions extends BoxOptions {
 interface TabManagerOptions {
     console?: Box;
     main: Box;
-    fileSystem: FileSystemWeb;
+    fileSystem?: FileSystemWeb;
 }
 
 export interface TabOptions {

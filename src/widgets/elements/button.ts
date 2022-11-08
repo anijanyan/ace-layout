@@ -1,7 +1,8 @@
 import {ButtonOptions, LayoutHTMLElement, Widget} from "../widget";
 import {dom} from "../../utils/dom";
+import * as buttonCSS from "../../../styles/button.css";
 
-dom.importCssString(require("text-loader!../../../styles/button.css"), "button.css");
+dom.importCssString(buttonCSS, "button.css");
 
 export class Button implements Widget {
     disabled?: boolean;

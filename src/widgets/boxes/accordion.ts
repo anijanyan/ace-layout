@@ -4,8 +4,9 @@ import {Utils} from "../../lib";
 
 import {AccordionOptions, Widget} from "../widget";
 import {dom} from "../../utils/dom";
+import * as accordionCSS from "../../../styles/accordion.css";
 
-dom.importCssString(require("text-loader!../../../styles/accordion.css"), "accordion.css");
+dom.importCssString(accordionCSS, "accordion.css");
 
 const BOX_MIN_SIZE = 80;
 

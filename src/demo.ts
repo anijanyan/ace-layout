@@ -11,13 +11,11 @@ import {dom} from "./utils/dom";
 import {PanelBar} from "./widgets/tabs/panel";
 import {addExampleMenuItems, menuDefs} from "./menu_example";
 import {MenuManager} from "./widgets/menu/menuManager";
-
-dom.importCssString(require("text-loader!../styles/layout.css"), "layout.css");
+import {AceLayout} from "./widgets/layout";
 
 var mainBox: Box, outerBox: Box;
 var fileTree
 document.body.innerHTML = "";
-
 let menuToolBar;
 var base = new Box({
     vertical: false,
@@ -50,6 +48,8 @@ var base = new Box({
         toolBars: {},
     }),
 });
+
+new AceLayout(base);
 
 window["fileTreeWrapper"] = fileTree;
 let fileSystem = new FileSystemWeb();

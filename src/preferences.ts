@@ -5,9 +5,11 @@ import {Button} from "./widgets/elements/button";
 import {Dropdown} from "./widgets/elements/dropdown";
 import {PanelBar} from "./widgets/tabs/panel";
 import {dom} from "./utils/dom";
+import * as layoutCSS from "../styles/layout.css";
+import * as preferencesCSS from "../styles/preferences.css";
 
-dom.importCssString(require("text-loader!../styles/layout.css"), "layout.css");
-dom.importCssString(require("text-loader!../styles/preferences.css"), "preferences.css");
+dom.importCssString(layoutCSS, "layout.css");
+dom.importCssString(preferencesCSS, "preferences.css");
 
 let navigation;
 let app;

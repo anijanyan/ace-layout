@@ -2,8 +2,8 @@ import {Utils} from "../../lib";
 import {BoxOptions, LayoutEditor, Widget} from "../widget";
 import {SizeUnit} from "../../utils/params";
 
-import event = require("ace-code/src/lib/event");
-import oop = require("ace-code/src/lib/oop");
+import * as event from "ace-code/src/lib/event";
+import * as oop from "ace-code/src/lib/oop";
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import type {Pane} from "./pane";
 import {dom} from "../../utils/dom";
@@ -32,7 +32,7 @@ export class Box implements Widget {
     box: number[];
     splitter: any;
     buttons: any;
-    topRightPane: any;
+    topRightPane: Pane;
     parent: any;
     hidden: boolean;
     minRatio: number;
@@ -97,7 +97,7 @@ export class Box implements Widget {
     }
 
     onMouseDown(e) {
-            var button = e.button;
+        var button = e.button;
         if (button !== 0)
             return;
 

@@ -211,10 +211,9 @@ export class TabManager {
     }*/
 
 
-
-    addNewTab(pane: Pane) {
-        pane.tabBar.addTab(new Tab({
-            title: `Untitled ${newTabCounter++}`,
+    addNewTab(pane: Pane, title?: string) {
+        return pane.tabBar.addTab(new Tab({
+            title: title ?? `Untitled ${newTabCounter++}`,
             active: true,
         }));
     };
