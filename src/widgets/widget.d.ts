@@ -7,7 +7,7 @@ import {EditorType} from "../utils/params";
 
 export interface LayoutEditor {
     container: HTMLElement;
-    setSession;
+    setSession(tab: Tab, value?: string);
     tab?: Tab;
     resize();
     focus();
