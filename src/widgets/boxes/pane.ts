@@ -1,9 +1,10 @@
-import {Tab, TabBar} from "../tabs/tab";
+import {TabBar} from "../tabs/tab";
 import {Box} from "./box";
 import {LayoutEditor, LayoutHTMLElement, PaneOptions} from "../widget";
 import {dom} from "../../utils/dom";
 import {AceEditor} from "../editors/aceEditor";
 import {PreviewEditor} from "../editors/previewEditor";
+import {EditorType} from "../../utils/params";
 
 export class Pane extends Box {
     tabBar: TabBar;
@@ -120,16 +121,14 @@ export class Pane extends Box {
     }
 
     //TODO: move
-    //TODO: enum type
-    initEditor(editorType: string = "ace"): LayoutEditor {
+    initEditor(editorType: EditorType = EditorType.ace): LayoutEditor {
         if (!this.editors) this.editors = {};
-        var editorType = editorType;
         if (!this.editors[editorType]) {
             switch (editorType) {
-                case "eval":
+                case EditorType.preview:
                     this.editor = new PreviewEditor();
                     break;
-                case "ace":
+                case EditorType.ace:
                 default:
                     this.editor = new AceEditor();
             }

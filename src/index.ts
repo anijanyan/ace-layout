@@ -1,3 +1,5 @@
+export * from './utils/dom';
+export * from './utils/params';
 export * from './widgets/boxes/accordion';
 export * from './widgets/boxes/box';
 export * from './widgets/boxes/listBox';

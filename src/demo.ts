@@ -93,8 +93,8 @@ var tabManager = TabManager.getInstance({
 tabManager.fileSystem.on("openFile", (treeNode, fileContent) => {
     tabManager.open({
         path: treeNode.path,
-        fileContent: fileContent
-    });
+        title: treeNode.path.split('/').pop()
+    }, null, fileContent);
 });
 
 var panelManager = PanelManager.getInstance({

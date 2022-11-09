@@ -3,6 +3,7 @@ import type {SizeUnit} from "../utils/params";
 import type {Tab} from "./tabs/tab";
 import type {Accordion} from "./boxes/accordion";
 import {FileSystemWeb} from "../file-system/file-system-web";
+import {EditorType} from "../utils/params";
 
 export interface LayoutEditor {
     container: HTMLElement;
@@ -76,13 +77,14 @@ interface TabManagerOptions {
     fileSystem?: FileSystemWeb;
 }
 
+//TODO: path mandatory
 export interface TabOptions {
     preview?: boolean;
     path?: string;
     title: string;
     tabIcon?: string;
     active?: boolean;
-    editorType?: string;
+    editorType?: EditorType;
 }
 
 

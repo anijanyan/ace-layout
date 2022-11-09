@@ -147,28 +147,28 @@ export class TabManager {
         }
     }
 
-    open(options: { path: string, preview?: boolean, fileContent?: string }): Tab {
-        var tab = this.tabs[options.path]
+    open(tabOptions: TabOptions, container?: string, fileContent?: string): Tab {
+        var tab = this.tabs[tabOptions.path];
+        tabOptions.active = tabOptions.active ?? true;
         if (!tab || !tab.parent) {
-            var pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane
-                : this.containers.main.element.querySelector(".tabPanel").host;
+            var pane;
+            if (container) {
+                pane = this.containers[container].element.querySelector(".tabPanel").host;
+            } else {
+                pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane
+                    : this.containers.main.element.querySelector(".tabPanel").host;
+            }
+
             if (this.previewTab)
                 this.previewTab.remove();
 
-            var tabTitle = options.path.split("/").pop();
-
-            tab = pane.tabBar.addTab(new Tab({
-                preview: options.preview,
-                title: tabTitle,
-                path: options.path,
-                active: true,
-            }), undefined, options.fileContent);
-            if (options.preview)
+            tab = pane.tabBar.addTab(new Tab(tabOptions), undefined, fileContent);
+            if (tabOptions.preview)
                 this.previewTab = tab;
             tab.parent.scrollTabIntoView(tab)
             this.tabs[tab.path] = tab
         }
-        if (!options.preview) {
+        if (!tabOptions.preview) {
             if (this.previewTab == tab) {
                 this.clearPreviewStatus(tab);
             } else if (this.previewTab) {
@@ -177,7 +177,7 @@ export class TabManager {
         }
         tab.parent.removeSelections()
         //TODO: duplicate of activateTab?
-        tab.parent.activateTab(tab, options.fileContent);
+        tab.parent.activateTab(tab, fileContent);
         return tab;
     }
 

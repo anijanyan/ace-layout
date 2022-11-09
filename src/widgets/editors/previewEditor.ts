@@ -18,6 +18,7 @@ export class PreviewEditor implements LayoutEditor {
     }
 
     setSession(tab: Tab, value?: string) {
+        this.container.style.display = "";
         this.container.setAttribute("srcdoc", value ?? "");
     }
 }
