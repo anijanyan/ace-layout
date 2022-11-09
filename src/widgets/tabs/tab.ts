@@ -12,6 +12,7 @@ import {dom} from "../../utils/dom";
 import type {Pane} from "../boxes/pane";
 import {Ace} from "ace-code";
 import * as tabCSS from "../../../styles/tab.css";
+import {EditorType} from "../../utils/params";
 
 dom.importCssString(tabCSS, "tab.css");
 
@@ -37,7 +38,7 @@ export class Tab implements Widget {
     $caption: string;
     $icon: string;
     autohide: boolean;
-    editorType: string;
+    editorType: EditorType;
 
     constructor(options: TabOptions) {
         this.active = options.active ?? false;
@@ -45,6 +46,7 @@ export class Tab implements Widget {
         this.title = options.title;
         this.path = options.path;
         this.preview = options.preview;
+        this.editorType = options.editorType ?? EditorType.ace;
     }
 
     toJSON(): Object {
