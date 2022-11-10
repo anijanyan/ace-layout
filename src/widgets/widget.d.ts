@@ -4,6 +4,7 @@ import type {Tab} from "./tabs/tab";
 import type {Accordion} from "./boxes/accordion";
 import {FileSystemWeb} from "../file-system/file-system-web";
 import {EditorType} from "../utils/params";
+import {Ace} from "ace-code";
 
 export interface LayoutEditor {
     container: HTMLElement;
@@ -11,7 +12,11 @@ export interface LayoutEditor {
     tab?: Tab;
     resize();
     focus();
+    hide();
+    destroy();
 }
+
+export type EditSession = Ace.EditSession | String;
 
 /**
  * Interface for classes that represent a widgets.

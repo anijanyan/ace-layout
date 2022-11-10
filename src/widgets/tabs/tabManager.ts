@@ -140,13 +140,6 @@ export class TabManager {
         return this.activePane.tabBar.activeTab;
     }
 
-    deactivateTab(tab: Tab) {
-        var pane = tab.parent.parent;
-        if (tab.parent.activeTab == tab && pane.editor) {
-            pane.editor.container.style.display = "none";
-        }
-    }
-
     open(tabOptions: TabOptions, container?: string, fileContent?: string): Tab {
         var tab = this.tabs[tabOptions.path];
         tabOptions.active = tabOptions.active ?? true;
@@ -216,16 +209,13 @@ export class TabManager {
 
     //TODO: move to separate class
     loadFile(tab: Tab, fileContent?: string) {
-        let editor = tab.editor ?? tab.parent.parent.initEditor(tab.editorType);
+        let editor = tab.editor ?? tab.parent.parent.getEditor(tab.editorType);
         if (tab.session) {
-            editor.setSession(tab, tab.session.getValue());
+            editor.setSession(tab);
         } else if (!tab.path) {
             editor.setSession(tab, "");
-        } else if (tab.path) {
-            editor.container.style.display = "none";
-            editor.setSession(tab, fileContent ?? "");
         } else {
-            editor.container.style.display = "none";
+            editor.setSession(tab, fileContent ?? "");
         }
     };
 
@@ -233,7 +223,8 @@ export class TabManager {
         var tabsList = tabs || this.tabs;
         var activeTab = tab || this.activeTab;
         //TODO: seems we need better `activate` method for Tab
-        if (index >= 0 && tabsList.length > index) activeTab.parent.activateTab(tabsList[index], "", true);
+        if (index >= 0 && tabsList.length > index)
+            activeTab.parent.activateTab(tabsList[index], "", true);
     }
 }
 

@@ -12,14 +12,29 @@ export class PreviewEditor implements LayoutEditor {
     focus() {
     }
 
+    hide() {
+        this.savePrevious();
+    }
+
+    destroy() {
+        this.container.remove();
+    }
+
     constructor() {
         this.container = document.createElement("iframe");
         this.container.style.position = "absolute";
     }
 
     setSession(tab: Tab, value?: string) {
-        this.container.style.display = "";
-        this.container.setAttribute("srcdoc", value ?? "");
+        this.savePrevious();
+        this.tab = tab;
+        this.container.setAttribute("srcdoc", value ?? tab.session as string);
+    }
+
+    private savePrevious() {
+        if (!this.tab)
+            return;
+        this.tab.session = this.container.attributes["srcdoc"].nodeValue;
     }
 }
 
