@@ -11,6 +11,7 @@ export class Pane extends Box {
     private tabEditorBoxElement: LayoutHTMLElement;
     isButtonHost: any;
     editors: { [editorName: string]: any }
+    currentEditorType?: EditorType;
 
     constructor(options: PaneOptions = {}) {
         var tabBar = new TabBar({
@@ -80,6 +81,7 @@ export class Pane extends Box {
     }
 
     remove() {
+        this.clearEditors();
         var wrapper = this.parent;
         var root = wrapper.parent;
         var paneIndex = wrapper[0] == this ? 1 : 0;
@@ -120,24 +122,46 @@ export class Pane extends Box {
         return this;
     }
 
-    //TODO: move
-    initEditor(editorType: EditorType = EditorType.ace): LayoutEditor {
-        if (!this.editors) this.editors = {};
-        if (!this.editors[editorType]) {
-            switch (editorType) {
-                case EditorType.preview:
-                    this.editor = new PreviewEditor();
-                    break;
-                case EditorType.ace:
-                default:
-                    this.editor = new AceEditor();
-            }
-            this.editors[editorType] = this.editor;
-        } else {
-            this.editor = this.editors[editorType];
+    private createEditor(): LayoutEditor {
+        switch (this.currentEditorType) {
+            case EditorType.preview:
+                return new PreviewEditor();
+            case EditorType.ace:
+            default:
+                return new AceEditor();
         }
-        this.editor.container.style.display = "";
+    }
+
+    private initEditor (editorType: EditorType = EditorType.ace) {
+        if (this.currentEditorType == editorType)
+            return;
+
+        this.editor && this.hidePreviousEditor();
+
+        this.editors ??= {};
+        this.currentEditorType = editorType;
+        this.editors[editorType] ??= this.createEditor();
+        this.editor = this.editors[editorType];
         this.element.appendChild(this.editor.container);
+    }
+
+    private hidePreviousEditor() {
+        this.element.removeChild(this.editor.container);
+        this.editor.hide();
+    }
+
+    //TODO: move
+    getEditor(editorType: EditorType = EditorType.ace): LayoutEditor {
+        this.initEditor(editorType);
         return this.editor;
+    }
+
+    private clearEditors() {
+        for (let i in this.editors) {
+            this.editors[i].destroy();
+        }
+        this.editors = {};
+        this.currentEditorType = null;
+        this.editor = null;
     }
 }
