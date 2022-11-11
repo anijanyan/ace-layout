@@ -1,6 +1,7 @@
 import {TabbarHandler} from "../../mouse/tabbar_handler";
 import {Utils} from "../../lib";
 import {
+    EditSession,
     LayoutEditor,
     LayoutHTMLElement,
     TabOptions,
@@ -10,23 +11,13 @@ import {
 import {TabManager} from "./tabManager";
 import {dom} from "../../utils/dom";
 import type {Pane} from "../boxes/pane";
-import {Ace} from "ace-code";
 import * as tabCSS from "../../../styles/tab.css";
 import {EditorType} from "../../utils/params";
 
 dom.importCssString(tabCSS, "tab.css");
 
-function parseJson(name) {
-    try {
-        let data = localStorage[name];
-        return data && JSON.parse(data);
-    } catch (e) {
-        return null;
-    }
-}
-
 export class Tab implements Widget {
-    session: Ace.EditSession;
+    session: EditSession;
     contextMenu = "tabs";
     active: boolean;
     tabIcon: string;
@@ -78,7 +69,6 @@ export class Tab implements Widget {
     deactivate() {
         this.active = false;
         this.element.classList.remove("active");
-        TabManager.getInstance().deactivateTab(this);
     }
 
     remove() {
@@ -126,47 +116,6 @@ export class Tab implements Widget {
         if (this.parent.activeTab == this)
             return this.parent.parent.editor;
     }
-
-    //TODO: move to separate class
-    loadMetadata() {
-        var path = this.path;
-        var session = this.session;
-        var metadata = parseJson("@file@" + path)
-        if (!metadata) return;
-        try {
-            if (typeof metadata.value == "string" && metadata.value != session.getValue()) {
-                session.doc.setValue(metadata.value);
-            }
-            if (metadata.selection) {
-                session.selection.fromJSON(metadata.selection);
-            }
-            if (metadata.scroll) {
-                session.setScrollLeft(metadata.scroll[0]);
-                session.setScrollTop(metadata.scroll[1]);
-            }
-
-        } catch (e) {
-            console.error(e)
-        }
-    }
-
-    saveMetadata() {
-        if (!this.path || !this.session) return;
-
-        var session = this.session;
-        var undoManager = this.session.getUndoManager();
-        localStorage["@file@" + this.path] = JSON.stringify({
-            selection: session.selection.toJSON(),
-            //@ts-ignore
-            undoManager: undoManager.toJSON(),
-            value: session.getValue(),
-            scroll: [
-                session.getScrollLeft(),
-                session.getScrollTop()
-            ],
-        });
-    }
-
 }
 
 export class TabBar implements Widget, ToolBar {
@@ -336,8 +285,8 @@ export class TabBar implements Widget, ToolBar {
             this.activeTabHistory.push(this.activeTab);
             this.activeTab.deactivate();
         }
-        this.activeTab = tab;
         tab.activate(content);
+        this.activeTab = tab;
         this.configurate();
     }
 
@@ -361,7 +310,6 @@ export class TabBar implements Widget, ToolBar {
 
     closeTab(tab: Tab) {
         var index = this.tabList.indexOf(tab);
-        TabManager.getInstance().deactivateTab(tab);
         var isActiveTab = this.activeTab === tab;
         var isAnchorTab = this.anchorTab === tab;
         this.removeTab(tab);
