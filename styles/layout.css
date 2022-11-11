@@ -30,16 +30,13 @@ body.dragging iframe {pointer-events: none;}
     height: 5px;
 }
 .splitter-h:hover {
-//  margin-left: -2px;
-//  width:3px;
+
 }
 .splitter-v:hover {
-//     margin-top: -1px;
-//     height:3px;
+
 }
 .splitter:hover {
-//     border-color: #000;
-//    background-color: #f00;
+
 }
 .box {
     overflow: hidden;

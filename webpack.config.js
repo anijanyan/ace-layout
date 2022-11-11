@@ -26,11 +26,11 @@ module.exports = (env, argv) => {
                 loader,
                 {
                     test: /\.css$/,
-                    use: [
-                        {
-                            loader: "text-loader",
-                        }
-                    ]
+                    use: ["style-loader", "css-loader"],
+                },
+                {
+                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    type: 'asset/inline'
                 }
             ]
         },
@@ -68,9 +68,6 @@ module.exports = (env, argv) => {
                         to: "."
                     }, {
                         from: "src/preferences.html",
-                        to: "."
-                    }, {
-                        from: "images/**/*",
                         to: "."
                     }
                 ]

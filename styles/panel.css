@@ -32,13 +32,13 @@
 }
 .panelButton:hover {
     background: #e0e0e0;
-/border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 .panelButton.selected {
     background-color: #e7e7e7;
 }
 .panelButton.active {
-    background-color: whitesmoke!important;//rgb(14, 98, 165);
+    background-color: whitesmoke!important;
     border-radius: 10px 10px 0 0;
 }
 .panelTitle {
