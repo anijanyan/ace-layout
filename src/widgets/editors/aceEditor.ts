@@ -6,6 +6,8 @@ import {Tab} from "../tabs/tab";
 import * as ace from "ace-code";
 import modeList = require("ace-code/src/ext/modelist");
 import {Mode as JSMode} from "ace-code/src/mode/javascript";
+import {Mode as CSSMode} from "ace-code/src/mode/css";
+import {Mode as HtmlMode} from "ace-code/src/mode/html";
 import {LayoutEditor} from "../widget";
 
 //TODO this is for demo
@@ -68,7 +70,17 @@ export class AceEditor implements LayoutEditor {
             var mode = modeList.getModeForPath(tab.path).mode
 
             //TODO: set mode
-            if (mode == "ace/mode/javascript") mode = new JSMode();
+            switch (mode) {
+                case "ace/mode/javascript":
+                    mode = new JSMode();
+                    break;
+                case "ace/mode/css":
+                    mode = new CSSMode();
+                    break;
+                case "ace/mode/html":
+                    mode = new HtmlMode();
+                    break;
+            }
             this.editor.session.setMode(mode);
         }
 

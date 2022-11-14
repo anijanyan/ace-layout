@@ -1,3 +1,4 @@
+export * from './commands/commandManager';
 export * from './utils/dom';
 export * from './utils/params';
 export * from './widgets/boxes/accordion';
