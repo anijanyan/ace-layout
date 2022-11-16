@@ -22,8 +22,8 @@ export class TabManager {
     private static _instance: TabManager;
     containers: { "main": Box, [containerName: string]: Box };
     tabs: TabList;
-    previewTab: Tab;
-    activePane: Pane;
+    previewTab?: Tab;
+    activePane?: Pane;
     fileSystem?: FileSystemWeb;
 
     static getInstance(options?: TabManagerOptions) {
@@ -111,6 +111,9 @@ export class TabManager {
     }
 
     setState(state) {
+        this.activePane = null;
+        this.tabs = {};
+        this.previewTab = null;
         var setState = (box, state) => {
             if (!box) return
             box.removeAllChildren();
