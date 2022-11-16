@@ -705,6 +705,11 @@ export class TabBar implements Widget, ToolBar {
         TabManager.getInstance().addNewTab(this.parent);
     }
 
+    clear() {
+        this.removeButtons();
+        this.tabList = [];
+    }
+
     remove() {
     }
 }

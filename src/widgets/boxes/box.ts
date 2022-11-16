@@ -530,8 +530,12 @@ export class Box implements Widget {
     }
 
     removeAllChildren() {
-        this[0] && this[0].remove();
+        this[0] && this[0].remove()
+        this[0] && this[0].element.remove();
         this[1] && this[1].remove();
+        this[1] && this[0].element.remove();
+        this[0] = null;
+        this[1] = null;
     }
 
     toggleShowHide() {

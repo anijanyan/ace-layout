@@ -81,6 +81,7 @@ export class Pane extends Box {
     }
 
     remove() {
+        this.tabBar.clear();
         this.clearEditors();
         var wrapper = this.parent;
         var root = wrapper.parent;
