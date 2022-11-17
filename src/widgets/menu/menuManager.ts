@@ -303,7 +303,8 @@ export class MenuManager {
             }
         }
 
-        if (e.target !== this.getTarget(e.target))
+        let target = this.getTarget(e.target, (target) => target.$host instanceof MenuItems);
+        if (!target)
             this.inactivateMenu();
     }
 

@@ -157,10 +157,8 @@ export class MenuBar extends Menu {
         e.preventDefault();
         var activate = true;
         if (this.menuManager.isActive) {
-            activate = this.menuManager.activeMenu !== this;
             this.menuManager.inactivateMenu();
-        }
-        if (activate) {
+        } else {
             var target = e.target;
             target.$host.buttonElement = target.$host.$buttonElement;
             this.selectMenu(target.$host);
@@ -273,7 +271,7 @@ export class MenuPopup extends Menu {
                     style: "display:block",
                     $host: this.menu,
                     onmousemove: this.onMouseMove,
-                    onclick: this.onClick
+                    onmouseup: this.onMouseUp
                 },
                 result,
             ],
@@ -408,7 +406,7 @@ export class MenuPopup extends Menu {
     }
 
 
-    onClick = (e) => {
+    onMouseUp = (e) => {
         if (e.target === this.element)
             return;
 
@@ -416,9 +414,8 @@ export class MenuPopup extends Menu {
         if (target === this.element)
             return;
 
-        var host = target.$host;
-        if (host.hotKey) {
-            this.closeMenu();
+        if (!target.$host.map) {
+            this.menuManager.inactivateMenu();
         }
     }
 
