@@ -414,9 +414,15 @@ export class MenuPopup extends Menu {
         if (target === this.element)
             return;
 
-        if (!target.$host.map) {
-            this.menuManager.inactivateMenu();
+        var host = target.$host;
+        if (host && host.buttonElement) {
+            e.preventDefault();
+            if (host.exec)
+                host.exec(this.menuManager.currentHost);
         }
+
+        if (!host.map)
+            this.menuManager.inactivateMenu();
     }
 
     isDirectedToSubMenu(e) {

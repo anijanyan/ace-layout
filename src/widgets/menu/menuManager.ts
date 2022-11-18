@@ -295,14 +295,6 @@ export class MenuManager {
 
     //event handlers
     onMouseDown = (e) => {
-        var host = Utils.findHost(e.target);
-        if (host && host.buttonElement) {
-            e.preventDefault();
-            if (host.exec) {
-                host.exec(this.currentHost);
-            }
-        }
-
         let target = this.getTarget(e.target, (target) => target.$host instanceof MenuItems);
         if (!target)
             this.inactivateMenu();
