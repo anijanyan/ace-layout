@@ -40,6 +40,7 @@ export class AceEditor implements LayoutEditor {
     }
 
     destroy() {
+        this.saveMetadata();
         this.editor.destroy();
         this.container.remove();
     }

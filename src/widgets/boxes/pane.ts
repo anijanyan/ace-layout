@@ -10,7 +10,7 @@ export class Pane extends Box {
     tabBar: TabBar;
     private tabEditorBoxElement: LayoutHTMLElement;
     isButtonHost: any;
-    editors: { [editorName: string]: any }
+    editors: { [editorName: string]: LayoutEditor }
     currentEditorType?: EditorType;
 
     constructor(options: PaneOptions = {}) {

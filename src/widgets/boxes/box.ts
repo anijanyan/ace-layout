@@ -520,6 +520,7 @@ export class Box implements Widget {
     }
 
     remove() {
+        this.removeAllChildren();
         if (this.element) this.element.remove();
         if (this.parent) {
             if (this.parent[0] == this) this.parent[0] = null;
