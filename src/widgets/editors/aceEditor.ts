@@ -23,7 +23,7 @@ function parseJson(name) {
 export class AceEditor implements LayoutEditor {
     private editor: Ace.Editor;
     container: HTMLElement;
-    tab?: Tab;
+    tab?: Tab<Ace.EditSession>;
 
     resize() {
         this.editor.resize();
@@ -52,9 +52,9 @@ export class AceEditor implements LayoutEditor {
         this.container.style.position = "absolute";
     }
 
-    setSession(tab: Tab, value?: string) {
+    setSession(tab: Tab<Ace.EditSession>, value?: string) {
         if (!value && tab.session) {
-            value = (tab.session as Ace.EditSession).getValue();
+            value = tab.session.getValue();
         }
         if (typeof value == "string") {
             tab.session = ace.createEditSession(value || "", null);
@@ -65,7 +65,7 @@ export class AceEditor implements LayoutEditor {
         this.tab = tab;
         this.loadMetadata();
 
-        this.editor.setSession(tab.session as Ace.EditSession);
+        this.editor.setSession(tab.session);
 
         if (tab.path !== undefined) {
             var mode = modeList.getModeForPath(tab.path).mode
@@ -96,7 +96,7 @@ export class AceEditor implements LayoutEditor {
     //TODO: move to separate class
     loadMetadata() {
         var path = this.tab.path;
-        var session = this.tab.session as Ace.EditSession;
+        var session = this.tab.session;
         var metadata = parseJson("@file@" + path)
         if (!metadata) return;
         try {
@@ -120,7 +120,7 @@ export class AceEditor implements LayoutEditor {
         if (!this.tab || !this.tab.path || !this.tab.session)
             return;
 
-        var session = this.tab.session as Ace.EditSession;
+        var session = this.tab.session;
         var undoManager = session.getUndoManager();
         localStorage["@file@" + this.tab.path] = JSON.stringify({
             selection: session.selection.toJSON(),

@@ -16,8 +16,8 @@ import {EditorType} from "../../utils/params";
 
 dom.importCssString(tabCSS, "tab.css");
 
-export class Tab implements Widget {
-    session: EditSession;
+export class Tab<SessionType extends EditSession = EditSession> implements Widget {
+    session: SessionType;
     contextMenu = "tabs";
     active: boolean;
     tabIcon: string;
@@ -205,7 +205,6 @@ export class TabBar implements Widget, ToolBar {
         if (end < start) {
             [start, end] = [end, start];
         }
-        var selectedTab;
         for (var i = start; i <= end; i++) {
             this.addSelection(this.tabList[i]);
         }

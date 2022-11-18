@@ -4,7 +4,7 @@ import {LayoutEditor} from "../widget";
 export class PreviewEditor implements LayoutEditor {
     editor;
     container: HTMLElement;
-    tab?: Tab;
+    tab?: Tab<string>;
 
     resize() {
     }
@@ -25,10 +25,10 @@ export class PreviewEditor implements LayoutEditor {
         this.container.style.position = "absolute";
     }
 
-    setSession(tab: Tab, value?: string) {
+    setSession(tab: Tab<string>, value?: string) {
         this.savePrevious();
         this.tab = tab;
-        this.container.setAttribute("srcdoc", value ?? tab.session as string);
+        this.container.setAttribute("srcdoc", value ?? tab.session);
     }
 
     private savePrevious() {
