@@ -18,3 +18,4 @@ export * from './widgets/tabs/panelManager';
 export * from './widgets/tabs/tab';
 export * from './widgets/tabs/tabManager';
 export * from './widgets/layout';
+export {Ace} from 'ace-code';

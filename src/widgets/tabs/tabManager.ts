@@ -5,7 +5,7 @@ import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import useragent = require("ace-code/src/lib/useragent");
 
-import {TabList, TabManagerOptions, TabOptions} from "../widget";
+import {EditSession, TabList, TabManagerOptions, TabOptions} from "../widget";
 import {Tab} from "./tab";
 import {Pane} from "../boxes/pane";
 import {FileSystemWeb} from "../../file-system/file-system-web";
@@ -143,7 +143,7 @@ export class TabManager {
         return this.activePane.tabBar.activeTab;
     }
 
-    open(tabOptions: TabOptions, container?: string, fileContent?: string): Tab {
+    open<SessionType extends EditSession>(tabOptions: TabOptions, container?: string, fileContent?: string): Tab<SessionType> {
         var tab = this.tabs[tabOptions.path];
         tabOptions.active = tabOptions.active ?? true;
         if (!tab || !tab.parent) {
@@ -174,7 +174,7 @@ export class TabManager {
         tab.parent.removeSelections()
         //TODO: duplicate of activateTab?
         tab.parent.activateTab(tab, fileContent);
-        return tab;
+        return tab as Tab<SessionType>;
     }
 
     clearPreviewStatus(tab: Tab) {
