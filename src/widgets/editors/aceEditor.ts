@@ -47,9 +47,16 @@ export class AceEditor implements LayoutEditor {
 
     constructor() {
         this.editor = new Editor(new Renderer(null, theme));
-        this.editor.setOptions({"customScrollbar": true})
         this.container = this.editor.container;
         this.container.style.position = "absolute";
+
+        this.editor.setOptions({
+            customScrollbar: true,
+            newLineMode: "unix",
+            enableLiveAutocompletion: true,
+            enableBasicAutocompletion: true,
+            showPrintMargin: false,
+        });
     }
 
     setSession(tab: Tab<Ace.EditSession>, value?: string) {
@@ -60,13 +67,6 @@ export class AceEditor implements LayoutEditor {
         this.initTabSession(value);
 
         this.editor.setSession(this.tab.session);
-
-        this.editor.setOptions({
-            newLineMode: "unix",
-            enableLiveAutocompletion: true,
-            enableBasicAutocompletion: true,
-            showPrintMargin: false,
-        });
     }
 
     private initTabSession(value?: string) {
