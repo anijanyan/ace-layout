@@ -189,7 +189,7 @@ export class TabBar implements Widget, ToolBar {
             if (toggle) {
                 this.toggleSelection(tab);
             } else {
-                this.activateTab(tab, "", this.selectedTabs.indexOf(tab) < 0);
+                this.activateTab(tab, null, this.selectedTabs.indexOf(tab) < 0);
             }
         }
     }

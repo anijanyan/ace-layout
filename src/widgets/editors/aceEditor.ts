@@ -47,45 +47,11 @@ export class AceEditor implements LayoutEditor {
 
     constructor() {
         this.editor = new Editor(new Renderer(null, theme));
-        this.editor.setOptions({"customScrollbar": true})
         this.container = this.editor.container;
         this.container.style.position = "absolute";
-    }
-
-    setSession(tab: Tab<Ace.EditSession>, value?: string) {
-        if (!value && tab.session) {
-            value = tab.session.getValue();
-        }
-        if (typeof value == "string") {
-            tab.session = ace.createEditSession(value || "", null);
-        }
-
-        this.saveMetadata();
-
-        this.tab = tab;
-        this.loadMetadata();
-
-        this.editor.setSession(tab.session);
-
-        if (tab.path !== undefined) {
-            var mode = modeList.getModeForPath(tab.path).mode
-
-            //TODO: set mode
-            switch (mode) {
-                case "ace/mode/javascript":
-                    mode = new JSMode();
-                    break;
-                case "ace/mode/css":
-                    mode = new CSSMode();
-                    break;
-                case "ace/mode/html":
-                    mode = new HtmlMode();
-                    break;
-            }
-            this.editor.session.setMode(mode);
-        }
 
         this.editor.setOptions({
+            customScrollbar: true,
             newLineMode: "unix",
             enableLiveAutocompletion: true,
             enableBasicAutocompletion: true,
@@ -93,8 +59,44 @@ export class AceEditor implements LayoutEditor {
         });
     }
 
-    //TODO: move to separate class
-    loadMetadata() {
+    setSession(tab: Tab<Ace.EditSession>, value?: string) {
+        this.saveMetadata();
+
+        this.tab = tab;
+
+        this.initTabSession(value);
+
+        this.editor.setSession(this.tab.session);
+    }
+
+    private initTabSession(value?: string) {
+        this.tab.session ??= ace.createEditSession(value ?? "", this.getMode());
+
+        if (value == null) {
+            this.loadMetadata();
+        } else {
+            this.tab.session.setValue(value);
+        }
+    }
+
+    private getMode() {
+        if (this.tab.path !== undefined) {
+            var mode = modeList.getModeForPath(this.tab.path).mode
+
+            //TODO: set mode
+            switch (mode) {
+                case "ace/mode/javascript":
+                    return new JSMode();
+                case "ace/mode/css":
+                    return new CSSMode();
+                case "ace/mode/html":
+                    return new HtmlMode();
+            }
+        }
+        return null;
+    }
+
+    private loadMetadata() {
         var path = this.tab.path;
         var session = this.tab.session;
         var metadata = parseJson("@file@" + path)
@@ -116,7 +118,7 @@ export class AceEditor implements LayoutEditor {
         }
     }
 
-    saveMetadata() {
+    private saveMetadata() {
         if (!this.tab || !this.tab.path || !this.tab.session)
             return;
 
