@@ -1,6 +1,6 @@
 {
   "name": "ace-layout",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
     "build": "webpack",

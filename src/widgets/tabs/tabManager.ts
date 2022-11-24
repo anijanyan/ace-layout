@@ -213,13 +213,7 @@ export class TabManager {
     //TODO: move to separate class
     loadFile(tab: Tab, fileContent?: string) {
         let editor = tab.editor ?? tab.parent.parent.getEditor(tab.editorType);
-        if (tab.session) {
-            editor.setSession(tab);
-        } else if (!tab.path) {
-            editor.setSession(tab, "");
-        } else {
-            editor.setSession(tab, fileContent ?? "");
-        }
+        editor.setSession(tab, fileContent);
     };
 
     navigateToTab(index: number, tab?: Tab, tabs?: Tab[]) {
@@ -227,7 +221,7 @@ export class TabManager {
         var activeTab = tab || this.activeTab;
         //TODO: seems we need better `activate` method for Tab
         if (index >= 0 && tabsList.length > index)
-            activeTab.parent.activateTab(tabsList[index], "", true);
+            activeTab.parent.activateTab(tabsList[index], null, true);
     }
 }
 
