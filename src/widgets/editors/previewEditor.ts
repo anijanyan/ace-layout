@@ -12,9 +12,7 @@ export class PreviewEditor implements LayoutEditor {
     focus() {
     }
 
-    hide() {
-        this.savePrevious();
-    }
+    hide() {}
 
     destroy() {
         this.container.remove();
@@ -26,15 +24,10 @@ export class PreviewEditor implements LayoutEditor {
     }
 
     setSession(tab: Tab<string>, value?: string) {
-        this.savePrevious();
         this.tab = tab;
-        this.container.setAttribute("srcdoc", value ?? tab.session);
-    }
-
-    private savePrevious() {
-        if (!this.tab)
-            return;
-        this.tab.session = this.container.attributes["srcdoc"].nodeValue;
+        value ??= tab.session;
+        tab.session = value;
+        this.container.setAttribute("srcdoc", value);
     }
 }
 

@@ -65,8 +65,8 @@ export class TabManager {
     }
 
     toJSON() {
-        var containers = this.containers;
-        return Object.fromEntries(Object.keys(containers).map(container => [container, containers[container] && containers[container].toJSON()]));
+        let containers = Object.keys(this.containers);
+        return Object.fromEntries(containers.map(container => [container, this.containers[container]?.toJSON()]));
     }
 
     setChildBoxData(box: Box, boxData, index: number) {
@@ -212,7 +212,7 @@ export class TabManager {
 
     //TODO: move to separate class
     loadFile(tab: Tab, fileContent?: string) {
-        let editor = tab.editor ?? tab.parent.parent.getEditor(tab.editorType);
+        let editor = tab.isActive ? tab.editor : tab.parent.parent.getEditor(tab.editorType);
         editor.setSession(tab, fileContent);
     };
 

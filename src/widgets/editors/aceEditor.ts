@@ -9,6 +9,7 @@ import {Mode as JSMode} from "ace-code/src/mode/javascript";
 import {Mode as CSSMode} from "ace-code/src/mode/css";
 import {Mode as HtmlMode} from "ace-code/src/mode/html";
 import {LayoutEditor} from "../widget";
+import "ace-code/src/ext/language_tools";
 
 //TODO this is for demo
 function parseJson(name) {
@@ -21,7 +22,7 @@ function parseJson(name) {
 }
 
 export class AceEditor implements LayoutEditor {
-    private editor: Ace.Editor;
+    editor: Ace.Editor;
     container: HTMLElement;
     tab?: Tab<Ace.EditSession>;
 
@@ -41,6 +42,7 @@ export class AceEditor implements LayoutEditor {
 
     destroy() {
         this.saveMetadata();
+        this.editor.setSession(null);
         this.editor.destroy();
         this.container.remove();
     }
@@ -70,6 +72,9 @@ export class AceEditor implements LayoutEditor {
     }
 
     private initTabSession(value?: string) {
+        if (this.tab.session && value == null)
+            return;
+
         this.tab.session ??= ace.createEditSession(value ?? "", this.getMode());
 
         if (value == null) {
@@ -96,6 +101,7 @@ export class AceEditor implements LayoutEditor {
         return null;
     }
 
+    //TODO for demo (shouldn't be here)
     private loadMetadata() {
         var path = this.tab.path;
         var session = this.tab.session;
