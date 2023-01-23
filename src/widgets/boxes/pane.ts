@@ -124,6 +124,12 @@ export class Pane extends Box {
     }
 
     private createEditor(): LayoutEditor {
+        let editor = this.createEditorByType();
+        this.emit("editorAdded", editor);
+        return editor;
+    }
+
+    private createEditorByType() {
         switch (this.currentEditorType) {
             case EditorType.preview:
                 return new PreviewEditor();

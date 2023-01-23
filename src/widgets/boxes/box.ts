@@ -3,15 +3,14 @@ import {BoxOptions, LayoutEditor, Widget} from "../widget";
 import {SizeUnit} from "../../utils/params";
 
 import * as event from "ace-code/src/lib/event";
-import * as oop from "ace-code/src/lib/oop";
-import {EventEmitter} from "ace-code/src/lib/event_emitter";
+import * as events from 'events';
 import type {Pane} from "./pane";
 import {dom} from "../../utils/dom";
 
 const SPLITTER_SIZE = 1;
 const BOX_MIN_SIZE = 40;
 
-export class Box implements Widget {
+export class Box extends events.EventEmitter implements Widget {
     fixedSize: number;
     editor: LayoutEditor;
     vertical: boolean;
@@ -58,6 +57,7 @@ export class Box implements Widget {
     }
 
     constructor(options: BoxOptions) {
+        super();
         if (options.splitter !== false) {
         }
         this.vertical = options.vertical || false;
@@ -81,6 +81,10 @@ export class Box implements Widget {
         this.classNames = options.classNames ?? "";
         this.hidden = options.hidden ?? false;
         this.fixedSize = options.fixedSize;
+    }
+
+    private $editorAdded = (editor: LayoutEditor) => {
+        this.emit("editorAdded", editor);
     }
 
     toJSON() {
@@ -219,10 +223,17 @@ export class Box implements Widget {
     }
 
     renderChildren() {
-        if (this[0]) this.element.appendChild(this[0].render());
-        if (this[1]) this.element.appendChild(this[1].render());
+        this.renderChild(this[0]);
+        this.renderChild(this[1]);
 
         this.calculateMinSize();
+    }
+
+    renderChild(child?: Box) {
+        if (!child)
+            return;
+        child.on("editorAdded", this.$editorAdded);
+        this.element.appendChild(child.render());
     }
 
     calculateMinSize(forceChildrenSize = false) {
@@ -531,12 +542,18 @@ export class Box implements Widget {
     }
 
     removeAllChildren() {
-        this[0] && this[0].remove()
-        this[0] && this[0].element.remove();
-        this[1] && this[1].remove();
-        this[1] && this[0].element.remove();
+        this.removeChild(this[0]);
+        this.removeChild(this[1]);
         this[0] = null;
         this[1] = null;
+    }
+
+    removeChild(child?: Box) {
+        if (!child)
+            return;
+        child.off("editorAdded", this.$editorAdded);
+        child.remove();
+        child.element.remove();
     }
 
     toggleShowHide() {
@@ -608,7 +625,7 @@ export class Box implements Widget {
 
         this[index] = box;
         box.parent = this;
-        this.element.appendChild(box.render());
+        this.renderChild(box);
 
         if (previousBox && previousBox.isMaximized) {
             previousBox.restore(true);
@@ -643,5 +660,3 @@ export class Box implements Widget {
         }
     }
 }
-
-oop.implement(Box.prototype, EventEmitter);
