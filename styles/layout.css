@@ -2,7 +2,7 @@ body {
     font-family: Tahoma, sans-serif;
 }
 
-body.dragging iframe {pointer-events: none;}
+body.disableIframe iframe {pointer-events: none;}
 
 .splitter {
     background: var(--splitter-color);

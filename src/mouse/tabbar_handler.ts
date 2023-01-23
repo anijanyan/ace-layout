@@ -210,11 +210,6 @@ export namespace TabbarHandler {
             tabBar.removeSelections();
             tabElement.remove();
 
-            if (tabBar !== hostTabBar) {
-                hostTabBar.removeSelections();
-                hostTabBar.activatePrevious(hostIndex);
-            }
-
             var selectedTab;
             for (var i = 0; i < selectedTabs.length; i++) {
                 selectedTab = selectedTabs[i];
@@ -224,6 +219,11 @@ export namespace TabbarHandler {
                 }
                 tabBar.addTab(selectedTab, index++);
                 tabBar.addSelection(selectedTab);
+            }
+
+            if (tabBar !== hostTabBar) {
+                hostTabBar.removeSelections();
+                hostTabBar.activatePrevious(hostIndex);
             }
 
             tabBar.finishTabDragging();
@@ -344,6 +344,11 @@ export namespace TabbarHandler {
         event.capture(window, onMouseMove, onMouseUp);
         return e.preventDefault();
     };
-
-
 }
+
+window.addEventListener("mousedown", function() {
+    document.body.classList.add("disableIframe");
+}, true);
+window.addEventListener("mouseup", function() {
+    document.body.classList.remove("disableIframe");
+}, true);
