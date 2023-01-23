@@ -40,13 +40,14 @@ export class Tab<SessionType extends EditSession = EditSession> implements Widge
         this.editorType = options.editorType ?? EditorType.ace;
     }
 
-    toJSON(): Object {
+    toJSON(): TabOptions {
         return {
             title: this.title || undefined,
             tabIcon: this.tabIcon || undefined,
             active: this.active || undefined,
             path: this.path || undefined,
             preview: this.preview || undefined,
+            editorType: this.editorType
         };
     }
 
@@ -64,7 +65,6 @@ export class Tab<SessionType extends EditSession = EditSession> implements Widge
     activatePane() {
         TabManager.getInstance().activePane = this.parent.parent;
     }
-
 
     deactivate() {
         this.active = false;
@@ -112,9 +112,12 @@ export class Tab<SessionType extends EditSession = EditSession> implements Widge
     update() {
     }
 
+    get isActive(): boolean {
+        return this.parent.activeTab == this;
+    }
+
     get editor(): LayoutEditor {
-        if (this.parent.activeTab == this)
-            return this.parent.parent.editor;
+        return this.parent.parent.editor;
     }
 }
 
@@ -666,7 +669,7 @@ export class TabBar implements Widget, ToolBar {
         if (tab) {
             if (e.button == 0 && target.classList.contains("tabCloseButton")) {
                 this.closeTab(tab);
-            } else if (e.button == 0 && tab.editor) {
+            } else if (e.button == 0 && tab.isActive && tab.editor) {
                 tab.editor.focus();
             } else if (e.button == 1) {
                 tab.remove();
