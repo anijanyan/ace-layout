@@ -1,14 +1,14 @@
 {
   "name": "ace-layout",
-  "version": "1.1.11",
+  "version": "1.2.0",
   "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "ace-code": "1.13.1",
-    "ace-tree": "latest",
+    "ace-code": "latest",
+    "ace-tree": "mkslanc/ace-tree",
     "browser-fs-access": "latest"
   },
   "devDependencies": {
