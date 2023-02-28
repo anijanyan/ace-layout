@@ -74,7 +74,7 @@ export abstract class Menu {
         if (!this.menuPopup) {
             return;
         }
-        if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen && this.menuPopup.isSubMenu && this.menuManager.searchBox.value.substring(this.menuManager.searchBox.value.length - 1, 1) === "/") {
+        if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen && this.menuPopup.isSubMenu && this.menuManager.searchBox.value.substring(this.menuManager.searchBox.value.length - 1) === "/") {
             this.menuManager.searchBox.removeSymbol();
         }
         this.menuPopup.close();
@@ -559,7 +559,7 @@ export class MenuSearchBox {
     }
 
     addSymbol(symbol: string) {
-        if (symbol === "/" && this.value.substring(this.value.length - 1, 1) === "/") {
+        if (symbol === "/" && this.value.substring(this.value.length - 1) === "/") {
             return;
         }
         this.value += symbol;
@@ -581,7 +581,7 @@ export class MenuSearchBox {
         if (!this.isOpen) {
             return;
         }
-        let removed = this.value.substring(this.value.length - 1, 1);
+        let removed = this.value.substring(this.value.length - 1);
         this.value = this.value.substring(0, this.value.length - 1);
 
         if (removed === "/") {
