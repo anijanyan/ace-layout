@@ -1,5 +1,5 @@
 export namespace Utils {
-    export var findHost = function (el, constructor?: any) {
+    export var findHost = function (el, constructor?: any): any | undefined {
         while (el) {
             if (el.$host && (!constructor || el.$host.constructor === constructor)) return el.$host;
             el = el.parentElement;
@@ -30,7 +30,7 @@ export namespace Utils {
             h = Math.max(h, 0);
         }
 
-        var s = el.style;
+        let s = el.style;
 
         s.left = x + "px";
         s.top = y + "px";
@@ -46,7 +46,7 @@ export namespace Utils {
     }
 
     export function getElementEdges(element: HTMLElement) {
-        var style = getComputedStyle(element);
+        let style = getComputedStyle(element);
         return {
             "top": getEdge(style, "Top"),
             "bottom": getEdge(style, "Bottom"),

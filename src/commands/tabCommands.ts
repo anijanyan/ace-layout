@@ -4,26 +4,26 @@ import {TabManager} from "../widgets/tabs/tabManager";
 function getCurrentPaneTabs(element: Tab | TabManager): { tabs: Tab[], activeTab: Tab } {
     if (element instanceof Tab) {
         return {
-            tabs: [...element.parent.tabList],
+            tabs: [...element.parent?.tabList ?? []],
             activeTab: element
         };
     } else {
         return {
-            tabs: [...element.activePane.tabBar.tabList],
-            activeTab: element.activeTab
+            tabs: [...element.activePane?.tabBar.tabList ?? []],
+            activeTab: element.activeTab!
         };
     }
 }
 
 function goToTab(el: Tab | TabManager, tabNum?: number) {
-    var currentPaneTabs = getCurrentPaneTabs(el);
-    var tabs = currentPaneTabs.tabs;
-    var activeTab = currentPaneTabs.activeTab;
-    var index = tabNum ?? tabs.indexOf(activeTab);
+    let currentPaneTabs = getCurrentPaneTabs(el);
+    let tabs = currentPaneTabs.tabs;
+    let activeTab = currentPaneTabs.activeTab;
+    let index = tabNum ?? tabs.indexOf(activeTab);
     TabManager.getInstance().navigateToTab(index, activeTab, tabs);
 }
 
-export var tabCommands = [
+export let tabCommands = [
     {
         name: "clonetab",
         mac: "",
@@ -49,8 +49,8 @@ export var tabCommands = [
         desc: "Close all opened tabs",
         position: 310,
         exec: () => {
-            var tabs = TabManager.getInstance().tabs;
-            for (var i in tabs) {
+            let tabs = TabManager.getInstance().tabs;
+            for (let i in tabs) {
                 tabs[i].remove();
             }
         }
@@ -61,11 +61,11 @@ export var tabCommands = [
         desc: "close all opened tabs, except the tab that is currently active",
         position: 320,
         exec: (el) => {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
+            let currentPaneTabs = getCurrentPaneTabs(el);
+            let tabs = currentPaneTabs.tabs;
+            let activeTab = currentPaneTabs.activeTab;
 
-            for (var tab of tabs) {
+            for (let tab of tabs) {
                 if (tab != activeTab) tab.remove();
             }
         }
@@ -76,10 +76,10 @@ export var tabCommands = [
         desc: "navigate to the next tab, right to the tab that is currently active",
         position: 330,
         exec: (el) => {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
+            let currentPaneTabs = getCurrentPaneTabs(el);
+            let tabs = currentPaneTabs.tabs;
+            let activeTab = currentPaneTabs.activeTab;
+            let index = tabs.indexOf(activeTab);
             TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
         }
     }, {
@@ -89,10 +89,10 @@ export var tabCommands = [
         desc: "navigate to the next tab, left to the tab that is currently active",
         position: 340,
         exec: (el) => {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
+            let currentPaneTabs = getCurrentPaneTabs(el);
+            let tabs = currentPaneTabs.tabs;
+            let activeTab = currentPaneTabs.activeTab;
+            let index = tabs.indexOf(activeTab);
             TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
         }
     }, {
@@ -217,7 +217,7 @@ export var tabCommands = [
         position: 340,
         exec: (el) => {
             //TODO: 
-            /*var path;
+            /*let path;
             if (el instanceof Tab) {
                 path = el.path;
             } else {
@@ -225,7 +225,7 @@ export var tabCommands = [
             }*/
             /*fileTree.popup.data.some((item, i) => {
                 if (item.path === path) {
-                    var scrollTo = fileTree.popup.session.documentToScreenRow(i, 0);
+                    let scrollTo = fileTree.popup.session.documentToScreenRow(i, 0);
                     fileTree.popup.session.setScrollTop(scrollTo)
                     fileTree.popup.setRow(i);
                 }
@@ -238,11 +238,11 @@ export var tabCommands = [
         desc: "navigate to the next tab in the stack of accessed tabs",
         position: 340,
         exec: (el) => {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
+            let currentPaneTabs = getCurrentPaneTabs(el);
+            let tabs = currentPaneTabs.tabs;
+            let activeTab = currentPaneTabs.activeTab;
 
-            var index = tabs.indexOf(activeTab);
+            let index = tabs.indexOf(activeTab);
             if (index < tabs.length - 1) {
                 TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
             } else {
@@ -256,11 +256,11 @@ export var tabCommands = [
         desc: "navigate to the previous tab in the stack of accessed tabs",
         position: 340,
         exec: (el) => {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
+            let currentPaneTabs = getCurrentPaneTabs(el);
+            let tabs = currentPaneTabs.tabs;
+            let activeTab = currentPaneTabs.activeTab;
 
-            var index = tabs.indexOf(activeTab);
+            let index = tabs.indexOf(activeTab);
             if (index > 0) {
                 TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
             } else {
@@ -312,12 +312,12 @@ export var tabCommands = [
         desc: "close all tabs to the right of the focussed tab",
         position: 340,
         exec: (el) => {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
+            let currentPaneTabs = getCurrentPaneTabs(el);
+            let tabs = currentPaneTabs.tabs;
+            let activeTab = currentPaneTabs.activeTab;
+            let index = tabs.indexOf(activeTab);
             if (index < tabs.length - 1) {
-                for (var i = index + 1; i < tabs.length; i++) {
+                for (let i = index + 1; i < tabs.length; i++) {
                     tabs[i].remove();
                 }
             }
@@ -329,12 +329,12 @@ export var tabCommands = [
         desc: "close all tabs to the left of the focussed tab",
         position: 340,
         exec: (el) => {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
+            let currentPaneTabs = getCurrentPaneTabs(el);
+            let tabs = currentPaneTabs.tabs;
+            let activeTab = currentPaneTabs.activeTab;
+            let index = tabs.indexOf(activeTab);
             if (index > 0) {
-                for (var i = 0; i < index; i++) {
+                for (let i = 0; i < index; i++) {
                     tabs[i].remove();
                 }
             }
@@ -346,13 +346,13 @@ export var tabCommands = [
         desc: "close this pane",
         position: 340,
         exec: (el) => {
-            var tabs;
+            let tabs;
             if (el instanceof Tab) {
-                tabs = [...el.parent.tabList];
+                tabs = [...el.parent?.tabList ?? []];
             } else {
                 tabs = [...el.activePane.tabBar.tabList];
             }
-            for (var tab of tabs) {
+            for (let tab of tabs) {
                 tab.remove();
             }
         }
