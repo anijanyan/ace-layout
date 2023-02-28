@@ -5,31 +5,27 @@ import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import useragent = require("ace-code/src/lib/useragent");
 
-import {EditSession, TabList, TabManagerOptions, TabOptions} from "../widget";
+import {EditSession, LayoutHTMLElement, TabManagerOptions, TabOptions} from "../widget";
 import {Tab} from "./tab";
 import {Pane} from "../boxes/pane";
 import {FileSystemWeb} from "../../file-system/file-system-web";
 import {MenuManager} from "../menu/menuManager";
 import {CommandManager} from "../../commands/commandManager";
+import {Ace} from "ace-code";
 
-var newTabCounter = 1;
-
-function saveJson(name, value) {
-    localStorage[name] = JSON.stringify(value);
-}
+let newTabCounter = 1;
 
 export class TabManager {
     private static _instance: TabManager;
     containers: { "main": Box, [containerName: string]: Box };
-    tabs: TabList;
+    tabs: {[path: string]: Tab};
     previewTab?: Tab;
     activePane?: Pane;
     fileSystem?: FileSystemWeb;
 
     static getInstance(options?: TabManagerOptions) {
-        if (!TabManager._instance) {
-            TabManager._instance = new TabManager(options);
-        }
+        if (!TabManager._instance)
+            TabManager._instance = new TabManager(options!);
 
         return TabManager._instance;
     }
@@ -43,8 +39,8 @@ export class TabManager {
 
     commandsInit() {
         MenuManager.getInstance().addByPath("/context/tabs");
-        var commandsKeys = [];
-        for (var command of tabCommands) {
+        let commandsKeys: Ace.Command[] = [];
+        for (let command of tabCommands) {
             if (command.exec !== undefined) {
                 MenuManager.getInstance().addByPath("/context/tabs/" + command.name, {
                     position: command.position,
@@ -73,7 +69,7 @@ export class TabManager {
         if (!boxData[index])
             return;
 
-        var boxType = boxData[index].type;
+        let boxType = boxData[index].type;
         if (!box[index])
             box.addChildBox(index, boxType === "pane" ? new Pane() : new Box({vertical: boxType === "vbox"}))
 
@@ -82,7 +78,8 @@ export class TabManager {
     }
 
     setBoxData(box: Box | Pane, boxData) {
-        if (!boxData) return;
+        if (!boxData)
+            return;
 
         if (boxData.fixedSize)
             box.fixedSize = boxData.fixedSize;
@@ -93,13 +90,13 @@ export class TabManager {
                 if (boxData.tabBar.tabList) {
                     box.tabBar.freeze = true;
                     boxData.tabBar.tabList.forEach((tabData: TabOptions) => {
-                        let tab = box.tabBar.addTab(new Tab(tabData))
+                        let tab: Tab = box.tabBar.addTab(new Tab(tabData)) as Tab;
                         this.tabs[tab.path] = tab;
                         if (tab.preview)
                             this.previewTab = tab;
                     })
                     box.tabBar.freeze = false;
-                    box.tabBar.configurate();
+                    box.tabBar.configure();
                 }
             }
         } else {
@@ -110,22 +107,28 @@ export class TabManager {
         }
     }
 
-    setState(state) {
-        this.activePane = null;
+    setState(state: {}) {
+        this.activePane = undefined;
         this.tabs = {};
-        this.previewTab = null;
-        var setState = (box, state) => {
-            if (!box) return
-            box.removeAllChildren();
-            this.setBoxData(box, state);
-            if (!box[0] && box.isMain)
-                this.setChildBoxData(box, [{type: "pane"}], 0);
-        };
+        this.previewTab = undefined;
 
         for (let container in this.containers) {
-            setState(this.containers[container], state && state[container]);
+            this.setContainerState(container, state[container]);
         }
     }
+
+    setContainerState(container: string, state: {}) {
+        this.$setBoxState(this.containers[container], state);
+    }
+
+    private $setBoxState = (box, state) => {
+        if (!box)
+            return;
+        box.removeAllChildren();
+        this.setBoxData(box, state);
+        if (!box[0] && box.isMain)
+            this.setChildBoxData(box, [{type: "pane"}], 0);
+    };
 
     clear() {
 
@@ -139,30 +142,30 @@ export class TabManager {
         return this.tabs;
     }
 
-    get activeTab(): Tab {
-        return this.activePane.tabBar.activeTab;
+    get activeTab(): Tab | undefined {
+        return this.activePane?.tabBar.activeTab;
     }
 
     open<SessionType extends EditSession>(tabOptions: TabOptions, container?: string, fileContent?: string): Tab<SessionType> {
-        var tab = this.tabs[tabOptions.path];
+        let tab = this.tabs[tabOptions.path];
         tabOptions.active = tabOptions.active ?? true;
         if (!tab || !tab.parent) {
-            var pane;
+            let pane: Pane;
             if (container) {
-                pane = this.containers[container].element.querySelector(".tabPanel").host;
+                pane = this.getContainerPane(container);
             } else {
                 pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane
-                    : this.containers.main.element.querySelector(".tabPanel").host;
+                    : this.getContainerPane("main");
             }
 
             if (this.previewTab)
                 this.previewTab.remove();
 
-            tab = pane.tabBar.addTab(new Tab(tabOptions), undefined, fileContent);
+            tab = pane.tabBar.addTab(new Tab(tabOptions), undefined, fileContent) as Tab;
             if (tabOptions.preview)
                 this.previewTab = tab;
-            tab.parent.scrollTabIntoView(tab)
-            this.tabs[tab.path] = tab
+            tab.parent!.scrollTabIntoView(tab);
+            this.tabs[tab.path] = tab;
         }
         if (!tabOptions.preview) {
             if (this.previewTab == tab) {
@@ -171,57 +174,73 @@ export class TabManager {
                 this.previewTab.remove();
             }
         }
-        tab.parent.removeSelections()
+        tab.parent!.removeSelections()
         //TODO: duplicate of activateTab?
-        tab.parent.activateTab(tab, fileContent);
+        tab.parent!.activateTab(tab, fileContent);
         return tab as Tab<SessionType>;
+    }
+
+    getContainerPane(container: string): Pane {
+        return (this.containers[container]!.element!.querySelector(".tabPanel") as LayoutHTMLElement)!.$host as Pane;
     }
 
     clearPreviewStatus(tab: Tab) {
         tab.preview = false;
-        tab.element.style.fontStyle = ""
+        tab.element.style.fontStyle = "";
         if (this.previewTab == tab)
-            this.previewTab = null;
-
+            this.previewTab = undefined;
     }
 
-
-    /*updateSaveButton(e, editor) {
-        var tab = editor.session.tab;
-        if (tab.parent && tab.parent.activeTab == tab) {
-            if (tab.session.getUndoManager().isClean() != this.refs.saveButton.disabled) {
-                this.refs.saveButton.disabled = tab.session.getUndoManager().isClean();
-            }
-            if (this.refs.saveButton.disabled) {
-                tab.element.classList.remove("changed");
-            } else {
-                tab.element.classList.add("changed");
-            }
-        }
-        if (e && tab.preview) {
-            tabManager.clearPreviewStatus(tab);
-        }
-    }*/
-
+    get newTabPath(): string {
+        return `untitled_${newTabCounter}`;
+    }
 
     addNewTab(pane: Pane, options?: TabOptions) {
-        options = options ?? {title: `Untitled ${newTabCounter++}`};
+        while (this.tabs.hasOwnProperty(this.newTabPath)) {
+            newTabCounter++;
+        }
+        options ??= {title: `Untitled ${newTabCounter}`, path: this.newTabPath};
         options.active = true;
-        return pane.tabBar.addTab(new Tab(options));
+
+        let newTab = pane.tabBar.addTab(new Tab(options));
+        this.tabs[this.newTabPath] = newTab;
+        return newTab;
     };
 
+    removeTab(tab: Tab) {
+        delete this.tabs[tab.path];
+    }
+
     //TODO: move to separate class
-    loadFile(tab: Tab, fileContent?: string) {
-        let editor = tab.isActive ? tab.editor : tab.parent.parent.getEditor(tab.editorType);
+    loadFile(tab: Tab, fileContent?: string | null) {
+        let editor = tab.isActive ? tab.editor! : tab.parent!.parent.getEditor(tab.editorType);
         editor.setSession(tab, fileContent);
     };
 
     navigateToTab(index: number, tab?: Tab, tabs?: Tab[]) {
-        var tabsList = tabs || this.tabs;
-        var activeTab = tab || this.activeTab;
+        let tabsList = tabs || this.tabs;
+        let activeTab = tab || this.activeTab;
         //TODO: seems we need better `activate` method for Tab
         if (index >= 0 && tabsList.length > index)
-            activeTab.parent.activateTab(tabsList[index], null, true);
+            activeTab?.parent?.activateTab(tabsList[index], undefined, true);
+    }
+
+    saveTo(storage: {}) {
+        for (let [path, tab] of Object.entries(this.tabs)) {
+            storage["@file@" + path] = tab.session ? tab.editor!.sessionToJSON(tab) : tab.sessionValue;
+        }
+    }
+
+    restoreFrom(storage: {}) {
+        for (let [path, tab] of Object.entries(this.tabs)) {
+            tab.sessionValue = storage["@file@" + path];
+            if (tab.session)
+                tab.editor!.restoreSessionFromJson(tab);
+        }
+    }
+
+    getTab(path: string): Tab | undefined {
+        return this.tabs[path];
     }
 }
 

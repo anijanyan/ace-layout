@@ -1,7 +1,7 @@
 import {Ace} from "ace-code";
-import {CommandManager} from "./commands/commandManager";
+import {CommandManager} from "../commands/commandManager";
 
-export var menuDefs = {
+export let menuDefs = {
     "AWS Cloud9": "50,,,,",
     "File": "100,,,,",
     "Edit": "200,,,,",
@@ -243,7 +243,7 @@ export var menuDefs = {
     "Tools/~2000": "2000,,,,",
     "Tools/Show Autocomplete": "2100,,false,false,Ctrl-Space|Alt-Space",
     "Tools/~10000": "10000,,,,",
-    "Tools/Rename Variable": "2100,,false,false,Ctrl-Alt-R",
+    "Tools/Rename variable": "2100,,false,false,Ctrl-Alt-R",
     "Go/Jump to Definition": "1450,,false,false,F3",
     "Go/Find References": "1450,,false,false,Shift-F3",
     "Window/Debugger": "100,check,true,,",
@@ -527,10 +527,10 @@ export var menuDefs = {
 };
 
 export function addExampleMenuItems(menuManager, root, menuDefinitions = menuDefs) {
-    var commands: Ace.Command[] = [];
+    let commands: Ace.Command[] = [];
     Object.keys(menuDefinitions).forEach(function (x) {
-        var item = menuDefinitions[x];
-        var exec;
+        let item = menuDefinitions[x];
+        let exec;
         if (typeof item == "object") {
             if (item.properties != undefined) {
                 exec = item.exec;
@@ -539,9 +539,9 @@ export function addExampleMenuItems(menuManager, root, menuDefinitions = menuDef
                 return addExampleMenuItems(menuManager, x, item);
             }
         }
-        var parts = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item);
-        var path = root ? root + "/" + x : x;
-        var hotKey = (parts[5] || "").trim();
+        let parts: string[] = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item) ?? [];
+        let path = root ? root + "/" + x : x;
+        let hotKey = (parts[5] || "").trim();
         if (exec && hotKey) {
             commands.push({
                 bindKey: {

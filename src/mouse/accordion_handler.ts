@@ -1,29 +1,39 @@
 import {Box} from "../widgets/boxes/box";
-import {Utils} from "../lib";
+import {Utils} from "../utils/lib";
+import {Accordion} from "../widgets/boxes/accordion";
 
-var event = require("ace-code/src/lib/event");
+let event = require("ace-code/src/lib/event");
 
 export namespace AccordionHandler {
-    export var toggleBarMouseDown = function (e, accordionConstructor) {
-        var toggleBlock = Utils.findNode(e.target, "toggle-block");
+    export let toggleBarMouseDown = function (e, accordionConstructor) {
+        let toggleBlock = Utils.findNode(e.target, "toggle-block");
         if (!toggleBlock)
             return;
 
-        var accordionBox, accordionBoxRect, toggleBlockDragging, toggleBlockRect;
-        var startIndex, changeIndex, previousIndex;
-        var toggleBar, box, splitter;
+        let accordionBox: Accordion | undefined,
+            accordionBoxRect: DOMRect,
+            toggleBlockDragging,
+            toggleBlockRect;
+        let startIndex,
+            changeIndex,
+            previousIndex;
+        let toggleBar,
+            section,
+            splitter;
 
-        var startX = e.clientX, startY = e.clientY;
-        var isDragging = false;
-        var posX, posY, prevY, prevX;
+        let startX = e.clientX, startY = e.clientY;
+        let isDragging = false;
+        let posX, posY, prevY, prevX;
 
-        var prevBlock, topMaxY, nextBlock, bottomMaxY;
+        let prevBlock, topMaxY, nextBlock, bottomMaxY;
 
         function distance(dx, dy) {
             return dx * dx + dy * dy
         }
 
         function calculateNearbyBlocksData() {
+            if (!accordionBox)
+                return;
             prevBlock = accordionBox.toggleBlockList[changeIndex - 1] || null;
             nextBlock = accordionBox.toggleBlockList[changeIndex + 1] || null;
             topMaxY = prevBlock && (parseInt(prevBlock.style.top, 10) + parseInt(prevBlock.style.height, 10) / 2 + accordionBoxRect.top);
@@ -35,6 +45,8 @@ export namespace AccordionHandler {
                 return;
 
             accordionBox = Utils.findHost(toggleBlock, accordionConstructor);
+            if (!accordionBox)
+                return;
             accordionBoxRect = accordionBox.element.getBoundingClientRect();
             startIndex = changeIndex = previousIndex = toggleBlock.$index;
 
@@ -56,13 +68,15 @@ export namespace AccordionHandler {
         }
 
         function recalculateIndexes(arr) {
-            for (var i = 0; i < arr.length; i++) {
+            for (let i = 0; i < arr.length; i++) {
                 arr[i].$index = i;
             }
         }
 
         function accordionDataChanged() {
-            recalculateIndexes(accordionBox.boxList);
+            if (!accordionBox)
+                return;
+            recalculateIndexes(accordionBox.sections);
             recalculateIndexes(accordionBox.toggleBarList);
             recalculateIndexes(accordionBox.toggleBlockList);
             recalculateIndexes(accordionBox.splitterList);
@@ -71,7 +85,9 @@ export namespace AccordionHandler {
         }
 
         function addToAccordionBox(index) {
-            accordionBox.boxList.splice(index, 0, box);
+            if (!accordionBox)
+                return;
+            accordionBox.sections.splice(index, 0, section);
             accordionBox.toggleBarList.splice(index, 0, toggleBar);
             accordionBox.toggleBlockList.splice(index, 0, toggleBlock);
 
@@ -89,28 +105,30 @@ export namespace AccordionHandler {
             toggleBlock.$parent = accordionBox;
             splitter.$parent = accordionBox;
 
-            accordionBox.calculateChildrenSizePercents();
+            accordionBox.calculateSectionsSizesPercents();
             accordionBox.recalculateChildrenSizes();
 
             accordionDataChanged();
         }
 
         function removeFromAccordionBox() {
-            box = accordionBox.boxList.splice(previousIndex, 1)[0];
+            if (!accordionBox)
+                return;
+            section = accordionBox.sections.splice(previousIndex, 1)[0];
             toggleBar = accordionBox.toggleBarList.splice(previousIndex, 1)[0];
             toggleBlock = accordionBox.toggleBlockList.splice(previousIndex, 1)[0];
 
-            var splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex - 1;
+            let splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex - 1;
             splitter = accordionBox.splitterList.splice(splitterIndex, 1)[0];
 
             toggleBlockDragging.style.height = accordionBox.toggleBarHeight + "px";
 
             toggleBlock.remove();
             splitter.remove();
-            accordionBox.calculateChildrenSizePercents();
+            accordionBox.calculateSectionsSizesPercents();
             accordionBox.recalculateChildrenSizes();
             accordionDataChanged();
-            accordionBox = null;
+            accordionBox = undefined;
             toggleBlock.$parent = null;
             splitter.$parent = null;
         }
@@ -128,7 +146,7 @@ export namespace AccordionHandler {
             isDragging = false;
         }
 
-        var onMouseMove = function (e) {
+        let onMouseMove = function (e) {
             if (e.type !== "mousemove")
                 return;
 
@@ -138,8 +156,8 @@ export namespace AccordionHandler {
                 startDragging();
             }
 
-            var left = e.clientX - posX;
-            var top = e.clientY - posY;
+            let left = e.clientX - posX;
+            let top = e.clientY - posY;
 
             if (accordionBox) {
                 if (left < accordionBoxRect.left - accordionBoxRect.width || left > accordionBoxRect.left + accordionBoxRect.width) {
@@ -177,10 +195,10 @@ export namespace AccordionHandler {
 
                 if (changeIndex !== previousIndex) {
                     accordionBox.element.insertBefore(toggleBlock, accordionBox.toggleBlockList[changeIndex]);
-                    var splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex + 1;
+                    let splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex + 1;
                     accordionBox.element.insertBefore(accordionBox.toggleBlockList[changeIndex], accordionBox.splitterList[splitterIndex]);
 
-                    accordionBox.boxList.splice(changeIndex, 0, accordionBox.boxList.splice(previousIndex, 1)[0]);
+                    accordionBox.sections.splice(changeIndex, 0, accordionBox.sections.splice(previousIndex, 1)[0]);
                     accordionBox.toggleBarList.splice(changeIndex, 0, accordionBox.toggleBarList.splice(previousIndex, 1)[0]);
                     accordionBox.toggleBlockList.splice(changeIndex, 0, accordionBox.toggleBlockList.splice(previousIndex, 1)[0]);
 
@@ -197,7 +215,7 @@ export namespace AccordionHandler {
             prevX = e.clientX;
             prevY = e.clientY;
         };
-        var onMouseUp = function (e) {
+        let onMouseUp = function (e) {
             if (!isDragging)
                 return;
 
@@ -208,15 +226,15 @@ export namespace AccordionHandler {
         return e.preventDefault();
     };
 
-    export var toggleBarOnClick = function (e) {
-        var toggleBlock = Utils.findNode(e.target, "toggle-block");
+    export let toggleBarOnClick = function (e) {
+        let toggleBlock = Utils.findNode(e.target, "toggle-block");
         if (!toggleBlock)
             return;
 
-        var accordionBox = toggleBlock.$parent;
+        let accordionBox = toggleBlock.$parent;
 
-        var index = toggleBlock.$index;
-        var isOpened = accordionBox.isOpenedBlock(toggleBlock);
+        let index = toggleBlock.$index;
+        let isOpened = accordionBox.isOpenedBlock(toggleBlock);
 
         if (!isOpened) {
             toggleBlock.classList.add("toggle-opened");
@@ -228,7 +246,7 @@ export namespace AccordionHandler {
 
         Box.enableAnimation();
 
-        var node = accordionBox.element;
+        let node = accordionBox.element;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
@@ -237,48 +255,48 @@ export namespace AccordionHandler {
         accordionBox.resize();
     };
 
-    export var splitterMouseDown = function (e) {
-        var button = e.button;
+    export let splitterMouseDown = function (e) {
+        let button = e.button;
         if (button !== 0)
             return;
 
-        var splitter = Utils.findNode(e.target, "splitter");
+        let splitter = Utils.findNode(e.target, "splitter");
         if (!splitter)
             return;
 
-        var accordionBox = splitter.$parent;
-        var x = e.clientX;
-        var y = e.clientY;
-        var splitterIndex = splitter.$index + 1;
+        let accordionBox = splitter.$parent as Accordion;
+        let x = e.clientX;
+        let y = e.clientY;
+        let splitterIndex = splitter.$index + 1;
 
-        var prevX = x;
-        var prevY = y;
+        let prevX = x;
+        let prevY = y;
 
-        if (!accordionBox.hasNextOpenedBoxes(splitterIndex) || !accordionBox.hasPrevOpenedBoxes(splitterIndex))
+        if (!accordionBox.hasNextOpenedBlocks(splitterIndex) || !accordionBox.hasPrevOpenedBlocks(splitterIndex))
             return;
 
         accordionBox.keepState();
 
-        var onMouseMove = function (e) {
+        let onMouseMove = function (e) {
             x = e.clientX;
             y = e.clientY;
 
-            var changedSize = 0;
+            let changedSize = 0;
 
             if (prevY > y) {
-                changedSize = accordionBox.recalculatePreviousBoxesSize(splitterIndex, y);
+                changedSize = accordionBox.recalculatePreviousSectionsSize(splitterIndex, y);
 
                 if (changedSize === 0)
                     return;
 
-                accordionBox.expandNextBoxes(splitterIndex, changedSize);
+                accordionBox.expandNextSections(splitterIndex, changedSize);
             } else if (prevY < y) {
-                changedSize = accordionBox.recalculateNextBoxesSize(splitterIndex, y);
+                changedSize = accordionBox.recalculateNextSectionsSize(splitterIndex, y);
 
                 if (changedSize === 0)
                     return;
 
-                accordionBox.expandPrevBoxes(splitterIndex, changedSize);
+                accordionBox.expandPreviousSections(splitterIndex, changedSize);
             } else {
                 return;
             }
@@ -286,11 +304,11 @@ export namespace AccordionHandler {
             prevY = y;
             accordionBox.resize();
         };
-        var onResizeEnd = function (e) {
+        let onResizeEnd = function (e) {
             accordionBox.dischargeState();
             Box.setGlobalCursor("");
 
-            accordionBox.calculateChildrenSizePercents();
+            accordionBox.calculateSectionsSizesPercents();
         };
         Box.setGlobalCursor(`${accordionBox.vertical ? "ns" : "ew"}-resize`);
 

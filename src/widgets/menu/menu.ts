@@ -1,6 +1,6 @@
-import {Utils} from "../../lib";
+import {Utils} from "../../utils/lib";
 
-import {LayoutHTMLElement, Position, ToolBar} from "../widget";
+import {LayoutHTMLElement, Position} from "../widget";
 import {dom} from "../../utils/dom";
 import {MenuItems, MenuManager} from "./menuManager";
 import * as menuCSS from "../../../styles/menu.css";
@@ -9,10 +9,10 @@ dom.importCssString(menuCSS, "menu.css");
 
 export abstract class Menu {
     menuManager: MenuManager;
-    selectedMenu: MenuItems = null;
-    menuPopup: MenuPopup = null;
+    selectedMenu?: MenuItems;
+    menuPopup?: MenuPopup;
     selectedClass: string;
-    element: LayoutHTMLElement;
+    element?: LayoutHTMLElement;
 
     getLastOpenPopup() {
         return !this.menuPopup ? this : this.menuPopup.getLastOpenPopup();
@@ -32,30 +32,30 @@ export abstract class Menu {
     }
 
     selectMenu(menu: MenuItems) {
-        menu.buttonElement.classList.add(this.selectedClass);
+        menu.buttonElement!.classList.add(this.selectedClass);
         this.selectedMenu = menu;
     }
 
     unselectMenu() {
-        if (!this.selectedMenu) {
+        if (!this.selectedMenu)
             return;
-        }
-        this.selectedMenu.buttonElement.classList.remove(this.selectedClass);
-        this.selectedMenu = null;
+
+        this.selectedMenu.buttonElement!.classList.remove(this.selectedClass);
+        this.selectedMenu = undefined;
     }
 
     openMenu(direction?: string) {
-        if (!direction && this.constructor.name === "MenuPopup") {
+        if (!direction && this.constructor.name === "MenuPopup")
             direction = "right";
-        }
-        if (this.menuPopup) {
+
+        if (this.menuPopup)
             return this.menuPopup;
-        }
+
         this.menuPopup = new MenuPopup();
-        this.menuPopup.direction = direction;
+        this.menuPopup.direction = direction ?? "";
         this.menuPopup.isSubMenu = this.constructor.name === "MenuPopup";
         this.menuPopup.menuManager = this.menuManager;
-        this.menuPopup.menu = this.selectedMenu;
+        this.menuPopup.menu = this.selectedMenu!;
         this.menuPopup.parentMenu = this;
         this.menuPopup.open();
 
@@ -74,15 +74,15 @@ export abstract class Menu {
         if (!this.menuPopup) {
             return;
         }
-        if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen && this.menuPopup.isSubMenu && this.menuManager.searchBox.value.substr(this.menuManager.searchBox.value.length - 1, 1) === "/") {
+        if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen && this.menuPopup.isSubMenu && this.menuManager.searchBox.value.substring(this.menuManager.searchBox.value.length - 1) === "/") {
             this.menuManager.searchBox.removeSymbol();
         }
         this.menuPopup.close();
-        this.menuPopup = null;
+        this.menuPopup = undefined;
     }
 
     moveOnTarget(target: LayoutHTMLElement) {
-        var host: MenuItems = target ? target.$host : null;
+        let host: MenuItems = target ? target.$host : null;
         if (!host) {
             return;
         }
@@ -103,19 +103,20 @@ export abstract class Menu {
     abstract getMenuByPath(path)
 
     openMenuByPath(path) {
-        if (typeof path === "string") path = path.split("/");
-        var menu = this.getMenuByPath(path.shift());
+        if (typeof path === "string")
+            path = path.split("/");
+        let menu = this.getMenuByPath(path.shift());
 
-        if (!menu) return;
-        if (!menu.$host) {
+        if (!menu)
+            return;
+        if (!menu.$host)
             menu.$host = menu;
-        }
+
         this.moveOnTarget(menu);
         if (!menu.$host.map) return;
         this.openMenu();
-        if (path.length) {
-            this.menuPopup.openMenuByPath(path);
-        }
+        if (path.length)
+            this.menuPopup?.openMenuByPath(path);
     }
 
     abstract activateMenu()
@@ -128,7 +129,7 @@ export class MenuBar extends Menu {
 
     build(parent: LayoutHTMLElement) {
         this.element = parent;
-        var items = this.menus.map;
+        let items = this.menus.map;
         Object.keys(items).filter(Boolean).map(key => items[key]).sort(function (item1, item2) {
             return item1.position - item2.position;
         }).map(item => {
@@ -138,28 +139,28 @@ export class MenuBar extends Menu {
                 onmousedown: e => this.onMouseDown(e),
             }, item.label + ""], this.element);
         });
-        var rect = this.element.getBoundingClientRect();
+        let rect = this.element.getBoundingClientRect();
         this.bottom = rect.bottom;
     }
 
     activateMenu() {
-        this.element.addEventListener("mousemove", this.onMouseMove);
+        this.element!.addEventListener("mousemove", this.onMouseMove);
     }
 
     inactivateMenu() {
         this.unselectMenu();
         this.closeMenu();
-        this.element.removeEventListener("mousemove", this.onMouseMove);
+        this.element!.removeEventListener("mousemove", this.onMouseMove);
     }
 
     /*** event handlers ***/
     onMouseDown(e) {
         e.preventDefault();
-        var activate = true;
+        let activate = true;
         if (this.menuManager.isActive) {
             this.menuManager.inactivateMenu();
         } else {
-            var target = e.target;
+            let target = e.target;
             target.$host.buttonElement = target.$host.$buttonElement;
             this.selectMenu(target.$host);
             this.openMenu();
@@ -170,13 +171,12 @@ export class MenuBar extends Menu {
 
     moveOnTarget(target) {
         super.moveOnTarget(target);
-        if (this.selectedMenu.map) {
+        if (this.selectedMenu?.map)
             this.openMenu();
-        }
     }
 
     onMouseMove = (e) => {
-        var target = this.menuManager.getTarget(e.target);
+        let target = this.menuManager.getTarget(e.target);
 
         this.moveOnTarget(target);
     }
@@ -217,13 +217,13 @@ export class MenuPopup extends Menu {
             return;
         }
 
-        var result = [];
+        let result: any[] = [];
         if (this.menu.map) {
             //TODO: ?
-            var items = Object.values(this.menu.map).sort(function (item1: MenuItems, item2: MenuItems) {
+            let items = Object.values(this.menu.map).sort(function (item1: MenuItems, item2: MenuItems) {
                 return item1.position - item2.position;
             });
-            var afterDivider = true;
+            let afterDivider = true;
             result = items
                 .map((item: MenuItems) => {
                     if (item.label[0] === "~") {
@@ -238,7 +238,7 @@ export class MenuPopup extends Menu {
                         ];
                     }
                     afterDivider = false;
-                    var classList = ["menu_item"];
+                    let classList = ["menu_item"];
                     if (item.checked) classList.push(item.type === "check" ? "checked" : "selected");
                     if (item.map) classList.push("submenu");
                     if (item.disabled) classList.push("disabled");
@@ -281,22 +281,23 @@ export class MenuPopup extends Menu {
     }
 
     render() {
-        if (this.element.style.maxWidth) {
+        if (!this.element)
+            return;
+
+        if (this.element.style.maxWidth)
             this.element.style.maxWidth = window.innerWidth + "px";
-        }
-        if (this.element.style.maxHeight) {
+
+        if (this.element.style.maxHeight)
             this.element.style.maxHeight = window.innerHeight + "px";
-        }
 
-        var elRect = this.element.getBoundingClientRect();
+        let elRect = this.element.getBoundingClientRect();
 
-        var edge = Utils.getElementEdges(this.element);
+        let edge = Utils.getElementEdges(this.element);
 
-        var parentRect, top, left;
+        let parentRect, top, left;
 
-        if (this.menu && this.menu.buttonElement) {
+        if (this.menu && this.menu.buttonElement)
             parentRect = this.menu.buttonElement.getBoundingClientRect();
-        }
 
         if (parentRect) {
             if (this.isSubMenu) {
@@ -312,11 +313,11 @@ export class MenuPopup extends Menu {
         }
 
 
-        var targetH = Math.min(elRect.height, window.innerHeight);
-        var availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
+        let targetH = Math.min(elRect.height, window.innerHeight);
+        let availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
 
         if (availableH < targetH && (!parentRect || this.isSubMenu)) {
-            var tmpTop = parentRect ? window.innerHeight : top;
+            let tmpTop = parentRect ? window.innerHeight : top;
             top = tmpTop - targetH - edge.top;
             top = Math.max(top, this.menuManager.menuBar.bottom);
             availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
@@ -324,10 +325,10 @@ export class MenuPopup extends Menu {
         this.element.style.maxHeight = (availableH - 10) + "px";
         elRect = this.element.getBoundingClientRect();
 
-        var availableW = window.innerWidth - left - edge.left - edge.right - 2;
+        let availableW = window.innerWidth - left - edge.left - edge.right - 2;
         if (availableW < elRect.width) {
             if (parentRect) {
-                var tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
+                let tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
                 if (tmpLeft > availableW) {
                     this.direction = "left";
                     left = tmpLeft - elRect.width + edge.left;
@@ -365,13 +366,13 @@ export class MenuPopup extends Menu {
     }
 
     scrollIfNeeded() {
-        if (!this.selectedMenu) {
+        if (!this.selectedMenu)
             return;
-        }
-        var menu = this.element;
-        var item = this.selectedMenu.buttonElement;
-        var menuRect = menu.getBoundingClientRect();
-        var itemRect = item.getBoundingClientRect();
+
+        let menu = this.element!;
+        let item = this.selectedMenu.buttonElement!;
+        let menuRect = menu.getBoundingClientRect();
+        let itemRect = item.getBoundingClientRect();
 
         if (itemRect.top < menuRect.top) {
             item.scrollIntoView(true);
@@ -386,23 +387,19 @@ export class MenuPopup extends Menu {
 
     //handle events
     onMouseMove = (e) => {
-        if (e.target === this.element) {
+        if (e.target === this.element)
             return;
-        }
 
-        if (this.menuPopup && this.isDirectedToSubMenu(e)) {
+        if (this.menuPopup && this.isDirectedToSubMenu(e))
             return;
-        }
 
-        var target = this.menuManager.getTarget(e.target);
-        if (target === this.element) {
+        let target = this.menuManager.getTarget(e.target);
+        if (target === this.element)
             return;
-        }
 
         this.moveOnTarget(target);
-        if (this.selectedMenu.map) {
+        if (this.selectedMenu?.map)
             this.openMenu();
-        }
     }
 
 
@@ -410,11 +407,11 @@ export class MenuPopup extends Menu {
         if (e.target === this.element)
             return;
 
-        var target = this.menuManager.getTarget(e.target);
-        if (target === this.element)
+        let target = this.menuManager.getTarget(e.target);
+        if (!target || target === this.element)
             return;
 
-        var host = target.$host;
+        let host = target.$host;
         if (host && host.buttonElement) {
             e.preventDefault();
             if (host.exec)
@@ -426,29 +423,29 @@ export class MenuPopup extends Menu {
     }
 
     isDirectedToSubMenu(e) {
-        var currPos = {x: e.clientX, y: e.clientY};
-        var prevPos = this.menuManager.prevPos;
-        var rect = this.menuPopup.element.getBoundingClientRect();
+        let currPos = {x: e.clientX, y: e.clientY};
+        let prevPos = this.menuManager.prevPos;
+        let rect = this.menuPopup!.element!.getBoundingClientRect();
 
-        var rectYTop = rect.top;
-        var rectYBottom = rect.bottom;
+        let rectYTop = rect.top;
+        let rectYBottom = rect.bottom;
 
         if (currPos.y < rectYTop || currPos.y > rectYBottom) {
             return false;
         }
 
-        var rectX = this.menuPopup.direction === "left" ? rect.right : rect.left;
-        var prevDiffX = Math.abs(rectX - prevPos.x);
-        var currDiffX = Math.abs(rectX - currPos.x);
+        let rectX = this.menuPopup!.direction === "left" ? rect.right : rect.left;
+        let prevDiffX = Math.abs(rectX - prevPos.x);
+        let currDiffX = Math.abs(rectX - currPos.x);
 
         if (prevDiffX < currDiffX) {
             return false;
         }
 
-        var directedToBottom = currPos.y > prevPos.y;
-        var prevDiffY = directedToBottom ? rectYBottom - prevPos.y : prevPos.y - rectYTop;
-        var tng = prevDiffY / prevDiffX;
-        var maxYDiff = tng * currDiffX;
+        let directedToBottom = currPos.y > prevPos.y;
+        let prevDiffY = directedToBottom ? rectYBottom - prevPos.y : prevPos.y - rectYTop;
+        let tng = prevDiffY / prevDiffX;
+        let maxYDiff = tng * currDiffX;
 
         return (directedToBottom && rectYBottom - maxYDiff >= currPos.y) || (!directedToBottom && rectYTop + maxYDiff <= currPos.y);
     }
@@ -461,9 +458,10 @@ export class MenuPopup extends Menu {
     }
 
     getMenuByPath(path: string) {
-        var childNode;
-        for (var i = 0; i < this.element.childNodes.length; i++) {
-            childNode = this.element.childNodes[i];
+        let childNode;
+        let childNodes = this.element!.childNodes;
+        for (let i = 0; i < childNodes.length; i++) {
+            childNode = childNodes[i];
             if (childNode.$host && childNode.$host.id === path) {
                 if (childNode.classList.contains("menu_item") && !childNode.classList.contains("disabled")) {
                     return childNode;
@@ -475,13 +473,13 @@ export class MenuPopup extends Menu {
 }
 
 export class MenuSearchBox {
-    parentPopup: MenuPopup = null;
+    parentPopup?: MenuPopup;
     isOpen = false;
     hideFiltered = false;
     value = "";
     currValue = "";
-    currPopupMenu: MenuPopup;
-    menuManager: MenuManager = null;
+    currPopupMenu?: MenuPopup;
+    menuManager?: MenuManager;
     isChanged: boolean;
     searchField: any;
     suggestionPopup: any;
@@ -513,7 +511,7 @@ export class MenuSearchBox {
             this.currValue = "";
             this.update();
         }
-        this.parentPopup = null;
+        this.parentPopup = undefined;
 
         this.element.remove();
     }
@@ -528,11 +526,11 @@ export class MenuSearchBox {
         this.currPopupMenu = parentPopup;
         if (this.isOpen) {
             this.calcElementPosition();
-            var currPopupMenu = parentPopup;
-            var valueArr = this.value.split("/");
+            let currPopupMenu: MenuPopup | null = parentPopup;
+            let valueArr = this.value.split("/");
             while (currPopupMenu) {
                 this.currPopupMenu = currPopupMenu;
-                this.currValue = valueArr.shift();
+                this.currValue = valueArr.shift() ?? "";
                 this.isChanged = true;
                 this.update();
                 this.isOpen = false;
@@ -543,14 +541,16 @@ export class MenuSearchBox {
     }
 
     calcElementPosition() {
+        if (!this.parentPopup)
+            return;
         this.parentPopup.prevMaxHeight = null;
-        var parentRect = this.parentPopup.element.getBoundingClientRect();
-        var top = parentRect.top - 20;
-        if (top < this.menuManager.menuBar.bottom) {
+        let parentRect = this.parentPopup.element!.getBoundingClientRect();
+        let top = parentRect.top - 20;
+        if (top < this.menuManager!.menuBar.bottom) {
             top = parentRect.bottom;
             if (parentRect.bottom + 20 > window.innerHeight) {
-                this.parentPopup.prevMaxHeight = this.parentPopup.element.style.maxHeight;
-                this.parentPopup.element.style.maxHeight = (parseInt(this.parentPopup.element.style.maxHeight, 10) - 20) + "px";
+                this.parentPopup.prevMaxHeight = this.parentPopup.element!.style.maxHeight;
+                this.parentPopup.element!.style.maxHeight = (parseInt(this.parentPopup.element!.style.maxHeight, 10) - 20) + "px";
                 top -= 20;
             }
         }
@@ -559,12 +559,12 @@ export class MenuSearchBox {
     }
 
     addSymbol(symbol: string) {
-        if (symbol === "/" && this.value.substr(this.value.length - 1, 1) === "/") {
+        if (symbol === "/" && this.value.substring(this.value.length - 1) === "/") {
             return;
         }
         this.value += symbol;
         if (symbol === "/") {
-            if (this.currPopupMenu.selectedMenu && this.currPopupMenu.selectedMenu.map) {
+            if (this.currPopupMenu?.selectedMenu && this.currPopupMenu.selectedMenu.map) {
                 this.currPopupMenu = this.currPopupMenu.openMenu();
                 this.currValue = "";
             }
@@ -581,15 +581,15 @@ export class MenuSearchBox {
         if (!this.isOpen) {
             return;
         }
-        var removed = this.value.substr(this.value.length - 1, 1);
-        this.value = this.value.substr(0, this.value.length - 1);
+        let removed = this.value.substring(this.value.length - 1);
+        this.value = this.value.substring(0, this.value.length - 1);
 
         if (removed === "/") {
-            this.currValue = this.value.split("/").pop();
-            this.currPopupMenu = (this.currPopupMenu.parentMenu instanceof MenuPopup) ? this.currPopupMenu.parentMenu : null;
+            this.currValue = this.value.split("/").pop() ?? "";
+            this.currPopupMenu = (this.currPopupMenu?.parentMenu instanceof MenuPopup) ? this.currPopupMenu.parentMenu : undefined;
             this.isChanged = false;
         } else {
-            this.currValue = this.currValue.substr(0, this.currValue.length - 1);
+            this.currValue = this.currValue.substring(0, this.currValue.length - 1);
             this.isChanged = true;
         }
 
@@ -621,7 +621,7 @@ export class MenuSearchBox {
     showHideMenuNode(menu, show) {
         show = show || false;
 
-        if (!show && menu.classList.contains("hover") && this.currPopupMenu.menuPopup) {
+        if (!show && menu.classList.contains("hover") && this.currPopupMenu?.menuPopup) {
             show = true;
         }
         menu.isFiltered = !show;
@@ -630,18 +630,21 @@ export class MenuSearchBox {
     }
 
     setPopupMenuHighlights() {
-        var childNode;
+        if (!this.currPopupMenu?.element)
+            return;
+        let childNode;
+        let width: number = 0;
         this.selectMenu = null;
         this.secondarySelectMenu = null;
         if (this.hideFiltered) {
-            var rect = this.currPopupMenu.element.getBoundingClientRect();
-            var edges = Utils.getElementEdges(this.currPopupMenu.element);
-            var width = rect.width - edges.left - edges.right;
+            let rect = this.currPopupMenu.element.getBoundingClientRect();
+            let edges = Utils.getElementEdges(this.currPopupMenu.element);
+            width = rect.width - edges.left - edges.right;
         }
-        var afterDivider = true;
-        var noResult = true;
+        let afterDivider = true;
+        let noResult = true;
 
-        for (var i = 0; i < this.currPopupMenu.element.childNodes.length; i++) {
+        for (let i = 0; i < this.currPopupMenu.element.childNodes.length; i++) {
             childNode = this.currPopupMenu.element.childNodes[i];
             if (childNode.classList.contains("menu_item")) {
                 this.setHighlights(childNode);
@@ -655,8 +658,8 @@ export class MenuSearchBox {
             }
         }
         if (this.hideFiltered) {
-            this.currPopupMenu.element.style.width = Math.ceil(width) + "px";
-            var noResultEl = this.currPopupMenu.element.querySelector(".menu_no_result");
+            this.currPopupMenu.element.style.width = Math.ceil(width) + "px";//TODO
+            let noResultEl = this.currPopupMenu.element.querySelector(".menu_no_result");
             if (noResult && !noResultEl) {
                 dom.buildDom(["div", {class: "menu_no_result"}, "No matching result"], this.currPopupMenu.element);
             } else if (!noResult && noResultEl) {
@@ -679,10 +682,10 @@ export class MenuSearchBox {
 
         if (noResult) {
             this.currValue = this.value;
-            var suggestionList = {};
-            var addToSuggestionList = (menus) => {
+            let suggestionList = {};
+            let addToSuggestionList = (menus) => {
                 Object.keys(menus).forEach((name) => {
-                    var item = menus[name];
+                    let item = menus[name];
                     if (item.label && item.label[0] === "~") {
                         return;
                     }
@@ -690,8 +693,8 @@ export class MenuSearchBox {
                         console.log(item);
                         return;
                     }
-                    var path = item.path;
-                    var tokens = this.getTokens(path);
+                    let path = item.path;
+                    let tokens = this.getTokens(path);
                     if (tokens) {
                         suggestionList[path] = {
                             label: path,
@@ -705,7 +708,7 @@ export class MenuSearchBox {
                 });
             };
 
-            addToSuggestionList(this.menuManager.menus.map);
+            addToSuggestionList(this.menuManager!.menus.map);
 
             this.suggestionPopup = new MenuPopup();
             this.suggestionPopup.direction = "right";
@@ -718,11 +721,11 @@ export class MenuSearchBox {
             this.suggestionPopup.parentMenu = this;
             this.suggestionPopup.open();
 
-            for (var i = 0; i < this.suggestionPopup.element.childNodes.length; i++) {
-                var childNode = this.suggestionPopup.element.childNodes[i];
-                var menuTitle = childNode.querySelector("a");
-                var innerHtml = "";
-                for (var t = 0; t < childNode.$host.tokens.length; t++) {
+            for (let i = 0; i < this.suggestionPopup.element.childNodes.length; i++) {
+                let childNode = this.suggestionPopup.element.childNodes[i];
+                let menuTitle = childNode.querySelector("a");
+                let innerHtml = "";
+                for (let t = 0; t < childNode.$host.tokens.length; t++) {
                     innerHtml += "<span class='menu-" + childNode.$host.tokens[t].type + "'>" + childNode.$host.tokens[t].value + "</span>";
                 }
                 menuTitle.innerHTML = innerHtml;
@@ -731,16 +734,16 @@ export class MenuSearchBox {
     }
 
     setHighlights(menu) {
-        var text = menu.$host.label;
-        var menuTitle = menu.querySelector("a");
+        let text = menu.$host.label;
+        let menuTitle = menu.querySelector("a");
         if (!this.currValue || !this.currValue.length) {
             menuTitle.innerHTML = text;
             this.showHideMenuNode(menu, true);
             return;
         }
-        var tokens = this.getTokens(text);
-        var innerHtml = "";
-        var show = true;
+        let tokens = this.getTokens(text);
+        let innerHtml = "";
+        let show = true;
         if (tokens) {
             if (menu.classList.contains("disabled")) {
                 innerHtml = text;
@@ -749,7 +752,7 @@ export class MenuSearchBox {
                 if (!this.selectMenu && tokens[0].type === "completion-highlight") {
                     this.selectMenu = menu;
                 }
-                for (var i = 0; i < tokens.length; i++) {
+                for (let i = 0; i < tokens.length; i++) {
                     innerHtml += "<span class='menu-" + tokens[i].type + "'>" + tokens[i].value + "</span>";
                 }
             }
@@ -761,12 +764,12 @@ export class MenuSearchBox {
         menuTitle.innerHTML = innerHtml;
     }
 
-    getTokens(string) {
-        var tokens = [];
-        var caption = string.toLowerCase();
+    getTokens(string): any[] | undefined {
+        let tokens: any[] = [];
+        let caption = string.toLowerCase();
 
-        var lower = this.currValue.toLowerCase();
-        var upper = this.currValue.toUpperCase();
+        let lower = this.currValue.toLowerCase();
+        let upper = this.currValue.toUpperCase();
 
         function addToken(value, className) {
             value && tokens.push({
@@ -775,18 +778,18 @@ export class MenuSearchBox {
             });
         }
 
-        var lastIndex = -1;
-        var matchMask = 0;
-        var index, distance;
+        let lastIndex = -1;
+        let matchMask = 0;
+        let index, distance;
 
-        var fullMatchIndex = caption.indexOf(lower);
+        let fullMatchIndex = caption.indexOf(lower);
         if (fullMatchIndex === -1) {
-            for (var j = 0; j < this.currValue.length; j++) {
-                var i1 = caption.indexOf(lower[j], lastIndex + 1);
-                var i2 = caption.indexOf(upper[j], lastIndex + 1);
+            for (let j = 0; j < this.currValue.length; j++) {
+                let i1 = caption.indexOf(lower[j], lastIndex + 1);
+                let i2 = caption.indexOf(upper[j], lastIndex + 1);
                 index = (i1 >= 0) ? ((i2 < 0 || i1 < i2) ? i1 : i2) : i2;
                 if (index < 0)
-                    return null;
+                    return;
                 distance = index - lastIndex - 1;
                 if (distance > 0) {
                     matchMask = matchMask | (1 << j);
@@ -795,13 +798,13 @@ export class MenuSearchBox {
             }
         }
 
-        var filterText = lower;
+        let filterText = lower;
         lower = caption.toLowerCase();
         lastIndex = 0;
-        var lastI = 0;
-        for (var i = 0; i <= filterText.length; i++) {
+        let lastI = 0;
+        for (let i = 0; i <= filterText.length; i++) {
             if (i !== lastI && (matchMask & (1 << i) || i === filterText.length)) {
-                var sub = filterText.slice(lastI, i);
+                let sub = filterText.slice(lastI, i);
                 lastI = i;
                 index = lower.indexOf(sub, lastIndex);
                 if (index === -1) continue;
@@ -823,43 +826,12 @@ export class MenuSearchBox {
         ]);
         this.element.$host = this;
         this.searchField = this.element.querySelector(".search_field");
-        var _this = this;
-        this.element.querySelector(".searchbtn_close").addEventListener("mousedown", function (e) {
+        let _this = this;
+        this.element?.querySelector(".searchbtn_close")?.addEventListener("mousedown", function (e) {
             _this.close();
         });
-        this.element.querySelector(".searchbtn_filter").addEventListener("mousedown", function (e) {
+        this.element?.querySelector(".searchbtn_filter")?.addEventListener("mousedown", function (e) {
             _this.switchShowHideFiltered();
         });
-    }
-}
-
-export class MenuToolBar implements ToolBar {
-
-    menuBar: MenuBar;
-    element: LayoutHTMLElement;
-    box: number[];
-    size = 27;
-
-    setBox(x, y, w, h) {
-        Utils.setBox(this.element, x, y, w, h);
-        this.box = [x, y, w, h];
-    }
-
-    render() {
-        if (!this.element) {
-            this.element = dom.buildDom(["div", {
-                class: "menuToolBar",
-            }, [
-                "div", {
-                    class: "menuBar",
-                    ref: "menuBar"
-                }
-            ]], null, this);
-            let menuManager = MenuManager.getInstance();
-            menuManager.build();
-            menuManager.buildMenuBar(this.menuBar);
-            menuManager.bindKeys();
-        }
-        return this.element
     }
 }

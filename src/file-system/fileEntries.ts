@@ -1,17 +1,15 @@
-type Leaf = {
+export type Leaf = {
     kind: FileType;
     name: string;
     path: string;
     children?: Leaf[];
-    self: FileSystemEntry;
+    self?: FileSystemEntry;
 };
 
 const MAX_SIZE = 8e6;
 
-enum FileType {
-    directory = "directory",
-    file = "file"
-}
+
+export declare type FileType = 'directory' | 'file';
 
 export abstract class FileSystemEntry {
     abstract kind: FileType;
@@ -35,14 +33,15 @@ export abstract class FileSystemEntry {
 
         const leaf: Leaf = {name, kind, path, self: this};
 
-        if (kind == FileType.directory) leaf["children"] = [];
+        if (kind == "directory")
+            leaf["children"] = [];
 
         return leaf;
     }
 }
 
 export class File extends FileSystemEntry {
-    public readonly kind = FileType.file;
+    public readonly kind: FileType = "file";
 
     constructor(
         protected fileSystemHandle: FileSystemFileHandle,
@@ -69,8 +68,8 @@ export class File extends FileSystemEntry {
 }
 
 export class Directory extends FileSystemEntry {
-    childNodes = [];
-    public readonly kind = FileType.directory;
+    childNodes: FileSystemEntry[] = [];
+    public readonly kind: FileType = "directory";
 
     constructor(
         protected fileSystemHandle: FileSystemDirectoryHandle,
@@ -91,7 +90,7 @@ export class Directory extends FileSystemEntry {
         const entries = [root];
 
         while (entries.length) {
-            const entry = entries.pop();
+            const entry = entries.pop()!;
             const dir = entry.self as Directory;
 
             for (const childNode of await dir.children()) {
@@ -100,7 +99,7 @@ export class Directory extends FileSystemEntry {
                 if (child.kind == "directory") {
                     entries.push(child);
                 }
-                entry.children.push(child);
+                entry.children!.push(child);
             }
 
             delete entry.self;
@@ -113,11 +112,11 @@ export class Directory extends FileSystemEntry {
         const entries = await this.children();
 
         while (entries.length) {
-            const entry = entries.pop();
+            const entry = entries.pop()!;
             if (entry.path == pathname) return entry;
 
             if (entry.kind == "directory")
-                entries.push(...(await entry.children()));
+                entries.push(...(await (entry as Directory).children()));
         }
 
         throw new Error(`File not found in tree: ${pathname}`);

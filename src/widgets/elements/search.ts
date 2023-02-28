@@ -16,11 +16,11 @@ export class SettingsSearchBox {
     }
 
     filter() {
-        var childNode;
-        var noResult = true;
+        let childNode;
+        let noResult = true;
         this.searchResultsCount = 0;
 
-        for (var i = 0; i < this.prefsParentNode.childNodes.length; i++) {
+        for (let i = 0; i < this.prefsParentNode.childNodes.length; i++) {
             childNode = this.prefsParentNode.childNodes[i];
 
             this.updateVisibility(childNode);
@@ -44,9 +44,9 @@ export class SettingsSearchBox {
     }
 
     updateVisibility(item: LayoutHTMLElement) {
-        var text = item.innerText;
-        var tokens = this.getTokens(text);
-        var show = true;
+        let text = item.innerText;
+        let tokens = this.getTokens(text);
+        let show = true;
         if (!tokens) {
             show = false;
         } else {
@@ -56,11 +56,11 @@ export class SettingsSearchBox {
     }
 
     getTokens(string) {
-        var tokens = [];
-        var caption = string.toLowerCase();
+        let tokens: {}[] = [];
+        let caption = string.toLowerCase();
 
-        var lower = this.currValue.toLowerCase();
-        var upper = this.currValue.toUpperCase();
+        let lower = this.currValue.toLowerCase();
+        let upper = this.currValue.toUpperCase();
 
         function addToken(value, className) {
             value && tokens.push({
@@ -69,15 +69,15 @@ export class SettingsSearchBox {
             });
         }
 
-        var lastIndex = -1;
-        var matchMask = 0;
-        var index, distance;
+        let lastIndex = -1;
+        let matchMask = 0;
+        let index, distance;
 
-        var fullMatchIndex = caption.indexOf(lower);
+        let fullMatchIndex = caption.indexOf(lower);
         if (fullMatchIndex === -1) {
-            for (var j = 0; j < this.currValue.length; j++) {
-                var i1 = caption.indexOf(lower[j], lastIndex + 1);
-                var i2 = caption.indexOf(upper[j], lastIndex + 1);
+            for (let j = 0; j < this.currValue.length; j++) {
+                let i1 = caption.indexOf(lower[j], lastIndex + 1);
+                let i2 = caption.indexOf(upper[j], lastIndex + 1);
                 index = (i1 >= 0) ? ((i2 < 0 || i1 < i2) ? i1 : i2) : i2;
                 if (index < 0)
                     return null;
@@ -89,13 +89,13 @@ export class SettingsSearchBox {
             }
         }
 
-        var filterText = lower;
+        let filterText = lower;
         lower = caption.toLowerCase();
         lastIndex = 0;
-        var lastI = 0;
-        for (var i = 0; i <= filterText.length; i++) {
+        let lastI = 0;
+        for (let i = 0; i <= filterText.length; i++) {
             if (i !== lastI && (matchMask & (1 << i) || i === filterText.length)) {
-                var sub = filterText.slice(lastI, i);
+                let sub = filterText.slice(lastI, i);
                 lastI = i;
                 index = lower.indexOf(sub, lastIndex);
                 if (index === -1) continue;
@@ -118,7 +118,7 @@ export class SettingsSearchBox {
         this.element.$host = this;
         this.searchField = this.element.querySelector(".search_field");
         this.searchResults = this.element.querySelector(".search_results");
-        var _this = this;
+        let _this = this;
         this.element.querySelector(".searchbtn_close").addEventListener("mousedown", function (e) {
             _this.clear();
         });

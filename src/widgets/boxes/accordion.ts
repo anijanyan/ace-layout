@@ -1,8 +1,8 @@
 import {AccordionHandler} from "../../mouse/accordion_handler";
 import {Box} from "./box";
-import {Utils} from "../../lib";
+import {Utils} from "../../utils/lib";
 
-import {AccordionOptions, Widget} from "../widget";
+import {AccordionOptions, AccordionSection, Widget} from "../widget";
 import {dom} from "../../utils/dom";
 import * as accordionCSS from "../../../styles/accordion.css";
 
@@ -10,33 +10,32 @@ dom.importCssString(accordionCSS, "accordion.css");
 
 const BOX_MIN_SIZE = 80;
 
-export class Accordion implements Widget {
-    toggleBarList = [];
-    splitterList = [];
-    toggleBlockList = [];
-    boxList = [];
-    boxMinSize = 30;
-    toggleBarHeight = 20;
-    splitterSize = 1;
+export class Accordion extends Box implements Widget {//TODO extending from Box isn't right
+    toggleBarList: HTMLElement[] = [];
+    splitterList: HTMLElement[] = [];
+    toggleBlockList: HTMLElement[] = [];
+    boxMinSize: number = 30;
+    toggleBarHeight: number = 20;
+    splitterSize: number = 1;
     vertical: boolean;
-    color: any;
-    boxes: any;
-    minSize: any;
-    minVerticalSize: any;
-    minHorizontalSize: any;
+    color: string;
+    sections: AccordionSection[];
+    minSize: number;
+    minVerticalSize: number;
+    minHorizontalSize: number;
     padding: { top: number; left: number; bottom: number; right: number };
-    size: number;
-    nextChangedBoxes: any[];
-    prevChangedBoxes: any[];
-    box: any[];
-    element: HTMLElement;
+    size?: number;
+    nextChangedIndexes?: number[];
+    prevChangedIndexes?: number[];
+    rect: [number, number, number, number];
     hidden: boolean;
-    parent: any;
+    parent: Box;
 
     constructor(options: AccordionOptions) {
+        super(options);
         this.vertical = options.vertical || false;
-        this.color = options.color;
-        this.boxes = options.boxes;
+        this.color = options.color ?? "";
+        this.sections = options.sections;
         this.minSize = options.minSize || BOX_MIN_SIZE;
         this.minVerticalSize = options.minVerticalSize || this.minSize;
         this.minHorizontalSize = options.minHorizontalSize || this.minSize;
@@ -44,87 +43,74 @@ export class Accordion implements Widget {
         this.size = options.size;
     }
 
-    hasNextOpenedBoxes(index) {
-        for (var i = index; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
+    hasNextOpenedBlocks(index: number): boolean {
+        for (let i = index; i < this.toggleBlockList.length; i++) {
+            if (this.isOpenedByIndex(i))
                 return true;
-            }
         }
 
         return false;
     }
 
-    hasPrevOpenedBoxes(index) {
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i)) {
+    hasPrevOpenedBlocks(index: number): boolean {
+        for (let i = index - 1; i >= 0; i--) {
+            if (this.isOpenedByIndex(i))
                 return true;
-            }
         }
 
         return false;
     }
 
-    isOpenedByIndex(index) {
+    isOpenedByIndex(index: number): boolean {
         return this.isOpenedBlock(this.toggleBlockList[index]);
     }
 
-    isOpenedBlock(toggleBlock) {
+    isOpenedBlock(toggleBlock: HTMLElement): boolean {
         return toggleBlock.classList.contains("toggle-opened");
     }
 
     keepState() {
-        this.nextChangedBoxes = [];
-        this.prevChangedBoxes = [];
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
+        this.nextChangedIndexes = [];
+        this.prevChangedIndexes = [];
+        for (let i = 0; i < this.toggleBlockList.length; i++) {
             if (this.isOpenedByIndex(i)) {
-                this.boxList[i].$prevSize = this.boxList[i].$size;
+                let section = this.sections[i];
+                section.previousSize = section.currentSize;
             }
         }
     }
 
     dischargeState() {
-        this.nextChangedBoxes = null;
-        this.prevChangedBoxes = null;
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
-                this.boxList[i].$prevSize = null;
-            }
+        this.nextChangedIndexes = undefined;
+        this.prevChangedIndexes = undefined;
+        for (let i = 0; i < this.toggleBlockList.length; i++) {
+            if (this.isOpenedByIndex(i))
+                this.sections[i].previousSize = undefined;
         }
     }
 
-    addChangedBox(index, changedBoxes) {
-        if (changedBoxes && changedBoxes.indexOf(index) < 0) {
-            changedBoxes.unshift(index);
-        }
-    }
-
-    recalculatePreviousBoxesSize(index, top, maxChangeSize) {
-        var box, rect, prevSize, currentSize;
-        var changedSize = 0;
-        var done = false;
-        for (var i = index - 1; i >= 0; i--) {
+    recalculatePreviousSectionsSize(index: number, top: number, maxChangeSize?: number): number {
+        let changedSize = 0;
+        for (let i = index - 1; i >= 0; i--) {
             if (this.isOpenedByIndex(i)) {
-                box = this.boxList[i];
-                rect = box.element.getBoundingClientRect();
-                prevSize = rect.height;
-                currentSize = Math.max(top - rect.top, this.boxMinSize);
+                let section = this.sections[i];
+                let rect = section.box.element.getBoundingClientRect();
+                let done = false;
+                let prevSize = rect.height;
+                let currentSize = Math.max(top - rect.top, this.boxMinSize);
                 top -= rect.height;
                 if (currentSize < prevSize) {
-                    if (currentSize > this.boxMinSize) {
+                    if (currentSize > this.boxMinSize)
                         done = true;
-                    }
 
-                    this.addChangedBox(i, this.prevChangedBoxes);
-                    box.$size = currentSize;
+                    if (!this.prevChangedIndexes!.includes(i))
+                        this.prevChangedIndexes!.unshift(i);
+
+                    section.currentSize = currentSize;
                     changedSize += (prevSize - currentSize);
-                    if (done) {
+                    if (done || (maxChangeSize != undefined && changedSize >= maxChangeSize))
                         break;
-                    }
-                    if (maxChangeSize && changedSize >= maxChangeSize) {
-                        break;
-                    }
                 }
-
             }
 
             top -= this.toggleBarHeight;
@@ -133,33 +119,29 @@ export class Accordion implements Widget {
         return changedSize;
     }
 
-    recalculateNextBoxesSize(index, top, maxChangeSize) {
-        var box, rect, prevSize, currentSize;
-        var changedSize = 0;
-        var done = false;
-        for (var i = index; i < this.toggleBlockList.length; i++) {
+    recalculateNextSectionsSize(index: number, top: number, maxChangeSize?: number): number {
+        let changedSize = 0;
+        for (let i = index; i < this.toggleBlockList.length; i++) {
             if (this.isOpenedByIndex(i)) {
-                box = this.boxList[i];
-                rect = box.element.getBoundingClientRect();
-                prevSize = rect.height;
-                currentSize = Math.max(rect.bottom - top - this.toggleBarHeight, this.boxMinSize);
+                let section = this.sections[i];
+                let rect = section.box.element.getBoundingClientRect();
+                let done = false;
+                let prevSize = rect.height;
+                let currentSize = Math.max(rect.bottom - top - this.toggleBarHeight, this.boxMinSize);
                 top += rect.height;
+
                 if (currentSize < prevSize) {
-                    if (currentSize > this.boxMinSize) {
+                    if (currentSize > this.boxMinSize)
                         done = true;
-                    }
 
-                    this.addChangedBox(i, this.nextChangedBoxes);
-                    box.$size = currentSize;
+                    if (!this.nextChangedIndexes!.includes(i))
+                        this.nextChangedIndexes!.unshift(i);
+
+                    section.currentSize = currentSize;
                     changedSize += (prevSize - currentSize);
-                    if (done) {
+                    if (done || (maxChangeSize != undefined && changedSize >= maxChangeSize))
                         break;
-                    }
-                    if (maxChangeSize && changedSize >= maxChangeSize) {
-                        break;
-                    }
                 }
-
             }
 
             top += this.toggleBarHeight;
@@ -169,93 +151,85 @@ export class Accordion implements Widget {
         return changedSize;
     }
 
-    restoreChangedSizes(size, changedBoxes) {
-        if (!changedBoxes) {
+    restoreChangedSizes(size: number, changedIndexes) {
+        if (!changedIndexes)
             return size;
-        }
-        var index, box, currSize;
-        while (changedBoxes.length && size > 0) {
-            index = changedBoxes[0];
-            box = this.boxList[index];
 
-            currSize = box.$size;
-            box.$size = Math.min(box.$prevSize, currSize + size);
-            size -= (box.$size - currSize);
-            if (box.$size >= box.$prevSize) {
-                changedBoxes.shift();
-            }
+        while (changedIndexes.length && size > 0) {
+            let index = changedIndexes[0];
+            let section = this.sections[index];
+            let currSize = section.currentSize!;
+            section.currentSize = Math.min(section.previousSize!, currSize + size);
+            size -= (section.currentSize - currSize);
+            if (section.currentSize >= section.previousSize!)
+                changedIndexes.shift();
         }
 
         return size;
     }
 
-    expandPrevBoxes(index, size) {
-        size = this.restoreChangedSizes(size, this.prevChangedBoxes);
-        if (size <= 0) {
+    expandPreviousSections(index: number, size: number) {
+        size = this.restoreChangedSizes(size, this.prevChangedIndexes);
+        if (size <= 0)
             return;
-        }
-        var boxList = [];
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i)) {
-                boxList.push(this.boxList[i]);
-            }
+
+        let openedSectionsList: AccordionSection[] = [];
+        for (let i = index - 1; i >= 0; i--) {
+            if (this.isOpenedByIndex(i))
+                openedSectionsList.push(this.sections[i]);
         }
 
-        var count = boxList.length;
-        if (!count) return;
-
-        var remainder = size % count;
-        var addSize = (size - remainder) / count;
-
-        for (var i = 0; i < count; i++) {
-            boxList[i].$size += addSize;
-        }
-        boxList[0].$size += remainder;
+        this.applySizeToOpenedSections(size, openedSectionsList);
     }
 
-    expandNextBoxes(index: number, size: number) {
-        size = this.restoreChangedSizes(size, this.nextChangedBoxes);
-        if (size <= 0) {
+    expandNextSections(index: number, size: number) {
+        size = this.restoreChangedSizes(size, this.nextChangedIndexes);
+        if (size <= 0)
             return;
-        }
-        var boxList = [];
-        for (var i = index; i < this.toggleBlockList.length; i++) {
+
+        let openedSectionsList: AccordionSection[] = [];
+        for (let i = index; i < this.toggleBlockList.length; i++) {
             if (this.isOpenedByIndex(i)) {
-                boxList.push(this.boxList[i]);
+                openedSectionsList.push(this.sections[i]);
             }
         }
 
-        var count = boxList.length;
+        this.applySizeToOpenedSections(size, openedSectionsList);
+    }
+
+    applySizeToOpenedSections(size: number, openedSections: AccordionSection[]) {
+        let count = openedSections.length;
         if (!count) return;
 
-        var remainder = size % count;
-        var addSize = (size - remainder) / count;
+        let remainder = size % count;
+        let addSize = (size - remainder) / count;
 
-        for (var i = 0; i < count; i++) {
-            boxList[i].$size += addSize;
+        for (let i = 0; i < count; i++) {
+            openedSections[i].currentSize! += addSize;
         }
-        boxList[0].$size += remainder;
+        openedSections[0].currentSize! += remainder;
     }
 
     resize() {
-        // @ts-ignore
-        this.$updateChildSize(...this.box);
+        this.$updateChildSize(...this.rect);
     }
 
     render() {
         if (this.element)
             return this.element;
+
         this.element = dom.buildDom(["div", {
             class: "box accordion",
             $host: this,
         }]);
 
-        var box;
-        var splitter;
-        var toggleBlock;
-        var toggleBar;
-        for (var i = 0; i < this.boxes.length; i++) {
-            box = this.boxes[i];
+        let section: AccordionSection;
+        let splitter: HTMLElement;
+        let toggleBlock: HTMLElement;
+        let toggleBar: HTMLElement;
+
+        for (let i = 0; i < this.sections.length; i++) {
+            section = this.sections[i];
 
             if (i > 0) {
                 splitter = dom.buildDom(["div", {
@@ -285,16 +259,14 @@ export class Accordion implements Widget {
                 onclick: function (e) {
                     AccordionHandler.toggleBarOnClick(e)
                 }
-            }, ["div", {class: "title"}, box.title]]);
+            }, ["div", {class: "title"}, section.title]]);
 
-            box = box.obj;
 
-            box.$size = box._$size = parseInt(box.size, 10);
-            this.boxList.push(box);
+            section.currentSize = section.savedSize = parseInt(section.box.size?.toString() ?? "", 10);
 
             toggleBlock.appendChild(toggleBar);
             this.toggleBarList.push(toggleBar);
-            toggleBlock.appendChild(box.render());
+            toggleBlock.appendChild(section.box.render());
 
             this.element.appendChild(toggleBlock);
             this.toggleBlockList.push(toggleBlock);
@@ -303,106 +275,102 @@ export class Accordion implements Widget {
         this.element.style.backgroundColor = this.color;
         this.element.style.position = "absolute";
 
-        this.calculateChildrenSizePercents();
+        this.calculateSectionsSizesPercents();
 
         return this.element;
     }
 
-    //TODO: rename
-    calculateChildrenSizePercents() {
-        var box;
-        var totalSize = 0;
+    calculateSectionsSizesPercents() {
+        let totalSize = 0;
+        let actualSizes: number[] = [];
 
-        for (var i = 0; i < this.boxList.length; i++) {
-            box = this.boxList[i];
-            box.boxSize = this.isOpenedByIndex(i) ? box.$size : box._$size;
-            totalSize += this.isOpenedByIndex(i) ? box.$size : box._$size;
+        for (let i = 0; i < this.sections.length; i++) {
+            let section = this.sections[i];
+            actualSizes.push(this.isOpenedByIndex(i) ? section.currentSize! : section.savedSize!);
+            totalSize += actualSizes[i];
         }
 
 
-        var minPercent = Math.floor(this.boxMinSize / totalSize * 100);
-        var maxPercent = 100 - minPercent * (this.boxList.length - 1);
+        let minPercent = Math.floor(this.boxMinSize / totalSize * 100);
+        let maxPercent = 100 - minPercent * (this.sections.length - 1);
 
 
-        var totalPercent = 0;
-        for (var i = 0; i < this.boxList.length; i++) {
-            box = this.boxList[i];
-            box.$sizePercent = Math.floor(box.boxSize / totalSize * 100);
-            box.$sizePercent = Math.min(Math.max(box.$sizePercent, minPercent), maxPercent);
-            totalPercent += box.$sizePercent;
+        let totalPercent = 0;
+        for (let i = 0; i < this.sections.length; i++) {
+            let section = this.sections[i];
+            section.sizePercent = Math.floor(actualSizes[i] / totalSize * 100);
+            section.sizePercent = Math.min(Math.max(section.sizePercent, minPercent), maxPercent);
+            totalPercent += section.sizePercent;
         }
 
-        if (totalPercent !== 100) {
-            box.$sizePercent += (100 - totalPercent);
-        }
+        if (totalPercent !== 100)
+            this.sections[this.sections.length - 1].sizePercent! += (100 - totalPercent);
     }
 
     setBox(x, y, w, h) {
-        this.box = [x, y, w, h];
+        this.rect = [x, y, w, h];
         Utils.setBox(this.element, x, y, w, h);
         this.recalculateChildrenSizes();
         this.$updateChildSize(x, y, w, h);
     }
 
     recalculateChildrenSizes(index?: number) {
-        var height = this.box[3];
+        let height = this.rect[3];
         height -= this.toggleBarHeight * this.toggleBarList.length;
         height -= this.splitterSize * this.splitterList.length;
-        var box;
-        var totalSize = 0;
-        var openedIndexes = [];
+        let totalSize = 0;
+        let openedIndexes: number[] = [];
 
-        for (var i = 0; i < this.boxList.length; i++) {
-            box = this.boxList[i];
+        for (let i = 0; i < this.sections.length; i++) {
+            let section = this.sections[i];
 
-            box.$size = Math.max(Math.floor((height * box.$sizePercent) / 100), this.boxMinSize);
+            section.currentSize = Math.max(Math.floor((height * section.sizePercent!) / 100), this.boxMinSize);
             if (this.isOpenedByIndex(i)) {
-                totalSize += box.$size;
+                totalSize += section.currentSize;
                 openedIndexes.push(i);
             } else {
-                box._$size = box.$size;
-                box.$size = 0;
+                section.savedSize = section.currentSize;
+                section.currentSize = 0;
             }
         }
-        var spareSize = height - totalSize;
+        let spareSize = height - totalSize;
 
         if (!spareSize)
             return;
 
         if (index !== undefined) {
-            var prevOpenedIndexes = [];
+            let prevOpenedIndexes: number[] = [];
             while (openedIndexes.length && openedIndexes[0] < index) {
-                prevOpenedIndexes.push(openedIndexes.shift());
+                prevOpenedIndexes.push(openedIndexes.shift()!);
             }
             if (!openedIndexes.length)
                 openedIndexes = prevOpenedIndexes;
         }
 
-        var prevSize, changedSize, openedBoxesCount, remainder, addSize;
+        let prevSize, changedSize, openedBoxesCount, remainder, addSize;
 
         while (openedIndexes.length && spareSize) {
-            var changedIndexes = [];
+            let changedIndexes: number[] = [];
             openedBoxesCount = openedIndexes.length;
 
             remainder = spareSize % openedBoxesCount;
             addSize = (spareSize - remainder) / openedBoxesCount;
-            for (var i = 0; i < openedIndexes.length; i++) {
-                box = this.boxList[openedIndexes[i]];
-                prevSize = box.$size;
+            for (let i = 0; i < openedIndexes.length; i++) {
+                let section = this.sections[openedIndexes[i]];
+                prevSize = section.currentSize;
                 if (openedBoxesCount === 1)
                     addSize += remainder;
 
-                box.$size += addSize;
-                box.$size = Math.max(box.$size, this.boxMinSize);
+                section.currentSize += addSize;
+                section.currentSize = Math.max(section.currentSize!, this.boxMinSize);
 
-                changedSize = box.$size - prevSize;
+                changedSize = section.currentSize - prevSize;
 
                 spareSize -= changedSize;
                 openedBoxesCount--;
 
-                if (changedSize < 0) {
+                if (changedSize < 0)
                     changedIndexes.push(openedIndexes[i]);
-                }
             }
 
             openedIndexes = changedIndexes;
@@ -412,18 +380,16 @@ export class Accordion implements Widget {
     $updateChildSize(x, y, w, h) {
         x = 0;
         y = 0;
-        var boxSize;
 
-        var toggleBlock, box;
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            toggleBlock = this.toggleBlockList[i];
-            box = this.boxList[i];
-            boxSize = box.$size;
+        for (let i = 0; i < this.toggleBlockList.length; i++) {
+            let toggleBlock = this.toggleBlockList[i];
+            let section = this.sections[i];
+            let boxSize = section.currentSize!;
 
             h = this.toggleBarHeight + boxSize;
             Utils.setBox(toggleBlock, x, y, w, h);
             y += this.toggleBarHeight;
-            box.setBox(0, this.toggleBarHeight, w, boxSize);
+            section.box.setBox(0, this.toggleBarHeight, w, boxSize);
 
             y += boxSize;
 
@@ -434,66 +400,26 @@ export class Accordion implements Widget {
         }
     }
 
-    toggleShowHide() {
-        Box.enableAnimation();
-        this.hidden = !this.hidden;
-        this.parent.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            self.parent.resize();
-        });
-    }
-
-    hide() {
-        Box.enableAnimation();
-        this.hidden = true;
-        this.parent.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            self.parent.resize();
-        });
-    }
-
-    show() {
-        Box.enableAnimation();
-        this.hidden = false;
-        this.parent.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            self.parent.resize();
-        });
-    }
-
     remove() {
         if (this.element) this.element.remove();
         if (this.parent) {
             if (this.vertical === this.parent.vertical)
-                this.parent.changeMinSize(-this.minSize);
+                this.parent.minSize -= this.minSize;//TODO why did we need this?
 
-            if (this.parent[0] == this) this.parent[0] = null;
-            if (this.parent[1] == this) this.parent[1] = null;
-            this.parent = null;
+            if (this.parent[0] == this) this.parent[0] = undefined;
+            if (this.parent[1] == this) this.parent[1] = undefined;
         }
     }
 
     toJSON() {
-        var boxes = [];
-        var box;
+        let sections: any[] = [];
+        let section: AccordionSection;
 
-        for (var i = 0; i < this.boxes.length; i++) {
-            box = this.boxes[i];
-            boxes.push({
-                title: box.title,
-                boxData: box.obj.toJSON()
+        for (let i = 0; i < this.sections.length; i++) {
+            section = this.sections[i];
+            sections.push({
+                title: section.title,
+                boxData: section.box.toJSON()
             });
         }
 
@@ -501,7 +427,7 @@ export class Accordion implements Widget {
             type: "accordion",
             vertical: this.vertical,
             size: this.size,
-            boxes: boxes
+            sections: sections
         }
     }
 }

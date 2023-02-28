@@ -1,5 +1,5 @@
 import {Box} from "./box";
-import {Utils} from "../../lib";
+import {Utils} from "../../utils/lib";
 
 import {AcePopup} from 'ace-code/src/autocomplete/popup';
 
@@ -7,10 +7,11 @@ export class ListBox extends Box {
     private popup: AcePopup;
 
     render() {
-        if (this.element) return this.element;
-        super.render();
+        if (this.element)
+            return this.element;
+        this.element = super.render();
 
-        var popup = new AcePopup();
+        let popup = new AcePopup();
         popup.renderer.setStyle("ace_listBox");
         popup.container.style.display = "block";
         popup.container.style.position = "absolute";
@@ -22,13 +23,13 @@ export class ListBox extends Box {
         popup.setRow(-1);
         popup.on("click", (e) => {
             e.stop();
-            var data = popup.getData(popup.getRow());
+            let data = popup.getData(popup.getRow());
             //@ts-ignore
             this._signal("select", data);
         });
         popup.on("dblclick", (e) => {
             e.stop();
-            var data = popup.getData(popup.getRow());
+            let data = popup.getData(popup.getRow());
             //@ts-ignore
             this._signal("choose", data);
         });

@@ -19,7 +19,7 @@ export namespace dom {
             return arr;
         }
         if (typeof arr[0] != "string" || !arr[0]) {
-            var els = [];
+            var els: any[] = [];
             for (var i = 0; i < arr.length; i++) {
                 var ch = buildDom(arr[i], parent, refs);
                 ch && els.push(ch);
@@ -160,7 +160,7 @@ export namespace dom {
     };
 
     var strictCSP;
-    var cssCache = [];
+    var cssCache: any[] | null = [];
     export var useStrictCSP = function (value) {
         strictCSP = value;
         if (value == false) insertPendingStyles();
@@ -276,7 +276,7 @@ export namespace dom {
 
     if (typeof document !== "undefined") {
         // detect CSS transformation support
-        var div = document.createElement("div");
+        var div: HTMLElement | null = document.createElement("div");
         if (HI_DPI && div.style.transform !== undefined)
             HAS_CSS_TRANSFORMS = true;
         if (!useragent.isEdge && typeof div.style.animationName !== "undefined")

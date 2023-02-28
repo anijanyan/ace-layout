@@ -8,23 +8,14 @@ import modeList = require("ace-code/src/ext/modelist");
 import {Mode as JSMode} from "ace-code/src/mode/javascript";
 import {Mode as CSSMode} from "ace-code/src/mode/css";
 import {Mode as HtmlMode} from "ace-code/src/mode/html";
+import {Mode as TsMode} from "ace-code/src/mode/typescript";
 import {LayoutEditor} from "../widget";
 import "ace-code/src/ext/language_tools";
 
-//TODO this is for demo
-function parseJson(name) {
-    try {
-        let data = localStorage[name];
-        return data && JSON.parse(data);
-    } catch (e) {
-        return null;
-    }
-}
-
-export class AceEditor implements LayoutEditor {
+export class AceEditor implements LayoutEditor<Ace.EditSession> {
     editor: Ace.Editor;
     container: HTMLElement;
-    tab?: Tab<Ace.EditSession>;
+    tab: Tab<Ace.EditSession>;
 
     resize() {
         this.editor.resize();
@@ -34,15 +25,8 @@ export class AceEditor implements LayoutEditor {
         this.editor.focus();
     }
 
-    hide() {
-        if (this.tab) {
-            this.saveMetadata();
-        }
-    }
-
     destroy() {
-        this.saveMetadata();
-        this.editor.setSession(null);
+        this.editor.setSession(ace.createEditSession("", this.getMode()));
         this.editor.destroy();
         this.container.remove();
     }
@@ -61,24 +45,20 @@ export class AceEditor implements LayoutEditor {
         });
     }
 
-    setSession(tab: Tab<Ace.EditSession>, value?: string) {
-        this.saveMetadata();
-
+    setSession(tab: Tab<Ace.EditSession>, value?: string | null) {
         this.tab = tab;
-
         this.initTabSession(value);
-
         this.editor.setSession(this.tab.session);
     }
 
-    private initTabSession(value?: string) {
+    private initTabSession(value?: string | null) {
         if (this.tab.session && value == null)
             return;
 
         this.tab.session ??= ace.createEditSession(value ?? "", this.getMode());
 
         if (value == null) {
-            this.loadMetadata();
+            this.restoreSessionFromJson(this.tab);
         } else {
             this.tab.session.setValue(value);
         }
@@ -86,7 +66,7 @@ export class AceEditor implements LayoutEditor {
 
     private getMode() {
         if (this.tab.path !== undefined) {
-            var mode = modeList.getModeForPath(this.tab.path).mode
+            let mode = modeList.getModeForPath(this.tab.path).mode;
 
             //TODO: set mode
             switch (mode) {
@@ -96,41 +76,17 @@ export class AceEditor implements LayoutEditor {
                     return new CSSMode();
                 case "ace/mode/html":
                     return new HtmlMode();
+                case "ace/mode/typescript":
+                    return new TsMode();
             }
         }
         return null;
     }
 
-    //TODO for demo (shouldn't be here)
-    private loadMetadata() {
-        var path = this.tab.path;
-        var session = this.tab.session;
-        var metadata = parseJson("@file@" + path)
-        if (!metadata) return;
-        try {
-            if (typeof metadata.value == "string" && metadata.value != session.getValue()) {
-                session.doc.setValue(metadata.value);
-            }
-            if (metadata.selection) {
-                session.selection.fromJSON(metadata.selection);
-            }
-            if (metadata.scroll) {
-                session.setScrollLeft(metadata.scroll[0]);
-                session.setScrollTop(metadata.scroll[1]);
-            }
-
-        } catch (e) {
-            console.error(e)
-        }
-    }
-
-    private saveMetadata() {
-        if (!this.tab || !this.tab.path || !this.tab.session)
-            return;
-
-        var session = this.tab.session;
-        var undoManager = session.getUndoManager();
-        localStorage["@file@" + this.tab.path] = JSON.stringify({
+    public sessionToJSON(tab: Tab<Ace.EditSession>) {
+        let session = tab.session;
+        let undoManager = session.getUndoManager();
+        return JSON.stringify({
             selection: session.selection.toJSON(),
             //@ts-ignore
             undoManager: undoManager.toJSON(),
@@ -139,7 +95,31 @@ export class AceEditor implements LayoutEditor {
                 session.getScrollLeft(),
                 session.getScrollTop()
             ],
-        });
+        })
+    }
+
+    public restoreSessionFromJson(tab: Tab<Ace.EditSession>) {
+        if (!tab.session || !tab.sessionValue)
+            return;
+
+        let session = tab.session;
+        let json = JSON.parse(tab.sessionValue);
+        try {
+            if (typeof json.value == "string" && json.value != session.getValue())
+                session.doc.setValue(json.value);
+
+            if (json.selection)
+                session.selection.fromJSON(json.selection);
+
+            if (json.scroll) {
+                session.setScrollLeft(json.scroll[0]);
+                session.setScrollTop(json.scroll[1]);
+            }
+
+            tab.sessionValue = undefined;
+        } catch (e) {
+            console.error(e)
+        }
     }
 }
 

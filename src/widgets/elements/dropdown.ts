@@ -1,4 +1,4 @@
-import {Utils} from "../../lib";
+import {Utils} from "../../utils/lib";
 
 import {DropdownElement, DropdownOptions} from "../widget";
 import {dom} from "../../utils/dom";
@@ -24,7 +24,7 @@ export class Dropdown {
 
     constructor(options: DropdownOptions) {
         let {disabled, items, value, className, width, ...other} = options;
-        this.disabled = disabled;
+        this.disabled = disabled ?? false;
         this.items = items;
         this.value = value ?? items[0].value;
         this.className = className || "black_dropdown";
@@ -65,7 +65,7 @@ export class Dropdown {
             ["div", {
                 class: "button"
             }]
-        ]], null, this);
+        ]], undefined, this);
 
         this.element.$host = this;
         this.updateLabel();
@@ -149,7 +149,7 @@ export class Dropdown {
 
 class Popup {
     items: DropdownElement[];
-    selectedItem: string;
+    selectedItem?: string;
     parent: Dropdown;
     selectCallback: (host) => void;
     activeItem;
@@ -169,7 +169,7 @@ class Popup {
             return;
         }
 
-        let result = [];
+        let result: any[] = [];
 
         if (this.items) {
             let items = Object.values(this.items).sort(function (item1, item2) {

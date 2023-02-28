@@ -1,8 +1,9 @@
 import {Directory} from "./fileEntries";
+import type {File, Leaf} from "./fileEntries";
 import {EventEmitter} from "events";
 
 export class FileSystemWeb extends EventEmitter {
-    private directory: Directory | void;
+    private directory: Directory | null;
 
     private get dir(): Directory {
         if (!this.directory)
@@ -10,7 +11,7 @@ export class FileSystemWeb extends EventEmitter {
         return this.directory;
     }
 
-    async open() {
+    async open(): Promise<{ nodes: Leaf[] } | undefined> {
         //TODO: this would work only on chrome
         const handle = await window
             //@ts-ignore
@@ -27,7 +28,7 @@ export class FileSystemWeb extends EventEmitter {
         }
     }
 
-    async getFileTree() {
+    async getFileTree(): Promise<{ nodes: Leaf[] } | undefined> {
         if (this.directory) {
             const nodes = [await this.dir.getFileTee()];
             return {nodes: nodes};
@@ -36,7 +37,7 @@ export class FileSystemWeb extends EventEmitter {
 
     async openFile(treeNode) {
         const file = await this.dir.getFileByPath(treeNode.path);
-        const fileText = await file.getFileText();
+        const fileText = await (file as File).getFileText();
         this.emit("openFile", treeNode, fileText);
     }
 }
