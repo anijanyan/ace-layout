@@ -243,7 +243,7 @@ export let menuDefs = {
     "Tools/~2000": "2000,,,,",
     "Tools/Show Autocomplete": "2100,,false,false,Ctrl-Space|Alt-Space",
     "Tools/~10000": "10000,,,,",
-    "Tools/Rename letiable": "2100,,false,false,Ctrl-Alt-R",
+    "Tools/Rename variable": "2100,,false,false,Ctrl-Alt-R",
     "Go/Jump to Definition": "1450,,false,false,F3",
     "Go/Find References": "1450,,false,false,Shift-F3",
     "Window/Debugger": "100,check,true,,",
