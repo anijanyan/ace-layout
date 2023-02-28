@@ -29,13 +29,10 @@ export class PanelManager {
 
     panelBarsToJSON() {
         let panelBars = {};
-        let panelBar;
 
-        for (let position in this.layout.toolBars) {
-            panelBar = this.layout.toolBars[position];
-            if (panelBar instanceof PanelBar) {
+        for (let [position, panelBar] of Object.entries(this.layout.toolBars)) {
+            if (panelBar instanceof PanelBar)
                 panelBars[position] = panelBar.toJSON();
-            }
         }
 
         return panelBars;
@@ -46,7 +43,7 @@ export class PanelManager {
         let panelBar: PanelBar, panelList: PanelOptions[], panel: Panel;
         let panelBody, panelBodyData;
 
-        for (let position in panelBars) {
+        for (let position of Object.keys(panelBars)) {
             panelList = [];
             let tabList = panelBars[position].tabList;
             for (let i = 0; i < tabList.length; i++) {

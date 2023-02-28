@@ -477,7 +477,7 @@ export class Box extends events.EventEmitter implements Widget {
                     parent.classList.add("fullScreenParent");
 
                 let childNodes = parent.childNodes;
-                for (let i in childNodes) {
+                for (let i = 0; i < childNodes.length; i++) {
                     let childNode = childNodes[i] as HTMLElement;
                     if (childNode != node && childNode.classList && !childNode.classList.contains("fullScreenParent"))
                         childNode.classList.add("fullScreenSibling")

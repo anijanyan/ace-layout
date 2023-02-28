@@ -226,15 +226,13 @@ export class TabManager {
     }
 
     saveTo(storage: {}) {
-        for (let path in this.tabs) {
-            let tab = this.tabs[path];
+        for (let [path, tab] of Object.entries(this.tabs)) {
             storage["@file@" + path] = tab.session ? tab.editor!.sessionToJSON(tab) : tab.sessionValue;
         }
     }
 
     restoreFrom(storage: {}) {
-        for (let path in this.tabs) {
-            let tab = this.tabs[path];
+        for (let [path, tab] of Object.entries(this.tabs)) {
             tab.sessionValue = storage["@file@" + path];
             if (tab.session)
                 tab.editor!.restoreSessionFromJson(tab);
