@@ -12,6 +12,7 @@ export * from './widgets/elements/dropdown';
 export * from './widgets/elements/search';
 export * from './widgets/elements/switcher';
 export * from './widgets/menu/menu';
+export * from './widgets/toolbars/menuToolbar';
 export * from './widgets/menu/menuManager';
 export * from './widgets/tabs/panel';
 export * from './widgets/tabs/panelManager';

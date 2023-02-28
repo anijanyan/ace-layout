@@ -5,15 +5,17 @@ import type {Accordion} from "./boxes/accordion";
 import {FileSystemWeb} from "../file-system/file-system-web";
 import {EditorType} from "../utils/params";
 import {Ace} from "ace-code";
+import {Toolbar} from "./toolbars/toolbar";
 
-export interface LayoutEditor {
+export interface LayoutEditor<SessionType extends EditSession = EditSession> {
     container: HTMLElement;
-    setSession(tab: Tab, value?: string);
-    tab?: Tab;
+    setSession(tab: Tab, value?: string | null);
+    tab: Tab;
     resize();
     focus();
-    hide();
     destroy();
+    sessionToJSON(tab: Tab<SessionType>);
+    restoreSessionFromJson(tab: Tab<SessionType>);
 }
 
 export type EditSession = Ace.EditSession | String;
@@ -41,10 +43,19 @@ interface PanelLocation {
     box?: Box
 }
 
+interface AccordionSection {
+    title: string,
+    box: Box,
+    currentSize?: number,
+    previousSize?: number,
+    savedSize?: number,
+    sizePercent?: number
+}
+
 interface AccordionOptions {
     vertical?: boolean;
     color?: string;
-    boxes: any
+    sections: AccordionSection[];
     minSize?: number
     minVerticalSize?: any
     minHorizontalSize?: any
@@ -54,14 +65,12 @@ interface AccordionOptions {
 interface BoxOptions {
     fixedSize?: number;
     hidden?: boolean;
-    buttonList?: any[];
-    toolBars?: { [place: string]: ToolBar };
+    toolBars?: { [position in ToolbarPosition]?: Toolbar };
     ratio?: number;
     isMain?: boolean;
     vertical?: boolean;
     splitter?: boolean;
     color?: string;
-    boxes?: any;
     minSize?: number;
     minVerticalSize?: any;
     minHorizontalSize?: any;
@@ -74,7 +83,6 @@ interface BoxOptions {
 
 interface PaneOptions extends BoxOptions {
     tabList?: Tab[];
-
 }
 
 interface TabManagerOptions {
@@ -82,21 +90,22 @@ interface TabManagerOptions {
     fileSystem?: FileSystemWeb;
 }
 
-//TODO: path mandatory
-export interface TabOptions {
-    preview?: boolean;
-    path?: string;
+export interface TabPanelOptions {
     title: string;
-    tabIcon?: string;
     active?: boolean;
+    icon?: string;
+}
+
+export interface TabOptions extends TabPanelOptions{
+    preview?: boolean;
+    path: string;
     editorType?: EditorType;
 }
 
-
-export interface PanelOptions extends TabOptions {
+export interface PanelOptions extends TabPanelOptions {
     panelBody: Accordion | Box;
     location?: string;
-    autohide?: boolean;
+    autoHide?: boolean;
 }
 
 export interface PanelManagerOptions {
@@ -104,13 +113,9 @@ export interface PanelManagerOptions {
     layout: Box;
 }
 
-export interface TabList {
-    [path: string]: Tab;
-}
-
-export interface LocationList {
-    [direction: string]: PanelLocation;
-}
+export type LocationList = {
+    [location in ToolbarPosition]?: PanelLocation;
+};
 
 export interface LayoutHTMLElement extends HTMLElement {
     dx?: number;
@@ -124,9 +129,14 @@ export interface SwitcherOptions {
     className?: string;
 }
 
-export interface ToolBar {
-    size: number;
+export interface ToolBarOptions {
+    size?: number;
+    direction?: ToolbarDirection;
+    position?: ToolbarPosition;
 }
+
+export type ToolbarPosition = "right" | "left" | "top" | "bottom";
+export type ToolbarDirection = "vertical" | "horizontal";
 
 interface ButtonOptions {
     disabled?: boolean;
