@@ -1,19 +1,19 @@
-import {Box} from "./widgets/boxes/box";
-import {SettingsSearchBox} from "./widgets/elements/search";
-import {Switcher} from "./widgets/elements/switcher";
-import {Button} from "./widgets/elements/button";
-import {Dropdown} from "./widgets/elements/dropdown";
-import {PanelBar} from "./widgets/tabs/panel";
-import {dom} from "./utils/dom";
-import * as layoutCSS from "../styles/layout.css";
-import * as preferencesCSS from "../styles/preferences.css";
+import {Box} from "../../widgets/boxes/box";
+import {SettingsSearchBox} from "../../widgets/elements/search";
+import {Switcher} from "../../widgets/elements/switcher";
+import {Button} from "../../widgets/elements/button";
+import {Dropdown} from "../../widgets/elements/dropdown";
+import {dom} from "../../utils/dom";
+import * as layoutCSS from "../../../styles/layout.css";
+import * as preferencesCSS from "../../../styles/preferences.css";
+import {PanelBar} from "../../widgets/toolbars/panelBar";
 
 dom.importCssString(layoutCSS, "layout.css");
 dom.importCssString(preferencesCSS, "preferences.css");
 
 let navigation;
 let app;
-let preferences = new Box({
+let demo = new Box({
     classNames: "bar-preferences",
     toolBars: {
         top: new PanelBar({size: 31}),
@@ -24,7 +24,7 @@ let preferences = new Box({
     1: app = new Box({
     }),
 });
-document.body.appendChild(preferences.render());
+document.body.appendChild(demo.render());
 
 let resultPreferences = {};
 
@@ -1134,8 +1134,8 @@ function sortPreferences(preferences: any) {
 
 resultPreferences = sortPreferences(resultPreferences);
 
-let navigationHtml = []
-let appHtml = []
+let navigationHtml: any[] = [];
+let appHtml: any[] = [];
 
 function render() {
     renderGroup(resultPreferences);
@@ -1144,7 +1144,7 @@ function render() {
     let preferencesNode = dom.buildDom(["div", {style: "overflow-y: scroll; height: 100%"}, appHtml], app.element);
     let searchBox = new SettingsSearchBox(preferencesNode);
     searchBox.build();
-    dom.buildDom([searchBox.element], preferences.toolBars.top.element);
+    dom.buildDom([searchBox.element], demo.toolBars.top!.element);
 }
 
 function renderGroup(preferences) {
@@ -1203,7 +1203,7 @@ function renderItem(title: string, item?: Object) {
 render();
 
 function onResize () {
-    preferences.setBox(0, 0, window.innerWidth, window.innerHeight)
+    demo.setBox(0, 0, window.innerWidth, window.innerHeight)
 }
 window.onresize = onResize;
 onResize();

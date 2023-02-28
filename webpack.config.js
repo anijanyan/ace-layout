@@ -1,6 +1,5 @@
 "use strict";
 const CopyPlugin = require("copy-webpack-plugin");
-
 module.exports = (env, argv) => {
     let loader;
     loader = {
@@ -16,8 +15,9 @@ module.exports = (env, argv) => {
     return {
         devtool: 'source-map',
         entry: {
-            simple: './src/demo.ts',
-            preferences: './src/preferences.ts',
+            simple: './src/demo/simple/demo.ts',
+            preferences: './src/demo/preferences/demo.ts',
+            layout: './src/demo/layout/demo.ts',
             index: './src/index.ts'
         },
         mode: "production",
@@ -48,7 +48,7 @@ module.exports = (env, argv) => {
         output: {
             filename: 'bundle.[name].js',
             path: __dirname + '/built',
-            libraryTarget: 'commonjs2'
+            libraryTarget: 'umd'
         },
         optimization: {
             minimize: false
@@ -64,11 +64,18 @@ module.exports = (env, argv) => {
             new CopyPlugin({
                 patterns: [
                     {
-                        from: "src/demo.html",
+                        from: "src/demo/index.html",
                         to: "."
+                    },
+                    {
+                        from: "src/demo/simple/index.html",
+                        to: "simple"
                     }, {
-                        from: "src/preferences.html",
-                        to: "."
+                        from: "src/demo/preferences/index.html",
+                        to: "preferences"
+                    }, {
+                        from: "src/demo/layout/index.html",
+                        to: "layout"
                     }
                 ]
             })
