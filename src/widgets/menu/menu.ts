@@ -835,34 +835,3 @@ export class MenuSearchBox {
         });
     }
 }
-
-export class MenuToolBar implements ToolBar {
-
-    menuBar: MenuBar;
-    element: LayoutHTMLElement;
-    box: number[];
-    size = 27;
-
-    setBox(x, y, w, h) {
-        Utils.setBox(this.element, x, y, w, h);
-        this.box = [x, y, w, h];
-    }
-
-    render() {
-        if (!this.element) {
-            this.element = dom.buildDom(["div", {
-                class: "menuToolBar",
-            }, [
-                "div", {
-                    class: "menuBar",
-                    ref: "menuBar"
-                }
-            ]], null, this);
-            let menuManager = MenuManager.getInstance();
-            menuManager.build();
-            menuManager.buildMenuBar(this.menuBar);
-            menuManager.bindKeys();
-        }
-        return this.element
-    }
-}
