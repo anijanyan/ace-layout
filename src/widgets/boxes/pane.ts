@@ -1,20 +1,22 @@
-import {TabBar} from "../tabs/tab";
 import {Box} from "./box";
 import {LayoutEditor, LayoutHTMLElement, PaneOptions} from "../widget";
 import {dom} from "../../utils/dom";
 import {AceEditor} from "../editors/aceEditor";
 import {PreviewEditor} from "../editors/previewEditor";
 import {EditorType} from "../../utils/params";
+import {Utils} from "../../utils/lib";
+import {TabBar} from "../toolbars/tabBar";
 
 export class Pane extends Box {
     tabBar: TabBar;
     private tabEditorBoxElement: LayoutHTMLElement;
-    isButtonHost: any;
+    isButtonHost: boolean;
     editors: { [editorName: string]: LayoutEditor }
     currentEditorType?: EditorType;
+    editor?: LayoutEditor;
 
     constructor(options: PaneOptions = {}) {
-        var tabBar = new TabBar({
+        let tabBar = new TabBar({
             tabList: options.tabList
         });
         options.toolBars = options.toolBars ?? {};
@@ -49,9 +51,9 @@ export class Pane extends Box {
     }
 
     split(far, vertical?: boolean) {
-        var newPane = new Pane({});
-        var root = this.parent;
-        var wrapper = new Box({
+        let newPane = new Pane({});
+        let root = this.parent!;
+        let wrapper = new Box({
             [far ? 1 : 0]: this,
             [far ? 0 : 1]: newPane,
             vertical: vertical,
@@ -61,33 +63,53 @@ export class Pane extends Box {
         root.addChildBox(this, wrapper);
 
         if (this.isButtonHost) {
-            wrapper.buttons = this.buttons;
+            let buttons = this.tabBar.buttons;
             this.removeButtons();
-            wrapper.addButtons();
+            wrapper.setButtons(buttons);
         }
         return newPane;
     }
 
-    addButtons(buttons) {
-        this.buttons = buttons;
-        this.tabBar.addButtons(this.buttons);
+    setButtons(buttons: HTMLElement[]) {
         this.isButtonHost = true;
+        if (buttons) {
+            this.tabBar.setButtons(buttons);
+        } else {
+            this.tabBar.removeButtons();
+        }
+    }
+
+    addButton(button: HTMLElement) {
+        this.isButtonHost = true;
+        this.tabBar.addButton(button);
+    }
+
+    $updateChildSize(x, y, w, h) {
+        this.updateToolBarSize(w, h);
+
+        w -= this.padding.left + this.padding.right;
+        h -= this.padding.top + this.padding.bottom;
+        x = this.padding.left;
+        y = this.padding.top;
+
+        if (this.editor) {
+            Utils.setBox(this.editor.container, x, y, w, h);
+
+            this.editor.resize();
+        }
     }
 
     removeButtons() {
-        this.buttons = null;
         this.tabBar.removeButtons();
         this.isButtonHost = false;
     }
 
     remove() {
-        this.tabBar.clear();
-        this.clearEditors();
-        var wrapper = this.parent;
-        var root = wrapper.parent;
-        var paneIndex = wrapper[0] == this ? 1 : 0;
-        var pane = wrapper[paneIndex] || null;
-        var rootIndex = root[0] == wrapper ? 0 : 1;
+        let wrapper = this.parent!;
+        let root = wrapper.parent!;
+        let paneIndex = wrapper[0] == this ? 1 : 0;
+        let pane = wrapper[paneIndex] || null;
+        let rootIndex = root[0] == wrapper ? 0 : 1;
 
         if (pane) {
             pane.parent = root;
@@ -99,24 +121,24 @@ export class Pane extends Box {
                 pane.size = wrapper.size;
                 root.fixedChild = pane;
             }
+            wrapper.element.remove();
         } else {
             if (wrapper.isMain) {
                 root = wrapper;
-                wrapper = null;
+            } else {
+                wrapper.element.remove();
             }
             root.ratio = 1;
         }
 
-        wrapper && wrapper.element.remove();
-
         root.recalculateAllMinSizes();
         root.resize();
 
-        if (this.isButtonHost) {
-            root.buttons = this.buttons;
-            root.addButtons();
-        }
+        if (this.isButtonHost)
+            root.setButtons(this.tabBar.buttons);
 
+        this.clearEditors();
+        this.tabBar.clear();
     }
 
     getTopRightPane(): Pane {
@@ -143,7 +165,7 @@ export class Pane extends Box {
         if (this.currentEditorType == editorType)
             return;
 
-        this.editor && this.hidePreviousEditor();
+        this.hidePreviousEditor();
 
         this.editors ??= {};
         this.currentEditorType = editorType;
@@ -153,14 +175,14 @@ export class Pane extends Box {
     }
 
     private hidePreviousEditor() {
+        if (!this.editor)
+            return;
         this.element.removeChild(this.editor.container);
-        this.editor.hide();
     }
 
-    //TODO: move
     getEditor(editorType: EditorType = EditorType.ace): LayoutEditor {
         this.initEditor(editorType);
-        return this.editor;
+        return this.editor!;
     }
 
     private clearEditors() {
@@ -168,7 +190,7 @@ export class Pane extends Box {
             this.editors[i].destroy();
         }
         this.editors = {};
-        this.currentEditorType = null;
-        this.editor = null;
+        this.currentEditorType = undefined;
+        this.editor = undefined;
     }
 }

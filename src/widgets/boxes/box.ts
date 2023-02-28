@@ -1,44 +1,42 @@
-import {Utils} from "../../lib";
-import {BoxOptions, LayoutEditor, Widget} from "../widget";
+import {Utils} from "../../utils/lib";
+import {BoxOptions, LayoutEditor, LayoutHTMLElement, ToolbarPosition, Widget} from "../widget";
 import {SizeUnit} from "../../utils/params";
 
 import * as event from "ace-code/src/lib/event";
 import * as events from 'events';
 import type {Pane} from "./pane";
 import {dom} from "../../utils/dom";
+import type {Toolbar} from "../toolbars/toolbar";
 
 const SPLITTER_SIZE = 1;
 const BOX_MIN_SIZE = 40;
 
 export class Box extends events.EventEmitter implements Widget {
-    fixedSize: number;
-    editor: LayoutEditor;
+    fixedSize?: number;
     vertical: boolean;
     color: string;
     isMain: boolean;
-    ratio: number;
-    toolBars: any;
+    ratio?: number;
+    toolBars: { [position in ToolbarPosition]?: Toolbar };
     padding: { top: number; right: number; bottom: number; left: number; };
-    size: number;
+    size?: number;
     sizeUnit: SizeUnit;
-    buttonList: any;
     minSize: number;
     minVerticalSize: number;
     minHorizontalSize: number;
     classNames: string;
-    element: any;
+    element: LayoutHTMLElement;
     fixedChild: any;
-    box: number[];
+    box: [number, number, number, number];
     splitter: any;
-    buttons: any;
-    topRightPane: Pane;
-    parent: any;
+    topRightPane?: Pane;
+    parent?: Box;
     hidden: boolean;
     minRatio: number;
     maxRatio: number;
-    isMaximized: any;
-    0: Box;
-    1: Box;
+    isMaximized: boolean;
+    0?: Box;
+    1?: Box;
 
     static enableAnimation() {
         document.documentElement.classList.add("animateBoxes");
@@ -61,7 +59,7 @@ export class Box extends events.EventEmitter implements Widget {
         if (options.splitter !== false) {
         }
         this.vertical = options.vertical || false;
-        this.color = options.color;
+        this.color = options.color ?? "";
         this.isMain = options.isMain || false;
         this[0] = options[0];
         this[1] = options[1];
@@ -74,7 +72,6 @@ export class Box extends events.EventEmitter implements Widget {
         this.padding = {top: 0, right: 0, bottom: 0, left: 0};
         this.size = options.size;
         this.sizeUnit = options.sizeUnit ?? SizeUnit.px;
-        this.buttonList = options.buttonList || [];
         this.minSize = options.minSize || BOX_MIN_SIZE;
         this.minVerticalSize = options.minVerticalSize || this.minSize;
         this.minHorizontalSize = options.minHorizontalSize || this.minSize;
@@ -101,22 +98,22 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     onMouseDown(e) {
-        var button = e.button;
+        let button = e.button;
         if (button !== 0)
             return;
 
-        var box = this;
-        var rect = this.element.getBoundingClientRect();
-        var x = e.clientX;
-        var y = e.clientY;
+        let box = this;
+        let rect = this.element.getBoundingClientRect();
+        let x = e.clientX;
+        let y = e.clientY;
 
         document.body.classList.add('dragging')
 
-        var onMouseMove = function (e) {
+        let onMouseMove = function (e) {
             x = e.clientX - rect.left - box.padding.left;
             y = e.clientY - rect.top - box.padding.top;
-            var height = rect.height - box.padding.top - box.padding.bottom;
-            var width = rect.width - box.padding.left - box.padding.right;
+            let height = rect.height - box.padding.top - box.padding.bottom;
+            let width = rect.width - box.padding.left - box.padding.right;
 
             if (box.fixedChild) {
                 if (box.vertical) {
@@ -125,7 +122,7 @@ export class Box extends events.EventEmitter implements Widget {
                     box.fixedChild.fixedSize = (box.fixedChild === box[1]) ? width - x : x;
                 }
                 box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize, box.fixedChild.minSize);
-                box.ratio = null;
+                box.ratio = undefined;
             } else {
                 if (box.vertical) {
                     box.ratio = y / height;
@@ -137,7 +134,7 @@ export class Box extends events.EventEmitter implements Widget {
 
             box.resize();
         };
-        var onResizeEnd = function (e) {
+        let onResizeEnd = function (e) {
             Box.setGlobalCursor("");
             document.body.classList.remove('dragging')
         };
@@ -151,7 +148,6 @@ export class Box extends events.EventEmitter implements Widget {
         if (!this.box)
             return;
 
-        // @ts-ignore
         this.setBox(...this.box);
     }
 
@@ -159,9 +155,9 @@ export class Box extends events.EventEmitter implements Widget {
         if (!this.box || (!this[0] && !this[1]))
             return;
 
-        var propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
+        let propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
 
-        var size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
+        let size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
         this.minRatio = this[0] ? this[0][propertyName] / size : 0;
         this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
     }
@@ -182,7 +178,7 @@ export class Box extends events.EventEmitter implements Widget {
 
         this.element.appendChild(this.splitter);
 
-        this.element.host = this;
+        this.element.$host = this;
         this.element.style.backgroundColor = this.color;
         this.element.style.position = "absolute";
 
@@ -191,25 +187,20 @@ export class Box extends events.EventEmitter implements Widget {
         if (!this.ratio)
             this.calculateRatio();
 
-        this.renderButtons();
-
         return this.element;
     }
 
     renderToolBarList() {
-        for (var position in this.toolBars) {
-            this.addToolBar(position, this.toolBars[position]);
+        for (let position in this.toolBars) {
+            this.addToolBar(position as ToolbarPosition, this.toolBars[position]);
         }
     }
 
-    addToolBar(position, bar) {
-        if (position == "left" || position == "right") {
+    addToolBar(position: ToolbarPosition, bar: Toolbar) {
+        if (position == "left" || position == "right")
             bar.direction = "vertical";
-        }
 
-        if (this.toolBars[position] && this.toolBars[position].element) {
-            this.toolBars[position].element.remove();
-        }
+        this.toolBars[position]?.element?.remove();
 
         bar.position = position;
         this.padding[position] = bar.size;
@@ -237,10 +228,10 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     calculateMinSize(forceChildrenSize = false) {
-        var childrenMinVerticalSize = 0;
-        var childrenMinHorizontalSize = 0;
+        let childrenMinVerticalSize = 0;
+        let childrenMinHorizontalSize = 0;
 
-        var calculateChildBoxMinSize = (childBox) => {
+        let calculateChildBoxMinSize = (childBox) => {
             if (this.vertical) {
                 childrenMinVerticalSize += childBox.minVerticalSize;
                 childrenMinHorizontalSize = Math.max(childBox.minHorizontalSize, childrenMinHorizontalSize);
@@ -284,7 +275,7 @@ export class Box extends events.EventEmitter implements Widget {
         if (!childBox.size) {
             return;
         }
-        var size = childBox.size;
+        let size = childBox.size;
         switch (this.sizeUnit) {
             case SizeUnit.px:
                 childBox.fixedSize = size;
@@ -299,46 +290,43 @@ export class Box extends events.EventEmitter implements Widget {
         }
     }
 
-    renderButtons() {
-        if (!this.buttonList.length)
-            return;
-
-        this.buttons = dom.buildDom(["div", {
-            class: `buttons`
-        }]);
-
-        var button, buttonElement;
-        for (var i = 0; i < this.buttonList.length; i++) {
-            button = this.buttonList[i];
-            buttonElement = dom.buildDom(["div", {
+    renderButtons(buttonList: {class: string, title: string, onclick: () => void, content: string}[]) {
+        let buttons = buttonList.map((button) => {
+            return dom.buildDom(["div", {
                 class: "button " + button.class,
                 title: button.title,
                 onclick: button.onclick
-            }, "x"]);
+            }, button.content]);
+        });
 
-            this.buttons.appendChild(buttonElement);
-        }
+        this.setButtons(buttons);
     }
 
     /**
-     * Adds buttons to top-right tabBar of this box
+     * Sets buttons of this box top-right tabBar
      */
-    addButtons(buttons?: any) {
+    setButtons(buttons: HTMLElement[]) {
         if (this.topRightPane)
             this.topRightPane.removeButtons();
 
         this.topRightPane = this.getTopRightPane();
         if (this.topRightPane)
-            this.topRightPane.addButtons(buttons ?? this.buttons);
+            this.topRightPane.setButtons(buttons);
+    }
+
+    addButton(button: HTMLElement) {
+        this.topRightPane = this.getTopRightPane();
+        if (this.topRightPane)
+            this.topRightPane.addButton(button);
     }
 
     /**
      * Finds the most top-right Pane
      */
-    getTopRightPane(): Pane {
-        var childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
+    getTopRightPane(): Pane | undefined{
+        let childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
         if (!childBox)
-            return null;
+            return;
 
         return childBox.getTopRightPane();
     }
@@ -357,7 +345,7 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     $updateChildSize(x, y, w, h) {
-        var splitterSize = SPLITTER_SIZE;
+        let splitterSize = SPLITTER_SIZE;
         if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
             this.splitter.style.display = "none";
             splitterSize = 0;
@@ -370,22 +358,16 @@ export class Box extends events.EventEmitter implements Widget {
         x = this.padding.left;
         y = this.padding.top;
 
-        if (this.editor) {
-            Utils.setBox(this.editor.container, x, y, w, h);
-
-            this.editor.resize();
-        }
-
         if (this.fixedChild) {
-            var size = this.fixedChild.fixedSize;
+            let size = this.fixedChild.fixedSize;
             if (this.fixedChild === this[1]) {
                 size = this.vertical ? h - size : w - size;
             }
             this.ratio = this.vertical ? size / h : size / w;
         }
-        this.ratio = Math.max(this.minRatio, Math.min(this.ratio, this.maxRatio));
+        this.ratio = Math.max(this.minRatio, Math.min(this.ratio ?? this.maxRatio, this.maxRatio));
 
-        var ratio = this.ratio;
+        let ratio = this.ratio;
         if (!this[0] || this[0].hidden) {
             ratio = 0;
         } else if (!this[1] || this[1].hidden) {
@@ -393,7 +375,7 @@ export class Box extends events.EventEmitter implements Widget {
         }
 
         if (this.vertical) {
-            var splitY = h * ratio - splitterSize;
+            let splitY = h * ratio - splitterSize;
             if (this.splitter)
                 Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
             if (this[0])
@@ -402,7 +384,7 @@ export class Box extends events.EventEmitter implements Widget {
             if (this[1])
                 this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
         } else {
-            var splitX = w * ratio - splitterSize;
+            let splitX = w * ratio - splitterSize;
             if (this.splitter)
                 Utils.setBox(this.splitter, x + splitX, y, splitterSize, h);
             if (this[0])
@@ -413,8 +395,8 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     updateToolBarSize(width, height) {
-        var bar, x, y, w, h;
-        for (var type in this.toolBars) {
+        let bar, x, y, w, h;
+        for (let type in this.toolBars) {
             x = 0;
             y = 0;
             w = width;
@@ -445,23 +427,22 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     restore(disableAnimation = false) {
-        var node = this.element;
+        let node = this.element;
 
         function rmClass(ch, cls) {
-            for (var i = 0; i < ch.length; i++) {
+            for (let i = 0; i < ch.length; i++) {
                 if (ch[i].classList)
                     ch[i].classList.remove(cls)
             }
         }
 
-        var finishRestore = () => {
+        let finishRestore = () => {
             classes.forEach(function (className) {
                 rmClass(document.querySelectorAll("." + className), className);
             });
-            // @ts-ignore
             this.setBox(...this.box);
         };
-        var classes = [
+        let classes = [
             "fullScreenSibling", "fullScreenNode", "fullScreenParent"
         ];
         this.isMaximized = false;
@@ -478,33 +459,35 @@ export class Box extends events.EventEmitter implements Widget {
             });
         }
 
-        var parentRect = node.parentNode.getBoundingClientRect();
-        var top = parentRect.top + this.box[1];
-        var left = parentRect.left + this.box[0];
+        let parentRect = (node.parentNode as HTMLElement).getBoundingClientRect();
+        let top = parentRect.top + this.box[1];
+        let left = parentRect.left + this.box[0];
 
         Utils.setBox(node, left, top, this.box[2], this.box[3]);
     }
 
     maximize(disableAnimation = false) {
-        var node = this.element;
+        let node = this.element;
 
         function addClasses() {
             node.classList.add("fullScreenNode");
-            var parent = node;
-            while (parent = parent.parentNode) {
-                if (parent === document.body) break;
+            let parent: HTMLElement = node.parentNode as HTMLElement;
+            while (parent && parent !== document.body) {
                 if (parent.classList)
                     parent.classList.add("fullScreenParent");
-                var ch = parent.childNodes;
-                for (var i = 0; i < ch.length; i++) {
-                    if (ch[i] != node && ch[i].classList)
-                        if (!ch[i].classList.contains("fullScreenParent"))
-                            ch[i].classList.add("fullScreenSibling")
+
+                let childNodes = parent.childNodes;
+                for (let i in childNodes) {
+                    let childNode = childNodes[i] as HTMLElement;
+                    if (childNode != node && childNode.classList && !childNode.classList.contains("fullScreenParent"))
+                        childNode.classList.add("fullScreenSibling")
                 }
+
+                parent = parent.parentNode as HTMLElement;
             }
         }
 
-        var rect = node.getBoundingClientRect();
+        let rect = node.getBoundingClientRect();
 
         Utils.setBox(node, rect.left, rect.top, rect.width, rect.height);
 
@@ -521,7 +504,6 @@ export class Box extends events.EventEmitter implements Widget {
             });
         }
 
-        // @ts-ignore
         this.setBox(...this.box);
     }
 
@@ -534,18 +516,18 @@ export class Box extends events.EventEmitter implements Widget {
         this.removeAllChildren();
         if (this.element) this.element.remove();
         if (this.parent) {
-            if (this.parent[0] == this) this.parent[0] = null;
-            if (this.parent[1] == this) this.parent[1] = null;
+            if (this.parent[0] == this) this.parent[0] = undefined;
+            if (this.parent[1] == this) this.parent[1] = undefined;
             this.parent.recalculateAllMinSizes();
-            this.parent = null;
+            this.parent = undefined;
         }
     }
 
     removeAllChildren() {
         this.removeChild(this[0]);
         this.removeChild(this[1]);
-        this[0] = null;
-        this[1] = null;
+        this[0] = undefined;
+        this[1] = undefined;
     }
 
     removeChild(child?: Box) {
@@ -559,39 +541,39 @@ export class Box extends events.EventEmitter implements Widget {
     toggleShowHide() {
         Box.enableAnimation();
         this.hidden = !this.hidden;
-        this.parent.resize();
-        var node = this.element;
-        var self = this;
+        this.parent?.resize();
+        let node = this.element;
+        let self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
-            self.parent.resize();
+            self.parent?.resize();
         });
     }
 
     hide() {
         Box.enableAnimation();
         this.hidden = true;
-        this.parent.resize();
-        var node = this.element;
-        var self = this;
+        this.parent?.resize();
+        let node = this.element;
+        let self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
-            self.parent.resize();
+            self.parent?.resize();
         });
     }
 
     show() {
         Box.enableAnimation();
         this.hidden = false;
-        this.parent.resize();
-        var node = this.element;
-        var self = this;
+        this.parent?.resize();
+        let node = this.element;
+        let self = this;
         node.addEventListener('transitionend', function handler() {
             node.removeEventListener('transitionend', handler);
             Box.disableAnimation();
-            self.parent.resize();
+            self.parent?.resize();
         });
     }
 
@@ -601,8 +583,8 @@ export class Box extends events.EventEmitter implements Widget {
      * @param {Box} box
      * @returns {Box}
      */
-    addChildBox(previousBoxIndex, box) {
-        var previousBox, index;
+    addChildBox(previousBoxIndex: number | Box, box: Box): Box {
+        let previousBox, index;
         if (previousBoxIndex instanceof Box) {
             previousBox = previousBoxIndex;
             index = this[0] == previousBox ? 0 : 1;
@@ -612,9 +594,9 @@ export class Box extends events.EventEmitter implements Widget {
         }
         if (previousBox && previousBox === box) return previousBox;
 
-        var previousParent = box.parent;
+        let previousParent = box.parent;
         if (previousParent && previousParent !== this) {
-            var previousIndex = previousParent[0] === box ? 0 : 1;
+            let previousIndex = previousParent[0] === box ? 0 : 1;
             previousParent[previousIndex] = null;
             previousParent.ratio = 1;
             if (previousParent.fixedChild && previousParent.fixedChild === box) {
@@ -653,7 +635,7 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     recalculateAllMinSizes() {
-        var node = this;
+        let node: Box | undefined = this;
         while (node) {
             node.calculateMinSize(true);
             node = node.parent;
