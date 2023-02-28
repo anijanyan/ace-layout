@@ -1,22 +1,26 @@
-import {Utils} from "../lib";
-import {Tab, TabBar} from "../widgets/tabs/tab";
+import {Utils} from "../utils/lib";
+import {Tab} from "../widgets/tabs/tab";
 import {dom} from "../utils/dom";
+import {TabPanel} from "../widgets/tabs/tabPanel";
+import {TabPanelBar} from "../widgets/toolbars/tabPanelBar";
 
-var event = require("ace-code/src/lib/event");
+let event = require("ace-code/src/lib/event");
 
 export namespace TabbarHandler {
-    export var tabbarMouseDown = function (e, tabConstructor: typeof Tab, tabBarConstructor: typeof TabBar, showSplit: boolean = false) {
-        var divSplit, splitPosition, pane;
+    export let tabbarMouseDown = function (e, tabConstructor: typeof TabPanel, tabBarConstructor: typeof TabPanelBar<TabPanel>, showSplit: boolean = false) {
+        let divSplit, splitPosition, pane;
 
         function hideSplitPosition() {
-            divSplit && divSplit.remove();
+            if (!divSplit)
+                return;
+            divSplit.remove();
             divSplit = splitPosition = pane = null;
         }
 
         function showSplitPosition(e) {
-            var el = e.target;
+            let el = e.target;
             if (tabBar) {
-                if (divSplit) hideSplitPosition();
+                hideSplitPosition();
                 return;
             }
 
@@ -24,16 +28,16 @@ export namespace TabbarHandler {
 
             // If aml is not the pane we seek, lets abort
             if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
-                if (divSplit) hideSplitPosition();
+                hideSplitPosition();
                 return;
             }
             // Cannot split pane that would be removed later
             if (pane.tabBar.tabList.length === 0) {
-                if (divSplit) hideSplitPosition();
+                hideSplitPosition();
                 return;
             }
 
-            var dark = false; // !tab || tab.classList.constains("dark");
+            let dark = false; // !tab || tab.classList.constains("dark");
             if (!divSplit) {
                 divSplit = document.createElement("div");
                 document.body.appendChild(divSplit);
@@ -42,10 +46,10 @@ export namespace TabbarHandler {
             divSplit.className = "split-area" + (dark ? " dark" : "");
 
             // Find the rotated quarter that we're in
-            var rect = pane.element.getBoundingClientRect();
+            let rect = pane.element.getBoundingClientRect();
             // TODO add getContentRect?
             // Get buttons height
-            var bHeight = pane.tabBar.element.clientHeight - 1;
+            let bHeight = pane.tabBar.element.clientHeight - 1;
             rect = {
                 left: rect.left,
                 top: rect.top + bHeight,
@@ -53,13 +57,13 @@ export namespace TabbarHandler {
                 height: rect.height - bHeight,
             };
 
-            var left = (e.clientX - rect.left) / rect.width;
-            var right = 1 - left;
-            var top = (e.clientY - rect.top) / rect.height;
-            var bottom = 1 - top;
+            let left = (e.clientX - rect.left) / rect.width;
+            let right = 1 - left;
+            let top = (e.clientY - rect.top) / rect.height;
+            let bottom = 1 - top;
 
             // Anchor to closes side
-            var min = Math.min(left, top, right, bottom);
+            let min = Math.min(left, top, right, bottom);
 
             if (min == left) {
                 splitPosition = [true, false]; // Left
@@ -78,37 +82,39 @@ export namespace TabbarHandler {
 
 
         if (e.target.classList.contains("tabCloseButton")) {//TODO not sure
-            return
+            return;
         }
 
-        var tab: Tab = Utils.findHost(e.target, tabConstructor);
+        let tab: Tab = Utils.findHost(e.target, tabConstructor);
         if (!tab)
             return;
 
-        var tabBar: TabBar = Utils.findHost(e.target, tabBarConstructor);
-        var isVertical = tabBar.isVertical();
-        tabBar.tabMouseDown(tab, e.shiftKey, e.ctrlKey);
-        if (e.shiftKey || e.ctrlKey) {
+        let tabBar: TabPanelBar<TabPanel> | undefined = Utils.findHost(e.target, tabBarConstructor);
+        if (!tabBar)
             return;
-        }
 
-        var isDragging = false;
-        var posX, posY, prevX, prevY;
-        var startX = e.clientX, startY = e.clientY;
-        var parentRect, tabElement, index, selectedTabs, hostTabBar, hostIndex;
-        var prevTab, leftMaxX, topMaxY, nextTab, rightMaxX, bottomMaxY;
+        let isVertical = tabBar.isVertical();
+        tabBar.tabMouseDown(tab, e.shiftKey, e.ctrlKey);
+        if (e.shiftKey || e.ctrlKey)
+            return;
 
-        var tabDragElementSize = 0;//TODO rename these
-        var tabDragElementLeft = 0;
-        var tabDragElementTop = 0;
+        let isDragging = false;
+        let posX, posY, prevX, prevY;
+        let startX = e.clientX, startY = e.clientY;
+        let parentRect, tabElement, index, selectedTabs, hostTabBar, hostIndex;
+        let prevTab, leftMaxX, topMaxY, nextTab, rightMaxX, bottomMaxY;
 
-        var calculateNearbyTabsData = function () {
+        let tabDragElementSize = 0;//TODO rename these
+        let tabDragElementLeft = 0;
+        let tabDragElementTop = 0;
+
+        let calculateNearbyTabsData = function () {
             if (isVertical) {
                 topMaxY = prevTab && (parseInt(prevTab.style.top, 10) + parseInt(prevTab.style.height, 10) / 2 + parentRect.top);
                 bottomMaxY = nextTab && (parseInt(nextTab.style.top, 10) + parseInt(nextTab.style.height, 10) / 2 + parentRect.top);
             } else {
                 if (prevTab) {
-                    var prevSibling = prevTab.previousSibling;
+                    let prevSibling = prevTab.previousSibling;
                     leftMaxX = prevSibling ? parseInt(prevSibling.style.left, 10) + parseInt(prevSibling.style.width, 10) + parentRect.left : parentRect.left;
                 }
 
@@ -116,21 +122,20 @@ export namespace TabbarHandler {
             }
         };
 
-        var startDragging = function () {
-            if (isDragging) {
+        let startDragging = function () {
+            if (isDragging || !tabBar)
                 return;
-            }
 
             tabElement = dom.buildDom(["div", {
                 class: "tabDragging"
             }]);
-            var activeIndex = index = tabBar.tabList.indexOf(tab);
+            let activeIndex = index = tabBar.tabList.indexOf(tab);
             tabBar.tabContainer.insertBefore(tabElement, tab.element);
             tabDragElementLeft = parseInt(tab.element.style.left, 10);
             tabDragElementTop = parseInt(tab.element.style.top, 10);
             selectedTabs = [];
-            var selectedTab, selectedTabElement;
-            for (var i = 0; i < tabBar.selectedTabs.length; i++) {
+            let selectedTab, selectedTabElement;
+            for (let i = 0; i < tabBar.selectedTabs.length; i++) {
                 selectedTab = tabBar.selectedTabs[i];
                 selectedTab.currentIndex = tabBar.tabList.indexOf(selectedTab);
                 if (selectedTab.currentIndex < activeIndex) {
@@ -148,7 +153,7 @@ export namespace TabbarHandler {
                 return tab1.currentIndex - tab2.currentIndex;
             });
 
-            for (var i = 0; i < selectedTabs.length; i++) {
+            for (let i = 0; i < selectedTabs.length; i++) {
                 selectedTab = selectedTabs[i];
                 selectedTabElement = selectedTab.element;
                 tabElement.appendChild(selectedTabElement);
@@ -199,26 +204,26 @@ export namespace TabbarHandler {
         };
 
 
-        var finishDragging = function () {
+        let finishDragging = function () {
             if (pane && pane.split && splitPosition) {
-                var newPane = pane.split(...splitPosition);
+                let newPane = pane.split(...splitPosition);
                 tabBar = newPane.tabBar;
             } else if (!tabBar) {
                 tabBar = hostTabBar;
             }
 
-            tabBar.removeSelections();
+            tabBar!.removeSelections();
             tabElement.remove();
 
-            var selectedTab;
-            for (var i = 0; i < selectedTabs.length; i++) {
+            let selectedTab;
+            for (let i = 0; i < selectedTabs.length; i++) {
                 selectedTab = selectedTabs[i];
                 selectedTab.element.style.pointerEvents = "";
                 if (selectedTab === tab) {
                     selectedTab.active = true;
                 }
-                tabBar.addTab(selectedTab, index++);
-                tabBar.addSelection(selectedTab);
+                tabBar!.addTab(selectedTab, index++);
+                tabBar!.addSelection(selectedTab);
             }
 
             if (tabBar !== hostTabBar) {
@@ -226,7 +231,7 @@ export namespace TabbarHandler {
                 hostTabBar.activatePrevious(hostIndex);
             }
 
-            tabBar.finishTabDragging();
+            tabBar!.finishTabDragging();
 
             isDragging = false;
             hideSplitPosition();
@@ -237,10 +242,10 @@ export namespace TabbarHandler {
             return dx * dx + dy * dy
         }
 
-        var onMouseMove = function (e) {
-            if (e.type !== "mousemove") {
+        let onMouseMove = function (e) {
+            if (e.type !== "mousemove")
                 return;
-            }
+
             if (!isDragging) {
                 if (distance(e.clientX - startX, e.clientY - startY) < 25)
                     return;
@@ -248,8 +253,8 @@ export namespace TabbarHandler {
             }
 
             function removeTabFromBar() {
-                tabBar.finishTabDragging();
-                tabBar = null;
+                tabBar!.finishTabDragging();
+                tabBar = undefined;
             }
 
             if (tabBar) {
@@ -264,7 +269,7 @@ export namespace TabbarHandler {
 
                 if (tabBar) {
                     isVertical = tabBar.isVertical();
-                    var nextTabHost = Utils.findHost(e.target, tabConstructor);
+                    let nextTabHost = Utils.findHost(e.target, tabConstructor);
                     if (nextTabHost) {
                         index = tabBar.tabList.indexOf(nextTabHost);
                         nextTab = nextTabHost.element;
@@ -281,14 +286,13 @@ export namespace TabbarHandler {
                 }
             }
 
-            if (showSplit) {
+            if (showSplit)
                 showSplitPosition(e);
-            }
 
-            var left = e.clientX - posX;
-            var top = e.clientY - posY;
-            var x = left;
-            var y = top;
+            let left = e.clientX - posX;
+            let top = e.clientY - posY;
+            let x = left;
+            let y = top;
 
             if (tabBar) {
                 if ((isVertical && (x < parentRect.left - parentRect.width || x > parentRect.left + parentRect.width)) ||
@@ -330,11 +334,11 @@ export namespace TabbarHandler {
             tabElement.style.left = x + "px";
             tabElement.style.top = y + "px";
         };
-        var onMouseUp = function (e) {
+        let onMouseUp = function (e) {
             if (!isDragging) {
-                if (tabBar.selectedTabs.length > 1) {
-                    tabBar.removeSelections();
-                    tabBar.addSelection(tab);
+                if (tabBar!.selectedTabs.length > 1) {
+                    tabBar!.removeSelections();
+                    tabBar!.addSelection(tab);
                 }
             } else {
                 finishDragging();

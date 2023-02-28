@@ -1,22 +1,22 @@
 import {Box} from "../boxes/box";
 import {Accordion} from "../boxes/accordion";
-import {LocationList, PanelManagerOptions, PanelOptions} from "../widget";
-import {Panel, PanelBar} from "./panel";
+import {AccordionSection, LocationList, PanelManagerOptions, PanelOptions, ToolbarPosition} from "../widget";
+import {Panel} from "./panel";
+import {PanelBar} from "../toolbars/panelBar";
 
 export class PanelManager {
     private static _instance: PanelManager;
     private layout: Box;
-    private locations: LocationList;
+    private readonly locations: LocationList;
 
-    constructor(options: PanelManagerOptions) {
+    private constructor(options: PanelManagerOptions) {
         this.layout = options.layout;
         this.locations = options.locations;
     }
 
     static getInstance(options?: PanelManagerOptions) {
-        if (!PanelManager._instance) {
-            PanelManager._instance = new PanelManager(options);
-        }
+        if (!PanelManager._instance)
+            PanelManager._instance = new PanelManager(options!);
 
         return PanelManager._instance;
     }
@@ -28,10 +28,10 @@ export class PanelManager {
     }
 
     panelBarsToJSON() {
-        var panelBars = {};
-        var panelBar;
+        let panelBars = {};
+        let panelBar;
 
-        for (var position in this.layout.toolBars) {
+        for (let position in this.layout.toolBars) {
             panelBar = this.layout.toolBars[position];
             if (panelBar instanceof PanelBar) {
                 panelBars[position] = panelBar.toJSON();
@@ -42,29 +42,31 @@ export class PanelManager {
     }
 
     setState(state) {
-        var panelBars = state.panelBars;
-        var panelBar: PanelBar, panelList: PanelOptions[], panel: Panel;
-        var panelBody, panelBodyData, accordionBoxes;
+        let panelBars = state.panelBars;
+        let panelBar: PanelBar, panelList: PanelOptions[], panel: Panel;
+        let panelBody, panelBodyData;
 
-        for (var position in panelBars) {
+        for (let position in panelBars) {
             panelList = [];
-            for (var i = 0; i < panelBars[position].tabList.length; i++) {
-                panel = panelBars[position].tabList[i];
+            let tabList = panelBars[position].tabList;
+            for (let i = 0; i < tabList.length; i++) {
+                panel = tabList[i];
                 panelBodyData = panel.panelBody;
                 if (panelBodyData.type === "accordion") {//todo
-                    accordionBoxes = [];
+                    let accordionSections: AccordionSection[] = [];
+                    let sections = panelBodyData.sections;
 
-                    for (var index = 0; index < panelBodyData.boxes.length; index++) {
-                        accordionBoxes.push({
-                            title: panelBodyData.boxes[index].title,
-                            obj: new Box(panelBodyData.boxes[index].boxData)
+                    for (let index = 0; index < sections.length; index++) {
+                        accordionSections.push({
+                            title: sections[index].title,
+                            box: new Box(sections[index].boxData)
                         })
                     }
 
                     panelBody = new Accordion({
                         vertical: panelBodyData.vertical,
                         size: panelBodyData.size,
-                        boxes: accordionBoxes
+                        sections: accordionSections
                     });
                 } else {
                     panelBody = new Box({
@@ -78,48 +80,37 @@ export class PanelManager {
                 panelList.push({
                     active: panel.active,
                     title: panel.title,
-                    autohide: panel.autohide,
+                    autoHide: panel.autoHide,
                     panelBody: panelBody,
                 });
             }
-            panelBar = new PanelBar({panelList: {}});
-            this.layout.addToolBar(position, panelBar);
+                panelBar = new PanelBar({panelList: {}});
+            this.layout.addToolBar(position as ToolbarPosition, panelBar);
             panelBar.addTabList(panelList);
         }
     }
 
-    addPanel(panel, panelBar) {
-
-    }
-
     activatePanel(panel: Panel) {
-        var location = panel.parent.position;
-        var locationData = this.locations[location];
+        let location = this.locations[panel.parent.position!];
 
-        if (!locationData)
+        if (!location)
             return;
 
-        var index = locationData.index;
-        var parent = locationData.parent;
-        panel.panelBody.size = locationData.size;
+        let index = location.index;
+        let parent = location.parent;
+        panel.panelBody.size = location.size;
 
-        var newBox = parent.addChildBox(index, panel.panelBody);
+        let newBox = parent.addChildBox(index, panel.panelBody);
 
         if (newBox.fixedSize && !parent.fixedChild)
             parent.fixedChild = newBox;
 
-        this.locations[location].box = newBox;
-
+        location.box = newBox;
         newBox.show();
     }
 
     deactivatePanel(panel: Panel) {
-        var location = panel.parent.position;
-        if (!this.locations[location])
-            return;
-
-        var locationBox = this.locations[location].box;
-
-        locationBox.hide();
+        let location = this.locations[panel.parent.position!];
+        location?.box!.hide();
     }
 }
