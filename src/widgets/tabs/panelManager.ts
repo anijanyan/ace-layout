@@ -39,7 +39,7 @@ export class PanelManager {
     }
 
     setState(state) {
-        let panelBars = state.panelBars;
+        let panelBars = state.panelBars ?? {};
         let panelBar: PanelBar, panelList: PanelOptions[], panel: Panel;
         let panelBody, panelBodyData;
 
