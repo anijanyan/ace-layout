@@ -38158,11 +38158,12 @@ var PanelManager = /** @class */ (function () {
         return panelBars;
     };
     PanelManager.prototype.setState = function (state) {
-        var panelBars = state.panelBars;
+        var _a;
+        var panelBars = (_a = state.panelBars) !== null && _a !== void 0 ? _a : {};
         var panelBar, panelList, panel;
         var panelBody, panelBodyData;
-        for (var _i = 0, _a = Object.keys(panelBars); _i < _a.length; _i++) {
-            var position = _a[_i];
+        for (var _i = 0, _b = Object.keys(panelBars); _i < _b.length; _i++) {
+            var position = _b[_i];
             panelList = [];
             var tabList = panelBars[position].tabList;
             for (var i = 0; i < tabList.length; i++) {
