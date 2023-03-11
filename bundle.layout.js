@@ -33922,7 +33922,8 @@ catch (e) {
 }
 tabManager.setState(tabState);
 panelManager.setState(panelState);
-tabManager.restoreFrom(JSON.parse(localStorage["layout"]));
+if (localStorage["layout"])
+    tabManager.restoreFrom(JSON.parse(localStorage["layout"]));
 onResize();
 consoleBox.renderButtons([{
         class: "consoleCloseBtn",
