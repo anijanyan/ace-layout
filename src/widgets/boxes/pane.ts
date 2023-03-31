@@ -180,7 +180,11 @@ export class Pane extends Box {
         this.element.removeChild(this.editor.container);
     }
 
-    getEditor(editorType: EditorType = EditorType.ace): LayoutEditor {
+    getEditor(editorType: EditorType = EditorType.ace): LayoutEditor | undefined {
+        return this.editors[editorType];
+    }
+
+    getOrCreateEditor(editorType: EditorType = EditorType.ace): LayoutEditor {
         this.initEditor(editorType);
         return this.editor!;
     }

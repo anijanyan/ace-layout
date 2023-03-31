@@ -92,6 +92,6 @@ export class Tab<SessionType extends EditSession = EditSession> extends TabPanel
     }
 
     get editor(): LayoutEditor<SessionType> | undefined {
-        return this.parent?.parent.editor;
+        return this.parent?.parent.getEditor(this.editorType);
     }
 }

@@ -213,7 +213,7 @@ export class TabManager {
 
     //TODO: move to separate class
     loadFile(tab: Tab, fileContent?: string | null) {
-        let editor = tab.isActive ? tab.editor! : tab.parent!.parent.getEditor(tab.editorType);
+        let editor = tab.parent!.parent.getOrCreateEditor(tab.editorType);
         editor.setSession(tab, fileContent);
     };
 
