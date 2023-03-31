@@ -41883,6 +41883,10 @@ var Pane = /** @class */ (function (_super) {
     };
     Pane.prototype.getEditor = function (editorType) {
         if (editorType === void 0) { editorType = params_1.EditorType.ace; }
+        return this.editors[editorType];
+    };
+    Pane.prototype.getOrCreateEditor = function (editorType) {
+        if (editorType === void 0) { editorType = params_1.EditorType.ace; }
         this.initEditor(editorType);
         return this.editor;
     };
@@ -43537,6 +43541,10 @@ var Tab = /** @class */ (function (_super) {
         this.element.$host = this;
         return this.element;
     };
+    Tab.prototype.setTitle = function (title) {
+        this.title = title;
+        this.element.getElementsByClassName("tabTitle")[0].innerHTML = title;
+    };
     Object.defineProperty(Tab.prototype, "isActive", {
         get: function () {
             var _a;
@@ -43548,7 +43556,7 @@ var Tab = /** @class */ (function (_super) {
     Object.defineProperty(Tab.prototype, "editor", {
         get: function () {
             var _a;
-            return (_a = this.parent) === null || _a === void 0 ? void 0 : _a.parent.editor;
+            return (_a = this.parent) === null || _a === void 0 ? void 0 : _a.parent.getEditor(this.editorType);
         },
         enumerable: false,
         configurable: true
@@ -43754,7 +43762,7 @@ var TabManager = /** @class */ (function () {
     };
     //TODO: move to separate class
     TabManager.prototype.loadFile = function (tab, fileContent) {
-        var editor = tab.isActive ? tab.editor : tab.parent.parent.getEditor(tab.editorType);
+        var editor = tab.parent.parent.getOrCreateEditor(tab.editorType);
         editor.setSession(tab, fileContent);
     };
     ;
