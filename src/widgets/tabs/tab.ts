@@ -87,11 +87,16 @@ export class Tab<SessionType extends EditSession = EditSession> extends TabPanel
         return this.element;
     }
 
+    setTitle(title: string) {
+        this.title = title;
+        this.element.getElementsByClassName("tabTitle")[0].innerHTML = title;
+    }
+
     get isActive(): boolean {
         return this.parent?.activeTab == this;
     }
 
     get editor(): LayoutEditor<SessionType> | undefined {
-        return this.parent?.parent.editor;
+        return this.parent?.parent.getEditor(this.editorType);
     }
 }
