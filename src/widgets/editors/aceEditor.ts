@@ -66,7 +66,7 @@ export class AceEditor implements LayoutEditor<Ace.EditSession> {
         return null;
     }
 
-    public sessionToJSON(tab: Tab<Ace.EditSession>) {
+    public static getSessionState(tab: Tab<Ace.EditSession>) {
         let session = tab.session;
         let undoManager = session.getUndoManager();
         return JSON.stringify({
@@ -79,6 +79,10 @@ export class AceEditor implements LayoutEditor<Ace.EditSession> {
                 session.getScrollTop()
             ],
         })
+    }
+
+    public sessionToJSON(tab: Tab<Ace.EditSession>) {
+        return AceEditor.getSessionState(tab);
     }
 
     public restoreSessionFromJson(tab: Tab<Ace.EditSession>) {
