@@ -1,14 +1,9 @@
+import ace from "ace-code/esm-resolver";
 import {Editor} from "ace-code/src/editor";
-import theme = require("ace-code/src/theme/textmate");
 import {VirtualRenderer as Renderer} from "ace-code/src/virtual_renderer";
 import {Ace} from "ace-code";
 import {Tab} from "../tabs/tab";
-import * as ace from "ace-code";
 import modeList = require("ace-code/src/ext/modelist");
-import {Mode as JSMode} from "ace-code/src/mode/javascript";
-import {Mode as CSSMode} from "ace-code/src/mode/css";
-import {Mode as HtmlMode} from "ace-code/src/mode/html";
-import {Mode as TsMode} from "ace-code/src/mode/typescript";
 import {LayoutEditor} from "../widget";
 import "ace-code/src/ext/language_tools";
 
@@ -32,7 +27,7 @@ export class AceEditor implements LayoutEditor<Ace.EditSession> {
     }
 
     constructor() {
-        this.editor = new Editor(new Renderer(null, theme));
+        this.editor = new Editor(new Renderer(null));
         this.container = this.editor.container;
         this.container.style.position = "absolute";
 
@@ -66,24 +61,12 @@ export class AceEditor implements LayoutEditor<Ace.EditSession> {
 
     private getMode() {
         if (this.tab.path !== undefined) {
-            let mode = modeList.getModeForPath(this.tab.path).mode;
-
-            //TODO: set mode
-            switch (mode) {
-                case "ace/mode/javascript":
-                    return new JSMode();
-                case "ace/mode/css":
-                    return new CSSMode();
-                case "ace/mode/html":
-                    return new HtmlMode();
-                case "ace/mode/typescript":
-                    return new TsMode();
-            }
+            return modeList.getModeForPath(this.tab.path).mode;
         }
         return null;
     }
 
-    public sessionToJSON(tab: Tab<Ace.EditSession>) {
+    public static getSessionState(tab: Tab<Ace.EditSession>) {
         let session = tab.session;
         let undoManager = session.getUndoManager();
         return JSON.stringify({
@@ -96,6 +79,10 @@ export class AceEditor implements LayoutEditor<Ace.EditSession> {
                 session.getScrollTop()
             ],
         })
+    }
+
+    public sessionToJSON(tab: Tab<Ace.EditSession>) {
+        return AceEditor.getSessionState(tab);
     }
 
     public restoreSessionFromJson(tab: Tab<Ace.EditSession>) {
