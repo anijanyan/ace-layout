@@ -11,7 +11,368 @@
 return /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 9100:
+/***/ 46992:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+var _src_ace__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport fake namespace object from non-harmony */ _src_ace__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (_src_ace__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(_src_ace__WEBPACK_IMPORTED_MODULE_0__, 2)))
+/* harmony export */ });
+/* harmony import */ var _src_ace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(59100);
+
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/abap', () => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 10989, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/abc', () => __webpack_require__.e(/* import() */ 4064).then(__webpack_require__.t.bind(__webpack_require__, 84064, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/actionscript', () => __webpack_require__.e(/* import() */ 3682).then(__webpack_require__.t.bind(__webpack_require__, 73682, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ada', () => __webpack_require__.e(/* import() */ 4049).then(__webpack_require__.t.bind(__webpack_require__, 14049, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/alda', () => __webpack_require__.e(/* import() */ 8331).then(__webpack_require__.t.bind(__webpack_require__, 98331, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/apache_conf', () => __webpack_require__.e(/* import() */ 553).then(__webpack_require__.t.bind(__webpack_require__, 10553, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/apex', () => __webpack_require__.e(/* import() */ 3764).then(__webpack_require__.t.bind(__webpack_require__, 73764, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/applescript', () => __webpack_require__.e(/* import() */ 3335).then(__webpack_require__.t.bind(__webpack_require__, 53335, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/aql', () => __webpack_require__.e(/* import() */ 5633).then(__webpack_require__.t.bind(__webpack_require__, 85633, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/asciidoc', () => __webpack_require__.e(/* import() */ 9853).then(__webpack_require__.t.bind(__webpack_require__, 59853, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/asl', () => __webpack_require__.e(/* import() */ 7241).then(__webpack_require__.t.bind(__webpack_require__, 37241, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/assembly_x86', () => __webpack_require__.e(/* import() */ 2392).then(__webpack_require__.t.bind(__webpack_require__, 62392, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/autohotkey', () => __webpack_require__.e(/* import() */ 7390).then(__webpack_require__.t.bind(__webpack_require__, 27390, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/batchfile', () => __webpack_require__.e(/* import() */ 6609).then(__webpack_require__.t.bind(__webpack_require__, 96609, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/bibtex', () => __webpack_require__.e(/* import() */ 2908).then(__webpack_require__.t.bind(__webpack_require__, 12908, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/c9search', () => __webpack_require__.e(/* import() */ 1281).then(__webpack_require__.t.bind(__webpack_require__, 81281, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/c_cpp', () => __webpack_require__.e(/* import() */ 2671).then(__webpack_require__.t.bind(__webpack_require__, 82671, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/cirru', () => __webpack_require__.e(/* import() */ 7515).then(__webpack_require__.t.bind(__webpack_require__, 37515, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/clojure', () => __webpack_require__.e(/* import() */ 4155).then(__webpack_require__.t.bind(__webpack_require__, 4155, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/cobol', () => __webpack_require__.e(/* import() */ 6976).then(__webpack_require__.t.bind(__webpack_require__, 96976, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/coffee', () => __webpack_require__.e(/* import() */ 6725).then(__webpack_require__.t.bind(__webpack_require__, 46725, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/coldfusion', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4873)]).then(__webpack_require__.t.bind(__webpack_require__, 84873, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/crystal', () => __webpack_require__.e(/* import() */ 2299).then(__webpack_require__.t.bind(__webpack_require__, 22299, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csharp', () => __webpack_require__.e(/* import() */ 2985).then(__webpack_require__.t.bind(__webpack_require__, 82985, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csound_document', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(163), __webpack_require__.e(8248)]).then(__webpack_require__.t.bind(__webpack_require__, 18248, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csound_orchestra', () => Promise.all(/* import() */[__webpack_require__.e(163), __webpack_require__.e(5482)]).then(__webpack_require__.t.bind(__webpack_require__, 65482, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csound_score', () => __webpack_require__.e(/* import() */ 8878).then(__webpack_require__.t.bind(__webpack_require__, 28878, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csp', () => __webpack_require__.e(/* import() */ 4780).then(__webpack_require__.t.bind(__webpack_require__, 4780, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/css', () => __webpack_require__.e(/* import() */ 8771).then(__webpack_require__.t.bind(__webpack_require__, 98771, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/curly', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(3865)]).then(__webpack_require__.t.bind(__webpack_require__, 13865, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/d', () => __webpack_require__.e(/* import() */ 1139).then(__webpack_require__.t.bind(__webpack_require__, 91139, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/dart', () => __webpack_require__.e(/* import() */ 4325).then(__webpack_require__.t.bind(__webpack_require__, 34325, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/diff', () => __webpack_require__.e(/* import() */ 47).then(__webpack_require__.t.bind(__webpack_require__, 20047, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/django', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4050)]).then(__webpack_require__.t.bind(__webpack_require__, 4050, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/dockerfile', () => __webpack_require__.e(/* import() */ 8408).then(__webpack_require__.t.bind(__webpack_require__, 78408, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/dot', () => __webpack_require__.e(/* import() */ 7349).then(__webpack_require__.t.bind(__webpack_require__, 47349, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/drools', () => __webpack_require__.e(/* import() */ 134).then(__webpack_require__.t.bind(__webpack_require__, 50134, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/edifact', () => __webpack_require__.e(/* import() */ 9646).then(__webpack_require__.t.bind(__webpack_require__, 9646, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/eiffel', () => __webpack_require__.e(/* import() */ 135).then(__webpack_require__.t.bind(__webpack_require__, 135, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ejs', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(8781)]).then(__webpack_require__.t.bind(__webpack_require__, 48781, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/elixir', () => __webpack_require__.e(/* import() */ 7445).then(__webpack_require__.t.bind(__webpack_require__, 7445, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/elm', () => __webpack_require__.e(/* import() */ 5661).then(__webpack_require__.t.bind(__webpack_require__, 85661, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/erlang', () => __webpack_require__.e(/* import() */ 2720).then(__webpack_require__.t.bind(__webpack_require__, 82720, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/forth', () => __webpack_require__.e(/* import() */ 233).then(__webpack_require__.t.bind(__webpack_require__, 30233, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/fortran', () => __webpack_require__.e(/* import() */ 9553).then(__webpack_require__.t.bind(__webpack_require__, 39553, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/fsharp', () => __webpack_require__.e(/* import() */ 1451).then(__webpack_require__.t.bind(__webpack_require__, 11451, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/fsl', () => __webpack_require__.e(/* import() */ 6434).then(__webpack_require__.t.bind(__webpack_require__, 46434, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ftl', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4006)]).then(__webpack_require__.t.bind(__webpack_require__, 94006, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gcode', () => __webpack_require__.e(/* import() */ 4800).then(__webpack_require__.t.bind(__webpack_require__, 54800, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gherkin', () => __webpack_require__.e(/* import() */ 3622).then(__webpack_require__.t.bind(__webpack_require__, 53622, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gitignore', () => __webpack_require__.e(/* import() */ 6763).then(__webpack_require__.t.bind(__webpack_require__, 36763, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/glsl', () => __webpack_require__.e(/* import() */ 1365).then(__webpack_require__.t.bind(__webpack_require__, 41365, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gobstones', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1816)]).then(__webpack_require__.t.bind(__webpack_require__, 91816, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/golang', () => __webpack_require__.e(/* import() */ 7561).then(__webpack_require__.t.bind(__webpack_require__, 77561, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/graphqlschema', () => __webpack_require__.e(/* import() */ 8434).then(__webpack_require__.t.bind(__webpack_require__, 8434, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/groovy', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1354)]).then(__webpack_require__.t.bind(__webpack_require__, 11354, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haml', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(5772), __webpack_require__.e(2304)]).then(__webpack_require__.t.bind(__webpack_require__, 22304, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/handlebars', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(7821)]).then(__webpack_require__.t.bind(__webpack_require__, 57821, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haskell', () => __webpack_require__.e(/* import() */ 7823).then(__webpack_require__.t.bind(__webpack_require__, 27823, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haskell_cabal', () => __webpack_require__.e(/* import() */ 2176).then(__webpack_require__.t.bind(__webpack_require__, 22176, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haxe', () => __webpack_require__.e(/* import() */ 2102).then(__webpack_require__.t.bind(__webpack_require__, 12102, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/hjson', () => __webpack_require__.e(/* import() */ 7908).then(__webpack_require__.t.bind(__webpack_require__, 37908, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/html', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528)]).then(__webpack_require__.t.bind(__webpack_require__, 75528, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/html_elixir', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1471)]).then(__webpack_require__.t.bind(__webpack_require__, 31471, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/html_ruby', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(95)]).then(__webpack_require__.t.bind(__webpack_require__, 80095, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ini', () => __webpack_require__.e(/* import() */ 1335).then(__webpack_require__.t.bind(__webpack_require__, 21335, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/io', () => __webpack_require__.e(/* import() */ 7628).then(__webpack_require__.t.bind(__webpack_require__, 17628, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ion', () => __webpack_require__.e(/* import() */ 9705).then(__webpack_require__.t.bind(__webpack_require__, 69705, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jack', () => __webpack_require__.e(/* import() */ 8240).then(__webpack_require__.t.bind(__webpack_require__, 48240, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jade', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4885)]).then(__webpack_require__.t.bind(__webpack_require__, 4885, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/java', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(3262)]).then(__webpack_require__.t.bind(__webpack_require__, 33262, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/javascript', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(8057)]).then(__webpack_require__.t.bind(__webpack_require__, 88057, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jexl', () => __webpack_require__.e(/* import() */ 7201).then(__webpack_require__.t.bind(__webpack_require__, 87201, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/json', () => __webpack_require__.e(/* import() */ 5654).then(__webpack_require__.t.bind(__webpack_require__, 35654, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/json5', () => __webpack_require__.e(/* import() */ 9548).then(__webpack_require__.t.bind(__webpack_require__, 49548, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jsp', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4981)]).then(__webpack_require__.t.bind(__webpack_require__, 84981, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jssm', () => __webpack_require__.e(/* import() */ 2612).then(__webpack_require__.t.bind(__webpack_require__, 62612, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jsx', () => __webpack_require__.e(/* import() */ 2522).then(__webpack_require__.t.bind(__webpack_require__, 92522, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/julia', () => __webpack_require__.e(/* import() */ 2623).then(__webpack_require__.t.bind(__webpack_require__, 92623, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/kotlin', () => __webpack_require__.e(/* import() */ 1987).then(__webpack_require__.t.bind(__webpack_require__, 11987, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/latex', () => __webpack_require__.e(/* import() */ 9302).then(__webpack_require__.t.bind(__webpack_require__, 39302, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/latte', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4444)]).then(__webpack_require__.t.bind(__webpack_require__, 24444, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/less', () => __webpack_require__.e(/* import() */ 4629).then(__webpack_require__.t.bind(__webpack_require__, 94629, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/liquid', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(31)]).then(__webpack_require__.t.bind(__webpack_require__, 20031, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lisp', () => __webpack_require__.e(/* import() */ 75).then(__webpack_require__.t.bind(__webpack_require__, 10075, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/livescript', () => __webpack_require__.e(/* import() */ 6575).then(__webpack_require__.t.bind(__webpack_require__, 96575, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/logiql', () => __webpack_require__.e(/* import() */ 6664).then(__webpack_require__.t.bind(__webpack_require__, 26664, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/logtalk', () => __webpack_require__.e(/* import() */ 4152).then(__webpack_require__.t.bind(__webpack_require__, 94152, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lsl', () => __webpack_require__.e(/* import() */ 8950).then(__webpack_require__.t.bind(__webpack_require__, 78950, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lua', () => __webpack_require__.e(/* import() */ 2585).then(__webpack_require__.t.bind(__webpack_require__, 22585, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/luapage', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1299)]).then(__webpack_require__.t.bind(__webpack_require__, 41299, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lucene', () => __webpack_require__.e(/* import() */ 2814).then(__webpack_require__.t.bind(__webpack_require__, 82814, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/makefile', () => __webpack_require__.e(/* import() */ 4890).then(__webpack_require__.t.bind(__webpack_require__, 94890, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/markdown', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(259)]).then(__webpack_require__.t.bind(__webpack_require__, 80259, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mask', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(8394)]).then(__webpack_require__.t.bind(__webpack_require__, 18394, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/matlab', () => __webpack_require__.e(/* import() */ 581).then(__webpack_require__.t.bind(__webpack_require__, 80581, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/maze', () => __webpack_require__.e(/* import() */ 3014).then(__webpack_require__.t.bind(__webpack_require__, 13014, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mediawiki', () => __webpack_require__.e(/* import() */ 7527).then(__webpack_require__.t.bind(__webpack_require__, 77527, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mel', () => __webpack_require__.e(/* import() */ 9242).then(__webpack_require__.t.bind(__webpack_require__, 39242, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mips', () => __webpack_require__.e(/* import() */ 1524).then(__webpack_require__.t.bind(__webpack_require__, 91524, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mixal', () => __webpack_require__.e(/* import() */ 3521).then(__webpack_require__.t.bind(__webpack_require__, 33521, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mushcode', () => __webpack_require__.e(/* import() */ 9067).then(__webpack_require__.t.bind(__webpack_require__, 69067, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mysql', () => __webpack_require__.e(/* import() */ 6789).then(__webpack_require__.t.bind(__webpack_require__, 86789, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nginx', () => __webpack_require__.e(/* import() */ 2435).then(__webpack_require__.t.bind(__webpack_require__, 32435, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nim', () => __webpack_require__.e(/* import() */ 7614).then(__webpack_require__.t.bind(__webpack_require__, 7614, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nix', () => __webpack_require__.e(/* import() */ 3645).then(__webpack_require__.t.bind(__webpack_require__, 3645, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nsis', () => __webpack_require__.e(/* import() */ 8254).then(__webpack_require__.t.bind(__webpack_require__, 8254, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nunjucks', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(9382)]).then(__webpack_require__.t.bind(__webpack_require__, 99382, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/objectivec', () => __webpack_require__.e(/* import() */ 9886).then(__webpack_require__.t.bind(__webpack_require__, 69886, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ocaml', () => __webpack_require__.e(/* import() */ 6708).then(__webpack_require__.t.bind(__webpack_require__, 96708, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/partiql', () => __webpack_require__.e(/* import() */ 1910).then(__webpack_require__.t.bind(__webpack_require__, 81910, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/pascal', () => __webpack_require__.e(/* import() */ 8361).then(__webpack_require__.t.bind(__webpack_require__, 58361, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/perl', () => __webpack_require__.e(/* import() */ 6918).then(__webpack_require__.t.bind(__webpack_require__, 26918, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/pgsql', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(8374)]).then(__webpack_require__.t.bind(__webpack_require__, 38374, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/php', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(8681)]).then(__webpack_require__.t.bind(__webpack_require__, 48681, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/php_laravel_blade', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(8681), __webpack_require__.e(184)]).then(__webpack_require__.t.bind(__webpack_require__, 70184, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/pig', () => __webpack_require__.e(/* import() */ 3114).then(__webpack_require__.t.bind(__webpack_require__, 53114, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/plain_text', () => __webpack_require__.e(/* import() */ 1660).then(__webpack_require__.t.bind(__webpack_require__, 1660, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/plsql', () => __webpack_require__.e(/* import() */ 1345).then(__webpack_require__.t.bind(__webpack_require__, 11345, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/powershell', () => __webpack_require__.e(/* import() */ 6700).then(__webpack_require__.t.bind(__webpack_require__, 36700, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/praat', () => __webpack_require__.e(/* import() */ 8142).then(__webpack_require__.t.bind(__webpack_require__, 58142, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/prisma', () => __webpack_require__.e(/* import() */ 311).then(__webpack_require__.t.bind(__webpack_require__, 40311, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/prolog', () => __webpack_require__.e(/* import() */ 2566).then(__webpack_require__.t.bind(__webpack_require__, 92566, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/properties', () => __webpack_require__.e(/* import() */ 8435).then(__webpack_require__.t.bind(__webpack_require__, 28435, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/protobuf', () => __webpack_require__.e(/* import() */ 9847).then(__webpack_require__.t.bind(__webpack_require__, 29847, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/puppet', () => __webpack_require__.e(/* import() */ 2016).then(__webpack_require__.t.bind(__webpack_require__, 92016, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/python', () => __webpack_require__.e(/* import() */ 9420).then(__webpack_require__.t.bind(__webpack_require__, 39420, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/qml', () => __webpack_require__.e(/* import() */ 987).then(__webpack_require__.t.bind(__webpack_require__, 80987, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/r', () => __webpack_require__.e(/* import() */ 2858).then(__webpack_require__.t.bind(__webpack_require__, 72858, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/raku', () => __webpack_require__.e(/* import() */ 7962).then(__webpack_require__.t.bind(__webpack_require__, 47962, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/razor', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(6562)]).then(__webpack_require__.t.bind(__webpack_require__, 86562, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rdoc', () => __webpack_require__.e(/* import() */ 9229).then(__webpack_require__.t.bind(__webpack_require__, 69229, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/red', () => __webpack_require__.e(/* import() */ 8223).then(__webpack_require__.t.bind(__webpack_require__, 48223, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/redshift', () => __webpack_require__.e(/* import() */ 8544).then(__webpack_require__.t.bind(__webpack_require__, 78544, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rhtml', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5181)]).then(__webpack_require__.t.bind(__webpack_require__, 65181, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/robot', () => __webpack_require__.e(/* import() */ 9793).then(__webpack_require__.t.bind(__webpack_require__, 29793, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rst', () => __webpack_require__.e(/* import() */ 5800).then(__webpack_require__.t.bind(__webpack_require__, 25800, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ruby', () => Promise.all(/* import() */[__webpack_require__.e(5772), __webpack_require__.e(5433)]).then(__webpack_require__.t.bind(__webpack_require__, 45433, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rust', () => __webpack_require__.e(/* import() */ 5727).then(__webpack_require__.t.bind(__webpack_require__, 25727, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sac', () => __webpack_require__.e(/* import() */ 9815).then(__webpack_require__.t.bind(__webpack_require__, 29815, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sass', () => __webpack_require__.e(/* import() */ 9736).then(__webpack_require__.t.bind(__webpack_require__, 79736, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scad', () => __webpack_require__.e(/* import() */ 3057).then(__webpack_require__.t.bind(__webpack_require__, 33057, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scala', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(9445)]).then(__webpack_require__.t.bind(__webpack_require__, 19445, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scheme', () => __webpack_require__.e(/* import() */ 833).then(__webpack_require__.t.bind(__webpack_require__, 10833, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scrypt', () => __webpack_require__.e(/* import() */ 5735).then(__webpack_require__.t.bind(__webpack_require__, 25735, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scss', () => __webpack_require__.e(/* import() */ 6852).then(__webpack_require__.t.bind(__webpack_require__, 36852, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sh', () => __webpack_require__.e(/* import() */ 8887).then(__webpack_require__.t.bind(__webpack_require__, 88887, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sjs', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(4116)]).then(__webpack_require__.t.bind(__webpack_require__, 24116, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/slim', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(259), __webpack_require__.e(1442)]).then(__webpack_require__.t.bind(__webpack_require__, 81442, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/smarty', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4602)]).then(__webpack_require__.t.bind(__webpack_require__, 74602, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/smithy', () => __webpack_require__.e(/* import() */ 3011).then(__webpack_require__.t.bind(__webpack_require__, 33011, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/snippets', () => __webpack_require__.e(/* import() */ 2942).then(__webpack_require__.t.bind(__webpack_require__, 82942, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/soy_template', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1771)]).then(__webpack_require__.t.bind(__webpack_require__, 61771, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/space', () => __webpack_require__.e(/* import() */ 888).then(__webpack_require__.t.bind(__webpack_require__, 60888, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sparql', () => __webpack_require__.e(/* import() */ 3400).then(__webpack_require__.t.bind(__webpack_require__, 33400, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sql', () => __webpack_require__.e(/* import() */ 9562).then(__webpack_require__.t.bind(__webpack_require__, 99562, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sqlserver', () => __webpack_require__.e(/* import() */ 8730).then(__webpack_require__.t.bind(__webpack_require__, 63612, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/stylus', () => __webpack_require__.e(/* import() */ 2420).then(__webpack_require__.t.bind(__webpack_require__, 52420, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/svg', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2207), __webpack_require__.e(4589)]).then(__webpack_require__.t.bind(__webpack_require__, 24589, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/swift', () => __webpack_require__.e(/* import() */ 5177).then(__webpack_require__.t.bind(__webpack_require__, 65177, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/tcl', () => __webpack_require__.e(/* import() */ 678).then(__webpack_require__.t.bind(__webpack_require__, 678, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/terraform', () => __webpack_require__.e(/* import() */ 2052).then(__webpack_require__.t.bind(__webpack_require__, 92052, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/tex', () => __webpack_require__.e(/* import() */ 3772).then(__webpack_require__.t.bind(__webpack_require__, 33772, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/text', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 98030, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/textile', () => __webpack_require__.e(/* import() */ 501).then(__webpack_require__.t.bind(__webpack_require__, 90501, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/toml', () => __webpack_require__.e(/* import() */ 8795).then(__webpack_require__.t.bind(__webpack_require__, 38795, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/tsx', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(300)]).then(__webpack_require__.t.bind(__webpack_require__, 40300, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/turtle', () => __webpack_require__.e(/* import() */ 1947).then(__webpack_require__.t.bind(__webpack_require__, 51947, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/twig', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(2329)]).then(__webpack_require__.t.bind(__webpack_require__, 82329, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/typescript', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(3123)]).then(__webpack_require__.t.bind(__webpack_require__, 23123, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/vala', () => __webpack_require__.e(/* import() */ 5754).then(__webpack_require__.t.bind(__webpack_require__, 25754, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/vbscript', () => __webpack_require__.e(/* import() */ 6389).then(__webpack_require__.t.bind(__webpack_require__, 96389, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/velocity', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5525)]).then(__webpack_require__.t.bind(__webpack_require__, 95525, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/verilog', () => __webpack_require__.e(/* import() */ 6614).then(__webpack_require__.t.bind(__webpack_require__, 66614, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/vhdl', () => __webpack_require__.e(/* import() */ 11).then(__webpack_require__.t.bind(__webpack_require__, 60011, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/visualforce', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(9160)]).then(__webpack_require__.t.bind(__webpack_require__, 61660, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/wollok', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1638)]).then(__webpack_require__.t.bind(__webpack_require__, 21638, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/xml', () => __webpack_require__.e(/* import() */ 4268).then(__webpack_require__.t.bind(__webpack_require__, 94268, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/yaml', () => __webpack_require__.e(/* import() */ 3348).then(__webpack_require__.t.bind(__webpack_require__, 43348, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/zeek', () => __webpack_require__.e(/* import() */ 6958).then(__webpack_require__.t.bind(__webpack_require__, 16958, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/abc', () => __webpack_require__.e(/* import() */ 4551).then(__webpack_require__.t.bind(__webpack_require__, 64551, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/abc.snippets', () => __webpack_require__.e(/* import() */ 4269).then(__webpack_require__.t.bind(__webpack_require__, 24269, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/actionscript', () => __webpack_require__.e(/* import() */ 6009).then(__webpack_require__.t.bind(__webpack_require__, 26009, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/actionscript.snippets', () => __webpack_require__.e(/* import() */ 1711).then(__webpack_require__.t.bind(__webpack_require__, 71711, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/c_cpp', () => __webpack_require__.e(/* import() */ 3423).then(__webpack_require__.t.bind(__webpack_require__, 73423, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/c_cpp.snippets', () => __webpack_require__.e(/* import() */ 1275).then(__webpack_require__.t.bind(__webpack_require__, 31275, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/clojure', () => __webpack_require__.e(/* import() */ 7679).then(__webpack_require__.t.bind(__webpack_require__, 87679, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/clojure.snippets', () => __webpack_require__.e(/* import() */ 614).then(__webpack_require__.t.bind(__webpack_require__, 90614, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/coffee', () => __webpack_require__.e(/* import() */ 7956).then(__webpack_require__.t.bind(__webpack_require__, 67956, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/coffee.snippets', () => __webpack_require__.e(/* import() */ 6217).then(__webpack_require__.t.bind(__webpack_require__, 56217, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_document', () => __webpack_require__.e(/* import() */ 8101).then(__webpack_require__.t.bind(__webpack_require__, 28101, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_document.snippets', () => __webpack_require__.e(/* import() */ 7200).then(__webpack_require__.t.bind(__webpack_require__, 17200, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_orchestra', () => __webpack_require__.e(/* import() */ 4430).then(__webpack_require__.t.bind(__webpack_require__, 4430, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_orchestra.snippets', () => __webpack_require__.e(/* import() */ 698).then(__webpack_require__.t.bind(__webpack_require__, 10698, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/css', () => __webpack_require__.e(/* import() */ 4968).then(__webpack_require__.t.bind(__webpack_require__, 44968, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/css.snippets', () => __webpack_require__.e(/* import() */ 507).then(__webpack_require__.t.bind(__webpack_require__, 90507, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/dart', () => __webpack_require__.e(/* import() */ 2951).then(__webpack_require__.t.bind(__webpack_require__, 92951, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/dart.snippets', () => __webpack_require__.e(/* import() */ 793).then(__webpack_require__.t.bind(__webpack_require__, 10793, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/diff', () => __webpack_require__.e(/* import() */ 7406).then(__webpack_require__.t.bind(__webpack_require__, 17406, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/diff.snippets', () => __webpack_require__.e(/* import() */ 806).then(__webpack_require__.t.bind(__webpack_require__, 10806, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/django', () => __webpack_require__.e(/* import() */ 1180).then(__webpack_require__.t.bind(__webpack_require__, 11180, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/django.snippets', () => __webpack_require__.e(/* import() */ 6104).then(__webpack_require__.t.bind(__webpack_require__, 26104, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/drools', () => __webpack_require__.e(/* import() */ 8291).then(__webpack_require__.t.bind(__webpack_require__, 58291, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/drools.snippets', () => __webpack_require__.e(/* import() */ 2966).then(__webpack_require__.t.bind(__webpack_require__, 54155, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/edifact', () => __webpack_require__.e(/* import() */ 817).then(__webpack_require__.t.bind(__webpack_require__, 70817, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/edifact.snippets', () => __webpack_require__.e(/* import() */ 4165).then(__webpack_require__.t.bind(__webpack_require__, 74165, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/erlang', () => __webpack_require__.e(/* import() */ 5598).then(__webpack_require__.t.bind(__webpack_require__, 45598, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/erlang.snippets', () => __webpack_require__.e(/* import() */ 7826).then(__webpack_require__.t.bind(__webpack_require__, 17826, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/fsl', () => __webpack_require__.e(/* import() */ 1580).then(__webpack_require__.t.bind(__webpack_require__, 81580, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/fsl.snippets', () => __webpack_require__.e(/* import() */ 5079).then(__webpack_require__.t.bind(__webpack_require__, 15079, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/gobstones', () => __webpack_require__.e(/* import() */ 1789).then(__webpack_require__.t.bind(__webpack_require__, 91789, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/gobstones.snippets', () => __webpack_require__.e(/* import() */ 9104).then(__webpack_require__.t.bind(__webpack_require__, 69104, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/graphqlschema', () => __webpack_require__.e(/* import() */ 6978).then(__webpack_require__.t.bind(__webpack_require__, 36978, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/graphqlschema.snippets', () => __webpack_require__.e(/* import() */ 1990).then(__webpack_require__.t.bind(__webpack_require__, 71990, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haml', () => __webpack_require__.e(/* import() */ 1989).then(__webpack_require__.t.bind(__webpack_require__, 11989, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haml.snippets', () => __webpack_require__.e(/* import() */ 5362).then(__webpack_require__.t.bind(__webpack_require__, 95362, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haskell', () => __webpack_require__.e(/* import() */ 1895).then(__webpack_require__.t.bind(__webpack_require__, 71895, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haskell.snippets', () => __webpack_require__.e(/* import() */ 3153).then(__webpack_require__.t.bind(__webpack_require__, 63153, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/html', () => __webpack_require__.e(/* import() */ 6663).then(__webpack_require__.t.bind(__webpack_require__, 86663, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/html.snippets', () => __webpack_require__.e(/* import() */ 7805).then(__webpack_require__.t.bind(__webpack_require__, 37805, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/io', () => __webpack_require__.e(/* import() */ 5250).then(__webpack_require__.t.bind(__webpack_require__, 25250, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/java', () => __webpack_require__.e(/* import() */ 9369).then(__webpack_require__.t.bind(__webpack_require__, 99369, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/java.snippets', () => __webpack_require__.e(/* import() */ 2944).then(__webpack_require__.t.bind(__webpack_require__, 44805, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/javascript', () => __webpack_require__.e(/* import() */ 6383).then(__webpack_require__.t.bind(__webpack_require__, 66383, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/javascript.snippets', () => __webpack_require__.e(/* import() */ 5336).then(__webpack_require__.t.bind(__webpack_require__, 95336, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/jsp', () => __webpack_require__.e(/* import() */ 8222).then(__webpack_require__.t.bind(__webpack_require__, 68222, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/jsp.snippets', () => __webpack_require__.e(/* import() */ 2018).then(__webpack_require__.t.bind(__webpack_require__, 82018, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/liquid', () => __webpack_require__.e(/* import() */ 4915).then(__webpack_require__.t.bind(__webpack_require__, 44915, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/liquid.snippets', () => __webpack_require__.e(/* import() */ 3762).then(__webpack_require__.t.bind(__webpack_require__, 23762, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lsl', () => __webpack_require__.e(/* import() */ 3642).then(__webpack_require__.t.bind(__webpack_require__, 43642, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lsl.snippets', () => __webpack_require__.e(/* import() */ 3449).then(__webpack_require__.t.bind(__webpack_require__, 93449, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lua', () => __webpack_require__.e(/* import() */ 6452).then(__webpack_require__.t.bind(__webpack_require__, 56452, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lua.snippets', () => __webpack_require__.e(/* import() */ 4801).then(__webpack_require__.t.bind(__webpack_require__, 74801, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/makefile', () => __webpack_require__.e(/* import() */ 5741).then(__webpack_require__.t.bind(__webpack_require__, 5741, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/makefile.snippets', () => __webpack_require__.e(/* import() */ 165).then(__webpack_require__.t.bind(__webpack_require__, 70165, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/markdown', () => __webpack_require__.e(/* import() */ 6745).then(__webpack_require__.t.bind(__webpack_require__, 6745, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/markdown.snippets', () => __webpack_require__.e(/* import() */ 6196).then(__webpack_require__.t.bind(__webpack_require__, 86196, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/maze', () => __webpack_require__.e(/* import() */ 7076).then(__webpack_require__.t.bind(__webpack_require__, 57076, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/maze.snippets', () => __webpack_require__.e(/* import() */ 5282).then(__webpack_require__.t.bind(__webpack_require__, 25282, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/perl', () => __webpack_require__.e(/* import() */ 6343).then(__webpack_require__.t.bind(__webpack_require__, 36343, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/perl.snippets', () => __webpack_require__.e(/* import() */ 6220).then(__webpack_require__.t.bind(__webpack_require__, 86220, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/php', () => __webpack_require__.e(/* import() */ 7038).then(__webpack_require__.t.bind(__webpack_require__, 87038, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/php.snippets', () => __webpack_require__.e(/* import() */ 5192).then(__webpack_require__.t.bind(__webpack_require__, 85192, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/python', () => __webpack_require__.e(/* import() */ 4805).then(__webpack_require__.t.bind(__webpack_require__, 94805, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/python.snippets', () => __webpack_require__.e(/* import() */ 3363).then(__webpack_require__.t.bind(__webpack_require__, 3363, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/r', () => __webpack_require__.e(/* import() */ 4386).then(__webpack_require__.t.bind(__webpack_require__, 14386, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/r.snippets', () => __webpack_require__.e(/* import() */ 7576).then(__webpack_require__.t.bind(__webpack_require__, 17576, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/razor', () => __webpack_require__.e(/* import() */ 4943).then(__webpack_require__.t.bind(__webpack_require__, 74943, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/razor.snippets', () => __webpack_require__.e(/* import() */ 5770).then(__webpack_require__.t.bind(__webpack_require__, 85770, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/robot', () => __webpack_require__.e(/* import() */ 3093).then(__webpack_require__.t.bind(__webpack_require__, 33093, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/robot.snippets', () => __webpack_require__.e(/* import() */ 6528).then(__webpack_require__.t.bind(__webpack_require__, 16528, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/rst', () => __webpack_require__.e(/* import() */ 5828).then(__webpack_require__.t.bind(__webpack_require__, 75828, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/rst.snippets', () => __webpack_require__.e(/* import() */ 4254).then(__webpack_require__.t.bind(__webpack_require__, 34254, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/ruby', () => __webpack_require__.e(/* import() */ 4391).then(__webpack_require__.t.bind(__webpack_require__, 74391, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/ruby.snippets', () => __webpack_require__.e(/* import() */ 6902).then(__webpack_require__.t.bind(__webpack_require__, 76902, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sh', () => __webpack_require__.e(/* import() */ 6807).then(__webpack_require__.t.bind(__webpack_require__, 6807, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sh.snippets', () => __webpack_require__.e(/* import() */ 6013).then(__webpack_require__.t.bind(__webpack_require__, 6013, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/snippets', () => __webpack_require__.e(/* import() */ 3239).then(__webpack_require__.t.bind(__webpack_require__, 23239, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/snippets.snippets', () => __webpack_require__.e(/* import() */ 488).then(__webpack_require__.t.bind(__webpack_require__, 10488, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sql', () => __webpack_require__.e(/* import() */ 7687).then(__webpack_require__.t.bind(__webpack_require__, 57687, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sql.snippets', () => __webpack_require__.e(/* import() */ 2782).then(__webpack_require__.t.bind(__webpack_require__, 32782, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sqlserver', () => __webpack_require__.e(/* import() */ 2619).then(__webpack_require__.t.bind(__webpack_require__, 72619, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sqlserver.snippets', () => __webpack_require__.e(/* import() */ 8389).then(__webpack_require__.t.bind(__webpack_require__, 68389, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tcl', () => __webpack_require__.e(/* import() */ 2646).then(__webpack_require__.t.bind(__webpack_require__, 72646, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tcl.snippets', () => __webpack_require__.e(/* import() */ 7483).then(__webpack_require__.t.bind(__webpack_require__, 37483, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tex', () => __webpack_require__.e(/* import() */ 1884).then(__webpack_require__.t.bind(__webpack_require__, 51884, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tex.snippets', () => __webpack_require__.e(/* import() */ 2526).then(__webpack_require__.t.bind(__webpack_require__, 52526, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/textile', () => __webpack_require__.e(/* import() */ 4287).then(__webpack_require__.t.bind(__webpack_require__, 84287, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/textile.snippets', () => __webpack_require__.e(/* import() */ 9094).then(__webpack_require__.t.bind(__webpack_require__, 49094, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/vala', () => __webpack_require__.e(/* import() */ 5201).then(__webpack_require__.t.bind(__webpack_require__, 85201, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/velocity', () => __webpack_require__.e(/* import() */ 1142).then(__webpack_require__.t.bind(__webpack_require__, 91142, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/velocity.snippets', () => __webpack_require__.e(/* import() */ 6373).then(__webpack_require__.t.bind(__webpack_require__, 36373, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/wollok', () => __webpack_require__.e(/* import() */ 4479).then(__webpack_require__.t.bind(__webpack_require__, 84479, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/wollok.snippets', () => __webpack_require__.e(/* import() */ 5334).then(__webpack_require__.t.bind(__webpack_require__, 15334, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/ambiance', () => __webpack_require__.e(/* import() */ 7738).then(__webpack_require__.t.bind(__webpack_require__, 57738, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/chaos', () => __webpack_require__.e(/* import() */ 5296).then(__webpack_require__.t.bind(__webpack_require__, 25296, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/chrome', () => __webpack_require__.e(/* import() */ 1923).then(__webpack_require__.t.bind(__webpack_require__, 51923, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cloud9_day', () => __webpack_require__.e(/* import() */ 3759).then(__webpack_require__.t.bind(__webpack_require__, 23759, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cloud9_night', () => __webpack_require__.e(/* import() */ 6168).then(__webpack_require__.t.bind(__webpack_require__, 36168, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cloud9_night_low_color', () => __webpack_require__.e(/* import() */ 2139).then(__webpack_require__.t.bind(__webpack_require__, 72139, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/clouds', () => __webpack_require__.e(/* import() */ 7510).then(__webpack_require__.t.bind(__webpack_require__, 97510, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/clouds_midnight', () => __webpack_require__.e(/* import() */ 3251).then(__webpack_require__.t.bind(__webpack_require__, 93251, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cobalt', () => __webpack_require__.e(/* import() */ 3128).then(__webpack_require__.t.bind(__webpack_require__, 73128, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/crimson_editor', () => __webpack_require__.e(/* import() */ 4270).then(__webpack_require__.t.bind(__webpack_require__, 14270, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/dawn', () => __webpack_require__.e(/* import() */ 3782).then(__webpack_require__.t.bind(__webpack_require__, 13782, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/dracula', () => __webpack_require__.e(/* import() */ 7482).then(__webpack_require__.t.bind(__webpack_require__, 27482, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/dreamweaver', () => __webpack_require__.e(/* import() */ 8390).then(__webpack_require__.t.bind(__webpack_require__, 28390, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/eclipse', () => __webpack_require__.e(/* import() */ 8385).then(__webpack_require__.t.bind(__webpack_require__, 38385, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/github', () => __webpack_require__.e(/* import() */ 4103).then(__webpack_require__.t.bind(__webpack_require__, 94103, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gob', () => __webpack_require__.e(/* import() */ 1375).then(__webpack_require__.t.bind(__webpack_require__, 81375, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gruvbox', () => __webpack_require__.e(/* import() */ 8642).then(__webpack_require__.t.bind(__webpack_require__, 8642, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gruvbox_dark_hard', () => __webpack_require__.e(/* import() */ 9475).then(__webpack_require__.t.bind(__webpack_require__, 99475, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gruvbox_light_hard', () => __webpack_require__.e(/* import() */ 3553).then(__webpack_require__.t.bind(__webpack_require__, 93553, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/idle_fingers', () => __webpack_require__.e(/* import() */ 6921).then(__webpack_require__.t.bind(__webpack_require__, 46921, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/iplastic', () => __webpack_require__.e(/* import() */ 2261).then(__webpack_require__.t.bind(__webpack_require__, 82261, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/katzenmilch', () => __webpack_require__.e(/* import() */ 8024).then(__webpack_require__.t.bind(__webpack_require__, 68024, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/kr_theme', () => __webpack_require__.e(/* import() */ 9729).then(__webpack_require__.t.bind(__webpack_require__, 89729, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/kuroir', () => __webpack_require__.e(/* import() */ 4747).then(__webpack_require__.t.bind(__webpack_require__, 94747, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/merbivore', () => __webpack_require__.e(/* import() */ 6579).then(__webpack_require__.t.bind(__webpack_require__, 36579, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/merbivore_soft', () => __webpack_require__.e(/* import() */ 7403).then(__webpack_require__.t.bind(__webpack_require__, 77403, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/mono_industrial', () => __webpack_require__.e(/* import() */ 744).then(__webpack_require__.t.bind(__webpack_require__, 90744, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/monokai', () => __webpack_require__.e(/* import() */ 5567).then(__webpack_require__.t.bind(__webpack_require__, 65567, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/nord_dark', () => __webpack_require__.e(/* import() */ 4689).then(__webpack_require__.t.bind(__webpack_require__, 4689, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/one_dark', () => __webpack_require__.e(/* import() */ 2407).then(__webpack_require__.t.bind(__webpack_require__, 2407, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/pastel_on_dark', () => __webpack_require__.e(/* import() */ 599).then(__webpack_require__.t.bind(__webpack_require__, 70599, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/solarized_dark', () => __webpack_require__.e(/* import() */ 1257).then(__webpack_require__.t.bind(__webpack_require__, 81257, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/solarized_light', () => __webpack_require__.e(/* import() */ 3951).then(__webpack_require__.t.bind(__webpack_require__, 13951, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/sqlserver', () => __webpack_require__.e(/* import() */ 7302).then(__webpack_require__.t.bind(__webpack_require__, 77302, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/terminal', () => __webpack_require__.e(/* import() */ 9576).then(__webpack_require__.t.bind(__webpack_require__, 19576, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/textmate', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 93687, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow', () => __webpack_require__.e(/* import() */ 9946).then(__webpack_require__.t.bind(__webpack_require__, 29946, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night', () => __webpack_require__.e(/* import() */ 9764).then(__webpack_require__.t.bind(__webpack_require__, 79764, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night_blue', () => __webpack_require__.e(/* import() */ 7342).then(__webpack_require__.t.bind(__webpack_require__, 17342, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night_bright', () => __webpack_require__.e(/* import() */ 672).then(__webpack_require__.t.bind(__webpack_require__, 672, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night_eighties', () => __webpack_require__.e(/* import() */ 9327).then(__webpack_require__.t.bind(__webpack_require__, 59327, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/twilight', () => __webpack_require__.e(/* import() */ 587).then(__webpack_require__.t.bind(__webpack_require__, 40587, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/vibrant_ink', () => __webpack_require__.e(/* import() */ 3200).then(__webpack_require__.t.bind(__webpack_require__, 13200, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/xcode', () => __webpack_require__.e(/* import() */ 6787).then(__webpack_require__.t.bind(__webpack_require__, 96787, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/vim', () => __webpack_require__.e(/* import() */ 2403).then(__webpack_require__.t.bind(__webpack_require__, 2403, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/emacs', () => __webpack_require__.e(/* import() */ 6241).then(__webpack_require__.t.bind(__webpack_require__, 26241, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/sublime', () => __webpack_require__.e(/* import() */ 4176).then(__webpack_require__.t.bind(__webpack_require__, 74176, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/vscode', () => __webpack_require__.e(/* import() */ 8143).then(__webpack_require__.t.bind(__webpack_require__, 58143, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/beautify', () => __webpack_require__.e(/* import() */ 682).then(__webpack_require__.t.bind(__webpack_require__, 50682, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/code_lens', () => __webpack_require__.e(/* import() */ 2447).then(__webpack_require__.t.bind(__webpack_require__, 62447, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/elastic_tabstops_lite', () => __webpack_require__.e(/* import() */ 7720).then(__webpack_require__.t.bind(__webpack_require__, 37720, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/emmet', () => __webpack_require__.e(/* import() */ 4836).then(__webpack_require__.t.bind(__webpack_require__, 24836, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/error_marker', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 18552, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/hardwrap', () => __webpack_require__.e(/* import() */ 2165).then(__webpack_require__.t.bind(__webpack_require__, 52165, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/inline_autocomplete', () => __webpack_require__.e(/* import() */ 371).then(__webpack_require__.t.bind(__webpack_require__, 90371, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/keybinding_menu', () => __webpack_require__.e(/* import() */ 3228).then(__webpack_require__.t.bind(__webpack_require__, 83228, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/language_tools', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 11105, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/linking', () => __webpack_require__.e(/* import() */ 9044).then(__webpack_require__.t.bind(__webpack_require__, 19044, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/modelist', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 90352, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/options', () => __webpack_require__.e(/* import() */ 3056).then(__webpack_require__.t.bind(__webpack_require__, 32814, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/prompt', () => __webpack_require__.e(/* import() */ 1531).then(__webpack_require__.t.bind(__webpack_require__, 81531, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/rtl', () => __webpack_require__.e(/* import() */ 1095).then(__webpack_require__.t.bind(__webpack_require__, 91095, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/searchbox', () => __webpack_require__.e(/* import() */ 2892).then(__webpack_require__.t.bind(__webpack_require__, 32892, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/settings_menu', () => __webpack_require__.e(/* import() */ 3275).then(__webpack_require__.t.bind(__webpack_require__, 93275, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/spellcheck', () => __webpack_require__.e(/* import() */ 2093).then(__webpack_require__.t.bind(__webpack_require__, 12093, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/split', () => __webpack_require__.e(/* import() */ 3877).then(__webpack_require__.t.bind(__webpack_require__, 3877, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/static_highlight', () => __webpack_require__.e(/* import() */ 2841).then(__webpack_require__.t.bind(__webpack_require__, 82841, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/statusbar', () => __webpack_require__.e(/* import() */ 7872).then(__webpack_require__.t.bind(__webpack_require__, 77872, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/textarea', () => __webpack_require__.e(/* import() */ 4404).then(__webpack_require__.t.bind(__webpack_require__, 54404, 23)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/themelist', () => __webpack_require__.e(/* import() */ 4953).then(__webpack_require__.t.bind(__webpack_require__, 84953, 19)));
+_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/whitespace', () => __webpack_require__.e(/* import() */ 5107).then(__webpack_require__.t.bind(__webpack_require__, 85107, 19)));
+
+
+
+/***/ }),
+
+/***/ 59100:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -25,24 +386,23 @@ return /******/ (() => { // webpackBootstrap
 "include loader_build";
 
 var dom = __webpack_require__(6359);
-var event = __webpack_require__(7989);
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var Editor = (__webpack_require__(2880).Editor);
-var EditSession = (__webpack_require__(6480)/* .EditSession */ .m);
-var UndoManager = (__webpack_require__(718)/* .UndoManager */ .H);
-var Renderer = (__webpack_require__(3049).VirtualRenderer);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var Editor = (__webpack_require__(82880).Editor);
+var EditSession = (__webpack_require__(66480)/* .EditSession */ .m);
+var UndoManager = (__webpack_require__(40718)/* .UndoManager */ .H);
+var Renderer = (__webpack_require__(63049).VirtualRenderer);
 
 // The following require()s are for inclusion in the built ace file
-__webpack_require__(1451);
+__webpack_require__(91451);
 __webpack_require__(7116);
-__webpack_require__(1553);
-__webpack_require__(2972);
-__webpack_require__(5369);
-__webpack_require__(3687);
-__webpack_require__(8552);
+__webpack_require__(81553);
+__webpack_require__(62972);
+__webpack_require__(15369);
+__webpack_require__(93687);
+__webpack_require__(18552);
 
-exports.config = __webpack_require__(3188);
+exports.config = __webpack_require__(13188);
 
 
 /**
@@ -83,9 +443,7 @@ exports.edit = function(el, options) {
         onResize: editor.resize.bind(editor, null)
     };
     if (oldNode) env.textarea = oldNode;
-    event.addListener(window, "resize", env.onResize);
     editor.on("destroy", function() {
-        event.removeListener(window, "resize", env.onResize);
         env.editor.container.env = null; // prevent memory leak on old ie
     });
     editor.container.env = editor.env = env;
@@ -113,67 +471,53 @@ exports.version = exports.config.version;
 
 /***/ }),
 
-/***/ 7869:
+/***/ 27869:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var oop = __webpack_require__(89359);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
 /**
- *
  * Defines a floating pointer in the document. Whenever text is inserted or deleted before the cursor, the position of the anchor is updated.
- *
- * @class Anchor
  **/
+class Anchor {
+    /**
+     * Creates a new `Anchor` and associates it with a document.
+     *
+     * @param {Document} doc The document to associate with the anchor
+     * @param {Number} row The starting row position
+     * @param {Number} column The starting column position
+     **/
+    constructor(doc, row, column) {
+        this.$onChange = this.onChange.bind(this);
+        this.attach(doc);
 
-/**
- * Creates a new `Anchor` and associates it with a document.
- *
- * @param {Document} doc The document to associate with the anchor
- * @param {Number} row The starting row position
- * @param {Number} column The starting column position
- *
- * @constructor
- **/
-
-var Anchor = exports.e = function(doc, row, column) {
-    this.$onChange = this.onChange.bind(this);
-    this.attach(doc);
+        if (typeof column == "undefined")
+            this.setPosition(row.row, row.column);
+        else
+            this.setPosition(row, column);
+    }
     
-    if (typeof column == "undefined")
-        this.setPosition(row.row, row.column);
-    else
-        this.setPosition(row, column);
-};
-
-(function() {
-
-    oop.implement(this, EventEmitter);
-
     /**
      * Returns an object identifying the `row` and `column` position of the current anchor.
      * @returns {Ace.Point}
      **/
-    this.getPosition = function() {
+    getPosition() {
         return this.$clipPositionToDocument(this.row, this.column);
-    };
+    }
 
     /**
      *
      * Returns the current document.
      * @returns {Document}
      **/
-    this.getDocument = function() {
+    getDocument() {
         return this.document;
-    };
-
-    /**
-     * experimental: allows anchor to stick to the next on the left
-     */
-    this.$insertRight = false;
+    }
+    
     /**
      * Fires whenever the anchor position changes.
      *
@@ -191,7 +535,7 @@ var Anchor = exports.e = function(doc, row, column) {
      * Internal function called when `"change"` event fired.
      * @param {Ace.Delta} delta
      */
-    this.onChange = function(delta) {
+    onChange(delta) {
         if (delta.start.row == delta.end.row && delta.start.row != this.row)
             return;
 
@@ -200,44 +544,6 @@ var Anchor = exports.e = function(doc, row, column) {
             
         var point = $getTransformedPoint(delta, {row: this.row, column: this.column}, this.$insertRight);
         this.setPosition(point.row, point.column, true);
-    };
-    
-    function $pointsInOrder(point1, point2, equalPointsInOrder) {
-        var bColIsAfter = equalPointsInOrder ? point1.column <= point2.column : point1.column < point2.column;
-        return (point1.row < point2.row) || (point1.row == point2.row && bColIsAfter);
-    }
-            
-    function $getTransformedPoint(delta, point, moveIfEqual) {
-        // Get delta info.
-        var deltaIsInsert = delta.action == "insert";
-        var deltaRowShift = (deltaIsInsert ? 1 : -1) * (delta.end.row    - delta.start.row);
-        var deltaColShift = (deltaIsInsert ? 1 : -1) * (delta.end.column - delta.start.column);
-        var deltaStart = delta.start;
-        var deltaEnd = deltaIsInsert ? deltaStart : delta.end; // Collapse insert range.
-        
-        // DELTA AFTER POINT: No change needed.
-        if ($pointsInOrder(point, deltaStart, moveIfEqual)) {
-            return {
-                row: point.row,
-                column: point.column
-            };
-        }
-        
-        // DELTA BEFORE POINT: Move point by delta shift.
-        if ($pointsInOrder(deltaEnd, point, !moveIfEqual)) {
-            return {
-                row: point.row + deltaRowShift,
-                column: point.column + (point.row == deltaEnd.row ? deltaColShift : 0)
-            };
-        }
-        
-        // DELTA ENVELOPS POINT (delete only): Move point to delta start.
-        // TODO warn if delta.action != "remove" ?
-        
-        return {
-            row: deltaStart.row,
-            column: deltaStart.column
-        };
     }
 
     /**
@@ -247,7 +553,7 @@ var Anchor = exports.e = function(doc, row, column) {
      * @param {Boolean} noClip Identifies if you want the position to be clipped
      *
      **/
-    this.setPosition = function(row, column, noClip) {
+    setPosition(row, column, noClip) {
         var pos;
         if (noClip) {
             pos = {
@@ -272,25 +578,25 @@ var Anchor = exports.e = function(doc, row, column) {
             old: old,
             value: pos
         });
-    };
+    }
 
     /**
      * When called, the `"change"` event listener is removed.
      *
      **/
-    this.detach = function() {
+    detach() {
         this.document.off("change", this.$onChange);
-    };
+    }
 
     /**
      * When called, the `"change"` event listener is appended.
      * @param {Document} doc The document to associate with
      *
      **/
-    this.attach = function(doc) {
+    attach(doc) {
         this.document = doc || this.document;
         this.document.on("change", this.$onChange);
-    };
+    }
 
     /**
      * Clips the anchor position to the specified row and column.
@@ -299,7 +605,7 @@ var Anchor = exports.e = function(doc, row, column) {
      * @returns {Ace.Point}
      *
      **/
-    this.$clipPositionToDocument = function(row, column) {
+    $clipPositionToDocument(row, column) {
         var pos = {};
 
         if (row >= this.document.getLength()) {
@@ -319,14 +625,60 @@ var Anchor = exports.e = function(doc, row, column) {
             pos.column = 0;
 
         return pos;
-    };
+    }
+}
 
-}).call(Anchor.prototype);
+/**
+ * experimental: allows anchor to stick to the next on the left
+ */
+Anchor.prototype.$insertRight = false;
+
+oop.implement(Anchor.prototype, EventEmitter);
+
+function $pointsInOrder(point1, point2, equalPointsInOrder) {
+    var bColIsAfter = equalPointsInOrder ? point1.column <= point2.column : point1.column < point2.column;
+    return (point1.row < point2.row) || (point1.row == point2.row && bColIsAfter);
+}
+
+function $getTransformedPoint(delta, point, moveIfEqual) {
+    // Get delta info.
+    var deltaIsInsert = delta.action == "insert";
+    var deltaRowShift = (deltaIsInsert ? 1 : -1) * (delta.end.row    - delta.start.row);
+    var deltaColShift = (deltaIsInsert ? 1 : -1) * (delta.end.column - delta.start.column);
+    var deltaStart = delta.start;
+    var deltaEnd = deltaIsInsert ? deltaStart : delta.end; // Collapse insert range.
+
+    // DELTA AFTER POINT: No change needed.
+    if ($pointsInOrder(point, deltaStart, moveIfEqual)) {
+        return {
+            row: point.row,
+            column: point.column
+        };
+    }
+
+    // DELTA BEFORE POINT: Move point by delta shift.
+    if ($pointsInOrder(deltaEnd, point, !moveIfEqual)) {
+        return {
+            row: point.row + deltaRowShift,
+            column: point.column + (point.row == deltaEnd.row ? deltaColShift : 0)
+        };
+    }
+
+    // DELTA ENVELOPS POINT (delete only): Move point to delta start.
+    // TODO warn if delta.action != "remove" ?
+
+    return {
+        row: deltaStart.row,
+        column: deltaStart.column
+    };
+}
+
+exports.e = Anchor;
 
 
 /***/ }),
 
-/***/ 8934:
+/***/ 38934:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -410,113 +762,226 @@ exports.B = function(docLines, delta, doNotValidate) {
 
 /***/ }),
 
-/***/ 9528:
+/***/ 39528:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-var __webpack_unused_export__;
 
 
 var HashHandler = (__webpack_require__(7116).HashHandler);
-var AcePopup = (__webpack_require__(2985).AcePopup);
-var util = __webpack_require__(3860);
-var lang = __webpack_require__(124);
+var AcePopup = (__webpack_require__(42985).AcePopup);
+var AceInline = (__webpack_require__(44525)/* .AceInline */ .r);
+var getAriaId = (__webpack_require__(42985).getAriaId);
+var util = __webpack_require__(83860);
+var lang = __webpack_require__(20124);
 var dom = __webpack_require__(6359);
-var snippetManager = (__webpack_require__(6629)/* .snippetManager */ .w);
-var config = __webpack_require__(3188);
+var snippetManager = (__webpack_require__(56629)/* .snippetManager */ .w);
+var config = __webpack_require__(13188);
 
-var Autocomplete = function() {
-    this.autoInsert = false;
-    this.autoSelect = true;
-    this.exactMatch = false;
-    this.gatherCompletionsId = 0;
-    this.keyboardHandler = new HashHandler();
-    this.keyboardHandler.bindKeys(this.commands);
+/**
+ * @typedef BaseCompletion
+ * @property {number} [score] - a numerical value that determines the order in which completions would be displayed.
+ * A lower score means that the completion would be displayed further from the start
+ * @property {string} [meta] - a short description of the completion
+ * @property {string} [caption] - the text that would be displayed in the completion list. If omitted, value or snippet
+ * would be shown instead.
+ * @property {string} [docHTML] - an HTML string that would be displayed as an additional popup
+ * @property {string} [docText] - a plain text that would be displayed as an additional popup. If `docHTML` exists,
+ * it would be used instead of `docText`.
+ * @property {string} [completerId] - the identifier of the completer
+ * @property {Ace.Range} [range] - An object specifying the range of text to be replaced with the new completion value (experimental)
+ * @property {string} [command] - A command to be executed after the completion is inserted (experimental)
+ */
 
-    this.blurListener = this.blurListener.bind(this);
-    this.changeListener = this.changeListener.bind(this);
-    this.mousedownListener = this.mousedownListener.bind(this);
-    this.mousewheelListener = this.mousewheelListener.bind(this);
+/**
+ * @typedef SnippetCompletion
+ * @extends BaseCompletion
+ * @property {string} snippet - a text snippet that would be inserted when the completion is selected
+ */
 
-    this.changeTimer = lang.delayedCall(function() {
-        this.updateCompletions(true);
-    }.bind(this));
+/**
+ * @typedef ValueCompletion
+ * @extends BaseCompletion
+ * @property {string} value - The text that would be inserted when selecting this completion.
+ */
 
-    this.tooltipTimer = lang.delayedCall(this.updateDocTooltip.bind(this), 50);
+/**
+ * Represents a suggested text snippet intended to complete a user's input
+ * @typedef Completion
+ * @type {SnippetCompletion|ValueCompletion}
+ */
+
+var destroyCompleter = function(e, editor) {
+    editor.completer && editor.completer.destroy();
 };
 
-(function() {
+/**
+ * This object controls the autocompletion components and their lifecycle.
+ * There is an autocompletion popup, an optional inline ghost text renderer and a docuent tooltip popup inside.
+ */
+class Autocomplete {
+    constructor() {
+        this.autoInsert = false;
+        this.autoSelect = true;
+        this.exactMatch = false;
+        this.inlineEnabled = false;
+        this.keyboardHandler = new HashHandler();
+        this.keyboardHandler.bindKeys(this.commands);
 
-    this.$init = function() {
+        this.blurListener = this.blurListener.bind(this);
+        this.changeListener = this.changeListener.bind(this);
+        this.mousedownListener = this.mousedownListener.bind(this);
+        this.mousewheelListener = this.mousewheelListener.bind(this);
+
+        this.changeTimer = lang.delayedCall(function() {
+            this.updateCompletions(true);
+        }.bind(this));
+
+        this.tooltipTimer = lang.delayedCall(this.updateDocTooltip.bind(this), 50);
+    }
+
+    $init() {
         this.popup = new AcePopup(document.body || document.documentElement);
         this.popup.on("click", function(e) {
             this.insertMatch();
             e.stop();
         }.bind(this));
         this.popup.focus = this.editor.focus.bind(this.editor);
-        this.popup.on("show", this.tooltipTimer.bind(null, null));
-        this.popup.on("select", this.tooltipTimer.bind(null, null));
+        this.popup.on("show", this.$onPopupChange.bind(this));
+        this.popup.on("hide", this.$onHidePopup.bind(this));
+        this.popup.on("select", this.$onPopupChange.bind(this));
         this.popup.on("changeHoverMarker", this.tooltipTimer.bind(null, null));
         return this.popup;
-    };
+    }
 
-    this.getPopup = function() {
+    $initInline() {
+        if (!this.inlineEnabled || this.inlineRenderer)
+            return;
+        this.inlineRenderer = new AceInline();
+        return this.inlineRenderer;
+    }
+
+    getPopup() {
         return this.popup || this.$init();
-    };
+    }
 
-    this.openPopup = function(editor, prefix, keepPopupPosition) {
+    $onHidePopup() {
+        if (this.inlineRenderer) {
+            this.inlineRenderer.hide();
+        }
+        this.hideDocTooltip();
+    }
+
+    $onPopupChange(hide) {
+        if (this.inlineRenderer && this.inlineEnabled) {
+            var completion = hide ? null : this.popup.getData(this.popup.getRow());
+            var prefix = util.getCompletionPrefix(this.editor);
+            if (!this.inlineRenderer.show(this.editor, completion, prefix)) {
+                this.inlineRenderer.hide();
+            }
+            this.$updatePopupPosition();
+        }
+        this.tooltipTimer.call(null, null);
+    }
+
+    $updatePopupPosition() {
+        var editor = this.editor;
+        var renderer = editor.renderer;
+
+        var lineHeight = renderer.layerConfig.lineHeight;
+        var pos = renderer.$cursorLayer.getPixelPosition(this.base, true);
+        pos.left -= this.popup.getTextLeftOffset();
+
+        var rect = editor.container.getBoundingClientRect();
+        pos.top += rect.top - renderer.layerConfig.offset;
+        pos.left += rect.left - editor.renderer.scrollLeft;
+        pos.left += renderer.gutterWidth;
+
+        var posGhostText = {
+            top: pos.top,
+            left: pos.left
+        };
+
+        if (renderer.$ghostText && renderer.$ghostTextWidget) {
+            if (this.base.row === renderer.$ghostText.position.row) {
+                posGhostText.top += renderer.$ghostTextWidget.el.offsetHeight;
+            }
+        }
+
+        // Try to render below ghost text, then above ghost text, then over ghost text
+        if (this.popup.tryShow(posGhostText, lineHeight, "bottom")) {
+            return;
+        }
+
+        if (this.popup.tryShow(pos, lineHeight, "top")) {
+            return;
+        }
+        
+        this.popup.show(pos, lineHeight);
+    }
+
+    openPopup(editor, prefix, keepPopupPosition) {
         if (!this.popup)
             this.$init();
+
+        if (this.inlineEnabled && !this.inlineRenderer)
+            this.$initInline();
 
         this.popup.autoSelect = this.autoSelect;
 
         this.popup.setData(this.completions.filtered, this.completions.filterText);
+        if (this.editor.textInput.setAriaOptions) {
+            this.editor.textInput.setAriaOptions({
+                activeDescendant: getAriaId(this.popup.getRow()),
+                inline: this.inlineEnabled
+            });
+        }
 
         editor.keyBinding.addKeyboardHandler(this.keyboardHandler);
         
-        var renderer = editor.renderer;
         this.popup.setRow(this.autoSelect ? 0 : -1);
         if (!keepPopupPosition) {
             this.popup.setTheme(editor.getTheme());
             this.popup.setFontSize(editor.getFontSize());
 
-            var lineHeight = renderer.layerConfig.lineHeight;
-
-            var pos = renderer.$cursorLayer.getPixelPosition(this.base, true);
-            pos.left -= this.popup.getTextLeftOffset();
-
-            var rect = editor.container.getBoundingClientRect();
-            pos.top += rect.top - renderer.layerConfig.offset;
-            pos.left += rect.left - editor.renderer.scrollLeft;
-            pos.left += renderer.gutterWidth;
-
-            this.popup.show(pos, lineHeight);
+            this.$updatePopupPosition();
+            if (this.tooltipNode) {
+                this.updateDocTooltip();
+            }
         } else if (keepPopupPosition && !prefix) {
             this.detach();
         }
         this.changeTimer.cancel();
-    };
+    }
 
-    this.detach = function() {
-        this.editor.keyBinding.removeKeyboardHandler(this.keyboardHandler);
-        this.editor.off("changeSelection", this.changeListener);
-        this.editor.off("blur", this.blurListener);
-        this.editor.off("mousedown", this.mousedownListener);
-        this.editor.off("mousewheel", this.mousewheelListener);
+    /**
+     * Detaches all elements from the editor, and cleans up the data for the session
+     */
+    detach() {
+        if (this.editor) {
+            this.editor.keyBinding.removeKeyboardHandler(this.keyboardHandler);
+            this.editor.off("changeSelection", this.changeListener);
+            this.editor.off("blur", this.blurListener);
+            this.editor.off("mousedown", this.mousedownListener);
+            this.editor.off("mousewheel", this.mousewheelListener);
+        }
         this.changeTimer.cancel();
         this.hideDocTooltip();
 
-        this.gatherCompletionsId += 1;
+        if (this.completionProvider) {
+            this.completionProvider.detach();
+        }
+
         if (this.popup && this.popup.isOpen)
             this.popup.hide();
 
         if (this.base)
             this.base.detach();
         this.activated = false;
-        this.completions = this.base = null;
-    };
+        this.completionProvider = this.completions = this.base = null;
+    }
 
-    this.changeListener = function(e) {
+    changeListener(e) {
         var cursor = this.editor.selection.lead;
         if (cursor.row != this.base.row || cursor.column < this.base.column) {
             this.detach();
@@ -525,9 +990,9 @@ var Autocomplete = function() {
             this.changeTimer.schedule();
         else
             this.detach();
-    };
+    }
 
-    this.blurListener = function(e) {
+    blurListener(e) {
         // we have to check if activeElement is a child of popup because
         // on IE preventDefault doesn't stop scrollbar from being focussed
         var el = document.activeElement;
@@ -539,101 +1004,39 @@ var Autocomplete = function() {
         ) {
             this.detach();
         }
-    };
+    }
 
-    this.mousedownListener = function(e) {
+    mousedownListener(e) {
         this.detach();
-    };
+    }
 
-    this.mousewheelListener = function(e) {
+    mousewheelListener(e) {
         this.detach();
-    };
+    }
 
-    this.goTo = function(where) {
+   goTo(where) {
         this.popup.goTo(where);
-    };
+    }
 
-    this.insertMatch = function(data, options) {
+    insertMatch(data, options) {
         if (!data)
             data = this.popup.getData(this.popup.getRow());
         if (!data)
             return false;
-
         var completions = this.completions;
-        this.editor.startOperation({command: {name: "insertMatch"}});
-        if (data.completer && data.completer.insertMatch) {
-            data.completer.insertMatch(this.editor, data);
-        } else {
-            // TODO add support for options.deleteSuffix
-            if (!completions)
-                return false;
-            if (completions.filterText) {
-                var ranges = this.editor.selection.getAllRanges();
-                for (var i = 0, range; range = ranges[i]; i++) {
-                    range.start.column -= completions.filterText.length;
-                    this.editor.session.remove(range);
-                }
-            }
-            if (data.snippet)
-                snippetManager.insertSnippet(this.editor, data.snippet);
-            else
-                this.editor.execCommand("insertstring", data.value || data);
-        }
+        var result = this.getCompletionProvider().insertMatch(this.editor, data, completions.filterText, options);
         // detach only if new popup was not opened while inserting match
         if (this.completions == completions)
             this.detach();
-        this.editor.endOperation();
-    };
-
-
-    this.commands = {
-        "Up": function(editor) { editor.completer.goTo("up"); },
-        "Down": function(editor) { editor.completer.goTo("down"); },
-        "Ctrl-Up|Ctrl-Home": function(editor) { editor.completer.goTo("start"); },
-        "Ctrl-Down|Ctrl-End": function(editor) { editor.completer.goTo("end"); },
-
-        "Esc": function(editor) { editor.completer.detach(); },
-        "Return": function(editor) { return editor.completer.insertMatch(); },
-        "Shift-Return": function(editor) { editor.completer.insertMatch(null, {deleteSuffix: true}); },
-        "Tab": function(editor) {
-            var result = editor.completer.insertMatch();
-            if (!result && !editor.tabstopManager)
-                editor.completer.goTo("down");
-            else
-                return result;
-        },
-
-        "PageUp": function(editor) { editor.completer.popup.gotoPageUp(); },
-        "PageDown": function(editor) { editor.completer.popup.gotoPageDown(); }
-    };
-
-    this.gatherCompletions = function(editor, callback) {
-        var session = editor.getSession();
-        var pos = editor.getCursorPosition();
-
-        var prefix = util.getCompletionPrefix(editor);
-
-        this.base = session.doc.createAnchor(pos.row, pos.column - prefix.length);
-        this.base.$insertRight = true;
-
-        var matches = [];
-        var total = editor.completers.length;
-        editor.completers.forEach(function(completer, i) {
-            completer.getCompletions(editor, session, pos, prefix, function(err, results) {
-                if (!err && results)
-                    matches = matches.concat(results);
-                // Fetch prefix again, because they may have changed by now
-                callback(null, {
-                    prefix: util.getCompletionPrefix(editor),
-                    matches: matches,
-                    finished: (--total === 0)
-                });
-            });
-        });
-        return true;
-    };
-
-    this.showPopup = function(editor, options) {
+        return result;
+    }
+    
+    /**
+     * This is the entry point for the autocompletion class, triggers the actions which collect and display suggestions
+     * @param {Editor} editor
+     * @param {CompletionOptions} options
+     */
+    showPopup(editor, options) {
         if (this.editor)
             this.detach();
 
@@ -652,9 +1055,24 @@ var Autocomplete = function() {
         editor.on("mousewheel", this.mousewheelListener);
 
         this.updateCompletions(false, options);
-    };
+    }
 
-    this.updateCompletions = function(keepPopupPosition, options) {
+    getCompletionProvider() {
+        if (!this.completionProvider)
+            this.completionProvider = new CompletionProvider();
+        return this.completionProvider;
+    }
+
+    /**
+     * This method is deprecated, it is only kept for backwards compatibility.
+     * Use the same method include CompletionProvider instead for the same functionality.
+     * @deprecated
+     */
+    gatherCompletions(editor, callback) {
+        return this.getCompletionProvider().gatherCompletions(editor, callback);
+    }
+
+    updateCompletions(keepPopupPosition, options) {
         if (keepPopupPosition && this.base && this.completions) {
             var pos = this.editor.getCursorPosition();
             var prefix = this.editor.session.getTextRange({start: this.base, end: pos});
@@ -679,88 +1097,54 @@ var Autocomplete = function() {
             return this.openPopup(this.editor, "", keepPopupPosition);
         }
 
-        // Save current gatherCompletions session, session is close when a match is insert
-        var _id = this.gatherCompletionsId;
+        var session = this.editor.getSession();
+        var pos = this.editor.getCursorPosition();
+        var prefix = util.getCompletionPrefix(this.editor);
+        this.base = session.doc.createAnchor(pos.row, pos.column - prefix.length);
+        this.base.$insertRight = true;
+        var completionOptions = { exactMatch: this.exactMatch };
+        this.getCompletionProvider().provideCompletions(this.editor, completionOptions, function(err, completions, finished) {
+            var filtered = completions.filtered;
+            var prefix = util.getCompletionPrefix(this.editor);
 
-        // Only detach if result gathering is finished
-        var detachIfFinished = function(results) {
-            if (!results.finished) return;
-            return this.detach();
-        }.bind(this);
+            if (finished) {
+                // No results
+                if (!filtered.length)
+                    return this.detach();
 
-        var processResults = function(results) {
-            var prefix = results.prefix;
-            var matches = results.matches;
+                // One result equals to the prefix
+                if (filtered.length == 1 && filtered[0].value == prefix && !filtered[0].snippet)
+                    return this.detach();
 
-            this.completions = new FilteredList(matches);
-
-            if (this.exactMatch)
-                this.completions.exactMatch = true;
-
-            this.completions.setFilter(prefix);
-            var filtered = this.completions.filtered;
-
-            // No results
-            if (!filtered.length)
-                return detachIfFinished(results);
-
-            // One result equals to the prefix
-            if (filtered.length == 1 && filtered[0].value == prefix && !filtered[0].snippet)
-                return detachIfFinished(results);
-
-            // Autoinsert if one result
-            if (this.autoInsert && filtered.length == 1 && results.finished)
-                return this.insertMatch(filtered[0]);
-
-            this.openPopup(this.editor, prefix, keepPopupPosition);
-        }.bind(this);
-
-        var isImmediate = true;
-        var immediateResults = null;
-        this.gatherCompletions(this.editor, function(err, results) {
-            var prefix = results.prefix;
-            var matches = results && results.matches;
-
-            if (!matches || !matches.length)
-                return detachIfFinished(results);
-
-            // Wrong prefix or wrong session -> ignore
-            if (prefix.indexOf(results.prefix) !== 0 || _id != this.gatherCompletionsId)
-                return;
-
-            // If multiple completers return their results immediately, we want to process them together
-            if (isImmediate) {
-                immediateResults = results;
-                return;
+                // Autoinsert if one result
+                if (this.autoInsert && filtered.length == 1)
+                    return this.insertMatch(filtered[0]);
             }
-
-            processResults(results);
+            this.completions = completions;
+            this.openPopup(this.editor, prefix, keepPopupPosition);
         }.bind(this));
-        
-        isImmediate = false;
-        if (immediateResults) {
-            var results = immediateResults;
-            immediateResults = null;
-            processResults(results);
-        }
-    };
+    }
 
-    this.cancelContextMenu = function() {
+    cancelContextMenu() {
         this.editor.$mouseHandler.cancelContextMenu();
-    };
+    }
 
-    this.updateDocTooltip = function() {
+    updateDocTooltip() {
         var popup = this.popup;
         var all = popup.data;
         var selected = all && (all[popup.getHoveredRow()] || all[popup.getRow()]);
         var doc = null;
         if (!selected || !this.editor || !this.popup.isOpen)
             return this.hideDocTooltip();
-        this.editor.completers.some(function(completer) {
-            if (completer.getDocTooltip)
+        
+        var completersLength = this.editor.completers.length;
+        for (var i = 0; i < completersLength; i++) {
+            var completer = this.editor.completers[i];
+            if (completer.getDocTooltip && selected.completerId === completer.id) {
                 doc = completer.getDocTooltip(selected);
-            return doc;
-        });
+                break;
+            }
+        }
         if (!doc && typeof selected != "string")
             doc = selected;
 
@@ -769,9 +1153,9 @@ var Autocomplete = function() {
         if (!doc || !(doc.docHTML || doc.docText))
             return this.hideDocTooltip();
         this.showDocTooltip(doc);
-    };
+    }
 
-    this.showDocTooltip = function(item) {
+    showDocTooltip(item) {
         if (!this.tooltipNode) {
             this.tooltipNode = dom.createElement("div");
             this.tooltipNode.className = "ace_tooltip ace_doc-tooltip";
@@ -818,9 +1202,9 @@ var Autocomplete = function() {
             tooltipNode.style.left = (rect.right + 1) + "px";
             tooltipNode.style.right = "";
         }
-    };
+    }
 
-    this.hideDocTooltip = function() {
+    hideDocTooltip() {
         this.tooltipTimer.cancel();
         if (!this.tooltipNode) return;
         var el = this.tooltipNode;
@@ -829,9 +1213,9 @@ var Autocomplete = function() {
         this.tooltipNode = null;
         if (el.parentNode)
             el.parentNode.removeChild(el);
-    };
+    }
     
-    this.onTooltipClick = function(e) {
+    onTooltipClick(e) {
         var a = e.target;
         while (a && a != this.tooltipNode) {
             if (a.nodeName == "A" && a.href) {
@@ -841,9 +1225,9 @@ var Autocomplete = function() {
             }
             a = a.parentNode;
         }
-    };
+    }
 
-    this.destroy = function() {
+    destroy() {
         this.detach();
         if (this.popup) {
             this.popup.destroy();
@@ -851,27 +1235,52 @@ var Autocomplete = function() {
             if (el && el.parentNode)
                 el.parentNode.removeChild(el);
         }
-        if (this.editor && this.editor.completer == this)
-            this.editor.completer == null;
-        this.popup = null;
-    };
+        if (this.editor && this.editor.completer == this) {
+            this.editor.off("destroy", destroyCompleter);
+            this.editor.completer = null;
+        }
+        this.inlineRenderer = this.popup = this.editor = null;
+    }
 
-}).call(Autocomplete.prototype);
+}
+
+Autocomplete.prototype.commands = {
+    "Up": function(editor) { editor.completer.goTo("up"); },
+    "Down": function(editor) { editor.completer.goTo("down"); },
+    "Ctrl-Up|Ctrl-Home": function(editor) { editor.completer.goTo("start"); },
+    "Ctrl-Down|Ctrl-End": function(editor) { editor.completer.goTo("end"); },
+
+    "Esc": function(editor) { editor.completer.detach(); },
+    "Return": function(editor) { return editor.completer.insertMatch(); },
+    "Shift-Return": function(editor) { editor.completer.insertMatch(null, {deleteSuffix: true}); },
+    "Tab": function(editor) {
+        var result = editor.completer.insertMatch();
+        if (!result && !editor.tabstopManager)
+            editor.completer.goTo("down");
+        else
+            return result;
+    },
+
+    "PageUp": function(editor) { editor.completer.popup.gotoPageUp(); },
+    "PageDown": function(editor) { editor.completer.popup.gotoPageDown(); }
+};
 
 
 Autocomplete.for = function(editor) {
-    if (editor.completer) {
+    if (editor.completer instanceof Autocomplete) {
         return editor.completer;
     }
+    if (editor.completer) {
+        editor.completer.destroy();
+        editor.completer = null;
+    }
     if (config.get("sharedPopups")) {
-        if (!Autocomplete.$shared)
+        if (!Autocomplete.$sharedInstance)
             Autocomplete.$sharedInstance = new Autocomplete();
         editor.completer = Autocomplete.$sharedInstance;
     } else {
         editor.completer = new Autocomplete();
-        editor.once("destroy", function(e, editor) {
-            editor.completer.destroy();
-        });
+        editor.once("destroy", destroyCompleter);
     }
     return editor.completer;
 };
@@ -889,14 +1298,172 @@ Autocomplete.startCommand = {
     bindKey: "Ctrl-Space|Ctrl-Shift-Space|Alt-Space"
 };
 
-var FilteredList = function(array, filterText) {
-    this.all = array;
-    this.filtered = array;
-    this.filterText = filterText || "";
-    this.exactMatch = false;
-};
-(function(){
-    this.setFilter = function(str) {
+/**
+ * This class is responsible for providing completions and inserting them to the editor
+ */
+class CompletionProvider {
+    
+    constructor() {
+        this.active = true;
+    }
+    
+    insertByIndex(editor, index, options) {
+        if (!this.completions || !this.completions.filtered) {
+            return false;
+        }
+        return this.insertMatch(editor, this.completions.filtered[index], options);
+    }
+
+    insertMatch(editor, data, options) {
+        if (!data)
+            return false;
+
+        editor.startOperation({command: {name: "insertMatch"}});
+        if (data.completer && data.completer.insertMatch) {
+            data.completer.insertMatch(editor, data);
+        } else {
+            // TODO add support for options.deleteSuffix
+            if (!this.completions)
+                return false;
+            if (this.completions.filterText) {
+                var ranges = editor.selection.getAllRanges();
+                for (var i = 0, range; range = ranges[i]; i++) {
+                    range.start.column -= this.completions.filterText.length;
+                    editor.session.remove(range);
+                }
+            }
+            if (data.snippet)
+                snippetManager.insertSnippet(editor, data.snippet, data.range);
+            else {
+                this.$insertString(editor, data);
+            }
+
+            if (data.command && data.command === "startAutocomplete") {
+                editor.execCommand(data.command);
+            }
+        }
+        editor.endOperation();
+        return true;
+    }
+
+    $insertString(editor, data) {
+        var text = data.value || data;
+        if (data.range) {
+            if (editor.inVirtualSelectionMode) {
+                return editor.session.replace(data.range, text);
+            }
+            editor.forEachSelection(() => {
+                var range = editor.getSelectionRange();
+                if (data.range.compareRange(range) === 0) {
+                    editor.session.replace(data.range, text);
+                }
+                else {
+                    editor.insert(text);
+                }
+            }, null, {keepOrder: true});
+        }
+        else {
+            editor.execCommand("insertstring", text);
+        }
+    }
+
+    gatherCompletions(editor, callback) {
+        var session = editor.getSession();
+        var pos = editor.getCursorPosition();
+    
+        var prefix = util.getCompletionPrefix(editor);
+    
+        var matches = [];
+        var total = editor.completers.length;
+        editor.completers.forEach(function(completer, i) {
+            completer.getCompletions(editor, session, pos, prefix, function(err, results) {
+                if (!err && results)
+                    matches = matches.concat(results);
+                // Fetch prefix again, because they may have changed by now
+                callback(null, {
+                    prefix: util.getCompletionPrefix(editor),
+                    matches: matches,
+                    finished: (--total === 0)
+                });
+            });
+        });
+        return true;
+    }
+
+    /**
+     * This is the entry point to the class, it gathers, then provides the completions asynchronously via callback.
+     * The callback function may be called multiple times, the last invokation is marked with a `finished` flag
+     * @param {Editor} editor
+     * @param {CompletionProviderOptions} options
+     * @param {CompletionProviderCallback} callback
+     */
+    provideCompletions(editor, options, callback) {
+        var processResults = function(results) {
+            var prefix = results.prefix;
+            var matches = results.matches;
+
+            this.completions = new FilteredList(matches);
+
+            if (options.exactMatch)
+                this.completions.exactMatch = true;
+
+            if (options.ignoreCaption)
+                this.completions.ignoreCaption = true;
+
+            this.completions.setFilter(prefix);
+
+            if (results.finished || this.completions.filtered.length)
+                callback(null, this.completions, results.finished);
+        }.bind(this);
+
+        var isImmediate = true;
+        var immediateResults = null;
+        this.gatherCompletions(editor, function(err, results) {
+            if (!this.active) {
+                return;
+            }
+            if (err) {
+                callback(err, [], true);
+                this.detach();
+            }
+            var prefix = results.prefix;
+
+            // Wrong prefix or wrong session -> ignore
+            if (prefix.indexOf(results.prefix) !== 0)
+                return;
+
+            // If multiple completers return their results immediately, we want to process them together
+            if (isImmediate) {
+                immediateResults = results;
+                return;
+            }
+
+            processResults(results);
+        }.bind(this));
+        
+        isImmediate = false;
+        if (immediateResults) {
+            var results = immediateResults;
+            immediateResults = null;
+            processResults(results);
+        }
+    }
+
+    detach() {
+        this.active = false;
+    }
+}
+
+class FilteredList {
+    constructor(array, filterText) {
+        this.all = array;
+        this.filtered = array;
+        this.filterText = filterText || "";
+        this.exactMatch = false;
+        this.ignoreCaption = false;
+    }
+    
+    setFilter(str) {
         if (str.length > this.filterText && str.lastIndexOf(this.filterText, 0) === 0)
             var matches = this.filtered;
         else
@@ -919,13 +1486,14 @@ var FilteredList = function(array, filterText) {
         });
 
         this.filtered = matches;
-    };
-    this.filterCompletions = function(items, needle) {
+    }
+    
+    filterCompletions(items, needle) {
         var results = [];
         var upper = needle.toUpperCase();
         var lower = needle.toLowerCase();
         loop: for (var i = 0, item; item = items[i]; i++) {
-            var caption = item.caption || item.value || item.snippet;
+            var caption = (!this.ignoreCaption && item.caption) || item.value || item.snippet;
             if (!caption) continue;
             var lastIndex = -1;
             var matchMask = 0;
@@ -970,28 +1538,108 @@ var FilteredList = function(array, filterText) {
             results.push(item);
         }
         return results;
-    };
-}).call(FilteredList.prototype);
+    }
+}
 
-exports.F = Autocomplete;
-__webpack_unused_export__ = FilteredList;
+exports.F2 = Autocomplete;
+exports.N1 = CompletionProvider;
+exports.Xy = FilteredList;
 
 
 /***/ }),
 
-/***/ 2985:
+/***/ 44525:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
-var __webpack_unused_export__;
 
 
-var Renderer = (__webpack_require__(3049).VirtualRenderer);
-var Editor = (__webpack_require__(2880).Editor);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var event = __webpack_require__(7989);
-var lang = __webpack_require__(124);
+var snippetManager = (__webpack_require__(56629)/* .snippetManager */ .w);
+
+/**
+ * This object is used to manage inline code completions rendered into an editor with ghost text.
+ */
+class AceInline {
+    /**
+     * Creates the inline completion renderer which renders the inline code completions directly in the target editor.
+     */
+    constructor() {
+        this.editor = null;
+    }
+    
+    /**
+     * Renders the completion as ghost text to the current cursor position
+     * @param {Editor} editor
+     * @param {Completion} completion
+     * @param {string} prefix
+     * @returns {boolean} True if the completion could be rendered to the editor, false otherwise
+     */
+    show(editor, completion, prefix) {
+        prefix = prefix || "";
+        if (editor && this.editor && this.editor !== editor) {
+            this.hide();
+            this.editor = null;
+        }
+        if (!editor || !completion) {
+            return false;
+        }
+        var displayText = completion.snippet ? snippetManager.getDisplayTextForSnippet(editor, completion.snippet) : completion.value;
+        if (!displayText || !displayText.startsWith(prefix)) {
+            return false;
+        }
+        this.editor = editor;
+        displayText = displayText.slice(prefix.length);
+        if (displayText === "") {
+            editor.removeGhostText();
+        } else {
+            editor.setGhostText(displayText);
+        }
+        return true;
+    }
+
+    isOpen() {
+        if (!this.editor) {
+            return false;
+        }
+        return !!this.editor.renderer.$ghostText;
+    }
+
+    hide() {
+        if (!this.editor) {
+            return false;
+        }
+        this.editor.removeGhostText();
+        return true;
+    }
+
+    destroy() {
+        this.hide();
+        this.editor = null;
+    }
+}
+
+
+exports.r = AceInline;
+
+
+/***/ }),
+
+/***/ 42985:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var Renderer = (__webpack_require__(63049).VirtualRenderer);
+var Editor = (__webpack_require__(82880).Editor);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var event = __webpack_require__(17989);
+var lang = __webpack_require__(20124);
 var dom = __webpack_require__(6359);
+
+var getAriaId = function(index) {
+    return `suggest-aria-id:${index}`;
+};
 
 var $singleLineEditor = function(el) {
     var renderer = new Renderer(el);
@@ -1013,276 +1661,359 @@ var $singleLineEditor = function(el) {
 
 /**
  * This object is used in some places where needed to show popups - like prompt; autocomplete etc.
- * @class
  */
+class AcePopup {
+    /**
+     * Creates and renders single line editor in popup window. If `parentNode` param is isset, then attaching it to this element.
+     * @param {Element} parentNode
+     */
+    constructor(parentNode) {
+        var el = dom.createElement("div");
+        var popup = new $singleLineEditor(el);
 
-/**
- * Creates and renders single line editor in popup window. If `parentNode` param is isset, then attaching it to this element.
- * @param {Element} parentNode
- * @constructor
- */
-var AcePopup = function(parentNode) {
-    var el = dom.createElement("div");
-    var popup = new $singleLineEditor(el);
+        if (parentNode)
+            parentNode.appendChild(el);
+        el.style.display = "none";
+        popup.renderer.content.style.cursor = "default";
+        popup.renderer.setStyle("ace_autocomplete");
 
-    if (parentNode)
-        parentNode.appendChild(el);
-    el.style.display = "none";
-    popup.renderer.content.style.cursor = "default";
-    popup.renderer.setStyle("ace_autocomplete");
+        // Set aria attributes for the popup
+        popup.renderer.container.setAttribute("role", "listbox");
+        popup.renderer.container.setAttribute("aria-label", "Autocomplete suggestions");
 
-    popup.setOption("displayIndentGuides", false);
-    popup.setOption("dragDelay", 150);
+        popup.setOption("displayIndentGuides", false);
+        popup.setOption("dragDelay", 150);
 
-    var noop = function(){};
+        var noop = function(){};
 
-    popup.focus = noop;
-    popup.$isFocused = true;
+        popup.focus = noop;
+        popup.$isFocused = true;
 
-    popup.renderer.$cursorLayer.restartTimer = noop;
-    popup.renderer.$cursorLayer.element.style.opacity = 0;
+        popup.renderer.$cursorLayer.restartTimer = noop;
+        popup.renderer.$cursorLayer.element.style.opacity = 0;
 
-    popup.renderer.$maxLines = 8;
-    popup.renderer.$keepTextAreaAtCursor = false;
+        popup.renderer.$maxLines = 8;
+        popup.renderer.$keepTextAreaAtCursor = false;
 
-    popup.setHighlightActiveLine(false);
-    // set default highlight color
-    popup.session.highlight("");
-    popup.session.$searchHighlight.clazz = "ace_highlight-marker";
+        popup.setHighlightActiveLine(false);
+        // set default highlight color
+        popup.session.highlight("");
+        popup.session.$searchHighlight.clazz = "ace_highlight-marker";
 
-    popup.on("mousedown", function(e) {
-        var pos = e.getDocumentPosition();
-        popup.selection.moveToPosition(pos);
-        selectionMarker.start.row = selectionMarker.end.row = pos.row;
-        e.stop();
-    });
+        popup.on("mousedown", function(e) {
+            var pos = e.getDocumentPosition();
+            popup.selection.moveToPosition(pos);
+            selectionMarker.start.row = selectionMarker.end.row = pos.row;
+            e.stop();
+        });
 
-    var lastMouseEvent;
-    var hoverMarker = new Range(-1,0,-1,Infinity);
-    var selectionMarker = new Range(-1,0,-1,Infinity);
-    selectionMarker.id = popup.session.addMarker(selectionMarker, "ace_active-line", "fullLine");
-    popup.setSelectOnHover = function(val) {
-        if (!val) {
-            hoverMarker.id = popup.session.addMarker(hoverMarker, "ace_line-hover", "fullLine");
-        } else if (hoverMarker.id) {
-            popup.session.removeMarker(hoverMarker.id);
-            hoverMarker.id = null;
-        }
-    };
-    popup.setSelectOnHover(false);
-    popup.on("mousemove", function(e) {
-        if (!lastMouseEvent) {
-            lastMouseEvent = e;
-            return;
-        }
-        if (lastMouseEvent.x == e.x && lastMouseEvent.y == e.y) {
-            return;
-        }
-        lastMouseEvent = e;
-        lastMouseEvent.scrollTop = popup.renderer.scrollTop;
-        var row = lastMouseEvent.getDocumentPosition().row;
-        if (hoverMarker.start.row != row) {
-            if (!hoverMarker.id)
-                popup.setRow(row);
-            setHoverMarker(row);
-        }
-    });
-    popup.renderer.on("beforeRender", function() {
-        if (lastMouseEvent && hoverMarker.start.row != -1) {
-            lastMouseEvent.$pos = null;
-            var row = lastMouseEvent.getDocumentPosition().row;
-            if (!hoverMarker.id)
-                popup.setRow(row);
-            setHoverMarker(row, true);
-        }
-    });
-    popup.renderer.on("afterRender", function() {
-        var row = popup.getRow();
-        var t = popup.renderer.$textLayer;
-        var selected = t.element.childNodes[row - t.config.firstRow];
-        if (selected !== t.selectedNode && t.selectedNode)
-            dom.removeCssClass(t.selectedNode, "ace_selected");
-        t.selectedNode = selected;
-        if (selected)
-            dom.addCssClass(selected, "ace_selected");
-    });
-    var hideHoverMarker = function() { setHoverMarker(-1); };
-    var setHoverMarker = function(row, suppressRedraw) {
-        if (row !== hoverMarker.start.row) {
-            hoverMarker.start.row = hoverMarker.end.row = row;
-            if (!suppressRedraw)
-                popup.session._emit("changeBackMarker");
-            popup._emit("changeHoverMarker");
-        }
-    };
-    popup.getHoveredRow = function() {
-        return hoverMarker.start.row;
-    };
-
-    event.addListener(popup.container, "mouseout", hideHoverMarker);
-    popup.on("hide", hideHoverMarker);
-    popup.on("changeSelection", hideHoverMarker);
-
-    popup.session.doc.getLength = function() {
-        return popup.data.length;
-    };
-    popup.session.doc.getLine = function(i) {
-        var data = popup.data[i];
-        if (typeof data == "string")
-            return data;
-        return (data && data.value) || "";
-    };
-
-    var bgTokenizer = popup.session.bgTokenizer;
-    bgTokenizer.$tokenizeRow = function(row) {
-        var data = popup.data[row];
-        var tokens = [];
-        if (!data)
-            return tokens;
-        if (typeof data == "string")
-            data = {value: data};
-        var caption = data.caption || data.value || data.name;
-
-        function addToken(value, className) {
-            value && tokens.push({
-                type: (data.className || "") + (className || ""), 
-                value: value
-            });
-        }
-        
-        var lower = caption.toLowerCase();
-        var filterText = (popup.filterText || "").toLowerCase();
-        var lastIndex = 0;
-        var lastI = 0;
-        for (var i = 0; i <= filterText.length; i++) {
-            if (i != lastI && (data.matchMask & (1 << i) || i == filterText.length)) {
-                var sub = filterText.slice(lastI, i);
-                lastI = i;
-                var index = lower.indexOf(sub, lastIndex);
-                if (index == -1) continue;
-                addToken(caption.slice(lastIndex, index), "");
-                lastIndex = index + sub.length;
-                addToken(caption.slice(index, lastIndex), "completion-highlight");
+        var lastMouseEvent;
+        var hoverMarker = new Range(-1,0,-1,Infinity);
+        var selectionMarker = new Range(-1,0,-1,Infinity);
+        selectionMarker.id = popup.session.addMarker(selectionMarker, "ace_active-line", "fullLine");
+        popup.setSelectOnHover = function(val) {
+            if (!val) {
+                hoverMarker.id = popup.session.addMarker(hoverMarker, "ace_line-hover", "fullLine");
+            } else if (hoverMarker.id) {
+                popup.session.removeMarker(hoverMarker.id);
+                hoverMarker.id = null;
             }
-        }
-        addToken(caption.slice(lastIndex, caption.length), "");
-        
-        if (data.meta)
-            tokens.push({type: "completion-meta", value: data.meta});
-        if (data.message)
-            tokens.push({type: "completion-message", value: data.message});
+        };
+        popup.setSelectOnHover(false);
+        popup.on("mousemove", function(e) {
+            if (!lastMouseEvent) {
+                lastMouseEvent = e;
+                return;
+            }
+            if (lastMouseEvent.x == e.x && lastMouseEvent.y == e.y) {
+                return;
+            }
+            lastMouseEvent = e;
+            lastMouseEvent.scrollTop = popup.renderer.scrollTop;
+            var row = lastMouseEvent.getDocumentPosition().row;
+            if (hoverMarker.start.row != row) {
+                if (!hoverMarker.id)
+                    popup.setRow(row);
+                setHoverMarker(row);
+            }
+        });
+        popup.renderer.on("beforeRender", function() {
+            if (lastMouseEvent && hoverMarker.start.row != -1) {
+                lastMouseEvent.$pos = null;
+                var row = lastMouseEvent.getDocumentPosition().row;
+                if (!hoverMarker.id)
+                    popup.setRow(row);
+                setHoverMarker(row, true);
+            }
+        });
+        popup.renderer.on("afterRender", function() {
+            var row = popup.getRow();
+            var t = popup.renderer.$textLayer;
+            var selected = t.element.childNodes[row - t.config.firstRow];
+            var el = document.activeElement; // Active element is textarea of main editor
+            if (selected !== t.selectedNode && t.selectedNode) {
+                dom.removeCssClass(t.selectedNode, "ace_selected");
+                el.removeAttribute("aria-activedescendant");
+                t.selectedNode.removeAttribute("id");
+            }
+            t.selectedNode = selected;
+            if (selected) {
+                dom.addCssClass(selected, "ace_selected");
+                var ariaId = getAriaId(row);
+                selected.id = ariaId;
+                popup.renderer.container.setAttribute("aria-activedescendant", ariaId);
+                el.setAttribute("aria-activedescendant", ariaId);
+                selected.setAttribute("role", "option");
+                selected.setAttribute("aria-label", popup.getData(row).value);
+                selected.setAttribute("aria-setsize", popup.data.length);
+                selected.setAttribute("aria-posinset", row);
+            }
+        });
+        var hideHoverMarker = function() { setHoverMarker(-1); };
+        var setHoverMarker = function(row, suppressRedraw) {
+            if (row !== hoverMarker.start.row) {
+                hoverMarker.start.row = hoverMarker.end.row = row;
+                if (!suppressRedraw)
+                    popup.session._emit("changeBackMarker");
+                popup._emit("changeHoverMarker");
+            }
+        };
+        popup.getHoveredRow = function() {
+            return hoverMarker.start.row;
+        };
 
-        return tokens;
-    };
-    bgTokenizer.$updateOnChange = noop;
-    bgTokenizer.start = noop;
+        event.addListener(popup.container, "mouseout", hideHoverMarker);
+        popup.on("hide", hideHoverMarker);
+        popup.on("changeSelection", hideHoverMarker);
 
-    popup.session.$computeWidth = function() {
-        return this.screenWidth = 0;
-    };
+        popup.session.doc.getLength = function() {
+            return popup.data.length;
+        };
+        popup.session.doc.getLine = function(i) {
+            var data = popup.data[i];
+            if (typeof data == "string")
+                return data;
+            return (data && data.value) || "";
+        };
 
-    // public
-    popup.isOpen = false;
-    popup.isTopdown = false;
-    popup.autoSelect = true;
-    popup.filterText = "";
+        var bgTokenizer = popup.session.bgTokenizer;
+        bgTokenizer.$tokenizeRow = function(row) {
+            var data = popup.data[row];
+            var tokens = [];
+            if (!data)
+                return tokens;
+            if (typeof data == "string")
+                data = {value: data};
+            var caption = data.caption || data.value || data.name;
 
-    popup.data = [];
-    popup.setData = function(list, filterText) {
-        popup.filterText = filterText || "";
-        popup.setValue(lang.stringRepeat("\n", list.length), -1);
-        popup.data = list || [];
-        popup.setRow(0);
-    };
-    popup.getData = function(row) {
-        return popup.data[row];
-    };
+            function addToken(value, className) {
+                value && tokens.push({
+                    type: (data.className || "") + (className || ""),
+                    value: value
+                });
+            }
 
-    popup.getRow = function() {
-        return selectionMarker.start.row;
-    };
-    popup.setRow = function(line) {
-        line = Math.max(this.autoSelect ? 0 : -1, Math.min(this.data.length, line));
-        if (selectionMarker.start.row != line) {
-            popup.selection.clearSelection();
-            selectionMarker.start.row = selectionMarker.end.row = line || 0;
-            popup.session._emit("changeBackMarker");
-            popup.moveCursorTo(line || 0, 0);
-            if (popup.isOpen)
-                popup._signal("select");
-        }
-    };
+            var lower = caption.toLowerCase();
+            var filterText = (popup.filterText || "").toLowerCase();
+            var lastIndex = 0;
+            var lastI = 0;
+            for (var i = 0; i <= filterText.length; i++) {
+                if (i != lastI && (data.matchMask & (1 << i) || i == filterText.length)) {
+                    var sub = filterText.slice(lastI, i);
+                    lastI = i;
+                    var index = lower.indexOf(sub, lastIndex);
+                    if (index == -1) continue;
+                    addToken(caption.slice(lastIndex, index), "");
+                    lastIndex = index + sub.length;
+                    addToken(caption.slice(index, lastIndex), "completion-highlight");
+                }
+            }
+            addToken(caption.slice(lastIndex, caption.length), "");
 
-    popup.on("changeSelection", function() {
-        if (popup.isOpen)
-            popup.setRow(popup.selection.lead.row);
-        popup.renderer.scrollCursorIntoView();
-    });
+            if (data.meta)
+                tokens.push({type: "completion-meta", value: data.meta});
+            if (data.message)
+                tokens.push({type: "completion-message", value: data.message});
 
-    popup.hide = function() {
-        this.container.style.display = "none";
-        this._signal("hide");
+            return tokens;
+        };
+        bgTokenizer.$updateOnChange = noop;
+        bgTokenizer.start = noop;
+
+        popup.session.$computeWidth = function() {
+            return this.screenWidth = 0;
+        };
+
+        // public
         popup.isOpen = false;
-    };
-    popup.show = function(pos, lineHeight, topdownOnly) {
-        var el = this.container;
-        var screenHeight = window.innerHeight;
-        var screenWidth = window.innerWidth;
-        var renderer = this.renderer;
-        // var maxLines = Math.min(renderer.$maxLines, this.session.getLength());
-        var maxH = renderer.$maxLines * lineHeight * 1.4;
-        var top = pos.top + this.$borderSize;
-        var allowTopdown = top > screenHeight / 2 && !topdownOnly;
-        if (allowTopdown && top + lineHeight + maxH > screenHeight) {
-            renderer.$maxPixelHeight = top - 2 * this.$borderSize;
-            el.style.top = "";
-            el.style.bottom = screenHeight - top + "px";
-            popup.isTopdown = false;
-        } else {
-            top += lineHeight;
-            renderer.$maxPixelHeight = screenHeight - top - 0.2 * lineHeight;
-            el.style.top = top + "px";
-            el.style.bottom = "";
-            popup.isTopdown = true;
-        }
+        popup.isTopdown = false;
+        popup.autoSelect = true;
+        popup.filterText = "";
 
-        el.style.display = "";
+        popup.data = [];
+        popup.setData = function(list, filterText) {
+            popup.filterText = filterText || "";
+            popup.setValue(lang.stringRepeat("\n", list.length), -1);
+            popup.data = list || [];
+            popup.setRow(0);
+        };
+        popup.getData = function(row) {
+            return popup.data[row];
+        };
 
-        var left = pos.left;
-        if (left + el.offsetWidth > screenWidth)
-            left = screenWidth - el.offsetWidth;
+        popup.getRow = function() {
+            return selectionMarker.start.row;
+        };
+        popup.setRow = function(line) {
+            line = Math.max(this.autoSelect ? 0 : -1, Math.min(this.data.length, line));
+            if (selectionMarker.start.row != line) {
+                popup.selection.clearSelection();
+                selectionMarker.start.row = selectionMarker.end.row = line || 0;
+                popup.session._emit("changeBackMarker");
+                popup.moveCursorTo(line || 0, 0);
+                if (popup.isOpen)
+                    popup._signal("select");
+            }
+        };
 
-        el.style.left = left + "px";
+        popup.on("changeSelection", function() {
+            if (popup.isOpen)
+                popup.setRow(popup.selection.lead.row);
+            popup.renderer.scrollCursorIntoView();
+        });
 
-        this._signal("show");
-        lastMouseEvent = null;
-        popup.isOpen = true;
-    };
+        popup.hide = function() {
+            this.container.style.display = "none";
+            popup.anchorPos = null;
+            popup.anchor = null;
+            if (popup.isOpen) {
+                popup.isOpen = false;
+                this._signal("hide");
+            }
+        };
 
-    popup.goTo = function(where) {
-        var row = this.getRow();
-        var max = this.session.getLength() - 1;
+        /**
+         * Tries to show the popup anchored to the given position and anchors.
+         * If the anchor is not specified it tries to align to bottom and right as much as possible.
+         * If the popup does not have enough space to be rendered with the given anchors, it returns false without rendering the popup.
+         * The forceShow flag can be used to render the popup in these cases, which slides the popup so it entirely fits on the screen.
+         * @param {Point} pos
+         * @param {number} lineHeight
+         * @param {"top" | "bottom" | undefined} anchor
+         * @param {boolean} forceShow
+         * @returns {boolean}
+         */
+        popup.tryShow = function(pos, lineHeight, anchor, forceShow) {
+            if (!forceShow && popup.isOpen && popup.anchorPos && popup.anchor &&
+                popup.anchorPos.top === pos.top && popup.anchorPos.left === pos.left &&
+                popup.anchor === anchor
+            ) {
+                return true;
+            }
 
-        switch(where) {
-            case "up": row = row <= 0 ? max : row - 1; break;
-            case "down": row = row >= max ? -1 : row + 1; break;
-            case "start": row = 0; break;
-            case "end": row = max; break;
-        }
+            var el = this.container;
+            var screenHeight = window.innerHeight;
+            var screenWidth = window.innerWidth;
+            var renderer = this.renderer;
+            // var maxLines = Math.min(renderer.$maxLines, this.session.getLength());
+            var maxH = renderer.$maxLines * lineHeight * 1.4;
+            var dims = { top: 0, bottom: 0, left: 0 };
 
-        this.setRow(row);
-    };
+            var spaceBelow = screenHeight - pos.top - 3 * this.$borderSize - lineHeight;
+            var spaceAbove = pos.top - 3 * this.$borderSize;
+            if (!anchor) {
+                if (spaceAbove <= spaceBelow || spaceBelow >= maxH) {
+                    anchor = "bottom";
+                } else {
+                    anchor = "top";
+                }
+            }
+
+            if (anchor === "top") {
+                dims.bottom = pos.top - this.$borderSize;
+                dims.top = dims.bottom - maxH;
+            } else if (anchor === "bottom") {
+                dims.top = pos.top + lineHeight + this.$borderSize;
+                dims.bottom = dims.top + maxH;
+            }
+
+            var fitsX = dims.top >= 0 && dims.bottom <= screenHeight;
+
+            if (!forceShow && !fitsX) {
+                return false;
+            }
+
+            if (!fitsX) {
+                if (anchor === "top") {
+                    renderer.$maxPixelHeight = spaceAbove;
+                } else {
+                    renderer.$maxPixelHeight = spaceBelow;
+                }
+            } else {
+                renderer.$maxPixelHeight = null;
+            }
 
 
-    popup.getTextLeftOffset = function() {
-        return this.$borderSize + this.renderer.$padding + this.$imageSize;
-    };
+            if (anchor === "top") {
+                el.style.top = "";
+                el.style.bottom = (screenHeight - dims.bottom) + "px";
+                popup.isTopdown = false;
+            } else {
+                el.style.top = dims.top + "px";
+                el.style.bottom = "";
+                popup.isTopdown = true;
+            }
 
-    popup.$imageSize = 0;
-    popup.$borderSize = 1;
+            el.style.display = "";
 
-    return popup;
-};
+            var left = pos.left;
+            if (left + el.offsetWidth > screenWidth)
+                left = screenWidth - el.offsetWidth;
+
+            el.style.left = left + "px";
+            el.style.right = "";
+
+            if (!popup.isOpen) {
+                popup.isOpen = true;
+                this._signal("show");
+                lastMouseEvent = null;
+            }
+
+            popup.anchorPos = pos;
+            popup.anchor = anchor;
+
+            return true;
+        };
+
+        popup.show = function(pos, lineHeight, topdownOnly) {
+            this.tryShow(pos, lineHeight, topdownOnly ? "bottom" : undefined, true);
+        };
+
+        popup.goTo = function(where) {
+            var row = this.getRow();
+            var max = this.session.getLength() - 1;
+
+            switch(where) {
+                case "up": row = row <= 0 ? max : row - 1; break;
+                case "down": row = row >= max ? -1 : row + 1; break;
+                case "start": row = 0; break;
+                case "end": row = max; break;
+            }
+
+            this.setRow(row);
+        };
+
+
+        popup.getTextLeftOffset = function() {
+            return this.$borderSize + this.renderer.$padding + this.$imageSize;
+        };
+
+        popup.$imageSize = 0;
+        popup.$borderSize = 1;
+
+        return popup;
+    }
+} 
 
 dom.importCssString(`
 .ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {
@@ -1305,7 +2036,7 @@ dom.importCssString(`
 }
 .ace_completion-meta {
     opacity: 0.5;
-    margin: 0.9em;
+    margin: 0 0.9em;
 }
 .ace_completion-message {
     color: blue;
@@ -1332,68 +2063,84 @@ dom.importCssString(`
     line-height: 1.4;
     background: #25282c;
     color: #c1c1c1;
-}`, "autocompletion.css", false);
+}
+.ace_autocomplete_right .ace_text-layer  {
+    width: calc(100% - 8px);
+}
+.ace_autocomplete_right .ace_line {
+    display: flex;
+}
+.ace_autocomplete_right .ace_completion-meta {
+    flex: 1;
+    text-align: right;
+}
+`, "autocompletion.css", false);
 
 exports.AcePopup = AcePopup;
-__webpack_unused_export__ = $singleLineEditor;
+exports.$singleLineEditor = $singleLineEditor;
+exports.getAriaId = getAriaId;
 
 
 /***/ }),
 
-/***/ 2636:
+/***/ 52636:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-    
-    var splitRegex = /[^a-zA-Z_0-9\$\-\u00C0-\u1FFF\u2C00-\uD7FF\w]+/;
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
-    function getWordIndex(doc, pos) {
-        var textBefore = doc.getTextRange(Range.fromPoints({row: 0, column:0}, pos));
-        return textBefore.split(splitRegex).length - 1;
-    }
+var splitRegex = /[^a-zA-Z_0-9\$\-\u00C0-\u1FFF\u2C00-\uD7FF\w]+/;
 
-    /**
-     * Does a distance analysis of the word `prefix` at position `pos` in `doc`.
-     * @return Map
-     */
-    function wordDistance(doc, pos) {
-        var prefixPos = getWordIndex(doc, pos);
-        var words = doc.getValue().split(splitRegex);
-        var wordScores = Object.create(null);
-        
-        var currentWord = words[prefixPos];
+function getWordIndex(doc, pos) {
+    var textBefore = doc.getTextRange(Range.fromPoints({
+        row: 0,
+        column: 0
+    }, pos));
+    return textBefore.split(splitRegex).length - 1;
+}
 
-        words.forEach(function(word, idx) {
-            if (!word || word === currentWord) return;
+/**
+ * Does a distance analysis of the word `prefix` at position `pos` in `doc`.
+ * @return Map
+ */
+function wordDistance(doc, pos) {
+    var prefixPos = getWordIndex(doc, pos);
+    var words = doc.getValue().split(splitRegex);
+    var wordScores = Object.create(null);
 
-            var distance = Math.abs(prefixPos - idx);
-            var score = words.length - distance;
-            if (wordScores[word]) {
-                wordScores[word] = Math.max(score, wordScores[word]);
-            } else {
-                wordScores[word] = score;
-            }
-        });
-        return wordScores;
-    }
+    var currentWord = words[prefixPos];
 
-    exports.getCompletions = function(editor, session, pos, prefix, callback) {
-        var wordScore = wordDistance(session, pos);
-        var wordList = Object.keys(wordScore);
-        callback(null, wordList.map(function(word) {
-            return {
-                caption: word,
-                value: word,
-                score: wordScore[word],
-                meta: "local"
-            };
-        }));
-    };
+    words.forEach(function (word, idx) {
+        if (!word || word === currentWord) return;
+
+        var distance = Math.abs(prefixPos - idx);
+        var score = words.length - distance;
+        if (wordScores[word]) {
+            wordScores[word] = Math.max(score, wordScores[word]);
+        }
+        else {
+            wordScores[word] = score;
+        }
+    });
+    return wordScores;
+}
+
+exports.getCompletions = function (editor, session, pos, prefix, callback) {
+    var wordScore = wordDistance(session, pos);
+    var wordList = Object.keys(wordScore);
+    callback(null, wordList.map(function (word) {
+        return {
+            caption: word,
+            value: word,
+            score: wordScore[word],
+            meta: "local"
+        };
+    }));
+};
 
 
 /***/ }),
 
-/***/ 3860:
+/***/ 83860:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -1457,107 +2204,99 @@ exports.getCompletionPrefix = function (editor) {
 
 /***/ }),
 
-/***/ 2484:
+/***/ 52484:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var oop = __webpack_require__(89359);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
 
 /**
  * Tokenizes the current [[Document `Document`]] in the background, and caches the tokenized rows for future use. 
  * 
  * If a certain row is changed, everything below that row is re-tokenized.
- *
- * @class BackgroundTokenizer
  **/
+class BackgroundTokenizer {
+    
+    /**
+     * Creates a new `BackgroundTokenizer` object.
+     * @param {Tokenizer} tokenizer The tokenizer to use
+     * @param {Editor} editor The editor to associate with
+     **/
+    constructor(tokenizer, editor) {
+        this.running = false;
+        this.lines = [];
+        this.states = [];
+        this.currentLine = 0;
+        this.tokenizer = tokenizer;
 
-/**
- * Creates a new `BackgroundTokenizer` object.
- * @param {Tokenizer} tokenizer The tokenizer to use
- * @param {Editor} editor The editor to associate with
- *
- * @constructor
- **/
+        var self = this;
 
-var BackgroundTokenizer = function(tokenizer, editor) {
-    this.running = false;
-    this.lines = [];
-    this.states = [];
-    this.currentLine = 0;
-    this.tokenizer = tokenizer;
+        this.$worker = function() {
+            if (!self.running) { return; }
 
-    var self = this;
+            var workerStart = new Date();
+            var currentLine = self.currentLine;
+            var endLine = -1;
+            var doc = self.doc;
 
-    this.$worker = function() {
-        if (!self.running) { return; }
-
-        var workerStart = new Date();
-        var currentLine = self.currentLine;
-        var endLine = -1;
-        var doc = self.doc;
-
-        var startLine = currentLine;
-        while (self.lines[currentLine])
-            currentLine++;
-        
-        var len = doc.getLength();
-        var processedLines = 0;
-        self.running = false;
-        while (currentLine < len) {
-            self.$tokenizeRow(currentLine);
-            endLine = currentLine;
-            do {
+            var startLine = currentLine;
+            while (self.lines[currentLine])
                 currentLine++;
-            } while (self.lines[currentLine]);
 
-            // only check every 5 lines
-            processedLines ++;
-            if ((processedLines % 5 === 0) && (new Date() - workerStart) > 20) {
-                self.running = setTimeout(self.$worker, 20);
-                break;
+            var len = doc.getLength();
+            var processedLines = 0;
+            self.running = false;
+            while (currentLine < len) {
+                self.$tokenizeRow(currentLine);
+                endLine = currentLine;
+                do {
+                    currentLine++;
+                } while (self.lines[currentLine]);
+
+                // only check every 5 lines
+                processedLines ++;
+                if ((processedLines % 5 === 0) && (new Date() - workerStart) > 20) {
+                    self.running = setTimeout(self.$worker, 20);
+                    break;
+                }
             }
-        }
-        self.currentLine = currentLine;
-        
-        if (endLine == -1)
-            endLine = currentLine;
-        
-        if (startLine <= endLine)
-            self.fireUpdateEvent(startLine, endLine);
-    };
-};
+            self.currentLine = currentLine;
 
-(function(){
+            if (endLine == -1)
+                endLine = currentLine;
 
-    oop.implement(this, EventEmitter);
-
+            if (startLine <= endLine)
+                self.fireUpdateEvent(startLine, endLine);
+        };
+    }
+    
     /**
      * Sets a new tokenizer for this object.
      * @param {Tokenizer} tokenizer The new tokenizer to use
      **/
-    this.setTokenizer = function(tokenizer) {
+    setTokenizer(tokenizer) {
         this.tokenizer = tokenizer;
         this.lines = [];
         this.states = [];
 
         this.start(0);
-    };
+    }
 
     /**
      * Sets a new document to associate with this object.
      * @param {Document} doc The new document to associate with
      **/
-    this.setDocument = function(doc) {
+    setDocument(doc) {
         this.doc = doc;
         this.lines = [];
         this.states = [];
 
         this.stop();
-    };
+    }
 
      /**
      * Fires whenever the background tokeniziers between a range of rows are going to be updated.
@@ -1571,19 +2310,19 @@ var BackgroundTokenizer = function(tokenizer, editor) {
      * @param {Number} firstRow The starting row region
      * @param {Number} lastRow The final row region
      **/
-    this.fireUpdateEvent = function(firstRow, lastRow) {
+    fireUpdateEvent(firstRow, lastRow) {
         var data = {
             first: firstRow,
             last: lastRow
         };
         this._signal("update", {data: data});
-    };
+    }
 
     /**
      * Starts tokenizing at the row indicated.
      * @param {Number} startRow The row to start at
      **/
-    this.start = function(startRow) {
+    start(startRow) {
         this.currentLine = Math.min(startRow || 0, this.currentLine, this.doc.getLength());
 
         // remove all cached items below this line
@@ -1593,17 +2332,17 @@ var BackgroundTokenizer = function(tokenizer, editor) {
         this.stop();
         // pretty long delay to prevent the tokenizer from interfering with the user
         this.running = setTimeout(this.$worker, 700);
-    };
+    }
 
     /**
      * Sets pretty long delay to prevent the tokenizer from interfering with the user
      */
-    this.scheduleStart = function() {
+    scheduleStart() {
         if (!this.running)
             this.running = setTimeout(this.$worker, 700);
-    };
+    }
 
-    this.$updateOnChange = function(delta) {
+    $updateOnChange(delta) {
         var startRow = delta.start.row;
         var len = delta.end.row - startRow;
 
@@ -1622,38 +2361,38 @@ var BackgroundTokenizer = function(tokenizer, editor) {
         this.currentLine = Math.min(startRow, this.currentLine, this.doc.getLength());
 
         this.stop();
-    };
+    }
 
     /**
      * Stops tokenizing.
      **/
-    this.stop = function() {
+    stop() {
         if (this.running)
             clearTimeout(this.running);
         this.running = false;
-    };
+    }
 
     /**
      * Gives list of [[Token]]'s of the row. (tokens are cached)
      * @param {Number} row The row to get tokens at
      * @returns {Token[]}
      **/
-    this.getTokens = function(row) {
+    getTokens(row) {
         return this.lines[row] || this.$tokenizeRow(row);
-    };
+    }
 
     /**
      * Returns the state of tokenization at the end of a row.
      * @param {Number} row The row to get state at
      * @returns {string}
      **/
-    this.getState = function(row) {
+    getState(row) {
         if (this.currentLine == row)
             this.$tokenizeRow(row);
         return this.states[row] || "start";
-    };
+    }
 
-    this.$tokenizeRow = function(row) {
+    $tokenizeRow(row) {
         var line = this.doc.getLine(row);
         var state = this.states[row - 1];
 
@@ -1669,79 +2408,77 @@ var BackgroundTokenizer = function(tokenizer, editor) {
         }
 
         return this.lines[row] = data.tokens;
-    };
+    }
 
-    this.cleanup = function() {
+    cleanup() {
         this.running = false;
         this.lines = [];
         this.states = [];
         this.currentLine = 0;
         this.removeAllListeners();
-    };
+    }
 
-}).call(BackgroundTokenizer.prototype);
+}
+
+oop.implement(BackgroundTokenizer.prototype, EventEmitter);
 
 exports.V = BackgroundTokenizer;
 
 
 /***/ }),
 
-/***/ 5087:
+/***/ 45087:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var bidiUtil = __webpack_require__(2918);
-var lang = __webpack_require__(124);
+var bidiUtil = __webpack_require__(82918);
+var lang = __webpack_require__(20124);
 var bidiRE = /[\u0590-\u05f4\u0600-\u06ff\u0700-\u08ac\u202B]/;
 
 /**
  * This object is used to ensure Bi-Directional support (for languages with text flowing from right to left, like Arabic or Hebrew)
  * including correct caret positioning, text selection mouse and keyboard arrows functioning
- * @class BidiHandler
  **/
-
-/**
- * Creates a new `BidiHandler` object
- * @param {EditSession} session The session to use
- *
- * @constructor
- **/
-var BidiHandler = function(session) {
-    this.session = session;
-    this.bidiMap = {};
-    /* current screen row */
-    this.currentRow = null;
-    this.bidiUtil = bidiUtil;
-    /* Arabic/Hebrew character width differs from regular character width */
-    this.charWidths = [];
-    this.EOL = "\xAC";
-    this.showInvisibles = true;
-    this.isRtlDir = false;
-    this.$isRtl = false;
-    this.line = "";
-    this.wrapIndent = 0;
-    this.EOF = "\xB6";
-    this.RLE = "\u202B";
-    this.contentWidth = 0;
-    this.fontMetrics = null;
-    this.rtlLineOffset = 0;
-    this.wrapOffset = 0;
-    this.isMoveLeftOperation = false;
-    this.seenBidi = bidiRE.test(session.getValue());
-};
-
-(function() {
+class BidiHandler {
+    /**
+     * Creates a new `BidiHandler` object
+     * @param {EditSession} session The session to use
+     **/
+    constructor(session) {
+        this.session = session;
+        this.bidiMap = {};
+        /* current screen row */
+        this.currentRow = null;
+        this.bidiUtil = bidiUtil;
+        /* Arabic/Hebrew character width differs from regular character width */
+        this.charWidths = [];
+        this.EOL = "\xAC";
+        this.showInvisibles = true;
+        this.isRtlDir = false;
+        this.$isRtl = false;
+        this.line = "";
+        this.wrapIndent = 0;
+        this.EOF = "\xB6";
+        this.RLE = "\u202B";
+        this.contentWidth = 0;
+        this.fontMetrics = null;
+        this.rtlLineOffset = 0;
+        this.wrapOffset = 0;
+        this.isMoveLeftOperation = false;
+        this.seenBidi = bidiRE.test(session.getValue());
+    }
+    
     /**
      * Returns 'true' if row contains Bidi characters, in such case
      * creates Bidi map to be used in operations related to selection
      * (keyboard arrays, mouse click, select)
-     * @param {Number} the screen row to be checked
-     * @param {Number} the document row to be checked [optional]
-     * @param {Number} the wrapped screen line index [ optional]
+     * @param {Number} screenRow the screen row to be checked
+     * @param {Number} docRow the document row to be checked [optional]
+     * @param {Number} splitIndex the wrapped screen line index [ optional]
     **/
-    this.isBidiRow = function(screenRow, docRow, splitIndex) {
+    isBidiRow(screenRow, docRow, splitIndex) {
         if (!this.seenBidi)
             return false;
         if (screenRow !== this.currentRow) {
@@ -1750,9 +2487,9 @@ var BidiHandler = function(session) {
             this.updateBidiMap();
         }
         return this.bidiMap.bidiLevels;
-    };
+    }
 
-    this.onChange = function(delta) {
+    onChange(delta) {
         if (!this.seenBidi) {
             if (delta.action == "insert" && bidiRE.test(delta.lines.join("\n"))) {
                 this.seenBidi = true;
@@ -1762,9 +2499,9 @@ var BidiHandler = function(session) {
         else {
             this.currentRow = null;
         }
-    };
+    }
 
-    this.getDocumentRow = function() {
+    getDocumentRow() {
         var docRow = 0;
         var rowCache = this.session.$screenRowCache;
         if (rowCache.length) {
@@ -1774,9 +2511,9 @@ var BidiHandler = function(session) {
         }
 
         return docRow;
-    };
+    }
 
-    this.getSplitIndex = function() {
+    getSplitIndex() {
         var splitIndex = 0;
         var rowCache = this.session.$screenRowCache;
         if (rowCache.length) {
@@ -1794,9 +2531,9 @@ var BidiHandler = function(session) {
         }
 
         return splitIndex;
-    };
+    }
 
-    this.updateRowLine = function(docRow, splitIndex) {
+    updateRowLine(docRow, splitIndex) {
         if (docRow === undefined)
             docRow = this.getDocumentRow();
             
@@ -1845,30 +2582,30 @@ var BidiHandler = function(session) {
             this.fontMetrics.$main.textContent = (this.line.charAt(this.line.length - 1) == bidiUtil.DOT) ? this.line.substr(0, this.line.length - 1) : this.line;
             this.rtlLineOffset = this.contentWidth - this.fontMetrics.$main.getBoundingClientRect().width;
         }
-    };
+    }
     
-    this.updateBidiMap = function() {
+    updateBidiMap() {
         var textCharTypes = [];
         if (bidiUtil.hasBidiCharacters(this.line, textCharTypes) || this.isRtlDir) {
              this.bidiMap = bidiUtil.doBidiReorder(this.line, textCharTypes, this.isRtlDir);
         } else {
             this.bidiMap = {};
         }
-    };
+    }
 
     /**
      * Resets stored info related to current screen row
     **/
-    this.markAsDirty = function() {
+    markAsDirty() {
         this.currentRow = null;
-    };
+    }
 
     /**
      * Updates array of character widths
-     * @param {Object} font metrics
+     * @param {Object} fontMetrics metrics
      *
     **/
-    this.updateCharacterWidths = function(fontMetrics) {
+    updateCharacterWidths(fontMetrics) {
         if (this.characterWidth === fontMetrics.$characterSize.width)
             return;
 
@@ -1882,30 +2619,30 @@ var BidiHandler = function(session) {
         this.charWidths[bidiUtil.B] = this.charWidths[bidiUtil.RLE] = 0;
 
         this.currentRow = null;
-    };
+    }
 
-    this.setShowInvisibles = function(showInvisibles) {
+    setShowInvisibles(showInvisibles) {
         this.showInvisibles = showInvisibles;
         this.currentRow = null;
-    };
+    }
 
-    this.setEolChar = function(eolChar) {
+    setEolChar(eolChar) {
         this.EOL = eolChar; 
-    };
+    }
 
-    this.setContentWidth = function(width) {
+    setContentWidth(width) {
         this.contentWidth = width;
-    };
+    }
 
-    this.isRtlLine = function(row) {
+    isRtlLine(row) {
         if (this.$isRtl) return true;
         if (row != undefined)
             return (this.session.getLine(row).charAt(0) == this.RLE);
         else
             return this.isRtlDir; 
-    };
+    }
 
-    this.setRtlDirection = function(editor, isRtlDir) {
+    setRtlDirection(editor, isRtlDir) {
         var cursor = editor.getCursorPosition(); 
         for (var row = editor.selection.getSelectionAnchor().row; row <= cursor.row; row++) {
             if (!isRtlDir && editor.session.getLine(row).charAt(0) === editor.session.$bidiHandler.RLE)
@@ -1913,7 +2650,7 @@ var BidiHandler = function(session) {
             else if (isRtlDir && editor.session.getLine(row).charAt(0) !== editor.session.$bidiHandler.RLE)
                 editor.session.doc.insert({column: 0, row: row}, editor.session.$bidiHandler.RLE);
         }
-    };
+    }
 
 
     /**
@@ -1922,7 +2659,7 @@ var BidiHandler = function(session) {
      *
      * @return {Number} horizontal pixel offset of given screen column
      **/
-    this.getPosLeft = function(col) {
+    getPosLeft(col) {
         col -= this.wrapIndent;
         var leftBoundary = (this.line.charAt(0) === this.RLE) ? 1 : 0;
         var logicalIdx = (col > leftBoundary) ? (this.session.getOverwrite() ? col : col - 1) : leftBoundary;
@@ -1946,7 +2683,7 @@ var BidiHandler = function(session) {
             left += this.rtlLineOffset;
 
         return left;
-    };
+    }
 
     /**
      * Returns 'selections' - array of objects defining set of selection rectangles
@@ -1955,7 +2692,7 @@ var BidiHandler = function(session) {
      *
      * @return {Object[]} Each object contains 'left' and 'width' values defining selection rectangle.
     **/
-    this.getSelections = function(startCol, endCol) {
+    getSelections(startCol, endCol) {
         var map = this.bidiMap, levels = map.bidiLevels, level, selections = [], offset = 0,
             selColMin = Math.min(startCol, endCol) - this.wrapIndent, selColMax = Math.max(startCol, endCol) - this.wrapIndent,
                 isSelected = false, isSelectedPrev = false, selectionStart = 0;
@@ -1986,7 +2723,7 @@ var BidiHandler = function(session) {
             }
         }
         return selections;
-    };
+    }
 
     /**
      * Converts character coordinates on the screen to respective document column number
@@ -1994,7 +2731,7 @@ var BidiHandler = function(session) {
      *
      * @return {Number} screen column number corresponding to given pixel offset
     **/
-    this.offsetToCol = function(posX) {
+    offsetToCol(posX) {
         if(this.isRtlDir)
             posX -= this.rtlLineOffset;
 
@@ -2044,16 +2781,16 @@ var BidiHandler = function(session) {
             logicalIdx++;
 
         return (logicalIdx + this.wrapIndent);
-    };
+    }
 
-}).call(BidiHandler.prototype);
+}
 
 exports.l = BidiHandler;
 
 
 /***/ }),
 
-/***/ 6311:
+/***/ 76311:
 /***/ ((module) => {
 
 "use strict";
@@ -2075,46 +2812,34 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3190:
+/***/ 73190:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var MultiHashHandler = (__webpack_require__(7116).MultiHashHandler);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
-/**
- * @class CommandManager
- *
- **/
-
-/**
- * new CommandManager(platform, commands)
- * @param {String} platform Identifier for the platform; must be either `"mac"` or `"win"`
- * @param {Array} commands A list of commands
- *
- **/
-
-var CommandManager = function(platform, commands) {
-    MultiHashHandler.call(this, commands, platform);
-    this.byName = this.commands;
-    this.setDefaultHandler("exec", function(e) {
-        if (!e.args) {
-            return e.command.exec(e.editor, {}, e.event, true);
-        }
-        return e.command.exec(e.editor, e.args, e.event, false);
-    });
-};
-
-oop.inherits(CommandManager, MultiHashHandler);
-
-(function() {
-
-    oop.implement(this, EventEmitter);
-
-    this.exec = function(command, editor, args) {
+class CommandManager extends MultiHashHandler{
+    /**
+     * new CommandManager(platform, commands)
+     * @param {String} platform Identifier for the platform; must be either `"mac"` or `"win"`
+     * @param {Array} commands A list of commands
+     **/
+    constructor(platform, commands) {
+        super(commands, platform);
+        this.byName = this.commands;
+        this.setDefaultHandler("exec", function(e) {
+            if (!e.args) {
+                return e.command.exec(e.editor, {}, e.event, true);
+            }
+            return e.command.exec(e.editor, e.args, e.event, false);
+        });
+    }
+    
+    exec(command, editor, args) {
         if (Array.isArray(command)) {
             for (var i = command.length; i--; ) {
                 if (this.exec(command[i], editor, args)) return true;
@@ -2139,9 +2864,9 @@ oop.inherits(CommandManager, MultiHashHandler);
         this._signal("afterExec", e);
 
         return e.returnValue === false ? false : true;
-    };
+    }
 
-    this.toggleRecording = function(editor) {
+    toggleRecording(editor) {
         if (this.$inReplay)
             return;
 
@@ -2165,9 +2890,9 @@ oop.inherits(CommandManager, MultiHashHandler);
         this.macro = [];
         this.on("exec", this.$addCommandToMacro);
         return this.recording = true;
-    };
+    }
 
-    this.replay = function(editor) {
+    replay(editor) {
         if (this.$inReplay || !this.macro)
             return;
 
@@ -2185,9 +2910,9 @@ oop.inherits(CommandManager, MultiHashHandler);
         } finally {
             this.$inReplay = false;
         }
-    };
+    }
 
-    this.trimMacro = function(m) {
+    trimMacro(m) {
         return m.map(function(x){
             if (typeof x[0] != "string")
                 x[0] = x[0].name;
@@ -2195,24 +2920,25 @@ oop.inherits(CommandManager, MultiHashHandler);
                 x = x[0];
             return x;
         });
-    };
+    }
 
-}).call(CommandManager.prototype);
+}
+oop.implement(CommandManager.prototype, EventEmitter);
 
-exports.f = CommandManager;
+exports.CommandManager = CommandManager;
 
 
 /***/ }),
 
-/***/ 883:
+/***/ 70883:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var lang = __webpack_require__(124);
-var config = __webpack_require__(3188);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var lang = __webpack_require__(20124);
+var config = __webpack_require__(13188);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 function bindKey(win, mac) {
     return {win: win, mac: mac};
@@ -2238,7 +2964,7 @@ exports.C = [{
     description: "Go to next error",
     bindKey: bindKey("Alt-E", "F4"),
     exec: function(editor) {
-        config.loadModule("./ext/error_marker", function(module) {
+        config.loadModule("ace/ext/error_marker", function(module) {
             module.showErrorMarker(editor, 1);
         });
     },
@@ -2249,7 +2975,7 @@ exports.C = [{
     description: "Go to previous error",
     bindKey: bindKey("Alt-Shift-E", "Shift-F4"),
     exec: function(editor) {
-        config.loadModule("./ext/error_marker", function(module) {
+        config.loadModule("ace/ext/error_marker", function(module) {
             module.showErrorMarker(editor, -1);
         });
     },
@@ -3095,7 +3821,7 @@ for (var i = 1; i < 9; i++) {
 
 /***/ }),
 
-/***/ 8506:
+/***/ 48506:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 // commands to enter multiselect mode
@@ -3157,7 +3883,7 @@ exports.defaultCommands = [{
     readOnly: true
 }, {
     name: "toggleSplitSelectionIntoLines",
-    description: "Split into lines",
+    description: "Split selection into lines",
     exec: function(editor) {
         if (editor.multiSelect.rangeCount > 1)
             editor.multiSelect.joinSelections();
@@ -3203,16 +3929,15 @@ exports.keyboardHandler = new HashHandler(exports.multiSelectCommands);
 
 /***/ }),
 
-/***/ 3188:
+/***/ 13188:
 /***/ ((module, exports, __webpack_require__) => {
 
 "no use strict";
 
-var lang = __webpack_require__(124);
-var oop = __webpack_require__(9359);
-var net = __webpack_require__(2634);
+var lang = __webpack_require__(20124);
+var net = __webpack_require__(42634);
 var dom = __webpack_require__(6359);
-var AppConfig = (__webpack_require__(6675)/* .AppConfig */ .X);
+var AppConfig = (__webpack_require__(46675)/* .AppConfig */ .X);
 
 module.exports = exports = new AppConfig();
 
@@ -3257,7 +3982,7 @@ exports.moduleUrl = function(name, component) {
 
     var parts = name.split("/");
     component = component || parts[parts.length - 2] || "";
-    
+
     // todo make this configurable or get rid of '-'
     var sep = component == "snippets" ? "/" : "-";
     var base = parts[parts.length - 1];
@@ -3284,8 +4009,8 @@ exports.setModuleUrl = function(name, subst) {
 };
 
 var loader = function(moduleName, cb) {
-    if (moduleName == "ace/theme/textmate")
-        return cb(null, __webpack_require__(3687));
+    if (moduleName === "ace/theme/textmate" || moduleName === "./theme/textmate")
+        return cb(null, __webpack_require__(93687));
     return console.error("loader is not configured");
 };
 
@@ -3293,6 +4018,7 @@ exports.setLoader = function(cb) {
     loader = cb;
 };
 
+exports.dynamicModules = Object.create(null);
 exports.$loading = {};
 exports.loadModule = function(moduleName, onLoad) {
     var module, moduleType;
@@ -3301,42 +4027,57 @@ exports.loadModule = function(moduleName, onLoad) {
         moduleName = moduleName[1];
     }
 
-    try {
-        module = __webpack_require__(2126)(moduleName);
-    } catch (e) {}
-    // require(moduleName) can return empty object if called after require([moduleName], callback)
-    if (module && !exports.$loading[moduleName])
-        return onLoad && onLoad(module);
+    var load = function (module) {
+        // require(moduleName) can return empty object if called after require([moduleName], callback)
+        if (module && !exports.$loading[moduleName]) return onLoad && onLoad(module);
 
-    if (!exports.$loading[moduleName])
-        exports.$loading[moduleName] = [];
+        if (!exports.$loading[moduleName]) exports.$loading[moduleName] = [];
 
-    exports.$loading[moduleName].push(onLoad);
+        exports.$loading[moduleName].push(onLoad);
 
-    if (exports.$loading[moduleName].length > 1)
-        return;
+        if (exports.$loading[moduleName].length > 1) return;
 
-    var afterLoad = function() {
-        loader(moduleName, function(err, module) {
-            exports._emit("load.module", {name: moduleName, module: module});
-            var listeners = exports.$loading[moduleName];
-            exports.$loading[moduleName] = null;
-            listeners.forEach(function(onLoad) {
-                onLoad && onLoad(module);
+        var afterLoad = function() {
+            loader(moduleName, function(err, module) {
+                exports._emit("load.module", {name: moduleName, module: module});
+                var listeners = exports.$loading[moduleName];
+                exports.$loading[moduleName] = null;
+                listeners.forEach(function(onLoad) {
+                    onLoad && onLoad(module);
+                });
             });
-        });
+        };
+
+        if (!exports.get("packaged")) return afterLoad();
+
+        net.loadScript(exports.moduleUrl(moduleName, moduleType), afterLoad);
+        reportErrorIfPathIsNotConfigured();
     };
 
-    if (!exports.get("packaged"))
-        return afterLoad();
-    
-    net.loadScript(exports.moduleUrl(moduleName, moduleType), afterLoad);
-    reportErrorIfPathIsNotConfigured();
+    if (exports.dynamicModules[moduleName]) {
+        exports.dynamicModules[moduleName]().then(function (module) {
+            if (module.default) {
+                load(module.default);
+            }
+            else {
+                load(module);
+            }
+        });
+    } else {
+        try {
+            module = __webpack_require__(2126)(moduleName);
+        } catch (e) {}
+        load(module);
+    }
+};
+
+exports.setModuleLoader = function (moduleName, onLoad) {
+    exports.dynamicModules[moduleName] = onLoad;
 };
 
 var reportErrorIfPathIsNotConfigured = function() {
     if (
-        !options.basePath && !options.workerPath 
+        !options.basePath && !options.workerPath
         && !options.modePath && !options.themePath
         && !Object.keys(options.$moduleUrls).length
     ) {
@@ -3349,17 +4090,17 @@ var reportErrorIfPathIsNotConfigured = function() {
     }
 };
 
-exports.version = "1.13.1";
+exports.version = "1.17.0";
 
 
 
 
 /***/ }),
 
-/***/ 610:
+/***/ 20610:
 /***/ ((module) => {
 
-module.exports = `/*
+/*
 styles = []
 for (var i = 1; i < 16; i++) {
     styles.push(".ace_br" + i + "{" + (
@@ -3370,6 +4111,7 @@ for (var i = 1; i < 16; i++) {
 }
 styles.join("\\n")
 */
+module.exports = `
 .ace_br1 {border-top-left-radius    : 3px;}
 .ace_br2 {border-top-right-radius   : 3px;}
 .ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}
@@ -3391,7 +4133,7 @@ styles.join("\\n")
     position: relative;
     overflow: hidden;
     padding: 0;
-    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Source Code Pro', 'source-code-pro', monospace;
     direction: ltr;
     text-align: left;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3416,6 +4158,11 @@ styles.join("\\n")
     min-width: 100%;
     contain: style size layout;
     font-variant-ligatures: no-common-ligatures;
+}
+
+.ace_keyboard-focus:focus {
+    box-shadow: inset 0 0 0 2px #5E9ED6;
+    outline: none;
 }
 
 .ace_dragging .ace_scroller:before{
@@ -3454,11 +4201,18 @@ styles.join("\\n")
     right: 0;
 }
 
-.ace_scroller.ace_scroll-left {
+.ace_scroller.ace_scroll-left:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;
+    pointer-events: none;
 }
 
-.ace_gutter-cell {
+.ace_gutter-cell, .ace_gutter-cell_svg-icons  {
     position: absolute;
     top: 0;
     left: 0;
@@ -3468,23 +4222,43 @@ styles.join("\\n")
     background-repeat: no-repeat;
 }
 
-.ace_gutter-cell.ace_error {
+.ace_gutter-cell_svg-icons .ace_icon_svg{
+    margin-left: -14px;
+    float: left;
+}
+
+.ace_gutter-cell.ace_error, .ace_icon.ace_error {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");
     background-repeat: no-repeat;
     background-position: 2px center;
 }
 
-.ace_gutter-cell.ace_warning {
+.ace_gutter-cell.ace_warning, .ace_icon.ace_warning {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
     background-position: 2px center;
 }
 
-.ace_gutter-cell.ace_info {
+.ace_gutter-cell.ace_info, .ace_icon.ace_info {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
     background-position: 2px center;
 }
-.ace_dark .ace_gutter-cell.ace_info {
+.ace_dark .ace_gutter-cell.ace_info, .ace_dark .ace_icon.ace_info {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");
+}
+
+.ace_icon_svg.ace_error {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJyZWQiIHNoYXBlLXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIj4KPGNpcmNsZSBmaWxsPSJub25lIiBjeD0iOCIgY3k9IjgiIHI9IjciIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGxpbmUgeDE9IjExIiB5MT0iNSIgeDI9IjUiIHkyPSIxMSIvPgo8bGluZSB4MT0iMTEiIHkxPSIxMSIgeDI9IjUiIHkyPSI1Ii8+CjwvZz4KPC9zdmc+");
+    background-color: crimson;
+}
+.ace_icon_svg.ace_warning {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJkYXJrb3JhbmdlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+Cjxwb2x5Z29uIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiIHBvaW50cz0iOCAxIDE1IDE1IDEgMTUgOCAxIi8+CjxyZWN0IHg9IjgiIHk9IjEyIiB3aWR0aD0iMC4wMSIgaGVpZ2h0PSIwLjAxIi8+CjxsaW5lIHgxPSI4IiB5MT0iNiIgeDI9IjgiIHkyPSIxMCIvPgo8L2c+Cjwvc3ZnPg==");
+    background-color: darkorange;
+}
+.ace_icon_svg.ace_info {
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJibHVlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+CjxjaXJjbGUgZmlsbD0ibm9uZSIgY3g9IjgiIGN5PSI4IiByPSI3IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjxwb2x5bGluZSBwb2ludHM9IjggMTEgOCA4Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjkgOCA2IDgiLz4KPGxpbmUgeDE9IjEwIiB5MT0iMTEiIHgyPSI2IiB5Mj0iMTEiLz4KPHJlY3QgeD0iOCIgeT0iNSIgd2lkdGg9IjAuMDEiIGhlaWdodD0iMC4wMSIvPgo8L2c+Cjwvc3ZnPg==");
+    background-color: royalblue;
 }
 
 .ace_scrollbar {
@@ -3613,7 +4387,6 @@ styles.join("\\n")
 .ace_hidpi .ace_content,
 .ace_hidpi .ace_gutter {
     contain: strict;
-    will-change: transform;
 }
 .ace_hidpi .ace_text-layer > .ace_line, 
 .ace_hidpi .ace_text-layer > .ace_line_group {
@@ -3752,8 +4525,7 @@ styles.join("\\n")
 }
 
 .ace_tooltip {
-    background-color: #FFF;
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));
+    background-color: #f5f5f5;
     border: 1px solid gray;
     border-radius: 1px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -3773,7 +4545,33 @@ styles.join("\\n")
     pointer-events: none;
 }
 
-.ace_folding-enabled > .ace_gutter-cell {
+.ace_tooltip:focus {
+    outline: 1px solid black;
+}
+
+.ace_gutter-tooltip_header {
+    font-weight: bold;
+}
+
+.ace_gutter-tooltip_body {
+    padding-top: 5px;
+}
+
+.ace_gutter-tooltip .ace_icon {
+    display: inline-block;
+    width: 18px;
+}
+
+.ace_icon_svg {
+    display: inline-block;
+    width: 12px;
+    vertical-align: top;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 12px;
+    -webkit-mask-position: center;
+}
+
+.ace_folding-enabled > .ace_gutter-cell, .ace_folding-enabled > .ace_gutter-cell_svg-icons {
     padding-right: 13px;
 }
 
@@ -3937,72 +4735,70 @@ styles.join("\\n")
     white-space: pre;
     opacity: 0.7;
     margin: 0 10px;
+}
+
+.ace_ghost_text {
+    opacity: 0.5;
+    font-style: italic;
+    white-space: pre;
 }`;
 
 
 /***/ }),
 
-/***/ 1218:
+/***/ 21218:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
-var applyDelta = (__webpack_require__(8934)/* .applyDelta */ .B);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var Anchor = (__webpack_require__(7869)/* .Anchor */ .e);
+var oop = __webpack_require__(89359);
+var applyDelta = (__webpack_require__(38934)/* .applyDelta */ .B);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var Anchor = (__webpack_require__(27869)/* .Anchor */ .e);
 
 /**
  * Contains the text of the document. Document can be attached to several [[EditSession `EditSession`]]s. 
  * At its core, `Document`s are just an array of strings, with each row in the document matching up to the array index.
- *
- * @class Document
  **/
-
-/**
- *
- * Creates a new `Document`. If `text` is included, the `Document` contains those strings; otherwise, it's empty.
- * @param {String | String[]} textOrLines text The starting text
- * @constructor
- **/
-
-var Document = function(textOrLines) {
-    this.$lines = [""];
-
-    // There has to be one line at least in the document. If you pass an empty
-    // string to the insert function, nothing will happen. Workaround.
-    if (textOrLines.length === 0) {
+class Document {
+    /**
+     *
+     * Creates a new `Document`. If `text` is included, the `Document` contains those strings; otherwise, it's empty.
+     * @param {String | String[]} textOrLines text The starting text
+     **/
+    constructor(textOrLines) {
         this.$lines = [""];
-    } else if (Array.isArray(textOrLines)) {
-        this.insertMergedLines({row: 0, column: 0}, textOrLines);
-    } else {
-        this.insert({row: 0, column:0}, textOrLines);
+
+        // There has to be one line at least in the document. If you pass an empty
+        // string to the insert function, nothing will happen. Workaround.
+        if (textOrLines.length === 0) {
+            this.$lines = [""];
+        } else if (Array.isArray(textOrLines)) {
+            this.insertMergedLines({row: 0, column: 0}, textOrLines);
+        } else {
+            this.insert({row: 0, column:0}, textOrLines);
+        }
     }
-};
-
-(function() {
-
-    oop.implement(this, EventEmitter);
-
+    
     /**
      * Replaces all the lines in the current `Document` with the value of `text`.
      *
      * @param {String} text The text to use
      **/
-    this.setValue = function(text) {
+    setValue(text) {
         var len = this.getLength() - 1;
         this.remove(new Range(0, 0, len, this.getLine(len).length));
         this.insert({row: 0, column: 0}, text || "");
-    };
+    }
 
     /**
      * Returns all the lines in the document as a single string, joined by the new line character.
      **/
-    this.getValue = function() {
+   getValue() {
         return this.getAllLines().join(this.getNewLineCharacter());
-    };
+    }
 
     /** 
      * Creates a new `Anchor` to define a floating point in the document.
@@ -4010,36 +4806,15 @@ var Document = function(textOrLines) {
      * @param {Number} column The column number to use
      *
      **/
-    this.createAnchor = function(row, column) {
+    createAnchor(row, column) {
         return new Anchor(this, row, column);
-    };
-
-    /** 
-     * Splits a string of text on any newline (`\n`) or carriage-return (`\r`) characters.
-     *
-     * @method $split
-     * @param {String} text The text to work with
-     * @returns {String} A String array, with each index containing a piece of the original `text` string.
-     *
-     **/
-
-    // check for IE split bug
-    if ("aaa".split(/a/).length === 0) {
-        this.$split = function(text) {
-            return text.replace(/\r\n|\r/g, "\n").split("\n");
-        };
-    } else {
-        this.$split = function(text) {
-            return text.split(/\r\n|\r|\n/);
-        };
     }
 
-
-    this.$detectNewLine = function(text) {
+    $detectNewLine(text) {
         var match = text.match(/^.*?(\r\n|\r|\n)/m);
         this.$autoNewLine = match ? match[1] : "\n";
         this._signal("changeNewLineMode");
-    };
+    }
 
     /**
      * Returns the newline character that's being used, depending on the value of `newLineMode`. 
@@ -4048,7 +4823,7 @@ var Document = function(textOrLines) {
      *  If `newLineMode == auto`, the value of `autoNewLine` is returned.
      *
      **/
-    this.getNewLineCharacter = function() {
+    getNewLineCharacter() {
         switch (this.$newLineMode) {
           case "windows":
             return "\r\n";
@@ -4057,48 +4832,46 @@ var Document = function(textOrLines) {
           default:
             return this.$autoNewLine || "\n";
         }
-    };
+    }
 
-    this.$autoNewLine = "";
-    this.$newLineMode = "auto";
     /**
      * [Sets the new line mode.]{: #Document.setNewLineMode.desc}
      * @param {String} newLineMode [The newline mode to use; can be either `windows`, `unix`, or `auto`]{: #Document.setNewLineMode.param}
      *
      **/
-    this.setNewLineMode = function(newLineMode) {
+    setNewLineMode(newLineMode) {
         if (this.$newLineMode === newLineMode)
             return;
 
         this.$newLineMode = newLineMode;
         this._signal("changeNewLineMode");
-    };
+    }
 
     /**
      * [Returns the type of newlines being used; either `windows`, `unix`, or `auto`]{: #Document.getNewLineMode}
      * @returns {String}
      **/
-    this.getNewLineMode = function() {
+    getNewLineMode() {
         return this.$newLineMode;
-    };
+    }
 
     /**
      * Returns `true` if `text` is a newline character (either `\r\n`, `\r`, or `\n`).
      * @param {String} text The text to check
      *
      **/
-    this.isNewLine = function(text) {
+    isNewLine(text) {
         return (text == "\r\n" || text == "\r" || text == "\n");
-    };
+    }
 
     /**
      * Returns a verbatim copy of the given line as it is in the document
      * @param {Number} row The row index to retrieve
      *
      **/
-    this.getLine = function(row) {
+    getLine(row) {
         return this.$lines[row] || "";
-    };
+    }
 
     /**
      * Returns an array of strings of the rows between `firstRow` and `lastRow`. This function is inclusive of `lastRow`.
@@ -4106,23 +4879,23 @@ var Document = function(textOrLines) {
      * @param {Number} lastRow The final row index to retrieve
      *
      **/
-    this.getLines = function(firstRow, lastRow) {
+    getLines(firstRow, lastRow) {
         return this.$lines.slice(firstRow, lastRow + 1);
-    };
+    }
 
     /**
      * Returns all lines in the document as string array.
      **/
-    this.getAllLines = function() {
+    getAllLines() {
         return this.getLines(0, this.getLength());
-    };
+    }
 
     /**
      * Returns the number of rows in the document.
      **/
-    this.getLength = function() {
+    getLength() {
         return this.$lines.length;
-    };
+    }
 
     /**
      * Returns all the text within `range` as a single string.
@@ -4130,9 +4903,9 @@ var Document = function(textOrLines) {
      * 
      * @returns {String}
      **/
-    this.getTextRange = function(range) {
+    getTextRange(range) {
         return this.getLinesForRange(range).join(this.getNewLineCharacter());
-    };
+    }
     
     /**
      * Returns all the text within `range` as an array of lines.
@@ -4140,7 +4913,7 @@ var Document = function(textOrLines) {
      * 
      * @returns {string[]}
      **/
-    this.getLinesForRange = function(range) {
+    getLinesForRange(range) {
         var lines;
         if (range.start.row === range.end.row) {
             // Handle a single-line range.
@@ -4154,36 +4927,36 @@ var Document = function(textOrLines) {
                 lines[l] = lines[l].substring(0, range.end.column);
         }
         return lines;
-    };
+    }
 
     // Deprecated methods retained for backwards compatibility.
-    this.insertLines = function(row, lines) {
+    insertLines(row, lines) {
         console.warn("Use of document.insertLines is deprecated. Use the insertFullLines method instead.");
         return this.insertFullLines(row, lines);
-    };
-    this.removeLines = function(firstRow, lastRow) {
+    }
+    removeLines(firstRow, lastRow) {
         console.warn("Use of document.removeLines is deprecated. Use the removeFullLines method instead.");
         return this.removeFullLines(firstRow, lastRow);
-    };
-    this.insertNewLine = function(position) {
+    }
+    insertNewLine(position) {
         console.warn("Use of document.insertNewLine is deprecated. Use insertMergedLines(position, ['', '']) instead.");
         return this.insertMergedLines(position, ["", ""]);
-    };
+    }
 
     /**
      * Inserts a block of `text` at the indicated `position`.
-     * @param {Object} position The position to start inserting at; it's an object that looks like `{ row: row, column: column}`
+     * @param {Position} position The position to start inserting at; it's an object that looks like `{ row: row, column: column}`
      * @param {String} text A chunk of text to insert
      * @returns {Object} The position ({row, column}) of the last line of `text`. If the length of `text` is 0, this function simply returns `position`. 
      *
      **/
-    this.insert = function(position, text) {
+    insert(position, text) {
         // Only detect new lines if the document has no line break yet.
         if (this.getLength() <= 1)
             this.$detectNewLine(text);
         
         return this.insertMergedLines(position, this.$split(text));
-    };
+    }
     
     /**
      * Inserts `text` into the `position` at the current row. This method also triggers the `"change"` event.
@@ -4199,7 +4972,7 @@ var Document = function(textOrLines) {
      *     {row: endRow, column: 0}
      *     ```
      **/
-    this.insertInLine = function(position, text) {
+    insertInLine(position, text) {
         var start = this.clippedPos(position.row, position.column);
         var end = this.pos(position.row, position.column + text.length);
         
@@ -4211,9 +4984,9 @@ var Document = function(textOrLines) {
         }, true);
         
         return this.clonePos(end);
-    };
+    }
     
-    this.clippedPos = function(row, column) {
+    clippedPos(row, column) {
         var length = this.getLength();
         if (row === undefined) {
             row = length;
@@ -4228,17 +5001,17 @@ var Document = function(textOrLines) {
             column = line.length;
         column = Math.min(Math.max(column, 0), line.length);
         return {row: row, column: column};
-    };
+    }
     
-    this.clonePos = function(pos) {
+    clonePos(pos) {
         return {row: pos.row, column: pos.column};
-    };
+    }
     
-    this.pos = function(row, column) {
+    pos(row, column) {
         return {row: row, column: column};
-    };
+    }
     
-    this.$clipPosition = function(position) {
+    $clipPosition(position) {
         var length = this.getLength();
         if (position.row >= length) {
             position.row = Math.max(0, length - 1);
@@ -4248,7 +5021,7 @@ var Document = function(textOrLines) {
             position.column = Math.min(Math.max(position.column, 0), this.getLine(position.row).length);
         }
         return position;
-    };
+    }
 
     /**
      * Fires whenever the document changes.
@@ -4281,7 +5054,7 @@ var Document = function(textOrLines) {
      *   ```
      *
      **/
-    this.insertFullLines = function(row, lines) {
+    insertFullLines(row, lines) {
         // Clip to document.
         // Allow one past the document end.
         row = Math.min(Math.max(row, 0), this.getLength());
@@ -4301,11 +5074,11 @@ var Document = function(textOrLines) {
         
         // Insert.
         this.insertMergedLines({row: row, column: column}, lines);
-    };
+    }
 
     /**
      * Inserts the elements in `lines` into the document, starting at the position index given by `row`. This method also triggers the `"change"` event.
-     * @param {Number} row The index of the row to insert at
+     * @param {Position} position
      * @param {string[]} lines An array of strings
      * @returns {Object} Contains the final row and column, like this:  
      *   ```
@@ -4317,7 +5090,7 @@ var Document = function(textOrLines) {
      *   ```
      *
      **/    
-    this.insertMergedLines = function(position, lines) {
+    insertMergedLines(position, lines) {
         var start = this.clippedPos(position.row, position.column);
         var end = {
             row: start.row + lines.length - 1,
@@ -4332,7 +5105,7 @@ var Document = function(textOrLines) {
         });
         
         return this.clonePos(end);
-    };
+    }
 
     /**
      * Removes the `range` from the document.
@@ -4340,7 +5113,7 @@ var Document = function(textOrLines) {
      * @returns {Object} Returns the new `start` property of the range, which contains `startRow` and `startColumn`. If `range` is empty, this function returns the unmodified value of `range.start`.
      *
      **/
-    this.remove = function(range) {
+    remove(range) {
         var start = this.clippedPos(range.start.row, range.start.column);
         var end = this.clippedPos(range.end.row, range.end.column);
         this.applyDelta({
@@ -4350,7 +5123,7 @@ var Document = function(textOrLines) {
             lines: this.getLinesForRange({start: start, end: end})
         });
         return this.clonePos(start);
-    };
+    }
 
     /**
      * Removes the specified columns from the `row`. This method also triggers a `"change"` event.
@@ -4360,7 +5133,7 @@ var Document = function(textOrLines) {
      * @returns {Object} Returns an object containing `startRow` and `startColumn`, indicating the new row and column values.<br/>If `startColumn` is equal to `endColumn`, this function returns nothing.
      *
      **/
-    this.removeInLine = function(row, startColumn, endColumn) {
+    removeInLine(row, startColumn, endColumn) {
         var start = this.clippedPos(row, startColumn);
         var end = this.clippedPos(row, endColumn);
         
@@ -4372,7 +5145,7 @@ var Document = function(textOrLines) {
         }, true);
         
         return this.clonePos(start);
-    };
+    }
 
     /**
      * Removes a range of full lines. This method also triggers the `"change"` event.
@@ -4381,7 +5154,7 @@ var Document = function(textOrLines) {
      * @returns {[String]} Returns all the removed lines.
      *
      **/
-    this.removeFullLines = function(firstRow, lastRow) {
+    removeFullLines(firstRow, lastRow) {
         // Clip to document.
         firstRow = Math.min(Math.max(0, firstRow), this.getLength() - 1);
         lastRow  = Math.min(Math.max(0, lastRow ), this.getLength() - 1);
@@ -4409,14 +5182,14 @@ var Document = function(textOrLines) {
         
         // Return the deleted lines.
         return deletedLines;
-    };
+    }
 
     /**
      * Removes the new line between `row` and the row immediately following it. This method also triggers the `"change"` event.
      * @param {Number} row The row to check
      *
      **/
-    this.removeNewLine = function(row) {
+    removeNewLine(row) {
         if (row < this.getLength() - 1 && row >= 0) {
             this.applyDelta({
                 start: this.pos(row, this.getLine(row).length),
@@ -4425,7 +5198,7 @@ var Document = function(textOrLines) {
                 lines: ["", ""]
             });
         }
-    };
+    }
 
     /**
      * Replaces a range in the document with the new `text`.
@@ -4437,7 +5210,7 @@ var Document = function(textOrLines) {
      * If the text is the exact same as what currently exists, this function returns an object containing the current `range.end` value.
      *
      **/
-    this.replace = function(range, text) {
+    replace(range, text) {
         if (!(range instanceof Range))
             range = Range.fromPoints(range.start, range.end);
         if (text.length === 0 && range.isEmpty())
@@ -4458,33 +5231,34 @@ var Document = function(textOrLines) {
         }
         
         return end;
-    };
+    }
 
     /**
      * Applies all changes in `deltas` to the document.
      * @param {Delta[]} deltas An array of delta objects (can include "insert" and "remove" actions)
      **/
-    this.applyDeltas = function(deltas) {
+    applyDeltas(deltas) {
         for (var i=0; i<deltas.length; i++) {
             this.applyDelta(deltas[i]);
         }
-    };
+    }
     
     /**
      * Reverts all changes in `deltas` from the document.
      * @param {Delta[]} deltas An array of delta objects (can include "insert" and "remove" actions)
      **/
-    this.revertDeltas = function(deltas) {
+    revertDeltas(deltas) {
         for (var i=deltas.length-1; i>=0; i--) {
             this.revertDelta(deltas[i]);
         }
-    };
+    }
     
     /**
      * Applies `delta` to the document.
      * @param {Object} delta A delta object (can include "insert" and "remove" actions)
+     * @param [doNotValidate]
      **/
-    this.applyDelta = function(delta, doNotValidate) {
+    applyDelta(delta, doNotValidate) {
         var isInsert = delta.action == "insert";
         // An empty range is a NOOP.
         if (isInsert ? delta.lines.length <= 1 && !delta.lines[0]
@@ -4499,9 +5273,9 @@ var Document = function(textOrLines) {
             applyDelta(this.$lines, delta, doNotValidate);
             this._signal("change", delta);
         }
-    };
+    }
     
-    this.$safeApplyDelta = function(delta) {
+    $safeApplyDelta(delta) {
         var docLength = this.$lines.length;
         // verify that delta is in the document to prevent applyDelta from corrupting lines array 
         if (
@@ -4510,9 +5284,9 @@ var Document = function(textOrLines) {
         ) {
             this.applyDelta(delta);
         }
-    };
+    }
     
-    this.$splitAndapplyLargeDelta = function(delta, MAX) {
+    $splitAndapplyLargeDelta(delta, MAX) {
         // Split large insert deltas. This is necessary because:
         //    1. We need to support splicing delta lines into the document via $lines.splice.apply(...)
         //    2. fn.apply() doesn't work for a large number of params. The smallest threshold is on chrome 40 ~42000.
@@ -4542,20 +5316,20 @@ var Document = function(textOrLines) {
         delta.start.row = row + from;
         delta.start.column = column;
         this.applyDelta(delta, true);
-    };
+    }
     
     /**
      * Reverts `delta` from the document.
      * @param {Object} delta A delta object (can include "insert" and "remove" actions)
      **/
-    this.revertDelta = function(delta) {
+    revertDelta(delta) {
         this.$safeApplyDelta({
             start: this.clonePos(delta.start),
             end: this.clonePos(delta.end),
             action: (delta.action == "insert" ? "remove" : "insert"),
             lines: delta.lines.slice()
         });
-    };
+    }
     
     /**
      * Converts an index position in a document to a `{row, column}` object.
@@ -4573,7 +5347,7 @@ var Document = function(textOrLines) {
      * @param {Number} startRow=0 The row from which to start the conversion
      * @returns {Object} A `{row, column}` object of the `index` position
      */
-    this.indexToPosition = function(index, startRow) {
+    indexToPosition(index, startRow) {
         var lines = this.$lines || this.getAllLines();
         var newlineLength = this.getNewLineCharacter().length;
         for (var i = startRow || 0, l = lines.length; i < l; i++) {
@@ -4582,7 +5356,7 @@ var Document = function(textOrLines) {
                 return {row: i, column: index + lines[i].length + newlineLength};
         }
         return {row: l-1, column: index + lines[l-1].length + newlineLength};
-    };
+    }
 
     /**
      * Converts the `{row, column}` position in a document to the character's index.
@@ -4600,7 +5374,7 @@ var Document = function(textOrLines) {
      * @param {Number} startRow=0 The row from which to start the conversion
      * @returns {Number} The index position in the document
      */
-    this.positionToIndex = function(pos, startRow) {
+    positionToIndex(pos, startRow) {
         var lines = this.$lines || this.getAllLines();
         var newlineLength = this.getNewLineCharacter().length;
         var index = 0;
@@ -4609,39 +5383,51 @@ var Document = function(textOrLines) {
             index += lines[i].length + newlineLength;
 
         return index + pos.column;
-    };
+    }
 
-}).call(Document.prototype);
+}
+
+/**
+ * Splits a string of text on any newline (`\n`) or carriage-return (`\r`) characters.
+ *
+ * @method $split
+ * @param {String} text The text to work with
+ * @returns {String} A String array, with each index containing a piece of the original `text` string.
+ *
+ **/
+// check for IE split bug
+Document.prototype.$split = ("aaa".split(/a/).length === 0) ? function (text) {
+    return text.replace(/\r\n|\r/g, "\n").split("\n");
+} : function (text) {
+    return text.split(/\r\n|\r|\n/);
+};
+Document.prototype.$autoNewLine = "";
+Document.prototype.$newLineMode = "auto";
+
+oop.implement(Document.prototype, EventEmitter);
 
 exports.B = Document;
 
 
 /***/ }),
 
-/***/ 6480:
+/***/ 66480:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
-var lang = __webpack_require__(124);
-var BidiHandler = (__webpack_require__(5087)/* .BidiHandler */ .l);
-var config = __webpack_require__(3188);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var Selection = (__webpack_require__(8939)/* .Selection */ .Y);
-var TextMode = (__webpack_require__(8030)/* .Mode */ .A);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var Document = (__webpack_require__(1218)/* .Document */ .B);
-var BackgroundTokenizer = (__webpack_require__(2484)/* .BackgroundTokenizer */ .V);
-var SearchHighlight = (__webpack_require__(7988)/* .SearchHighlight */ .t);
-
-/**
- * Stores all the data about [[Editor `Editor`]] state providing easy way to change editors state.
- *
- * `EditSession` can be attached to only one [[Document `Document`]]. Same `Document` can be attached to several `EditSession`s.
- * @class EditSession
- **/
+var oop = __webpack_require__(89359);
+var lang = __webpack_require__(20124);
+var BidiHandler = (__webpack_require__(45087)/* .BidiHandler */ .l);
+var config = __webpack_require__(13188);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var Selection = (__webpack_require__(88939)/* .Selection */ .Y);
+var TextMode = (__webpack_require__(98030).Mode);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var Document = (__webpack_require__(21218)/* .Document */ .B);
+var BackgroundTokenizer = (__webpack_require__(52484)/* .BackgroundTokenizer */ .V);
+var SearchHighlight = (__webpack_require__(57988)/* .SearchHighlight */ .t);
 
 //{ events
 /**
@@ -4726,58 +5512,55 @@ var SearchHighlight = (__webpack_require__(7988)/* .SearchHighlight */ .t);
 //}
 
 /**
- * Sets up a new `EditSession` and associates it with the given `Document` and `Mode`.
- * @param {Document | String} text [If `text` is a `Document`, it associates the `EditSession` with it. Otherwise, a new `Document` is created, with the initial text]{: #textParam}
- * @param {Mode} mode [The initial language mode to use for the document]{: #modeParam}
+ * Stores all the data about [[Editor `Editor`]] state providing easy way to change editors state.
  *
- * @constructor
+ * `EditSession` can be attached to only one [[Document `Document`]]. Same `Document` can be attached to several `EditSession`s.
  **/
 
-var EditSession = function(text, mode) {
-    this.$breakpoints = [];
-    this.$decorations = [];
-    this.$frontMarkers = {};
-    this.$backMarkers = {};
-    this.$markerId = 1;
-    this.$undoSelect = true;
+class EditSession {
+    /**
+     * Sets up a new `EditSession` and associates it with the given `Document` and `Mode`.
+     * @param {Document | String} text [If `text` is a `Document`, it associates the `EditSession` with it. Otherwise, a new `Document` is created, with the initial text]{: #textParam}
+     * @param {Mode} mode [The initial language mode to use for the document]{: #modeParam}
+     **/
+    constructor(text, mode) {
+        this.$breakpoints = [];
+        this.$decorations = [];
+        this.$frontMarkers = {};
+        this.$backMarkers = {};
+        this.$markerId = 1;
+        this.$undoSelect = true;
 
-    this.$foldData = [];
-    this.id = "session" + (++EditSession.$uid);
-    this.$foldData.toString = function() {
-        return this.join("\n");
-    };
+        this.$foldData = [];
+        this.id = "session" + (++EditSession.$uid);
+        this.$foldData.toString = function() {
+            return this.join("\n");
+        };
 
-    // Set default background tokenizer with Text mode until editor session mode is set 
-    this.bgTokenizer = new BackgroundTokenizer((new TextMode()).getTokenizer(), this);
+        // Set default background tokenizer with Text mode until editor session mode is set 
+        this.bgTokenizer = new BackgroundTokenizer((new TextMode()).getTokenizer(), this);
 
-    var _self = this;
-    this.bgTokenizer.on("update", function(e) {
-        _self._signal("tokenizerUpdate", e);
-    });
+        var _self = this;
+        this.bgTokenizer.on("update", function(e) {
+            _self._signal("tokenizerUpdate", e);
+        });
 
-    this.on("changeFold", this.onChangeFold.bind(this));
-    this.$onChange = this.onChange.bind(this);
+        this.on("changeFold", this.onChangeFold.bind(this));
+        this.$onChange = this.onChange.bind(this);
 
-    if (typeof text != "object" || !text.getLine)
-        text = new Document(text);
+        if (typeof text != "object" || !text.getLine)
+            text = new Document(text);
 
-    this.setDocument(text);
-    this.selection = new Selection(this);
-    this.$bidiHandler = new BidiHandler(this);
+        this.setDocument(text);
+        this.selection = new Selection(this);
+        this.$bidiHandler = new BidiHandler(this);
 
-    config.resetOptions(this);
-    this.setMode(mode);
-    config._signal("session", this);
+        config.resetOptions(this);
+        this.setMode(mode);
+        config._signal("session", this);
 
-    this.destroyed = false;
-};
-
-
-EditSession.$uid = 0;
-
-(function() {
-
-    oop.implement(this, EventEmitter);
+        this.destroyed = false;
+    }
 
     /**
      * Sets the `EditSession` to point to a new `Document`. If a `BackgroundTokenizer` exists, it also points to `doc`.
@@ -4785,7 +5568,7 @@ EditSession.$uid = 0;
      * @param {Document} doc The new `Document` to use
      *
      **/
-    this.setDocument = function(doc) {
+    setDocument(doc) {
         if (this.doc)
             this.doc.off("change", this.$onChange);
 
@@ -4795,21 +5578,21 @@ EditSession.$uid = 0;
         this.bgTokenizer.setDocument(this.getDocument());
 
         this.resetCaches();
-    };
+    }
 
     /**
      * Returns the `Document` associated with this session.
      * @return {Document}
      **/
-    this.getDocument = function() {
+    getDocument() {
         return this.doc;
-    };
+    }
 
     /**
-     * @param {Number} row The row to work with
+     * @param {Number} docRow The row to work with
      *
      **/
-    this.$resetRowCache = function(docRow) {
+    $resetRowCache(docRow) {
         if (!docRow) {
             this.$docRowCache = [];
             this.$screenRowCache = [];
@@ -4821,9 +5604,9 @@ EditSession.$uid = 0;
             this.$docRowCache.splice(i, l);
             this.$screenRowCache.splice(i, l);
         }
-    };
+    }
 
-    this.$getRowCacheIndex = function(cacheArray, val) {
+    $getRowCacheIndex(cacheArray, val) {
         var low = 0;
         var hi = cacheArray.length - 1;
 
@@ -4840,23 +5623,23 @@ EditSession.$uid = 0;
         }
 
         return low -1;
-    };
+    }
 
-    this.resetCaches = function() {
+    resetCaches() {
         this.$modified = true;
         this.$wrapData = [];
         this.$rowLengthCache = [];
         this.$resetRowCache(0);
         if (!this.destroyed)
             this.bgTokenizer.start(0);
-    };
+    }
 
-    this.onChangeFold = function(e) {
+    onChangeFold(e) {
         var fold = e.data;
         this.$resetRowCache(fold.start.row);
-    };
+    }
 
-    this.onChange = function(delta) {
+    onChange(delta) {
         this.$modified = true;
         this.$bidiHandler.onChange(delta);
         this.$resetRowCache(delta.start.row);
@@ -4878,22 +5661,22 @@ EditSession.$uid = 0;
 
         this.bgTokenizer.$updateOnChange(delta);
         this._signal("change", delta);
-    };
+    }
 
     /**
      * Sets the session text.
      * @param {String} text The new text to place
      *
      **/
-    this.setValue = function(text) {
+    setValue(text) {
         this.doc.setValue(text);
         this.selection.moveTo(0, 0);
 
         this.$resetRowCache(0);
         this.setUndoManager(this.$undoManager);
         this.getUndoManager().reset();
-    };
-
+    }
+    
     /**
      * Returns the current [[Document `Document`]] as a string.
      * @method toString
@@ -4901,24 +5684,16 @@ EditSession.$uid = 0;
      * @alias EditSession.getValue
      *
      **/
-
-    /**
-     * Returns the current [[Document `Document`]] as a string.
-     * @method getValue
-     * @returns {String}
-     * @alias EditSession.toString
-     **/
-    this.getValue =
-    this.toString = function() {
+    toString() {
         return this.doc.getValue();
-    };
+    }
 
     /**
      * Returns selection object.
      **/
-    this.getSelection = function() {
+    getSelection() {
         return this.selection;
-    };
+    }
 
     /**
      * {:BackgroundTokenizer.getState}
@@ -4926,18 +5701,18 @@ EditSession.$uid = 0;
      *
      * @related BackgroundTokenizer.getState
      **/
-    this.getState = function(row) {
+    getState(row) {
         return this.bgTokenizer.getState(row);
-    };
+    }
 
     /**
      * Starts tokenizing at the row indicated. Returns a list of objects of the tokenized rows.
      * @param {Number} row The row to start at
      * @returns {Token[]}
      **/
-    this.getTokens = function(row) {
+    getTokens(row) {
         return this.bgTokenizer.getTokens(row);
-    };
+    }
 
     /**
      * Returns an object indicating the token at the current row. The object has two properties: `index` and `start`.
@@ -4946,7 +5721,7 @@ EditSession.$uid = 0;
      * @returns {Token}
      *
      **/
-    this.getTokenAt = function(row, column) {
+    getTokenAt(row, column) {
         var tokens = this.bgTokenizer.getTokens(row);
         var token, c = 0;
         if (column == null) {
@@ -4965,7 +5740,7 @@ EditSession.$uid = 0;
         token.index = i;
         token.start = c - token.value.length;
         return token;
-    };
+    }
 
     /**
      * Sets the undo manager.
@@ -4973,7 +5748,7 @@ EditSession.$uid = 0;
      *
      *
      **/
-    this.setUndoManager = function(undoManager) {
+    setUndoManager(undoManager) {
         this.$undoManager = undoManager;
         
         if (this.$informUndoManager)
@@ -4990,100 +5765,88 @@ EditSession.$uid = 0;
         } else {
             this.$syncInformUndoManager = function() {};
         }
-    };
+    }
 
     /**
      * starts a new group in undo history
      **/
-    this.markUndoGroup = function() {
+    markUndoGroup() {
         if (this.$syncInformUndoManager)
             this.$syncInformUndoManager();
-    };
-    
-    this.$defaultUndoManager = {
-        undo: function() {},
-        redo: function() {},
-        hasUndo: function() {},
-        hasRedo: function() {},
-        reset: function() {},
-        add: function() {},
-        addSelection: function() {},
-        startNewGroup: function() {},
-        addSession: function() {}
-    };
+    }
 
     /**
      * Returns the current undo manager.
      **/
-    this.getUndoManager = function() {
+    getUndoManager() {
         return this.$undoManager || this.$defaultUndoManager;
-    };
+    }
 
     /**
      * Returns the current value for tabs. If the user is using soft tabs, this will be a series of spaces (defined by [[EditSession.getTabSize `getTabSize()`]]); otherwise it's simply `'\t'`.
      **/
-    this.getTabString = function() {
+    getTabString() {
         if (this.getUseSoftTabs()) {
             return lang.stringRepeat(" ", this.getTabSize());
         } else {
             return "\t";
         }
-    };
+    }
 
     /**
      * Pass `true` to enable the use of soft tabs. Soft tabs means you're using spaces instead of the tab character (`'\t'`).
-     * @param {Boolean} useSoftTabs Value indicating whether or not to use soft tabs
+     * @param {Boolean} val Value indicating whether or not to use soft tabs
      **/
-    this.setUseSoftTabs = function(val) {
+    setUseSoftTabs(val) {
         this.setOption("useSoftTabs", val);
-    };
+    }
+    
     /**
      * Returns `true` if soft tabs are being used, `false` otherwise.
      * @returns {Boolean}
      **/
-    this.getUseSoftTabs = function() {
+    getUseSoftTabs() {
         // todo might need more general way for changing settings from mode, but this is ok for now
         return this.$useSoftTabs && !this.$mode.$indentWithTabs;
-    };
+    }
     /**
      * Set the number of spaces that define a soft tab; for example, passing in `4` transforms the soft tabs to be equivalent to four spaces. This function also emits the `changeTabSize` event.
      * @param {Number} tabSize The new tab size
      **/
-    this.setTabSize = function(tabSize) {
+    setTabSize(tabSize) {
         this.setOption("tabSize", tabSize);
-    };
+    }
     /**
      * Returns the current tab size.
      **/
-    this.getTabSize = function() {
+    getTabSize() {
         return this.$tabSize;
-    };
+    }
 
     /**
      * Returns `true` if the character at the position is a soft tab.
      * @param {Object} position The position to check
      *
      **/
-    this.isTabStop = function(position) {
+    isTabStop(position) {
         return this.$useSoftTabs && (position.column % this.$tabSize === 0);
-    };
+    }
 
     /**
      * Set whether keyboard navigation of soft tabs moves the cursor within the soft tab, rather than over
      * @param {Boolean} navigateWithinSoftTabs Value indicating whether or not to navigate within soft tabs
      **/
-    this.setNavigateWithinSoftTabs = function (navigateWithinSoftTabs) {
+    setNavigateWithinSoftTabs(navigateWithinSoftTabs) {
         this.setOption("navigateWithinSoftTabs", navigateWithinSoftTabs);
-    };
+    }
     /**
      * Returns `true` if keyboard navigation moves the cursor within soft tabs, `false` if it moves the cursor over soft tabs.
      * @returns {Boolean}
      **/
-    this.getNavigateWithinSoftTabs = function() {
+    getNavigateWithinSoftTabs() {
         return this.$navigateWithinSoftTabs;
-    };
+    }
 
-    this.$overwrite = false;
     /**
      * Pass in `true` to enable overwrites in your session, or `false` to disable.
      *
@@ -5093,23 +5856,23 @@ EditSession.$uid = 0;
      *
      *
      **/
-    this.setOverwrite = function(overwrite) {
+    setOverwrite(overwrite) {
         this.setOption("overwrite", overwrite);
-    };
+    }
 
     /**
      * Returns `true` if overwrites are enabled; `false` otherwise.
      **/
-    this.getOverwrite = function() {
+    getOverwrite() {
         return this.$overwrite;
-    };
+    }
 
     /**
      * Sets the value of overwrite to the opposite of whatever it currently is.
      **/
-    this.toggleOverwrite = function() {
+    toggleOverwrite() {
         this.setOverwrite(!this.$overwrite);
-    };
+    }
 
     /**
      * Adds `className` to the `row`, to be used for CSS stylings and whatnot.
@@ -5117,12 +5880,12 @@ EditSession.$uid = 0;
      * @param {String} className The class to add
      *
      **/
-    this.addGutterDecoration = function(row, className) {
+    addGutterDecoration(row, className) {
         if (!this.$decorations[row])
             this.$decorations[row] = "";
         this.$decorations[row] += " " + className;
         this._signal("changeBreakpoint", {});
-    };
+    }
 
     /**
      * Removes `className` from the `row`.
@@ -5130,39 +5893,39 @@ EditSession.$uid = 0;
      * @param {String} className The class to add
      *
      **/
-    this.removeGutterDecoration = function(row, className) {
+    removeGutterDecoration(row, className) {
         this.$decorations[row] = (this.$decorations[row] || "").replace(" " + className, "");
         this._signal("changeBreakpoint", {});
-    };
+    }
 
     /**
      * Returns an array of strings, indicating the breakpoint class (if any) applied to each row.
      * @returns {[String]}
      **/
-    this.getBreakpoints = function() {
+    getBreakpoints() {
         return this.$breakpoints;
-    };
+    }
 
     /**
      * Sets a breakpoint on every row number given by `rows`. This function also emites the `'changeBreakpoint'` event.
      * @param {Array} rows An array of row indices
      *
      **/
-    this.setBreakpoints = function(rows) {
+    setBreakpoints(rows) {
         this.$breakpoints = [];
         for (var i=0; i<rows.length; i++) {
             this.$breakpoints[rows[i]] = "ace_breakpoint";
         }
         this._signal("changeBreakpoint", {});
-    };
+    }
 
     /**
      * Removes all breakpoints on the rows. This function also emits the `'changeBreakpoint'` event.
      **/
-    this.clearBreakpoints = function() {
+    clearBreakpoints() {
         this.$breakpoints = [];
         this._signal("changeBreakpoint", {});
-    };
+    }
 
     /**
      * Sets a breakpoint on the row number given by `row`. This function also emits the `'changeBreakpoint'` event.
@@ -5170,7 +5933,7 @@ EditSession.$uid = 0;
      * @param {String} className Class of the breakpoint
      *
      **/
-    this.setBreakpoint = function(row, className) {
+    setBreakpoint(row, className) {
         if (className === undefined)
             className = "ace_breakpoint";
         if (className)
@@ -5178,17 +5941,17 @@ EditSession.$uid = 0;
         else
             delete this.$breakpoints[row];
         this._signal("changeBreakpoint", {});
-    };
+    }
 
     /**
      * Removes a breakpoint on the row number given by `row`. This function also emits the `'changeBreakpoint'` event.
      * @param {Number} row A row index
      *
      **/
-    this.clearBreakpoint = function(row) {
+    clearBreakpoint(row) {
         delete this.$breakpoints[row];
         this._signal("changeBreakpoint", {});
-    };
+    }
 
     /**
      * Adds a new marker to the given `Range`. If `inFront` is `true`, a front marker is defined, and the `'changeFrontMarker'` event fires; otherwise, the `'changeBackMarker'` event fires.
@@ -5199,7 +5962,7 @@ EditSession.$uid = 0;
      *
      * @return {Number} The new marker id
      **/
-    this.addMarker = function(range, clazz, type, inFront) {
+    addMarker(range, clazz, type, inFront) {
         var id = this.$markerId++;
 
         var marker = {
@@ -5220,7 +5983,7 @@ EditSession.$uid = 0;
         }
 
         return id;
-    };
+    }
 
     /**
      * Adds a dynamic marker to the session.
@@ -5229,7 +5992,7 @@ EditSession.$uid = 0;
      *
      * @return {Object} The added marker
      **/
-    this.addDynamicMarker = function(marker, inFront) {
+    addDynamicMarker(marker, inFront) {
         if (!marker.update)
             return;
         var id = this.$markerId++;
@@ -5245,14 +6008,14 @@ EditSession.$uid = 0;
         }
 
         return marker;
-    };
+    }
 
     /**
      * Removes the marker with the specified ID. If this marker was in front, the `'changeFrontMarker'` event is emitted. If the marker was in the back, the `'changeBackMarker'` event is emitted.
      * @param {Number} markerId A number representing a marker
      *
      **/
-    this.removeMarker = function(markerId) {
+    removeMarker(markerId) {
         var marker = this.$frontMarkers[markerId] || this.$backMarkers[markerId];
         if (!marker)
             return;
@@ -5260,7 +6023,7 @@ EditSession.$uid = 0;
         var markers = marker.inFront ? this.$frontMarkers : this.$backMarkers;
         delete (markers[markerId]);
         this._signal(marker.inFront ? "changeFrontMarker" : "changeBackMarker");
-    };
+    }
 
     /**
      * Returns an object containing all of the markers, either front or back.
@@ -5268,20 +6031,20 @@ EditSession.$uid = 0;
      *
      * @returns {Object}
      **/
-    this.getMarkers = function(inFront) {
+    getMarkers(inFront) {
         return inFront ? this.$frontMarkers : this.$backMarkers;
-    };
+    }
 
-    this.highlight = function(re) {
+    highlight(re) {
         if (!this.$searchHighlight) {
             var highlight = new SearchHighlight(null, "ace_selected-word", "text");
             this.$searchHighlight = this.addDynamicMarker(highlight);
         }
         this.$searchHighlight.setRegexp(re);
-    };
+    }
 
     // experimental
-    this.highlightLines = function(startRow, endRow, clazz, inFront) {
+    highlightLines(startRow, endRow, clazz, inFront) {
         if (typeof endRow != "number") {
             clazz = endRow;
             endRow = startRow;
@@ -5292,7 +6055,7 @@ EditSession.$uid = 0;
         var range = new Range(startRow, 0, endRow, Infinity);
         range.id = this.addMarker(range, clazz, "fullLine", inFront);
         return range;
-    };
+    }
 
     /*
      * Error:
@@ -5308,39 +6071,39 @@ EditSession.$uid = 0;
      * @param {Annotation[]} annotations A list of annotations
      *
      **/
-    this.setAnnotations = function(annotations) {
+    setAnnotations(annotations) {
         this.$annotations = annotations;
         this._signal("changeAnnotation", {});
-    };
+    }
 
     /**
      * Returns the annotations for the `EditSession`.
      * @returns {Annotation[]}
      **/
-    this.getAnnotations = function() {
+    getAnnotations() {
         return this.$annotations || [];
-    };
+    }
 
     /**
      * Clears all the annotations for this session. This function also triggers the `'changeAnnotation'` event.
      **/
-    this.clearAnnotations = function() {
+    clearAnnotations() {
         this.setAnnotations([]);
-    };
+    }
 
     /**
      * If `text` contains either the newline (`\n`) or carriage-return ('\r') characters, `$autoNewLine` stores that value.
      * @param {String} text A block of text
      *
      **/
-    this.$detectNewLine = function(text) {
+    $detectNewLine(text) {
         var match = text.match(/^.*?(\r?\n)/m);
         if (match) {
             this.$autoNewLine = match[1];
         } else {
             this.$autoNewLine = "\n";
         }
-    };
+    }
 
     /**
      * Given a starting row and column, this method returns the `Range` of the first word boundary it finds.
@@ -5349,7 +6112,7 @@ EditSession.$uid = 0;
      *
      * @returns {Range}
      **/
-    this.getWordRange = function(row, column) {
+    getWordRange(row, column) {
         var line = this.getLine(row);
 
         var inToken = false;
@@ -5381,7 +6144,7 @@ EditSession.$uid = 0;
         }
 
         return new Range(row, start, row, end);
-    };
+    }
 
     /**
      * Gets the range of a word, including its right whitespace.
@@ -5390,7 +6153,7 @@ EditSession.$uid = 0;
      *
      * @return {Range}
      **/
-    this.getAWordRange = function(row, column) {
+    getAWordRange(row, column) {
         var wordRange = this.getWordRange(row, column);
         var line = this.getLine(wordRange.end.row);
 
@@ -5398,7 +6161,7 @@ EditSession.$uid = 0;
             wordRange.end.column += 1;
         }
         return wordRange;
-    };
+    }
 
     /**
      * {:Document.setNewLineMode.desc}
@@ -5407,9 +6170,9 @@ EditSession.$uid = 0;
      *
      * @related Document.setNewLineMode
      **/
-    this.setNewLineMode = function(newLineMode) {
+    setNewLineMode(newLineMode) {
         this.doc.setNewLineMode(newLineMode);
-    };
+    }
 
     /**
      *
@@ -5417,42 +6180,38 @@ EditSession.$uid = 0;
      * @returns {String}
      * @related Document.getNewLineMode
      **/
-    this.getNewLineMode = function() {
+    getNewLineMode() {
         return this.doc.getNewLineMode();
-    };
+    }
 
     /**
      * Identifies if you want to use a worker for the `EditSession`.
      * @param {Boolean} useWorker Set to `true` to use a worker
      *
      **/
-    this.setUseWorker = function(useWorker) { this.setOption("useWorker", useWorker); };
+    setUseWorker(useWorker) { this.setOption("useWorker", useWorker); }
 
     /**
      * Returns `true` if workers are being used.
      **/
-    this.getUseWorker = function() { return this.$useWorker; };
+    getUseWorker() { return this.$useWorker; }
 
     /**
      * Reloads all the tokens on the current session. This function calls [[BackgroundTokenizer.start `BackgroundTokenizer.start ()`]] to all the rows; it also emits the `'tokenizerUpdate'` event.
      **/
-    this.onReloadTokenizer = function(e) {
+    onReloadTokenizer(e) {
         var rows = e.data;
         this.bgTokenizer.start(rows.first);
         this._signal("tokenizerUpdate", e);
-    };
-
-    this.$modes = config.$modes;
-
+    }
+    
     /**
      * Sets a new text mode for the `EditSession`. This method also emits the `'changeMode'` event. If a [[BackgroundTokenizer `BackgroundTokenizer`]] is set, the `'tokenizerUpdate'` event is also emitted.
      * @param {TextMode} mode Set a new text mode
-     * @param {cb} optional callback
+     * @param {Function} cb optional callback
      *
      **/
-    this.$mode = null;
-    this.$modeId = null;
-    this.setMode = function(mode, cb) {
+    setMode(mode, cb) {
         if (mode && typeof mode === "object") {
             if (mode.getTokenizer)
                 return this.$onChangeMode(mode);
@@ -5492,9 +6251,9 @@ EditSession.$uid = 0;
         // set mode to text until loading is finished
         if (!this.$mode)
             this.$onChangeMode(this.$modes["ace/mode/text"], true);
-    };
+    }
 
-    this.$onChangeMode = function(mode, $isPlaceholder) {
+    $onChangeMode(mode, $isPlaceholder) {
         if (!$isPlaceholder)
             this.$modeId = mode.$id;
         if (this.$mode === mode) 
@@ -5531,88 +6290,86 @@ EditSession.$uid = 0;
             this.bgTokenizer.start(0);
             this._emit("changeMode", {oldMode: oldMode, mode: mode});
         }
-    };
+    }
 
-    this.$stopWorker = function() {
+    $stopWorker() {
         if (this.$worker) {
             this.$worker.terminate();
             this.$worker = null;
         }
-    };
+    }
 
-    this.$startWorker = function() {
+    $startWorker() {
         try {
             this.$worker = this.$mode.createWorker(this);
         } catch (e) {
             config.warn("Could not load worker", e);
             this.$worker = null;
         }
-    };
+    }
 
     /**
      * Returns the current text mode.
      * @returns {TextMode} The current text mode
      **/
-    this.getMode = function() {
+    getMode() {
         return this.$mode;
-    };
+    }
 
-    this.$scrollTop = 0;
     /**
      * This function sets the scroll top value. It also emits the `'changeScrollTop'` event.
      * @param {Number} scrollTop The new scroll top value
      *
      **/
-    this.setScrollTop = function(scrollTop) {
+    setScrollTop(scrollTop) {
         // TODO: should we force integer lineheight instead? scrollTop = Math.round(scrollTop); 
         if (this.$scrollTop === scrollTop || isNaN(scrollTop))
             return;
 
         this.$scrollTop = scrollTop;
         this._signal("changeScrollTop", scrollTop);
-    };
+    }
 
     /**
      * [Returns the value of the distance between the top of the editor and the topmost part of the visible content.]{: #EditSession.getScrollTop}
      * @returns {Number}
      **/
-    this.getScrollTop = function() {
+    getScrollTop() {
         return this.$scrollTop;
-    };
+    }
 
-    this.$scrollLeft = 0;
     /**
      * [Sets the value of the distance between the left of the editor and the leftmost part of the visible content.]{: #EditSession.setScrollLeft}
      **/
-    this.setScrollLeft = function(scrollLeft) {
+    setScrollLeft(scrollLeft) {
         // scrollLeft = Math.round(scrollLeft);
         if (this.$scrollLeft === scrollLeft || isNaN(scrollLeft))
             return;
 
         this.$scrollLeft = scrollLeft;
         this._signal("changeScrollLeft", scrollLeft);
-    };
+    }
 
     /**
      * [Returns the value of the distance between the left of the editor and the leftmost part of the visible content.]{: #EditSession.getScrollLeft}
      * @returns {Number}
      **/
-    this.getScrollLeft = function() {
+    getScrollLeft() {
         return this.$scrollLeft;
-    };
+    }
 
     /**
      * Returns the width of the screen.
      * @returns {Number}
      **/
-    this.getScreenWidth = function() {
+    getScreenWidth() {
         this.$computeWidth();
         if (this.lineWidgets) 
             return Math.max(this.getLineWidgetMaxWidth(), this.screenWidth);
         return this.screenWidth;
-    };
+    }
     
-    this.getLineWidgetMaxWidth = function() {
+    getLineWidgetMaxWidth() {
         if (this.lineWidgetsWidth != null) return this.lineWidgetsWidth;
         var width = 0;
         this.lineWidgets.forEach(function(w) {
@@ -5620,9 +6377,9 @@ EditSession.$uid = 0;
                 width = w.screenWidth;
         });
         return this.lineWidgetWidth = width;
-    };
+    }
 
-    this.$computeWidth = function(force) {
+    $computeWidth(force) {
         if (this.$modified || force) {
             this.$modified = false;
 
@@ -5654,7 +6411,7 @@ EditSession.$uid = 0;
             }
             this.screenWidth = longestScreenLine;
         }
-    };
+    }
 
     /**
      * Returns a verbatim copy of the given line as it is in the document
@@ -5662,9 +6419,9 @@ EditSession.$uid = 0;
      *
      * @returns {String}
      **/
-    this.getLine = function(row) {
+    getLine(row) {
         return this.doc.getLine(row);
-    };
+    }
 
     /**
      * Returns an array of strings of the rows between `firstRow` and `lastRow`. This function is inclusive of `lastRow`.
@@ -5674,17 +6431,17 @@ EditSession.$uid = 0;
      * @returns {[String]}
      *
      **/
-    this.getLines = function(firstRow, lastRow) {
+    getLines(firstRow, lastRow) {
         return this.doc.getLines(firstRow, lastRow);
-    };
+    }
 
     /**
      * Returns the number of rows in the document.
      * @returns {Number}
      **/
-    this.getLength = function() {
+    getLength() {
         return this.doc.getLength();
-    };
+    }
 
     /**
      * {:Document.getTextRange.desc}
@@ -5692,9 +6449,9 @@ EditSession.$uid = 0;
      *
      * @returns {String}
      **/
-    this.getTextRange = function(range) {
+    getTextRange(range) {
         return this.doc.getTextRange(range || this.selection.getRange());
-    };
+    }
 
     /**
      * Inserts a block of `text` and the indicated `position`.
@@ -5704,9 +6461,9 @@ EditSession.$uid = 0;
      *
      *
      **/
-    this.insert = function(position, text) {
+    insert(position, text) {
         return this.doc.insert(position, text);
-    };
+    }
 
     /**
      * Removes the `range` from the document.
@@ -5716,9 +6473,9 @@ EditSession.$uid = 0;
      * @related Document.remove
      *
      **/
-    this.remove = function(range) {
+    remove(range) {
         return this.doc.remove(range);
-    };
+    }
     
     /**
      * Removes a range of full lines. This method also triggers the `'change'` event.
@@ -5729,18 +6486,16 @@ EditSession.$uid = 0;
      * @related Document.removeFullLines
      *
      **/
-    this.removeFullLines = function(firstRow, lastRow){
+    removeFullLines(firstRow, lastRow){
         return this.doc.removeFullLines(firstRow, lastRow);
-    };
+    }
 
     /**
      * Reverts previous changes to your document.
      * @param {Delta[]} deltas An array of previous changes
      * @param {Boolean} dontSelect [If `true`, doesn't select the range of where the change occured]{: #dontSelect}
-     *
-     * @returns {Range}
      **/
-    this.undoChanges = function(deltas, dontSelect) {
+    undoChanges(deltas, dontSelect) {
         if (!deltas.length)
             return;
 
@@ -5760,16 +6515,14 @@ EditSession.$uid = 0;
                 this.selection.setRange(this.$getUndoSelection(deltas, true));
         }
         this.$fromUndo = false;
-    };
+    }
 
     /**
      * Re-implements a previously undone change to your document.
      * @param {Delta[]} deltas An array of previous changes
      * @param {Boolean} dontSelect {:dontSelect}
-     *
-     * @returns {Range}
      **/
-    this.redoChanges = function(deltas, dontSelect) {
+    redoChanges(deltas, dontSelect) {
         if (!deltas.length)
             return;
 
@@ -5788,18 +6541,18 @@ EditSession.$uid = 0;
                 this.selection.setRange(this.$getUndoSelection(deltas, false));
         }
         this.$fromUndo = false;
-    };
+    }
 
     /**
      * Enables or disables highlighting of the range where an undo occurred.
      * @param {Boolean} enable If `true`, selects the range of the reinserted change
      *      
      **/
-    this.setUndoSelect = function(enable) {
+    setUndoSelect(enable) {
         this.$undoSelect = enable;
-    };
+    }
 
-    this.$getUndoSelection = function(deltas, isUndo) {
+    $getUndoSelection(deltas, isUndo) {
         function isInsert(delta) {
             return isUndo ? delta.action !== "insert" : delta.action === "insert";
         }
@@ -5835,7 +6588,7 @@ EditSession.$uid = 0;
             }
         }
         return range;
-    };
+    }
 
     /**
      * Replaces a range in the document with the new `text`.
@@ -5851,9 +6604,9 @@ EditSession.$uid = 0;
      *
      * @related Document.replace
      **/
-    this.replace = function(range, text) {
+    replace(range, text) {
         return this.doc.replace(range, text);
-    };
+    }
 
     /**
      * Moves a range of text from the given range to the given position. `toPosition` is an object that looks like this:
@@ -5862,9 +6615,10 @@ EditSession.$uid = 0;
      *  ```
      * @param {Range} fromRange The range of text you want moved within the document
      * @param {Object} toPosition The location (row and column) where you want to move the text to
+     * @param {boolean} copy
      * @returns {Range} The new range where the text was moved to.
      **/
-    this.moveText = function(fromRange, toPosition, copy) {
+    moveText(fromRange, toPosition, copy) {
         var text = this.getTextRange(fromRange);
         var folds = this.getFoldsInRange(fromRange);
 
@@ -5904,7 +6658,7 @@ EditSession.$uid = 0;
         }
 
         return toRange;
-    };
+    }
 
     /**
      * Indents all the rows, from `startRow` to `endRow` (inclusive), by prefixing each row with the token in `indentString`.
@@ -5913,21 +6667,19 @@ EditSession.$uid = 0;
      * @param {Number} startRow Starting row
      * @param {Number} endRow Ending row
      * @param {String} indentString The indent token
-     *
-     *
      **/
-    this.indentRows = function(startRow, endRow, indentString) {
+    indentRows(startRow, endRow, indentString) {
         indentString = indentString.replace(/\t/g, this.getTabString());
         for (var row=startRow; row<=endRow; row++)
             this.doc.insertInLine({row: row, column: 0}, indentString);
-    };
+    }
 
     /**
      * Outdents all the rows defined by the `start` and `end` properties of `range`.
      * @param {Range} range A range of rows
      *
      **/
-    this.outdentRows = function (range) {
+    outdentRows(range) {
         var rowRange = range.collapseRows();
         var deleteRange = new Range(0, 0, 0, 0);
         var size = this.getTabSize();
@@ -5949,9 +6701,9 @@ EditSession.$uid = 0;
             }
             this.remove(deleteRange);
         }
-    };
+    }
 
-    this.$moveLines = function(firstRow, lastRow, dir) {
+    $moveLines(firstRow, lastRow, dir) {
         firstRow = this.getRowFoldStart(firstRow);
         lastRow = this.getRowFoldEnd(lastRow);
         if (dir < 0) {
@@ -5982,7 +6734,7 @@ EditSession.$uid = 0;
         this.doc.insertFullLines(firstRow+diff, lines);
         folds.length && this.addFolds(folds);
         return diff;
-    };
+    }
     /**
      * Shifts all the lines in the document up one, starting from `firstRow` and ending at `lastRow`.
      * @param {Number} firstRow The starting row to move up
@@ -5990,9 +6742,9 @@ EditSession.$uid = 0;
      * @returns {Number} If `firstRow` is less-than or equal to 0, this function returns 0. Otherwise, on success, it returns -1.
      *
      **/
-    this.moveLinesUp = function(firstRow, lastRow) {
+    moveLinesUp(firstRow, lastRow) {
         return this.$moveLines(firstRow, lastRow, -1);
-    };
+    }
 
     /**
      * Shifts all the lines in the document down one, starting from `firstRow` and ending at `lastRow`.
@@ -6000,35 +6752,31 @@ EditSession.$uid = 0;
      * @param {Number} lastRow The final row to move down
      * @returns {Number} If `firstRow` is less-than or equal to 0, this function returns 0. Otherwise, on success, it returns -1.
      **/
-    this.moveLinesDown = function(firstRow, lastRow) {
+    moveLinesDown(firstRow, lastRow) {
         return this.$moveLines(firstRow, lastRow, 1);
-    };
+    }
 
     /**
      * Duplicates all the text between `firstRow` and `lastRow`.
      * @param {Number} firstRow The starting row to duplicate
      * @param {Number} lastRow The final row to duplicate
      * @returns {Number} Returns the number of new rows added; in other words, `lastRow - firstRow + 1`.
-     *
-     *
      **/
-    this.duplicateLines = function(firstRow, lastRow) {
+    duplicateLines(firstRow, lastRow) {
         return this.$moveLines(firstRow, lastRow, 0);
-    };
+    }
 
 
-    this.$clipRowToDocument = function(row) {
+    $clipRowToDocument(row) {
         return Math.max(0, Math.min(row, this.doc.getLength()-1));
-    };
+    }
 
-    this.$clipColumnToRow = function(row, column) {
-        if (column < 0)
-            return 0;
+    $clipColumnToRow(row, column) {
+        if (column < 0) return 0;
         return Math.min(this.doc.getLine(row).length, column);
-    };
-
-
-    this.$clipPositionToDocument = function(row, column) {
+    }
+    
+    $clipPositionToDocument(row, column) {
         column = Math.max(0, column);
 
         if (row < 0) {
@@ -6048,9 +6796,9 @@ EditSession.$uid = 0;
             row: row,
             column: column
         };
-    };
+    }
 
-    this.$clipRangeToDocument = function(range) {
+    $clipRangeToDocument(range) {
         if (range.start.row < 0) {
             range.start.row = 0;
             range.start.column = 0;
@@ -6072,22 +6820,14 @@ EditSession.$uid = 0;
             );
         }
         return range;
-    };
-
-    // WRAPMODE
-    this.$wrapLimit = 80;
-    this.$useWrapMode = false;
-    this.$wrapLimitRange = {
-        min : null,
-        max : null
-    };
-
+    }
+    
     /**
      * Sets whether or not line wrapping is enabled. If `useWrapMode` is different than the current value, the `'changeWrapMode'` event is emitted.
      * @param {Boolean} useWrapMode Enable (or disable) wrap mode
      *
      **/
-    this.setUseWrapMode = function(useWrapMode) {
+    setUseWrapMode(useWrapMode) {
         if (useWrapMode != this.$useWrapMode) {
             this.$useWrapMode = useWrapMode;
             this.$modified = true;
@@ -6102,15 +6842,15 @@ EditSession.$uid = 0;
 
             this._signal("changeWrapMode");
         }
-    };
+    }
 
     /**
      * Returns `true` if wrap mode is being used; `false` otherwise.
      * @returns {Boolean}
      **/
-    this.getUseWrapMode = function() {
+    getUseWrapMode() {
         return this.$useWrapMode;
-    };
+    }
 
     // Allow the wrap limit to move freely between min and max. Either
     // parameter can be null to allow the wrap limit to be unconstrained
@@ -6122,7 +6862,7 @@ EditSession.$uid = 0;
      * @param {Number} max The maximum wrap value (the right side wrap)
      *
      **/
-    this.setWrapLimitRange = function(min, max) {
+    setWrapLimitRange(min, max) {
         if (this.$wrapLimitRange.min !== min || this.$wrapLimitRange.max !== max) {
             this.$wrapLimitRange = { min: min, max: max };
             this.$modified = true;
@@ -6132,7 +6872,7 @@ EditSession.$uid = 0;
             if (this.$useWrapMode)
                 this._signal("changeWrapMode");
         }
-    };
+    }
 
     /**
      * This should generally only be called by the renderer when a resize is detected.
@@ -6141,7 +6881,7 @@ EditSession.$uid = 0;
      *
      * @private
      **/
-    this.adjustWrapLimit = function(desiredLimit, $printMargin) {
+    adjustWrapLimit(desiredLimit, $printMargin) {
         var limits = this.$wrapLimitRange;
         if (limits.max < 0)
             limits = {min: $printMargin, max: $printMargin};
@@ -6157,9 +6897,9 @@ EditSession.$uid = 0;
             return true;
         }
         return false;
-    };
+    }
 
-    this.$constrainWrapLimit = function(wrapLimit, min, max) {
+    $constrainWrapLimit(wrapLimit, min, max) {
         if (min)
             wrapLimit = Math.max(min, wrapLimit);
 
@@ -6167,15 +6907,15 @@ EditSession.$uid = 0;
             wrapLimit = Math.min(max, wrapLimit);
 
         return wrapLimit;
-    };
+    }
 
     /**
      * Returns the value of wrap limit.
      * @returns {Number} The wrap limit.
      **/
-    this.getWrapLimit = function() {
+    getWrapLimit() {
         return this.$wrapLimit;
-    };
+    }
     
     /**
      * Sets the line length for soft wrap in the editor. Lines will break
@@ -6183,9 +6923,9 @@ EditSession.$uid = 0;
      *  of the given number of chars.
      * @param {number} limit The maximum line length in chars, for soft wrapping lines.
      */
-    this.setWrapLimit = function (limit) {
+    setWrapLimit(limit) {
         this.setWrapLimitRange(limit, limit);
-    };
+    }
     
     /**
      * Returns an object that defines the minimum and maximum of the wrap limit; it looks something like this:
@@ -6194,15 +6934,15 @@ EditSession.$uid = 0;
      *
      * @returns {Object}
      **/
-    this.getWrapLimitRange = function() {
+    getWrapLimitRange() {
         // Avoid unexpected mutation by returning a copy
         return {
             min : this.$wrapLimitRange.min,
             max : this.$wrapLimitRange.max
         };
-    };
+    }
 
-    this.$updateInternalDataOnChange = function(delta) {
+    $updateInternalDataOnChange(delta) {
         var useWrapMode = this.$useWrapMode;
         var action = delta.action;
         var start = delta.start;
@@ -6308,14 +7048,14 @@ EditSession.$uid = 0;
             this.$updateRowLengthCache(firstRow, lastRow);
 
         return removedFolds;
-    };
+    }
 
-    this.$updateRowLengthCache = function(firstRow, lastRow, b) {
+    $updateRowLengthCache(firstRow, lastRow, b) {
         this.$rowLengthCache[firstRow] = null;
         this.$rowLengthCache[lastRow] = null;
-    };
+    }
 
-    this.$updateWrapData = function(firstRow, lastRow) {
+    $updateWrapData(firstRow, lastRow) {
         var lines = this.doc.getAllLines();
         var tabSize = this.getTabSize();
         var wrapData = this.$wrapData;
@@ -6357,20 +7097,9 @@ EditSession.$uid = 0;
                 row = foldLine.end.row + 1;
             }
         }
-    };
-
-    // "Tokens"
-    var CHAR = 1,
-        CHAR_EXT = 2,
-        PLACEHOLDER_START = 3,
-        PLACEHOLDER_BODY =  4,
-        PUNCTUATION = 9,
-        SPACE = 10,
-        TAB = 11,
-        TAB_SPACE = 12;
-
-
-    this.$computeWrapSplits = function(tokens, wrapLimit, tabSize) {
+    }
+    
+    $computeWrapSplits(tokens, wrapLimit, tabSize) {
         if (tokens.length == 0) {
             return [];
         }
@@ -6517,15 +7246,14 @@ EditSession.$uid = 0;
             addSplit(split - indent);
         }
         return splits;
-    };
+    }
 
     /**
      * Given a string, returns an array of the display characters, including tabs and spaces.
      * @param {String} str The string to check
      * @param {Number} offset The value to start at
-     *
      **/
-    this.$getDisplayTokens = function(str, offset) {
+    $getDisplayTokens(str, offset) {
         var arr = [];
         var tabSize;
         offset = offset || 0;
@@ -6554,7 +7282,7 @@ EditSession.$uid = 0;
             }
         }
         return arr;
-    };
+    }
 
     /**
      * Calculates the width of the string `str` on the screen while assuming that the string starts at the first column on the screen.
@@ -6564,9 +7292,8 @@ EditSession.$uid = 0;
      * @returns {[Number]} Returns an `int[]` array with two elements:<br/>
      * The first position indicates the number of columns for `str` on screen.<br/>
      * The second value contains the position of the document column that this function read until.
-     *
      **/
-    this.$getStringScreenWidth = function(str, maxScreenColumn, screenColumn) {
+    $getStringScreenWidth(str, maxScreenColumn, screenColumn) {
         if (maxScreenColumn == 0)
             return [0, 0];
         if (maxScreenColumn == null)
@@ -6592,16 +7319,15 @@ EditSession.$uid = 0;
         }
 
         return [screenColumn, column];
-    };
+    }
 
-    this.lineWidgets = null;
     /**
      * Returns number of screenrows in a wrapped line.
      * @param {Number} row The row number to check
      *
      * @returns {Number}
      **/
-    this.getRowLength = function(row) {
+    getRowLength(row) {
         var h = 1;
         if (this.lineWidgets)
             h += this.lineWidgets[row] && this.lineWidgets[row].rowCount || 0;
@@ -6610,16 +7336,16 @@ EditSession.$uid = 0;
             return h;
         else
             return this.$wrapData[row].length + h;
-    };
-    this.getRowLineCount = function(row) {
+    }
+    getRowLineCount(row) {
         if (!this.$useWrapMode || !this.$wrapData[row]) {
             return 1;
         } else {
             return this.$wrapData[row].length + 1;
         }
-    };
+    }
 
-    this.getRowWrapIndent = function(screenRow) {
+    getRowWrapIndent(screenRow) {
         if (this.$useWrapMode) {
             var pos = this.screenToDocumentPosition(screenRow, Number.MAX_VALUE);
             var splits = this.$wrapData[pos.row];
@@ -6627,7 +7353,7 @@ EditSession.$uid = 0;
         } else {
             return 0;
         }
-    };
+    }
 
     /**
      * Returns the position (on screen) for the last character in the provided screen row.
@@ -6636,10 +7362,10 @@ EditSession.$uid = 0;
      *
      * @related EditSession.documentToScreenColumn
      **/
-    this.getScreenLastRowColumn = function(screenRow) {
+    getScreenLastRowColumn(screenRow) {
         var pos = this.screenToDocumentPosition(screenRow, Number.MAX_VALUE);
         return this.documentToScreenColumn(pos.row, pos.column);
-    };
+    }
 
     /**
      * For the given document row and column, this returns the column position of the last screen row.
@@ -6647,10 +7373,10 @@ EditSession.$uid = 0;
      *
      * @param {Number} docColumn
      **/
-    this.getDocumentLastRowColumn = function(docRow, docColumn) {
+    getDocumentLastRowColumn(docRow, docColumn) {
         var screenRow = this.documentToScreenRow(docRow, docColumn);
         return this.getScreenLastRowColumn(screenRow);
-    };
+    }
 
     /**
      * For the given document row and column, this returns the document position of the last row.
@@ -6658,22 +7384,22 @@ EditSession.$uid = 0;
      * @param {Number} docColumn
      *
      **/
-    this.getDocumentLastRowColumnPosition = function(docRow, docColumn) {
+    getDocumentLastRowColumnPosition(docRow, docColumn) {
         var screenRow = this.documentToScreenRow(docRow, docColumn);
         return this.screenToDocumentPosition(screenRow, Number.MAX_VALUE / 10);
-    };
+    }
 
     /**
      * For the given row, this returns the split data.
      * @returns {String}
      **/
-    this.getRowSplitData = function(row) {
+    getRowSplitData(row) {
         if (!this.$useWrapMode) {
             return undefined;
         } else {
             return this.$wrapData[row];
         }
-    };
+    }
 
     /**
      * The distance to the next tab stop at the specified screen column.
@@ -6681,19 +7407,19 @@ EditSession.$uid = 0;
      *
      * @returns {Number}
      **/
-    this.getScreenTabSize = function(screenColumn) {
+    getScreenTabSize(screenColumn) {
         return this.$tabSize - (screenColumn % this.$tabSize | 0);
-    };
+    }
 
 
-    this.screenToDocumentRow = function(screenRow, screenColumn) {
+    screenToDocumentRow(screenRow, screenColumn) {
         return this.screenToDocumentPosition(screenRow, screenColumn).row;
-    };
+    }
 
 
-    this.screenToDocumentColumn = function(screenRow, screenColumn) {
+    screenToDocumentColumn(screenRow, screenColumn) {
         return this.screenToDocumentPosition(screenRow, screenColumn).column;
-    };
+    }
 
     /**
      * Converts characters coordinates on the screen to characters coordinates within the document. [This takes into account code folding, word wrap, tab size, and any other visual modifications.]{: #conversionConsiderations}
@@ -6705,7 +7431,7 @@ EditSession.$uid = 0;
      *
      * @related EditSession.documentToScreenPosition
      **/
-    this.screenToDocumentPosition = function(screenRow, screenColumn, offsetX) {
+    screenToDocumentPosition(screenRow, screenColumn, offsetX) {
         if (screenRow < 0)
             return {row: 0, column: 0};
 
@@ -6791,17 +7517,17 @@ EditSession.$uid = 0;
             return foldLine.idxToPosition(docColumn);
 
         return {row: docRow, column: docColumn};
-    };
+    }
 
     /**
      * Converts document coordinates to screen coordinates. {:conversionConsiderations}
-     * @param {Number} docRow The document row to check
-     * @param {Number} docColumn The document column to check
-     * @returns {Object} The object returned by this method has two properties: `row` and `column`.
+     * @param {Number|Position} docRow The document row to check
+     * @param {Number|undefined} [docColumn] The document column to check
+     * @returns {Position} The object returned by this method has two properties: `row` and `column`.
      *
      * @related EditSession.screenToDocumentPosition
      **/
-    this.documentToScreenPosition = function(docRow, docColumn) {
+    documentToScreenPosition(docRow, docColumn) {
         // Normalize the passed in arguments.
         if (typeof docColumn === "undefined")
             var pos = this.$clipPositionToDocument(docRow.row, docRow.column);
@@ -6894,7 +7620,7 @@ EditSession.$uid = 0;
             row: screenRow,
             column: wrapIndent + this.$getStringScreenWidth(textLine)[0]
         };
-    };
+    }
 
     /**
      * For the given document row and column, returns the screen column.
@@ -6903,9 +7629,9 @@ EditSession.$uid = 0;
      * @returns {Number}
      *
      **/
-    this.documentToScreenColumn = function(row, docColumn) {
+    documentToScreenColumn(row, docColumn) {
         return this.documentToScreenPosition(row, docColumn).column;
-    };
+    }
 
     /**
      * For the given document row and column, returns the screen row.
@@ -6913,15 +7639,15 @@ EditSession.$uid = 0;
      * @param {Number} docColumn
      *
      **/
-    this.documentToScreenRow = function(docRow, docColumn) {
+    documentToScreenRow(docRow, docColumn) {
         return this.documentToScreenPosition(docRow, docColumn).row;
-    };
+    }
 
     /**
      * Returns the length of the screen.
      * @returns {Number}
      **/
-    this.getScreenLength = function() {
+    getScreenLength() {
         var screenRows = 0;
         var fold = null;
         if (!this.$useWrapMode) {
@@ -6956,13 +7682,13 @@ EditSession.$uid = 0;
             screenRows += this.$getWidgetScreenLength();
 
         return screenRows;
-    };
+    }
     
     /**
      * @private
      *
      */
-    this.$setFontMetrics = function(fm) {
+    $setFontMetrics(fm) {
         if (!this.$enableVarChar) return;
         this.$getStringScreenWidth = function(str, maxScreenColumn, screenColumn) {
             if (maxScreenColumn === 0)
@@ -6987,9 +7713,9 @@ EditSession.$uid = 0;
             
             return [screenColumn, column];
         };
-    };
+    }
     
-    this.destroy = function() {
+    destroy() {
         if (!this.destroyed) {
             this.bgTokenizer.setDocument(null);
             this.bgTokenizer.cleanup();
@@ -7001,53 +7727,100 @@ EditSession.$uid = 0;
             this.doc.off("change", this.$onChange);
         }
         this.selection.detach();
-    };
-
-    this.isFullWidth = isFullWidth;
-
-    // For every keystroke this gets called once per char in the whole doc!!
-    // Wouldn't hurt to make it a bit faster for c >= 0x1100
-    function isFullWidth(c) {
-        if (c < 0x1100)
-            return false;
-        return c >= 0x1100 && c <= 0x115F ||
-               c >= 0x11A3 && c <= 0x11A7 ||
-               c >= 0x11FA && c <= 0x11FF ||
-               c >= 0x2329 && c <= 0x232A ||
-               c >= 0x2E80 && c <= 0x2E99 ||
-               c >= 0x2E9B && c <= 0x2EF3 ||
-               c >= 0x2F00 && c <= 0x2FD5 ||
-               c >= 0x2FF0 && c <= 0x2FFB ||
-               c >= 0x3000 && c <= 0x303E ||
-               c >= 0x3041 && c <= 0x3096 ||
-               c >= 0x3099 && c <= 0x30FF ||
-               c >= 0x3105 && c <= 0x312D ||
-               c >= 0x3131 && c <= 0x318E ||
-               c >= 0x3190 && c <= 0x31BA ||
-               c >= 0x31C0 && c <= 0x31E3 ||
-               c >= 0x31F0 && c <= 0x321E ||
-               c >= 0x3220 && c <= 0x3247 ||
-               c >= 0x3250 && c <= 0x32FE ||
-               c >= 0x3300 && c <= 0x4DBF ||
-               c >= 0x4E00 && c <= 0xA48C ||
-               c >= 0xA490 && c <= 0xA4C6 ||
-               c >= 0xA960 && c <= 0xA97C ||
-               c >= 0xAC00 && c <= 0xD7A3 ||
-               c >= 0xD7B0 && c <= 0xD7C6 ||
-               c >= 0xD7CB && c <= 0xD7FB ||
-               c >= 0xF900 && c <= 0xFAFF ||
-               c >= 0xFE10 && c <= 0xFE19 ||
-               c >= 0xFE30 && c <= 0xFE52 ||
-               c >= 0xFE54 && c <= 0xFE66 ||
-               c >= 0xFE68 && c <= 0xFE6B ||
-               c >= 0xFF01 && c <= 0xFF60 ||
-               c >= 0xFFE0 && c <= 0xFFE6;
     }
+}
 
-}).call(EditSession.prototype);
+EditSession.$uid = 0;
+EditSession.prototype.$modes = config.$modes;
+/**
+ * Returns the current [[Document `Document`]] as a string.
+ * @method getValue
+ * @returns {String}
+ * @alias EditSession.toString
+ **/
+EditSession.prototype.getValue = EditSession.prototype.toString;
 
-(__webpack_require__(5612)/* .Folding.call */ .x.call)(EditSession.prototype);
-(__webpack_require__(5990)/* .BracketMatch.call */ .F.call)(EditSession.prototype);
+EditSession.prototype.$defaultUndoManager = {
+    undo: function() {},
+    redo: function() {},
+    hasUndo: function() {},
+    hasRedo: function() {},
+    reset: function() {},
+    add: function() {},
+    addSelection: function() {},
+    startNewGroup: function() {},
+    addSession: function() {}
+};
+EditSession.prototype.$overwrite = false;
+/**
+ *
+ * @type {TextMode|null}
+ */
+EditSession.prototype.$mode = null;
+EditSession.prototype.$modeId = null;
+EditSession.prototype.$scrollTop = 0;
+EditSession.prototype.$scrollLeft = 0;
+// WRAPMODE
+EditSession.prototype.$wrapLimit = 80;
+EditSession.prototype.$useWrapMode = false;
+EditSession.prototype.$wrapLimitRange = {
+    min : null,
+    max : null
+};
+EditSession.prototype.lineWidgets = null;
+EditSession.prototype.isFullWidth = isFullWidth;
+
+oop.implement(EditSession.prototype, EventEmitter);
+
+// "Tokens"
+var CHAR = 1,
+    CHAR_EXT = 2,
+    PLACEHOLDER_START = 3,
+    PLACEHOLDER_BODY =  4,
+    PUNCTUATION = 9,
+    SPACE = 10,
+    TAB = 11,
+    TAB_SPACE = 12;
+// For every keystroke this gets called once per char in the whole doc!!
+// Wouldn't hurt to make it a bit faster for c >= 0x1100
+function isFullWidth(c) {
+    if (c < 0x1100)
+        return false;
+    return c >= 0x1100 && c <= 0x115F ||
+        c >= 0x11A3 && c <= 0x11A7 ||
+        c >= 0x11FA && c <= 0x11FF ||
+        c >= 0x2329 && c <= 0x232A ||
+        c >= 0x2E80 && c <= 0x2E99 ||
+        c >= 0x2E9B && c <= 0x2EF3 ||
+        c >= 0x2F00 && c <= 0x2FD5 ||
+        c >= 0x2FF0 && c <= 0x2FFB ||
+        c >= 0x3000 && c <= 0x303E ||
+        c >= 0x3041 && c <= 0x3096 ||
+        c >= 0x3099 && c <= 0x30FF ||
+        c >= 0x3105 && c <= 0x312D ||
+        c >= 0x3131 && c <= 0x318E ||
+        c >= 0x3190 && c <= 0x31BA ||
+        c >= 0x31C0 && c <= 0x31E3 ||
+        c >= 0x31F0 && c <= 0x321E ||
+        c >= 0x3220 && c <= 0x3247 ||
+        c >= 0x3250 && c <= 0x32FE ||
+        c >= 0x3300 && c <= 0x4DBF ||
+        c >= 0x4E00 && c <= 0xA48C ||
+        c >= 0xA490 && c <= 0xA4C6 ||
+        c >= 0xA960 && c <= 0xA97C ||
+        c >= 0xAC00 && c <= 0xD7A3 ||
+        c >= 0xD7B0 && c <= 0xD7C6 ||
+        c >= 0xD7CB && c <= 0xD7FB ||
+        c >= 0xF900 && c <= 0xFAFF ||
+        c >= 0xFE10 && c <= 0xFE19 ||
+        c >= 0xFE30 && c <= 0xFE52 ||
+        c >= 0xFE54 && c <= 0xFE66 ||
+        c >= 0xFE68 && c <= 0xFE6B ||
+        c >= 0xFF01 && c <= 0xFF60 ||
+        c >= 0xFFE0 && c <= 0xFFE6;
+}
+(__webpack_require__(65612)/* .Folding.call */ .x.call)(EditSession.prototype);
+(__webpack_require__(15990)/* .BracketMatch.call */ .F.call)(EditSession.prototype);
 
 
 config.defineOptions(EditSession.prototype, "session", {
@@ -7164,14 +7937,14 @@ exports.m = EditSession;
 
 /***/ }),
 
-/***/ 5990:
+/***/ 15990:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 
 function BracketMatch() {
@@ -7296,6 +8069,7 @@ function BracketMatch() {
                 "(\\.?" +
                 token.type.replace(".", "\\.").replace("rparen", ".paren")
                     .replace(/\b(?:end)\b/, "(?:start|begin|end)")
+                    .replace(/-close\b/, "-(close|open)")
                 + ")+"
             );
         }
@@ -7353,6 +8127,7 @@ function BracketMatch() {
                 "(\\.?" +
                 token.type.replace(".", "\\.").replace("lparen", ".paren")
                     .replace(/\b(?:start|begin)\b/, "(?:start|begin|end)")
+                    .replace(/-open\b/, "-(close|open)")
                 + ")+"
             );
         }
@@ -7624,44 +8399,42 @@ exports.F = BracketMatch;
 
 /***/ }),
 
-/***/ 7899:
+/***/ 47899:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var RangeList = (__webpack_require__(6510)/* .RangeList */ .$);
-var oop = __webpack_require__(9359);
+var RangeList = (__webpack_require__(16510)/* .RangeList */ .$);
+
 /*
  * Simple fold-data struct.
  **/
-var Fold = exports.q = function(range, placeholder) {
-    this.foldLine = null;
-    this.placeholder = placeholder;
-    this.range = range;
-    this.start = range.start;
-    this.end = range.end;
+class Fold extends RangeList {
+    constructor(range, placeholder) {
+        super();
+        this.foldLine = null;
+        this.placeholder = placeholder;
+        this.range = range;
+        this.start = range.start;
+        this.end = range.end;
 
-    this.sameRow = range.start.row == range.end.row;
-    this.subFolds = this.ranges = [];
-};
-
-oop.inherits(Fold, RangeList);
-
-(function() {
-
-    this.toString = function() {
+        this.sameRow = range.start.row == range.end.row;
+        this.subFolds = this.ranges = [];
+    }
+    
+    toString() {
         return '"' + this.placeholder + '" ' + this.range.toString();
-    };
+    }
 
-    this.setFoldLine = function(foldLine) {
+    setFoldLine(foldLine) {
         this.foldLine = foldLine;
         this.subFolds.forEach(function(fold) {
             fold.setFoldLine(foldLine);
         });
-    };
+    }
 
-    this.clone = function() {
+    clone() {
         var range = this.range.clone();
         var fold = new Fold(range, this.placeholder);
         this.subFolds.forEach(function(subFold) {
@@ -7669,9 +8442,9 @@ oop.inherits(Fold, RangeList);
         });
         fold.collapseChildren = this.collapseChildren;
         return fold;
-    };
+    }
 
-    this.addSubFold = function(fold) {
+    addSubFold(fold) {
         if (this.range.isEqual(fold))
             return;
 
@@ -7710,13 +8483,13 @@ oop.inherits(Fold, RangeList);
         fold.setFoldLine(this.foldLine);
 
         return fold;
-    };
+    }
     
-    this.restoreRange = function(range) {
+    restoreRange(range) {
         return restoreRange(range, this.start);
-    };
+    }
 
-}).call(Fold.prototype);
+}
 
 function consumePoint(point, anchor) {
     point.row -= anchor.row;
@@ -7737,53 +8510,54 @@ function restoreRange(range, anchor) {
     restorePoint(range.end, anchor);
 }
 
+exports.q = Fold;
+
 
 /***/ }),
 
-/***/ 4285:
+/***/ 74285:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
-/*
- * If an array is passed in, the folds are expected to be sorted already.
- */
-function FoldLine(foldData, folds) {
-    this.foldData = foldData;
-    if (Array.isArray(folds)) {
-        this.folds = folds;
-    } else {
-        folds = this.folds = [ folds ];
+class FoldLine {
+    /**
+     * If an array is passed in, the folds are expected to be sorted already.
+     */
+    constructor(foldData, folds) {
+        this.foldData = foldData;
+        if (Array.isArray(folds)) {
+            this.folds = folds;
+        } else {
+            folds = this.folds = [ folds ];
+        }
+
+        var last = folds[folds.length - 1];
+        this.range = new Range(folds[0].start.row, folds[0].start.column,
+            last.end.row, last.end.column);
+        this.start = this.range.start;
+        this.end   = this.range.end;
+
+        this.folds.forEach(function(fold) {
+            fold.setFoldLine(this);
+        }, this);
     }
-
-    var last = folds[folds.length - 1];
-    this.range = new Range(folds[0].start.row, folds[0].start.column,
-                           last.end.row, last.end.column);
-    this.start = this.range.start;
-    this.end   = this.range.end;
-
-    this.folds.forEach(function(fold) {
-        fold.setFoldLine(this);
-    }, this);
-}
-
-(function() {
     /*
      * Note: This doesn't update wrapData!
      */
-    this.shiftRow = function(shift) {
+    shiftRow(shift) {
         this.start.row += shift;
         this.end.row += shift;
         this.folds.forEach(function(fold) {
             fold.start.row += shift;
             fold.end.row += shift;
         });
-    };
+    }
 
-    this.addFold = function(fold) {
+    addFold(fold) {
         if (fold.sameRow) {
             if (fold.start.row < this.startRow || fold.endRow > this.endRow) {
                 throw new Error("Can't add a fold to this FoldLine as it has no connection");
@@ -7811,13 +8585,13 @@ function FoldLine(foldData, folds) {
             throw new Error("Trying to add fold to FoldRow that doesn't have a matching row");
         }
         fold.foldLine = this;
-    };
+    }
 
-    this.containsRow = function(row) {
+    containsRow(row) {
         return row >= this.start.row && row <= this.end.row;
-    };
+    }
 
-    this.walk = function(callback, endRow, endColumn) {
+    walk(callback, endRow, endColumn) {
         var lastEnd = 0,
             folds = this.folds,
             fold,
@@ -7853,9 +8627,9 @@ function FoldLine(foldData, folds) {
             lastEnd = fold.end.column;
         }
         callback(null, endRow, endColumn, lastEnd, isNewRow);
-    };
+    }
 
-    this.getNextFoldTo = function(row, column) {
+    getNextFoldTo(row, column) {
         var fold, cmp;
         for (var i = 0; i < this.folds.length; i++) {
             fold = this.folds[i];
@@ -7873,9 +8647,9 @@ function FoldLine(foldData, folds) {
             }
         }
         return null;
-    };
+    }
 
-    this.addRemoveChars = function(row, column, len) {
+    addRemoveChars(row, column, len) {
         var ret = this.getNextFoldTo(row, column),
             fold, folds;
         if (ret) {
@@ -7904,9 +8678,9 @@ function FoldLine(foldData, folds) {
                 this.end.column += len;
             }
         }
-    };
+    }
 
-    this.split = function(row, column) {
+    split(row, column) {
         var pos = this.getNextFoldTo(row, column);
         
         if (!pos || pos.kind == "inside")
@@ -7928,9 +8702,9 @@ function FoldLine(foldData, folds) {
         var newFoldLine = new FoldLine(foldData, folds);
         foldData.splice(foldData.indexOf(this) + 1, 0, newFoldLine);
         return newFoldLine;
-    };
+    }
 
-    this.merge = function(foldLineNext) {
+    merge(foldLineNext) {
         var folds = foldLineNext.folds;
         for (var i = 0; i < folds.length; i++) {
             this.addFold(folds[i]);
@@ -7939,9 +8713,9 @@ function FoldLine(foldData, folds) {
         // it's merged now with foldLineNext.
         var foldData = this.foldData;
         foldData.splice(foldData.indexOf(foldLineNext), 1);
-    };
+    }
 
-    this.toString = function() {
+    toString() {
         var ret = [this.range.toString() + ": [" ];
 
         this.folds.forEach(function(fold) {
@@ -7949,9 +8723,9 @@ function FoldLine(foldData, folds) {
         });
         ret.push("]");
         return ret.join("\n");
-    };
+    }
 
-    this.idxToPosition = function(idx) {
+    idxToPosition(idx) {
         var lastFoldEndColumn = 0;
 
         for (var i = 0; i < this.folds.length; i++) {
@@ -7977,24 +8751,24 @@ function FoldLine(foldData, folds) {
             row: this.end.row,
             column: this.end.column + idx
         };
-    };
-}).call(FoldLine.prototype);
+    }
+}
 
 exports.z = FoldLine;
 
 
 /***/ }),
 
-/***/ 5612:
+/***/ 65612:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var FoldLine = (__webpack_require__(4285)/* .FoldLine */ .z);
-var Fold = (__webpack_require__(7899)/* .Fold */ .q);
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var FoldLine = (__webpack_require__(74285)/* .FoldLine */ .z);
+var Fold = (__webpack_require__(47899)/* .Fold */ .q);
+var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
 
 function Folding() {
     /*
@@ -8860,30 +9634,32 @@ exports.x = Folding;
 
 /***/ }),
 
-/***/ 2880:
+/***/ 82880:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
-var lang = __webpack_require__(124);
-var useragent = __webpack_require__(618);
-var TextInput = (__webpack_require__(1063)/* .TextInput */ .o);
-var MouseHandler = (__webpack_require__(3691)/* .MouseHandler */ .S);
-var FoldHandler = (__webpack_require__(138)/* .FoldHandler */ .z);
-var KeyBinding = (__webpack_require__(8229)/* .KeyBinding */ .M);
-var EditSession = (__webpack_require__(6480)/* .EditSession */ .m);
-var Search = (__webpack_require__(6745)/* .Search */ .o);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var CommandManager = (__webpack_require__(3190)/* .CommandManager */ .f);
-var defaultCommands = (__webpack_require__(883)/* .commands */ .C);
-var config = __webpack_require__(3188);
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
+var lang = __webpack_require__(20124);
+var useragent = __webpack_require__(50618);
+var TextInput = (__webpack_require__(41063)/* .TextInput */ .o);
+var MouseHandler = (__webpack_require__(53691)/* .MouseHandler */ .S);
+var FoldHandler = (__webpack_require__(30138)/* .FoldHandler */ .z);
+var KeyBinding = (__webpack_require__(78229)/* .KeyBinding */ .M);
+var EditSession = (__webpack_require__(66480)/* .EditSession */ .m);
+var Search = (__webpack_require__(46745)/* .Search */ .o);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var CommandManager = (__webpack_require__(73190).CommandManager);
+var defaultCommands = (__webpack_require__(70883)/* .commands */ .C);
+var config = __webpack_require__(13188);
+var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var LineWidgets = (__webpack_require__(62269)/* .LineWidgets */ .H);
 
-var clipboard = __webpack_require__(6311);
+var clipboard = __webpack_require__(76311);
+var keys = __webpack_require__(11797);
 
 /**
  * The main entry point into the Ace functionality.
@@ -8891,69 +9667,59 @@ var clipboard = __webpack_require__(6311);
  * The `Editor` manages the [[EditSession]] (which manages [[Document]]s), as well as the [[VirtualRenderer]], which draws everything to the screen.
  *
  * Event sessions dealing with the mouse and keyboard are bubbled up from `Document` to the `Editor`, which decides what to do with them.
- * @class Editor
  **/
+class Editor {
+    /**
+     * Creates a new `Editor` object.
+     *
+     * @param {VirtualRenderer} renderer Associated `VirtualRenderer` that draws everything
+     * @param {EditSession} session The `EditSession` to refer to
+     **/
+    constructor(renderer, session, options) {
+        this.$toDestroy = [];
+        var container = renderer.getContainerElement();
+        this.container = container;
+        this.renderer = renderer;
+        this.id = "editor" + (++Editor.$uid);
 
-/**
- * Creates a new `Editor` object.
- *
- * @param {VirtualRenderer} renderer Associated `VirtualRenderer` that draws everything
- * @param {EditSession} session The `EditSession` to refer to
- *
- *
- * @constructor
- **/
-var Editor = function(renderer, session, options) {
-    this.$toDestroy = [];
-    var container = renderer.getContainerElement();
-    this.container = container;
-    this.renderer = renderer;
-    this.id = "editor" + (++Editor.$uid);
+        this.commands = new CommandManager(useragent.isMac ? "mac" : "win", defaultCommands);
+        if (typeof document == "object") {
+            this.textInput = new TextInput(renderer.getTextAreaContainer(), this);
+            this.renderer.textarea = this.textInput.getElement();
+            // TODO detect touch event support
+            this.$mouseHandler = new MouseHandler(this);
+            new FoldHandler(this);
+        }
 
-    this.commands = new CommandManager(useragent.isMac ? "mac" : "win", defaultCommands);
-    if (typeof document == "object") {
-        this.textInput = new TextInput(renderer.getTextAreaContainer(), this);
-        this.renderer.textarea = this.textInput.getElement();
-        // TODO detect touch event support
-        this.$mouseHandler = new MouseHandler(this);
-        new FoldHandler(this);
+        this.keyBinding = new KeyBinding(this);
+
+        this.$search = new Search().set({
+            wrap: true
+        });
+
+        this.$historyTracker = this.$historyTracker.bind(this);
+        this.commands.on("exec", this.$historyTracker);
+
+        this.$initOperationListeners();
+
+        this._$emitInputEvent = lang.delayedCall(function() {
+            this._signal("input", {});
+            if (this.session && !this.session.destroyed)
+                this.session.bgTokenizer.scheduleStart();
+        }.bind(this));
+
+        this.on("change", function(_, _self) {
+            _self._$emitInputEvent.schedule(31);
+        });
+
+        this.setSession(session || options && options.session || new EditSession(""));
+        config.resetOptions(this);
+        if (options)
+            this.setOptions(options);
+        config._signal("editor", this);
     }
 
-    this.keyBinding = new KeyBinding(this);
-
-    this.$search = new Search().set({
-        wrap: true
-    });
-
-    this.$historyTracker = this.$historyTracker.bind(this);
-    this.commands.on("exec", this.$historyTracker);
-
-    this.$initOperationListeners();
-    
-    this._$emitInputEvent = lang.delayedCall(function() {
-        this._signal("input", {});
-        if (this.session && !this.session.destroyed)
-            this.session.bgTokenizer.scheduleStart();
-    }.bind(this));
-    
-    this.on("change", function(_, _self) {
-        _self._$emitInputEvent.schedule(31);
-    });
-
-    this.setSession(session || options && options.session || new EditSession(""));
-    config.resetOptions(this);
-    if (options)
-        this.setOptions(options);
-    config._signal("editor", this);
-};
-
-Editor.$uid = 0;
-
-(function(){
-
-    oop.implement(this, EventEmitter);
-
-    this.$initOperationListeners = function() {
+    $initOperationListeners() {
         this.commands.on("exec", this.startOperation.bind(this), true);
         this.commands.on("afterExec", this.endOperation.bind(this), true);
 
@@ -8975,11 +9741,9 @@ Editor.$uid = 0;
             }
             this.curOp.selectionChanged = true;
         }.bind(this), true);
-    };
+    }
 
-    this.curOp = null;
-    this.prevOp = {};
-    this.startOperation = function(commandEvent) {
+    startOperation(commandEvent) {
         if (this.curOp) {
             if (!commandEvent || this.curOp.command)
                 return;
@@ -8997,9 +9761,9 @@ Editor.$uid = 0;
             scrollTop: this.renderer.scrollTop
         };
         this.curOp.selectionBefore = this.selection.toJSON();
-    };
+    }
 
-    this.endOperation = function(e) {
+    endOperation(e) {
         if (this.curOp && this.session) {
             if (e && e.returnValue === false || !this.session)
                 return (this.curOp = null);
@@ -9043,11 +9807,9 @@ Editor.$uid = 0;
             this.prevOp = this.curOp;
             this.curOp = null;
         }
-    };
-
-    // TODO use property on commands instead of this
-    this.$mergeableCommands = ["backspace", "del", "insertstring"];
-    this.$historyTracker = function(e) {
+    }
+    
+    $historyTracker(e) {
         if (!this.$mergeUndoDeltas)
             return;
 
@@ -9081,14 +9843,14 @@ Editor.$uid = 0;
             this.session.mergeUndoDeltas = true;
         else if (mergeableCommands.indexOf(e.command.name) !== -1)
             this.sequenceStartTime = Date.now();
-    };
+    }
 
     /**
      * Sets a new key handler, such as "vim" or "windows".
      * @param {String} keyboardHandler The new key handler
      *
      **/
-    this.setKeyboardHandler = function(keyboardHandler, cb) {
+    setKeyboardHandler(keyboardHandler, cb) {
         if (keyboardHandler && typeof keyboardHandler === "string" && keyboardHandler != "ace") {
             this.$keybindingId = keyboardHandler;
             var _self = this;
@@ -9102,7 +9864,7 @@ Editor.$uid = 0;
             this.keyBinding.setKeyboardHandler(keyboardHandler);
             cb && cb();
         }
-    };
+    }
 
     /**
      * Returns the keyboard handler, such as "vim" or "windows".
@@ -9110,9 +9872,9 @@ Editor.$uid = 0;
      * @returns {String}
      *
      **/
-    this.getKeyboardHandler = function() {
+    getKeyboardHandler() {
         return this.keyBinding.getKeyboardHandler();
-    };
+    }
 
 
     /**
@@ -9126,7 +9888,7 @@ Editor.$uid = 0;
      * @param {EditSession} session The new session to use
      *
      **/
-    this.setSession = function(session) {
+    setSession(session) {
         if (this.session == session)
             return;
         
@@ -9237,15 +9999,15 @@ Editor.$uid = 0;
         
         if (session && !session.destroyed)
             session.bgTokenizer.scheduleStart();
-    };
+    }
 
     /**
      * Returns the current session being used.
      * @returns {EditSession}
      **/
-    this.getSession = function() {
+    getSession() {
         return this.session;
-    };
+    }
 
     /**
      * Sets the current document to `val`.
@@ -9255,7 +10017,7 @@ Editor.$uid = 0;
      * @returns {String} The current document value
      * @related Document.setValue
      **/
-    this.setValue = function(val, cursorPos) {
+    setValue(val, cursorPos) {
         this.session.doc.setValue(val);
 
         if (!cursorPos)
@@ -9266,7 +10028,7 @@ Editor.$uid = 0;
             this.navigateFileStart();
 
         return val;
-    };
+    }
 
     /**
      * Returns the current session's content.
@@ -9274,18 +10036,18 @@ Editor.$uid = 0;
      * @returns {String}
      * @related EditSession.getValue
      **/
-    this.getValue = function() {
+    getValue() {
         return this.session.getValue();
-    };
+    }
 
     /**
      *
      * Returns the currently highlighted selection.
      * @returns {Selection} The selection object
      **/
-    this.getSelection = function() {
+    getSelection() {
         return this.selection;
-    };
+    }
 
     /**
      * {:VirtualRenderer.onResize}
@@ -9294,18 +10056,18 @@ Editor.$uid = 0;
      *
      * @related VirtualRenderer.onResize
      **/
-    this.resize = function(force) {
+    resize(force) {
         this.renderer.onResize(force);
-    };
+    }
 
     /**
      * {:VirtualRenderer.setTheme}
      * @param {String} theme The path to a theme
      * @param {Function} cb optional callback called when theme is loaded
      **/
-    this.setTheme = function(theme, cb) {
+    setTheme(theme, cb) {
         this.renderer.setTheme(theme, cb);
-    };
+    }
 
     /**
      * {:VirtualRenderer.getTheme}
@@ -9313,9 +10075,9 @@ Editor.$uid = 0;
      * @returns {String} The set theme
      * @related VirtualRenderer.getTheme
      **/
-    this.getTheme = function() {
+    getTheme() {
         return this.renderer.getTheme();
-    };
+    }
 
     /**
      * {:VirtualRenderer.setStyle}
@@ -9324,25 +10086,25 @@ Editor.$uid = 0;
      *
      * @related VirtualRenderer.setStyle
      **/
-    this.setStyle = function(style) {
+    setStyle(style) {
         this.renderer.setStyle(style);
-    };
+    }
 
     /**
      * {:VirtualRenderer.unsetStyle}
      * @related VirtualRenderer.unsetStyle
      **/
-    this.unsetStyle = function(style) {
+    unsetStyle(style) {
         this.renderer.unsetStyle(style);
-    };
+    }
 
     /**
      * Gets the current font size of the editor text.
      */
-    this.getFontSize = function () {
+    getFontSize() {
         return this.getOption("fontSize") ||
            dom.computedStyle(this.container).fontSize;
-    };
+    }
 
     /**
      * Set a new font size (in pixels) for the editor text.
@@ -9350,11 +10112,11 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.setFontSize = function(size) {
+    setFontSize(size) {
         this.setOption("fontSize", size);
-    };
+    }
 
-    this.$highlightBrackets = function() {
+    $highlightBrackets() {
         if (this.$highlightPending) {
             return;
         }
@@ -9416,31 +10178,31 @@ Editor.$uid = 0;
             };
             if (self.getHighlightIndentGuides()) self.renderer.$textLayer.$highlightIndentGuide();
         }, 50);
-    };
+    }
 
     /**
      *
      * Brings the current `textInput` into focus.
      **/
-    this.focus = function() {
+    focus() {
         this.textInput.focus();
-    };
+    }
 
     /**
      * Returns `true` if the current `textInput` is in focus.
      * @return {Boolean}
      **/
-    this.isFocused = function() {
+    isFocused() {
         return this.textInput.isFocused();
-    };
+    }
 
     /**
      *
      * Blurs the current `textInput`.
      **/
-    this.blur = function() {
+    blur() {
         this.textInput.blur();
-    };
+    }
 
     /**
      * Emitted once the editor comes into focus.
@@ -9448,14 +10210,14 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.onFocus = function(e) {
+    onFocus(e) {
         if (this.$isFocused)
             return;
         this.$isFocused = true;
         this.renderer.showCursor();
         this.renderer.visualizeFocus();
         this._emit("focus", e);
-    };
+    }
 
     /**
      * Emitted once the editor has been blurred.
@@ -9463,30 +10225,30 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.onBlur = function(e) {
+    onBlur(e) {
         if (!this.$isFocused)
             return;
         this.$isFocused = false;
         this.renderer.hideCursor();
         this.renderer.visualizeBlur();
         this._emit("blur", e);
-    };
+    }
 
-    this.$cursorChange = function() {
+    $cursorChange() {
         this.renderer.updateCursor();
         this.$highlightBrackets();
         this.$updateHighlightActiveLine();
-    };
+    }
 
     /**
      * Emitted whenever the document is changed.
      * @event change
-     * @param {Object} e Contains a single property, `data`, which has the delta of changes
+     * @param {Object} delta Contains a single property, `data`, which has the delta of changes
      *
      *
      *
      **/
-    this.onDocumentChange = function(delta) {
+    onDocumentChange(delta) {
         // Rerender and emit "change" event.
         var wrap = this.session.$useWrapMode;
         var lastRow = (delta.start.row == delta.end.row ? delta.end.row : Infinity);
@@ -9496,32 +10258,32 @@ Editor.$uid = 0;
         
         // Update cursor because tab characters can influence the cursor position.
         this.$cursorChange();
-    };
+    }
 
-    this.onTokenizerUpdate = function(e) {
+    onTokenizerUpdate(e) {
         var rows = e.data;
         this.renderer.updateLines(rows.first, rows.last);
-    };
+    }
 
 
-    this.onScrollTopChange = function() {
+    onScrollTopChange() {
         this.renderer.scrollToY(this.session.getScrollTop());
-    };
+    }
 
-    this.onScrollLeftChange = function() {
+    onScrollLeftChange() {
         this.renderer.scrollToX(this.session.getScrollLeft());
-    };
+    }
 
     /**
      * Emitted when the selection changes.
      *
      **/
-    this.onCursorChange = function() {
+    onCursorChange() {
         this.$cursorChange();
         this._signal("changeSelection");
-    };
+    }
 
-    this.$updateHighlightActiveLine = function() {
+    $updateHighlightActiveLine() {
         var session = this.getSession();
 
         var highlight;
@@ -9547,9 +10309,9 @@ Editor.$uid = 0;
             session.$highlightLineMarker.start.column = highlight.column;
             session._signal("changeBackMarker");
         }
-    };
+    }
 
-    this.onSelectionChange = function(e) {
+    onSelectionChange(e) {
         var session = this.session;
 
         if (session.$selectionMarker) {
@@ -9569,9 +10331,9 @@ Editor.$uid = 0;
         this.session.highlight(re);
 
         this._signal("changeSelection");
-    };
+    }
 
-    this.$getSelectionHighLightRegexp = function() {
+    $getSelectionHighLightRegexp() {
         var session = this.session;
 
         var selection = this.getSelectionRange();
@@ -9599,58 +10361,58 @@ Editor.$uid = 0;
             return;
         
         return re;
-    };
+    }
 
 
-    this.onChangeFrontMarker = function() {
+    onChangeFrontMarker() {
         this.renderer.updateFrontMarkers();
-    };
+    }
 
-    this.onChangeBackMarker = function() {
+    onChangeBackMarker() {
         this.renderer.updateBackMarkers();
-    };
+    }
 
 
-    this.onChangeBreakpoint = function() {
+    onChangeBreakpoint() {
         this.renderer.updateBreakpoints();
-    };
+    }
 
-    this.onChangeAnnotation = function() {
+    onChangeAnnotation() {
         this.renderer.setAnnotations(this.session.getAnnotations());
-    };
+    }
 
 
-    this.onChangeMode = function(e) {
+    onChangeMode (e) {
         this.renderer.updateText();
         this._emit("changeMode", e);
-    };
+    }
 
 
-    this.onChangeWrapLimit = function() {
+    onChangeWrapLimit() {
         this.renderer.updateFull();
-    };
+    }
 
-    this.onChangeWrapMode = function() {
+    onChangeWrapMode() {
         this.renderer.onResize(true);
-    };
+    }
 
 
-    this.onChangeFold = function() {
+    onChangeFold() {
         // Update the active line marker as due to folding changes the current
         // line range on the screen might have changed.
         this.$updateHighlightActiveLine();
         // TODO: This might be too much updating. Okay for now.
         this.renderer.updateFull();
-    };
+    }
 
     
     /**
      * Returns the string of text currently highlighted.
      * @returns {String}
      **/
-    this.getSelectedText = function() {
+    getSelectedText() {
         return this.session.getTextRange(this.getSelectionRange());
-    };
+    }
     
     /**
      * Emitted when text is copied.
@@ -9662,7 +10424,7 @@ Editor.$uid = 0;
      * Returns the string of text currently highlighted.
      * @returns {String}
      **/
-    this.getCopyText = function() {
+    getCopyText () {
         var text = this.getSelectedText();
         var nl = this.session.doc.getNewLineCharacter();
         var copyLine= false;
@@ -9680,21 +10442,21 @@ Editor.$uid = 0;
         this._signal("copy", e);
         clipboard.lineMode = copyLine ? e.text : false;
         return e.text;
-    };
+    }
 
     /**
      * Called whenever a text "copy" happens.
      **/
-    this.onCopy = function() {
+    onCopy() {
         this.commands.exec("copy", this);
-    };
+    }
 
     /**
      * Called whenever a text "cut" happens.
      **/
-    this.onCut = function() {
+    onCut() {
         this.commands.exec("cut", this);
-    };
+    }
 
     /**
      * Emitted when text is pasted.
@@ -9709,12 +10471,12 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.onPaste = function(text, event) {
+    onPaste(text, event) {
         var e = {text: text, event: event};
         this.commands.exec("paste", this, e);
-    };
+    }
     
-    this.$handlePaste = function(e) {
+    $handlePaste(e) {
         if (typeof e == "string") 
             e = {text: e};
         this._signal("paste", e);
@@ -9747,18 +10509,18 @@ Editor.$uid = 0;
                 session.insert(range.start, lines[i]);
             }
         }
-    };
+    }
 
-    this.execCommand = function(command, args) {
+    execCommand(command, args) {
         return this.commands.exec(command, this, args);
-    };
+    }
 
     /**
      * Inserts `text` into wherever the cursor is pointing.
      * @param {String} text The new text to add
      *
      **/
-    this.insert = function(text, pasted) {
+    insert(text, pasted) {
         var session = this.session;
         var mode = session.getMode();
         var cursor = this.getCursorPosition();
@@ -9831,9 +10593,9 @@ Editor.$uid = 0;
             if (shouldOutdent)
                 mode.autoOutdent(lineState, session, cursor.row);
         }
-    };
+    }
 
-    this.autoIndent = function () {
+    autoIndent() {
         var session = this.session;
         var mode = session.getMode();
 
@@ -9875,10 +10637,10 @@ Editor.$uid = 0;
 
             mode.autoOutdent(prevLineState, session, row);
         }
-    };
+    }
 
 
-    this.onTextInput = function(text, composition) {
+    onTextInput(text, composition) {
         if (!composition)
             return this.keyBinding.onTextInput(text);
         
@@ -9889,9 +10651,9 @@ Editor.$uid = 0;
         else
             applyComposition();
         this.endOperation();
-    };
+    }
     
-    this.applyComposition = function(text, composition) {
+    applyComposition(text, composition) {
         if (composition.extendLeft || composition.extendRight) {
             var r = this.selection.getRange();
             r.start.column -= composition.extendLeft;
@@ -9912,11 +10674,11 @@ Editor.$uid = 0;
             r.end.column -= composition.restoreEnd;
             this.selection.setRange(r);
         }
-    };
+    }
 
-    this.onCommandKey = function(e, hashId, keyCode) {
+    onCommandKey(e, hashId, keyCode) {
         return this.keyBinding.onCommandKey(e, hashId, keyCode);
-    };
+    }
 
     /**
      * Pass in `true` to enable overwrites in your session, or `false` to disable. If overwrites is enabled, any text you enter will type over any text after it. If the value of `overwrite` changes, this function also emits the `changeOverwrite` event.
@@ -9925,58 +10687,58 @@ Editor.$uid = 0;
      *
      * @related EditSession.setOverwrite
      **/
-    this.setOverwrite = function(overwrite) {
+    setOverwrite(overwrite) {
         this.session.setOverwrite(overwrite);
-    };
+    }
 
     /**
      * Returns `true` if overwrites are enabled; `false` otherwise.
      * @returns {Boolean}
      * @related EditSession.getOverwrite
      **/
-    this.getOverwrite = function() {
+    getOverwrite() {
         return this.session.getOverwrite();
-    };
+    }
 
     /**
      * Sets the value of overwrite to the opposite of whatever it currently is.
      * @related EditSession.toggleOverwrite
      **/
-    this.toggleOverwrite = function() {
+    toggleOverwrite() {
         this.session.toggleOverwrite();
-    };
+    }
 
     /**
      * Sets how fast the mouse scrolling should do.
      * @param {Number} speed A value indicating the new speed (in milliseconds)
      **/
-    this.setScrollSpeed = function(speed) {
+    setScrollSpeed(speed) {
         this.setOption("scrollSpeed", speed);
-    };
+    }
 
     /**
      * Returns the value indicating how fast the mouse scroll speed is (in milliseconds).
      * @returns {Number}
      **/
-    this.getScrollSpeed = function() {
+    getScrollSpeed() {
         return this.getOption("scrollSpeed");
-    };
+    }
 
     /**
      * Sets the delay (in milliseconds) of the mouse drag.
      * @param {Number} dragDelay A value indicating the new delay
      **/
-    this.setDragDelay = function(dragDelay) {
+    setDragDelay(dragDelay) {
         this.setOption("dragDelay", dragDelay);
-    };
+    }
 
     /**
      * Returns the current mouse drag delay.
      * @returns {Number}
      **/
-    this.getDragDelay = function() {
+    getDragDelay() {
         return this.getOption("dragDelay");
-    };
+    }
 
     /**
      * Emitted when the selection style changes, via [[Editor.setSelectionStyle]].
@@ -9985,169 +10747,169 @@ Editor.$uid = 0;
      **/
     /**
      * Draw selection markers spanning whole line, or only over selected text. Default value is "line"
-     * @param {String} style The new selection style "line"|"text"
+     * @param {String} val The new selection style "line"|"text"
      *
      **/
-    this.setSelectionStyle = function(val) {
+    setSelectionStyle(val) {
         this.setOption("selectionStyle", val);
-    };
+    }
 
     /**
      * Returns the current selection style.
      * @returns {String}
      **/
-    this.getSelectionStyle = function() {
+    getSelectionStyle() {
         return this.getOption("selectionStyle");
-    };
+    }
 
     /**
      * Determines whether or not the current line should be highlighted.
      * @param {Boolean} shouldHighlight Set to `true` to highlight the current line
      **/
-    this.setHighlightActiveLine = function(shouldHighlight) {
+    setHighlightActiveLine(shouldHighlight) {
         this.setOption("highlightActiveLine", shouldHighlight);
-    };
+    }
     /**
      * Returns `true` if current lines are always highlighted.
      * @return {Boolean}
      **/
-    this.getHighlightActiveLine = function() {
+    getHighlightActiveLine() {
         return this.getOption("highlightActiveLine");
-    };
-    this.setHighlightGutterLine = function(shouldHighlight) {
+    }
+    setHighlightGutterLine(shouldHighlight) {
         this.setOption("highlightGutterLine", shouldHighlight);
-    };
+    }
 
-    this.getHighlightGutterLine = function() {
+    getHighlightGutterLine() {
         return this.getOption("highlightGutterLine");
-    };
+    }
 
     /**
      * Determines if the currently selected word should be highlighted.
      * @param {Boolean} shouldHighlight Set to `true` to highlight the currently selected word
      *
      **/
-    this.setHighlightSelectedWord = function(shouldHighlight) {
+    setHighlightSelectedWord(shouldHighlight) {
         this.setOption("highlightSelectedWord", shouldHighlight);
-    };
+    }
 
     /**
      * Returns `true` if currently highlighted words are to be highlighted.
      * @returns {Boolean}
      **/
-    this.getHighlightSelectedWord = function() {
+    getHighlightSelectedWord() {
         return this.$highlightSelectedWord;
-    };
+    }
 
-    this.setAnimatedScroll = function(shouldAnimate){
+    setAnimatedScroll(shouldAnimate){
         this.renderer.setAnimatedScroll(shouldAnimate);
-    };
+    }
 
-    this.getAnimatedScroll = function(){
+    getAnimatedScroll(){
         return this.renderer.getAnimatedScroll();
-    };
+    }
 
     /**
      * If `showInvisibles` is set to `true`, invisible characters&mdash;like spaces or new lines&mdash;are show in the editor.
      * @param {Boolean} showInvisibles Specifies whether or not to show invisible characters
      *
      **/
-    this.setShowInvisibles = function(showInvisibles) {
+    setShowInvisibles(showInvisibles) {
         this.renderer.setShowInvisibles(showInvisibles);
-    };
+    }
 
     /**
      * Returns `true` if invisible characters are being shown.
      * @returns {Boolean}
      **/
-    this.getShowInvisibles = function() {
+    getShowInvisibles() {
         return this.renderer.getShowInvisibles();
-    };
+    }
 
-    this.setDisplayIndentGuides = function(display) {
+    setDisplayIndentGuides(display) {
         this.renderer.setDisplayIndentGuides(display);
-    };
+    }
 
-    this.getDisplayIndentGuides = function() {
+    getDisplayIndentGuides() {
         return this.renderer.getDisplayIndentGuides();
-    };
+    }
 
-    this.setHighlightIndentGuides = function(highlight) {
+    setHighlightIndentGuides(highlight) {
         this.renderer.setHighlightIndentGuides(highlight);
-    };
+    }
 
-    this.getHighlightIndentGuides = function() {
+    getHighlightIndentGuides() {
         return this.renderer.getHighlightIndentGuides();
-    };
+    }
 
     /**
      * If `showPrintMargin` is set to `true`, the print margin is shown in the editor.
      * @param {Boolean} showPrintMargin Specifies whether or not to show the print margin
      *
      **/
-    this.setShowPrintMargin = function(showPrintMargin) {
+    setShowPrintMargin(showPrintMargin) {
         this.renderer.setShowPrintMargin(showPrintMargin);
-    };
+    }
 
     /**
      * Returns `true` if the print margin is being shown.
      * @returns {Boolean}
      **/
-    this.getShowPrintMargin = function() {
+    getShowPrintMargin() {
         return this.renderer.getShowPrintMargin();
-    };
+    }
 
     /**
      * Sets the column defining where the print margin should be.
      * @param {Number} showPrintMargin Specifies the new print margin
      *
      **/
-    this.setPrintMarginColumn = function(showPrintMargin) {
+    setPrintMarginColumn(showPrintMargin) {
         this.renderer.setPrintMarginColumn(showPrintMargin);
-    };
+    }
 
     /**
      * Returns the column number of where the print margin is.
      * @returns {Number}
      **/
-    this.getPrintMarginColumn = function() {
+    getPrintMarginColumn() {
         return this.renderer.getPrintMarginColumn();
-    };
+    }
 
     /**
      * If `readOnly` is true, then the editor is set to read-only mode, and none of the content can change.
      * @param {Boolean} readOnly Specifies whether the editor can be modified or not
      *
      **/
-    this.setReadOnly = function(readOnly) {
+    setReadOnly(readOnly) {
         this.setOption("readOnly", readOnly);
-    };
+    }
 
     /**
      * Returns `true` if the editor is set to read-only mode.
      * @returns {Boolean}
      **/
-    this.getReadOnly = function() {
+    getReadOnly() {
         return this.getOption("readOnly");
-    };
+    }
 
     /**
      * Specifies whether to use behaviors or not. ["Behaviors" in this case is the auto-pairing of special characters, like quotation marks, parenthesis, or brackets.]{: #BehaviorsDef}
      * @param {Boolean} enabled Enables or disables behaviors
      *
      **/
-    this.setBehavioursEnabled = function (enabled) {
+    setBehavioursEnabled(enabled) {
         this.setOption("behavioursEnabled", enabled);
-    };
+    }
 
     /**
      * Returns `true` if the behaviors are currently enabled. {:BehaviorsDef}
      *
      * @returns {Boolean}
      **/
-    this.getBehavioursEnabled = function () {
+    getBehavioursEnabled() {
         return this.getOption("behavioursEnabled");
-    };
+    }
 
     /**
      * Specifies whether to use wrapping behaviors or not, i.e. automatically wrapping the selection with characters such as brackets
@@ -10155,47 +10917,47 @@ Editor.$uid = 0;
      * @param {Boolean} enabled Enables or disables wrapping behaviors
      *
      **/
-    this.setWrapBehavioursEnabled = function (enabled) {
+    setWrapBehavioursEnabled(enabled) {
         this.setOption("wrapBehavioursEnabled", enabled);
-    };
+    }
 
     /**
      * Returns `true` if the wrapping behaviors are currently enabled.
      **/
-    this.getWrapBehavioursEnabled = function () {
+    getWrapBehavioursEnabled() {
         return this.getOption("wrapBehavioursEnabled");
-    };
+    }
 
     /**
      * Indicates whether the fold widgets should be shown or not.
      * @param {Boolean} show Specifies whether the fold widgets are shown
      **/
-    this.setShowFoldWidgets = function(show) {
+    setShowFoldWidgets(show) {
         this.setOption("showFoldWidgets", show);
 
-    };
+    }
     /**
      * Returns `true` if the fold widgets are shown.
      * @return {Boolean}
      **/
-    this.getShowFoldWidgets = function() {
+    getShowFoldWidgets() {
         return this.getOption("showFoldWidgets");
-    };
+    }
 
-    this.setFadeFoldWidgets = function(fade) {
+    setFadeFoldWidgets(fade) {
         this.setOption("fadeFoldWidgets", fade);
-    };
+    }
 
-    this.getFadeFoldWidgets = function() {
+    getFadeFoldWidgets() {
         return this.getOption("fadeFoldWidgets");
-    };
+    }
 
     /**
      * Removes the current selection or one character.
      * @param {String} dir The direction of the deletion to occur, either "left" or "right"
      *
      **/
-    this.remove = function(dir) {
+    remove(dir) {
         if (this.selection.isEmpty()){
             if (dir == "left")
                 this.selection.selectLeft();
@@ -10224,46 +10986,46 @@ Editor.$uid = 0;
 
         this.session.remove(range);
         this.clearSelection();
-    };
+    }
 
     /**
      * Removes the word directly to the right of the current selection.
      **/
-    this.removeWordRight = function() {
+    removeWordRight() {
         if (this.selection.isEmpty())
             this.selection.selectWordRight();
 
         this.session.remove(this.getSelectionRange());
         this.clearSelection();
-    };
+    }
 
     /**
      * Removes the word directly to the left of the current selection.
      **/
-    this.removeWordLeft = function() {
+    removeWordLeft() {
         if (this.selection.isEmpty())
             this.selection.selectWordLeft();
 
         this.session.remove(this.getSelectionRange());
         this.clearSelection();
-    };
+    }
 
     /**
      * Removes all the words to the left of the current selection, until the start of the line.
      **/
-    this.removeToLineStart = function() {
+    removeToLineStart() {
         if (this.selection.isEmpty())
             this.selection.selectLineStart();
         if (this.selection.isEmpty())
             this.selection.selectLeft();
         this.session.remove(this.getSelectionRange());
         this.clearSelection();
-    };
+    }
 
     /**
      * Removes all the words to the right of the current selection, until the end of the line.
      **/
-    this.removeToLineEnd = function() {
+    removeToLineEnd() {
         if (this.selection.isEmpty())
             this.selection.selectLineEnd();
 
@@ -10275,12 +11037,12 @@ Editor.$uid = 0;
 
         this.session.remove(range);
         this.clearSelection();
-    };
+    }
 
     /**
      * Splits the line at the current selection (by inserting an `'\n'`).
      **/
-    this.splitLine = function() {
+    splitLine() {
         if (!this.selection.isEmpty()) {
             this.session.remove(this.getSelectionRange());
             this.clearSelection();
@@ -10289,12 +11051,37 @@ Editor.$uid = 0;
         var cursor = this.getCursorPosition();
         this.insert("\n");
         this.moveCursorToPosition(cursor);
-    };
+    }
+
+    /**
+     * Set the "ghost" text in provided position. "Ghost" text is a kind of
+     * preview text inside the editor which can be used to preview some code
+     * inline in the editor such as, for example, code completions.
+     * 
+     * @param {String} text Text to be inserted as "ghost" text
+     * @param {object} position Position to insert text to
+     */
+    setGhostText(text, position) {
+        if (!this.session.widgetManager) {
+            this.session.widgetManager = new LineWidgets(this.session);
+            this.session.widgetManager.attach(this);
+        }
+        this.renderer.setGhostText(text, position);
+    }
+
+    /**
+     * Removes "ghost" text currently displayed in the editor.
+     */
+    removeGhostText() {
+        if (!this.session.widgetManager) return;
+
+        this.renderer.removeGhostText();
+    }
 
     /**
      * Transposes current line.
      **/
-    this.transposeLetters = function() {
+    transposeLetters() {
         if (!this.selection.isEmpty()) {
             return;
         }
@@ -10316,12 +11103,12 @@ Editor.$uid = 0;
         }
         this.session.replace(range, swap);
         this.session.selection.moveToPosition(range.end);
-    };
+    }
 
     /**
      * Converts the current selection entirely into lowercase.
      **/
-    this.toLowerCase = function() {
+    toLowerCase() {
         var originalRange = this.getSelectionRange();
         if (this.selection.isEmpty()) {
             this.selection.selectWord();
@@ -10331,12 +11118,12 @@ Editor.$uid = 0;
         var text = this.session.getTextRange(range);
         this.session.replace(range, text.toLowerCase());
         this.selection.setSelectionRange(originalRange);
-    };
+    }
 
     /**
      * Converts the current selection entirely into uppercase.
      **/
-    this.toUpperCase = function() {
+    toUpperCase() {
         var originalRange = this.getSelectionRange();
         if (this.selection.isEmpty()) {
             this.selection.selectWord();
@@ -10346,14 +11133,14 @@ Editor.$uid = 0;
         var text = this.session.getTextRange(range);
         this.session.replace(range, text.toUpperCase());
         this.selection.setSelectionRange(originalRange);
-    };
+    }
 
     /**
      * Inserts an indentation into the current cursor position or indents the selected lines.
      *
      * @related EditSession.indentRows
      **/
-    this.indent = function() {
+    indent() {
         var session = this.session;
         var range = this.getSelectionRange();
 
@@ -10388,28 +11175,28 @@ Editor.$uid = 0;
             indentString = "\t";
         }
         return this.insert(indentString);
-    };
+    }
 
     /**
      * Indents the current line.
      * @related EditSession.indentRows
      **/
-    this.blockIndent = function() {
+    blockIndent() {
         var rows = this.$getSelectedRows();
         this.session.indentRows(rows.first, rows.last, "\t");
-    };
+    }
 
     /**
      * Outdents the current line.
      * @related EditSession.outdentRows
      **/
-    this.blockOutdent = function() {
+    blockOutdent() {
         var selection = this.session.getSelection();
         this.session.outdentRows(selection.getRange());
-    };
+    }
 
     // TODO: move out of core when we have good mechanism for managing extensions
-    this.sortLines = function() {
+    sortLines() {
         var rows = this.$getSelectedRows();
         var session = this.session;
 
@@ -10431,29 +11218,29 @@ Editor.$uid = 0;
             deleteRange.end.column = line.length;
             session.replace(deleteRange, lines[i-rows.first]);
         }
-    };
+    }
 
     /**
      * Given the currently selected range, this function either comments all the lines, or uncomments all of them.
      **/
-    this.toggleCommentLines = function() {
+    toggleCommentLines() {
         var state = this.session.getState(this.getCursorPosition().row);
         var rows = this.$getSelectedRows();
         this.session.getMode().toggleCommentLines(state, this.session, rows.first, rows.last);
-    };
+    }
 
-    this.toggleBlockComment = function() {
+    toggleBlockComment() {
         var cursor = this.getCursorPosition();
         var state = this.session.getState(cursor.row);
         var range = this.getSelectionRange();
         this.session.getMode().toggleBlockComment(state, this.session, range, cursor);
-    };
+    }
 
     /**
      * Works like [[EditSession.getTokenAt]], except it returns a number.
      * @returns {Number}
      **/
-    this.getNumberAt = function(row, column) {
+    getNumberAt(row, column) {
         var _numberRx = /[\-]?[0-9]+(?:\.[0-9]+)?/g;
         _numberRx.lastIndex = 0;
 
@@ -10470,14 +11257,14 @@ Editor.$uid = 0;
             }
         }
         return null;
-    };
+    }
 
     /**
      * If the character before the cursor is a number, this functions changes its value by `amount`.
      * @param {Number} amount The value to change the numeral by (can be negative to decrease value)
      *
      **/
-    this.modifyNumber = function(amount) {
+    modifyNumber(amount) {
         var row = this.selection.getCursor().row;
         var column = this.selection.getCursor().column;
 
@@ -10519,35 +11306,9 @@ Editor.$uid = 0;
         } else {
             this.toggleWord();
         }
-    };
-
-    this.$toggleWordPairs = [
-        ["first", "last"],
-        ["true", "false"],
-        ["yes", "no"],
-        ["width", "height"],
-        ["top", "bottom"],
-        ["right", "left"],
-        ["on", "off"],
-        ["x", "y"],
-        ["get", "set"],
-        ["max", "min"],
-        ["horizontal", "vertical"],
-        ["show", "hide"],
-        ["add", "remove"],
-        ["up", "down"],
-        ["before", "after"],
-        ["even", "odd"],
-        ["in", "out"],
-        ["inside", "outside"],
-        ["next", "previous"],
-        ["increase", "decrease"],
-        ["attach", "detach"],
-        ["&&", "||"],
-        ["==", "!="]
-    ];
-
-    this.toggleWord = function () {
+    }
+    
+    toggleWord() {
         var row = this.selection.getCursor().row;
         var column = this.selection.getCursor().column;
         this.selection.selectWord();
@@ -10596,13 +11357,13 @@ Editor.$uid = 0;
                 }
             }
         }
-    };
+    }
 
     /**
      * Finds link at defined {row} and {column}
      * @returns {String}
      **/
-    this.findLinkAt = function (row, column) {
+    findLinkAt(row, column) {
         var line = this.session.getLine(row);
         var wordParts = line.split(/((?:https?|ftp):\/\/[\S]+)/);
         var columnPosition = column;
@@ -10619,31 +11380,31 @@ Editor.$uid = 0;
             previousPosition = currentPosition;
         }
         return match;
-    };
+    }
 
     /**
      * Open valid url under cursor in another tab
      * @returns {Boolean}
      **/
-    this.openLink = function () {
+    openLink() {
         var cursor =  this.selection.getCursor();
         var url = this.findLinkAt(cursor.row, cursor.column);
         if (url)
             window.open(url, '_blank');
         return url != null;
-    };
+    }
 
     /**
      * Removes all the lines in the current selection
      * @related EditSession.remove
      **/
-    this.removeLines = function() {
+    removeLines() {
         var rows = this.$getSelectedRows();
         this.session.removeFullLines(rows.first, rows.last);
         this.clearSelection();
-    };
+    }
 
-    this.duplicateSelection = function() {
+    duplicateSelection() {
         var sel = this.selection;
         var doc = this.session;
         var range = sel.getRange();
@@ -10659,7 +11420,7 @@ Editor.$uid = 0;
 
             sel.setSelectionRange(range, reverse);
         }
-    };
+    }
 
     /**
      * Shifts all the selected lines down one row.
@@ -10667,42 +11428,42 @@ Editor.$uid = 0;
      * @returns {Number} On success, it returns -1.
      * @related EditSession.moveLinesUp
      **/
-    this.moveLinesDown = function() {
+    moveLinesDown() {
         this.$moveLines(1, false);
-    };
+    }
 
     /**
      * Shifts all the selected lines up one row.
      * @returns {Number} On success, it returns -1.
      * @related EditSession.moveLinesDown
      **/
-    this.moveLinesUp = function() {
+    moveLinesUp() {
         this.$moveLines(-1, false);
-    };
+    }
 
     /**
      * Moves a range of text from the given range to the given position. `toPosition` is an object that looks like this:
      * ```json
      *    { row: newRowLocation, column: newColumnLocation }
      * ```
-     * @param {Range} fromRange The range of text you want moved within the document
+     * @param {Range} range The range of text you want moved within the document
      * @param {Object} toPosition The location (row and column) where you want to move the text to
      *
      * @returns {Range} The new range where the text was moved to.
      * @related EditSession.moveText
      **/
-    this.moveText = function(range, toPosition, copy) {
+    moveText(range, toPosition, copy) {
         return this.session.moveText(range, toPosition, copy);
-    };
+    }
 
     /**
      * Copies all the selected lines up one row.
      * @returns {Number} On success, returns 0.
      *
      **/
-    this.copyLinesUp = function() {
+   copyLinesUp() {
         this.$moveLines(-1, true);
-    };
+    }
 
     /**
      * Copies all the selected lines down one row.
@@ -10710,16 +11471,16 @@ Editor.$uid = 0;
      * @related EditSession.duplicateLines
      *
      **/
-    this.copyLinesDown = function() {
+    copyLinesDown() {
         this.$moveLines(1, true);
-    };
+    }
 
     /**
      * for internal use
      * @ignore
      *
      **/
-    this.$moveLines = function(dir, copy) {
+    $moveLines(dir, copy) {
         var rows, moved;
         var selection = this.selection;
         if (!selection.inMultiSelectMode || this.inVirtualSelectionMode) {
@@ -10767,7 +11528,7 @@ Editor.$uid = 0;
             selection.rangeList.attach(this.session);
             this.inVirtualSelectionMode = false;
         }
-    };
+    }
 
     /**
      * Returns an object indicating the currently selected rows. The object looks like this:
@@ -10778,26 +11539,26 @@ Editor.$uid = 0;
      *
      * @returns {Object}
      **/
-    this.$getSelectedRows = function(range) {
+    $getSelectedRows(range) {
         range = (range || this.getSelectionRange()).collapseRows();
 
         return {
             first: this.session.getRowFoldStart(range.start.row),
             last: this.session.getRowFoldEnd(range.end.row)
         };
-    };
+    }
 
-    this.onCompositionStart = function(compositionState) {
+    onCompositionStart(compositionState) {
         this.renderer.showComposition(compositionState);
-    };
+    }
 
-    this.onCompositionUpdate = function(text) {
+    onCompositionUpdate(text) {
         this.renderer.setCompositionText(text);
-    };
+    }
 
-    this.onCompositionEnd = function() {
+    onCompositionEnd() {
         this.renderer.hideComposition();
-    };
+    }
 
     /**
      * {:VirtualRenderer.getFirstVisibleRow}
@@ -10805,9 +11566,9 @@ Editor.$uid = 0;
      * @returns {Number}
      * @related VirtualRenderer.getFirstVisibleRow
      **/
-    this.getFirstVisibleRow = function() {
+    getFirstVisibleRow() {
         return this.renderer.getFirstVisibleRow();
-    };
+    }
 
     /**
      * {:VirtualRenderer.getLastVisibleRow}
@@ -10815,9 +11576,9 @@ Editor.$uid = 0;
      * @returns {Number}
      * @related VirtualRenderer.getLastVisibleRow
      **/
-    this.getLastVisibleRow = function() {
+    getLastVisibleRow() {
         return this.renderer.getLastVisibleRow();
-    };
+    }
 
     /**
      * Indicates if the row is currently visible on the screen.
@@ -10825,9 +11586,9 @@ Editor.$uid = 0;
      *
      * @returns {Boolean}
      **/
-    this.isRowVisible = function(row) {
+    isRowVisible(row) {
         return (row >= this.getFirstVisibleRow() && row <= this.getLastVisibleRow());
-    };
+    }
 
     /**
      * Indicates if the entire row is currently visible on the screen.
@@ -10836,19 +11597,19 @@ Editor.$uid = 0;
      *
      * @returns {Boolean}
      **/
-    this.isRowFullyVisible = function(row) {
+    isRowFullyVisible(row) {
         return (row >= this.renderer.getFirstFullyVisibleRow() && row <= this.renderer.getLastFullyVisibleRow());
-    };
+    }
 
     /**
      * Returns the number of currently visible rows.
      * @returns {Number}
      **/
-    this.$getVisibleRowCount = function() {
+    $getVisibleRowCount() {
         return this.renderer.getScrollBottomRow() - this.renderer.getScrollTopRow() + 1;
-    };
+    }
 
-    this.$moveByPage = function(dir, select) {
+    $moveByPage(dir, select) {
         var renderer = this.renderer;
         var config = this.renderer.layerConfig;
         var rows = dir * Math.floor(config.height / config.lineHeight);
@@ -10869,57 +11630,57 @@ Editor.$uid = 0;
             renderer.scrollCursorIntoView(null, 0.5);
 
         renderer.animateScrolling(scrollTop);
-    };
+    }
 
     /**
      * Selects the text from the current position of the document until where a "page down" finishes.
      **/
-    this.selectPageDown = function() {
+    selectPageDown() {
         this.$moveByPage(1, true);
-    };
+    }
 
     /**
      * Selects the text from the current position of the document until where a "page up" finishes.
      **/
-    this.selectPageUp = function() {
+    selectPageUp() {
         this.$moveByPage(-1, true);
-    };
+    }
 
     /**
      * Shifts the document to wherever "page down" is, as well as moving the cursor position.
      **/
-    this.gotoPageDown = function() {
+    gotoPageDown() {
        this.$moveByPage(1, false);
-    };
+    }
 
     /**
      * Shifts the document to wherever "page up" is, as well as moving the cursor position.
      **/
-    this.gotoPageUp = function() {
+    gotoPageUp() {
         this.$moveByPage(-1, false);
-    };
+    }
 
     /**
      * Scrolls the document to wherever "page down" is, without changing the cursor position.
      **/
-    this.scrollPageDown = function() {
+    scrollPageDown() {
         this.$moveByPage(1);
-    };
+    }
 
     /**
      * Scrolls the document to wherever "page up" is, without changing the cursor position.
      **/
-    this.scrollPageUp = function() {
+    scrollPageUp() {
         this.$moveByPage(-1);
-    };
+    }
 
     /**
      * Moves the editor to the specified row.
      * @related VirtualRenderer.scrollToRow
      **/
-    this.scrollToRow = function(row) {
+    scrollToRow(row) {
         this.renderer.scrollToRow(row);
-    };
+    }
 
     /**
      * Scrolls to a line. If `center` is `true`, it puts the line in middle of screen (or attempts to).
@@ -10931,21 +11692,21 @@ Editor.$uid = 0;
      *
      * @related VirtualRenderer.scrollToLine
      **/
-    this.scrollToLine = function(line, center, animate, callback) {
+    scrollToLine(line, center, animate, callback) {
         this.renderer.scrollToLine(line, center, animate, callback);
-    };
+    }
 
     /**
      * Attempts to center the current selection on the screen.
      **/
-    this.centerSelection = function() {
+    centerSelection() {
         var range = this.getSelectionRange();
         var pos = {
             row: Math.floor(range.start.row + (range.end.row - range.start.row) / 2),
             column: Math.floor(range.start.column + (range.end.column - range.start.column) / 2)
         };
         this.renderer.alignCursor(pos, 0.5);
-    };
+    }
 
     /**
      * Gets the current position of the cursor.
@@ -10957,73 +11718,68 @@ Editor.$uid = 0;
      *
      * @related Selection.getCursor
      **/
-    this.getCursorPosition = function() {
+    getCursorPosition() {
         return this.selection.getCursor();
-    };
+    }
 
     /**
      * Returns the screen position of the cursor.
-     * @returns {Number}
+     * @returns {Position}
      * @related EditSession.documentToScreenPosition
      **/
-    this.getCursorPositionScreen = function() {
+    getCursorPositionScreen() {
         return this.session.documentToScreenPosition(this.getCursorPosition());
-    };
+    }
 
     /**
      * {:Selection.getRange}
      * @returns {Range}
      * @related Selection.getRange
      **/
-    this.getSelectionRange = function() {
+    getSelectionRange() {
         return this.selection.getRange();
-    };
-
-
+    }
+    
     /**
      * Selects all the text in editor.
      * @related Selection.selectAll
      **/
-    this.selectAll = function() {
+    selectAll() {
         this.selection.selectAll();
-    };
+    }
 
     /**
      * {:Selection.clearSelection}
      * @related Selection.clearSelection
      **/
-    this.clearSelection = function() {
+    clearSelection() {
         this.selection.clearSelection();
-    };
+    }
 
     /**
      * Moves the cursor to the specified row and column. Note that this does not de-select the current selection.
      * @param {Number} row The new row number
      * @param {Number} column The new column number
-     *
-     *
      * @related Selection.moveCursorTo
      **/
-    this.moveCursorTo = function(row, column) {
+    moveCursorTo(row, column) {
         this.selection.moveCursorTo(row, column);
-    };
+    }
 
     /**
      * Moves the cursor to the position indicated by `pos.row` and `pos.column`.
-     * @param {Object} pos An object with two properties, row and column
-     *
-     *
+     * @param {Position} pos An object with two properties, row and column
      * @related Selection.moveCursorToPosition
      **/
-    this.moveCursorToPosition = function(pos) {
+    moveCursorToPosition(pos) {
         this.selection.moveCursorToPosition(pos);
-    };
+    }
 
     /**
      * Moves the cursor's row and column to the next matching bracket or HTML tag.
      *
      **/
-    this.jumpToMatching = function (select, expand) {
+    jumpToMatching(select, expand) {
         var cursor = this.getCursorPosition();
         var iterator = new TokenIterator(this.session, cursor.row, cursor.column);
         var prevToken = iterator.getCurrentToken();
@@ -11166,7 +11922,7 @@ Editor.$uid = 0;
                 this.selection.moveTo(pos.row, pos.column);
             }
         }
-    };
+    }
 
     /**
      * Moves the cursor to the specified line number, and also into the indicated column.
@@ -11175,7 +11931,7 @@ Editor.$uid = 0;
      * @param {Boolean} animate If `true` animates scolling
      *
      **/
-    this.gotoLine = function(lineNumber, column, animate) {
+    gotoLine(lineNumber, column, animate) {
         this.selection.clearSelection();
         this.session.unfold({row: lineNumber - 1, column: column || 0});
 
@@ -11185,7 +11941,7 @@ Editor.$uid = 0;
 
         if (!this.isRowFullyVisible(lineNumber - 1))
             this.scrollToLine(lineNumber - 1, true, animate);
-    };
+    }
 
     /**
      * Moves the cursor to the specified row and column. Note that this does de-select the current selection.
@@ -11195,9 +11951,9 @@ Editor.$uid = 0;
      *
      * @related Editor.moveCursorTo
      **/
-    this.navigateTo = function(row, column) {
+    navigateTo(row, column) {
         this.selection.moveTo(row, column);
-    };
+    }
 
     /**
      * Moves the cursor up in the document the specified number of times. Note that this does de-select the current selection.
@@ -11205,14 +11961,14 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.navigateUp = function(times) {
+    navigateUp(times) {
         if (this.selection.isMultiLine() && !this.selection.isBackwards()) {
             var selectionStart = this.selection.anchor.getPosition();
             return this.moveCursorToPosition(selectionStart);
         }
         this.selection.clearSelection();
         this.selection.moveCursorBy(-times || -1, 0);
-    };
+    }
 
     /**
      * Moves the cursor down in the document the specified number of times. Note that this does de-select the current selection.
@@ -11220,14 +11976,14 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.navigateDown = function(times) {
+    navigateDown(times) {
         if (this.selection.isMultiLine() && this.selection.isBackwards()) {
             var selectionEnd = this.selection.anchor.getPosition();
             return this.moveCursorToPosition(selectionEnd);
         }
         this.selection.clearSelection();
         this.selection.moveCursorBy(times || 1, 0);
-    };
+    }
 
     /**
      * Moves the cursor left in the document the specified number of times. Note that this does de-select the current selection.
@@ -11235,7 +11991,7 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.navigateLeft = function(times) {
+    navigateLeft(times) {
         if (!this.selection.isEmpty()) {
             var selectionStart = this.getSelectionRange().start;
             this.moveCursorToPosition(selectionStart);
@@ -11247,7 +12003,7 @@ Editor.$uid = 0;
             }
         }
         this.clearSelection();
-    };
+    }
 
     /**
      * Moves the cursor right in the document the specified number of times. Note that this does de-select the current selection.
@@ -11255,7 +12011,7 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.navigateRight = function(times) {
+    navigateRight(times) {
         if (!this.selection.isEmpty()) {
             var selectionEnd = this.getSelectionRange().end;
             this.moveCursorToPosition(selectionEnd);
@@ -11267,61 +12023,61 @@ Editor.$uid = 0;
             }
         }
         this.clearSelection();
-    };
+    }
 
     /**
      *
      * Moves the cursor to the start of the current line. Note that this does de-select the current selection.
      **/
-    this.navigateLineStart = function() {
+    navigateLineStart() {
         this.selection.moveCursorLineStart();
         this.clearSelection();
-    };
+    }
 
     /**
      *
      * Moves the cursor to the end of the current line. Note that this does de-select the current selection.
      **/
-    this.navigateLineEnd = function() {
+    navigateLineEnd() {
         this.selection.moveCursorLineEnd();
         this.clearSelection();
-    };
+    }
 
     /**
      *
      * Moves the cursor to the end of the current file. Note that this does de-select the current selection.
      **/
-    this.navigateFileEnd = function() {
+    navigateFileEnd() {
         this.selection.moveCursorFileEnd();
         this.clearSelection();
-    };
+    }
 
     /**
      *
      * Moves the cursor to the start of the current file. Note that this does de-select the current selection.
      **/
-    this.navigateFileStart = function() {
+    navigateFileStart() {
         this.selection.moveCursorFileStart();
         this.clearSelection();
-    };
+    }
 
     /**
      *
      * Moves the cursor to the word immediately to the right of the current position. Note that this does de-select the current selection.
      **/
-    this.navigateWordRight = function() {
+    navigateWordRight() {
         this.selection.moveCursorWordRight();
         this.clearSelection();
-    };
+    }
 
     /**
      *
      * Moves the cursor to the word immediately to the left of the current position. Note that this does de-select the current selection.
      **/
-    this.navigateWordLeft = function() {
+    navigateWordLeft() {
         this.selection.moveCursorWordLeft();
         this.clearSelection();
-    };
+    }
 
     /**
      * Replaces the first occurrence of `options.needle` with the value in `replacement`.
@@ -11330,7 +12086,7 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.replace = function(replacement, options) {
+    replace(replacement, options) {
         if (options)
             this.$search.set(options);
 
@@ -11347,7 +12103,7 @@ Editor.$uid = 0;
         this.renderer.scrollSelectionIntoView(range.start, range.end);
 
         return replaced;
-    };
+    }
 
     /**
      * Replaces all occurrences of `options.needle` with the value in `replacement`.
@@ -11356,7 +12112,7 @@ Editor.$uid = 0;
      *
      *
      **/
-    this.replaceAll = function(replacement, options) {
+    replaceAll(replacement, options) {
         if (options) {
             this.$search.set(options);
         }
@@ -11378,9 +12134,9 @@ Editor.$uid = 0;
         this.selection.setSelectionRange(selection);
 
         return replaced;
-    };
+    }
 
-    this.$tryReplace = function(range, replacement) {
+    $tryReplace(range, replacement) {
         var input = this.session.getTextRange(range);
         replacement = this.$search.replace(input, replacement);
         if (replacement !== null) {
@@ -11389,27 +12145,25 @@ Editor.$uid = 0;
         } else {
             return null;
         }
-    };
+    }
 
     /**
      * {:Search.getOptions} For more information on `options`, see [[Search `Search`]].
      * @related Search.getOptions
      * @returns {Object}
      **/
-    this.getLastSearchOptions = function() {
+    getLastSearchOptions() {
         return this.$search.getOptions();
-    };
+    }
 
     /**
      * Attempts to find `needle` within the document. For more information on `options`, see [[Search `Search`]].
-     * @param {String} needle The text to search for (optional)
+     * @param {String|RegExp|Object} needle The text to search for (optional)
      * @param {Object} options An object defining various search properties
      * @param {Boolean} animate If `true` animate scrolling
-     *
-     *
      * @related Search.find
      **/
-    this.find = function(needle, options, animate) {
+    find(needle, options, animate) {
         if (!options)
             options = {};
 
@@ -11446,7 +12200,7 @@ Editor.$uid = 0;
         else
             range.end = range.start;
         this.selection.setRange(range);
-    };
+    }
 
     /**
      * Performs another search for `needle` in the document. For more information on `options`, see [[Search `Search`]].
@@ -11456,9 +12210,9 @@ Editor.$uid = 0;
      *
      * @related Editor.find
      **/
-    this.findNext = function(options, animate) {
+    findNext(options, animate) {
         this.find({skipCurrent: true, backwards: false}, options, animate);
-    };
+    }
 
     /**
      * Performs a search for `needle` backwards. For more information on `options`, see [[Search `Search`]].
@@ -11468,11 +12222,11 @@ Editor.$uid = 0;
      *
      * @related Editor.find
      **/
-    this.findPrevious = function(options, animate) {
+    findPrevious(options, animate) {
         this.find(options, {skipCurrent: true, backwards: true}, animate);
-    };
+    }
 
-    this.revealRange = function(range, animate) {
+    revealRange(range, animate) {
         this.session.unfold(range);
         this.selection.setSelectionRange(range);
 
@@ -11480,31 +12234,31 @@ Editor.$uid = 0;
         this.renderer.scrollSelectionIntoView(range.start, range.end, 0.5);
         if (animate !== false)
             this.renderer.animateScrolling(scrollTop);
-    };
+    }
 
     /**
      * {:UndoManager.undo}
      * @related UndoManager.undo
      **/
-    this.undo = function() {
+    undo() {
         this.session.getUndoManager().undo(this.session);
         this.renderer.scrollCursorIntoView(null, 0.5);
-    };
+    }
 
     /**
      * {:UndoManager.redo}
      * @related UndoManager.redo
      **/
-    this.redo = function() {
+    redo() {
         this.session.getUndoManager().redo(this.session);
         this.renderer.scrollCursorIntoView(null, 0.5);
-    };
+    }
 
     /**
      *
      * Cleans up the entire editor.
      **/
-    this.destroy = function() {
+    destroy() {
         if (this.$toDestroy) {
             this.$toDestroy.forEach(function(el) {
                 el.destroy();
@@ -11520,13 +12274,13 @@ Editor.$uid = 0;
         if (this._$emitInputEvent)
             this._$emitInputEvent.cancel();
         this.removeAllListeners();
-    };
+    }
 
     /**
      * Enables automatic scrolling of the cursor into view when editor itself is inside scrollable element
      * @param {Boolean} enable default true
      **/
-    this.setAutoScrollEditorIntoView = function(enable) {
+    setAutoScrollEditorIntoView(enable) {
         if (!enable)
             return;
         var rect;
@@ -11578,10 +12332,10 @@ Editor.$uid = 0;
             this.renderer.off("afterRender", onAfterRender);
             this.renderer.off("beforeRender", onBeforeRender);
         };
-    };
+    }
 
 
-    this.$resetCursorStyle = function() {
+    $resetCursorStyle() {
         var style = this.$cursorStyle || "ace";
         var cursorLayer = this.renderer.$cursorLayer;
         if (!cursorLayer)
@@ -11589,20 +12343,52 @@ Editor.$uid = 0;
         cursorLayer.setSmoothBlinking(/smooth/.test(style));
         cursorLayer.isBlinking = !this.$readOnly && style != "wide";
         dom.setCssClass(cursorLayer.element, "ace_slim-cursors", /slim/.test(style));
-    };
+    }
 
     /**
      * opens a prompt displaying message
      **/
-    this.prompt = function(message, options, callback) {
+    prompt(message, options, callback) {
         var editor = this;
-        config.loadModule("./ext/prompt", function (module) {
+        config.loadModule("ace/ext/prompt", function (module) {
             module.prompt(editor, message, options, callback);
         });
-    };
+    }
 
-}).call(Editor.prototype);
+}
 
+Editor.$uid = 0;
+Editor.prototype.curOp = null;
+Editor.prototype.prevOp = {};
+// TODO use property on commands instead of this
+Editor.prototype.$mergeableCommands = ["backspace", "del", "insertstring"];
+Editor.prototype.$toggleWordPairs = [
+    ["first", "last"],
+    ["true", "false"],
+    ["yes", "no"],
+    ["width", "height"],
+    ["top", "bottom"],
+    ["right", "left"],
+    ["on", "off"],
+    ["x", "y"],
+    ["get", "set"],
+    ["max", "min"],
+    ["horizontal", "vertical"],
+    ["show", "hide"],
+    ["add", "remove"],
+    ["up", "down"],
+    ["before", "after"],
+    ["even", "odd"],
+    ["in", "out"],
+    ["inside", "outside"],
+    ["next", "previous"],
+    ["increase", "decrease"],
+    ["attach", "detach"],
+    ["&&", "||"],
+    ["==", "!="]
+];
+
+oop.implement(Editor.prototype, EventEmitter);
 
 
 config.defineOptions(Editor.prototype, "editor", {
@@ -11713,6 +12499,53 @@ config.defineOptions(Editor.prototype, "editor", {
             this.$updatePlaceholder();
         }
     },
+    enableKeyboardAccessibility: {
+        set: function(value) {
+            var blurCommand = {
+                name: "blurTextInput",
+                description: "Set focus to the editor content div to allow tabbing through the page",
+                bindKey: "Esc",
+                exec: function(editor) {
+                    editor.blur();
+                    editor.renderer.content.focus();
+                },
+                readOnly: true
+            };
+
+            var focusOnEnterKeyup = function (e) {
+                if (e.target == this.renderer.content && e.keyCode === keys['enter']){
+                    e.stopPropagation();
+                    e.preventDefault();
+                    this.focus();
+                }
+            };
+
+            var keyboardFocusClassName = "ace_keyboard-focus";
+
+            // Prevent focus to be captured when tabbing through the page. When focus is set to the content div, 
+            // press Enter key to give focus to Ace and press Esc to again allow to tab through the page.
+            if (value){
+                this.textInput.getElement().setAttribute("tabindex", -1);
+                this.renderer.content.setAttribute("tabindex", 0);
+                this.renderer.content.classList.add(keyboardFocusClassName);
+                this.renderer.content.setAttribute("aria-label",
+                    "Editor, press Enter key to start editing, press Escape key to exit"
+                );
+
+                this.renderer.content.addEventListener("keyup", focusOnEnterKeyup.bind(this));
+                this.commands.addCommand(blurCommand);
+            } else {
+                this.textInput.getElement().setAttribute("tabindex", 0);
+                this.renderer.content.setAttribute("tabindex", -1);
+                this.renderer.content.classList.remove(keyboardFocusClassName);
+                this.renderer.content.setAttribute("aria-label", "");
+            
+                this.renderer.content.removeEventListener("keyup", focusOnEnterKeyup.bind(this));
+                this.commands.removeCommand(blurCommand);
+            }
+        },
+        initialValue: false
+    },
     customScrollbar: "renderer",
     hScrollBarAlwaysVisible: "renderer",
     vScrollBarAlwaysVisible: "renderer",
@@ -11737,6 +12570,8 @@ config.defineOptions(Editor.prototype, "editor", {
     hasCssTransforms: "renderer",
     maxPixelHeight: "renderer",
     useTextareaForIME: "renderer",
+    useResizeObserver: "renderer",
+    useSvgGutterIcons: "renderer",
 
     scrollSpeed: "$mouseHandler",
     dragDelay: "$mouseHandler",
@@ -11790,14 +12625,14 @@ exports.Editor = Editor;
 
 /***/ }),
 
-/***/ 8552:
+/***/ 18552:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
-var LineWidgets = (__webpack_require__(2269)/* .LineWidgets */ .H);
+var LineWidgets = (__webpack_require__(62269)/* .LineWidgets */ .H);
 var dom = __webpack_require__(6359);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 function binarySearch(array, needle, comparator) {
     var first = 0;
@@ -11982,19 +12817,19 @@ dom.importCssString(`
 
 /***/ }),
 
-/***/ 1105:
+/***/ 11105:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var snippetManager = (__webpack_require__(6629)/* .snippetManager */ .w);
-var Autocomplete = (__webpack_require__(9528)/* .Autocomplete */ .F);
-var config = __webpack_require__(3188);
-var lang = __webpack_require__(124);
-var util = __webpack_require__(3860);
+var snippetManager = (__webpack_require__(56629)/* .snippetManager */ .w);
+var Autocomplete = (__webpack_require__(39528)/* .Autocomplete */ .F2);
+var config = __webpack_require__(13188);
+var lang = __webpack_require__(20124);
+var util = __webpack_require__(83860);
 
-var textCompleter = __webpack_require__(2636);
+var textCompleter = __webpack_require__(52636);
 var keyWordCompleter = {
     getCompletions: function(editor, session, pos, prefix, callback) {
         if (session.$mode.completer) {
@@ -12002,8 +12837,13 @@ var keyWordCompleter = {
         }
         var state = editor.session.getState(pos.row);
         var completions = session.$mode.getCompletions(state, session, pos, prefix);
+        completions = completions.map((el) => {
+            el.completerId = keyWordCompleter.id;
+            return el;
+        });
         callback(null, completions);
-    }
+    },
+    id: "keywordCompleter"
 };
 
 var transformSnippetTooltip = function(str) {
@@ -12039,20 +12879,21 @@ var snippetCompleter = {
                     caption: caption,
                     snippet: s.content,
                     meta: s.tabTrigger && !s.name ? s.tabTrigger + "\u21E5 " : "snippet",
-                    type: "snippet"
+                    completerId: snippetCompleter.id
                 });
             }
         }, this);
         callback(null, completions);
     },
     getDocTooltip: function(item) {
-        if (item.type == "snippet" && !item.docHTML) {
+        if (item.snippet && !item.docHTML) {
             item.docHTML = [
                 "<b>", lang.escapeHTML(item.caption), "</b>", "<hr></hr>",
                 lang.escapeHTML(transformSnippetTooltip(item.snippet))
             ].join("");
         }
-    }
+    },
+    id: "snippetCompleter"
 };
 
 var completers = [snippetCompleter, textCompleter, keyWordCompleter];
@@ -12135,8 +12976,8 @@ var doLiveAutocomplete = function(e) {
     }
 };
 
-var Editor = (__webpack_require__(2880).Editor);
-(__webpack_require__(3188).defineOptions)(Editor.prototype, "editor", {
+var Editor = (__webpack_require__(82880).Editor);
+(__webpack_require__(13188).defineOptions)(Editor.prototype, "editor", {
     enableBasicAutocompletion: {
         set: function(val) {
             if (val) {
@@ -12186,7 +13027,7 @@ var Editor = (__webpack_require__(2880).Editor);
 
 /***/ }),
 
-/***/ 352:
+/***/ 90352:
 /***/ ((module) => {
 
 "use strict";
@@ -12211,26 +13052,29 @@ function getModeForPath(path) {
     return mode;
 }
 
-var Mode = function(name, caption, extensions) {
-    this.name = name;
-    this.caption = caption;
-    this.mode = "ace/mode/" + name;
-    this.extensions = extensions;
-    var re;
-    if (/\^/.test(extensions)) {
-        re = extensions.replace(/\|(\^)?/g, function(a, b){
-            return "$|" + (b ? "^" : "^.*\\.");
-        }) + "$";
-    } else {
-        re = "^.*\\.(" + extensions + ")$";
+class Mode {
+    constructor(name, caption, extensions) {
+        this.name = name;
+        this.caption = caption;
+        this.mode = "ace/mode/" + name;
+        this.extensions = extensions;
+        var re;
+        if (/\^/.test(extensions)) {
+            re = extensions.replace(/\|(\^)?/g, function (a, b) {
+                return "$|" + (b ? "^" : "^.*\\.");
+            }) + "$";
+        }
+        else {
+            re = "^.*\\.(" + extensions + ")$";
+        }
+
+        this.extRe = new RegExp(re, "gi");
     }
 
-    this.extRe = new RegExp(re, "gi");
-};
-
-Mode.prototype.supportsFile = function(filename) {
-    return filename.match(this.extRe);
-};
+    supportsFile(filename) {
+        return filename.match(this.extRe);
+    }
+}
 
 // todo firstlinematch
 var supportedModes = {
@@ -12254,7 +13098,7 @@ var supportedModes = {
     Clojure:     ["clj|cljs"],
     Cobol:       ["CBL|COB"],
     coffee:      ["coffee|cf|cson|^Cakefile"],
-    ColdFusion:  ["cfm"],
+    ColdFusion:  ["cfm|cfc"],
     Crystal:     ["cr"],
     CSharp:      ["cs"],
     Csound_Document: ["csd"],
@@ -12347,9 +13191,10 @@ var supportedModes = {
     Pascal:      ["pas|p"],
     Perl:        ["pl|pm"],
     pgSQL:       ["pgsql"],
-    PHP_Laravel_blade: ["blade.php"],
     PHP:         ["php|inc|phtml|shtml|php3|php4|php5|phps|phpt|aw|ctp|module"],
+    PHP_Laravel_blade: ["blade.php"],
     Pig:         ["pig"],
+    PLSQL:       ["plsql"],
     Powershell:  ["ps1"],
     Praat:       ["praat|praatscript|psc|proc"],
     Prisma:      ["prisma"],
@@ -12457,8 +13302,8 @@ module.exports = {
 "use strict";
 
 
-var keyUtil = __webpack_require__(1797);
-var useragent = __webpack_require__(618);
+var keyUtil = __webpack_require__(11797);
+var useragent = __webpack_require__(50618);
 var KEY_MODS = keyUtil.KEY_MODS;
 
 function HashHandler(config, platform) {
@@ -12683,30 +13528,31 @@ exports.MultiHashHandler = MultiHashHandler;
 
 /***/ }),
 
-/***/ 8229:
+/***/ 78229:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var keyUtil  = __webpack_require__(1797);
-var event = __webpack_require__(7989);
+var keyUtil  = __webpack_require__(11797);
+var event = __webpack_require__(17989);
 
-var KeyBinding = function(editor) {
-    this.$editor = editor;
-    this.$data = {editor: editor};
-    this.$handlers = [];
-    this.setDefaultHandler(editor.commands);
-};
 
-(function() {
-    this.setDefaultHandler = function(kb) {
+class KeyBinding {
+    constructor(editor) {
+        this.$editor = editor;
+        this.$data = {editor: editor};
+        this.$handlers = [];
+        this.setDefaultHandler(editor.commands);
+    }
+    
+    setDefaultHandler(kb) {
         this.removeKeyboardHandler(this.$defaultHandler);
         this.$defaultHandler = kb;
         this.addKeyboardHandler(kb, 0);
-    };
+    }
 
-    this.setKeyboardHandler = function(kb) {
+    setKeyboardHandler(kb) {
         var h = this.$handlers;
         if (h[h.length - 1] == kb)
             return;
@@ -12715,9 +13561,9 @@ var KeyBinding = function(editor) {
             this.removeKeyboardHandler(h[h.length - 1]);
 
         this.addKeyboardHandler(kb, 1);
-    };
+    }
 
-    this.addKeyboardHandler = function(kb, pos) {
+    addKeyboardHandler(kb, pos) {
         if (!kb)
             return;
         if (typeof kb == "function" && !kb.handleKeyboard)
@@ -12733,30 +13579,30 @@ var KeyBinding = function(editor) {
 
         if (i == -1 && kb.attach)
             kb.attach(this.$editor);
-    };
+    }
 
-    this.removeKeyboardHandler = function(kb) {
+    removeKeyboardHandler(kb) {
         var i = this.$handlers.indexOf(kb);
         if (i == -1)
             return false;
         this.$handlers.splice(i, 1);
         kb.detach && kb.detach(this.$editor);
         return true;
-    };
+    }
 
-    this.getKeyboardHandler = function() {
+    getKeyboardHandler() {
         return this.$handlers[this.$handlers.length - 1];
-    };
+    }
     
-    this.getStatusText = function() {
+    getStatusText() {
         var data = this.$data;
         var editor = data.editor;
         return this.$handlers.map(function(h) {
             return h.getStatusText && h.getStatusText(editor, data) || "";
         }).filter(Boolean).join(" ");
-    };
+    }
 
-    this.$callKeyboardHandlers = function(hashId, keyString, keyCode, e) {
+    $callKeyboardHandlers(hashId, keyString, keyCode, e) {
         var toExecute;
         var success = false;
         var commands = this.$editor.commands;
@@ -12793,42 +13639,42 @@ var KeyBinding = function(editor) {
             this.$editor._signal("keyboardActivity", toExecute);
         
         return success;
-    };
+    }
 
-    this.onCommandKey = function(e, hashId, keyCode) {
+    onCommandKey(e, hashId, keyCode) {
         var keyString = keyUtil.keyCodeToString(keyCode);
         return this.$callKeyboardHandlers(hashId, keyString, keyCode, e);
-    };
+    }
 
-    this.onTextInput = function(text) {
+    onTextInput(text) {
         return this.$callKeyboardHandlers(-1, text);
-    };
+    }
 
-}).call(KeyBinding.prototype);
+}
 
 exports.M = KeyBinding;
 
 
 /***/ }),
 
-/***/ 1063:
+/***/ 41063:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_unused_export__;
 
 
-var event = __webpack_require__(7989);
-var useragent = __webpack_require__(618);
+var event = __webpack_require__(17989);
+var useragent = __webpack_require__(50618);
 var dom = __webpack_require__(6359);
-var lang = __webpack_require__(124);
-var clipboard = __webpack_require__(6311);
+var lang = __webpack_require__(20124);
+var clipboard = __webpack_require__(76311);
 var BROKEN_SETDATA = useragent.isChrome < 18;
 var USE_IE_MIME_TYPE =  useragent.isIE;
 var HAS_FOCUS_ARGS = useragent.isChrome > 63;
 var MAX_LINE_LENGTH = 400;
 
-var KEYS = __webpack_require__(1797);
+var KEYS = __webpack_require__(11797);
 var MODS = KEYS.KEY_MODS;
 var isIOS = useragent.isIOS;
 var valueResetRegex = isIOS ? /\s/ : /\n/;
@@ -12866,11 +13712,29 @@ var TextInput = function(parentNode, host) {
     // FOCUS
     // ie9 throws error if document.activeElement is accessed too soon
     try { var isFocused = document.activeElement === text; } catch(e) {}
-    
+
+    this.setAriaOptions = function(options) {
+        if (options.activeDescendant) {
+            text.setAttribute("aria-haspopup", "true");
+            text.setAttribute("aria-autocomplete", options.inline ? "both" : "list");
+            text.setAttribute("aria-activedescendant", options.activeDescendant);
+        } else {
+            text.setAttribute("aria-haspopup", "false");
+            text.setAttribute("aria-autocomplete", "both");
+            text.removeAttribute("aria-activedescendant");
+        }
+        if (options.role) {
+            text.setAttribute("role", options.role);
+        }
+    };
+    this.setAriaOptions({role: "textbox"});
+
     event.addListener(text, "blur", function(e) {
         if (ignoreFocusEvents) return;
         host.onBlur(e);
         isFocused = false;
+        if (isMobile && !isIOS)
+            document.removeEventListener("selectionchange", detectSelectionChange);
     }, host);
     event.addListener(text, "focus", function(e) {
         if (ignoreFocusEvents) return;
@@ -12887,6 +13751,8 @@ var TextInput = function(parentNode, host) {
             setTimeout(resetSelection);
         else
             resetSelection();
+        if (isMobile && !isIOS)
+            document.addEventListener("selectionchange", detectSelectionChange);
     }, host);
     this.$focusScroll = false;
     this.focus = function() {
@@ -13071,6 +13937,26 @@ var TextInput = function(parentNode, host) {
             resetSelection();
         }
     };
+
+    function detectSelectionChange(e) {
+        if (!text || !text.parentNode)
+            document.removeEventListener("selectionchange", detectSelectionChange);
+        if (inComposition) return;
+
+        if (text.selectionStart !== text.selectionEnd) return;
+        var startDiff = text.selectionStart - lastSelectionStart;
+        var oldLenght = lastSelectionEnd - lastSelectionStart;
+        if (startDiff > 0) {
+            startDiff = Math.max(startDiff - oldLenght, 1);
+        } else if (startDiff === 0 && oldLenght) {
+            startDiff = -1;
+        }
+        var repeat = Math.abs(startDiff);
+        var key = startDiff > 0 ? KEYS.right : KEYS.left;
+        for (var i = 0; i < repeat; i++) {
+            host.onCommandKey({}, 0, key);
+        }
+    }
 
     var inputHandler = null;
     this.setInputHandler = function(cb) {inputHandler = cb;};
@@ -13551,7 +14437,7 @@ __webpack_unused_export__ = function(_isMobile, _isIOS) {
 
 /***/ }),
 
-/***/ 1175:
+/***/ 21175:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -13559,31 +14445,31 @@ __webpack_unused_export__ = function(_isMobile, _isIOS) {
 
 var dom = __webpack_require__(6359);
 
-var Cursor = function(parentEl) {
-    this.element = dom.createElement("div");
-    this.element.className = "ace_layer ace_cursor-layer";
-    parentEl.appendChild(this.element);
-    
-    this.isVisible = false;
-    this.isBlinking = true;
-    this.blinkInterval = 1000;
-    this.smoothBlinking = false;
 
-    this.cursors = [];
-    this.cursor = this.addCursor();
-    dom.addCssClass(this.element, "ace_hidden-cursors");
-    this.$updateCursors = this.$updateOpacity.bind(this);
-};
+class Cursor {
+    constructor(parentEl) {
+        this.element = dom.createElement("div");
+        this.element.className = "ace_layer ace_cursor-layer";
+        parentEl.appendChild(this.element);
 
-(function() {
+        this.isVisible = false;
+        this.isBlinking = true;
+        this.blinkInterval = 1000;
+        this.smoothBlinking = false;
+
+        this.cursors = [];
+        this.cursor = this.addCursor();
+        dom.addCssClass(this.element, "ace_hidden-cursors");
+        this.$updateCursors = this.$updateOpacity.bind(this);
+    }
     
-    this.$updateOpacity = function(val) {
+    $updateOpacity(val) {
         var cursors = this.cursors;
         for (var i = cursors.length; i--; )
             dom.setStyle(cursors[i].style, "opacity", val ? "" : "0");
-    };
+    }
 
-    this.$startCssAnimation = function() {
+    $startCssAnimation() {
         var cursors = this.cursors;
         for (var i = cursors.length; i--; )
             cursors[i].style.animationDuration = this.blinkInterval + "ms";
@@ -13594,74 +14480,73 @@ var Cursor = function(parentEl) {
                 dom.addCssClass(this.element, "ace_animate-blinking");
             }
         }.bind(this));
-    };
+    }
     
-    this.$stopCssAnimation = function() {
+    $stopCssAnimation() {
         this.$isAnimating = false;
         dom.removeCssClass(this.element, "ace_animate-blinking");
-    };
-
-    this.$padding = 0;
-    this.setPadding = function(padding) {
+    }
+    
+    setPadding(padding) {
         this.$padding = padding;
-    };
+    }
 
-    this.setSession = function(session) {
+    setSession(session) {
         this.session = session;
-    };
+    }
 
-    this.setBlinking = function(blinking) {
+    setBlinking(blinking) {
         if (blinking != this.isBlinking) {
             this.isBlinking = blinking;
             this.restartTimer();
         }
-    };
+    }
 
-    this.setBlinkInterval = function(blinkInterval) {
+    setBlinkInterval(blinkInterval) {
         if (blinkInterval != this.blinkInterval) {
             this.blinkInterval = blinkInterval;
             this.restartTimer();
         }
-    };
+    }
 
-    this.setSmoothBlinking = function(smoothBlinking) {
+    setSmoothBlinking(smoothBlinking) {
         if (smoothBlinking != this.smoothBlinking) {
             this.smoothBlinking = smoothBlinking;
             dom.setCssClass(this.element, "ace_smooth-blinking", smoothBlinking);
             this.$updateCursors(true);
             this.restartTimer();
         }
-    };
+    }
 
-    this.addCursor = function() {
+    addCursor() {
         var el = dom.createElement("div");
         el.className = "ace_cursor";
         this.element.appendChild(el);
         this.cursors.push(el);
         return el;
-    };
+    }
 
-    this.removeCursor = function() {
+    removeCursor() {
         if (this.cursors.length > 1) {
             var el = this.cursors.pop();
             el.parentNode.removeChild(el);
             return el;
         }
-    };
+    }
 
-    this.hideCursor = function() {
+    hideCursor() {
         this.isVisible = false;
         dom.addCssClass(this.element, "ace_hidden-cursors");
         this.restartTimer();
-    };
+    }
 
-    this.showCursor = function() {
+    showCursor() {
         this.isVisible = true;
         dom.removeCssClass(this.element, "ace_hidden-cursors");
         this.restartTimer();
-    };
+    }
 
-    this.restartTimer = function() {
+    restartTimer() {
         var update = this.$updateCursors;
         clearInterval(this.intervalId);
         clearTimeout(this.timeoutId);
@@ -13703,9 +14588,9 @@ var Cursor = function(parentEl) {
             }, this.blinkInterval);
             blink();
         }
-    };
+    }
 
-    this.getPixelPosition = function(position, onScreen) {
+    getPixelPosition(position, onScreen) {
         if (!this.config || !this.session)
             return {left : 0, top : 0};
 
@@ -13720,13 +14605,13 @@ var Cursor = function(parentEl) {
             this.config.lineHeight;
 
         return {left : cursorLeft, top : cursorTop};
-    };
+    }
 
-    this.isCursorInView = function(pixelPos, config) {
+    isCursorInView(pixelPos, config) {
         return pixelPos.top >= 0 && pixelPos.top < config.maxHeight;
-    };
+    }
 
-    this.update = function(config) {
+    update(config) {
         this.config = config;
 
         var selections = this.session.$selectionMarkers;
@@ -13768,11 +14653,9 @@ var Cursor = function(parentEl) {
         // cache for textarea and gutter highlight
         this.$pixelPos = pixelPos;
         this.restartTimer();
-    };
-    
-    this.drawCursor = null;
+    }
 
-    this.$setOverwrite = function(overwrite) {
+    $setOverwrite(overwrite) {
         if (overwrite != this.overwrite) {
             this.overwrite = overwrite;
             if (overwrite)
@@ -13780,68 +14663,70 @@ var Cursor = function(parentEl) {
             else
                 dom.removeCssClass(this.element, "ace_overwrite-cursors");
         }
-    };
+    }
 
-    this.destroy = function() {
+    destroy() {
         clearInterval(this.intervalId);
         clearTimeout(this.timeoutId);
-    };
+    }
 
-}).call(Cursor.prototype);
+}
+
+Cursor.prototype.$padding = 0;
+Cursor.prototype.drawCursor = null;
+
 
 exports.C = Cursor;
 
 
 /***/ }),
 
-/***/ 2113:
+/***/ 22113:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 var dom = __webpack_require__(6359);
-var oop = __webpack_require__(9359);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var oop = __webpack_require__(89359);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
-var Decorator = function (parent, renderer) {
-    this.canvas = dom.createElement("canvas");
-    this.renderer = renderer;
-    this.pixelRatio = 1;
-    this.maxHeight = renderer.layerConfig.maxHeight;
-    this.lineHeight = renderer.layerConfig.lineHeight;
-    this.canvasHeight = parent.parent.scrollHeight;
-    this.heightRatio = this.canvasHeight / this.maxHeight;
-    this.canvasWidth = parent.width;
-    this.minDecorationHeight = (2 * this.pixelRatio) | 0;
-    this.halfMinDecorationHeight = (this.minDecorationHeight / 2) | 0;
+class Decorator {
+    constructor(parent, renderer) {
+        this.canvas = dom.createElement("canvas");
+        this.renderer = renderer;
+        this.pixelRatio = 1;
+        this.maxHeight = renderer.layerConfig.maxHeight;
+        this.lineHeight = renderer.layerConfig.lineHeight;
+        this.canvasHeight = parent.parent.scrollHeight;
+        this.heightRatio = this.canvasHeight / this.maxHeight;
+        this.canvasWidth = parent.width;
+        this.minDecorationHeight = (2 * this.pixelRatio) | 0;
+        this.halfMinDecorationHeight = (this.minDecorationHeight / 2) | 0;
 
-    this.canvas.width = this.canvasWidth;
-    this.canvas.height = this.canvasHeight;
-    this.canvas.style.top = 0 + "px";
-    this.canvas.style.right = 0 + "px";
-    this.canvas.style.zIndex = 7 + "px";
-    this.canvas.style.position = "absolute";
-    this.colors = {};
-    this.colors.dark = {
-        "error": "rgba(255, 18, 18, 1)",
-        "warning": "rgba(18, 136, 18, 1)",
-        "info": "rgba(18, 18, 136, 1)"
-    };
+        this.canvas.width = this.canvasWidth;
+        this.canvas.height = this.canvasHeight;
+        this.canvas.style.top = 0 + "px";
+        this.canvas.style.right = 0 + "px";
+        this.canvas.style.zIndex = 7 + "px";
+        this.canvas.style.position = "absolute";
+        this.colors = {};
+        this.colors.dark = {
+            "error": "rgba(255, 18, 18, 1)",
+            "warning": "rgba(18, 136, 18, 1)",
+            "info": "rgba(18, 18, 136, 1)"
+        };
 
-    this.colors.light = {
-        "error": "rgb(255,51,51)",
-        "warning": "rgb(32,133,72)",
-        "info": "rgb(35,68,138)"
-    };
+        this.colors.light = {
+            "error": "rgb(255,51,51)",
+            "warning": "rgb(32,133,72)",
+            "info": "rgb(35,68,138)"
+        };
 
-    parent.element.appendChild(this.canvas);
+        parent.element.appendChild(this.canvas);
 
-};
-
-(function () {
-    oop.implement(this, EventEmitter);
-
-    this.$updateDecorators = function (config) {
+    }
+    
+    $updateDecorators(config) {
         var colors = (this.renderer.theme.isDark === true) ? this.colors.dark : this.colors.light;
         if (config) {
             this.maxHeight = config.maxHeight;
@@ -13908,9 +14793,9 @@ var Decorator = function (parent, renderer) {
             ctx.fillRect(0, currentY, this.canvasWidth, 2);
         }
 
-    };
+    }
 
-    this.compensateFoldRows = function (row, foldData) {
+    compensateFoldRows(row, foldData) {
         let compensateFold = 0;
         if (foldData && foldData.length > 0) {
             for (let j = 0; j < foldData.length; j++) {
@@ -13923,60 +14808,59 @@ var Decorator = function (parent, renderer) {
             }
         }
         return compensateFold;
-    };
-}.call(Decorator.prototype));
+    }
+}
+
+oop.implement(Decorator.prototype, EventEmitter);
 
 exports.S = Decorator;
 
+
 /***/ }),
 
-/***/ 9506:
+/***/ 89506:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
-var lang = __webpack_require__(124);
-var event = __webpack_require__(7989);
-var useragent = __webpack_require__(618);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var lang = __webpack_require__(20124);
+var event = __webpack_require__(17989);
+var useragent = __webpack_require__(50618);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
-var DEFAULT_CHAR_COUNT = 250;
+var CHAR_COUNT = 512;
 var USE_OBSERVER = typeof ResizeObserver == "function";
 var L = 200;
 
-var FontMetrics = exports.c = function(parentEl, charCount) {
-    this.charCount = charCount || DEFAULT_CHAR_COUNT;
+class FontMetrics {
+    
+    constructor(parentEl) {
+        this.el = dom.createElement("div");
+        this.$setMeasureNodeStyles(this.el.style, true);
 
-    this.el = dom.createElement("div");
-    this.$setMeasureNodeStyles(this.el.style, true);
+        this.$main = dom.createElement("div");
+        this.$setMeasureNodeStyles(this.$main.style);
 
-    this.$main = dom.createElement("div");
-    this.$setMeasureNodeStyles(this.$main.style);
+        this.$measureNode = dom.createElement("div");
+        this.$setMeasureNodeStyles(this.$measureNode.style);
 
-    this.$measureNode = dom.createElement("div");
-    this.$setMeasureNodeStyles(this.$measureNode.style);
 
-    this.el.appendChild(this.$main);
-    this.el.appendChild(this.$measureNode);
-    parentEl.appendChild(this.el);
+        this.el.appendChild(this.$main);
+        this.el.appendChild(this.$measureNode);
+        parentEl.appendChild(this.el);
 
-    this.$measureNode.textContent = lang.stringRepeat("X", this.charCount);
+        this.$measureNode.textContent = lang.stringRepeat("X", CHAR_COUNT);
 
-    this.$characterSize = {width: 0, height: 0};
+        this.$characterSize = {width: 0, height: 0};
 
-    if (USE_OBSERVER)
-        this.$addObserver();
-    else
-        this.checkForSizeChanges();
-};
 
-(function() {
-
-    oop.implement(this, EventEmitter);
-
-    this.$characterSize = {width: 0, height: 0};
-
-    this.$setMeasureNodeStyles = function(style, isRoot) {
+        if (USE_OBSERVER)
+            this.$addObserver();
+        else
+            this.checkForSizeChanges();
+    }
+    
+    $setMeasureNodeStyles(style, isRoot) {
         style.width = style.height = "auto";
         style.left = style.top = "0px";
         style.visibility = "hidden";
@@ -13989,9 +14873,9 @@ var FontMetrics = exports.c = function(parentEl, charCount) {
             style.font = "inherit";
         }
         style.overflow = isRoot ? "hidden" : "visible";
-    };
+    }
 
-    this.checkForSizeChanges = function(size) {
+    checkForSizeChanges(size) {
         if (size === undefined)
             size = this.$measureSizes();
         if (size && (this.$characterSize.width !== size.width || this.$characterSize.height !== size.height)) {
@@ -14003,100 +14887,93 @@ var FontMetrics = exports.c = function(parentEl, charCount) {
             this.allowBoldFonts = boldSize && boldSize.width === size.width && boldSize.height === size.height;
             this._emit("changeCharacterSize", {data: size});
         }
-    };
-
-    this.$addObserver = function() {
+    }
+    
+    $addObserver() {
         var self = this;
         this.$observer = new window.ResizeObserver(function(e) {
             // e[0].contentRect is broken on safari when zoomed;
             self.checkForSizeChanges();
         });
         this.$observer.observe(this.$measureNode);
-    };
+    }
 
-    this.$pollSizeChanges = function() {
+    $pollSizeChanges() {
         if (this.$pollSizeChangesTimer || this.$observer)
             return this.$pollSizeChangesTimer;
         var self = this;
-
+        
         return this.$pollSizeChangesTimer = event.onIdle(function cb() {
             self.checkForSizeChanges();
             event.onIdle(cb, 500);
         }, 500);
-    };
-
-    this.setPolling = function(val) {
+    }
+    
+    setPolling(val) {
         if (val) {
             this.$pollSizeChanges();
         } else if (this.$pollSizeChangesTimer) {
             clearInterval(this.$pollSizeChangesTimer);
             this.$pollSizeChangesTimer = 0;
         }
-    };
+    }
 
-    this.$measureSizes = function(node) {
-        node = node || this.$measureNode;
-
-        // Avoid `Element.clientWidth` since it is rounded to an integer (see
-        // https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth).
-        // Using it here can result in a noticeable cursor offset for long lines.
-        const rect = node.getBoundingClientRect();
-        const charSize = {
-            height: rect.height,
-            width: rect.width / this.charCount
+    $measureSizes(node) {
+        var size = {
+            height: (node || this.$measureNode).clientHeight,
+            width: (node || this.$measureNode).clientWidth / CHAR_COUNT
         };
-
+        
         // Size and width can be null if the editor is not visible or
         // detached from the document
-        if (charSize.width === 0 || charSize.height === 0)
+        if (size.width === 0 || size.height === 0)
             return null;
-        return charSize;
-    };
+        return size;
+    }
 
-    this.$measureCharWidth = function(ch) {
-        this.$main.textContent = lang.stringRepeat(ch, this.charCount);
-        // Avoid `Element.clientWidth` since it is rounded to an integer (see
-        // https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth).
+    $measureCharWidth(ch) {
+        this.$main.textContent = lang.stringRepeat(ch, CHAR_COUNT);
         var rect = this.$main.getBoundingClientRect();
-        return rect.width / this.charCount;
-    };
-
-    this.getCharacterWidth = function(ch) {
+        return rect.width / CHAR_COUNT;
+    }
+    
+    getCharacterWidth(ch) {
         var w = this.charSizes[ch];
         if (w === undefined) {
             w = this.charSizes[ch] = this.$measureCharWidth(ch) / this.$characterSize.width;
         }
         return w;
-    };
+    }
 
-    this.destroy = function() {
+    destroy() {
         clearInterval(this.$pollSizeChangesTimer);
         if (this.$observer)
             this.$observer.disconnect();
         if (this.el && this.el.parentNode)
             this.el.parentNode.removeChild(this.el);
-    };
+    }
 
-
-    this.$getZoom = function getZoom(element) {
+    
+    $getZoom(element) {
         if (!element || !element.parentElement) return 1;
-        return (window.getComputedStyle(element).zoom || 1) * getZoom(element.parentElement);
-    };
-    this.$initTransformMeasureNodes = function() {
+        return (window.getComputedStyle(element).zoom || 1) * this.$getZoom(element.parentElement);
+    }
+    
+    $initTransformMeasureNodes() {
         var t = function(t, l) {
             return ["div", {
                 style: "position: absolute;top:" + t + "px;left:" + l + "px;"
             }];
         };
         this.els = dom.buildDom([t(0, 0), t(L, 0), t(0, L), t(L, L)], this.el);
-    };
+    }
     // general transforms from element coordinates x to screen coordinates u have the form
     // | m1[0] m2[0] t[0] |   | x |       | u |
     // | m1[1] m2[1] t[1] | . | y |  == k | v |
     // | h[0]  h[1]  1    |   | 1 |       | 1 |
     // this function finds the coeeficients of the matrix using positions of four points
     //  
-    this.transformCoordinates = function(clientPos, elPos) {
+    transformCoordinates(clientPos, elPos) {
         if (clientPos) {
             var zoom = this.$getZoom(this.el);
             clientPos = mul(1 / zoom, clientPos);
@@ -14114,7 +14991,7 @@ var FontMetrics = exports.c = function(parentEl, charCount) {
 
         if (!this.els)
             this.$initTransformMeasureNodes();
-
+        
         function p(el) {
             var r = el.getBoundingClientRect();
             return [r.left, r.top];
@@ -14129,7 +15006,7 @@ var FontMetrics = exports.c = function(parentEl, charCount) {
 
         var m1 = mul(1 + h[0], sub(b, a));
         var m2 = mul(1 + h[1], sub(c, a));
-
+        
         if (elPos) {
             var x = elPos;
             var k = h[0] * x[0] / L + h[1] * x[1] / L + 1;
@@ -14139,65 +15016,67 @@ var FontMetrics = exports.c = function(parentEl, charCount) {
         var u = sub(clientPos, a);
         var f = solve(sub(m1, mul(h[0], u)), sub(m2, mul(h[1], u)), u);
         return mul(L, f);
-    };
+    }
+    
+}
+FontMetrics.prototype.$characterSize = {width: 0, height: 0};
 
-}).call(FontMetrics.prototype);
+oop.implement(FontMetrics.prototype, EventEmitter);
+
+exports.c = FontMetrics;
 
 
 /***/ }),
 
-/***/ 1479:
+/***/ 81479:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
 var dom = __webpack_require__(6359);
-var oop = __webpack_require__(9359);
-var lang = __webpack_require__(124);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var Lines = (__webpack_require__(5388)/* .Lines */ .x);
+var oop = __webpack_require__(89359);
+var lang = __webpack_require__(20124);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var Lines = (__webpack_require__(55388)/* .Lines */ .x);
 
-var Gutter = function(parentEl) {
-    this.element = dom.createElement("div");
-    this.element.className = "ace_layer ace_gutter-layer";
-    parentEl.appendChild(this.element);
-    this.setShowFoldWidgets(this.$showFoldWidgets);
-    
-    this.gutterWidth = 0;
+class Gutter{
+    constructor(parentEl) {
+        this.element = dom.createElement("div");
+        this.element.className = "ace_layer ace_gutter-layer";
+        parentEl.appendChild(this.element);
+        this.setShowFoldWidgets(this.$showFoldWidgets);
 
-    this.$annotations = [];
-    this.$updateAnnotations = this.$updateAnnotations.bind(this);
-    
-    this.$lines = new Lines(this.element);
-    this.$lines.$offsetCoefficient = 1;
-};
+        this.gutterWidth = 0;
 
-(function() {
+        this.$annotations = [];
+        this.$updateAnnotations = this.$updateAnnotations.bind(this);
 
-    oop.implement(this, EventEmitter);
+        this.$lines = new Lines(this.element);
+        this.$lines.$offsetCoefficient = 1;
+    }
 
-    this.setSession = function(session) {
+    setSession(session) {
         if (this.session)
             this.session.off("change", this.$updateAnnotations);
         this.session = session;
         if (session)
             session.on("change", this.$updateAnnotations);
-    };
+    }
 
-    this.addGutterDecoration = function(row, className) {
+    addGutterDecoration(row, className) {
         if (window.console)
             console.warn && console.warn("deprecated use session.addGutterDecoration");
         this.session.addGutterDecoration(row, className);
-    };
+    }
 
-    this.removeGutterDecoration = function(row, className) {
+    removeGutterDecoration(row, className) {
         if (window.console)
             console.warn && console.warn("deprecated use session.removeGutterDecoration");
         this.session.removeGutterDecoration(row, className);
-    };
+    }
 
-    this.setAnnotations = function(annotations) {
+    setAnnotations(annotations) {
         // iterate over sparse array
         this.$annotations = [];
         for (var i = 0; i < annotations.length; i++) {
@@ -14205,28 +15084,30 @@ var Gutter = function(parentEl) {
             var row = annotation.row;
             var rowInfo = this.$annotations[row];
             if (!rowInfo)
-                rowInfo = this.$annotations[row] = {text: []};
+                rowInfo = this.$annotations[row] = {text: [], type: []};
            
             var annoText = annotation.text;
+            var annoType = annotation.type;
             annoText = annoText ? lang.escapeHTML(annoText) : annotation.html || "";
 
-            if (rowInfo.text.indexOf(annoText) === -1)
+            if (rowInfo.text.indexOf(annoText) === -1){
                 rowInfo.text.push(annoText);
+                rowInfo.type.push(annoType);
+            }
 
-            var type = annotation.type;
             var className = annotation.className;
             if (className) 
                 rowInfo.className = className;
-            else if (type == "error")
+            else if (annoType == "error")
                 rowInfo.className = " ace_error";
-            else if (type == "warning" && rowInfo.className != " ace_error")
+            else if (annoType == "warning" && rowInfo.className != " ace_error")
                 rowInfo.className = " ace_warning";
-            else if (type == "info" && (!rowInfo.className))
+            else if (annoType == "info" && (!rowInfo.className))
                 rowInfo.className = " ace_info";
         }
-    };
+    }
 
-    this.$updateAnnotations = function (delta) {
+    $updateAnnotations(delta) {
         if (!this.$annotations.length)
             return;
         var firstRow = delta.start.row;
@@ -14240,9 +15121,9 @@ var Gutter = function(parentEl) {
             args.unshift(firstRow, 1);
             this.$annotations.splice.apply(this.$annotations, args);
         }
-    };
+    }
 
-    this.update = function(config) {
+    update(config) {
         this.config = config;
         
         var session = this.session;
@@ -14290,9 +15171,9 @@ var Gutter = function(parentEl) {
         
         this._signal("afterRender");
         this.$updateGutterWidth(config);
-    };
+    }
 
-    this.$updateGutterWidth = function(config) {
+    $updateGutterWidth(config) {
         var session = this.session;
         
         var gutterRenderer = session.gutterRenderer || this.$renderer;
@@ -14315,9 +15196,9 @@ var Gutter = function(parentEl) {
             this.element.style.width = Math.ceil(this.gutterWidth) + "px";
             this._signal("changeGutterWidth", gutterWidth);
         }
-    };
+    }
     
-    this.$updateCursorRow = function() {
+    $updateCursorRow() {
         if (!this.$highlightGutterLine)
             return;
             
@@ -14326,9 +15207,9 @@ var Gutter = function(parentEl) {
             return;
         
         this.$cursorRow = position.row;
-    };
+    }
     
-    this.updateLineHighlight = function() {
+    updateLineHighlight() {
         if (!this.$highlightGutterLine)
             return;
         var row = this.session.selection.cursor.row;
@@ -14355,9 +15236,9 @@ var Gutter = function(parentEl) {
                 break;
             }
         }
-    };
+    }
     
-    this.scrollLines = function(config) {
+    scrollLines(config) {
         var oldConfig = this.config;
         this.config = config;
         
@@ -14398,9 +15279,9 @@ var Gutter = function(parentEl) {
         
         this._signal("afterRender");
         this.$updateGutterWidth(config);
-    };
+    }
 
-    this.$renderLines = function(config, firstRow, lastRow) {
+    $renderLines(config, firstRow, lastRow) {
         var fragment = [];
         var row = firstRow;
         var foldLine = this.session.getNextFoldLine(row);
@@ -14422,15 +15303,16 @@ var Gutter = function(parentEl) {
             row++;
         }
         return fragment;
-    };
+    }
     
-    this.$renderCell = function(cell, config, fold, row) {
+    $renderCell(cell, config, fold, row) {
         var element = cell.element;
         
         var session = this.session;
         
         var textNode = element.childNodes[0];
         var foldWidget = element.childNodes[1];
+        var annotationNode = element.childNodes[2];
 
         var firstLineNumber = session.$firstLineNumber;
         
@@ -14440,7 +15322,27 @@ var Gutter = function(parentEl) {
         var foldWidgets = this.$showFoldWidgets && session.foldWidgets;
         var foldStart = fold ? fold.start.row : Number.MAX_VALUE;
         
-        var className = "ace_gutter-cell ";
+        var lineHeight = config.lineHeight + "px";
+
+        var className;
+        if (this.$useSvgGutterIcons){
+            className = "ace_gutter-cell_svg-icons ";
+
+            if (this.$annotations[row]){
+                annotationNode.className = "ace_icon_svg" + this.$annotations[row].className;
+
+                dom.setStyle(annotationNode.style, "height", lineHeight);
+                dom.setStyle(annotationNode.style, "display", "block");
+            }
+            else {
+                dom.setStyle(annotationNode.style, "display", "none");
+            }
+        }
+        else {
+            className = "ace_gutter-cell ";
+            dom.setStyle(annotationNode.style, "display", "none");
+        }
+
         if (this.$highlightGutterLine) {
             if (row == this.$cursorRow || (fold && row < this.$cursorRow && row >= foldStart &&  this.$cursorRow <= fold.end.row)) {
                 className += "ace_gutter-active-line ";
@@ -14477,8 +15379,7 @@ var Gutter = function(parentEl) {
             if (foldWidget.className != className)
                 foldWidget.className = className;
 
-            var foldHeight = config.lineHeight + "px";
-            dom.setStyle(foldWidget.style, "height", foldHeight);
+            dom.setStyle(foldWidget.style, "height", lineHeight);
             dom.setStyle(foldWidget.style, "display", "inline-block");
         } else {
             if (foldWidget) {
@@ -14499,31 +15400,25 @@ var Gutter = function(parentEl) {
         
         cell.text = text;
         return cell;
-    };
-
-    this.$fixedWidth = false;
+    }
     
-    this.$highlightGutterLine = true;
-    this.$renderer = "";
-    this.setHighlightGutterLine = function(highlightGutterLine) {
+    setHighlightGutterLine(highlightGutterLine) {
         this.$highlightGutterLine = highlightGutterLine;
-    };
+    }
     
-    this.$showLineNumbers = true;
-    this.$renderer = "";
-    this.setShowLineNumbers = function(show) {
+
+    setShowLineNumbers(show) {
         this.$renderer = !show && {
             getWidth: function() {return 0;},
             getText: function() {return "";}
         };
-    };
+    }
     
-    this.getShowLineNumbers = function() {
+    getShowLineNumbers() {
         return this.$showLineNumbers;
-    };
+    }
     
-    this.$showFoldWidgets = true;
-    this.setShowFoldWidgets = function(show) {
+    setShowFoldWidgets(show) {
         if (show)
             dom.addCssClass(this.element, "ace_folding-enabled");
         else
@@ -14531,13 +15426,13 @@ var Gutter = function(parentEl) {
 
         this.$showFoldWidgets = show;
         this.$padding = null;
-    };
+    }
     
-    this.getShowFoldWidgets = function() {
+    getShowFoldWidgets() {
         return this.$showFoldWidgets;
-    };
+    }
 
-    this.$computePadding = function() {
+    $computePadding() {
         if (!this.element.firstChild)
             return {left: 0, right: 0};
         var style = dom.computedStyle(this.element.firstChild);
@@ -14547,18 +15442,26 @@ var Gutter = function(parentEl) {
         this.$padding.right = (parseInt(style.borderRightWidth) || 0)
             + (parseInt(style.paddingRight) || 0);
         return this.$padding;
-    };
+    }
 
-    this.getRegion = function(point) {
+    getRegion(point) {
         var padding = this.$padding || this.$computePadding();
         var rect = this.element.getBoundingClientRect();
         if (point.x < padding.left + rect.left)
             return "markers";
         if (this.$showFoldWidgets && point.x > rect.right - padding.right)
             return "foldWidgets";
-    };
+    }
 
-}).call(Gutter.prototype);
+}
+
+Gutter.prototype.$fixedWidth = false;
+Gutter.prototype.$highlightGutterLine = true;
+Gutter.prototype.$renderer = "";
+Gutter.prototype.$showLineNumbers = true;
+Gutter.prototype.$showFoldWidgets = true;
+
+oop.implement(Gutter.prototype, EventEmitter);
 
 function onCreateCell(element) {
     var textNode = document.createTextNode('');
@@ -14566,6 +15469,9 @@ function onCreateCell(element) {
     
     var foldWidget = dom.createElement("span");
     element.appendChild(foldWidget);
+
+    var annotationNode = dom.createElement("span");
+    element.appendChild(annotationNode);
     
     return element;
 }
@@ -14575,7 +15481,7 @@ exports.T = Gutter;
 
 /***/ }),
 
-/***/ 5388:
+/***/ 55388:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -14583,57 +15489,56 @@ exports.T = Gutter;
 
 var dom = __webpack_require__(6359);
 
-var Lines = function(element, canvasHeight) {
-    this.element = element;
-    this.canvasHeight = canvasHeight || 500000;
-    this.element.style.height = (this.canvasHeight * 2) + "px";
-    
-    this.cells = [];
-    this.cellCache = [];
-    this.$offsetCoefficient = 0;
-};
+class Lines {
+    constructor(element, canvasHeight) {
+        this.element = element;
+        this.canvasHeight = canvasHeight || 500000;
+        this.element.style.height = (this.canvasHeight * 2) + "px";
 
-(function() {
+        this.cells = [];
+        this.cellCache = [];
+        this.$offsetCoefficient = 0;
+    }
     
-    this.moveContainer = function(config) {
+    moveContainer(config) {
         dom.translate(this.element, 0, -((config.firstRowScreen * config.lineHeight) % this.canvasHeight) - config.offset * this.$offsetCoefficient);
-    };    
+    }    
     
-    this.pageChanged = function(oldConfig, newConfig) {
+    pageChanged(oldConfig, newConfig) {
         return (
             Math.floor((oldConfig.firstRowScreen * oldConfig.lineHeight) / this.canvasHeight) !==
             Math.floor((newConfig.firstRowScreen * newConfig.lineHeight) / this.canvasHeight)
         );
-    };
+    }
     
-    this.computeLineTop = function(row, config, session) {
+    computeLineTop(row, config, session) {
         var screenTop = config.firstRowScreen * config.lineHeight;
         var screenPage = Math.floor(screenTop / this.canvasHeight);
         var lineTop = session.documentToScreenRow(row, 0) * config.lineHeight;
         return lineTop - (screenPage * this.canvasHeight);
-    };
+    }
     
-    this.computeLineHeight = function(row, config, session) {
+    computeLineHeight(row, config, session) {
         return config.lineHeight * session.getRowLineCount(row);
-    };
+    }
     
-    this.getLength = function() {
+    getLength() {
         return this.cells.length;
-    };
+    }
     
-    this.get = function(index) {
+    get(index) {
         return this.cells[index];
-    };
+    }
     
-    this.shift = function() {
+    shift() {
         this.$cacheCell(this.cells.shift());
-    };
+    }
     
-    this.pop = function() {
+    pop() {
         this.$cacheCell(this.cells.pop());
-    };
+    }
     
-    this.push = function(cell) {
+    push(cell) {
         if (Array.isArray(cell)) {
             this.cells.push.apply(this.cells, cell);
             var fragment = dom.createFragment(this.element);
@@ -14645,9 +15550,9 @@ var Lines = function(element, canvasHeight) {
             this.cells.push(cell);
             this.element.appendChild(cell.element);
         }
-    };
+    }
     
-    this.unshift = function(cell) {
+    unshift(cell) {
         if (Array.isArray(cell)) {
             this.cells.unshift.apply(this.cells, cell);
             var fragment = dom.createFragment(this.element);
@@ -14662,24 +15567,24 @@ var Lines = function(element, canvasHeight) {
             this.cells.unshift(cell);
             this.element.insertAdjacentElement("afterbegin", cell.element);
         }
-    };
+    }
     
-    this.last = function() {
+    last() {
         if (this.cells.length)
             return this.cells[this.cells.length-1];
         else
             return null;
-    };
+    }
     
-    this.$cacheCell = function(cell) {
+    $cacheCell(cell) {
         if (!cell)
             return;
             
         cell.element.remove();
         this.cellCache.push(cell);
-    };
+    }
     
-    this.createCell = function(row, config, session, initElement) {
+    createCell(row, config, session, initElement) {
         var cell = this.cellCache.pop();
         if (!cell) {
             var element = dom.createElement("div");
@@ -14697,46 +15602,44 @@ var Lines = function(element, canvasHeight) {
         cell.row = row;
         
         return cell;
-    };
+    }
     
-}).call(Lines.prototype);
+}
 
 exports.x = Lines;
 
 
 /***/ }),
 
-/***/ 4800:
+/***/ 34800:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 var dom = __webpack_require__(6359);
 
-var Marker = function(parentEl) {
-    this.element = dom.createElement("div");
-    this.element.className = "ace_layer ace_marker-layer";
-    parentEl.appendChild(this.element);
-};
 
-(function() {
-
-    this.$padding = 0;
-
-    this.setPadding = function(padding) {
+class Marker {
+    constructor(parentEl) {
+        this.element = dom.createElement("div");
+        this.element.className = "ace_layer ace_marker-layer";
+        parentEl.appendChild(this.element);
+    }
+    
+    setPadding(padding) {
         this.$padding = padding;
-    };
-    this.setSession = function(session) {
+    }
+    setSession(session) {
         this.session = session;
-    };
+    }
     
-    this.setMarkers = function(markers) {
+    setMarkers(markers) {
         this.markers = markers;
-    };
+    }
     
-    this.elt = function(className, css) {
+    elt(className, css) {
         var x = this.i != -1 && this.element.childNodes[this.i];
         if (!x) {
             x = document.createElement("div");
@@ -14747,9 +15650,9 @@ var Marker = function(parentEl) {
         }
         x.style.cssText = css;
         x.className = className;
-    };
+    }
 
-    this.update = function(config) {
+    update(config) {
         if (!config) return;
 
         this.config = config;
@@ -14789,17 +15692,15 @@ var Marker = function(parentEl) {
             while (this.i < this.element.childElementCount)
                 this.element.removeChild(this.element.lastChild);
         }
-    };
-
-    this.$getTop = function(row, layerConfig) {
-        return (row - layerConfig.firstRowScreen) * layerConfig.lineHeight;
-    };
-
-    function getBorderClass(tl, tr, br, bl) {
-        return (tl ? 1 : 0) | (tr ? 2 : 0) | (br ? 4 : 0) | (bl ? 8 : 0);
     }
+
+    $getTop(row, layerConfig) {
+        return (row - layerConfig.firstRowScreen) * layerConfig.lineHeight;
+    }
+
+
     // Draws a marker, which spans a range of text on multiple lines 
-    this.drawTextMarker = function(stringBuilder, range, clazz, layerConfig, extraStyle) {
+    drawTextMarker(stringBuilder, range, clazz, layerConfig, extraStyle) {
         var session = this.session;
         var start = range.start.row;
         var end = range.end.row;
@@ -14820,10 +15721,10 @@ var Marker = function(parentEl) {
                     + getBorderClass(row == start || row == start + 1 && range.start.column, prev < curr, curr > next, row == end),
                 layerConfig, row == end ? 0 : 1, extraStyle);
         }
-    };
+    }
 
     // Draws a multi line marker, where lines span the full width
-    this.drawMultiLineMarker = function(stringBuilder, range, clazz, config, extraStyle) {
+    drawMultiLineMarker(stringBuilder, range, clazz, config, extraStyle) {
         // from selection start to the end of the line
         var padding = this.$padding;
         var height = config.lineHeight;
@@ -14875,10 +15776,10 @@ var Marker = function(parentEl) {
             "top:"+ top+ "px;"+
             "left:"+ padding+ "px;"+ (extraStyle || "")
         );
-    };
+    }
 
     // Draws a marker which covers part or whole width of a single screen line
-    this.drawSingleLineMarker = function(stringBuilder, range, clazz, config, extraLength, extraStyle) {
+    drawSingleLineMarker(stringBuilder, range, clazz, config, extraLength, extraStyle) {
         if (this.session.$bidiHandler.isBidiRow(range.start.row))
             return this.drawBidiSingleLineMarker(stringBuilder, range, clazz, config, extraLength, extraStyle);
         var height = config.lineHeight;
@@ -14894,10 +15795,10 @@ var Marker = function(parentEl) {
             "top:"+ top+ "px;"+
             "left:"+ left+ "px;"+ (extraStyle || "")
         );
-    };
+    }
 
     // Draws Bidi marker which covers part or whole width of a single screen line
-    this.drawBidiSingleLineMarker = function(stringBuilder, range, clazz, config, extraLength, extraStyle) {
+    drawBidiSingleLineMarker(stringBuilder, range, clazz, config, extraLength, extraStyle) {
         var height = config.lineHeight, top = this.$getTop(range.start.row, config), padding = this.$padding;
         var selections = this.session.$bidiHandler.getSelections(range.start.column, range.end.column);
 
@@ -14905,14 +15806,14 @@ var Marker = function(parentEl) {
             this.elt(
                 clazz,
                 "height:" + height + "px;" +
-                "width:" + selection.width + (extraLength || 0) + "px;" +
+                "width:" + (selection.width + (extraLength || 0)) + "px;" +
                 "top:" + top + "px;" +
                 "left:" + (padding + selection.left) + "px;" + (extraStyle || "")
             );
         }, this);
-    };
+    }
 
-    this.drawFullLineMarker = function(stringBuilder, range, clazz, config, extraStyle) {
+    drawFullLineMarker(stringBuilder, range, clazz, config, extraStyle) {
         var top = this.$getTop(range.start.row, config);
         var height = config.lineHeight;
         if (range.start.row != range.end.row)
@@ -14924,9 +15825,9 @@ var Marker = function(parentEl) {
             "top:"+ top+ "px;"+
             "left:0;right:0;"+ (extraStyle || "")
         );
-    };
+    }
     
-    this.drawScreenLineMarker = function(stringBuilder, range, clazz, config, extraStyle) {
+    drawScreenLineMarker(stringBuilder, range, clazz, config, extraStyle) {
         var top = this.$getTop(range.start.row, config);
         var height = config.lineHeight;
 
@@ -14936,52 +15837,45 @@ var Marker = function(parentEl) {
             "top:"+ top+ "px;"+
             "left:0;right:0;"+ (extraStyle || "")
         );
-    };
+    }
 
-}).call(Marker.prototype);
+}
+
+Marker.prototype.$padding = 0;
+
+function getBorderClass(tl, tr, br, bl) {
+    return (tl ? 1 : 0) | (tr ? 2 : 0) | (br ? 4 : 0) | (bl ? 8 : 0);
+}
 
 exports.J = Marker;
 
 
 /***/ }),
 
-/***/ 3572:
+/***/ 73572:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
-var lang = __webpack_require__(124);
-var Lines = (__webpack_require__(5388)/* .Lines */ .x);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var lang = __webpack_require__(20124);
+var Lines = (__webpack_require__(55388)/* .Lines */ .x);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
-var Text = function(parentEl) {
-    this.dom = dom;
-    this.element = this.dom.createElement("div");
-    this.element.className = "ace_layer ace_text-layer";
-    parentEl.appendChild(this.element);
-    this.$updateEolChar = this.$updateEolChar.bind(this);
-    this.$lines = new Lines(this.element);
-};
 
-(function() {
-
-    oop.implement(this, EventEmitter);
-
-    this.EOF_CHAR = "\xB6";
-    this.EOL_CHAR_LF = "\xAC";
-    this.EOL_CHAR_CRLF = "\xa4";
-    this.EOL_CHAR = this.EOL_CHAR_LF;
-    this.TAB_CHAR = "\u2014"; //"\u21E5";
-    this.SPACE_CHAR = "\xB7";
-    this.$padding = 0;
-    this.MAX_LINE_LENGTH = 10000;
-    // Smaller chunks result in higher cursor precision at the cost of more DOM nodes
-    this.MAX_CHUNK_LENGTH = 250;
-
-    this.$updateEolChar = function() {
+class Text {
+    constructor(parentEl) {
+        this.dom = dom;
+        this.element = this.dom.createElement("div");
+        this.element.className = "ace_layer ace_text-layer";
+        parentEl.appendChild(this.element);
+        this.$updateEolChar = this.$updateEolChar.bind(this);
+        this.$lines = new Lines(this.element);
+    }
+    
+    $updateEolChar() {
         var doc = this.session.doc;
         var unixMode = doc.getNewLineCharacter() == "\n" && doc.getNewLineMode() != "windows";
         var EOL_CHAR = unixMode ? this.EOL_CHAR_LF : this.EOL_CHAR_CRLF;
@@ -14989,46 +15883,42 @@ var Text = function(parentEl) {
             this.EOL_CHAR = EOL_CHAR;
             return true;
         }
-    };
+    }
 
-    this.setPadding = function(padding) {
+    setPadding(padding) {
         this.$padding = padding;
         this.element.style.margin = "0 " + padding + "px";
-    };
+    }
 
-    this.getLineHeight = function() {
+    getLineHeight() {
         return this.$fontMetrics.$characterSize.height || 0;
-    };
+    }
 
-    this.getCharacterWidth = function() {
+    getCharacterWidth() {
         return this.$fontMetrics.$characterSize.width || 0;
-    };
+    }
 
-    this.$setFontMetrics = function(measure) {
+    $setFontMetrics(measure) {
         this.$fontMetrics = measure;
         this.$fontMetrics.on("changeCharacterSize", function(e) {
             this._signal("changeCharacterSize", e);
         }.bind(this));
         this.$pollSizeChanges();
-    };
+    }
 
-    this.checkForSizeChanges = function() {
+    checkForSizeChanges() {
         this.$fontMetrics.checkForSizeChanges();
-    };
-    this.$pollSizeChanges = function() {
+    }
+    $pollSizeChanges() {
         return this.$pollSizeChangesTimer = this.$fontMetrics.$pollSizeChanges();
-    };
-    this.setSession = function(session) {
+    }
+    setSession(session) {
         this.session = session;
         if (session)
             this.$computeTabString();
-    };
-
-    this.showInvisibles = false;
-    this.showSpaces = false;
-    this.showTabs = false;
-    this.showEOL = false;
-    this.setShowInvisibles = function(showInvisibles) {
+    }
+    
+    setShowInvisibles(showInvisibles) {
         if (this.showInvisibles == showInvisibles)
             return false;
 
@@ -15042,29 +15932,25 @@ var Text = function(parentEl) {
         }
         this.$computeTabString();
         return true;
-    };
-
-    this.displayIndentGuides = true;
-    this.setDisplayIndentGuides = function(display) {
+    }
+    
+    setDisplayIndentGuides(display) {
         if (this.displayIndentGuides == display)
             return false;
 
         this.displayIndentGuides = display;
         this.$computeTabString();
         return true;
-    };
-
-    this.$highlightIndentGuides = true;
-    this.setHighlightIndentGuides = function (highlight) {
+    }
+    
+    setHighlightIndentGuides(highlight) {
         if (this.$highlightIndentGuides === highlight) return false;
 
         this.$highlightIndentGuides = highlight;
         return highlight;
-    };
-
-    this.$tabStrings = [];
-    this.onChangeTabSize =
-    this.$computeTabString = function() {
+    }
+    
+    $computeTabString() {
         var tabSize = this.session.getTabSize();
         this.tabSize = tabSize;
         var tabStr = this.$tabStrings = [0];
@@ -15101,9 +15987,9 @@ var Text = function(parentEl) {
             span.textContent = tabContent;
             this.$tabStrings["\t"] = span;
         }
-    };
+    }
 
-    this.updateLines = function(config, firstRow, lastRow) {
+    updateLines(config, firstRow, lastRow) {
         // Due to wrap line changes there can be new lines if e.g.
         // the line to updated wrapped in the meantime.
         if (this.config.lastRow != config.lastRow ||
@@ -15170,9 +16056,9 @@ var Text = function(parentEl) {
                 cell.element.style.top = this.$lines.computeLineTop(cell.row, config, this.session) + "px";
             }
         }
-    };
+    }
 
-    this.scrollLines = function(config) {
+    scrollLines(config) {
         var oldConfig = this.config;
         this.config = config;
 
@@ -15212,9 +16098,9 @@ var Text = function(parentEl) {
             this.$lines.push(this.$renderLinesFragment(config, oldConfig.lastRow + 1, config.lastRow));
         }
         this.$highlightIndentGuide();
-    };
+    }
 
-    this.$renderLinesFragment = function(config, firstRow, lastRow) {
+    $renderLinesFragment(config, firstRow, lastRow) {
         var fragment = [];
         var row = firstRow;
         var foldLine = this.session.getNextFoldLine(row);
@@ -15250,9 +16136,9 @@ var Text = function(parentEl) {
             row++;
         }
         return fragment;
-    };
+    }
 
-    this.update = function(config) {
+    update(config) {
         this.$lines.moveContainer(config);
 
         this.config = config;
@@ -15265,28 +16151,9 @@ var Text = function(parentEl) {
             lines.pop();
 
         lines.push(this.$renderLinesFragment(config, firstRow, lastRow));
-    };
+    }
 
-    this.$textToken = {
-        "text": true,
-        "rparen": true,
-        "lparen": true
-    };
-
-    this.$renderTokenInChunks = function(parent, screenColumn, token, value) {
-        var newScreenColumn;
-        for (var i = 0; i < value.length; i += this.MAX_CHUNK_LENGTH) {
-            var valueChunk = value.substring(i, i + this.MAX_CHUNK_LENGTH);
-            var tokenChunk = {
-                type: token.type,
-                value: valueChunk
-            };
-            newScreenColumn = this.$renderToken(parent, screenColumn + i, tokenChunk, valueChunk);
-        }
-        return newScreenColumn;
-    };
-
-    this.$renderToken = function(parent, screenColumn, token, value) {
+    $renderToken(parent, screenColumn, token, value) {
         var self = this;
         var re = /(\t)|( +)|([\x00-\x1f\x80-\xa0\xad\u1680\u180E\u2000-\u200f\u2028\u2029\u202F\u205F\uFEFF\uFFF9-\uFFFC\u2066\u2067\u2068\u202A\u202B\u202D\u202E\u202C\u2069]+)|(\u3000)|([\u1100-\u115F\u11A3-\u11A7\u11FA-\u11FF\u2329-\u232A\u2E80-\u2E99\u2E9B-\u2EF3\u2F00-\u2FD5\u2FF0-\u2FFB\u3001-\u303E\u3041-\u3096\u3099-\u30FF\u3105-\u312D\u3131-\u318E\u3190-\u31BA\u31C0-\u31E3\u31F0-\u321E\u3220-\u3247\u3250-\u32FE\u3300-\u4DBF\u4E00-\uA48C\uA490-\uA4C6\uA960-\uA97C\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFAFF\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE66\uFE68-\uFE6B\uFF01-\uFF60\uFFE0-\uFFE6]|[\uD800-\uDBFF][\uDC00-\uDFFF])/g;
 
@@ -15351,21 +16218,25 @@ var Text = function(parentEl) {
 
         valueFragment.appendChild(this.dom.createTextNode(i ? value.slice(i) : value, this.element));
 
-        var span = this.dom.createElement("span");
         if (!this.$textToken[token.type]) {
             var classes = "ace_" + token.type.replace(/\./g, " ace_");
+            var span = this.dom.createElement("span");
             if (token.type == "fold")
                 span.style.width = (token.value.length * this.config.characterWidth) + "px";
 
             span.className = classes;
+            span.appendChild(valueFragment);
+
+            parent.appendChild(span);
         }
-        span.appendChild(valueFragment);
-        parent.appendChild(span);
+        else {
+            parent.appendChild(valueFragment);
+        }
 
         return screenColumn + value.length;
-    };
+    }
 
-    this.renderIndentGuide = function(parent, value, max) {
+    renderIndentGuide(parent, value, max) {
         var cols = value.search(this.$indentGuideRe);
         if (cols <= 0 || cols >= max)
             return value;
@@ -15386,9 +16257,9 @@ var Text = function(parentEl) {
         }
         this.$highlightIndentGuide();
         return value;
-    };
+    }
 
-    this.$highlightIndentGuide = function () {
+    $highlightIndentGuide() {
         if (!this.$highlightIndentGuides || !this.displayIndentGuides) return;
 
         this.$highlightIndentGuideMarker = {
@@ -15440,9 +16311,9 @@ var Text = function(parentEl) {
         }
 
         this.$renderHighlightIndentGuide();
-    };
+    }
 
-    this.$clearActiveIndentGuide = function () {
+    $clearActiveIndentGuide() {
         var cells = this.$lines.cells;
         for (var i = 0; i < cells.length; i++) {
             var cell = cells[i];
@@ -15456,9 +16327,9 @@ var Text = function(parentEl) {
                 }
             }
         }
-    };
+    }
 
-    this.$setIndentGuideActive = function (cell, indentLevel) {
+    $setIndentGuideActive(cell, indentLevel) {
         var line = this.session.doc.getLine(cell.row);
         if (line !== "") {
             var childNodes = cell.element.childNodes;
@@ -15468,9 +16339,9 @@ var Text = function(parentEl) {
                     "ace_indent-guide-active");
             }
         }
-    };
+    }
 
-    this.$renderHighlightIndentGuide = function () {
+    $renderHighlightIndentGuide() {
         if (!this.$lines) return;
         var cells = this.$lines.cells;
         this.$clearActiveIndentGuide();
@@ -15496,17 +16367,17 @@ var Text = function(parentEl) {
                 }
             }
         }
-    };
+    }
 
-    this.$createLineElement = function(parent) {
+    $createLineElement(parent) {
         var lineEl = this.dom.createElement("div");
         lineEl.className = "ace_line";
         lineEl.style.height = this.config.lineHeight + "px";
 
         return lineEl;
-    };
+    }
 
-    this.$renderWrappedLine = function(parent, tokens, splits) {
+    $renderWrappedLine(parent, tokens, splits) {
         var chars = 0;
         var split = 0;
         var splitChars = splits[0];
@@ -15527,11 +16398,11 @@ var Text = function(parentEl) {
             }
 
             if (chars + value.length < splitChars) {
-                screenColumn = this.$renderTokenInChunks(lineEl, screenColumn, token, value);
+                screenColumn = this.$renderToken(lineEl, screenColumn, token, value);
                 chars += value.length;
             } else {
                 while (chars + value.length >= splitChars) {
-                    screenColumn = this.$renderTokenInChunks(
+                    screenColumn = this.$renderToken(
                         lineEl, screenColumn,
                         token, value.substring(0, splitChars - chars)
                     );
@@ -15549,7 +16420,7 @@ var Text = function(parentEl) {
                 }
                 if (value.length != 0) {
                     chars += value.length;
-                    screenColumn = this.$renderTokenInChunks(
+                    screenColumn = this.$renderToken(
                         lineEl, screenColumn, token, value
                     );
                 }
@@ -15558,9 +16429,9 @@ var Text = function(parentEl) {
 
         if (splits[splits.length - 1] > this.MAX_LINE_LENGTH)
             this.$renderOverflowMessage(lineEl, screenColumn, null, "", true);
-    };
+    }
 
-    this.$renderSimpleLine = function(parent, tokens) {
+    $renderSimpleLine(parent, tokens) {
         var screenColumn = 0;
 
         for (var i = 0; i < tokens.length; i++) {
@@ -15571,33 +16442,25 @@ var Text = function(parentEl) {
                 if (!value)
                     continue;
             }
-            if (screenColumn + value.length > this.MAX_LINE_LENGTH) {
-                this.$renderOverflowMessage(parent, screenColumn, token, value);
-                return;
-            }
-            screenColumn = this.$renderTokenInChunks(parent, screenColumn, token, value);
+            if (screenColumn + value.length > this.MAX_LINE_LENGTH)
+                return this.$renderOverflowMessage(parent, screenColumn, token, value);
+            screenColumn = this.$renderToken(parent, screenColumn, token, value);
         }
-    };
+    }
 
-    this.$renderOverflowMessage = function(parent, screenColumn, token, value, hide) {
-        if (token) {
-            this.$renderTokenInChunks(
-                parent,
-                screenColumn,
-                token,
-                value.slice(0, this.MAX_LINE_LENGTH - screenColumn)
-            );
-        }
+    $renderOverflowMessage(parent, screenColumn, token, value, hide) {
+        token && this.$renderToken(parent, screenColumn, token,
+            value.slice(0, this.MAX_LINE_LENGTH - screenColumn));
 
         var overflowEl = this.dom.createElement("span");
         overflowEl.className = "ace_inline_button ace_keyword ace_toggle_wrap";
         overflowEl.textContent = hide ? "<hide>" : "<click to see more...>";
 
         parent.appendChild(overflowEl);
-    };
+    }
 
     // row is either first row of foldline or not in fold
-    this.$renderLine = function(parent, row, foldLine) {
+    $renderLine(parent, row, foldLine) {
         if (!foldLine && foldLine != false)
             foldLine = this.session.getFoldLine(row);
 
@@ -15635,9 +16498,9 @@ var Text = function(parentEl) {
 
             lastLineEl.appendChild(invisibleEl);
         }
-    };
+    }
 
-    this.$getFoldLineTokens = function(row, foldLine) {
+    $getFoldLineTokens(row, foldLine) {
         var session = this.session;
         var renderTokens = [];
 
@@ -15696,32 +16559,55 @@ var Text = function(parentEl) {
         }, foldLine.end.row, this.session.getLine(foldLine.end.row).length);
 
         return renderTokens;
-    };
+    }
 
-    this.$useLineGroups = function() {
+    $useLineGroups() {
         // For the updateLines function to work correctly, it's important that the
         // child nodes of this.element correspond on a 1-to-1 basis to rows in the
         // document (as distinct from lines on the screen). For sessions that are
         // wrapped, this means we need to add a layer to the node hierarchy (tagged
         // with the class name ace_line_group).
         return this.session.getUseWrapMode();
-    };
+    }
+}
 
-    this.destroy = function() {};
-}).call(Text.prototype);
+Text.prototype.$textToken = {
+    "text": true,
+    "rparen": true,
+    "lparen": true
+};
+Text.prototype.EOF_CHAR = "\xB6";
+Text.prototype.EOL_CHAR_LF = "\xAC";
+Text.prototype.EOL_CHAR_CRLF = "\xa4";
+Text.prototype.EOL_CHAR = Text.prototype.EOL_CHAR_LF;
+Text.prototype.TAB_CHAR = "\u2014"; //"\u21E5";
+Text.prototype.SPACE_CHAR = "\xB7";
+Text.prototype.$padding = 0;
+Text.prototype.MAX_LINE_LENGTH = 10000;
+Text.prototype.showInvisibles = false;
+Text.prototype.showSpaces = false;
+Text.prototype.showTabs = false;
+Text.prototype.showEOL = false;
+Text.prototype.displayIndentGuides = true;
+Text.prototype.$highlightIndentGuides = true;
+Text.prototype.$tabStrings = [];
+Text.prototype.destroy = {};
+Text.prototype.onChangeTabSize = Text.prototype.$computeTabString;
+
+oop.implement(Text.prototype, EventEmitter);
 
 exports.x = Text;
 
 
 /***/ }),
 
-/***/ 6675:
+/***/ 46675:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "no use strict";
 
-var oop = __webpack_require__(9359);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var oop = __webpack_require__(89359);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
 var optionsProvider = {
     setOptions: function(optList) {
@@ -15784,17 +16670,15 @@ function reportError(msg, data) {
     setTimeout(function() { throw e; });
 }
 
-var AppConfig = function() {
-    this.$defaultOptions = {};
-};
-
-(function() {
-    // module loading
-    oop.implement(this, EventEmitter);
+class AppConfig {
+    constructor() {
+        this.$defaultOptions = {};
+    }
+    
     /*
      * option {name, value, initialValue, setterName, set, get }
      */
-    this.defineOptions = function(obj, path, options) {
+    defineOptions(obj, path, options) {
         if (!obj.$options)
             this.$defaultOptions[path] = obj.$options = {};
 
@@ -15813,17 +16697,17 @@ var AppConfig = function() {
         oop.implement(obj, optionsProvider);
 
         return this;
-    };
+    }
 
-    this.resetOptions = function(obj) {
+    resetOptions(obj) {
         Object.keys(obj.$options).forEach(function(key) {
             var opt = obj.$options[key];
             if ("value" in opt)
                 obj.setOption(key, opt.value);
         });
-    };
+    }
 
-    this.setDefaultValue = function(path, name, value) {
+    setDefaultValue(path, name, value) {
         if (!path) {
             for (path in this.$defaultOptions)
                 if (this.$defaultOptions[path][name])
@@ -15838,25 +16722,27 @@ var AppConfig = function() {
             else
                 opts[name].value = value;
         }
-    };
+    }
 
-    this.setDefaultValues = function(path, optionHash) {
+    setDefaultValues(path, optionHash) {
         Object.keys(optionHash).forEach(function(key) {
             this.setDefaultValue(path, key, optionHash[key]);
         }, this);
-    };
+    }
     
-    this.warn = warn;
-    this.reportError = reportError;
-    
-}).call(AppConfig.prototype);
+}
+AppConfig.prototype.warn = warn;
+AppConfig.prototype.reportError = reportError;
+
+// module loading
+oop.implement(AppConfig.prototype, EventEmitter);
 
 exports.X = AppConfig;
 
 
 /***/ }),
 
-/***/ 2918:
+/***/ 82918:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -16248,7 +17134,7 @@ exports.getVisualFromLogicalIdx = function(logIdx, rowMap) {
 "use strict";
 
 
-var useragent = __webpack_require__(618); 
+var useragent = __webpack_require__(50618); 
 var XHTML_NS = "http://www.w3.org/1999/xhtml";
 
 exports.buildDom = function buildDom(arr, parent, refs) {
@@ -16547,14 +17433,14 @@ if (exports.HAS_CSS_TRANSFORMS) {
 
 /***/ }),
 
-/***/ 7989:
+/***/ 17989:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var keys = __webpack_require__(1797);
-var useragent = __webpack_require__(618);
+var keys = __webpack_require__(11797);
+var useragent = __webpack_require__(50618);
 
 var pressedKeys = null;
 var ts = 0;
@@ -16890,7 +17776,7 @@ else
 
 /***/ }),
 
-/***/ 3056:
+/***/ 23056:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -17027,7 +17913,7 @@ exports.EventEmitter = EventEmitter;
 
 /***/ }),
 
-/***/ 1797:
+/***/ 11797:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -17066,7 +17952,7 @@ For more information about SproutCore, visit http://www.sproutcore.com
 
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 
 /*
  * Helper functions and hashes for key handling.
@@ -17195,7 +18081,7 @@ exports.keyCodeToString = function(keyCode) {
 
 /***/ }),
 
-/***/ 124:
+/***/ 20124:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -17394,7 +18280,7 @@ exports.delayedCall = function(fcn, defaultTimeout) {
 
 /***/ }),
 
-/***/ 2634:
+/***/ 42634:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -17451,7 +18337,7 @@ exports.qualifyURL = function(url) {
 
 /***/ }),
 
-/***/ 9359:
+/***/ 89359:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -17483,7 +18369,7 @@ exports.implement = function(proto, mixin) {
 
 /***/ }),
 
-/***/ 618:
+/***/ 50618:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -17567,7 +18453,7 @@ exports.isMobile = exports.isIOS || exports.isAndroid;
 
 /***/ }),
 
-/***/ 2269:
+/***/ 62269:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -17575,24 +18461,26 @@ exports.isMobile = exports.isIOS || exports.isAndroid;
 
 var dom = __webpack_require__(6359);
 
-function LineWidgets(session) {
-    this.session = session;
-    this.session.widgetManager = this;
-    this.session.getRowLength = this.getRowLength;
-    this.session.$getWidgetScreenLength = this.$getWidgetScreenLength;
-    this.updateOnChange = this.updateOnChange.bind(this);
-    this.renderWidgets = this.renderWidgets.bind(this);
-    this.measureWidgets = this.measureWidgets.bind(this);
-    this.session._changedWidgets = [];
-    this.$onChangeEditor = this.$onChangeEditor.bind(this);
-    
-    this.session.on("change", this.updateOnChange);
-    this.session.on("changeFold", this.updateOnFold);
-    this.session.on("changeEditor", this.$onChangeEditor);
-}
 
-(function() {
-    this.getRowLength = function(row) {
+
+class LineWidgets {
+    constructor(session) {
+        this.session = session;
+        this.session.widgetManager = this;
+        this.session.getRowLength = this.getRowLength;
+        this.session.$getWidgetScreenLength = this.$getWidgetScreenLength;
+        this.updateOnChange = this.updateOnChange.bind(this);
+        this.renderWidgets = this.renderWidgets.bind(this);
+        this.measureWidgets = this.measureWidgets.bind(this);
+        this.session._changedWidgets = [];
+        this.$onChangeEditor = this.$onChangeEditor.bind(this);
+
+        this.session.on("change", this.updateOnChange);
+        this.session.on("changeFold", this.updateOnFold);
+        this.session.on("changeEditor", this.$onChangeEditor);
+    }
+    
+    getRowLength(row) {
         var h;
         if (this.lineWidgets)
             h = this.lineWidgets[row] && this.lineWidgets[row].rowCount || 0;
@@ -17603,22 +18491,22 @@ function LineWidgets(session) {
         } else {
             return this.$wrapData[row].length + 1 + h;
         }
-    };
+    }
 
-    this.$getWidgetScreenLength = function() {
+    $getWidgetScreenLength() {
         var screenRows = 0;
         this.lineWidgets.forEach(function(w){
             if (w && w.rowCount && !w.hidden)
                 screenRows += w.rowCount;
         });
         return screenRows;
-    };    
+    }    
     
-    this.$onChangeEditor = function(e) {
+    $onChangeEditor(e) {
         this.attach(e.editor);
-    };
+    }
     
-    this.attach = function(editor) {
+    attach(editor) {
         if (editor  && editor.widgetManager && editor.widgetManager != this)
             editor.widgetManager.detach();
 
@@ -17633,8 +18521,8 @@ function LineWidgets(session) {
             editor.renderer.on("beforeRender", this.measureWidgets);
             editor.renderer.on("afterRender", this.renderWidgets);
         }
-    };
-    this.detach = function(e) {
+    }
+    detach(e) {
         var editor = this.editor;
         if (!editor)
             return;
@@ -17651,9 +18539,9 @@ function LineWidgets(session) {
                 w.el.parentNode.removeChild(w.el);
             }
         });
-    };
+    }
 
-    this.updateOnFold = function(e, session) {
+    updateOnFold(e, session) {
         var lineWidgets = session.lineWidgets;
         if (!lineWidgets || !e.action)
             return;
@@ -17677,9 +18565,9 @@ function LineWidgets(session) {
                 lineWidgets[end].hidden = hide;
             }
         }
-    };
+    }
     
-    this.updateOnChange = function(delta) {
+    updateOnChange(delta) {
         var lineWidgets = this.session.lineWidgets;
         if (!lineWidgets) return;
         
@@ -17707,9 +18595,9 @@ function LineWidgets(session) {
             lineWidgets.splice.apply(lineWidgets, args);
             this.$updateRows();
         }
-    };
+    }
     
-    this.$updateRows = function() {
+    $updateRows() {
         var lineWidgets = this.session.lineWidgets;
         if (!lineWidgets) return;
         var noWidgets = true;
@@ -17725,9 +18613,9 @@ function LineWidgets(session) {
         });
         if (noWidgets)
             this.session.lineWidgets = null;
-    };
+    }
 
-    this.$registerLineWidget = function(w) {
+    $registerLineWidget(w) {
         if (!this.session.lineWidgets)
             this.session.lineWidgets = new Array(this.session.getLength());
         
@@ -17742,9 +18630,9 @@ function LineWidgets(session) {
             
         this.session.lineWidgets[w.row] = w;
         return w;
-    };
+    }
     
-    this.addLineWidget = function(w) {
+    addLineWidget(w) {
         this.$registerLineWidget(w);
         w.session = this.session;
         
@@ -17755,8 +18643,15 @@ function LineWidgets(session) {
             w.el = dom.createElement("div");
             w.el.innerHTML = w.html;
         }
+        if (w.text && !w.el) {
+            w.el = dom.createElement("div");
+            w.el.textContent = w.text;
+        }
         if (w.el) {
             dom.addCssClass(w.el, "ace_lineWidgetContainer");
+            if (w.className) {
+                dom.addCssClass(w.el, w.className);
+            }
             w.el.style.position = "absolute";
             w.el.style.zIndex = 5;
             renderer.container.appendChild(w.el);
@@ -17789,9 +18684,9 @@ function LineWidgets(session) {
         this.renderWidgets(null, renderer);
         this.onWidgetChanged(w);
         return w;
-    };
+    }
     
-    this.removeLineWidget = function(w) {
+    removeLineWidget(w) {
         w._inDocument = false;
         w.session = null;
         if (w.el && w.el.parentNode)
@@ -17817,9 +18712,9 @@ function LineWidgets(session) {
         }
         this.session._emit("changeFold", {data:{start:{row: w.row}}});
         this.$updateRows();
-    };
+    }
     
-    this.getWidgetsAtRow = function(row) {
+    getWidgetsAtRow(row) {
         var lineWidgets = this.session.lineWidgets;
         var w = lineWidgets && lineWidgets[row];
         var list = [];
@@ -17828,14 +18723,14 @@ function LineWidgets(session) {
             w = w.$oldWidget;
         }
         return list;
-    };
+    }
     
-    this.onWidgetChanged = function(w) {
+    onWidgetChanged(w) {
         this.session._changedWidgets.push(w);
         this.editor && this.editor.renderer.updateFull();
-    };
+    }
     
-    this.measureWidgets = function(e, renderer) {
+    measureWidgets(e, renderer) {
         var changedWidgets = this.session._changedWidgets;
         var config = renderer.layerConfig;
         
@@ -17876,9 +18771,9 @@ function LineWidgets(session) {
             this.session.lineWidgetWidth = null;
         }
         this.session._changedWidgets = [];
-    };
+    }
     
-    this.renderWidgets = function(e, renderer) {
+    renderWidgets(e, renderer) {
         var config = renderer.layerConfig;
         var lineWidgets = this.session.lineWidgets;
         if (!lineWidgets)
@@ -17924,9 +18819,9 @@ function LineWidgets(session) {
                 w.el.style.right = "";
             }
         }
-    };
+    }
     
-}).call(LineWidgets.prototype);
+}
 
 
 exports.H = LineWidgets;
@@ -18000,114 +18895,16 @@ exports.T = Behaviour;
 
 /***/ }),
 
-/***/ 7853:
+/***/ 19414:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
-var CstyleBehaviour = (__webpack_require__(9414)/* .CstyleBehaviour */ .B);
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
-
-var CssBehaviour = function () {
-
-    this.inherit(CstyleBehaviour);
-
-    this.add("colon", "insertion", function (state, action, editor, session, text) {
-        if (text === ':' && editor.selection.isEmpty()) {
-            var cursor = editor.getCursorPosition();
-            var iterator = new TokenIterator(session, cursor.row, cursor.column);
-            var token = iterator.getCurrentToken();
-            if (token && token.value.match(/\s+/)) {
-                token = iterator.stepBackward();
-            }
-            if (token && token.type === 'support.type') {
-                var line = session.doc.getLine(cursor.row);
-                var rightChar = line.substring(cursor.column, cursor.column + 1);
-                if (rightChar === ':') {
-                    return {
-                       text: '',
-                       selection: [1, 1]
-                    };
-                }
-                if (/^(\s+[^;]|\s*$)/.test(line.substring(cursor.column))) {
-                    return {
-                       text: ':;',
-                       selection: [1, 1]
-                    };
-                }
-            }
-        }
-    });
-
-    this.add("colon", "deletion", function (state, action, editor, session, range) {
-        var selected = session.doc.getTextRange(range);
-        if (!range.isMultiLine() && selected === ':') {
-            var cursor = editor.getCursorPosition();
-            var iterator = new TokenIterator(session, cursor.row, cursor.column);
-            var token = iterator.getCurrentToken();
-            if (token && token.value.match(/\s+/)) {
-                token = iterator.stepBackward();
-            }
-            if (token && token.type === 'support.type') {
-                var line = session.doc.getLine(range.start.row);
-                var rightChar = line.substring(range.end.column, range.end.column + 1);
-                if (rightChar === ';') {
-                    range.end.column ++;
-                    return range;
-                }
-            }
-        }
-    });
-
-    this.add("semicolon", "insertion", function (state, action, editor, session, text) {
-        if (text === ';' && editor.selection.isEmpty()) {
-            var cursor = editor.getCursorPosition();
-            var line = session.doc.getLine(cursor.row);
-            var rightChar = line.substring(cursor.column, cursor.column + 1);
-            if (rightChar === ';') {
-                return {
-                   text: '',
-                   selection: [1, 1]
-                };
-            }
-        }
-    });
-
-    this.add("!important", "insertion", function (state, action, editor, session, text) {
-        if (text === '!' && editor.selection.isEmpty()) {
-            var cursor = editor.getCursorPosition();
-            var line = session.doc.getLine(cursor.row);
-
-            if (/^\s*(;|}|$)/.test(line.substring(cursor.column))) {
-                return {
-                    text: '!important',
-                    selection: [10, 10]
-                };
-            }
-        }
-    });
-
-};
-oop.inherits(CssBehaviour, CstyleBehaviour);
-
-exports.K = CssBehaviour;
-
-
-/***/ }),
-
-/***/ 9414:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
-var lang = __webpack_require__(124);
+var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var lang = __webpack_require__(20124);
 
 var SAFE_INSERT_IN_TOKENS =
     ["text", "paren.rparen", "rparen", "paren", "punctuation.operator"];
@@ -18150,7 +18947,12 @@ var getWrapped = function(selection, selected, opening, closing) {
             ]
     };
 };
-
+/**
+ * Creates a new Cstyle behaviour object with the specified options.
+ * @constructor
+ * @param {Object} [options] - The options for the Cstyle behaviour object.
+ * @param {boolean} [options.braces] - Whether to force braces auto-pairing.
+ */
 var CstyleBehaviour = function(options) {
     this.add("braces", "insertion", function(state, action, editor, session, text) {
         var cursor = editor.getCursorPosition();
@@ -18364,8 +19166,12 @@ var CstyleBehaviour = function(options) {
                     wordRe.lastIndex = 0;
                     var isWordBefore = wordRe.test(leftChar);
                     wordRe.lastIndex = 0;
-                    var isWordAfter = wordRe.test(leftChar);
-                    if (isWordBefore || isWordAfter)
+                    var isWordAfter = wordRe.test(rightChar);
+
+                    var pairQuotesAfter = session.$mode.$pairQuotesAfter;
+                    var shouldPairQuotes = pairQuotesAfter && pairQuotesAfter[quote] && pairQuotesAfter[quote].test(leftChar);
+                    
+                    if ((!shouldPairQuotes && isWordBefore) || isWordAfter)
                         return null; // before or after alphanumeric
                     if (rightChar && !/[\s;,.})\]\\]/.test(rightChar))
                         return null; // there is rightChar and it isn't closing
@@ -18481,902 +19287,13 @@ exports.B = CstyleBehaviour;
 
 /***/ }),
 
-/***/ 7809:
+/***/ 15369:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
-var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
-var lang = __webpack_require__(124);
-
-function is(token, type) {
-    return token && token.type.lastIndexOf(type + ".xml") > -1;
-}
-
-var XmlBehaviour = function () {
-
-    this.add("string_dquotes", "insertion", function (state, action, editor, session, text) {
-        if (text == '"' || text == "'") {
-            var quote = text;
-            var selected = session.doc.getTextRange(editor.getSelectionRange());
-            if (selected !== "" && selected !== "'" && selected != '"' && editor.getWrapBehavioursEnabled()) {
-                return {
-                    text: quote + selected + quote,
-                    selection: false
-                };
-            }
-
-            var cursor = editor.getCursorPosition();
-            var line = session.doc.getLine(cursor.row);
-            var rightChar = line.substring(cursor.column, cursor.column + 1);
-            var iterator = new TokenIterator(session, cursor.row, cursor.column);
-            var token = iterator.getCurrentToken();
-
-            if (rightChar == quote && (is(token, "attribute-value") || is(token, "string"))) {
-                // Ignore input and move right one if we're typing over the closing quote.
-                return {
-                    text: "",
-                    selection: [1, 1]
-                };
-            }
-
-            if (!token)
-                token = iterator.stepBackward();
-
-            if (!token)
-                return;
-
-            while (is(token, "tag-whitespace") || is(token, "whitespace")) {
-                token = iterator.stepBackward();
-            }
-            var rightSpace = !rightChar || rightChar.match(/\s/);
-            if (is(token, "attribute-equals") && (rightSpace || rightChar == '>') || (is(token, "decl-attribute-equals") && (rightSpace || rightChar == '?'))) {
-                return {
-                    text: quote + quote,
-                    selection: [1, 1]
-                };
-            }
-        }
-    });
-
-    this.add("string_dquotes", "deletion", function(state, action, editor, session, range) {
-        var selected = session.doc.getTextRange(range);
-        if (!range.isMultiLine() && (selected == '"' || selected == "'")) {
-            var line = session.doc.getLine(range.start.row);
-            var rightChar = line.substring(range.start.column + 1, range.start.column + 2);
-            if (rightChar == selected) {
-                range.end.column++;
-                return range;
-            }
-        }
-    });
-
-    this.add("autoclosing", "insertion", function (state, action, editor, session, text) {
-        if (text == '>') {
-            var position = editor.getSelectionRange().start;
-            var iterator = new TokenIterator(session, position.row, position.column);
-            var token = iterator.getCurrentToken() || iterator.stepBackward();
-
-            // exit if we're not in a tag
-            if (!token || !(is(token, "tag-name") || is(token, "tag-whitespace") || is(token, "attribute-name") || is(token, "attribute-equals") || is(token, "attribute-value")))
-                return;
-
-            // exit if we're inside of a quoted attribute value
-            if (is(token, "reference.attribute-value"))
-                return;
-            if (is(token, "attribute-value")) {
-                var tokenEndColumn = iterator.getCurrentTokenColumn() + token.value.length;
-                if (position.column < tokenEndColumn)
-                    return;
-                if (position.column == tokenEndColumn) {
-                    var nextToken = iterator.stepForward();
-                    // TODO also handle non-closed string at the end of the line
-                    if (nextToken && is(nextToken, "attribute-value"))
-                        return;
-                    iterator.stepBackward();
-                }
-            }
-            
-            if (/^\s*>/.test(session.getLine(position.row).slice(position.column)))
-                return;
-
-            // find tag name
-            while (!is(token, "tag-name")) {
-                token = iterator.stepBackward();
-                if (token.value == "<") {
-                    token = iterator.stepForward();
-                    break;
-                }
-            }
-
-            var tokenRow = iterator.getCurrentTokenRow();
-            var tokenColumn = iterator.getCurrentTokenColumn();
-
-            // exit if the tag is ending
-            if (is(iterator.stepBackward(), "end-tag-open"))
-                return;
-
-            var element = token.value;
-            if (tokenRow == position.row)
-                element = element.substring(0, position.column - tokenColumn);
-
-            if (this.voidElements.hasOwnProperty(element.toLowerCase()))
-                 return;
-
-            return {
-               text: ">" + "</" + element + ">",
-               selection: [1, 1]
-            };
-        }
-    });
-
-    this.add("autoindent", "insertion", function (state, action, editor, session, text) {
-        if (text == "\n") {
-            var cursor = editor.getCursorPosition();
-            var line = session.getLine(cursor.row);
-            var iterator = new TokenIterator(session, cursor.row, cursor.column);
-            var token = iterator.getCurrentToken();
-
-            if (token && token.type.indexOf("tag-close") !== -1) {
-                if (token.value == "/>")
-                    return;
-                //get tag name
-                while (token && token.type.indexOf("tag-name") === -1) {
-                    token = iterator.stepBackward();
-                }
-
-                if (!token) {
-                    return;
-                }
-
-                var tag = token.value;
-                var row = iterator.getCurrentTokenRow();
-
-                //don't indent after closing tag
-                token = iterator.stepBackward();
-                if (!token || token.type.indexOf("end-tag") !== -1) {
-                    return;
-                }
-
-                if (this.voidElements && !this.voidElements[tag]) {
-                    var nextToken = session.getTokenAt(cursor.row, cursor.column+1);
-                    var line = session.getLine(row);
-                    var nextIndent = this.$getIndent(line);
-                    var indent = nextIndent + session.getTabString();
-
-                    if (nextToken && nextToken.value === "</") {
-                        return {
-                            text: "\n" + indent + "\n" + nextIndent,
-                            selection: [1, indent.length, 1, indent.length]
-                        };
-                    } else {
-                        return {
-                            text: "\n" + indent
-                        };
-                    }
-                }
-            }
-        }
-    });
-
-};
-
-oop.inherits(XmlBehaviour, Behaviour);
-
-exports.D = XmlBehaviour;
-
-
-/***/ }),
-
-/***/ 8771:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var TextMode = (__webpack_require__(8030)/* .Mode */ .A);
-var CssHighlightRules = (__webpack_require__(9301)/* .CssHighlightRules */ .Kd);
-var MatchingBraceOutdent = (__webpack_require__(1164)/* .MatchingBraceOutdent */ .p);
-var WorkerClient = (__webpack_require__(1451).WorkerClient);
-var CssCompletions = (__webpack_require__(7237)/* .CssCompletions */ .A);
-var CssBehaviour = (__webpack_require__(7853)/* .CssBehaviour */ .K);
-var CStyleFoldMode = (__webpack_require__(2764)/* .FoldMode */ .Z);
-
-var Mode = function() {
-    this.HighlightRules = CssHighlightRules;
-    this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CssBehaviour();
-    this.$completer = new CssCompletions();
-    this.foldingRules = new CStyleFoldMode();
-};
-oop.inherits(Mode, TextMode);
-
-(function() {
-
-    this.foldingRules = "cStyle";
-    this.blockComment = {start: "/*", end: "*/"};
-
-    this.getNextLineIndent = function(state, line, tab) {
-        var indent = this.$getIndent(line);
-
-        // ignore braces in comments
-        var tokens = this.getTokenizer().getLineTokens(line, state).tokens;
-        if (tokens.length && tokens[tokens.length-1].type == "comment") {
-            return indent;
-        }
-
-        var match = line.match(/^.*\{\s*$/);
-        if (match) {
-            indent += tab;
-        }
-
-        return indent;
-    };
-
-    this.checkOutdent = function(state, line, input) {
-        return this.$outdent.checkOutdent(line, input);
-    };
-
-    this.autoOutdent = function(state, doc, row) {
-        this.$outdent.autoOutdent(doc, row);
-    };
-
-    this.getCompletions = function(state, session, pos, prefix) {
-        return this.$completer.getCompletions(state, session, pos, prefix);
-    };
-
-    this.createWorker = function(session) {
-        var worker = new WorkerClient(["ace"], "ace/mode/css_worker", "Worker");
-        worker.attachToDocument(session.getDocument());
-
-        worker.on("annotate", function(e) {
-            session.setAnnotations(e.data);
-        });
-
-        worker.on("terminate", function() {
-            session.clearAnnotations();
-        });
-
-        return worker;
-    };
-
-    this.$id = "ace/mode/css";
-    this.snippetFileId = "ace/snippets/css";
-}).call(Mode.prototype);
-
-exports.Mode = Mode;
-
-
-/***/ }),
-
-/***/ 7237:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-var propertyMap = {
-    "background": {"#$0": 1},
-    "background-color": {"#$0": 1, "transparent": 1, "fixed": 1},
-    "background-image": {"url('/$0')": 1},
-    "background-repeat": {"repeat": 1, "repeat-x": 1, "repeat-y": 1, "no-repeat": 1, "inherit": 1},
-    "background-position": {"bottom":2, "center":2, "left":2, "right":2, "top":2, "inherit":2},
-    "background-attachment": {"scroll": 1, "fixed": 1},
-    "background-size": {"cover": 1, "contain": 1},
-    "background-clip": {"border-box": 1, "padding-box": 1, "content-box": 1},
-    "background-origin": {"border-box": 1, "padding-box": 1, "content-box": 1},
-    "border": {"solid $0": 1, "dashed $0": 1, "dotted $0": 1, "#$0": 1},
-    "border-color": {"#$0": 1},
-    "border-style": {"solid":2, "dashed":2, "dotted":2, "double":2, "groove":2, "hidden":2, "inherit":2, "inset":2, "none":2, "outset":2, "ridged":2},
-    "border-collapse": {"collapse": 1, "separate": 1},
-    "bottom": {"px": 1, "em": 1, "%": 1},
-    "clear": {"left": 1, "right": 1, "both": 1, "none": 1},
-    "color": {"#$0": 1, "rgb(#$00,0,0)": 1},
-    "cursor": {"default": 1, "pointer": 1, "move": 1, "text": 1, "wait": 1, "help": 1, "progress": 1, "n-resize": 1, "ne-resize": 1, "e-resize": 1, "se-resize": 1, "s-resize": 1, "sw-resize": 1, "w-resize": 1, "nw-resize": 1},
-    "display": {"none": 1, "block": 1, "inline": 1, "inline-block": 1, "table-cell": 1},
-    "empty-cells": {"show": 1, "hide": 1},
-    "float": {"left": 1, "right": 1, "none": 1},
-    "font-family": {"Arial":2,"Comic Sans MS":2,"Consolas":2,"Courier New":2,"Courier":2,"Georgia":2,"Monospace":2,"Sans-Serif":2, "Segoe UI":2,"Tahoma":2,"Times New Roman":2,"Trebuchet MS":2,"Verdana": 1},
-    "font-size": {"px": 1, "em": 1, "%": 1},
-    "font-weight": {"bold": 1, "normal": 1},
-    "font-style": {"italic": 1, "normal": 1},
-    "font-variant": {"normal": 1, "small-caps": 1},
-    "height": {"px": 1, "em": 1, "%": 1},
-    "left": {"px": 1, "em": 1, "%": 1},
-    "letter-spacing": {"normal": 1},
-    "line-height": {"normal": 1},
-    "list-style-type": {"none": 1, "disc": 1, "circle": 1, "square": 1, "decimal": 1, "decimal-leading-zero": 1, "lower-roman": 1, "upper-roman": 1, "lower-greek": 1, "lower-latin": 1, "upper-latin": 1, "georgian": 1, "lower-alpha": 1, "upper-alpha": 1},
-    "margin": {"px": 1, "em": 1, "%": 1},
-    "margin-right": {"px": 1, "em": 1, "%": 1},
-    "margin-left": {"px": 1, "em": 1, "%": 1},
-    "margin-top": {"px": 1, "em": 1, "%": 1},
-    "margin-bottom": {"px": 1, "em": 1, "%": 1},
-    "max-height": {"px": 1, "em": 1, "%": 1},
-    "max-width": {"px": 1, "em": 1, "%": 1},
-    "min-height": {"px": 1, "em": 1, "%": 1},
-    "min-width": {"px": 1, "em": 1, "%": 1},
-    "overflow": {"hidden": 1, "visible": 1, "auto": 1, "scroll": 1},
-    "overflow-x": {"hidden": 1, "visible": 1, "auto": 1, "scroll": 1},
-    "overflow-y": {"hidden": 1, "visible": 1, "auto": 1, "scroll": 1},
-    "padding": {"px": 1, "em": 1, "%": 1},
-    "padding-top": {"px": 1, "em": 1, "%": 1},
-    "padding-right": {"px": 1, "em": 1, "%": 1},
-    "padding-bottom": {"px": 1, "em": 1, "%": 1},
-    "padding-left": {"px": 1, "em": 1, "%": 1},
-    "page-break-after": {"auto": 1, "always": 1, "avoid": 1, "left": 1, "right": 1},
-    "page-break-before": {"auto": 1, "always": 1, "avoid": 1, "left": 1, "right": 1},
-    "position": {"absolute": 1, "relative": 1, "fixed": 1, "static": 1},
-    "right": {"px": 1, "em": 1, "%": 1},
-    "table-layout": {"fixed": 1, "auto": 1},
-    "text-decoration": {"none": 1, "underline": 1, "line-through": 1, "blink": 1},
-    "text-align": {"left": 1, "right": 1, "center": 1, "justify": 1},
-    "text-transform": {"capitalize": 1, "uppercase": 1, "lowercase": 1, "none": 1},
-    "top": {"px": 1, "em": 1, "%": 1},
-    "vertical-align": {"top": 1, "bottom": 1},
-    "visibility": {"hidden": 1, "visible": 1},
-    "white-space": {"nowrap": 1, "normal": 1, "pre": 1, "pre-line": 1, "pre-wrap": 1},
-    "width": {"px": 1, "em": 1, "%": 1},
-    "word-spacing": {"normal": 1},
-
-    // opacity
-    "filter": {"alpha(opacity=$0100)": 1},
-
-    "text-shadow": {"$02px 2px 2px #777": 1},
-    "text-overflow": {"ellipsis-word": 1, "clip": 1, "ellipsis": 1},
-
-    // border radius
-    "-moz-border-radius": 1,
-    "-moz-border-radius-topright": 1,
-    "-moz-border-radius-bottomright": 1,
-    "-moz-border-radius-topleft": 1,
-    "-moz-border-radius-bottomleft": 1,
-    "-webkit-border-radius": 1,
-    "-webkit-border-top-right-radius": 1,
-    "-webkit-border-top-left-radius": 1,
-    "-webkit-border-bottom-right-radius": 1,
-    "-webkit-border-bottom-left-radius": 1,
-
-    // dropshadows
-    "-moz-box-shadow": 1,
-    "-webkit-box-shadow": 1,
-
-    // transformations
-    "transform": {"rotate($00deg)": 1, "skew($00deg)": 1},
-    "-moz-transform": {"rotate($00deg)": 1, "skew($00deg)": 1},
-    "-webkit-transform": {"rotate($00deg)": 1, "skew($00deg)": 1 }
-};
-
-var CssCompletions = function() {
-
-};
-
-(function() {
-
-    this.completionsDefined = false;
-
-    this.defineCompletions = function() {
-        //fill in missing properties
-        if (document) {
-            var style = document.createElement('c').style;
-
-            for (var i in style) {
-                if (typeof style[i] !== 'string')
-                    continue;
-
-                var name = i.replace(/[A-Z]/g, function(x) {
-                    return '-' + x.toLowerCase();
-                });
-
-                if (!propertyMap.hasOwnProperty(name))
-                    propertyMap[name] = 1;
-            }
-        }
-
-        this.completionsDefined = true;
-    };
-
-    this.getCompletions = function(state, session, pos, prefix) {
-        if (!this.completionsDefined) {
-            this.defineCompletions();
-        }
-
-        if (state==='ruleset' || session.$mode.$id == "ace/mode/scss") {
-            //css attribute value
-            var line = session.getLine(pos.row).substr(0, pos.column);
-            var inParens = /\([^)]*$/.test(line);
-            if (inParens) {
-                line = line.substr(line.lastIndexOf('(') + 1);
-            }
-            if (/:[^;]+$/.test(line)) {
-                /([\w\-]+):[^:]*$/.test(line);
-
-                return this.getPropertyValueCompletions(state, session, pos, prefix);
-            } else {
-                return this.getPropertyCompletions(state, session, pos, prefix, inParens);
-            }
-        }
-
-        return [];
-    };
-
-    this.getPropertyCompletions = function(state, session, pos, prefix, skipSemicolon) {
-        skipSemicolon = skipSemicolon || false;
-        var properties = Object.keys(propertyMap);
-        return properties.map(function(property){
-            return {
-                caption: property,
-                snippet: property + ': $0' + (skipSemicolon ? '' : ';'),
-                meta: "property",
-                score: 1000000
-            };
-        });
-    };
-
-    this.getPropertyValueCompletions = function(state, session, pos, prefix) {
-        var line = session.getLine(pos.row).substr(0, pos.column);
-        var property = (/([\w\-]+):[^:]*$/.exec(line) || {})[1];
-
-        if (!property)
-            return [];
-        var values = [];
-        if (property in propertyMap && typeof propertyMap[property] === "object") {
-            values = Object.keys(propertyMap[property]);
-        }
-        return values.map(function(value){
-            return {
-                caption: value,
-                snippet: value,
-                meta: "property value",
-                score: 1000000
-            };
-        });
-    };
-
-}).call(CssCompletions.prototype);
-
-exports.A = CssCompletions;
-
-
-/***/ }),
-
-/***/ 9301:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-var oop = __webpack_require__(9359);
-var lang = __webpack_require__(124);
-var TextHighlightRules = (__webpack_require__(8053)/* .TextHighlightRules */ .K);
-
-
-/* Exports are for Stylus and Less highlighters */
-var supportType = __webpack_unused_export__ = "align-content|align-items|align-self|all|animation|animation-delay|animation-direction|animation-duration|animation-fill-mode|animation-iteration-count|animation-name|animation-play-state|animation-timing-function|backface-visibility|background|background-attachment|background-blend-mode|background-clip|background-color|background-image|background-origin|background-position|background-repeat|background-size|border|border-bottom|border-bottom-color|border-bottom-left-radius|border-bottom-right-radius|border-bottom-style|border-bottom-width|border-collapse|border-color|border-image|border-image-outset|border-image-repeat|border-image-slice|border-image-source|border-image-width|border-left|border-left-color|border-left-style|border-left-width|border-radius|border-right|border-right-color|border-right-style|border-right-width|border-spacing|border-style|border-top|border-top-color|border-top-left-radius|border-top-right-radius|border-top-style|border-top-width|border-width|bottom|box-shadow|box-sizing|caption-side|clear|clip|color|column-count|column-fill|column-gap|column-rule|column-rule-color|column-rule-style|column-rule-width|column-span|column-width|columns|content|counter-increment|counter-reset|cursor|direction|display|empty-cells|filter|flex|flex-basis|flex-direction|flex-flow|flex-grow|flex-shrink|flex-wrap|float|font|font-family|font-size|font-size-adjust|font-stretch|font-style|font-variant|font-weight|hanging-punctuation|height|justify-content|left|letter-spacing|line-height|list-style|list-style-image|list-style-position|list-style-type|margin|margin-bottom|margin-left|margin-right|margin-top|max-height|max-width|max-zoom|min-height|min-width|min-zoom|nav-down|nav-index|nav-left|nav-right|nav-up|opacity|order|outline|outline-color|outline-offset|outline-style|outline-width|overflow|overflow-x|overflow-y|padding|padding-bottom|padding-left|padding-right|padding-top|page-break-after|page-break-before|page-break-inside|perspective|perspective-origin|position|quotes|resize|right|tab-size|table-layout|text-align|text-align-last|text-decoration|text-decoration-color|text-decoration-line|text-decoration-style|text-indent|text-justify|text-overflow|text-shadow|text-transform|top|transform|transform-origin|transform-style|transition|transition-delay|transition-duration|transition-property|transition-timing-function|unicode-bidi|user-select|user-zoom|vertical-align|visibility|white-space|width|word-break|word-spacing|word-wrap|z-index";
-var supportFunction = __webpack_unused_export__ = "rgb|rgba|url|attr|counter|counters";
-var supportConstant = __webpack_unused_export__ = "absolute|after-edge|after|all-scroll|all|alphabetic|always|antialiased|armenian|auto|avoid-column|avoid-page|avoid|balance|baseline|before-edge|before|below|bidi-override|block-line-height|block|bold|bolder|border-box|both|bottom|box|break-all|break-word|capitalize|caps-height|caption|center|central|char|circle|cjk-ideographic|clone|close-quote|col-resize|collapse|column|consider-shifts|contain|content-box|cover|crosshair|cubic-bezier|dashed|decimal-leading-zero|decimal|default|disabled|disc|disregard-shifts|distribute-all-lines|distribute-letter|distribute-space|distribute|dotted|double|e-resize|ease-in|ease-in-out|ease-out|ease|ellipsis|end|exclude-ruby|flex-end|flex-start|fill|fixed|georgian|glyphs|grid-height|groove|hand|hanging|hebrew|help|hidden|hiragana-iroha|hiragana|horizontal|icon|ideograph-alpha|ideograph-numeric|ideograph-parenthesis|ideograph-space|ideographic|inactive|include-ruby|inherit|initial|inline-block|inline-box|inline-line-height|inline-table|inline|inset|inside|inter-ideograph|inter-word|invert|italic|justify|katakana-iroha|katakana|keep-all|last|left|lighter|line-edge|line-through|line|linear|list-item|local|loose|lower-alpha|lower-greek|lower-latin|lower-roman|lowercase|lr-tb|ltr|mathematical|max-height|max-size|medium|menu|message-box|middle|move|n-resize|ne-resize|newspaper|no-change|no-close-quote|no-drop|no-open-quote|no-repeat|none|normal|not-allowed|nowrap|nw-resize|oblique|open-quote|outset|outside|overline|padding-box|page|pointer|pre-line|pre-wrap|pre|preserve-3d|progress|relative|repeat-x|repeat-y|repeat|replaced|reset-size|ridge|right|round|row-resize|rtl|s-resize|scroll|se-resize|separate|slice|small-caps|small-caption|solid|space|square|start|static|status-bar|step-end|step-start|steps|stretch|strict|sub|super|sw-resize|table-caption|table-cell|table-column-group|table-column|table-footer-group|table-header-group|table-row-group|table-row|table|tb-rl|text-after-edge|text-before-edge|text-bottom|text-size|text-top|text|thick|thin|transparent|underline|upper-alpha|upper-latin|upper-roman|uppercase|use-script|vertical-ideographic|vertical-text|visible|w-resize|wait|whitespace|z-index|zero|zoom";
-var supportConstantColor = __webpack_unused_export__ = "aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|blue|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|cyan|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|fuchsia|gainsboro|ghostwhite|gold|goldenrod|gray|green|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|lime|limegreen|linen|magenta|maroon|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|navy|oldlace|olive|olivedrab|orange|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|purple|rebeccapurple|red|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|tan|teal|thistle|tomato|turquoise|violet|wheat|white|whitesmoke|yellow|yellowgreen";
-var supportConstantFonts = __webpack_unused_export__ = "arial|century|comic|courier|cursive|fantasy|garamond|georgia|helvetica|impact|lucida|symbol|system|tahoma|times|trebuchet|utopia|verdana|webdings|sans-serif|serif|monospace";
-
-var numRe = __webpack_unused_export__ = "\\-?(?:(?:[0-9]+(?:\\.[0-9]+)?)|(?:\\.[0-9]+))";
-var pseudoElements = __webpack_unused_export__ = "(\\:+)\\b(after|before|first-letter|first-line|moz-selection|selection)\\b";
-var pseudoClasses  = __webpack_unused_export__ =  "(:)\\b(active|checked|disabled|empty|enabled|first-child|first-of-type|focus|hover|indeterminate|invalid|last-child|last-of-type|link|not|nth-child|nth-last-child|nth-last-of-type|nth-of-type|only-child|only-of-type|required|root|target|valid|visited)\\b";
-
-var CssHighlightRules = function() {
-
-    var keywordMapper = this.createKeywordMapper({
-        "support.function": supportFunction,
-        "support.constant": supportConstant,
-        "support.type": supportType,
-        "support.constant.color": supportConstantColor,
-        "support.constant.fonts": supportConstantFonts
-    }, "text", true);
-
-    // regexp must not have capturing parentheses. Use (?:) instead.
-    // regexps are ordered -> the first match is used
-
-    this.$rules = {
-        "start" : [{
-            include : ["strings", "url", "comments"]
-        }, {
-            token: "paren.lparen",
-            regex: "\\{",
-            next:  "ruleset"
-        }, {
-            token: "paren.rparen",
-            regex: "\\}"
-        }, {
-            token: "string",
-            regex: "@(?!viewport)",
-            next:  "media"
-        }, {
-            token: "keyword",
-            regex: "#[a-z0-9-_]+"
-        }, {
-            token: "keyword",
-            regex: "%"
-        }, {
-            token: "variable",
-            regex: "\\.[a-z0-9-_]+"
-        }, {
-            token: "string",
-            regex: ":[a-z0-9-_]+"
-        }, {
-            token : "constant.numeric",
-            regex : numRe
-        }, {
-            token: "constant",
-            regex: "[a-z0-9-_]+"
-        }, {
-            caseInsensitive: true
-        }],
-
-        "media": [{
-            include : ["strings", "url", "comments"]
-        }, {
-            token: "paren.lparen",
-            regex: "\\{",
-            next:  "start"
-        }, {
-            token: "paren.rparen",
-            regex: "\\}",
-            next:  "start"
-        }, {
-            token: "string",
-            regex: ";",
-            next:  "start"
-        }, {
-            token: "keyword",
-            regex: "(?:media|supports|document|charset|import|namespace|media|supports|document"
-                + "|page|font|keyframes|viewport|counter-style|font-feature-values"
-                + "|swash|ornaments|annotation|stylistic|styleset|character-variant)"
-        }],
-
-        "comments" : [{
-            token: "comment", // multi line comment
-            regex: "\\/\\*",
-            push: [{
-                token : "comment",
-                regex : "\\*\\/",
-                next : "pop"
-            }, {
-                defaultToken : "comment"
-            }]
-        }],
-
-        "ruleset" : [{
-            regex : "-(webkit|ms|moz|o)-",
-            token : "text"
-        }, {
-            token : "punctuation.operator",
-            regex : "[:;]"
-        }, {
-            token : "paren.rparen",
-            regex : "\\}",
-            next : "start"
-        }, {
-            include : ["strings", "url", "comments"]
-        }, {
-            token : ["constant.numeric", "keyword"],
-            regex : "(" + numRe + ")(ch|cm|deg|em|ex|fr|gd|grad|Hz|in|kHz|mm|ms|pc|pt|px|rad|rem|s|turn|vh|vmax|vmin|vm|vw|%)"
-        }, {
-            token : "constant.numeric",
-            regex : numRe
-        }, {
-            token : "constant.numeric",  // hex6 color
-            regex : "#[a-f0-9]{6}"
-        }, {
-            token : "constant.numeric", // hex3 color
-            regex : "#[a-f0-9]{3}"
-        }, {
-            token : ["punctuation", "entity.other.attribute-name.pseudo-element.css"],
-            regex : pseudoElements
-        }, {
-            token : ["punctuation", "entity.other.attribute-name.pseudo-class.css"],
-            regex : pseudoClasses
-        }, {
-            include: "url"
-        }, {
-            token : keywordMapper,
-            regex : "\\-?[a-zA-Z_][a-zA-Z0-9_\\-]*"
-        }, {
-            caseInsensitive: true
-        }],
-
-        url: [{
-            token : "support.function",
-            regex : "(?:url(:?-prefix)?|domain|regexp)\\(",
-            push: [{
-                token : "support.function",
-                regex : "\\)",
-                next : "pop"
-            }, {
-                defaultToken: "string"
-            }]
-        }],
-
-        strings: [{
-            token : "string.start",
-            regex : "'",
-            push : [{
-                token : "string.end",
-                regex : "'|$",
-                next: "pop"
-            }, {
-                include : "escapes"
-            }, {
-                token : "constant.language.escape",
-                regex : /\\$/,
-                consumeLineEnd: true
-            }, {
-                defaultToken: "string"
-            }]
-        }, {
-            token : "string.start",
-            regex : '"',
-            push : [{
-                token : "string.end",
-                regex : '"|$',
-                next: "pop"
-            }, {
-                include : "escapes"
-            }, {
-                token : "constant.language.escape",
-                regex : /\\$/,
-                consumeLineEnd: true
-            }, {
-                defaultToken: "string"
-            }]
-        }],
-        escapes: [{
-            token : "constant.language.escape",
-            regex : /\\([a-fA-F\d]{1,6}|[^a-fA-F\d])/
-        }]
-
-    };
-
-    this.normalizeRules();
-};
-
-oop.inherits(CssHighlightRules, TextHighlightRules);
-
-exports.Kd = CssHighlightRules;
-
-
-/***/ }),
-
-/***/ 2718:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var TextHighlightRules = (__webpack_require__(8053)/* .TextHighlightRules */ .K);
-
-var DocCommentHighlightRules = function() {
-    this.$rules = {
-        "start" : [ {
-            token : "comment.doc.tag",
-            regex : "@[\\w\\d_]+" // TODO: fix email addresses
-        }, 
-        DocCommentHighlightRules.getTagRule(),
-        {
-            defaultToken : "comment.doc",
-            caseInsensitive: true
-        }]
-    };
-};
-
-oop.inherits(DocCommentHighlightRules, TextHighlightRules);
-
-DocCommentHighlightRules.getTagRule = function(start) {
-    return {
-        token : "comment.doc.tag.storage.type",
-        regex : "\\b(?:TODO|FIXME|XXX|HACK)\\b"
-    };
-};
-
-DocCommentHighlightRules.getStartRule = function(start) {
-    return {
-        token : "comment.doc", // doc comment
-        regex : "\\/\\*(?=\\*)",
-        next  : start
-    };
-};
-
-DocCommentHighlightRules.getEndRule = function (start) {
-    return {
-        token : "comment.doc", // closing comment
-        regex : "\\*\\/",
-        next  : start
-    };
-};
-
-
-exports.c = DocCommentHighlightRules;
-
-
-/***/ }),
-
-/***/ 2764:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var BaseFoldMode = (__webpack_require__(5369).FoldMode);
-
-var FoldMode = exports.Z = function(commentRegex) {
-    if (commentRegex) {
-        this.foldingStartMarker = new RegExp(
-            this.foldingStartMarker.source.replace(/\|[^|]*?$/, "|" + commentRegex.start)
-        );
-        this.foldingStopMarker = new RegExp(
-            this.foldingStopMarker.source.replace(/\|[^|]*?$/, "|" + commentRegex.end)
-        );
-    }
-};
-oop.inherits(FoldMode, BaseFoldMode);
-
-(function() {
-    
-    this.foldingStartMarker = /([\{\[\(])[^\}\]\)]*$|^\s*(\/\*)/;
-    this.foldingStopMarker = /^[^\[\{\(]*([\}\]\)])|^[\s\*]*(\*\/)/;
-    this.singleLineBlockCommentRe= /^\s*(\/\*).*\*\/\s*$/;
-    this.tripleStarBlockCommentRe = /^\s*(\/\*\*\*).*\*\/\s*$/;
-    this.startRegionRe = /^\s*(\/\*|\/\/)#?region\b/;
-    
-    //prevent naming conflict with any modes that inherit from cstyle and override this (like csharp)
-    this._getFoldWidgetBase = this.getFoldWidget;
-    
-    /**
-     * Gets fold widget with some non-standard extras:
-     *
-     * @example lineCommentRegionStart
-     *      //#region [optional description]
-     *
-     * @example blockCommentRegionStart
-     *      /*#region [optional description] *[/]
-     *
-     * @example tripleStarFoldingSection
-     *      /*** this folds even though 1 line because it has 3 stars ***[/]
-     * 
-     * @note the pound symbol for region tags is optional
-     */
-    this.getFoldWidget = function(session, foldStyle, row) {
-        var line = session.getLine(row);
-    
-        if (this.singleLineBlockCommentRe.test(line)) {
-            // No widget for single line block comment unless region or triple star
-            if (!this.startRegionRe.test(line) && !this.tripleStarBlockCommentRe.test(line))
-                return "";
-        }
-    
-        var fw = this._getFoldWidgetBase(session, foldStyle, row);
-    
-        if (!fw && this.startRegionRe.test(line))
-            return "start"; // lineCommentRegionStart
-    
-        return fw;
-    };
-
-    this.getFoldWidgetRange = function(session, foldStyle, row, forceMultiline) {
-        var line = session.getLine(row);
-        
-        if (this.startRegionRe.test(line))
-            return this.getCommentRegionBlock(session, line, row);
-        
-        var match = line.match(this.foldingStartMarker);
-        if (match) {
-            var i = match.index;
-
-            if (match[1])
-                return this.openingBracketBlock(session, match[1], row, i);
-                
-            var range = session.getCommentFoldRange(row, i + match[0].length, 1);
-            
-            if (range && !range.isMultiLine()) {
-                if (forceMultiline) {
-                    range = this.getSectionRange(session, row);
-                } else if (foldStyle != "all")
-                    range = null;
-            }
-            
-            return range;
-        }
-
-        if (foldStyle === "markbegin")
-            return;
-
-        var match = line.match(this.foldingStopMarker);
-        if (match) {
-            var i = match.index + match[0].length;
-
-            if (match[1])
-                return this.closingBracketBlock(session, match[1], row, i);
-
-            return session.getCommentFoldRange(row, i, -1);
-        }
-    };
-    
-    this.getSectionRange = function(session, row) {
-        var line = session.getLine(row);
-        var startIndent = line.search(/\S/);
-        var startRow = row;
-        var startColumn = line.length;
-        row = row + 1;
-        var endRow = row;
-        var maxRow = session.getLength();
-        while (++row < maxRow) {
-            line = session.getLine(row);
-            var indent = line.search(/\S/);
-            if (indent === -1)
-                continue;
-            if  (startIndent > indent)
-                break;
-            var subRange = this.getFoldWidgetRange(session, "all", row);
-            
-            if (subRange) {
-                if (subRange.start.row <= startRow) {
-                    break;
-                } else if (subRange.isMultiLine()) {
-                    row = subRange.end.row;
-                } else if (startIndent == indent) {
-                    break;
-                }
-            }
-            endRow = row;
-        }
-        
-        return new Range(startRow, startColumn, endRow, session.getLine(endRow).length);
-    };
-    
-    /**
-     * gets comment region block with end region assumed to be start of comment in any cstyle mode or SQL mode (--) which inherits from this.
-     * There may optionally be a pound symbol before the region/endregion statement
-     */
-    this.getCommentRegionBlock = function(session, line, row) {
-        var startColumn = line.search(/\s*$/);
-        var maxRow = session.getLength();
-        var startRow = row;
-        
-        var re = /^\s*(?:\/\*|\/\/|--)#?(end)?region\b/;
-        var depth = 1;
-        while (++row < maxRow) {
-            line = session.getLine(row);
-            var m = re.exec(line);
-            if (!m) continue;
-            if (m[1]) depth--;
-            else depth++;
-
-            if (!depth) break;
-        }
-
-        var endRow = row;
-        if (endRow > startRow) {
-            return new Range(startRow, startColumn, endRow, line.length);
-        }
-    };
-
-}).call(FoldMode.prototype);
-
-
-/***/ }),
-
-/***/ 5369:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 var FoldMode = exports.FoldMode = function() {};
 
@@ -19468,1376 +19385,35 @@ var FoldMode = exports.FoldMode = function() {};
 
 /***/ }),
 
-/***/ 4505:
+/***/ 98030:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
-
-var oop = __webpack_require__(9359);
-var MixedFoldMode = (__webpack_require__(2974)/* .FoldMode */ .Z);
-var XmlFoldMode = (__webpack_require__(4631)/* .FoldMode */ .Z);
-var CStyleFoldMode = (__webpack_require__(2764)/* .FoldMode */ .Z);
-
-var FoldMode = exports.Z = function(voidElements, optionalTags) {
-    MixedFoldMode.call(this, new XmlFoldMode(voidElements, optionalTags), {
-        "js-": new CStyleFoldMode(),
-        "css-": new CStyleFoldMode()
-    });
-};
-
-oop.inherits(FoldMode, MixedFoldMode);
-
-
-/***/ }),
-
-/***/ 2974:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var BaseFoldMode = (__webpack_require__(5369).FoldMode);
-
-var FoldMode = exports.Z = function(defaultMode, subModes) {
-    this.defaultMode = defaultMode;
-    this.subModes = subModes;
-};
-oop.inherits(FoldMode, BaseFoldMode);
-
-(function() {
-
-
-    this.$getMode = function(state) {
-        if (typeof state != "string") 
-            state = state[0];
-        for (var key in this.subModes) {
-            if (state.indexOf(key) === 0)
-                return this.subModes[key];
-        }
-        return null;
-    };
-    
-    this.$tryMode = function(state, session, foldStyle, row) {
-        var mode = this.$getMode(state);
-        return (mode ? mode.getFoldWidget(session, foldStyle, row) : "");
-    };
-
-    this.getFoldWidget = function(session, foldStyle, row) {
-        return (
-            this.$tryMode(session.getState(row-1), session, foldStyle, row) ||
-            this.$tryMode(session.getState(row), session, foldStyle, row) ||
-            this.defaultMode.getFoldWidget(session, foldStyle, row)
-        );
-    };
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var mode = this.$getMode(session.getState(row-1));
-        
-        if (!mode || !mode.getFoldWidget(session, foldStyle, row))
-            mode = this.$getMode(session.getState(row));
-        
-        if (!mode || !mode.getFoldWidget(session, foldStyle, row))
-            mode = this.defaultMode;
-        
-        return mode.getFoldWidgetRange(session, foldStyle, row);
-    };
-
-}).call(FoldMode.prototype);
-
-
-/***/ }),
-
-/***/ 4631:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var BaseFoldMode = (__webpack_require__(5369).FoldMode);
-
-var FoldMode = exports.Z = function(voidElements, optionalEndTags) {
-    BaseFoldMode.call(this);
-    this.voidElements = voidElements || {};
-    this.optionalEndTags = oop.mixin({}, this.voidElements);
-    if (optionalEndTags)
-        oop.mixin(this.optionalEndTags, optionalEndTags);
-    
-};
-oop.inherits(FoldMode, BaseFoldMode);
-
-var Tag = function() {
-    this.tagName = "";
-    this.closing = false;
-    this.selfClosing = false;
-    this.start = {row: 0, column: 0};
-    this.end = {row: 0, column: 0};
-};
-
-function is(token, type) {
-    return token.type.lastIndexOf(type + ".xml") > -1;
-}
-
-(function() {
-
-    this.getFoldWidget = function(session, foldStyle, row) {
-        var tag = this._getFirstTagInLine(session, row);
-
-        if (!tag)
-            return this.getCommentFoldWidget(session, row);
-
-        if (tag.closing || (!tag.tagName && tag.selfClosing))
-            return foldStyle === "markbeginend" ? "end" : "";
-
-        if (!tag.tagName || tag.selfClosing || this.voidElements.hasOwnProperty(tag.tagName.toLowerCase()))
-            return "";
-
-        if (this._findEndTagInLine(session, row, tag.tagName, tag.end.column))
-            return "";
-
-        return "start";
-    };
-    
-    this.getCommentFoldWidget = function(session, row) {
-        if (/comment/.test(session.getState(row)) && /<!-/.test(session.getLine(row)))
-            return "start";
-        return "";
-    };
-
-    /*
-     * returns a first tag (or a fragment) in a line
-     */
-    this._getFirstTagInLine = function(session, row) {
-        var tokens = session.getTokens(row);
-        var tag = new Tag();
-
-        for (var i = 0; i < tokens.length; i++) {
-            var token = tokens[i];
-            if (is(token, "tag-open")) {
-                tag.end.column = tag.start.column + token.value.length;
-                tag.closing = is(token, "end-tag-open");
-                token = tokens[++i];
-                if (!token)
-                    return null;
-                tag.tagName = token.value;
-                tag.end.column += token.value.length;
-                for (i++; i < tokens.length; i++) {
-                    token = tokens[i];
-                    tag.end.column += token.value.length;
-                    if (is(token, "tag-close")) {
-                        tag.selfClosing = token.value == '/>';
-                        break;
-                    }
-                }
-                return tag;
-            } else if (is(token, "tag-close")) {
-                tag.selfClosing = token.value == '/>';
-                return tag;
-            }
-            tag.start.column += token.value.length;
-        }
-
-        return null;
-    };
-
-    this._findEndTagInLine = function(session, row, tagName, startColumn) {
-        var tokens = session.getTokens(row);
-        var column = 0;
-        for (var i = 0; i < tokens.length; i++) {
-            var token = tokens[i];
-            column += token.value.length;
-            if (column < startColumn)
-                continue;
-            if (is(token, "end-tag-open")) {
-                token = tokens[i + 1];
-                if (token && token.value == tagName)
-                    return true;
-            }
-        }
-        return false;
-    };
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var tags = session.getMatchingTags({row: row, column: 0});
-        if (tags) {
-            return new Range(
-                tags.openTag.end.row, tags.openTag.end.column, tags.closeTag.start.row, tags.closeTag.start.column);
-        } else {
-            return this.getCommentFoldWidget(session, row)
-                && session.getCommentFoldRange(row, session.getLine(row).length);
-        }
-    };
-
-}).call(FoldMode.prototype);
-
-
-/***/ }),
-
-/***/ 5528:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var lang = __webpack_require__(124);
-var TextMode = (__webpack_require__(8030)/* .Mode */ .A);
-var JavaScriptMode = (__webpack_require__(8057).Mode);
-var CssMode = (__webpack_require__(8771).Mode);
-var HtmlHighlightRules = (__webpack_require__(2843)/* .HtmlHighlightRules */ .V);
-var XmlBehaviour = (__webpack_require__(7809)/* .XmlBehaviour */ .D);
-var HtmlFoldMode = (__webpack_require__(4505)/* .FoldMode */ .Z);
-var HtmlCompletions = (__webpack_require__(8439)/* .HtmlCompletions */ .A);
-var WorkerClient = (__webpack_require__(1451).WorkerClient);
-
-// http://www.w3.org/TR/html5/syntax.html#void-elements
-var voidElements = ["area", "base", "br", "col", "embed", "hr", "img", "input", "keygen", "link", "meta", "menuitem", "param", "source", "track", "wbr"];
-var optionalEndTags = ["li", "dt", "dd", "p", "rt", "rp", "optgroup", "option", "colgroup", "td", "th"];
-
-var Mode = function(options) {
-    this.fragmentContext = options && options.fragmentContext;
-    this.HighlightRules = HtmlHighlightRules;
-    this.$behaviour = new XmlBehaviour();
-    this.$completer = new HtmlCompletions();
-    
-    this.createModeDelegates({
-        "js-": JavaScriptMode,
-        "css-": CssMode
-    });
-    
-    this.foldingRules = new HtmlFoldMode(this.voidElements, lang.arrayToMap(optionalEndTags));
-};
-oop.inherits(Mode, TextMode);
-
-(function() {
-
-    this.blockComment = {start: "<!--", end: "-->"};
-
-    this.voidElements = lang.arrayToMap(voidElements);
-
-    this.getNextLineIndent = function(state, line, tab) {
-        return this.$getIndent(line);
-    };
-
-    this.checkOutdent = function(state, line, input) {
-        return false;
-    };
-
-    this.getCompletions = function(state, session, pos, prefix) {
-        return this.$completer.getCompletions(state, session, pos, prefix);
-    };
-
-    this.createWorker = function(session) {
-        if (this.constructor != Mode)
-            return;
-        var worker = new WorkerClient(["ace"], "ace/mode/html_worker", "Worker");
-        worker.attachToDocument(session.getDocument());
-
-        if (this.fragmentContext)
-            worker.call("setOptions", [{context: this.fragmentContext}]);
-
-        worker.on("error", function(e) {
-            session.setAnnotations(e.data);
-        });
-
-        worker.on("terminate", function() {
-            session.clearAnnotations();
-        });
-
-        return worker;
-    };
-
-    this.$id = "ace/mode/html";
-    this.snippetFileId = "ace/snippets/html";
-}).call(Mode.prototype);
-
-exports.Mode = Mode;
-
-
-/***/ }),
-
-/***/ 8439:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
-
-var commonAttributes = [
-    "accesskey",
-    "class",
-    "contenteditable",
-    "contextmenu",
-    "dir",
-    "draggable",
-    "dropzone",
-    "hidden",
-    "id",
-    "inert",
-    "itemid",
-    "itemprop",
-    "itemref",
-    "itemscope",
-    "itemtype",
-    "lang",
-    "spellcheck",
-    "style",
-    "tabindex",
-    "title",
-    "translate"
-];
-
-var eventAttributes = [
-    "onabort",
-    "onblur",
-    "oncancel",
-    "oncanplay",
-    "oncanplaythrough",
-    "onchange",
-    "onclick",
-    "onclose",
-    "oncontextmenu",
-    "oncuechange",
-    "ondblclick",
-    "ondrag",
-    "ondragend",
-    "ondragenter",
-    "ondragleave",
-    "ondragover",
-    "ondragstart",
-    "ondrop",
-    "ondurationchange",
-    "onemptied",
-    "onended",
-    "onerror",
-    "onfocus",
-    "oninput",
-    "oninvalid",
-    "onkeydown",
-    "onkeypress",
-    "onkeyup",
-    "onload",
-    "onloadeddata",
-    "onloadedmetadata",
-    "onloadstart",
-    "onmousedown",
-    "onmousemove",
-    "onmouseout",
-    "onmouseover",
-    "onmouseup",
-    "onmousewheel",
-    "onpause",
-    "onplay",
-    "onplaying",
-    "onprogress",
-    "onratechange",
-    "onreset",
-    "onscroll",
-    "onseeked",
-    "onseeking",
-    "onselect",
-    "onshow",
-    "onstalled",
-    "onsubmit",
-    "onsuspend",
-    "ontimeupdate",
-    "onvolumechange",
-    "onwaiting"
-];
-
-var globalAttributes = commonAttributes.concat(eventAttributes);
-
-var attributeMap = {
-    "a": {"href": 1, "target": {"_blank": 1, "top": 1}, "ping": 1, "rel": {"nofollow": 1, "alternate": 1, "author": 1, "bookmark": 1, "help": 1, "license": 1, "next": 1, "noreferrer": 1, "prefetch": 1, "prev": 1, "search": 1, "tag": 1}, "media": 1, "hreflang": 1, "type": 1},
-    "abbr": {},
-    "address": {},
-    "area": {"shape": 1, "coords": 1, "href": 1, "hreflang": 1, "alt": 1, "target": 1, "media": 1, "rel": 1, "ping": 1, "type": 1},
-    "article": {"pubdate": 1},
-    "aside": {},
-    "audio": {"src": 1, "autobuffer": 1, "autoplay": {"autoplay": 1}, "loop": {"loop": 1}, "controls": {"controls": 1}, "muted": {"muted": 1}, "preload": {"auto": 1, "metadata": 1, "none": 1 }},
-    "b": {},
-    "base": {"href": 1, "target": 1},
-    "bdi": {},
-    "bdo": {},
-    "blockquote": {"cite": 1},
-    "body": {"onafterprint": 1, "onbeforeprint": 1, "onbeforeunload": 1, "onhashchange": 1, "onmessage": 1, "onoffline": 1, "onpopstate": 1, "onredo": 1, "onresize": 1, "onstorage": 1, "onundo": 1, "onunload": 1},
-    "br": {},
-    "button": {"autofocus": 1, "disabled": {"disabled": 1}, "form": 1, "formaction": 1, "formenctype": 1, "formmethod": 1, "formnovalidate": 1, "formtarget": 1, "name": 1, "value": 1, "type": {"button": 1, "submit": 1}},
-    "canvas": {"width": 1, "height": 1},
-    "caption": {},
-    "cite": {},
-    "code": {},
-    "col": {"span": 1},
-    "colgroup": {"span": 1},
-    "command": {"type": 1, "label": 1, "icon": 1, "disabled": 1, "checked": 1, "radiogroup": 1, "command": 1},
-    "data": {},
-    "datalist": {},
-    "dd": {},
-    "del": {"cite": 1, "datetime": 1},
-    "details": {"open": 1},
-    "dfn": {},
-    "dialog": {"open": 1},
-    "div": {},
-    "dl": {},
-    "dt": {},
-    "em": {},
-    "embed": {"src": 1, "height": 1, "width": 1, "type": 1},
-    "fieldset": {"disabled": 1, "form": 1, "name": 1},
-    "figcaption": {},
-    "figure": {},
-    "footer": {},
-    "form": {"accept-charset": 1, "action": 1, "autocomplete": 1, "enctype": {"multipart/form-data": 1, "application/x-www-form-urlencoded": 1}, "method": {"get": 1, "post": 1}, "name": 1, "novalidate": 1, "target": {"_blank": 1, "top": 1}},
-    "h1": {},
-    "h2": {},
-    "h3": {},
-    "h4": {},
-    "h5": {},
-    "h6": {},
-    "head": {},
-    "header": {},
-    "hr": {},
-    "html": {"manifest": 1},
-    "i": {},
-    "iframe": {"name": 1, "src": 1, "height": 1, "width": 1, "sandbox": {"allow-same-origin": 1, "allow-top-navigation": 1, "allow-forms": 1, "allow-scripts": 1}, "seamless": {"seamless": 1}},
-    "img": {"alt": 1, "src": 1, "height": 1, "width": 1, "usemap": 1, "ismap": 1},
-    "input": {
-        "type": {"text": 1, "password": 1, "hidden": 1, "checkbox": 1, "submit": 1, "radio": 1, "file": 1, "button": 1, "reset": 1, "image": 31, "color": 1, "date": 1, "datetime": 1, "datetime-local": 1, "email": 1, "month": 1, "number": 1, "range": 1, "search": 1, "tel": 1, "time": 1, "url": 1, "week": 1},
-        "accept": 1, "alt": 1, "autocomplete": {"on": 1, "off": 1}, "autofocus": {"autofocus": 1}, "checked": {"checked": 1}, "disabled": {"disabled": 1}, "form": 1, "formaction": 1, "formenctype": {"application/x-www-form-urlencoded": 1, "multipart/form-data": 1, "text/plain": 1}, "formmethod": {"get": 1, "post": 1}, "formnovalidate": {"formnovalidate": 1}, "formtarget": {"_blank": 1, "_self": 1, "_parent": 1, "_top": 1}, "height": 1, "list": 1, "max": 1, "maxlength": 1, "min": 1, "multiple": {"multiple": 1}, "name": 1, "pattern": 1, "placeholder": 1, "readonly": {"readonly": 1}, "required": {"required": 1}, "size": 1, "src": 1, "step": 1, "width": 1, "files": 1, "value": 1},
-    "ins": {"cite": 1, "datetime": 1},
-    "kbd": {},
-    "keygen": {"autofocus": 1, "challenge": {"challenge": 1}, "disabled": {"disabled": 1}, "form": 1, "keytype": {"rsa": 1, "dsa": 1, "ec": 1}, "name": 1},
-    "label": {"form": 1, "for": 1},
-    "legend": {},
-    "li": {"value": 1},
-    "link": {"href": 1, "hreflang": 1, "rel": {"stylesheet": 1, "icon": 1}, "media": {"all": 1, "screen": 1, "print": 1}, "type": {"text/css": 1, "image/png": 1, "image/jpeg": 1, "image/gif": 1}, "sizes": 1},
-    "main": {},
-    "map": {"name": 1},
-    "mark": {},
-    "math": {},
-    "menu": {"type": 1, "label": 1},
-    "meta": {"http-equiv": {"content-type": 1}, "name": {"description": 1, "keywords": 1}, "content": {"text/html; charset=UTF-8": 1}, "charset": 1},
-    "meter": {"value": 1, "min": 1, "max": 1, "low": 1, "high": 1, "optimum": 1},
-    "nav": {},
-    "noscript": {"href": 1},
-    "object": {"param": 1, "data": 1, "type": 1, "height" : 1, "width": 1, "usemap": 1, "name": 1, "form": 1, "classid": 1},
-    "ol": {"start": 1, "reversed": 1},
-    "optgroup": {"disabled": 1, "label": 1},
-    "option": {"disabled": 1, "selected": 1, "label": 1, "value": 1},
-    "output": {"for": 1, "form": 1, "name": 1},
-    "p": {},
-    "param": {"name": 1, "value": 1},
-    "pre": {},
-    "progress": {"value": 1, "max": 1},
-    "q": {"cite": 1},
-    "rp": {},
-    "rt": {},
-    "ruby": {},
-    "s": {},
-    "samp": {},
-    "script": {"charset": 1, "type": {"text/javascript": 1}, "src": 1, "defer": 1, "async": 1},
-    "select": {"autofocus": 1, "disabled": 1, "form": 1, "multiple": {"multiple": 1}, "name": 1, "size": 1, "readonly":{"readonly": 1}},
-    "small": {},
-    "source": {"src": 1, "type": 1, "media": 1},
-    "span": {},
-    "strong": {},
-    "style": {"type": 1, "media": {"all": 1, "screen": 1, "print": 1}, "scoped": 1},
-    "sub": {},
-    "sup": {},
-    "svg": {},
-    "table": {"summary": 1},
-    "tbody": {},
-    "td": {"headers": 1, "rowspan": 1, "colspan": 1},
-    "textarea": {"autofocus": {"autofocus": 1}, "disabled": {"disabled": 1}, "form": 1, "maxlength": 1, "name": 1, "placeholder": 1, "readonly": {"readonly": 1}, "required": {"required": 1}, "rows": 1, "cols": 1, "wrap": {"on": 1, "off": 1, "hard": 1, "soft": 1}},
-    "tfoot": {},
-    "th": {"headers": 1, "rowspan": 1, "colspan": 1, "scope": 1},
-    "thead": {},
-    "time": {"datetime": 1},
-    "title": {},
-    "tr": {},
-    "track": {"kind": 1, "src": 1, "srclang": 1, "label": 1, "default": 1},
-    "section": {},
-    "summary": {},
-    "u": {},
-    "ul": {},
-    "var": {},
-    "video": {"src": 1, "autobuffer": 1, "autoplay": {"autoplay": 1}, "loop": {"loop": 1}, "controls": {"controls": 1}, "width": 1, "height": 1, "poster": 1, "muted": {"muted": 1}, "preload": {"auto": 1, "metadata": 1, "none": 1}},
-    "wbr": {}
-};
-
-var elements = Object.keys(attributeMap);
-
-function is(token, type) {
-    return token.type.lastIndexOf(type + ".xml") > -1;
-}
-
-function findTagName(session, pos) {
-    var iterator = new TokenIterator(session, pos.row, pos.column);
-    var token = iterator.getCurrentToken();
-    while (token && !is(token, "tag-name")){
-        token = iterator.stepBackward();
-    }
-    if (token)
-        return token.value;
-}
-
-function findAttributeName(session, pos) {
-    var iterator = new TokenIterator(session, pos.row, pos.column);
-    var token = iterator.getCurrentToken();
-    while (token && !is(token, "attribute-name")){
-        token = iterator.stepBackward();
-    }
-    if (token)
-        return token.value;
-}
-
-var HtmlCompletions = function() {
-
-};
-
-(function() {
-
-    this.getCompletions = function(state, session, pos, prefix) {
-        var token = session.getTokenAt(pos.row, pos.column);
-
-        if (!token)
-            return [];
-
-        // tag name
-        if (is(token, "tag-name") || is(token, "tag-open") || is(token, "end-tag-open"))
-            return this.getTagCompletions(state, session, pos, prefix);
-
-        // tag attribute
-        if (is(token, "tag-whitespace") || is(token, "attribute-name"))
-            return this.getAttributeCompletions(state, session, pos, prefix);
-            
-        // tag attribute values
-        if (is(token, "attribute-value"))
-            return this.getAttributeValueCompletions(state, session, pos, prefix);
-            
-        // HTML entities
-        var line = session.getLine(pos.row).substr(0, pos.column);
-        if (/&[a-z]*$/i.test(line))
-            return this.getHTMLEntityCompletions(state, session, pos, prefix);
-
-        return [];
-    };
-
-    this.getTagCompletions = function(state, session, pos, prefix) {
-        return elements.map(function(element){
-            return {
-                value: element,
-                meta: "tag",
-                score: 1000000
-            };
-        });
-    };
-
-    this.getAttributeCompletions = function(state, session, pos, prefix) {
-        var tagName = findTagName(session, pos);
-        if (!tagName)
-            return [];
-        var attributes = globalAttributes;
-        if (tagName in attributeMap) {
-            attributes = attributes.concat(Object.keys(attributeMap[tagName]));
-        }
-        return attributes.map(function(attribute){
-            return {
-                caption: attribute,
-                snippet: attribute + '="$0"',
-                meta: "attribute",
-                score: 1000000
-            };
-        });
-    };
-
-    this.getAttributeValueCompletions = function(state, session, pos, prefix) {
-        var tagName = findTagName(session, pos);
-        var attributeName = findAttributeName(session, pos);
-        
-        if (!tagName)
-            return [];
-        var values = [];
-        if (tagName in attributeMap && attributeName in attributeMap[tagName] && typeof attributeMap[tagName][attributeName] === "object") {
-            values = Object.keys(attributeMap[tagName][attributeName]);
-        }
-        return values.map(function(value){
-            return {
-                caption: value,
-                snippet: value,
-                meta: "attribute value",
-                score: 1000000
-            };
-        });
-    };
-
-    this.getHTMLEntityCompletions = function(state, session, pos, prefix) {
-        var values = ['Aacute;', 'aacute;', 'Acirc;', 'acirc;', 'acute;', 'AElig;', 'aelig;', 'Agrave;', 'agrave;', 'alefsym;', 'Alpha;', 'alpha;', 'amp;', 'and;', 'ang;', 'Aring;', 'aring;', 'asymp;', 'Atilde;', 'atilde;', 'Auml;', 'auml;', 'bdquo;', 'Beta;', 'beta;', 'brvbar;', 'bull;', 'cap;', 'Ccedil;', 'ccedil;', 'cedil;', 'cent;', 'Chi;', 'chi;', 'circ;', 'clubs;', 'cong;', 'copy;', 'crarr;', 'cup;', 'curren;', 'Dagger;', 'dagger;', 'dArr;', 'darr;', 'deg;', 'Delta;', 'delta;', 'diams;', 'divide;', 'Eacute;', 'eacute;', 'Ecirc;', 'ecirc;', 'Egrave;', 'egrave;', 'empty;', 'emsp;', 'ensp;', 'Epsilon;', 'epsilon;', 'equiv;', 'Eta;', 'eta;', 'ETH;', 'eth;', 'Euml;', 'euml;', 'euro;', 'exist;', 'fnof;', 'forall;', 'frac12;', 'frac14;', 'frac34;', 'frasl;', 'Gamma;', 'gamma;', 'ge;', 'gt;', 'hArr;', 'harr;', 'hearts;', 'hellip;', 'Iacute;', 'iacute;', 'Icirc;', 'icirc;', 'iexcl;', 'Igrave;', 'igrave;', 'image;', 'infin;', 'int;', 'Iota;', 'iota;', 'iquest;', 'isin;', 'Iuml;', 'iuml;', 'Kappa;', 'kappa;', 'Lambda;', 'lambda;', 'lang;', 'laquo;', 'lArr;', 'larr;', 'lceil;', 'ldquo;', 'le;', 'lfloor;', 'lowast;', 'loz;', 'lrm;', 'lsaquo;', 'lsquo;', 'lt;', 'macr;', 'mdash;', 'micro;', 'middot;', 'minus;', 'Mu;', 'mu;', 'nabla;', 'nbsp;', 'ndash;', 'ne;', 'ni;', 'not;', 'notin;', 'nsub;', 'Ntilde;', 'ntilde;', 'Nu;', 'nu;', 'Oacute;', 'oacute;', 'Ocirc;', 'ocirc;', 'OElig;', 'oelig;', 'Ograve;', 'ograve;', 'oline;', 'Omega;', 'omega;', 'Omicron;', 'omicron;', 'oplus;', 'or;', 'ordf;', 'ordm;', 'Oslash;', 'oslash;', 'Otilde;', 'otilde;', 'otimes;', 'Ouml;', 'ouml;', 'para;', 'part;', 'permil;', 'perp;', 'Phi;', 'phi;', 'Pi;', 'pi;', 'piv;', 'plusmn;', 'pound;', 'Prime;', 'prime;', 'prod;', 'prop;', 'Psi;', 'psi;', 'quot;', 'radic;', 'rang;', 'raquo;', 'rArr;', 'rarr;', 'rceil;', 'rdquo;', 'real;', 'reg;', 'rfloor;', 'Rho;', 'rho;', 'rlm;', 'rsaquo;', 'rsquo;', 'sbquo;', 'Scaron;', 'scaron;', 'sdot;', 'sect;', 'shy;', 'Sigma;', 'sigma;', 'sigmaf;', 'sim;', 'spades;', 'sub;', 'sube;', 'sum;', 'sup;', 'sup1;', 'sup2;', 'sup3;', 'supe;', 'szlig;', 'Tau;', 'tau;', 'there4;', 'Theta;', 'theta;', 'thetasym;', 'thinsp;', 'THORN;', 'thorn;', 'tilde;', 'times;', 'trade;', 'Uacute;', 'uacute;', 'uArr;', 'uarr;', 'Ucirc;', 'ucirc;', 'Ugrave;', 'ugrave;', 'uml;', 'upsih;', 'Upsilon;', 'upsilon;', 'Uuml;', 'uuml;', 'weierp;', 'Xi;', 'xi;', 'Yacute;', 'yacute;', 'yen;', 'Yuml;', 'yuml;', 'Zeta;', 'zeta;', 'zwj;', 'zwnj;'];
-
-        return values.map(function(value){
-            return {
-                caption: value,
-                snippet: value,
-                meta: "html entity",
-                score: 1000000
-            };
-        });
-    };
-
-}).call(HtmlCompletions.prototype);
-
-exports.A = HtmlCompletions;
-
-
-/***/ }),
-
-/***/ 2843:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var lang = __webpack_require__(124);
-var CssHighlightRules = (__webpack_require__(9301)/* .CssHighlightRules */ .Kd);
-var JavaScriptHighlightRules = (__webpack_require__(3801)/* .JavaScriptHighlightRules */ ._);
-var XmlHighlightRules = (__webpack_require__(5239)/* .XmlHighlightRules */ .U);
-
-var tagMap = lang.createMap({
-    a           : 'anchor',
-    button 	    : 'form',
-    form        : 'form',
-    img         : 'image',
-    input       : 'form',
-    label       : 'form',
-    option      : 'form',
-    script      : 'script',
-    select      : 'form',
-    textarea    : 'form',
-    style       : 'style',
-    table       : 'table',
-    tbody       : 'table',
-    td          : 'table',
-    tfoot       : 'table',
-    th          : 'table',
-    tr          : 'table'
-});
-
-var HtmlHighlightRules = function() {
-    XmlHighlightRules.call(this);
-
-    this.addRules({
-        attributes: [{
-            include : "tag_whitespace"
-        }, {
-            token : "entity.other.attribute-name.xml",
-            regex : "[-_a-zA-Z0-9:.]+"
-        }, {
-            token : "keyword.operator.attribute-equals.xml",
-            regex : "=",
-            push : [{
-                include: "tag_whitespace"
-            }, {
-                token : "string.unquoted.attribute-value.html",
-                regex : "[^<>='\"`\\s]+",
-                next : "pop"
-            }, {
-                token : "empty",
-                regex : "",
-                next : "pop"
-            }]
-        }, {
-            include : "attribute_value"
-        }],
-        tag: [{
-            token : function(start, tag) {
-                var group = tagMap[tag];
-                return ["meta.tag.punctuation." + (start == "<" ? "" : "end-") + "tag-open.xml",
-                    "meta.tag" + (group ? "." + group : "") + ".tag-name.xml"];
-            },
-            regex : "(</?)([-_a-zA-Z0-9:.]+)",
-            next: "tag_stuff"
-        }],
-        tag_stuff: [
-            {include : "attributes"},
-            {token : "meta.tag.punctuation.tag-close.xml", regex : "/?>", next : "start"}
-        ]
-    });
-
-    this.embedTagRules(CssHighlightRules, "css-", "style");
-    this.embedTagRules(new JavaScriptHighlightRules({jsx: false}).getRules(), "js-", "script");
-
-    if (this.constructor === HtmlHighlightRules)
-        this.normalizeRules();
-};
-
-oop.inherits(HtmlHighlightRules, XmlHighlightRules);
-
-exports.V = HtmlHighlightRules;
-
-
-/***/ }),
-
-/***/ 8057:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var TextMode = (__webpack_require__(8030)/* .Mode */ .A);
-var JavaScriptHighlightRules = (__webpack_require__(3801)/* .JavaScriptHighlightRules */ ._);
-var MatchingBraceOutdent = (__webpack_require__(1164)/* .MatchingBraceOutdent */ .p);
-var WorkerClient = (__webpack_require__(1451).WorkerClient);
-var CstyleBehaviour = (__webpack_require__(9414)/* .CstyleBehaviour */ .B);
-var CStyleFoldMode = (__webpack_require__(2764)/* .FoldMode */ .Z);
-
-var Mode = function() {
-    this.HighlightRules = JavaScriptHighlightRules;
-    
-    this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
-    this.foldingRules = new CStyleFoldMode();
-};
-oop.inherits(Mode, TextMode);
-
-(function() {
-
-    this.lineCommentStart = "//";
-    this.blockComment = {start: "/*", end: "*/"};
-    this.$quotes = {'"': '"', "'": "'", "`": "`"};
-
-    this.getNextLineIndent = function(state, line, tab) {
-        var indent = this.$getIndent(line);
-
-        var tokenizedLine = this.getTokenizer().getLineTokens(line, state);
-        var tokens = tokenizedLine.tokens;
-        var endState = tokenizedLine.state;
-
-        if (tokens.length && tokens[tokens.length-1].type == "comment") {
-            return indent;
-        }
-
-        if (state == "start" || state == "no_regex") {
-            var match = line.match(/^.*(?:\bcase\b.*:|[\{\(\[])\s*$/);
-            if (match) {
-                indent += tab;
-            }
-        } else if (state == "doc-start") {
-            if (endState == "start" || endState == "no_regex") {
-                return "";
-            }
-            var match = line.match(/^\s*(\/?)\*/);
-            if (match) {
-                if (match[1]) {
-                    indent += " ";
-                }
-                indent += "* ";
-            }
-        }
-
-        return indent;
-    };
-
-    this.checkOutdent = function(state, line, input) {
-        return this.$outdent.checkOutdent(line, input);
-    };
-
-    this.autoOutdent = function(state, doc, row) {
-        this.$outdent.autoOutdent(doc, row);
-    };
-
-    this.createWorker = function(session) {
-        var worker = new WorkerClient(["ace"], "ace/mode/javascript_worker", "JavaScriptWorker");
-        worker.attachToDocument(session.getDocument());
-
-        worker.on("annotate", function(results) {
-            session.setAnnotations(results.data);
-        });
-
-        worker.on("terminate", function() {
-            session.clearAnnotations();
-        });
-
-        return worker;
-    };
-
-    this.$id = "ace/mode/javascript";
-    this.snippetFileId = "ace/snippets/javascript";
-}).call(Mode.prototype);
-
-exports.Mode = Mode;
-
-
-/***/ }),
-
-/***/ 3801:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var DocCommentHighlightRules = (__webpack_require__(2718)/* .DocCommentHighlightRules */ .c);
-var TextHighlightRules = (__webpack_require__(8053)/* .TextHighlightRules */ .K);
-
-// TODO: Unicode escape sequences
-var identifierRe = "[a-zA-Z\\$_\u00a1-\uffff][a-zA-Z\\d\\$_\u00a1-\uffff]*";
-
-var JavaScriptHighlightRules = function(options) {
-    // see: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects
-    var keywordMapper = this.createKeywordMapper({
-        "variable.language":
-            "Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|Proxy|"  + // Constructors
-            "Namespace|QName|XML|XMLList|"                                             + // E4X
-            "ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|"   +
-            "Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|"                    +
-            "Error|EvalError|InternalError|RangeError|ReferenceError|StopIteration|"   + // Errors
-            "SyntaxError|TypeError|URIError|"                                          +
-            "decodeURI|decodeURIComponent|encodeURI|encodeURIComponent|eval|isFinite|" + // Non-constructor functions
-            "isNaN|parseFloat|parseInt|"                                               +
-            "JSON|Math|"                                                               + // Other
-            "this|arguments|prototype|window|document"                                 , // Pseudo
-        "keyword":
-            "const|yield|import|get|set|async|await|" +
-            "break|case|catch|continue|default|delete|do|else|finally|for|function|" +
-            "if|in|of|instanceof|new|return|switch|throw|try|typeof|let|var|while|with|debugger|" +
-            // invalid or reserved
-            "__parent__|__count__|escape|unescape|with|__proto__|" +
-            "class|enum|extends|super|export|implements|private|public|interface|package|protected|static",
-        "storage.type":
-            "const|let|var|function",
-        "constant.language":
-            "null|Infinity|NaN|undefined",
-        "support.function":
-            "alert",
-        "constant.language.boolean": "true|false"
-    }, "identifier");
-
-    // keywords which can be followed by regular expressions
-    var kwBeforeRe = "case|do|else|finally|in|instanceof|return|throw|try|typeof|yield|void";
-
-    var escapedRe = "\\\\(?:x[0-9a-fA-F]{2}|" + // hex
-        "u[0-9a-fA-F]{4}|" + // unicode
-        "u{[0-9a-fA-F]{1,6}}|" + // es6 unicode
-        "[0-2][0-7]{0,2}|" + // oct
-        "3[0-7][0-7]?|" + // oct
-        "[4-7][0-7]?|" + //oct
-        ".)";
-    // regexp must not have capturing parentheses. Use (?:) instead.
-    // regexps are ordered -> the first match is used
-
-    this.$rules = {
-        "no_regex" : [
-            DocCommentHighlightRules.getStartRule("doc-start"),
-            comments("no_regex"),
-            {
-                token : "string",
-                regex : "'(?=.)",
-                next  : "qstring"
-            }, {
-                token : "string",
-                regex : '"(?=.)',
-                next  : "qqstring"
-            }, {
-                token : "constant.numeric", // hexadecimal, octal and binary
-                regex : /0(?:[xX][0-9a-fA-F]+|[oO][0-7]+|[bB][01]+)\b/
-            }, {
-                token : "constant.numeric", // decimal integers and floats
-                regex : /(?:\d\d*(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+\b)?/
-            }, {
-                // Sound.prototype.play =
-                token : [
-                    "storage.type", "punctuation.operator", "support.function",
-                    "punctuation.operator", "entity.name.function", "text","keyword.operator"
-                ],
-                regex : "(" + identifierRe + ")(\\.)(prototype)(\\.)(" + identifierRe +")(\\s*)(=)",
-                next: "function_arguments"
-            }, {
-                // Sound.play = function() {  }
-                token : [
-                    "storage.type", "punctuation.operator", "entity.name.function", "text",
-                    "keyword.operator", "text", "storage.type", "text", "paren.lparen"
-                ],
-                regex : "(" + identifierRe + ")(\\.)(" + identifierRe +")(\\s*)(=)(\\s*)(function)(\\s*)(\\()",
-                next: "function_arguments"
-            }, {
-                // play = function() {  }
-                token : [
-                    "entity.name.function", "text", "keyword.operator", "text", "storage.type",
-                    "text", "paren.lparen"
-                ],
-                regex : "(" + identifierRe +")(\\s*)(=)(\\s*)(function)(\\s*)(\\()",
-                next: "function_arguments"
-            }, {
-                // Sound.play = function play() {  }
-                token : [
-                    "storage.type", "punctuation.operator", "entity.name.function", "text",
-                    "keyword.operator", "text",
-                    "storage.type", "text", "entity.name.function", "text", "paren.lparen"
-                ],
-                regex : "(" + identifierRe + ")(\\.)(" + identifierRe +")(\\s*)(=)(\\s*)(function)(\\s+)(\\w+)(\\s*)(\\()",
-                next: "function_arguments"
-            }, {
-                // function myFunc(arg) { }
-                token : [
-                    "storage.type", "text", "entity.name.function", "text", "paren.lparen"
-                ],
-                regex : "(function)(\\s+)(" + identifierRe + ")(\\s*)(\\()",
-                next: "function_arguments"
-            }, {
-                // foobar: function() { }
-                token : [
-                    "entity.name.function", "text", "punctuation.operator",
-                    "text", "storage.type", "text", "paren.lparen"
-                ],
-                regex : "(" + identifierRe + ")(\\s*)(:)(\\s*)(function)(\\s*)(\\()",
-                next: "function_arguments"
-            }, {
-                // : function() { } (this is for issues with 'foo': function() { })
-                token : [
-                    "text", "text", "storage.type", "text", "paren.lparen"
-                ],
-                regex : "(:)(\\s*)(function)(\\s*)(\\()",
-                next: "function_arguments"
-            }, {
-                // from "module-path" (this is the only case where 'from' should be a keyword)
-                token : "keyword",
-                regex : "from(?=\\s*('|\"))"
-            }, {
-                token : "keyword",
-                regex : "(?:" + kwBeforeRe + ")\\b",
-                next : "start"
-            }, {
-                token : ["support.constant"],
-                regex : /that\b/
-            }, {
-                token : ["storage.type", "punctuation.operator", "support.function.firebug"],
-                regex : /(console)(\.)(warn|info|log|error|time|trace|timeEnd|assert)\b/
-            }, {
-                token : keywordMapper,
-                regex : identifierRe
-            }, {
-                token : "punctuation.operator",
-                regex : /[.](?![.])/,
-                next  : "property"
-            }, {
-                token : "storage.type",
-                regex : /=>/,
-                next  : "start"
-            }, {
-                token : "keyword.operator",
-                regex : /--|\+\+|\.{3}|===|==|=|!=|!==|<+=?|>+=?|!|&&|\|\||\?:|[!$%&*+\-~\/^]=?/,
-                next  : "start"
-            }, {
-                token : "punctuation.operator",
-                regex : /[?:,;.]/,
-                next  : "start"
-            }, {
-                token : "paren.lparen",
-                regex : /[\[({]/,
-                next  : "start"
-            }, {
-                token : "paren.rparen",
-                regex : /[\])}]/
-            }, {
-                token: "comment",
-                regex: /^#!.*$/
-            }
-        ],
-        property: [{
-                token : "text",
-                regex : "\\s+"
-            }, {
-                // Sound.play = function play() {  }
-                token : [
-                    "storage.type", "punctuation.operator", "entity.name.function", "text",
-                    "keyword.operator", "text",
-                    "storage.type", "text", "entity.name.function", "text", "paren.lparen"
-                ],
-                regex : "(" + identifierRe + ")(\\.)(" + identifierRe +")(\\s*)(=)(\\s*)(function)(?:(\\s+)(\\w+))?(\\s*)(\\()",
-                next: "function_arguments"
-            }, {
-                token : "punctuation.operator",
-                regex : /[.](?![.])/
-            }, {
-                token : "support.function",
-                regex : /(s(?:h(?:ift|ow(?:Mod(?:elessDialog|alDialog)|Help))|croll(?:X|By(?:Pages|Lines)?|Y|To)?|t(?:op|rike)|i(?:n|zeToContent|debar|gnText)|ort|u(?:p|b(?:str(?:ing)?)?)|pli(?:ce|t)|e(?:nd|t(?:Re(?:sizable|questHeader)|M(?:i(?:nutes|lliseconds)|onth)|Seconds|Ho(?:tKeys|urs)|Year|Cursor|Time(?:out)?|Interval|ZOptions|Date|UTC(?:M(?:i(?:nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(?:ome|andleEvent)|navigate|c(?:har(?:CodeAt|At)|o(?:s|n(?:cat|textual|firm)|mpile)|eil|lear(?:Timeout|Interval)?|a(?:ptureEvents|ll)|reate(?:StyleSheet|Popup|EventObject))|t(?:o(?:GMTString|S(?:tring|ource)|U(?:TCString|pperCase)|Lo(?:caleString|werCase))|est|a(?:n|int(?:Enabled)?))|i(?:s(?:NaN|Finite)|ndexOf|talics)|d(?:isableExternalCapture|ump|etachEvent)|u(?:n(?:shift|taint|escape|watch)|pdateCommands)|j(?:oin|avaEnabled)|p(?:o(?:p|w)|ush|lugins.refresh|a(?:ddings|rse(?:Int|Float)?)|r(?:int|ompt|eference))|e(?:scape|nableExternalCapture|val|lementFromPoint|x(?:p|ec(?:Script|Command)?))|valueOf|UTC|queryCommand(?:State|Indeterm|Enabled|Value)|f(?:i(?:nd|le(?:ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(?:nt(?:size|color)|rward)|loor|romCharCode)|watch|l(?:ink|o(?:ad|g)|astIndexOf)|a(?:sin|nchor|cos|t(?:tachEvent|ob|an(?:2)?)|pply|lert|b(?:s|ort))|r(?:ou(?:nd|teEvents)|e(?:size(?:By|To)|calc|turnValue|place|verse|l(?:oad|ease(?:Capture|Events)))|andom)|g(?:o|et(?:ResponseHeader|M(?:i(?:nutes|lliseconds)|onth)|Se(?:conds|lection)|Hours|Year|Time(?:zoneOffset)?|Da(?:y|te)|UTC(?:M(?:i(?:nutes|lliseconds)|onth)|Seconds|Hours|Da(?:y|te)|FullYear)|FullYear|A(?:ttention|llResponseHeaders)))|m(?:in|ove(?:B(?:y|elow)|To(?:Absolute)?|Above)|ergeAttributes|a(?:tch|rgins|x))|b(?:toa|ig|o(?:ld|rderWidths)|link|ack))\b(?=\()/
-            }, {
-                token : "support.function.dom",
-                regex : /(s(?:ub(?:stringData|mit)|plitText|e(?:t(?:NamedItem|Attribute(?:Node)?)|lect))|has(?:ChildNodes|Feature)|namedItem|c(?:l(?:ick|o(?:se|neNode))|reate(?:C(?:omment|DATASection|aption)|T(?:Head|extNode|Foot)|DocumentFragment|ProcessingInstruction|E(?:ntityReference|lement)|Attribute))|tabIndex|i(?:nsert(?:Row|Before|Cell|Data)|tem)|open|delete(?:Row|C(?:ell|aption)|T(?:Head|Foot)|Data)|focus|write(?:ln)?|a(?:dd|ppend(?:Child|Data))|re(?:set|place(?:Child|Data)|move(?:NamedItem|Child|Attribute(?:Node)?)?)|get(?:NamedItem|Element(?:sBy(?:Name|TagName|ClassName)|ById)|Attribute(?:Node)?)|blur)\b(?=\()/
-            }, {
-                token :  "support.constant",
-                regex : /(s(?:ystemLanguage|cr(?:ipts|ollbars|een(?:X|Y|Top|Left))|t(?:yle(?:Sheets)?|atus(?:Text|bar)?)|ibling(?:Below|Above)|ource|uffixes|e(?:curity(?:Policy)?|l(?:ection|f)))|h(?:istory|ost(?:name)?|as(?:h|Focus))|y|X(?:MLDocument|SLDocument)|n(?:ext|ame(?:space(?:s|URI)|Prop))|M(?:IN_VALUE|AX_VALUE)|c(?:haracterSet|o(?:n(?:structor|trollers)|okieEnabled|lorDepth|mp(?:onents|lete))|urrent|puClass|l(?:i(?:p(?:boardData)?|entInformation)|osed|asses)|alle(?:e|r)|rypto)|t(?:o(?:olbar|p)|ext(?:Transform|Indent|Decoration|Align)|ags)|SQRT(?:1_2|2)|i(?:n(?:ner(?:Height|Width)|put)|ds|gnoreCase)|zIndex|o(?:scpu|n(?:readystatechange|Line)|uter(?:Height|Width)|p(?:sProfile|ener)|ffscreenBuffering)|NEGATIVE_INFINITY|d(?:i(?:splay|alog(?:Height|Top|Width|Left|Arguments)|rectories)|e(?:scription|fault(?:Status|Ch(?:ecked|arset)|View)))|u(?:ser(?:Profile|Language|Agent)|n(?:iqueID|defined)|pdateInterval)|_content|p(?:ixelDepth|ort|ersonalbar|kcs11|l(?:ugins|atform)|a(?:thname|dding(?:Right|Bottom|Top|Left)|rent(?:Window|Layer)?|ge(?:X(?:Offset)?|Y(?:Offset)?))|r(?:o(?:to(?:col|type)|duct(?:Sub)?|mpter)|e(?:vious|fix)))|e(?:n(?:coding|abledPlugin)|x(?:ternal|pando)|mbeds)|v(?:isibility|endor(?:Sub)?|Linkcolor)|URLUnencoded|P(?:I|OSITIVE_INFINITY)|f(?:ilename|o(?:nt(?:Size|Family|Weight)|rmName)|rame(?:s|Element)|gColor)|E|whiteSpace|l(?:i(?:stStyleType|n(?:eHeight|kColor))|o(?:ca(?:tion(?:bar)?|lName)|wsrc)|e(?:ngth|ft(?:Context)?)|a(?:st(?:M(?:odified|atch)|Index|Paren)|yer(?:s|X)|nguage))|a(?:pp(?:MinorVersion|Name|Co(?:deName|re)|Version)|vail(?:Height|Top|Width|Left)|ll|r(?:ity|guments)|Linkcolor|bove)|r(?:ight(?:Context)?|e(?:sponse(?:XML|Text)|adyState))|global|x|m(?:imeTypes|ultiline|enubar|argin(?:Right|Bottom|Top|Left))|L(?:N(?:10|2)|OG(?:10E|2E))|b(?:o(?:ttom|rder(?:Width|RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(?:Color|Image)))\b/
-            }, {
-                token : "identifier",
-                regex : identifierRe
-            }, {
-                regex: "",
-                token: "empty",
-                next: "no_regex"
-            }
-        ],
-        // regular expressions are only allowed after certain tokens. This
-        // makes sure we don't mix up regexps with the divison operator
-        "start": [
-            DocCommentHighlightRules.getStartRule("doc-start"),
-            comments("start"),
-            {
-                token: "string.regexp",
-                regex: "\\/",
-                next: "regex"
-            }, {
-                token : "text",
-                regex : "\\s+|^$",
-                next : "start"
-            }, {
-                // immediately return to the start mode without matching
-                // anything
-                token: "empty",
-                regex: "",
-                next: "no_regex"
-            }
-        ],
-        "regex": [
-            {
-                // escapes
-                token: "regexp.keyword.operator",
-                regex: "\\\\(?:u[\\da-fA-F]{4}|x[\\da-fA-F]{2}|.)"
-            }, {
-                // flag
-                token: "string.regexp",
-                regex: "/[sxngimy]*",
-                next: "no_regex"
-            }, {
-                // invalid operators
-                token : "invalid",
-                regex: /\{\d+\b,?\d*\}[+*]|[+*$^?][+*]|[$^][?]|\?{3,}/
-            }, {
-                // operators
-                token : "constant.language.escape",
-                regex: /\(\?[:=!]|\)|\{\d+\b,?\d*\}|[+*]\?|[()$^+*?.]/
-            }, {
-                token : "constant.language.delimiter",
-                regex: /\|/
-            }, {
-                token: "constant.language.escape",
-                regex: /\[\^?/,
-                next: "regex_character_class"
-            }, {
-                token: "empty",
-                regex: "$",
-                next: "no_regex"
-            }, {
-                defaultToken: "string.regexp"
-            }
-        ],
-        "regex_character_class": [
-            {
-                token: "regexp.charclass.keyword.operator",
-                regex: "\\\\(?:u[\\da-fA-F]{4}|x[\\da-fA-F]{2}|.)"
-            }, {
-                token: "constant.language.escape",
-                regex: "]",
-                next: "regex"
-            }, {
-                token: "constant.language.escape",
-                regex: "-"
-            }, {
-                token: "empty",
-                regex: "$",
-                next: "no_regex"
-            }, {
-                defaultToken: "string.regexp.charachterclass"
-            }
-        ],
-        "function_arguments": [
-            {
-                token: "variable.parameter",
-                regex: identifierRe
-            }, {
-                token: "punctuation.operator",
-                regex: "[, ]+"
-            }, {
-                token: "punctuation.operator",
-                regex: "$"
-            }, {
-                token: "empty",
-                regex: "",
-                next: "no_regex"
-            }
-        ],
-        "qqstring" : [
-            {
-                token : "constant.language.escape",
-                regex : escapedRe
-            }, {
-                token : "string",
-                regex : "\\\\$",
-                consumeLineEnd  : true
-            }, {
-                token : "string",
-                regex : '"|$',
-                next  : "no_regex"
-            }, {
-                defaultToken: "string"
-            }
-        ],
-        "qstring" : [
-            {
-                token : "constant.language.escape",
-                regex : escapedRe
-            }, {
-                token : "string",
-                regex : "\\\\$",
-                consumeLineEnd  : true
-            }, {
-                token : "string",
-                regex : "'|$",
-                next  : "no_regex"
-            }, {
-                defaultToken: "string"
-            }
-        ]
-    };
-
-
-    if (!options || !options.noES6) {
-        this.$rules.no_regex.unshift({
-            regex: "[{}]", onMatch: function(val, state, stack) {
-                this.next = val == "{" ? this.nextState : "";
-                if (val == "{" && stack.length) {
-                    stack.unshift("start", state);
-                }
-                else if (val == "}" && stack.length) {
-                    stack.shift();
-                    this.next = stack.shift();
-                    if (this.next.indexOf("string") != -1 || this.next.indexOf("jsx") != -1)
-                        return "paren.quasi.end";
-                }
-                return val == "{" ? "paren.lparen" : "paren.rparen";
-            },
-            nextState: "start"
-        }, {
-            token : "string.quasi.start",
-            regex : /`/,
-            push  : [{
-                token : "constant.language.escape",
-                regex : escapedRe
-            }, {
-                token : "paren.quasi.start",
-                regex : /\${/,
-                push  : "start"
-            }, {
-                token : "string.quasi.end",
-                regex : /`/,
-                next  : "pop"
-            }, {
-                defaultToken: "string.quasi"
-            }]
-        });
-
-        if (!options || options.jsx != false)
-            JSX.call(this);
-    }
-
-    this.embedRules(DocCommentHighlightRules, "doc-",
-        [ DocCommentHighlightRules.getEndRule("no_regex") ]);
-
-    this.normalizeRules();
-};
-
-oop.inherits(JavaScriptHighlightRules, TextHighlightRules);
-
-function JSX() {
-    var tagRegex = identifierRe.replace("\\d", "\\d\\-");
-    var jsxTag = {
-        onMatch : function(val, state, stack) {
-            var offset = val.charAt(1) == "/" ? 2 : 1;
-            if (offset == 1) {
-                if (state != this.nextState)
-                    stack.unshift(this.next, this.nextState, 0);
-                else
-                    stack.unshift(this.next);
-                stack[2]++;
-            } else if (offset == 2) {
-                if (state == this.nextState) {
-                    stack[1]--;
-                    if (!stack[1] || stack[1] < 0) {
-                        stack.shift();
-                        stack.shift();
-                    }
-                }
-            }
-            return [{
-                type: "meta.tag.punctuation." + (offset == 1 ? "" : "end-") + "tag-open.xml",
-                value: val.slice(0, offset)
-            }, {
-                type: "meta.tag.tag-name.xml",
-                value: val.substr(offset)
-            }];
-        },
-        regex : "</?" + tagRegex + "",
-        next: "jsxAttributes",
-        nextState: "jsx"
-    };
-    this.$rules.start.unshift(jsxTag);
-    var jsxJsRule = {
-        regex: "{",
-        token: "paren.quasi.start",
-        push: "start"
-    };
-    this.$rules.jsx = [
-        jsxJsRule,
-        jsxTag,
-        {include : "reference"},
-        {defaultToken: "string"}
-    ];
-    this.$rules.jsxAttributes = [{
-        token : "meta.tag.punctuation.tag-close.xml",
-        regex : "/?>",
-        onMatch : function(value, currentState, stack) {
-            if (currentState == stack[0])
-                stack.shift();
-            if (value.length == 2) {
-                if (stack[0] == this.nextState)
-                    stack[1]--;
-                if (!stack[1] || stack[1] < 0) {
-                    stack.splice(0, 2);
-                }
-            }
-            this.next = stack[0] || "start";
-            return [{type: this.token, value: value}];
-        },
-        nextState: "jsx"
-    },
-    jsxJsRule,
-    comments("jsxAttributes"),
-    {
-        token : "entity.other.attribute-name.xml",
-        regex : tagRegex
-    }, {
-        token : "keyword.operator.attribute-equals.xml",
-        regex : "="
-    }, {
-        token : "text.tag-whitespace.xml",
-        regex : "\\s+"
-    }, {
-        token : "string.attribute-value.xml",
-        regex : "'",
-        stateName : "jsx_attr_q",
-        push : [
-            {token : "string.attribute-value.xml", regex: "'", next: "pop"},
-            {include : "reference"},
-            {defaultToken : "string.attribute-value.xml"}
-        ]
-    }, {
-        token : "string.attribute-value.xml",
-        regex : '"',
-        stateName : "jsx_attr_qq",
-        push : [
-            {token : "string.attribute-value.xml", regex: '"', next: "pop"},
-            {include : "reference"},
-            {defaultToken : "string.attribute-value.xml"}
-        ]
-    },
-    jsxTag
-    ];
-    this.$rules.reference = [{
-        token : "constant.language.escape.reference.xml",
-        regex : "(?:&#[0-9]+;)|(?:&#x[0-9a-fA-F]+;)|(?:&[a-zA-Z0-9_:\\.-]+;)"
-    }];
-}
-
-function comments(next) {
-    return [
-        {
-            token : "comment", // multi line comment
-            regex : /\/\*/,
-            next: [
-                DocCommentHighlightRules.getTagRule(),
-                {token : "comment", regex : "\\*\\/", next : next || "pop"},
-                {defaultToken : "comment", caseInsensitive: true}
-            ]
-        }, {
-            token : "comment",
-            regex : "\\/\\/",
-            next: [
-                DocCommentHighlightRules.getTagRule(),
-                {token : "comment", regex : "$|^", next : next || "pop"},
-                {defaultToken : "comment", caseInsensitive: true}
-            ]
-        }
-    ];
-}
-exports._ = JavaScriptHighlightRules;
-
-
-/***/ }),
-
-/***/ 1164:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-
-var MatchingBraceOutdent = function() {};
-
-(function() {
-
-    this.checkOutdent = function(line, input) {
-        if (! /^\s+$/.test(line))
-            return false;
-
-        return /^\s*\}/.test(input);
-    };
-
-    this.autoOutdent = function(doc, row) {
-        var line = doc.getLine(row);
-        var match = line.match(/^(\s*\})/);
-
-        if (!match) return 0;
-
-        var column = match[1].length;
-        var openBracePos = doc.findMatchingBracket({row: row, column: column});
-
-        if (!openBracePos || openBracePos.row == row) return 0;
-
-        var indent = this.$getIndent(doc.getLine(openBracePos.row));
-        doc.replace(new Range(row, 0, row, column-1), indent);
-    };
-
-    this.$getIndent = function(line) {
-        return line.match(/^\s*/)[0];
-    };
-
-}).call(MatchingBraceOutdent.prototype);
-
-exports.p = MatchingBraceOutdent;
-
-
-/***/ }),
-
-/***/ 8030:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-var config = __webpack_require__(3188);
-
-var Tokenizer = (__webpack_require__(760)/* .Tokenizer */ .d);
-var TextHighlightRules = (__webpack_require__(8053)/* .TextHighlightRules */ .K);
-var CstyleBehaviour = (__webpack_require__(9414)/* .CstyleBehaviour */ .B);
-var unicode = __webpack_require__(9740);
-var lang = __webpack_require__(124);
-var TokenIterator = (__webpack_require__(4379)/* .TokenIterator */ .N);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-
+var config = __webpack_require__(13188);
+
+var Tokenizer = (__webpack_require__(60760)/* .Tokenizer */ .d);
+var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
+var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
+var unicode = __webpack_require__(99740);
+var lang = __webpack_require__(20124);
+var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+
+/**
+ *
+ * @constructor
+ * @alias TextMode
+ * @property {{[quote: string]: string}} [$quotes] - quotes used by language mode
+ * @property {string} lineCommentStart - characters that indicate the start of a line comment
+ * @property {{start: string, end: string}} [blockComment] - characters that indicate the start and end of a block comment
+ * @property {TextHighlightRules} HighlightRules - language specific highlighters
+ * @property {FoldMode} foldingRules - language specific folding rules
+ * @property {MatchingBraceOutdent} $outdent
+ * @property {RegExp} tokenRe
+ * @property {RegExp} nonTokenRe
+ * @property {{[quote: string]: RegExp}} [$pairQuotesAfter] - An object containing conditions to determine whether to apply matching quote or not.
+ */
 var Mode = function() {
     this.HighlightRules = TextHighlightRules;
 };
@@ -21185,18 +19761,18 @@ var Mode = function() {
     this.$id = "ace/mode/text";
 }).call(Mode.prototype);
 
-exports.A = Mode;
+exports.Mode = Mode;
 
 
 /***/ }),
 
-/***/ 8053:
+/***/ 28053:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var lang = __webpack_require__(124);
+var lang = __webpack_require__(20124);
 
 var TextHighlightRules = function() {
 
@@ -21345,6 +19921,8 @@ var TextHighlightRules = function() {
                 }
                 var includeName = typeof rule == "string" ? rule : rule.include;
                 if (includeName) {
+                    if (includeName === "$self")
+                        includeName = "start";
                     if (Array.isArray(includeName))
                         toInsert = includeName.map(function(x) { return rules[x]; });
                     else
@@ -21403,317 +19981,13 @@ exports.K = TextHighlightRules;
 
 /***/ }),
 
-/***/ 3123:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-/*
-  THIS FILE WAS AUTOGENERATED BY mode.tmpl.js
-*/
-
-
-
-var oop = __webpack_require__(9359);
-var jsMode = (__webpack_require__(8057).Mode);
-var TypeScriptHighlightRules = (__webpack_require__(7419)/* .TypeScriptHighlightRules */ .x);
-var CstyleBehaviour = (__webpack_require__(9414)/* .CstyleBehaviour */ .B);
-var CStyleFoldMode = (__webpack_require__(2764)/* .FoldMode */ .Z);
-var MatchingBraceOutdent = (__webpack_require__(1164)/* .MatchingBraceOutdent */ .p);
-
-var Mode = function() {
-    this.HighlightRules = TypeScriptHighlightRules;
-    
-    this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
-    this.foldingRules = new CStyleFoldMode();
-};
-oop.inherits(Mode, jsMode);
-
-(function() {
-    this.createWorker = function(session) {
-        return null;
-    };
-    this.$id = "ace/mode/typescript";
-}).call(Mode.prototype);
-
-exports.Mode = Mode;
-
-
-/***/ }),
-
-/***/ 7419:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-/*
-  THIS FILE WAS AUTOGENERATED BY mode_highlight_rules.tmpl.js (UUID: 21e323af-f665-4161-96e7-5087d262557e) */
-
-
-
-var oop = __webpack_require__(9359);
-var JavaScriptHighlightRules = (__webpack_require__(3801)/* .JavaScriptHighlightRules */ ._);
-
-var TypeScriptHighlightRules = function (options) {
-
-    var tsRules = [
-        // Match stuff like: function name: return type)
-        {
-            token: ["storage.type", "text", "entity.name.function.ts"],
-            regex: "(function)(\\s+)([a-zA-Z0-9\$_\u00a1-\uffff][a-zA-Z0-9\d\$_\u00a1-\uffff]*)"
-        },
-        {
-            token: "keyword",
-            regex: "(?:\\b(constructor|declare|interface|as|AS|public|private|extends|export|super|readonly|module|namespace|abstract|implements)\\b)"
-        },
-        {
-            token: ["keyword", "storage.type.variable.ts"],
-            regex: "(class|type)(\\s+[a-zA-Z0-9_?.$][\\w?.$]*)"
-         },
-        {
-            token: "keyword",
-            regex: "\\b(?:super|export|import|keyof|infer)\\b"
-        }, 
-        {
-            token: ["storage.type.variable.ts"],
-            regex: "(?:\\b(this\\.|string\\b|bool\\b|boolean\\b|number\\b|true\\b|false\\b|undefined\\b|any\\b|null\\b|(?:unique )?symbol\\b|object\\b|never\\b|enum\\b))"
-        }
-    ];
-
-    var JSRules = new JavaScriptHighlightRules({jsx: (options && options.jsx) == true}).getRules();
-    
-    JSRules.no_regex = tsRules.concat(JSRules.no_regex);
-    this.$rules = JSRules;
-};
-
-oop.inherits(TypeScriptHighlightRules, JavaScriptHighlightRules);
-
-exports.x = TypeScriptHighlightRules;
-
-
-/***/ }),
-
-/***/ 5239:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(9359);
-var TextHighlightRules = (__webpack_require__(8053)/* .TextHighlightRules */ .K);
-
-var XmlHighlightRules = function(normalize) {
-    // http://www.w3.org/TR/REC-xml/#NT-NameChar
-    // NameStartChar	   ::=   	":" | [A-Z] | "_" | [a-z] | [#xC0-#xD6] | [#xD8-#xF6] | [#xF8-#x2FF] | [#x370-#x37D] | [#x37F-#x1FFF] | [#x200C-#x200D] | [#x2070-#x218F] | [#x2C00-#x2FEF] | [#x3001-#xD7FF] | [#xF900-#xFDCF] | [#xFDF0-#xFFFD] | [#x10000-#xEFFFF]
-    // NameChar	   ::=   	NameStartChar | "-" | "." | [0-9] | #xB7 | [#x0300-#x036F] | [#x203F-#x2040]
-    var tagRegex = "[_:a-zA-Z\xc0-\uffff][-_:.a-zA-Z0-9\xc0-\uffff]*";
-
-    this.$rules = {
-        start : [
-            {token : "string.cdata.xml", regex : "<\\!\\[CDATA\\[", next : "cdata"},
-            {
-                token : ["punctuation.instruction.xml", "keyword.instruction.xml"],
-                regex : "(<\\?)(" + tagRegex + ")", next : "processing_instruction"
-            },
-            {token : "comment.start.xml", regex : "<\\!--", next : "comment"},
-            {
-                token : ["xml-pe.doctype.xml", "xml-pe.doctype.xml"],
-                regex : "(<\\!)(DOCTYPE)(?=[\\s])", next : "doctype", caseInsensitive: true
-            },
-            {include : "tag"},
-            {token : "text.end-tag-open.xml", regex: "</"},
-            {token : "text.tag-open.xml", regex: "<"},
-            {include : "reference"},
-            {defaultToken : "text.xml"}
-        ],
-
-        processing_instruction : [{
-            token : "entity.other.attribute-name.decl-attribute-name.xml",
-            regex : tagRegex
-        }, {
-            token : "keyword.operator.decl-attribute-equals.xml",
-            regex : "="
-        }, {
-            include: "whitespace"
-        }, {
-            include: "string"
-        }, {
-            token : "punctuation.xml-decl.xml",
-            regex : "\\?>",
-            next : "start"
-        }],
-
-        doctype : [
-            {include : "whitespace"},
-            {include : "string"},
-            {token : "xml-pe.doctype.xml", regex : ">", next : "start"},
-            {token : "xml-pe.xml", regex : "[-_a-zA-Z0-9:]+"},
-            {token : "punctuation.int-subset", regex : "\\[", push : "int_subset"}
-        ],
-
-        int_subset : [{
-            token : "text.xml",
-            regex : "\\s+"
-        }, {
-            token: "punctuation.int-subset.xml",
-            regex: "]",
-            next: "pop"
-        }, {
-            token : ["punctuation.markup-decl.xml", "keyword.markup-decl.xml"],
-            regex : "(<\\!)(" + tagRegex + ")",
-            push : [{
-                token : "text",
-                regex : "\\s+"
-            },
-            {
-                token : "punctuation.markup-decl.xml",
-                regex : ">",
-                next : "pop"
-            },
-            {include : "string"}]
-        }],
-
-        cdata : [
-            {token : "string.cdata.xml", regex : "\\]\\]>", next : "start"},
-            {token : "text.xml", regex : "\\s+"},
-            {token : "text.xml", regex : "(?:[^\\]]|\\](?!\\]>))+"}
-        ],
-
-        comment : [
-            {token : "comment.end.xml", regex : "-->", next : "start"},
-            {defaultToken : "comment.xml"}
-        ],
-
-        reference : [{
-            token : "constant.language.escape.reference.xml",
-            regex : "(?:&#[0-9]+;)|(?:&#x[0-9a-fA-F]+;)|(?:&[a-zA-Z0-9_:\\.-]+;)"
-        }],
-
-        attr_reference : [{
-            token : "constant.language.escape.reference.attribute-value.xml",
-            regex : "(?:&#[0-9]+;)|(?:&#x[0-9a-fA-F]+;)|(?:&[a-zA-Z0-9_:\\.-]+;)"
-        }],
-
-        tag : [{
-            token : ["meta.tag.punctuation.tag-open.xml", "meta.tag.punctuation.end-tag-open.xml", "meta.tag.tag-name.xml"],
-            regex : "(?:(<)|(</))((?:" + tagRegex + ":)?" + tagRegex + ")",
-            next: [
-                {include : "attributes"},
-                {token : "meta.tag.punctuation.tag-close.xml", regex : "/?>", next : "start"}
-            ]
-        }],
-
-        tag_whitespace : [
-            {token : "text.tag-whitespace.xml", regex : "\\s+"}
-        ],
-        // for doctype and processing instructions
-        whitespace : [
-            {token : "text.whitespace.xml", regex : "\\s+"}
-        ],
-
-        // for doctype and processing instructions
-        string: [{
-            token : "string.xml",
-            regex : "'",
-            push : [
-                {token : "string.xml", regex: "'", next: "pop"},
-                {defaultToken : "string.xml"}
-            ]
-        }, {
-            token : "string.xml",
-            regex : '"',
-            push : [
-                {token : "string.xml", regex: '"', next: "pop"},
-                {defaultToken : "string.xml"}
-            ]
-        }],
-
-        attributes: [{
-            token : "entity.other.attribute-name.xml",
-            regex : tagRegex
-        }, {
-            token : "keyword.operator.attribute-equals.xml",
-            regex : "="
-        }, {
-            include: "tag_whitespace"
-        }, {
-            include: "attribute_value"
-        }],
-
-        attribute_value: [{
-            token : "string.attribute-value.xml",
-            regex : "'",
-            push : [
-                {token : "string.attribute-value.xml", regex: "'", next: "pop"},
-                {include : "attr_reference"},
-                {defaultToken : "string.attribute-value.xml"}
-            ]
-        }, {
-            token : "string.attribute-value.xml",
-            regex : '"',
-            push : [
-                {token : "string.attribute-value.xml", regex: '"', next: "pop"},
-                {include : "attr_reference"},
-                {defaultToken : "string.attribute-value.xml"}
-            ]
-        }]
-    };
-
-    if (this.constructor === XmlHighlightRules)
-        this.normalizeRules();
-};
-
-
-(function() {
-
-    this.embedTagRules = function(HighlightRules, prefix, tag){
-        this.$rules.tag.unshift({
-            token : ["meta.tag.punctuation.tag-open.xml", "meta.tag." + tag + ".tag-name.xml"],
-            regex : "(<)(" + tag + "(?=\\s|>|$))",
-            next: [
-                {include : "attributes"},
-                {token : "meta.tag.punctuation.tag-close.xml", regex : "/?>", next : prefix + "start"}
-            ]
-        });
-
-        this.$rules[tag + "-end"] = [
-            {include : "attributes"},
-            {token : "meta.tag.punctuation.tag-close.xml", regex : "/?>",  next: "start",
-                onMatch : function(value, currentState, stack) {
-                    stack.splice(0);
-                    return this.token;
-            }}
-        ];
-
-        this.embedRules(HighlightRules, prefix, [{
-            token: ["meta.tag.punctuation.end-tag-open.xml", "meta.tag." + tag + ".tag-name.xml"],
-            regex : "(</)(" + tag + "(?=\\s|>|$))",
-            next: tag + "-end"
-        }, {
-            token: "string.cdata.xml",
-            regex : "<\\!\\[CDATA\\["
-        }, {
-            token: "string.cdata.xml",
-            regex : "\\]\\]>"
-        }]);
-    };
-
-}).call(TextHighlightRules.prototype);
-
-oop.inherits(XmlHighlightRules, TextHighlightRules);
-
-exports.U = XmlHighlightRules;
-
-
-/***/ }),
-
 /***/ 956:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 var dom = __webpack_require__(6359);
-var oop = __webpack_require__(9359);
-var event = __webpack_require__(7989);
+var event = __webpack_require__(17989);
 var Tooltip = (__webpack_require__(962)/* .Tooltip */ .u);
 
 function GutterHandler(mouseHandler) {
@@ -21763,17 +20037,43 @@ function GutterHandler(mouseHandler) {
                 return hideTooltip();
         }
 
-        if (tooltipAnnotation == annotation)
-            return;
-        tooltipAnnotation = annotation.text.join("<br/>");
+        var annotationMessages = {error: [], warning: [], info: []};
+        var annotationLabels = {
+            error: {singular: "error", plural: "errors"}, 
+            warning: {singular: "warning", plural: "warnings"},
+            info: {singular: "information message", plural: "information messages"}
+        };
+
+        var iconClassName = gutter.$useSvgGutterIcons ? "ace_icon_svg" : "ace_icon";
+
+        // Construct the body of the tooltip.
+        for (var i = 0; i < annotation.text.length; i++) {
+            var line = `<span class='ace_${annotation.type[i]} ${iconClassName}' aria-label='${annotationLabels[annotation.type[i]].singular}' role=img> </span> ${annotation.text[i]}`;
+            annotationMessages[annotation.type[i]].push(line);
+        }
+        var tooltipBody = "<div class='ace_gutter-tooltip_body'>";
+        tooltipBody += [].concat(annotationMessages.error, annotationMessages.warning, annotationMessages.info).join("<br>");
+        tooltipBody += '</div>';    
+        
+        // Construct the header of the tooltip.
+        var isMoreThanOneAnnotationType = false;
+        var tooltipHeader = "<div class='ace_gutter-tooltip_header'>";
+        for (var i = 0; i < 3; i++){
+            var annotationType = ['error', 'warning', 'info'][i];
+            if (annotationMessages[annotationType].length > 0){
+                var label = annotationMessages[annotationType].length === 1 ? annotationLabels[annotationType].singular : annotationLabels[annotationType].plural;
+                tooltipHeader += `${isMoreThanOneAnnotationType ? ', ' : ''}${annotationMessages[annotationType].length} ${label}`;
+                isMoreThanOneAnnotationType = true;
+            } 
+        }
+        tooltipHeader += "</div>";
+
+        tooltipAnnotation = tooltipHeader + tooltipBody;
 
         tooltip.setHtml(tooltipAnnotation);
-
-        var annotationClassName = annotation.className;
-        if (annotationClassName) {
-            tooltip.setClassName(annotationClassName.trim());
-        }
-
+        tooltip.setClassName("ace_gutter-tooltip");
+        tooltip.$element.setAttribute("aria-live", "polite");
+        
         tooltip.show();
         editor._signal("showGutterTooltip", tooltip);
         editor.on("mousewheel", hideTooltip);
@@ -21838,14 +20138,8 @@ function GutterHandler(mouseHandler) {
     editor.on("changeSession", hideTooltip);
 }
 
-function GutterTooltip(parentNode) {
-    Tooltip.call(this, parentNode);
-}
-
-oop.inherits(GutterTooltip, Tooltip);
-
-(function(){
-    this.setPosition = function(x, y) {
+class GutterTooltip extends Tooltip {
+    setPosition(x, y) {
         var windowWidth = window.innerWidth || document.documentElement.clientWidth;
         var windowHeight = window.innerHeight || document.documentElement.clientHeight;
         var width = this.getWidth();
@@ -21859,52 +20153,49 @@ oop.inherits(GutterTooltip, Tooltip);
             y -= 20 + height;
         }
         Tooltip.prototype.setPosition.call(this, x, y);
-    };
+    }
 
-}).call(GutterTooltip.prototype);
-
-
+}
 
 exports.d = GutterHandler;
 
 
 /***/ }),
 
-/***/ 4452:
+/***/ 84452:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var useragent = __webpack_require__(618);
+var useragent = __webpack_require__(50618);
 
 var DRAG_OFFSET = 0; // pixels
 var SCROLL_COOLDOWN_T = 550; // milliseconds
 
-function DefaultHandlers(mouseHandler) {
-    mouseHandler.$clickSelection = null;
+class DefaultHandlers {
+    constructor(mouseHandler) {
+        mouseHandler.$clickSelection = null;
 
-    var editor = mouseHandler.editor;
-    editor.setDefaultHandler("mousedown", this.onMouseDown.bind(mouseHandler));
-    editor.setDefaultHandler("dblclick", this.onDoubleClick.bind(mouseHandler));
-    editor.setDefaultHandler("tripleclick", this.onTripleClick.bind(mouseHandler));
-    editor.setDefaultHandler("quadclick", this.onQuadClick.bind(mouseHandler));
-    editor.setDefaultHandler("mousewheel", this.onMouseWheel.bind(mouseHandler));
+        var editor = mouseHandler.editor;
+        editor.setDefaultHandler("mousedown", this.onMouseDown.bind(mouseHandler));
+        editor.setDefaultHandler("dblclick", this.onDoubleClick.bind(mouseHandler));
+        editor.setDefaultHandler("tripleclick", this.onTripleClick.bind(mouseHandler));
+        editor.setDefaultHandler("quadclick", this.onQuadClick.bind(mouseHandler));
+        editor.setDefaultHandler("mousewheel", this.onMouseWheel.bind(mouseHandler));
 
-    var exports = ["select", "startSelect", "selectEnd", "selectAllEnd", "selectByWordsEnd",
-        "selectByLinesEnd", "dragWait", "dragWaitEnd", "focusWait"];
+        var exports = ["select", "startSelect", "selectEnd", "selectAllEnd", "selectByWordsEnd",
+            "selectByLinesEnd", "dragWait", "dragWaitEnd", "focusWait"];
 
-    exports.forEach(function(x) {
-        mouseHandler[x] = this[x];
-    }, this);
+        exports.forEach(function(x) {
+            mouseHandler[x] = this[x];
+        }, this);
 
-    mouseHandler.selectByLines = this.extendSelectionBy.bind(mouseHandler, "getLineRange");
-    mouseHandler.selectByWords = this.extendSelectionBy.bind(mouseHandler, "getWordRange");
-}
+        mouseHandler.selectByLines = this.extendSelectionBy.bind(mouseHandler, "getLineRange");
+        mouseHandler.selectByWords = this.extendSelectionBy.bind(mouseHandler, "getWordRange");
+    }
 
-(function() {
-
-    this.onMouseDown = function(ev) {
+    onMouseDown(ev) {
         var inSelection = ev.inSelection();
         var pos = ev.getDocumentPosition();
         this.mousedownEvent = ev;
@@ -21942,9 +20233,9 @@ function DefaultHandlers(mouseHandler) {
         this.captureMouse(ev);
         this.startSelect(pos, ev.domEvent._clicks > 1);
         return ev.preventDefault();
-    };
+    }
 
-    this.startSelect = function(pos, waitForClickSelection) {
+    startSelect(pos, waitForClickSelection) {
         pos = pos || this.editor.renderer.screenToTextCoordinates(this.x, this.y);
         var editor = this.editor;
         if (!this.mousedownEvent) return;
@@ -21955,14 +20246,11 @@ function DefaultHandlers(mouseHandler) {
             editor.selection.moveToPosition(pos);
         if (!waitForClickSelection)
             this.select();
-        if (editor.renderer.scroller.setCapture) {
-            editor.renderer.scroller.setCapture();
-        }
         editor.setStyle("ace_selecting");
         this.setState("select");
-    };
+    }
 
-    this.select = function() {
+    select() {
         var anchor, editor = this.editor;
         var cursor = editor.renderer.screenToTextCoordinates(this.x, this.y);
         if (this.$clickSelection) {
@@ -21981,9 +20269,9 @@ function DefaultHandlers(mouseHandler) {
         }
         editor.selection.selectToPosition(cursor);
         editor.renderer.scrollCursorIntoView();
-    };
+    }
 
-    this.extendSelectionBy = function(unitName) {
+    extendSelectionBy(unitName) {
         var anchor, editor = this.editor;
         var cursor = editor.renderer.screenToTextCoordinates(this.x, this.y);
         var range = editor.selection[unitName](cursor.row, cursor.column);
@@ -22011,28 +20299,22 @@ function DefaultHandlers(mouseHandler) {
         }
         editor.selection.selectToPosition(cursor);
         editor.renderer.scrollCursorIntoView();
-    };
-
-    this.selectEnd =
-    this.selectAllEnd =
-    this.selectByWordsEnd =
-    this.selectByLinesEnd = function() {
+    }
+    
+    selectByLinesEnd() {
         this.$clickSelection = null;
         this.editor.unsetStyle("ace_selecting");
-        if (this.editor.renderer.scroller.releaseCapture) {
-            this.editor.renderer.scroller.releaseCapture();
-        }
-    };
+    }
 
-    this.focusWait = function() {
+    focusWait() {
         var distance = calcDistance(this.mousedownEvent.x, this.mousedownEvent.y, this.x, this.y);
         var time = Date.now();
 
         if (distance > DRAG_OFFSET || time - this.mousedownEvent.time > this.$focusTimeout)
             this.startSelect(this.mousedownEvent.getDocumentPosition());
-    };
+    }
 
-    this.onDoubleClick = function(ev) {
+    onDoubleClick(ev) {
         var pos = ev.getDocumentPosition();
         var editor = this.editor;
         var session = editor.session;
@@ -22050,9 +20332,9 @@ function DefaultHandlers(mouseHandler) {
         }
         this.$clickSelection = range;
         this.select();
-    };
+    }
 
-    this.onTripleClick = function(ev) {
+    onTripleClick(ev) {
         var pos = ev.getDocumentPosition();
         var editor = this.editor;
 
@@ -22065,17 +20347,17 @@ function DefaultHandlers(mouseHandler) {
             this.$clickSelection = editor.selection.getLineRange(pos.row);
         }
         this.select();
-    };
+    }
 
-    this.onQuadClick = function(ev) {
+    onQuadClick(ev) {
         var editor = this.editor;
 
         editor.selectAll();
         this.$clickSelection = editor.getSelectionRange();
         this.setState("selectAll");
-    };
+    }
 
-    this.onMouseWheel = function(ev) {
+    onMouseWheel(ev) {
         if (ev.getAccelKey())
             return;
 
@@ -22133,9 +20415,12 @@ function DefaultHandlers(mouseHandler) {
             editor.renderer.scrollBy(ev.wheelX * ev.speed, ev.wheelY * ev.speed);
             return ev.stop();
         }
-    };
+    }
 
-}).call(DefaultHandlers.prototype);
+}
+DefaultHandlers.prototype.selectEnd = DefaultHandlers.prototype.selectByLinesEnd;
+DefaultHandlers.prototype.selectAllEnd = DefaultHandlers.prototype.selectByLinesEnd;
+DefaultHandlers.prototype.selectByWordsEnd = DefaultHandlers.prototype.selectByLinesEnd;
 
 exports.z = DefaultHandlers;
 
@@ -22160,15 +20445,15 @@ function calcRangeOrientation(range, cursor) {
 
 /***/ }),
 
-/***/ 469:
+/***/ 90469:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
 var dom = __webpack_require__(6359);
-var event = __webpack_require__(7989);
-var useragent = __webpack_require__(618);
+var event = __webpack_require__(17989);
+var useragent = __webpack_require__(50618);
 
 var AUTOSCROLL_DELAY = 200;
 var SCROLL_CURSOR_DELAY = 200;
@@ -22553,76 +20838,78 @@ exports.q = DragdropHandler;
 
 /***/ }),
 
-/***/ 138:
+/***/ 30138:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 var dom = __webpack_require__(6359);
 
-function FoldHandler(editor) {
+class FoldHandler {
+    constructor(editor) {
 
-    editor.on("click", function(e) {
-        var position = e.getDocumentPosition();
-        var session = editor.session;
-
-        // If the user clicked on a fold, then expand it.
-        var fold = session.getFoldAt(position.row, position.column, 1);
-        if (fold) {
-            if (e.getAccelKey())
-                session.removeFold(fold);
-            else
-                session.expandFold(fold);
-
-            e.stop();
-        }
-        
-        var target = e.domEvent && e.domEvent.target;
-        if (target && dom.hasCssClass(target, "ace_inline_button")) {
-            if (dom.hasCssClass(target, "ace_toggle_wrap")) {
-                session.setOption("wrap", !session.getUseWrapMode());
-                editor.renderer.scrollCursorIntoView();
-            }
-        }
-    });
-
-    editor.on("gutterclick", function(e) {
-        var gutterRegion = editor.renderer.$gutterLayer.getRegion(e);
-
-        if (gutterRegion == "foldWidgets") {
-            var row = e.getDocumentPosition().row;
+        editor.on("click", function(e) {
+            var position = e.getDocumentPosition();
             var session = editor.session;
-            if (session.foldWidgets && session.foldWidgets[row])
-                editor.session.onFoldWidgetClick(row, e);
-            if (!editor.isFocused())
-                editor.focus();
-            e.stop();
-        }
-    });
 
-    editor.on("gutterdblclick", function(e) {
-        var gutterRegion = editor.renderer.$gutterLayer.getRegion(e);
-
-        if (gutterRegion == "foldWidgets") {
-            var row = e.getDocumentPosition().row;
-            var session = editor.session;
-            var data = session.getParentFoldRangeData(row, true);
-            var range = data.range || data.firstRange;
-
-            if (range) {
-                row = range.start.row;
-                var fold = session.getFoldAt(row, session.getLine(row).length, 1);
-
-                if (fold) {
+            // If the user clicked on a fold, then expand it.
+            var fold = session.getFoldAt(position.row, position.column, 1);
+            if (fold) {
+                if (e.getAccelKey())
                     session.removeFold(fold);
-                } else {
-                    session.addFold("...", range);
-                    editor.renderer.scrollCursorIntoView({row: range.start.row, column: 0});
+                else
+                    session.expandFold(fold);
+
+                e.stop();
+            }
+
+            var target = e.domEvent && e.domEvent.target;
+            if (target && dom.hasCssClass(target, "ace_inline_button")) {
+                if (dom.hasCssClass(target, "ace_toggle_wrap")) {
+                    session.setOption("wrap", !session.getUseWrapMode());
+                    editor.renderer.scrollCursorIntoView();
                 }
             }
-            e.stop();
-        }
-    });
+        });
+
+        editor.on("gutterclick", function(e) {
+            var gutterRegion = editor.renderer.$gutterLayer.getRegion(e);
+
+            if (gutterRegion == "foldWidgets") {
+                var row = e.getDocumentPosition().row;
+                var session = editor.session;
+                if (session.foldWidgets && session.foldWidgets[row])
+                    editor.session.onFoldWidgetClick(row, e);
+                if (!editor.isFocused())
+                    editor.focus();
+                e.stop();
+            }
+        });
+
+        editor.on("gutterdblclick", function(e) {
+            var gutterRegion = editor.renderer.$gutterLayer.getRegion(e);
+
+            if (gutterRegion == "foldWidgets") {
+                var row = e.getDocumentPosition().row;
+                var session = editor.session;
+                var data = session.getParentFoldRangeData(row, true);
+                var range = data.range || data.firstRange;
+
+                if (range) {
+                    row = range.start.row;
+                    var fold = session.getFoldAt(row, session.getLine(row).length, 1);
+
+                    if (fold) {
+                        session.removeFold(fold);
+                    } else {
+                        session.addFold("...", range);
+                        editor.renderer.scrollCursorIntoView({row: range.start.row, column: 0});
+                    }
+                }
+                e.stop();
+            }
+        });
+    }
 }
 
 exports.z = FoldHandler;
@@ -22630,68 +20917,73 @@ exports.z = FoldHandler;
 
 /***/ }),
 
-/***/ 3489:
+/***/ 53489:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var event = __webpack_require__(7989);
-var useragent = __webpack_require__(618);
+var event = __webpack_require__(17989);
+var useragent = __webpack_require__(50618);
 
 /*
  * Custom Ace mouse event
  */
-var MouseEvent = exports.T = function(domEvent, editor) {
-    this.domEvent = domEvent;
-    this.editor = editor;
-    
-    this.x = this.clientX = domEvent.clientX;
-    this.y = this.clientY = domEvent.clientY;
+class MouseEvent {
+    constructor(domEvent, editor) {
+        this.domEvent = domEvent;
+        this.editor = editor;
 
-    this.$pos = null;
-    this.$inSelection = null;
-    
-    this.propagationStopped = false;
-    this.defaultPrevented = false;
-};
+        this.x = this.clientX = domEvent.clientX;
+        this.y = this.clientY = domEvent.clientY;
 
-(function() {  
+        this.$pos = null;
+        this.$inSelection = null;
+
+        this.propagationStopped = false;
+        this.defaultPrevented = false;
+
+        this.getAccelKey = useragent.isMac ? function () {
+            return this.domEvent.metaKey;
+        } : function () {
+            return this.domEvent.ctrlKey;
+        };
+    }
     
-    this.stopPropagation = function() {
+    stopPropagation() {
         event.stopPropagation(this.domEvent);
         this.propagationStopped = true;
-    };
+    }
     
-    this.preventDefault = function() {
+    preventDefault() {
         event.preventDefault(this.domEvent);
         this.defaultPrevented = true;
-    };
+    }
     
-    this.stop = function() {
+    stop() {
         this.stopPropagation();
         this.preventDefault();
-    };
+    }
 
-    /*
+    /**
      * Get the document position below the mouse cursor
      * 
      * @return {Object} 'row' and 'column' of the document position
      */
-    this.getDocumentPosition = function() {
+    getDocumentPosition() {
         if (this.$pos)
             return this.$pos;
         
         this.$pos = this.editor.renderer.screenToTextCoordinates(this.clientX, this.clientY);
         return this.$pos;
-    };
+    }
     
-    /*
+    /**
      * Check if the mouse cursor is inside of the text selection
      * 
      * @return {Boolean} whether the mouse cursor is inside of the selection
      */
-    this.inSelection = function() {
+    inSelection() {
         if (this.$inSelection !== null)
             return this.$inSelection;
             
@@ -22707,140 +20999,138 @@ var MouseEvent = exports.T = function(domEvent, editor) {
         }
 
         return this.$inSelection;
-    };
+    }
     
-    /*
+    /**
      * Get the clicked mouse button
      * 
      * @return {Number} 0 for left button, 1 for middle button, 2 for right button
      */
-    this.getButton = function() {
+    getButton() {
         return event.getButton(this.domEvent);
-    };
+    }
     
-    /*
+    /**
      * @return {Boolean} whether the shift key was pressed when the event was emitted
      */
-    this.getShiftKey = function() {
+    getShiftKey() {
         return this.domEvent.shiftKey;
-    };
+    }
     
-    this.getAccelKey = useragent.isMac
-        ? function() { return this.domEvent.metaKey; }
-        : function() { return this.domEvent.ctrlKey; };
-    
-}).call(MouseEvent.prototype);
+}
+
+exports.T = MouseEvent;
 
 
 /***/ }),
 
-/***/ 3691:
+/***/ 53691:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var event = __webpack_require__(7989);
-var useragent = __webpack_require__(618);
-var DefaultHandlers = (__webpack_require__(4452)/* .DefaultHandlers */ .z);
+var event = __webpack_require__(17989);
+var useragent = __webpack_require__(50618);
+var DefaultHandlers = (__webpack_require__(84452)/* .DefaultHandlers */ .z);
 var DefaultGutterHandler = (__webpack_require__(956)/* .GutterHandler */ .d);
-var MouseEvent = (__webpack_require__(3489)/* .MouseEvent */ .T);
-var DragdropHandler = (__webpack_require__(469)/* .DragdropHandler */ .q);
-var addTouchListeners = (__webpack_require__(6591)/* .addTouchListeners */ .W);
-var config = __webpack_require__(3188);
+var MouseEvent = (__webpack_require__(53489)/* .MouseEvent */ .T);
+var DragdropHandler = (__webpack_require__(90469)/* .DragdropHandler */ .q);
+var addTouchListeners = (__webpack_require__(16591)/* .addTouchListeners */ .W);
+var config = __webpack_require__(13188);
 
-var MouseHandler = function(editor) {
-    var _self = this;
-    this.editor = editor;
+class MouseHandler {
+    constructor(editor) {
+        var _self = this;
+        this.editor = editor;
 
-    new DefaultHandlers(this);
-    new DefaultGutterHandler(this);
-    new DragdropHandler(this);
+        new DefaultHandlers(this);
+        new DefaultGutterHandler(this);
+        new DragdropHandler(this);
 
-    var focusEditor = function(e) {
-        // because we have to call event.preventDefault() any window on ie and iframes
-        // on other browsers do not get focus, so we have to call window.focus() here
-        var windowBlurred = !document.hasFocus || !document.hasFocus()
-            || !editor.isFocused() && document.activeElement == (editor.textInput && editor.textInput.getElement());
-        if (windowBlurred)
-            window.focus();
-        editor.focus();
-        // Without this editor is blurred after double click
-        setTimeout(function () {
-            if (!editor.isFocused()) editor.focus();
-        });
-    };
+        var focusEditor = function(e) {
+            // because we have to call event.preventDefault() any window on ie and iframes
+            // on other browsers do not get focus, so we have to call window.focus() here
+            var windowBlurred = !document.hasFocus || !document.hasFocus()
+                || !editor.isFocused() && document.activeElement == (editor.textInput && editor.textInput.getElement());
+            if (windowBlurred)
+                window.focus();
+            editor.focus();
+            // Without this editor is blurred after double click
+            setTimeout(function () {
+                if (!editor.isFocused()) editor.focus();
+            });
+        };
 
-    var mouseTarget = editor.renderer.getMouseEventTarget();
-    event.addListener(mouseTarget, "click", this.onMouseEvent.bind(this, "click"), editor);
-    event.addListener(mouseTarget, "mousemove", this.onMouseMove.bind(this, "mousemove"), editor);
-    event.addMultiMouseDownListener([
-        mouseTarget,
-        editor.renderer.scrollBarV && editor.renderer.scrollBarV.inner,
-        editor.renderer.scrollBarH && editor.renderer.scrollBarH.inner,
-        editor.textInput && editor.textInput.getElement()
-    ].filter(Boolean), [400, 300, 250], this, "onMouseEvent", editor);
-    event.addMouseWheelListener(editor.container, this.onMouseWheel.bind(this, "mousewheel"), editor);
-    addTouchListeners(editor.container, editor);
+        var mouseTarget = editor.renderer.getMouseEventTarget();
+        event.addListener(mouseTarget, "click", this.onMouseEvent.bind(this, "click"), editor);
+        event.addListener(mouseTarget, "mousemove", this.onMouseMove.bind(this, "mousemove"), editor);
+        event.addMultiMouseDownListener([
+            mouseTarget,
+            editor.renderer.scrollBarV && editor.renderer.scrollBarV.inner,
+            editor.renderer.scrollBarH && editor.renderer.scrollBarH.inner,
+            editor.textInput && editor.textInput.getElement()
+        ].filter(Boolean), [400, 300, 250], this, "onMouseEvent", editor);
+        event.addMouseWheelListener(editor.container, this.onMouseWheel.bind(this, "mousewheel"), editor);
+        addTouchListeners(editor.container, editor);
 
-    var gutterEl = editor.renderer.$gutter;
-    event.addListener(gutterEl, "mousedown", this.onMouseEvent.bind(this, "guttermousedown"), editor);
-    event.addListener(gutterEl, "click", this.onMouseEvent.bind(this, "gutterclick"), editor);
-    event.addListener(gutterEl, "dblclick", this.onMouseEvent.bind(this, "gutterdblclick"), editor);
-    event.addListener(gutterEl, "mousemove", this.onMouseEvent.bind(this, "guttermousemove"), editor);
+        var gutterEl = editor.renderer.$gutter;
+        event.addListener(gutterEl, "mousedown", this.onMouseEvent.bind(this, "guttermousedown"), editor);
+        event.addListener(gutterEl, "click", this.onMouseEvent.bind(this, "gutterclick"), editor);
+        event.addListener(gutterEl, "dblclick", this.onMouseEvent.bind(this, "gutterdblclick"), editor);
+        event.addListener(gutterEl, "mousemove", this.onMouseEvent.bind(this, "guttermousemove"), editor);
 
-    event.addListener(mouseTarget, "mousedown", focusEditor, editor);
-    event.addListener(gutterEl, "mousedown", focusEditor, editor);
-    if (useragent.isIE && editor.renderer.scrollBarV) {
-        event.addListener(editor.renderer.scrollBarV.element, "mousedown", focusEditor, editor);
-        event.addListener(editor.renderer.scrollBarH.element, "mousedown", focusEditor, editor);
+        event.addListener(mouseTarget, "mousedown", focusEditor, editor);
+        event.addListener(gutterEl, "mousedown", focusEditor, editor);
+        if (useragent.isIE && editor.renderer.scrollBarV) {
+            event.addListener(editor.renderer.scrollBarV.element, "mousedown", focusEditor, editor);
+            event.addListener(editor.renderer.scrollBarH.element, "mousedown", focusEditor, editor);
+        }
+
+        editor.on("mousemove", function(e){
+            if (_self.state || _self.$dragDelay || !_self.$dragEnabled)
+                return;
+
+            var character = editor.renderer.screenToTextCoordinates(e.x, e.y);
+            var range = editor.session.selection.getRange();
+            var renderer = editor.renderer;
+
+            if (!range.isEmpty() && range.insideStart(character.row, character.column)) {
+                renderer.setCursorStyle("default");
+            } else {
+                renderer.setCursorStyle("");
+            }
+        }, editor);
     }
 
-    editor.on("mousemove", function(e){
-        if (_self.state || _self.$dragDelay || !_self.$dragEnabled)
-            return;
-
-        var character = editor.renderer.screenToTextCoordinates(e.x, e.y);
-        var range = editor.session.selection.getRange();
-        var renderer = editor.renderer;
-
-        if (!range.isEmpty() && range.insideStart(character.row, character.column)) {
-            renderer.setCursorStyle("default");
-        } else {
-            renderer.setCursorStyle("");
-        }
-    }, editor);
-};
-
-(function() {
-    this.onMouseEvent = function(name, e) {
+    onMouseEvent(name, e) {
         if (!this.editor.session) return;
         this.editor._emit(name, new MouseEvent(e, this.editor));
-    };
+    }
 
-    this.onMouseMove = function(name, e) {
+    onMouseMove(name, e) {
         // optimization, because mousemove doesn't have a default handler.
         var listeners = this.editor._eventRegistry && this.editor._eventRegistry.mousemove;
         if (!listeners || !listeners.length)
             return;
 
         this.editor._emit(name, new MouseEvent(e, this.editor));
-    };
+    }
 
-    this.onMouseWheel = function(name, e) {
+    onMouseWheel(name, e) {
         var mouseEvent = new MouseEvent(e, this.editor);
         mouseEvent.speed = this.$scrollSpeed * 2;
         mouseEvent.wheelX = e.wheelX;
         mouseEvent.wheelY = e.wheelY;
 
         this.editor._emit(name, mouseEvent);
-    };
+    }
     
-    this.setState = function(state) {
+    setState(state) {
         this.state = state;
-    };
+    }
 
-    this.captureMouse = function(ev, mouseMoveHandler) {
+    captureMouse(ev, mouseMoveHandler) {
         this.x = ev.x;
         this.y = ev.y;
 
@@ -22906,9 +21196,8 @@ var MouseHandler = function(editor) {
         self.$onCaptureMouseMove = onMouseMove;
         self.releaseMouse = event.capture(this.editor.container, onMouseMove, onCaptureEnd);
         var timerId = setInterval(onCaptureInterval, 20);
-    };
-    this.releaseMouse = null;
-    this.cancelContextMenu = function() {
+    }
+    cancelContextMenu() {
         var stop = function(e) {
             if (e && e.domEvent && e.domEvent.type != "contextmenu")
                 return;
@@ -22918,11 +21207,13 @@ var MouseHandler = function(editor) {
         }.bind(this);
         setTimeout(stop, 10);
         this.editor.on("nativecontextmenu", stop);
-    };
-    this.destroy = function() {
+    }
+    destroy() {
         if (this.releaseMouse) this.releaseMouse();
-    };
-}).call(MouseHandler.prototype);
+    }
+}
+
+MouseHandler.prototype.releaseMouse = null;
 
 config.defineOptions(MouseHandler.prototype, "mouseHandler", {
     scrollSpeed: {initialValue: 2},
@@ -22941,8 +21232,8 @@ exports.S = MouseHandler;
 /***/ 4407:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var event = __webpack_require__(7989);
-var useragent = __webpack_require__(618);
+var event = __webpack_require__(17989);
+var useragent = __webpack_require__(50618);
 
 // mouse
 function isSamePoint(p1, p2) {
@@ -23114,14 +21405,14 @@ exports.P = onMouseDown;
 
 /***/ }),
 
-/***/ 6591:
+/***/ 16591:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var MouseEvent = (__webpack_require__(3489)/* .MouseEvent */ .T);
-var event = __webpack_require__(7989);
+var MouseEvent = (__webpack_require__(53489)/* .MouseEvent */ .T);
+var event = __webpack_require__(17989);
 var dom = __webpack_require__(6359);
 
 exports.W = function(el, editor) {
@@ -23436,20 +21727,20 @@ exports.W = function(el, editor) {
 
 /***/ }),
 
-/***/ 2972:
+/***/ 62972:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var RangeList = (__webpack_require__(6510)/* .RangeList */ .$);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var Selection = (__webpack_require__(8939)/* .Selection */ .Y);
+var RangeList = (__webpack_require__(16510)/* .RangeList */ .$);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var Selection = (__webpack_require__(88939)/* .Selection */ .Y);
 var onMouseDown = (__webpack_require__(4407)/* .onMouseDown */ .P);
-var event = __webpack_require__(7989);
-var lang = __webpack_require__(124);
-var commands = __webpack_require__(8506);
+var event = __webpack_require__(17989);
+var lang = __webpack_require__(20124);
+var commands = __webpack_require__(48506);
 exports.commands = commands.defaultCommands.concat(commands.multiSelectCommands);
 
 // Todo: session.find or editor.findVolatile that returns range
-var Search = (__webpack_require__(6745)/* .Search */ .o);
+var Search = (__webpack_require__(46745)/* .Search */ .o);
 var search = new Search();
 
 function find(session, needle, dir) {
@@ -23460,7 +21751,7 @@ function find(session, needle, dir) {
 }
 
 // extend EditSession
-var EditSession = (__webpack_require__(6480)/* .EditSession */ .m);
+var EditSession = (__webpack_require__(66480)/* .EditSession */ .m);
 (function() {
     this.getSelectionMarkers = function() {
         return this.$selectionMarkers;
@@ -23742,7 +22033,7 @@ var EditSession = (__webpack_require__(6480)/* .EditSession */ .m);
 }).call(Selection.prototype);
 
 // extend Editor
-var Editor = (__webpack_require__(2880).Editor);
+var Editor = (__webpack_require__(82880).Editor);
 (function() {
 
     /** 
@@ -24353,7 +22644,7 @@ function addAltCursorListeners(editor){
 exports.MultiSelect = MultiSelect;
 
 
-(__webpack_require__(3188).defineOptions)(Editor.prototype, "editor", {
+(__webpack_require__(13188).defineOptions)(Editor.prototype, "editor", {
     enableMultiselect: {
         set: function(val) {
             MultiSelect(this);
@@ -24378,61 +22669,50 @@ exports.MultiSelect = MultiSelect;
 
 /***/ }),
 
-/***/ 1553:
+/***/ 81553:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var oop = __webpack_require__(9359);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var oop = __webpack_require__(89359);
 
-/**
- * @class PlaceHolder
- *
- **/
+class PlaceHolder {
+    /**
+     * @param {Document} session The document to associate with the anchor
+     * @param {Number} length The starting row position
+     * @param {Number} pos The starting column position
+     * @param {String} others
+     * @param {String} mainClass
+     * @param {String} othersClass
+     **/
+    constructor(session, length, pos, others, mainClass, othersClass) {
+        var _self = this;
+        this.length = length;
+        this.session = session;
+        this.doc = session.getDocument();
+        this.mainClass = mainClass;
+        this.othersClass = othersClass;
+        this.$onUpdate = this.onUpdate.bind(this);
+        this.doc.on("change", this.$onUpdate, true);
+        this.$others = others;
 
-/**
- * - session (Document): The document to associate with the anchor
- * - length (Number): The starting row position
- * - pos (Number): The starting column position
- * - others (String):
- * - mainClass (String):
- * - othersClass (String):
- * 
- * @constructor
- **/
+        this.$onCursorChange = function() {
+            setTimeout(function() {
+                _self.onCursorChange();
+            });
+        };
 
-var PlaceHolder = function(session, length, pos, others, mainClass, othersClass) {
-    var _self = this;
-    this.length = length;
-    this.session = session;
-    this.doc = session.getDocument();
-    this.mainClass = mainClass;
-    this.othersClass = othersClass;
-    this.$onUpdate = this.onUpdate.bind(this);
-    this.doc.on("change", this.$onUpdate, true);
-    this.$others = others;
-    
-    this.$onCursorChange = function() {
-        setTimeout(function() {
-            _self.onCursorChange();
-        });
-    };
-    
-    this.$pos = pos;
-    // Used for reset
-    var undoStack = session.getUndoManager().$undoStack || session.getUndoManager().$undostack || {length: -1};
-    this.$undoStackDepth = undoStack.length;
-    this.setup();
+        this.$pos = pos;
+        // Used for reset
+        var undoStack = session.getUndoManager().$undoStack || session.getUndoManager().$undostack || {length: -1};
+        this.$undoStackDepth = undoStack.length;
+        this.setup();
 
-    session.selection.on("changeCursor", this.$onCursorChange);
-};
-
-(function() {
-
-    oop.implement(this, EventEmitter);
+        session.selection.on("changeCursor", this.$onCursorChange);
+    }
 
     /**
      * PlaceHolder.setup()
@@ -24440,7 +22720,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
      * TODO
      *
      **/
-    this.setup = function() {
+    setup() {
         var _self = this;
         var doc = this.doc;
         var session = this.session;
@@ -24462,7 +22742,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
             _self.others.push(anchor);
         });
         session.setUndoSelect(false);
-    };
+    }
     
     /**
      * PlaceHolder.showOtherMarkers()
@@ -24470,7 +22750,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
      * TODO
      *
      **/
-    this.showOtherMarkers = function() {
+    showOtherMarkers() {
         if (this.othersActive) return;
         var session = this.session;
         var _self = this;
@@ -24478,7 +22758,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
         this.others.forEach(function(anchor) {
             anchor.markerId = session.addMarker(new Range(anchor.row, anchor.column, anchor.row, anchor.column+_self.length), _self.othersClass, null, false);
         });
-    };
+    }
     
     /**
      * PlaceHolder.hideOtherMarkers()
@@ -24486,13 +22766,13 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
      * Hides all over markers in the [[EditSession `EditSession`]] that are not the currently selected one.
      *
      **/
-    this.hideOtherMarkers = function() {
+    hideOtherMarkers() {
         if (!this.othersActive) return;
         this.othersActive = false;
         for (var i = 0; i < this.others.length; i++) {
             this.session.removeMarker(this.others[i].markerId);
         }
-    };
+    }
 
     /**
      * PlaceHolder@onUpdate(e)
@@ -24500,7 +22780,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
      * Emitted when the place holder updates.
      *
      **/
-    this.onUpdate = function(delta) {
+    onUpdate(delta) {
         if (this.$updating)
             return this.updateAnchors(delta);
             
@@ -24535,16 +22815,16 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
         
         this.$updating = false;
         this.updateMarkers();
-    };
+    }
     
-    this.updateAnchors = function(delta) {
+    updateAnchors(delta) {
         this.pos.onChange(delta);
         for (var i = this.others.length; i--;)
             this.others[i].onChange(delta);
         this.updateMarkers();
-    };
+    }
     
-    this.updateMarkers = function() {
+    updateMarkers() {
         if (this.$updating)
             return;
         var _self = this;
@@ -24556,7 +22836,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
         updateMarker(this.pos, this.mainClass);
         for (var i = this.others.length; i--;)
             updateMarker(this.others[i], this.othersClass);
-    };
+    }
     
     /**
      * PlaceHolder@onCursorChange(e)
@@ -24565,7 +22845,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
      *
      **/
 
-    this.onCursorChange = function(event) {
+    onCursorChange(event) {
         if (this.$updating || !this.session) return;
         var pos = this.session.selection.getCursor();
         if (pos.row === this.pos.row && pos.column >= this.pos.column && pos.column <= this.pos.column + this.length) {
@@ -24575,7 +22855,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
             this.hideOtherMarkers();
             this._emit("cursorLeave", event);
         }
-    };
+    }
     
     /**
      * PlaceHolder.detach()
@@ -24583,14 +22863,14 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
      * TODO
      *
      **/    
-    this.detach = function() {
+    detach() {
         this.session.removeMarker(this.pos && this.pos.markerId);
         this.hideOtherMarkers();
         this.doc.off("change", this.$onUpdate);
         this.session.selection.off("changeCursor", this.$onCursorChange);
         this.session.setUndoSelect(true);
         this.session = null;
-    };
+    }
     
     /**
      * PlaceHolder.cancel()
@@ -24598,7 +22878,7 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
      * TODO
      *
      **/
-    this.cancel = function() {
+    cancel() {
         if (this.$undoStackDepth === -1)
             return;
         var undoManager = this.session.getUndoManager();
@@ -24608,16 +22888,17 @@ var PlaceHolder = function(session, length, pos, others, mainClass, othersClass)
         }
         if (this.selectionBefore)
             this.session.selection.fromJSON(this.selectionBefore);
-    };
-}).call(PlaceHolder.prototype);
+    }
+}
 
+oop.implement(PlaceHolder.prototype, EventEmitter);
 
 exports.PlaceHolder = PlaceHolder;
 
 
 /***/ }),
 
-/***/ 9082:
+/***/ 59082:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -24630,38 +22911,38 @@ var comparePoints = function(p1, p2) {
  * @class Range
  **/
 
-/**
- * Creates a new `Range` object with the given starting and ending rows and columns.
- * @param {Number} startRow The starting row
- * @param {Number} startColumn The starting column
- * @param {Number} endRow The ending row
- * @param {Number} endColumn The ending column
- * @constructor
- **/
-var Range = function(startRow, startColumn, endRow, endColumn) {
-    this.start = {
-        row: startRow,
-        column: startColumn
-    };
+class Range {
+    /**
+     * Creates a new `Range` object with the given starting and ending rows and columns.
+     * @param {Number} startRow The starting row
+     * @param {Number} startColumn The starting column
+     * @param {Number} endRow The ending row
+     * @param {Number} endColumn The ending column
+     * @constructor
+     **/
+    constructor(startRow, startColumn, endRow, endColumn) {
+        this.start = {
+            row: startRow,
+            column: startColumn
+        };
 
-    this.end = {
-        row: endRow,
-        column: endColumn
-    };
-};
-
-(function() {
+        this.end = {
+            row: endRow,
+            column: endColumn
+        };
+    }
+    
     /**
      * Returns `true` if and only if the starting row and column, and ending row and column, are equivalent to those given by `range`.
      * @param {Range} range A range to check against
      * @return {Boolean}
      **/
-    this.isEqual = function(range) {
+    isEqual(range) {
         return this.start.row === range.start.row &&
             this.end.row === range.end.row &&
             this.start.column === range.start.column &&
             this.end.column === range.end.column;
-    };
+    }
 
     /**
      * Returns a string containing the range's row and column information, given like this:
@@ -24670,10 +22951,10 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * ```
      * @return {String}
      **/
-    this.toString = function() {
+    toString() {
         return ("Range: [" + this.start.row + "/" + this.start.column +
             "] -> [" + this.end.row + "/" + this.end.column + "]");
-    };
+    }
 
     /**
      * Returns `true` if the `row` and `column` provided are within the given range. This can better be expressed as returning `true` if:
@@ -24687,9 +22968,9 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @related [[Range.compare]]
      **/
 
-    this.contains = function(row, column) {
+    contains(row, column) {
         return this.compare(row, column) == 0;
-    };
+    }
 
     /**
      * Compares `this` range (A) with another range (B).
@@ -24703,7 +22984,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * * `+2`: (B) is after (A) and doesn't intersect with (A)
      * * `42`: FTW state: (B) ends in (A) but starts outside of (A)
      **/
-    this.compareRange = function(range) {
+    compareRange(range) {
         var cmp,
             end = range.end,
             start = range.start;
@@ -24730,7 +23011,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
                 return 0;
             }
         }
-    };
+    }
 
     /**
      * Compares the row and column of `p` with the starting and ending [[Point]]'s of the calling range (by calling [[Range.compare]]).
@@ -24738,9 +23019,9 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @related [[Range.compare]]
      * @returns {Number}
      **/
-    this.comparePoint = function(p) {
+    comparePoint(p) {
         return this.compare(p.row, p.column);
-    };
+    }
 
     /**
      * Checks the start and end [[Point]]'s of `range` and compares them to the calling range. Returns `true` if the `range` is contained within the caller's range.
@@ -24748,19 +23029,19 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @returns {Boolean}
      * @related [[Range.comparePoint]]
      **/
-    this.containsRange = function(range) {
+    containsRange(range) {
         return this.comparePoint(range.start) == 0 && this.comparePoint(range.end) == 0;
-    };
+    }
 
     /**
      * Returns `true` if passed in `range` intersects with the one calling this method.
      * @param {Range} range A range to compare with
      * @returns {Boolean}
      **/
-    this.intersects = function(range) {
+    intersects(range) {
         var cmp = this.compareRange(range);
         return (cmp == -1 || cmp == 0 || cmp == 1);
-    };
+    }
 
     /**
      * Returns `true` if the caller's ending row is the same as `row`, and if the caller's ending column is the same as `column`.
@@ -24768,9 +23049,9 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @param {Number} column A column to compare with
      * @returns {Boolean}
      **/
-    this.isEnd = function(row, column) {
+    isEnd(row, column) {
         return this.end.row == row && this.end.column == column;
-    };
+    }
 
     /**
      * Returns `true` if the caller's starting row is the same as `row`, and if the caller's starting column is the same as `column`.
@@ -24778,9 +23059,9 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @param {Number} column A column to compare with
      * @returns {Boolean}
      **/
-    this.isStart = function(row, column) {
+    isStart(row, column) {
         return this.start.row == row && this.start.column == column;
-    };
+    }
 
     /**
      * Sets the starting row and column for the range.
@@ -24788,7 +23069,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @param {Number} column A column to set
      *
      **/
-    this.setStart = function(row, column) {
+    setStart(row, column) {
         if (typeof row == "object") {
             this.start.column = row.column;
             this.start.row = row.row;
@@ -24796,7 +23077,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             this.start.row = row;
             this.start.column = column;
         }
-    };
+    }
 
     /**
      * Sets the starting row and column for the range.
@@ -24804,7 +23085,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @param {Number} column A column to set
      *
      **/
-    this.setEnd = function(row, column) {
+    setEnd(row, column) {
         if (typeof row == "object") {
             this.end.column = row.column;
             this.end.row = row.row;
@@ -24812,7 +23093,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             this.end.row = row;
             this.end.column = column;
         }
-    };
+    }
 
     /**
      * Returns `true` if the `row` and `column` are within the given range.
@@ -24821,7 +23102,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @returns {Boolean}
      * @related [[Range.compare]]
      **/
-    this.inside = function(row, column) {
+    inside(row, column) {
         if (this.compare(row, column) == 0) {
             if (this.isEnd(row, column) || this.isStart(row, column)) {
                 return false;
@@ -24830,7 +23111,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             }
         }
         return false;
-    };
+    }
 
     /**
      * Returns `true` if the `row` and `column` are within the given range's starting [[Point]].
@@ -24839,7 +23120,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @returns {Boolean}
      * @related [[Range.compare]]
      **/
-    this.insideStart = function(row, column) {
+    insideStart(row, column) {
         if (this.compare(row, column) == 0) {
             if (this.isEnd(row, column)) {
                 return false;
@@ -24848,7 +23129,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             }
         }
         return false;
-    };
+    }
 
     /**
      * Returns `true` if the `row` and `column` are within the given range's ending [[Point]].
@@ -24858,7 +23139,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @related [[Range.compare]]
      *
      **/
-    this.insideEnd = function(row, column) {
+    insideEnd(row, column) {
         if (this.compare(row, column) == 0) {
             if (this.isStart(row, column)) {
                 return false;
@@ -24867,7 +23148,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             }
         }
         return false;
-    };
+    }
 
     /**
      * Compares the `row` and `column` with the starting and ending [[Point]]'s of the calling range.
@@ -24886,7 +23167,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * * `column` is less than or equal to the calling range's ending column, this returns `0`
      * * Otherwise, it returns 1
      **/
-    this.compare = function(row, column) {
+    compare(row, column) {
         if (!this.isMultiLine()) {
             if (row === this.start.row) {
                 return column < this.start.column ? -1 : (column > this.end.column ? 1 : 0);
@@ -24906,7 +23187,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             return column <= this.end.column ? 0 : 1;
 
         return 0;
-    };
+    }
 
     /**
      * Compares the `row` and `column` with the starting and ending [[Point]]'s of the calling range.
@@ -24916,13 +23197,13 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * * `-1` if calling range's starting column and calling range's starting row are equal `row` and `column`
      * * Otherwise, it returns the value after calling [[Range.compare `compare()`]].
      **/
-    this.compareStart = function(row, column) {
+    compareStart(row, column) {
         if (this.start.row == row && this.start.column == column) {
             return -1;
         } else {
             return this.compare(row, column);
         }
-    };
+    }
 
     /**
      * Compares the `row` and `column` with the starting and ending [[Point]]'s of the calling range.
@@ -24932,13 +23213,13 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * * `1` if calling range's ending column and calling range's ending row are equal `row` and `column`.
      * * Otherwise, it returns the value after calling [[Range.compare `compare()`]].
      */
-    this.compareEnd = function(row, column) {
+    compareEnd(row, column) {
         if (this.end.row == row && this.end.column == column) {
             return 1;
         } else {
             return this.compare(row, column);
         }
-    };
+    }
 
     /**
      * Compares the `row` and `column` with the start and end [[Point]]'s of the calling range.
@@ -24949,7 +23230,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * * `-1` if the starting row of the calling range is equal to `row`, and the starting column of the calling range is equal to `column`
      * * Otherwise, it returns the value after calling [[Range.compare `compare()`]].
      **/
-    this.compareInside = function(row, column) {
+    compareInside(row, column) {
         if (this.end.row == row && this.end.column == column) {
             return 1;
         } else if (this.start.row == row && this.start.column == column) {
@@ -24957,7 +23238,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
         } else {
             return this.compare(row, column);
         }
-    };
+    }
 
     /**
      * Returns the part of the current `Range` that occurs within the boundaries of `firstRow` and `lastRow` as a new `Range` object.
@@ -24965,7 +23246,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @param {Number} lastRow The ending row
      * @returns {Range}
     **/
-    this.clipRows = function(firstRow, lastRow) {
+    clipRows(firstRow, lastRow) {
         if (this.end.row > lastRow)
             var end = {row: lastRow + 1, column: 0};
         else if (this.end.row < firstRow)
@@ -24977,7 +23258,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             var start = {row: firstRow, column: 0};
 
         return Range.fromPoints(start || this.start, end || this.end);
-    };
+    }
 
     /**
      * Changes the `row` and `column` for the calling range for both the starting and ending [[Point]]'s.
@@ -24985,7 +23266,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @param {Number} column A new column to extend to
      * @returns {Range} The original range with the new row
     **/
-    this.extend = function(row, column) {
+    extend(row, column) {
         var cmp = this.compare(row, column);
 
         if (cmp == 0)
@@ -24996,49 +23277,49 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             var end = {row: row, column: column};
 
         return Range.fromPoints(start || this.start, end || this.end);
-    };
+    }
 
     /**
      * Returns `true` if the calling range is empty (starting [[Point]] == ending [[Point]]).
      * @returns {Boolean}
      **/
-    this.isEmpty = function() {
+    isEmpty() {
         return (this.start.row === this.end.row && this.start.column === this.end.column);
-    };
+    }
 
     /**
      * Returns `true` if the range spans across multiple lines.
      * @returns {Boolean}
     **/
-    this.isMultiLine = function() {
+    isMultiLine() {
         return (this.start.row !== this.end.row);
-    };
+    }
 
     /**
      * Returns a duplicate of the calling range.
      * @returns {Range}
     **/
-    this.clone = function() {
+    clone() {
         return Range.fromPoints(this.start, this.end);
-    };
+    }
 
     /**
      * Returns a range containing the starting and ending rows of the original range, but with a column value of `0`.
      * @returns {Range}
     **/
-    this.collapseRows = function() {
+    collapseRows() {
         if (this.end.column == 0)
             return new Range(this.start.row, 0, Math.max(this.start.row, this.end.row-1), 0);
         else
             return new Range(this.start.row, 0, this.end.row, 0);
-    };
+    }
 
     /**
      * Given the current `Range`, this function converts those starting and ending [[Point]]'s into screen positions, and then returns a new `Range` object.
      * @param {EditSession} session The `EditSession` to retrieve coordinates from
      * @returns {Range}
     **/
-    this.toScreenRange = function(session) {
+    toScreenRange(session) {
         var screenPosStart = session.documentToScreenPosition(this.start);
         var screenPosEnd = session.documentToScreenPosition(this.end);
 
@@ -25046,7 +23327,7 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
             screenPosStart.row, screenPosStart.column,
             screenPosEnd.row, screenPosEnd.column
         );
-    };
+    }
 
     /**
      * Shift the calling range by `row` and `column` values.
@@ -25054,14 +23335,14 @@ var Range = function(startRow, startColumn, endRow, endColumn) {
      * @param {Number} column
      * @experimental
      */
-    this.moveBy = function(row, column) {
+    moveBy(row, column) {
         this.start.row += row;
         this.start.column += column;
         this.end.row += row;
         this.end.column += column;
-    };
+    }
 
-}).call(Range.prototype);
+}
 
 /**
  * Creates and returns a new `Range` based on the `start` [[Point]] and `end` [[Point]] of the given parameters.
@@ -25084,29 +23365,27 @@ Range.comparePoints = function(p1, p2) {
     return p1.row - p2.row || p1.column - p2.column;
 };
 
-
 exports.e = Range;
 
 
 /***/ }),
 
-/***/ 6510:
+/***/ 16510:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 var comparePoints = Range.comparePoints;
 
-var RangeList = function() {
-    this.ranges = [];
-    this.$bias = 1;
-};
+class RangeList {
+    
+    constructor() {
+        this.ranges = [];
+        this.$bias = 1;
+    }
 
-(function() {
-    this.comparePoints = comparePoints;
-
-    this.pointIndex = function(pos, excludeEdges, startIndex) {
+    pointIndex(pos, excludeEdges, startIndex) {
         var list = this.ranges;
 
         for (var i = startIndex || 0; i < list.length; i++) {
@@ -25123,9 +23402,9 @@ var RangeList = function() {
             return -i-1;
         }
         return -i - 1;
-    };
+    }
 
-    this.add = function(range) {
+    add(range) {
         var excludeEdges = !range.isEmpty();
         var startIndex = this.pointIndex(range.start, excludeEdges);
         if (startIndex < 0)
@@ -25138,25 +23417,25 @@ var RangeList = function() {
         else
             endIndex++;
         return this.ranges.splice(startIndex, endIndex - startIndex, range);
-    };
+    }
 
-    this.addList = function(list) {
+    addList(list) {
         var removed = [];
         for (var i = list.length; i--; ) {
             removed.push.apply(removed, this.add(list[i]));
         }
         return removed;
-    };
+    }
 
-    this.substractPoint = function(pos) {
+    substractPoint(pos) {
         var i = this.pointIndex(pos);
 
         if (i >= 0)
             return this.ranges.splice(i, 1);
-    };
+    }
 
     // merge overlapping ranges
-    this.merge = function() {
+    merge() {
         var removed = [];
         var list = this.ranges;
         
@@ -25189,24 +23468,24 @@ var RangeList = function() {
         this.ranges = list;
 
         return removed;
-    };
+    }
 
-    this.contains = function(row, column) {
+    contains(row, column) {
         return this.pointIndex({row: row, column: column}) >= 0;
-    };
+    }
 
-    this.containsPoint = function(pos) {
+    containsPoint(pos) {
         return this.pointIndex(pos) >= 0;
-    };
+    }
 
-    this.rangeAtPoint = function(pos) {
+    rangeAtPoint(pos) {
         var i = this.pointIndex(pos);
         if (i >= 0)
             return this.ranges[i];
-    };
+    }
 
 
-    this.clipRows = function(startRow, endRow) {
+    clipRows(startRow, endRow) {
         var list = this.ranges;
         if (list[0].start.row > endRow || list[list.length - 1].start.row < startRow)
             return [];
@@ -25223,13 +23502,13 @@ var RangeList = function() {
             clipped.push(list[i]);
         }
         return clipped;
-    };
+    }
 
-    this.removeAll = function() {
+    removeAll() {
         return this.ranges.splice(0, this.ranges.length);
-    };
+    }
 
-    this.attach = function(session) {
+    attach(session) {
         if (this.session)
             this.detach();
 
@@ -25237,16 +23516,16 @@ var RangeList = function() {
         this.onChange = this.$onChange.bind(this);
 
         this.session.on('change', this.onChange);
-    };
+    }
 
-    this.detach = function() {
+    detach() {
         if (!this.session)
             return;
         this.session.removeListener('change', this.onChange);
         this.session = null;
-    };
+    }
 
-    this.$onChange = function(delta) {
+    $onChange(delta) {
         var start = delta.start;
         var end = delta.end;
         var startRow = start.row;
@@ -25355,91 +23634,89 @@ var RangeList = function() {
                 r.end.row += lineDif;
             }
         }
-    };
+    }
 
-}).call(RangeList.prototype);
+}
+
+RangeList.prototype.comparePoints = comparePoints;
 
 exports.$ = RangeList;
 
 
 /***/ }),
 
-/***/ 3081:
+/***/ 93081:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var event = __webpack_require__(7989);
+var event = __webpack_require__(17989);
 
-/** 
- *
- *
+/**
  * Batches changes (that force something to be redrawn) in the background.
- * @class RenderLoop
  **/
+class RenderLoop {
+    
+    constructor(onRender, win) {
+        this.onRender = onRender;
+        this.pending = false;
+        this.changes = 0;
+        this.$recursionLimit = 2;
+        this.window = win || window;
+        var _self = this;
+        this._flush = function (ts) {
+            _self.pending = false;
+            var changes = _self.changes;
 
+            if (changes) {
+                event.blockIdle(100);
+                _self.changes = 0;
+                _self.onRender(changes);
+            }
 
-var RenderLoop = function(onRender, win) {
-    this.onRender = onRender;
-    this.pending = false;
-    this.changes = 0;
-    this.$recursionLimit = 2;
-    this.window = win || window;
-    var _self = this;
-    this._flush = function(ts) {
-        _self.pending = false;
-        var changes = _self.changes;
+            if (_self.changes) {
+                if (_self.$recursionLimit-- < 0) return;
+                _self.schedule();
+            }
+            else {
+                _self.$recursionLimit = 2;
+            }
+        };
+    }
 
-        if (changes) {
-            event.blockIdle(100);
-            _self.changes = 0;
-            _self.onRender(changes);
-        }
-        
-        if (_self.changes) {
-            if (_self.$recursionLimit-- < 0) return;
-            _self.schedule();
-        } else {
-            _self.$recursionLimit = 2;
-        }
-    };
-};
-
-(function() {
-
-    this.schedule = function(change) {
+    schedule(change) {
         this.changes = this.changes | change;
         if (this.changes && !this.pending) {
             event.nextFrame(this._flush);
             this.pending = true;
         }
-    };
+    }
 
-    this.clear = function(change) {
+    clear(change) {
         var changes = this.changes;
         this.changes = 0;
         return changes;
-    };
-
-}).call(RenderLoop.prototype);
+    }
+    
+}
 
 exports.d = RenderLoop;
 
 
 /***/ }),
 
-/***/ 1338:
+/***/ 61338:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_unused_export__;
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
-var event = __webpack_require__(7989);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var event = __webpack_require__(17989);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 // on ie maximal element height is smaller than what we get from 4-5K line document
 // so scrollbar doesn't work, as a workaround we do not set height higher than MAX_SCROLL_H
 // and rescale scrolltop
@@ -25447,85 +23724,73 @@ var MAX_SCROLL_H = 0x8000;
 
 /**
  * An abstract class representing a native scrollbar control.
- * @class ScrollBar
  **/
+class Scrollbar {
+    /**
+     * Creates a new `ScrollBar`. `parent` is the owner of the scroll bar.
+     * @param {Element} parent A DOM element
+     * @param {string} classSuffix
+     **/
+    constructor(parent, classSuffix) {
+        this.element = dom.createElement("div");
+        this.element.className = "ace_scrollbar ace_scrollbar" + classSuffix;
 
-/**
- * Creates a new `ScrollBar`. `parent` is the owner of the scroll bar.
- * @param {Element} parent A DOM element
- *
- * @constructor
- **/
-var ScrollBar = function(parent) {
-    this.element = dom.createElement("div");
-    this.element.className = "ace_scrollbar ace_scrollbar" + this.classSuffix;
+        this.inner = dom.createElement("div");
+        this.inner.className = "ace_scrollbar-inner";
+        // on safari scrollbar is not shown for empty elements
+        this.inner.textContent = "\xa0";
+        this.element.appendChild(this.inner);
 
-    this.inner = dom.createElement("div");
-    this.inner.className = "ace_scrollbar-inner";
-    // on safari scrollbar is not shown for empty elements
-    this.inner.textContent = "\xa0";
-    this.element.appendChild(this.inner);
+        parent.appendChild(this.element);
 
-    parent.appendChild(this.element);
+        this.setVisible(false);
+        this.skipEvent = false;
 
-    this.setVisible(false);
-    this.skipEvent = false;
-
-    event.addListener(this.element, "scroll", this.onScroll.bind(this));
-    event.addListener(this.element, "mousedown", event.preventDefault);
-};
-
-(function() {
-    oop.implement(this, EventEmitter);
-
-    this.setVisible = function(isVisible) {
+        event.addListener(this.element, "scroll", this.onScroll.bind(this));
+        event.addListener(this.element, "mousedown", event.preventDefault);
+    }
+    
+    setVisible(isVisible) {
         this.element.style.display = isVisible ? "" : "none";
         this.isVisible = isVisible;
         this.coeff = 1;
-    };
-}).call(ScrollBar.prototype);
+    }
+}
+oop.implement(Scrollbar.prototype, EventEmitter);
 
 /**
  * Represents a vertical scroll bar.
- * @class VScrollBar
  **/
+class VScrollBar extends Scrollbar {
+    /**
+     * Creates a new `VScrollBar`. `parent` is the owner of the scroll bar.
+     * @param {Element} parent A DOM element
+     * @param {Object} renderer An editor renderer
+     **/
+    constructor(parent, renderer) {
+        super(parent, '-v');
+        this.scrollTop = 0;
+        this.scrollHeight = 0;
 
-/**
- * Creates a new `VScrollBar`. `parent` is the owner of the scroll bar.
- * @param {Element} parent A DOM element
- * @param {Object} renderer An editor renderer
- *
- * @constructor
- **/
-var VScrollBar = function(parent, renderer) {
-    ScrollBar.call(this, parent);
-    this.scrollTop = 0;
-    this.scrollHeight = 0;
-
-    // in OSX lion the scrollbars appear to have no width. In this case resize the
-    // element to show the scrollbar but still pretend that the scrollbar has a width
-    // of 0px
-    // in Firefox 6+ scrollbar is hidden if element has the same width as scrollbar
-    // make element a little bit wider to retain scrollbar when page is zoomed 
-    renderer.$scrollbarWidth = 
-    this.width = dom.scrollbarWidth(parent.ownerDocument);
-    this.inner.style.width =
-    this.element.style.width = (this.width || 15) + 5 + "px";
-    this.$minWidth = 0;
-};
-
-oop.inherits(VScrollBar, ScrollBar);
-
-(function() {
-
-    this.classSuffix = '-v';
+        // in OSX lion the scrollbars appear to have no width. In this case resize the
+        // element to show the scrollbar but still pretend that the scrollbar has a width
+        // of 0px
+        // in Firefox 6+ scrollbar is hidden if element has the same width as scrollbar
+        // make element a little bit wider to retain scrollbar when page is zoomed 
+        renderer.$scrollbarWidth =
+            this.width = dom.scrollbarWidth(parent.ownerDocument);
+        this.inner.style.width =
+            this.element.style.width = (this.width || 15) + 5 + "px";
+        this.$minWidth = 0;
+    }
+    
 
     /**
      * Emitted when the scroll bar, well, scrolls.
      * @event scroll
      * @param {Object} e Contains one property, `"data"`, which indicates the current scroll top position
      **/
-    this.onScroll = function() {
+    onScroll() {
         if (!this.skipEvent) {
             this.scrollTop = this.element.scrollTop;
             if (this.coeff != 1) {
@@ -25535,35 +23800,29 @@ oop.inherits(VScrollBar, ScrollBar);
             this._emit("scroll", {data: this.scrollTop});
         }
         this.skipEvent = false;
-    };
+    }
 
     /**
      * Returns the width of the scroll bar.
      * @returns {Number}
      **/
-    this.getWidth = function() {
+    getWidth() {
         return Math.max(this.isVisible ? this.width : 0, this.$minWidth || 0);
-    };
+    }
 
     /**
      * Sets the height of the scroll bar, in pixels.
      * @param {Number} height The new height
      **/
-    this.setHeight = function(height) {
+    setHeight(height) {
         this.element.style.height = height + "px";
-    };
-
-    /**
-     * Sets the inner height of the scroll bar, in pixels.
-     * @param {Number} height The new inner height
-     * @deprecated Use setScrollHeight instead
-     **/
-    this.setInnerHeight = 
+    }
+    
     /**
      * Sets the scroll height of the scroll bar, in pixels.
      * @param {Number} height The new scroll height
      **/
-    this.setScrollHeight = function(height) {
+    setScrollHeight(height) {
         this.scrollHeight = height;
         if (height > MAX_SCROLL_H) {
             this.coeff = MAX_SCROLL_H / height;
@@ -25572,13 +23831,14 @@ oop.inherits(VScrollBar, ScrollBar);
             this.coeff = 1;
         }
         this.inner.style.height = height + "px";
-    };
+    }
+
 
     /**
      * Sets the scroll top of the scroll bar.
      * @param {Number} scrollTop The new scroll top
      **/
-    this.setScrollTop = function(scrollTop) {
+    setScrollTop(scrollTop) {
         // on chrome 17+ for small zoom levels after calling this function
         // this.element.scrollTop != scrollTop which makes page to scroll up.
         if (this.scrollTop != scrollTop) {
@@ -25586,102 +23846,100 @@ oop.inherits(VScrollBar, ScrollBar);
             this.scrollTop = scrollTop;
             this.element.scrollTop = scrollTop * this.coeff;
         }
-    };
+    }
 
-}).call(VScrollBar.prototype);
+}
+
+/**
+ * Sets the inner height of the scroll bar, in pixels.
+ * @param {Number} height The new inner height
+ * @deprecated Use setScrollHeight instead
+ **/
+VScrollBar.prototype.setInnerHeight = VScrollBar.prototype.setScrollHeight;
 
 /**
  * Represents a horisontal scroll bar.
- * @class HScrollBar
  **/
+class HScrollBar extends Scrollbar {
+    /**
+     * Creates a new `HScrollBar`. `parent` is the owner of the scroll bar.
+     * @param {Element} parent A DOM element
+     * @param {Object} renderer An editor renderer
+     **/
+    constructor(parent, renderer) {
+        super(parent, '-h');
+        this.scrollLeft = 0;
 
-/**
- * Creates a new `HScrollBar`. `parent` is the owner of the scroll bar.
- * @param {Element} parent A DOM element
- * @param {Object} renderer An editor renderer
- *
- * @constructor
- **/
-var HScrollBar = function(parent, renderer) {
-    ScrollBar.call(this, parent);
-    this.scrollLeft = 0;
-
-    // in OSX lion the scrollbars appear to have no width. In this case resize the
-    // element to show the scrollbar but still pretend that the scrollbar has a width
-    // of 0px
-    // in Firefox 6+ scrollbar is hidden if element has the same width as scrollbar
-    // make element a little bit wider to retain scrollbar when page is zoomed 
-    this.height = renderer.$scrollbarWidth;
-    this.inner.style.height =
-    this.element.style.height = (this.height || 15) + 5 + "px";
-};
-
-oop.inherits(HScrollBar, ScrollBar);
-
-(function() {
-
-    this.classSuffix = '-h';
-
+        // in OSX lion the scrollbars appear to have no width. In this case resize the
+        // element to show the scrollbar but still pretend that the scrollbar has a width
+        // of 0px
+        // in Firefox 6+ scrollbar is hidden if element has the same width as scrollbar
+        // make element a little bit wider to retain scrollbar when page is zoomed 
+        this.height = renderer.$scrollbarWidth;
+        this.inner.style.height =
+            this.element.style.height = (this.height || 15) + 5 + "px";
+    }
+    
     /**
      * Emitted when the scroll bar, well, scrolls.
      * @event scroll
      * @param {Object} e Contains one property, `"data"`, which indicates the current scroll left position
      **/
-    this.onScroll = function() {
+    onScroll() {
         if (!this.skipEvent) {
             this.scrollLeft = this.element.scrollLeft;
             this._emit("scroll", {data: this.scrollLeft});
         }
         this.skipEvent = false;
-    };
+    }
 
     /**
      * Returns the height of the scroll bar.
      * @returns {Number}
      **/
-    this.getHeight = function() {
+    getHeight() {
         return this.isVisible ? this.height : 0;
-    };
+    }
 
     /**
      * Sets the width of the scroll bar, in pixels.
      * @param {Number} width The new width
      **/
-    this.setWidth = function(width) {
+    setWidth(width) {
         this.element.style.width = width + "px";
-    };
+    }
 
     /**
      * Sets the inner width of the scroll bar, in pixels.
      * @param {Number} width The new inner width
      * @deprecated Use setScrollWidth instead
      **/
-    this.setInnerWidth = function(width) {
+    setInnerWidth(width) {
         this.inner.style.width = width + "px";
-    };
+    }
 
     /**
      * Sets the scroll width of the scroll bar, in pixels.
      * @param {Number} width The new scroll width
      **/
-    this.setScrollWidth = function(width) {
+    setScrollWidth(width) {
         this.inner.style.width = width + "px";
-    };
+    }
 
     /**
      * Sets the scroll left of the scroll bar.
      * @param {Number} scrollLeft The new scroll left
      **/
-    this.setScrollLeft = function(scrollLeft) {
+    setScrollLeft(scrollLeft) {
         // on chrome 17+ for small zoom levels after calling this function
         // this.element.scrollTop != scrollTop which makes page to scroll up.
         if (this.scrollLeft != scrollLeft) {
             this.skipEvent = true;
             this.scrollLeft = this.element.scrollLeft = scrollLeft;
         }
-    };
+    }
 
-}).call(HScrollBar.prototype);
+}
 
 
 __webpack_unused_export__ = VScrollBar; // backward compatibility
@@ -25694,17 +23952,17 @@ exports.ii = HScrollBar;
 
 /***/ }),
 
-/***/ 6810:
+/***/ 66810:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_unused_export__;
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
-var event = __webpack_require__(7989);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
+var event = __webpack_require__(17989);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
 
 dom.importCssString(`.ace_editor>.ace_sb-v div, .ace_editor>.ace_sb-h div{
   position: absolute;
@@ -25748,44 +24006,37 @@ dom.importCssString(`.ace_editor>.ace_sb-v div, .ace_editor>.ace_sb-h div{
 
 /**
  * An abstract class representing a native scrollbar control.
- * @class ScrollBar
  **/
+class ScrollBar {
+    /**
+     * Creates a new `ScrollBar`. `parent` is the owner of the scroll bar.
+     * @param {Element} parent A DOM element
+     * @param {string} classSuffix
+     **/
+    constructor(parent, classSuffix) {
+        this.element = dom.createElement("div");
+        this.element.className = "ace_sb" + classSuffix;
+        this.inner = dom.createElement("div");
+        this.inner.className = "";
+        this.element.appendChild(this.inner);
+        this.VScrollWidth = 12;
+        this.HScrollHeight = 12;
 
-/**
- * Creates a new `ScrollBar`. `parent` is the owner of the scroll bar.
- * @param {Element} parent A DOM element
- *
- * @constructor
- **/
+        parent.appendChild(this.element);
+        this.setVisible(false);
+        this.skipEvent = false;
 
-var ScrollBar = function (parent) {
-    this.element = dom.createElement("div");
-    this.element.className = "ace_sb" + this.classSuffix;
-    this.inner = dom.createElement("div");
-    this.inner.className = "";
-    this.element.appendChild(this.inner);
-    this.VScrollWidth = 12;
-    this.HScrollHeight = 12;
+        event.addMultiMouseDownListener(this.element, [500, 300, 300], this, "onMouseDown");
+    }
 
-    parent.appendChild(this.element);
-    this.setVisible(false);
-    this.skipEvent = false;
-
-    event.addMultiMouseDownListener(this.element, [500, 300, 300], this, "onMouseDown");
-};
-
-(function () {
-    oop.implement(this, EventEmitter);
-
-    this.setVisible = function (isVisible) {
+    setVisible(isVisible) {
         this.element.style.display = isVisible ? "" : "none";
         this.isVisible = isVisible;
         this.coeff = 1;
-    };
+    }
+}
 
-
-}).call(ScrollBar.prototype);
-
+oop.implement(ScrollBar.prototype, EventEmitter);
 /**
  * Represents a vertical scroll bar.
  * @class VScrollBar
@@ -25798,29 +24049,23 @@ var ScrollBar = function (parent) {
  *
  * @constructor
  **/
-
-var VScrollBar = function (parent, renderer) {
-    ScrollBar.call(this, parent);
-    this.scrollTop = 0;
-    this.scrollHeight = 0;
-    this.parent = parent;
-    this.width = this.VScrollWidth;
-    this.renderer = renderer;
-    this.inner.style.width = this.element.style.width = (this.width || 15) + "px";
-    this.$minWidth = 0;
-};
-
-oop.inherits(VScrollBar, ScrollBar);
-
-(function () {
-    this.classSuffix = '-v';
-
-    oop.implement(this, EventEmitter);
-
+class VScrollBar extends ScrollBar {
+    
+    constructor(parent, renderer) {
+        super(parent, '-v');
+        this.scrollTop = 0;
+        this.scrollHeight = 0;
+        this.parent = parent;
+        this.width = this.VScrollWidth;
+        this.renderer = renderer;
+        this.inner.style.width = this.element.style.width = (this.width || 15) + "px";
+        this.$minWidth = 0;
+    }
+    
     /**
      * Emitted when the scroll thumb dragged or scrollbar canvas clicked.
      **/
-    this.onMouseDown = function (eType, e) {
+    onMouseDown(eType, e) {
         if (eType !== "mousedown") return;
 
         if (event.getButton(e) !== 0 || e.detail === 2) {
@@ -25855,18 +24100,18 @@ oop.inherits(VScrollBar, ScrollBar);
         var top = e.clientY - this.element.getBoundingClientRect().top - this.thumbHeight / 2;
         this._emit("scroll", {data: this.scrollTopFromThumbTop(top)});
         return event.preventDefault(e);
-    };
+    }
 
-    this.getHeight = function () {
+    getHeight() {
         return this.height;
-    };
+    }
 
     /**
      * Returns new top for scroll thumb
      * @param {Number}thumbTop
      * @returns {Number}
      **/
-    this.scrollTopFromThumbTop = function (thumbTop) {
+    scrollTopFromThumbTop(thumbTop) {
         var scrollTop = thumbTop * (this.pageHeight - this.viewHeight) / (this.slideHeight - this.thumbHeight);
         scrollTop = scrollTop >> 0;
         if (scrollTop < 0) {
@@ -25876,27 +24121,27 @@ oop.inherits(VScrollBar, ScrollBar);
             scrollTop = this.pageHeight - this.viewHeight;
         }
         return scrollTop;
-    };
+    }
 
     /**
      * Returns the width of the scroll bar.
      * @returns {Number}
      **/
-    this.getWidth = function () {
+    getWidth() {
         return Math.max(this.isVisible ? this.width : 0, this.$minWidth || 0);
-    };
+    }
 
     /**
      * Sets the height of the scroll bar, in pixels.
      * @param {Number} height The new height
      **/
-    this.setHeight = function (height) {
+    setHeight(height) {
         this.height = Math.max(0, height);
         this.slideHeight = this.height;
         this.viewHeight = this.height;
 
         this.setScrollHeight(this.pageHeight, true);
-    };
+    }
 
     /**
      * Sets the inner and scroll height of the scroll bar, in pixels.
@@ -25904,7 +24149,7 @@ oop.inherits(VScrollBar, ScrollBar);
      *
      * @param {boolean} force Forcely update height
      **/
-    this.setInnerHeight = this.setScrollHeight = function (height, force) {
+    setScrollHeight(height, force) {
         if (this.pageHeight === height && !force) return;
         this.pageHeight = height;
         this.thumbHeight = this.slideHeight * this.viewHeight / this.pageHeight;
@@ -25919,54 +24164,44 @@ oop.inherits(VScrollBar, ScrollBar);
             if (this.scrollTop < 0) this.scrollTop = 0;
             this._emit("scroll", {data: this.scrollTop});
         }
-    };
+    }
 
     /**
      * Sets the scroll top of the scroll bar.
      * @param {Number} scrollTop The new scroll top
      **/
-    this.setScrollTop = function (scrollTop) {
+    setScrollTop(scrollTop) {
         this.scrollTop = scrollTop;
         if (scrollTop < 0) scrollTop = 0;
         this.thumbTop = scrollTop * (this.slideHeight - this.thumbHeight) / (this.pageHeight - this.viewHeight);
         this.inner.style.top = this.thumbTop + "px";
-    };
+    }
+}
 
-}).call(VScrollBar.prototype);
+VScrollBar.prototype.setInnerHeight = VScrollBar.prototype.setScrollHeight;
 
 /**
  * Represents a horizontal scroll bar.
- * @class HScrollBar
  **/
-
-/**
- * Creates a new `HScrollBar`. `parent` is the owner of the scroll bar.
- * @param {Element} parent A DOM element
- * @param {Object} renderer An editor renderer
- *
- * @constructor
- **/
-var HScrollBar = function (parent, renderer) {
-    ScrollBar.call(this, parent);
-    this.scrollLeft = 0;
-    this.scrollWidth = 0;
-    this.height = this.HScrollHeight;
-    this.inner.style.height = this.element.style.height = (this.height || 12) + "px";
-    this.renderer = renderer;
-};
-
-oop.inherits(HScrollBar, ScrollBar);
-
-(function () {
-
-    this.classSuffix = '-h';
-
-    oop.implement(this, EventEmitter);
-
+class HScrollBar extends ScrollBar {
+    /**
+     * Creates a new `HScrollBar`. `parent` is the owner of the scroll bar.
+     * @param {Element} parent A DOM element
+     * @param {Object} renderer An editor renderer
+     **/
+    constructor(parent, renderer) {
+        super(parent, '-h');
+        this.scrollLeft = 0;
+        this.scrollWidth = 0;
+        this.height = this.HScrollHeight;
+        this.inner.style.height = this.element.style.height = (this.height || 12) + "px";
+        this.renderer = renderer;
+    }
+    
     /**
      * Emitted when the scroll thumb dragged or scrollbar canvas clicked.
      **/
-    this.onMouseDown = function (eType, e) {
+    onMouseDown(eType, e) {
         if (eType !== "mousedown") return;
 
         if (event.getButton(e) !== 0 || e.detail === 2) {
@@ -26003,22 +24238,22 @@ oop.inherits(HScrollBar, ScrollBar);
         var left = e.clientX - this.element.getBoundingClientRect().left - this.thumbWidth / 2;
         this._emit("scroll", {data: this.scrollLeftFromThumbLeft(left)});
         return event.preventDefault(e);
-    };
+    }
 
     /**
      * Returns the height of the scroll bar.
      * @returns {Number}
      **/
-    this.getHeight = function () {
+    getHeight() {
         return this.isVisible ? this.height : 0;
-    };
+    }
 
     /**
      * Returns new left for scroll thumb
      * @param {Number} thumbLeft
      * @returns {Number}
      **/
-    this.scrollLeftFromThumbLeft = function (thumbLeft) {
+    scrollLeftFromThumbLeft(thumbLeft) {
         var scrollLeft = thumbLeft * (this.pageWidth - this.viewWidth) / (this.slideWidth - this.thumbWidth);
         scrollLeft = scrollLeft >> 0;
         if (scrollLeft < 0) {
@@ -26028,27 +24263,27 @@ oop.inherits(HScrollBar, ScrollBar);
             scrollLeft = this.pageWidth - this.viewWidth;
         }
         return scrollLeft;
-    };
+    }
 
     /**
      * Sets the width of the scroll bar, in pixels.
      * @param {Number} width The new width
      **/
-    this.setWidth = function (width) {
+    setWidth(width) {
         this.width = Math.max(0, width);
         this.element.style.width = this.width + "px";
         this.slideWidth = this.width;
         this.viewWidth = this.width;
 
         this.setScrollWidth(this.pageWidth, true);
-    };
+    }
 
     /**
      * Sets the inner and scroll width of the scroll bar, in pixels.
      * @param {Number} width The new inner width
      * @param {boolean} force Forcely update width
      **/
-    this.setInnerWidth = this.setScrollWidth = function (width, force) {
+     setScrollWidth(width, force) {
         if (this.pageWidth === width && !force) return;
         this.pageWidth = width;
         this.thumbWidth = this.slideWidth * this.viewWidth / this.pageWidth;
@@ -26062,20 +24297,23 @@ oop.inherits(HScrollBar, ScrollBar);
             if (this.scrollLeft < 0) this.scrollLeft = 0;
             this._emit("scroll", {data: this.scrollLeft});
         }
-    };
+    }
+
 
     /**
      * Sets the scroll left of the scroll bar.
      * @param {Number} scrollLeft The new scroll left
      **/
-    this.setScrollLeft = function (scrollLeft) {
+    setScrollLeft(scrollLeft) {
         this.scrollLeft = scrollLeft;
         if (scrollLeft < 0) scrollLeft = 0;
         this.thumbLeft = scrollLeft * (this.slideWidth - this.thumbWidth) / (this.pageWidth - this.viewWidth);
         this.inner.style.left = (this.thumbLeft) + "px";
-    };
+    }
 
-}).call(HScrollBar.prototype);
+}
+
+HScrollBar.prototype.setInnerWidth = HScrollBar.prototype.setScrollWidth;
 
 __webpack_unused_export__ = VScrollBar; // backward compatibility
 __webpack_unused_export__ = VScrollBar; // backward compatibility
@@ -26087,46 +24325,38 @@ exports.ii = HScrollBar;
 
 /***/ }),
 
-/***/ 6745:
+/***/ 46745:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var lang = __webpack_require__(124);
-var oop = __webpack_require__(9359);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var lang = __webpack_require__(20124);
+var oop = __webpack_require__(89359);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 /**
- * @class Search
- *
  * A class designed to handle all sorts of text searches within a [[Document `Document`]].
- *
  **/
-
-/**
- * 
- *
- * Creates a new `Search` object. The following search options are available:
- *
- * - `needle`: The string or regular expression you're looking for
- * - `backwards`: Whether to search backwards from where cursor currently is. Defaults to `false`.
- * - `wrap`: Whether to wrap the search back to the beginning when it hits the end. Defaults to `false`.
- * - `caseSensitive`: Whether the search ought to be case-sensitive. Defaults to `false`.
- * - `wholeWord`: Whether the search matches only on whole words. Defaults to `false`.
- * - `range`: The [[Range]] to search within. Set this to `null` for the whole document
- * - `regExp`: Whether the search is a regular expression or not. Defaults to `false`.
- * - `start`: The starting [[Range]] or cursor position to begin the search
- * - `skipCurrent`: Whether or not to include the current line in the search. Default to `false`.
- * 
- * @constructor
- **/
-
-var Search = function() {
-    this.$options = {};
-};
-
-(function() {
+class Search {
+    /**
+     * Creates a new `Search` object. The following search options are available:
+     *
+     * - `needle`: The string or regular expression you're looking for
+     * - `backwards`: Whether to search backwards from where cursor currently is. Defaults to `false`.
+     * - `wrap`: Whether to wrap the search back to the beginning when it hits the end. Defaults to `false`.
+     * - `caseSensitive`: Whether the search ought to be case-sensitive. Defaults to `false`.
+     * - `wholeWord`: Whether the search matches only on whole words. Defaults to `false`.
+     * - `range`: The [[Range]] to search within. Set this to `null` for the whole document
+     * - `regExp`: Whether the search is a regular expression or not. Defaults to `false`.
+     * - `start`: The starting [[Range]] or cursor position to begin the search
+     * - `skipCurrent`: Whether or not to include the current line in the search. Default to `false`.
+     *
+     **/
+    constructor() {
+        this.$options = {};
+    }
+    
     /**
      * Sets the search options via the `options` parameter.
      * @param {Object} options An object containing all the new search properties
@@ -26135,27 +24365,27 @@ var Search = function() {
      * @returns {Search}
      * @chainable
     **/
-    this.set = function(options) {
+    set(options) {
         oop.mixin(this.$options, options);
         return this;
-    };
+    }
 
     /**
      * [Returns an object containing all the search options.]{: #Search.getOptions}
      * @returns {Object}
     **/
-    this.getOptions = function() {
+    getOptions() {
         return lang.copyObject(this.$options);
-    };
+    }
     
     /**
      * Sets the search options via the `options` parameter.
-     * @param {Object} An object containing all the search propertie
+     * @param {Object} options object containing all the search propertie
      * @related Search.set
     **/
-    this.setOptions = function(options) {
+    setOptions(options) {
         this.$options = options;
-    };
+    }
     /**
      * Searches for `options.needle`. If found, this method returns the [[Range `Range`]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
      * @param {EditSession} session The session to search with
@@ -26163,7 +24393,7 @@ var Search = function() {
      * 
      * @returns {Range}
     **/
-    this.find = function(session) {
+    find(session) {
         var options = this.$options;
         var iterator = this.$matchIterator(session, options);
         if (!iterator)
@@ -26183,7 +24413,7 @@ var Search = function() {
         });
 
         return firstRange;
-    };
+    }
 
     /**
      * Searches for all occurrances `options.needle`. If found, this method returns an array of [[Range `Range`s]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
@@ -26192,7 +24422,7 @@ var Search = function() {
      * 
      * @returns {[Range]}
     **/
-    this.findAll = function(session) {
+    findAll(session) {
         var options = this.$options;
         if (!options.needle)
             return [];
@@ -26259,7 +24489,7 @@ var Search = function() {
         }
 
         return ranges;
-    };
+    }
 
     /**
      * Searches for `options.needle` in `input`, and, if found, replaces it with `replacement`.
@@ -26271,7 +24501,7 @@ var Search = function() {
      * 
      * @returns {String}
     **/
-    this.replace = function(input, replacement) {
+    replace(input, replacement) {
         var options = this.$options;
 
         var re = this.$assembleRegExp(options);
@@ -26299,9 +24529,9 @@ var Search = function() {
         }
         
         return replacement;
-    };
+    }
 
-    this.$assembleRegExp = function(options, $disableFakeMultiline) {
+    $assembleRegExp(options, $disableFakeMultiline) {
         if (options.needle instanceof RegExp)
             return options.re = options.needle;
 
@@ -26328,9 +24558,9 @@ var Search = function() {
             re = false;
         }
         return options.re = re;
-    };
+    }
 
-    this.$assembleMultilineRegExp = function(needle, modifier) {
+    $assembleMultilineRegExp(needle, modifier) {
         var parts = needle.replace(/\r\n|\r|\n/g, "$\n^").split("\n");
         var re = [];
         for (var i = 0; i < parts.length; i++) try {
@@ -26339,9 +24569,9 @@ var Search = function() {
             return false;
         }
         return re;
-    };
+    }
 
-    this.$matchIterator = function(session, options) {
+    $matchIterator(session, options) {
         var re = this.$assembleRegExp(options);
         if (!re)
             return false;
@@ -26453,9 +24683,9 @@ var Search = function() {
             };
         }
         return {forEach: forEach};
-    };
+    }
 
-}).call(Search.prototype);
+}
 
 function addWordBoundary(needle, options) {
     function wordBoundary(c) {
@@ -26471,34 +24701,32 @@ exports.o = Search;
 
 /***/ }),
 
-/***/ 7988:
+/***/ 57988:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var lang = __webpack_require__(124);
-var oop = __webpack_require__(9359);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var lang = __webpack_require__(20124);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
-var SearchHighlight = function(regExp, clazz, type) {
-    this.setRegexp(regExp);
-    this.clazz = clazz;
-    this.type = type || "text";
-};
+var SearchHighlight = 
 
-(function() {
-    // needed to prevent long lines from freezing the browser
-    this.MAX_RANGES = 500;
+class SearchHighlight {
+    constructor(regExp, clazz, type = "text") {
+        this.setRegexp(regExp);
+        this.clazz = clazz;
+        this.type = type;
+    }
     
-    this.setRegexp = function(regExp) {
+    setRegexp(regExp) {
         if (this.regExp+"" == regExp+"")
             return;
         this.regExp = regExp;
         this.cache = [];
-    };
+    }
 
-    this.update = function(html, markerLayer, session, config) {
+    update(html, markerLayer, session, config) {
         if (!this.regExp)
             return;
         var start = config.firstRow, end = config.lastRow;
@@ -26526,25 +24754,28 @@ var SearchHighlight = function(regExp, clazz, type) {
                     html, rangeToAddMarkerTo, this.clazz, config);
             }
         }
-    };
+    }
 
-}).call(SearchHighlight.prototype);
+};
+
+// needed to prevent long lines from freezing the browser
+SearchHighlight.prototype.MAX_RANGES = 500;
 
 exports.t = SearchHighlight;
 
 
 /***/ }),
 
-/***/ 8939:
+/***/ 88939:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
-var lang = __webpack_require__(124);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var oop = __webpack_require__(89359);
+var lang = __webpack_require__(20124);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 /**
  * Contains the cursor position and the text selection of an edit session.
@@ -26561,13 +24792,13 @@ var Range = (__webpack_require__(9082)/* .Range */ .e);
  **/
 /**
  * Emitted when the cursor selection changes.
- * 
+ *
  *  @event changeSelection
  **/
 /**
  * Creates a new `Selection` object.
  * @param {EditSession} session The session to use
- * 
+ *
  * @constructor
  **/
 var Selection = function(session) {
@@ -26634,10 +24865,16 @@ var Selection = function(session) {
      * @param {Number} column The new column
      *
      **/
-    this.setSelectionAnchor = function(row, column) {
+    this.setAnchor = function(row, column) {
         this.$isEmpty = false;
         this.anchor.setPosition(row, column);
     };
+
+    /**
+     * Left for backward compatibility
+     * @deprecated
+     */
+    this.setSelectionAnchor = this.setAnchor;
 
     /**
      * Returns an object containing the `row` and `column` of the calling selection anchor.
@@ -26645,13 +24882,18 @@ var Selection = function(session) {
      * @returns {Object}
      * @related Anchor.getPosition
      **/
-    this.getAnchor = 
-    this.getSelectionAnchor = function() {
+    this.getAnchor = function() {
         if (this.$isEmpty)
             return this.getSelectionLead();
-        
+
         return this.anchor.getPosition();
     };
+
+    /**
+     * Left for backward compatibility
+     * @deprecated
+     */
+    this.getSelectionAnchor = this.getAnchor;
 
     /**
      * Returns an object containing the `row` and `column` of the calling selection lead.
@@ -27276,7 +25518,7 @@ var Selection = function(session) {
             else
                 this.$desiredColumn = screenPos.column;
         }
-        
+
         if (rows != 0 && this.session.lineWidgets && this.session.lineWidgets[this.lead.row]) {
             var widget = this.session.lineWidgets[this.lead.row];
             if (rows < 0)
@@ -27284,11 +25526,11 @@ var Selection = function(session) {
             else if (rows > 0)
                 rows += widget.rowCount - (widget.rowsAbove || 0);
         }
-        
+
         var docPos = this.session.screenToDocumentPosition(screenPos.row + rows, screenPos.column, offsetX);
-        
+
         if (rows !== 0 && chars === 0 && docPos.row === this.lead.row && docPos.column === this.lead.column) {
-            
+
         }
 
         // move the cursor and update the desired column
@@ -27448,20 +25690,20 @@ exports.Y = Selection;
 
 /***/ }),
 
-/***/ 6629:
+/***/ 56629:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 var dom = __webpack_require__(6359);
-var oop = __webpack_require__(9359);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var lang = __webpack_require__(124);
-var Range = (__webpack_require__(9082)/* .Range */ .e);
-var RangeList = (__webpack_require__(6510)/* .RangeList */ .$);
+var oop = __webpack_require__(89359);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var lang = __webpack_require__(20124);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var RangeList = (__webpack_require__(16510)/* .RangeList */ .$);
 var HashHandler = (__webpack_require__(7116).HashHandler);
-var Tokenizer = (__webpack_require__(760)/* .Tokenizer */ .d);
-var clipboard = __webpack_require__(6311);
+var Tokenizer = (__webpack_require__(60760)/* .Tokenizer */ .d);
+var clipboard = __webpack_require__(76311);
 
 var VARIABLES = {
     CURRENT_WORD: function(editor) {
@@ -27803,7 +26045,7 @@ var SnippetManager = function() {
         return result;
     };
 
-    this.insertSnippetForSelection = function(editor, snippetText) {
+    var processSnippetText = function(editor, snippetText, replaceRange) {
         var cursor = editor.getCursorPosition();
         var line = editor.session.getLine(cursor.row);
         var tabString = editor.session.getTabString();
@@ -27920,21 +26162,40 @@ var SnippetManager = function() {
                     t.end = {row: row, column: column};
             }
         });
+
+        return {
+            text,
+            tabstops,
+            tokens
+        };
+    };
+
+    this.getDisplayTextForSnippet = function(editor, snippetText) {
+        var processedSnippet = processSnippetText.call(this, editor, snippetText);
+        return processedSnippet.text;
+    };
+
+    this.insertSnippetForSelection = function(editor, snippetText, replaceRange) {
+        var processedSnippet = processSnippetText.call(this, editor, snippetText);
+        
         var range = editor.getSelectionRange();
-        var end = editor.session.replace(range, text);
+        if (replaceRange && replaceRange.compareRange(range) === 0) {
+            range = replaceRange;
+        }
+        var end = editor.session.replace(range, processedSnippet.text);
 
         var tabstopManager = new TabstopManager(editor);
         var selectionId = editor.inVirtualSelectionMode && editor.selection.index;
-        tabstopManager.addTabstops(tabstops, range.start, end, selectionId);
+        tabstopManager.addTabstops(processedSnippet.tabstops, range.start, end, selectionId);
     };
     
-    this.insertSnippet = function(editor, snippetText) {
+    this.insertSnippet = function(editor, snippetText, replaceRange) {
         var self = this;
         if (editor.inVirtualSelectionMode)
-            return self.insertSnippetForSelection(editor, snippetText);
+            return self.insertSnippetForSelection(editor, snippetText, replaceRange);
         
         editor.forEachSelection(function() {
-            self.insertSnippetForSelection(editor, snippetText);
+            self.insertSnippetForSelection(editor, snippetText, replaceRange);
         }, null, {keepOrder: true});
         
         if (editor.tabstopManager)
@@ -28463,7 +26724,7 @@ dom.importCssString(`
 exports.w = new SnippetManager();
 
 
-var Editor = (__webpack_require__(2880).Editor);
+var Editor = (__webpack_require__(82880).Editor);
 (function() {
     this.insertSnippet = function(content, options) {
         return exports.w.insertSnippet(this, content, options);
@@ -28476,7 +26737,7 @@ var Editor = (__webpack_require__(2880).Editor);
 
 /***/ }),
 
-/***/ 5673:
+/***/ 45673:
 /***/ ((module) => {
 
 module.exports = `.ace-tm .ace_gutter {
@@ -28642,7 +26903,7 @@ module.exports = `.ace-tm .ace_gutter {
 
 /***/ }),
 
-/***/ 3687:
+/***/ 93687:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -28650,7 +26911,7 @@ module.exports = `.ace-tm .ace_gutter {
 
 exports.isDark = false;
 exports.cssClass = "ace-tm";
-exports.cssText = __webpack_require__(5673);
+exports.cssText = __webpack_require__(45673);
 exports.$id = "ace/theme/textmate";
 
 var dom = __webpack_require__(6359);
@@ -28659,45 +26920,38 @@ dom.importCssString(exports.cssText, exports.cssClass, false);
 
 /***/ }),
 
-/***/ 4379:
+/***/ 39216:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 /**
- * 
- *
  * This class provides an essay way to treat the document as a stream of tokens, and provides methods to iterate over these tokens.
- * @class TokenIterator
  **/
+class TokenIterator {
+    /**
+     * Creates a new token iterator object. The inital token index is set to the provided row and column coordinates.
+     * @param {EditSession} session The session to associate with
+     * @param {Number} initialRow The row to start the tokenizing at
+     * @param {Number} initialColumn The column to start the tokenizing at
+     **/
+    constructor(session, initialRow, initialColumn) {
+        this.$session = session;
+        this.$row = initialRow;
+        this.$rowTokens = session.getTokens(initialRow);
 
-/**
- * Creates a new token iterator object. The inital token index is set to the provided row and column coordinates.
- * @param {EditSession} session The session to associate with
- * @param {Number} initialRow The row to start the tokenizing at
- * @param {Number} initialColumn The column to start the tokenizing at
- *
- * @constructor
- **/
-var TokenIterator = function(session, initialRow, initialColumn) {
-    this.$session = session;
-    this.$row = initialRow;
-    this.$rowTokens = session.getTokens(initialRow);
-
-    var token = session.getTokenAt(initialRow, initialColumn);
-    this.$tokenIndex = token ? token.index : -1;
-};
-
-(function() {
-   
+        var token = session.getTokenAt(initialRow, initialColumn);
+        this.$tokenIndex = token ? token.index : -1;
+    }
+    
     /**
      * Moves iterator position to the start of previous token.
      * @returns {Token|null}
      **/ 
-    this.stepBackward = function() {
+    stepBackward() {
         this.$tokenIndex -= 1;
         
         while (this.$tokenIndex < 0) {
@@ -28712,13 +26966,13 @@ var TokenIterator = function(session, initialRow, initialColumn) {
         }
             
         return this.$rowTokens[this.$tokenIndex];
-    };
+    }
 
     /**
      * Moves iterator position to the start of next token.
      * @returns {Token|null}
      **/   
-    this.stepForward = function() {
+    stepForward() {
         this.$tokenIndex += 1;
         var rowCount;
         while (this.$tokenIndex >= this.$rowTokens.length) {
@@ -28735,32 +26989,32 @@ var TokenIterator = function(session, initialRow, initialColumn) {
         }
             
         return this.$rowTokens[this.$tokenIndex];
-    };
+    }
  
     /**
      * 
      * Returns current token.
      * @returns {Token}
      **/      
-    this.getCurrentToken = function () {
+    getCurrentToken() {
         return this.$rowTokens[this.$tokenIndex];
-    };
+    }
 
     /**
      * 
      * Returns the current row.
      * @returns {Number}
      **/      
-    this.getCurrentTokenRow = function () {
+    getCurrentTokenRow() {
         return this.$row;
-    };
+    }
 
     /**
      * 
      * Returns the current column.
      * @returns {Number}
      **/     
-    this.getCurrentTokenColumn = function() {
+    getCurrentTokenColumn() {
         var rowTokens = this.$rowTokens;
         var tokenIndex = this.$tokenIndex;
         
@@ -28776,148 +27030,145 @@ var TokenIterator = function(session, initialRow, initialColumn) {
         }
         
         return column;  
-    };
+    }
 
     /**
      * Return the current token position.
      * @returns {Position}
      */
-    this.getCurrentTokenPosition = function() {
+    getCurrentTokenPosition() {
         return {row: this.$row, column: this.getCurrentTokenColumn()};
-    };
+    }
     
     /**
      * Return the current token range.
      * @returns {Range}
      */
-    this.getCurrentTokenRange = function() {
+    getCurrentTokenRange() {
         var token = this.$rowTokens[this.$tokenIndex];
         var column = this.getCurrentTokenColumn();
         return new Range(this.$row, column, this.$row, column + token.value.length);
-    };
+    }
     
-}).call(TokenIterator.prototype);
+}
 
 exports.N = TokenIterator;
 
 
 /***/ }),
 
-/***/ 760:
+/***/ 60760:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var config = __webpack_require__(3188);
+var config = __webpack_require__(13188);
 // tokenizing lines longer than this makes editor very slow
 var MAX_TOKEN_COUNT = 2000;
 /**
  * This class takes a set of highlighting rules, and creates a tokenizer out of them. For more information, see [the wiki on extending highlighters](https://github.com/ajaxorg/ace/wiki/Creating-or-Extending-an-Edit-Mode#wiki-extendingTheHighlighter).
- * @class Tokenizer
  **/
-
-/**
- * Constructs a new tokenizer based on the given rules and flags.
- * @param {Object} rules The highlighting rules
- *
- * @constructor
- **/
-var Tokenizer = function(rules) {
-    this.states = rules;
-
-    this.regExps = {};
-    this.matchMappings = {};
-    for (var key in this.states) {
-        var state = this.states[key];
-        var ruleRegExps = [];
-        var matchTotal = 0;
-        var mapping = this.matchMappings[key] = {defaultToken: "text"};
-        var flag = "g";
-
-        var splitterRurles = [];
-        for (var i = 0; i < state.length; i++) {
-            var rule = state[i];
-            if (rule.defaultToken)
-                mapping.defaultToken = rule.defaultToken;
-            if (rule.caseInsensitive && flag.indexOf("i") === -1)
-                flag += "i";
-            if (rule.unicode && flag.indexOf("u") === -1)
-                flag += "u";
-            if (rule.regex == null)
-                continue;
-
-            if (rule.regex instanceof RegExp)
-                rule.regex = rule.regex.toString().slice(1, -1);
-
-            // Count number of matching groups. 2 extra groups from the full match
-            // And the catch-all on the end (used to force a match);
-            var adjustedregex = rule.regex;
-            var matchcount = new RegExp("(?:(" + adjustedregex + ")|(.))").exec("a").length - 2;
-            if (Array.isArray(rule.token)) {
-                if (rule.token.length == 1 || matchcount == 1) {
-                    rule.token = rule.token[0];
-                } else if (matchcount - 1 != rule.token.length) {
-                    this.reportError("number of classes and regexp groups doesn't match", { 
-                        rule: rule,
-                        groupCount: matchcount - 1
-                    });
-                    rule.token = rule.token[0];
-                } else {
-                    rule.tokenArray = rule.token;
-                    rule.token = null;
-                    rule.onMatch = this.$arrayTokens;
-                }
-            } else if (typeof rule.token == "function" && !rule.onMatch) {
-                if (matchcount > 1)
-                    rule.onMatch = this.$applyToken;
-                else
-                    rule.onMatch = rule.token;
-            }
-
-            if (matchcount > 1) {
-                if (/\\\d/.test(rule.regex)) {
-                    // Replace any backreferences and offset appropriately.
-                    adjustedregex = rule.regex.replace(/\\([0-9]+)/g, function(match, digit) {
-                        return "\\" + (parseInt(digit, 10) + matchTotal + 1);
-                    });
-                } else {
-                    matchcount = 1;
-                    adjustedregex = this.removeCapturingGroups(rule.regex);
-                }
-                if (!rule.splitRegex && typeof rule.token != "string")
-                    splitterRurles.push(rule); // flag will be known only at the very end
-            }
-
-            mapping[matchTotal] = i;
-            matchTotal += matchcount;
-
-            ruleRegExps.push(adjustedregex);
-
-            // makes property access faster
-            if (!rule.onMatch)
-                rule.onMatch = null;
-        }
-        
-        if (!ruleRegExps.length) {
-            mapping[0] = 0;
-            ruleRegExps.push("$");
-        }
-        
-        splitterRurles.forEach(function(rule) {
-            rule.splitRegex = this.createSplitterRegexp(rule.regex, flag);
-        }, this);
-
-        this.regExps[key] = new RegExp("(" + ruleRegExps.join(")|(") + ")|($)", flag);
-    }
-};
-
-(function() {
-    this.$setMaxTokenCount = function(m) {
-        MAX_TOKEN_COUNT = m | 0;
-    };
+class Tokenizer {
     
-    this.$applyToken = function(str) {
+    /**
+     * Constructs a new tokenizer based on the given rules and flags.
+     * @param {Object} rules The highlighting rules
+     **/
+    constructor(rules) {
+        this.states = rules;
+
+        this.regExps = {};
+        this.matchMappings = {};
+        for (var key in this.states) {
+            var state = this.states[key];
+            var ruleRegExps = [];
+            var matchTotal = 0;
+            var mapping = this.matchMappings[key] = {defaultToken: "text"};
+            var flag = "g";
+
+            var splitterRurles = [];
+            for (var i = 0; i < state.length; i++) {
+                var rule = state[i];
+                if (rule.defaultToken)
+                    mapping.defaultToken = rule.defaultToken;
+                if (rule.caseInsensitive && flag.indexOf("i") === -1)
+                    flag += "i";
+                if (rule.unicode && flag.indexOf("u") === -1)
+                    flag += "u";
+                if (rule.regex == null)
+                    continue;
+
+                if (rule.regex instanceof RegExp)
+                    rule.regex = rule.regex.toString().slice(1, -1);
+
+                // Count number of matching groups. 2 extra groups from the full match
+                // And the catch-all on the end (used to force a match);
+                var adjustedregex = rule.regex;
+                var matchcount = new RegExp("(?:(" + adjustedregex + ")|(.))").exec("a").length - 2;
+                if (Array.isArray(rule.token)) {
+                    if (rule.token.length == 1 || matchcount == 1) {
+                        rule.token = rule.token[0];
+                    } else if (matchcount - 1 != rule.token.length) {
+                        this.reportError("number of classes and regexp groups doesn't match", {
+                            rule: rule,
+                            groupCount: matchcount - 1
+                        });
+                        rule.token = rule.token[0];
+                    } else {
+                        rule.tokenArray = rule.token;
+                        rule.token = null;
+                        rule.onMatch = this.$arrayTokens;
+                    }
+                } else if (typeof rule.token == "function" && !rule.onMatch) {
+                    if (matchcount > 1)
+                        rule.onMatch = this.$applyToken;
+                    else
+                        rule.onMatch = rule.token;
+                }
+
+                if (matchcount > 1) {
+                    if (/\\\d/.test(rule.regex)) {
+                        // Replace any backreferences and offset appropriately.
+                        adjustedregex = rule.regex.replace(/\\([0-9]+)/g, function(match, digit) {
+                            return "\\" + (parseInt(digit, 10) + matchTotal + 1);
+                        });
+                    } else {
+                        matchcount = 1;
+                        adjustedregex = this.removeCapturingGroups(rule.regex);
+                    }
+                    if (!rule.splitRegex && typeof rule.token != "string")
+                        splitterRurles.push(rule); // flag will be known only at the very end
+                }
+
+                mapping[matchTotal] = i;
+                matchTotal += matchcount;
+
+                ruleRegExps.push(adjustedregex);
+
+                // makes property access faster
+                if (!rule.onMatch)
+                    rule.onMatch = null;
+            }
+
+            if (!ruleRegExps.length) {
+                mapping[0] = 0;
+                ruleRegExps.push("$");
+            }
+
+            splitterRurles.forEach(function(rule) {
+                rule.splitRegex = this.createSplitterRegexp(rule.regex, flag);
+            }, this);
+
+            this.regExps[key] = new RegExp("(" + ruleRegExps.join(")|(") + ")|($)", flag);
+        }
+    }
+    
+    $setMaxTokenCount(m) {
+        MAX_TOKEN_COUNT = m | 0;
+    }
+    
+    $applyToken(str) {
         var values = this.splitRegex.exec(str).slice(1);
         var types = this.token.apply(this, values);
 
@@ -28934,9 +27185,9 @@ var Tokenizer = function(rules) {
                 };
         }
         return tokens;
-    };
+    }
 
-    this.$arrayTokens = function(str) {
+    $arrayTokens(str) {
         if (!str)
             return [];
         var values = this.splitRegex.exec(str);
@@ -28952,17 +27203,17 @@ var Tokenizer = function(rules) {
                 };
         }
         return tokens;
-    };
+    }
 
-    this.removeCapturingGroups = function(src) {
+    removeCapturingGroups(src) {
         var r = src.replace(
             /\\.|\[(?:\\.|[^\\\]])*|\(\?[:=!<]|(\()/g,
             function(x, y) {return y ? "(?:" : x;}
         );
         return r;
-    };
+    }
 
-    this.createSplitterRegexp = function(src, flag) {
+    createSplitterRegexp(src, flag) {
         if (src.indexOf("(?=") != -1) {
             var stack = 0;
             var inChClass = false;
@@ -28999,13 +27250,13 @@ var Tokenizer = function(rules) {
         if (src.charAt(src.length - 1) != "$") src += "$";
         
         return new RegExp(src, (flag||"").replace("g", ""));
-    };
+    }
 
     /**
      * Returns an object containing two properties: `tokens`, which contains all the tokens; and `state`, the current state.
      * @returns {Object}
      **/
-    this.getLineTokens = function(line, startState) {
+    getLineTokens(line, startState) {
         if (startState && typeof startState != "string") {
             var stack = startState.slice(0);
             startState = stack[0];
@@ -29139,11 +27390,10 @@ var Tokenizer = function(rules) {
             tokens : tokens,
             state : stack.length ? stack : currentState
         };
-    };
-    
-    this.reportError = config.reportError;
-    
-}).call(Tokenizer.prototype);
+    }
+}
+
+Tokenizer.prototype.reportError = config.reportError;
 
 exports.d = Tokenizer;
 
@@ -29156,78 +27406,71 @@ exports.d = Tokenizer;
 "use strict";
 
 
-var oop = __webpack_require__(9359);
 var dom = __webpack_require__(6359);
 
 var CLASSNAME = "ace_tooltip";
 
-/**
- * @class Tooltip
- **/
-
-/**
- * @param {Element} parentNode
- *
- * @constructor
- **/
-function Tooltip (parentNode) {
-    this.isOpen = false;
-    this.$element = null;
-    this.$parentNode = parentNode;
-}
-
-(function() {
-    this.$init = function() {
+class Tooltip {
+    /**
+     * @param {Element} parentNode
+     **/
+    constructor(parentNode) {
+        this.isOpen = false;
+        this.$element = null;
+        this.$parentNode = parentNode;
+    }
+    
+    $init() {
         this.$element = dom.createElement("div");
         this.$element.className = CLASSNAME;
         this.$element.style.display = "none";
         this.$parentNode.appendChild(this.$element);
         return this.$element;
-    };
+    }
 
     /**
      * @returns {Element}
      **/
-    this.getElement = function() {
+    getElement() {
         return this.$element || this.$init();
-    };
+    }
 
     /**
      * @param {String} text
      **/
-    this.setText = function(text) {
+    setText(text) {
         this.getElement().textContent = text;
-    };
+    }
 
     /**
      * @param {String} html
      **/
-    this.setHtml = function(html) {
+    setHtml(html) {
         this.getElement().innerHTML = html;
-    };
+    }
 
     /**
      * @param {Number} x
      * @param {Number} y
      **/
-    this.setPosition = function(x, y) {
+    setPosition(x, y) {
         this.getElement().style.left = x + "px";
         this.getElement().style.top = y + "px";
-    };
+    }
 
     /**
      * @param {String} className
      **/
-    this.setClassName = function(className) {
+    setClassName(className) {
         dom.addCssClass(this.getElement(), className);
-    };
+    }
 
     /**
      * @param {String} text
      * @param {Number} x
      * @param {Number} y
      **/
-    this.show = function(text, x, y) {
+    show(text, x, y) {
         if (text != null)
             this.setText(text);
         if (x != null && y != null)
@@ -29236,45 +27479,45 @@ function Tooltip (parentNode) {
             this.getElement().style.display = "block";
             this.isOpen = true;
         }
-    };
+    }
 
-    this.hide = function() {
+    hide() {
         if (this.isOpen) {
             this.getElement().style.display = "none";
             this.getElement().className = CLASSNAME;
             this.isOpen = false;
         }
-    };
+    }
 
     /**
      * @returns {Number}
      **/
-    this.getHeight = function() {
+    getHeight() {
         return this.getElement().offsetHeight;
-    };
+    }
 
     /**
      * @returns {Number}
      **/
-    this.getWidth = function() {
+    getWidth() {
         return this.getElement().offsetWidth;
-    };
+    }
     
-    this.destroy = function() {
+    destroy() {
         this.isOpen = false;
         if (this.$element && this.$element.parentNode) {
             this.$element.parentNode.removeChild(this.$element);
         }
-    };
+    }
 
-}).call(Tooltip.prototype);
+}
 
 exports.u = Tooltip;
 
 
 /***/ }),
 
-/***/ 718:
+/***/ 40718:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -29282,26 +27525,22 @@ exports.u = Tooltip;
 
 /**
  * This object maintains the undo stack for an [[EditSession `EditSession`]].
- * @class UndoManager
  **/
-
-/**
- * Resets the current undo state and creates a new `UndoManager`.
- * 
- * @constructor
- **/
-var UndoManager = function() {
-    this.$maxRev = 0;
-    this.$fromUndo = false;
-    this.$undoDepth = Infinity;
-    this.reset();
-};
-
-(function() {
+class UndoManager {
     
-    this.addSession = function(session) {
+    /**
+     * Resets the current undo state and creates a new `UndoManager`.
+     **/
+    constructor() {
+        this.$maxRev = 0;
+        this.$fromUndo = false;
+        this.$undoDepth = Infinity;
+        this.reset();
+    }
+    
+    addSession(session) {
         this.$session = session;
-    };
+    }
     /**
      * Provides a means for implementing your own undo manager. `options` has one property, `args`, an [[Array `Array`]], with two elements:
      *
@@ -29311,7 +27550,7 @@ var UndoManager = function() {
      * @param {Object} options Contains additional properties
      *
      **/
-    this.add = function(delta, allowMerge, session) {
+    add(delta, allowMerge, session) {
         if (this.$fromUndo) return;
         if (delta == this.$lastDelta) return;
         if (!this.$keepRedoStack) this.$redoStack.length = 0;
@@ -29327,21 +27566,21 @@ var UndoManager = function() {
         if (delta.action == "remove" || delta.action == "insert")
             this.$lastDelta = delta;
         this.lastDeltas.push(delta);
-    };
+    }
     
-    this.addSelection = function(selection, rev) {
+    addSelection(selection, rev) {
         this.selections.push({
             value: selection,
             rev: rev || this.$rev
         });
-    };
+    }
     
-    this.startNewGroup = function() {
+    startNewGroup() {
         this.lastDeltas = null;
         return this.$rev;
-    };
+    }
     
-    this.markIgnored = function(from, to) {
+    markIgnored(from, to) {
         if (to == null) to = this.$rev + 1;
         var stack = this.$undoStack;
         for (var i = stack.length; i--;) {
@@ -29352,9 +27591,9 @@ var UndoManager = function() {
                 delta.ignore = true;
         }
         this.lastDeltas = null;
-    };
+    }
     
-    this.getSelection = function(rev, after) {
+    getSelection(rev, after) {
         var stack = this.selections;
         for (var i = stack.length; i--;) {
             var selection = stack[i];
@@ -29364,13 +27603,13 @@ var UndoManager = function() {
                 return selection;
             }
         }
-    };
+    }
     
-    this.getRevision = function() {
+    getRevision() {
         return this.$rev;
-    };
+    }
     
-    this.getDeltas = function(from, to) {
+    getDeltas(from, to) {
         if (to == null) to = this.$rev + 1;
         var stack = this.$undoStack;
         var end = null, start = 0;
@@ -29384,25 +27623,26 @@ var UndoManager = function() {
             }
         }
         return stack.slice(start, end);
-    };
+    }
     
-    this.getChangedRanges = function(from, to) {
+    getChangedRanges(from, to) {
         if (to == null) to = this.$rev + 1;
         
-    };
+    }
     
-    this.getChangedLines = function(from, to) {
+    getChangedLines(from, to) {
         if (to == null) to = this.$rev + 1;
         
-    };
+    }
 
     /**
      * [Perform an undo operation on the document, reverting the last change.]{: #UndoManager.undo}
+     * @param {EditSession} session
      * @param {Boolean} dontSelect {:dontSelect}
      *
      * @returns {Range} The range of the undo.
      **/
-    this.undo = function(session, dontSelect) {
+    undo(session, dontSelect) {
         this.lastDeltas = null;
         var stack = this.$undoStack;
         
@@ -29428,14 +27668,14 @@ var UndoManager = function() {
         this.$fromUndo = false;
 
         return undoSelectionRange;
-    };
+    }
     
     /**
      * [Perform a redo operation on the document, reimplementing the last change.]{: #UndoManager.redo}
      * @param {Boolean} dontSelect {:dontSelect}
      *
      **/
-    this.redo = function(session, dontSelect) {
+    redo(session, dontSelect) {
         this.lastDeltas = null;
         
         if (!session)
@@ -29461,20 +27701,20 @@ var UndoManager = function() {
         this.$fromUndo = false;
         
         return redoSelectionRange;
-    };
+    }
     
-    this.$syncRev = function() {
+    $syncRev() {
         var stack = this.$undoStack;
         var nextDelta = stack[stack.length - 1];
         var id = nextDelta && nextDelta[0].id || 0;
         this.$redoStackBaseRev = id;
         this.$rev = id;
-    };
+    }
 
     /**
      * Destroys the stack of undo and redo redo operations.
      **/
-    this.reset = function() {
+    reset() {
         this.lastDeltas = null;
         this.$lastDelta = null;
         this.$undoStack = [];
@@ -29483,60 +27723,61 @@ var UndoManager = function() {
         this.mark = 0;
         this.$redoStackBaseRev = this.$rev;
         this.selections = [];
-    };
+    }
 
     
     /**
      * Returns `true` if there are undo operations left to perform.
      * @returns {Boolean}
      **/
-    this.canUndo = function() {
+    canUndo() {
         return this.$undoStack.length > 0;
-    };
+    }
 
     /**
      * Returns `true` if there are redo operations left to perform.
      * @returns {Boolean}
      **/
-    this.canRedo = function() {
+    canRedo() {
         return this.$redoStack.length > 0;
-    };
+    }
     
     /**
      * Marks the current status clean
      **/
-    this.bookmark = function(rev) {
+    bookmark(rev) {
         if (rev == undefined)
             rev = this.$rev;
         this.mark = rev;
-    };
+    }
 
     /**
      * Returns if the current status is clean
      * @returns {Boolean}
      **/
-    this.isAtBookmark = function() {
+    isAtBookmark() {
         return this.$rev === this.mark;
-    };
+    }
     
-    this.toJSON = function() {
+    toJSON() {
         
-    };
+    }
     
-    this.fromJSON = function() {
+    fromJSON() {
         
-    };
+    }
+
     
-    this.hasUndo = this.canUndo;
-    this.hasRedo = this.canRedo;
-    this.isClean = this.isAtBookmark;
-    this.markClean = this.bookmark;
-    
-    this.$prettyPrint = function(delta) {
+    $prettyPrint(delta) {
         if (delta) return stringifyDelta(delta);
         return stringifyDelta(this.$undoStack) + "\n---\n" + stringifyDelta(this.$redoStack);
-    };
-}).call(UndoManager.prototype);
+    }
+}
+
+UndoManager.prototype.hasUndo = UndoManager.prototype.canUndo;
+UndoManager.prototype.hasRedo = UndoManager.prototype.canRedo;
+UndoManager.prototype.isClean = UndoManager.prototype.isAtBookmark;
+UndoManager.prototype.markClean = UndoManager.prototype.bookmark;
 
 function rearrangeUndoStack(stack, pos) {
     for (var i = pos; i--; ) {
@@ -29553,7 +27794,7 @@ function rearrangeUndoStack(stack, pos) {
     }
 }
 
-var Range = (__webpack_require__(9082)/* .Range */ .e);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
 var cmp = Range.comparePoints;
 var comparePoints = Range.comparePoints;
 
@@ -29596,8 +27837,6 @@ function $updateMarkers(delta) {
         }
     }
 }
-
-
 
 function clonePos(pos) {
     return {row: pos.row,column: pos.column};
@@ -29845,13 +28084,12 @@ function rebaseRedoStack(redoStack, deltaSets) {
         }
     }
 }
-
 exports.H = UndoManager;
 
 
 /***/ }),
 
-/***/ 9740:
+/***/ 99740:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -29873,186 +28111,170 @@ exports.wordChars = String.fromCharCode.apply(null, str);
 
 /***/ }),
 
-/***/ 3049:
+/***/ 63049:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 
-var oop = __webpack_require__(9359);
+var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
-var config = __webpack_require__(3188);
-var GutterLayer = (__webpack_require__(1479)/* .Gutter */ .T);
-var MarkerLayer = (__webpack_require__(4800)/* .Marker */ .J);
-var TextLayer = (__webpack_require__(3572)/* .Text */ .x);
-var CursorLayer = (__webpack_require__(1175)/* .Cursor */ .C);
-var HScrollBar = (__webpack_require__(1338)/* .HScrollBar */ .ii);
-var VScrollBar = (__webpack_require__(1338)/* .VScrollBar */ .oX);
-var HScrollBarCustom = (__webpack_require__(6810)/* .HScrollBar */ .ii);
-var VScrollBarCustom = (__webpack_require__(6810)/* .VScrollBar */ .oX);
-var RenderLoop = (__webpack_require__(3081)/* .RenderLoop */ .d);
-var FontMetrics = (__webpack_require__(9506)/* .FontMetrics */ .c);
-var EventEmitter = (__webpack_require__(3056).EventEmitter);
-var editorCss = __webpack_require__(610);
-var Decorator = (__webpack_require__(2113)/* .Decorator */ .S);
+var lang = __webpack_require__(20124);
+var config = __webpack_require__(13188);
+var GutterLayer = (__webpack_require__(81479)/* .Gutter */ .T);
+var MarkerLayer = (__webpack_require__(34800)/* .Marker */ .J);
+var TextLayer = (__webpack_require__(73572)/* .Text */ .x);
+var CursorLayer = (__webpack_require__(21175)/* .Cursor */ .C);
+var HScrollBar = (__webpack_require__(61338)/* .HScrollBar */ .ii);
+var VScrollBar = (__webpack_require__(61338)/* .VScrollBar */ .oX);
+var HScrollBarCustom = (__webpack_require__(66810)/* .HScrollBar */ .ii);
+var VScrollBarCustom = (__webpack_require__(66810)/* .VScrollBar */ .oX);
+var RenderLoop = (__webpack_require__(93081)/* .RenderLoop */ .d);
+var FontMetrics = (__webpack_require__(89506)/* .FontMetrics */ .c);
+var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var editorCss = __webpack_require__(20610);
+var Decorator = (__webpack_require__(22113)/* .Decorator */ .S);
 
-var useragent = __webpack_require__(618);
-var HIDE_TEXTAREA = useragent.isIE;
+var useragent = __webpack_require__(50618);
 
 dom.importCssString(editorCss, "ace_editor.css", false);
 
 /**
  * The class that is responsible for drawing everything you see on the screen!
  * @related editor.renderer 
- * @class VirtualRenderer
  **/
+class VirtualRenderer {
+    /**
+     * Constructs a new `VirtualRenderer` within the `container` specified, applying the given `theme`.
+     * @param {Element} container The root element of the editor
+     * @param {String} [theme] The starting theme
+     **/
+    constructor(container, theme) {
+        var _self = this;
 
-/**
- * Constructs a new `VirtualRenderer` within the `container` specified, applying the given `theme`.
- * @param {Element} container The root element of the editor
- * @param {String} theme The starting theme
- *
- * @constructor
- **/
+        this.container = container || dom.createElement("div");
 
-var VirtualRenderer = function(container, theme) {
-    var _self = this;
+        dom.addCssClass(this.container, "ace_editor");
+        if (dom.HI_DPI) dom.addCssClass(this.container, "ace_hidpi");
 
-    this.container = container || dom.createElement("div");
+        this.setTheme(theme);
+        if (config.get("useStrictCSP") == null)
+            config.set("useStrictCSP", false);
 
-    dom.addCssClass(this.container, "ace_editor");
-    if (dom.HI_DPI) dom.addCssClass(this.container, "ace_hidpi");
+        this.$gutter = dom.createElement("div");
+        this.$gutter.className = "ace_gutter";
+        this.container.appendChild(this.$gutter);
+        this.$gutter.setAttribute("aria-hidden", true);
 
-    this.setTheme(theme);
-    if (config.get("useStrictCSP") == null) 
-        config.set("useStrictCSP", false);
+        this.scroller = dom.createElement("div");
+        this.scroller.className = "ace_scroller";
 
-    this.$gutter = dom.createElement("div");
-    this.$gutter.className = "ace_gutter";
-    this.container.appendChild(this.$gutter);
-    this.$gutter.setAttribute("aria-hidden", true);
+        this.container.appendChild(this.scroller);
 
-    this.scroller = dom.createElement("div");
-    this.scroller.className = "ace_scroller";
-    
-    this.container.appendChild(this.scroller);
+        this.content = dom.createElement("div");
+        this.content.className = "ace_content";
+        this.scroller.appendChild(this.content);
 
-    this.content = dom.createElement("div");
-    this.content.className = "ace_content";
-    this.scroller.appendChild(this.content);
+        this.$gutterLayer = new GutterLayer(this.$gutter);
+        this.$gutterLayer.on("changeGutterWidth", this.onGutterResize.bind(this));
 
-    this.$gutterLayer = new GutterLayer(this.$gutter);
-    this.$gutterLayer.on("changeGutterWidth", this.onGutterResize.bind(this));
+        this.$markerBack = new MarkerLayer(this.content);
 
-    this.$markerBack = new MarkerLayer(this.content);
+        var textLayer = this.$textLayer = new TextLayer(this.content);
+        this.canvas = textLayer.element;
 
-    var textLayer = this.$textLayer = new TextLayer(this.content);
-    this.canvas = textLayer.element;
+        this.$markerFront = new MarkerLayer(this.content);
 
-    this.$markerFront = new MarkerLayer(this.content);
+        this.$cursorLayer = new CursorLayer(this.content);
 
-    this.$cursorLayer = new CursorLayer(this.content);
+        // Indicates whether the horizontal scrollbar is visible
+        this.$horizScroll = false;
+        this.$vScroll = false;
 
-    // Indicates whether the horizontal scrollbar is visible
-    this.$horizScroll = false;
-    this.$vScroll = false;
+        this.scrollBar =
+            this.scrollBarV = new VScrollBar(this.container, this);
+        this.scrollBarH = new HScrollBar(this.container, this);
+        this.scrollBarV.on("scroll", function(e) {
+            if (!_self.$scrollAnimation)
+                _self.session.setScrollTop(e.data - _self.scrollMargin.top);
+        });
+        this.scrollBarH.on("scroll", function(e) {
+            if (!_self.$scrollAnimation)
+                _self.session.setScrollLeft(e.data - _self.scrollMargin.left);
+        });
 
-    this.scrollBar = 
-    this.scrollBarV = new VScrollBar(this.container, this);
-    this.scrollBarH = new HScrollBar(this.container, this);
-    this.scrollBarV.on("scroll", function(e) {
-        if (!_self.$scrollAnimation)
-            _self.session.setScrollTop(e.data - _self.scrollMargin.top);
-    });
-    this.scrollBarH.on("scroll", function(e) {
-        if (!_self.$scrollAnimation)
-            _self.session.setScrollLeft(e.data - _self.scrollMargin.left);
-    });
+        this.scrollTop = 0;
+        this.scrollLeft = 0;
 
-    this.scrollTop = 0;
-    this.scrollLeft = 0;
+        this.cursorPos = {
+            row : 0,
+            column : 0
+        };
 
-    this.cursorPos = {
-        row : 0,
-        column : 0
-    };
+        this.$fontMetrics = new FontMetrics(this.container);
+        this.$textLayer.$setFontMetrics(this.$fontMetrics);
+        this.$textLayer.on("changeCharacterSize", function(e) {
+            _self.updateCharacterSize();
+            _self.onResize(true, _self.gutterWidth, _self.$size.width, _self.$size.height);
+            _self._signal("changeCharacterSize", e);
+        });
 
-    this.$fontMetrics = new FontMetrics(this.container, this.$textLayer.MAX_CHUNK_LENGTH);
-    this.$textLayer.$setFontMetrics(this.$fontMetrics);
-    this.$textLayer.on("changeCharacterSize", function(e) {
-        _self.updateCharacterSize();
-        _self.onResize(true, _self.gutterWidth, _self.$size.width, _self.$size.height);
-        _self._signal("changeCharacterSize", e);
-    });
+        this.$size = {
+            width: 0,
+            height: 0,
+            scrollerHeight: 0,
+            scrollerWidth: 0,
+            $dirty: true
+        };
 
-    this.$size = {
-        width: 0,
-        height: 0,
-        scrollerHeight: 0,
-        scrollerWidth: 0,
-        $dirty: true
-    };
+        this.layerConfig = {
+            width : 1,
+            padding : 0,
+            firstRow : 0,
+            firstRowScreen: 0,
+            lastRow : 0,
+            lineHeight : 0,
+            characterWidth : 0,
+            minHeight : 1,
+            maxHeight : 1,
+            offset : 0,
+            height : 1,
+            gutterOffset: 1
+        };
 
-    this.layerConfig = {
-        width : 1,
-        padding : 0,
-        firstRow : 0,
-        firstRowScreen: 0,
-        lastRow : 0,
-        lineHeight : 0,
-        characterWidth : 0,
-        minHeight : 1,
-        maxHeight : 1,
-        offset : 0,
-        height : 1,
-        gutterOffset: 1
-    };
-    
-    this.scrollMargin = {
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        v: 0,
-        h: 0
-    };
-    
-    this.margin = {
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        v: 0,
-        h: 0
-    };
-    
-    this.$keepTextAreaAtCursor = !useragent.isIOS;
+        this.scrollMargin = {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            v: 0,
+            h: 0
+        };
 
-    this.$loop = new RenderLoop(
-        this.$renderChanges.bind(this),
-        this.container.ownerDocument.defaultView
-    );
-    this.$loop.schedule(this.CHANGE_FULL);
+        this.margin = {
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            v: 0,
+            h: 0
+        };
 
-    this.updateCharacterSize();
-    this.setPadding(4);
-    config.resetOptions(this);
-    config._signal("renderer", this);
-};
+        this.$keepTextAreaAtCursor = !useragent.isIOS;
 
-(function() {
+        this.$loop = new RenderLoop(
+            this.$renderChanges.bind(this),
+            this.container.ownerDocument.defaultView
+        );
+        this.$loop.schedule(this.CHANGE_FULL);
 
-    this.CHANGE_CURSOR = 1;
-    this.CHANGE_MARKER = 2;
-    this.CHANGE_GUTTER = 4;
-    this.CHANGE_SCROLL = 8;
-    this.CHANGE_LINES = 16;
-    this.CHANGE_TEXT = 32;
-    this.CHANGE_SIZE = 64;
-    this.CHANGE_MARKER_BACK = 128;
-    this.CHANGE_MARKER_FRONT = 256;
-    this.CHANGE_FULL = 512;
-    this.CHANGE_H_SCROLL = 1024;
+        this.updateCharacterSize();
+        this.setPadding(4);
+        this.$addResizeObserver();
+        config.resetOptions(this);
+        config._signal("renderer", this);
+    }
+
 
     // this.$logChanges = function(changes) {
     //     var a = ""
@@ -30070,9 +28292,7 @@ var VirtualRenderer = function(container, theme) {
     //     console.log(a.trim())
     // };
 
-    oop.implement(this, EventEmitter);
-
-    this.updateCharacterSize = function() {
+    updateCharacterSize() {
         if (this.$textLayer.allowBoldFonts != this.$allowBoldFonts) {
             this.$allowBoldFonts = this.$textLayer.allowBoldFonts;
             this.setStyle("ace_nobold", !this.$allowBoldFonts);
@@ -30085,13 +28305,13 @@ var VirtualRenderer = function(container, theme) {
         this.$updatePrintMargin();
         // set explicit line height to avoid normal resolving to different values based on text
         dom.setStyle(this.scroller.style, "line-height", this.lineHeight + "px");
-    };
+    }
 
     /**
      *
      * Associates the renderer with an [[EditSession `EditSession`]].
      **/
-    this.setSession = function(session) {
+    setSession(session) {
         if (this.session)
             this.session.doc.off("changeNewLineMode", this.onChangeNewLineMode);
             
@@ -30114,7 +28334,7 @@ var VirtualRenderer = function(container, theme) {
         this.onChangeNewLineMode = this.onChangeNewLineMode.bind(this);
         this.onChangeNewLineMode();
         this.session.doc.on("changeNewLineMode", this.onChangeNewLineMode);
-    };
+    }
 
     /**
      * Triggers a partial update of the text, from the range given by the two parameters.
@@ -30122,7 +28342,7 @@ var VirtualRenderer = function(container, theme) {
      * @param {Number} lastRow The last row to update
      *
      **/
-    this.updateLines = function(firstRow, lastRow, force) {
+    updateLines(firstRow, lastRow, force) {
         if (lastRow === undefined)
             lastRow = Infinity;
 
@@ -30153,52 +28373,50 @@ var VirtualRenderer = function(container, theme) {
         if (this.$changedLines.firstRow > this.layerConfig.lastRow)
             return;
         this.$loop.schedule(this.CHANGE_LINES);
-    };
+    }
 
-    this.onChangeNewLineMode = function() {
+    onChangeNewLineMode() {
         this.$loop.schedule(this.CHANGE_TEXT);
         this.$textLayer.$updateEolChar();
         this.session.$bidiHandler.setEolChar(this.$textLayer.EOL_CHAR);
-    };
+    }
     
-    this.onChangeTabSize = function() {
+    onChangeTabSize() {
         this.$loop.schedule(this.CHANGE_TEXT | this.CHANGE_MARKER);
         this.$textLayer.onChangeTabSize();
-    };
+    }
 
     /**
      * Triggers a full update of the text, for all the rows.
      **/
-    this.updateText = function() {
+    updateText() {
         this.$loop.schedule(this.CHANGE_TEXT);
-    };
+    }
 
     /**
      * Triggers a full update of all the layers, for all the rows.
      * @param {Boolean} force If `true`, forces the changes through
-     *
      **/
-    this.updateFull = function(force) {
+    updateFull(force) {
         if (force)
             this.$renderChanges(this.CHANGE_FULL, true);
         else
             this.$loop.schedule(this.CHANGE_FULL);
-    };
+    }
 
     /**
      * Updates the font size.
      **/
-    this.updateFontSize = function() {
+    updateFontSize() {
         this.$textLayer.checkForSizeChanges();
-    };
+    }
 
-    this.$changes = 0;
-    this.$updateSizeAsync = function() {
+    $updateSizeAsync() {
         if (this.$loop.pending)
             this.$size.$dirty = true;
         else
             this.onResize();
-    };
+    }
     /**
      * [Triggers a resize of the editor.]{: #VirtualRenderer.onResize}
      * @param {Boolean} force If `true`, recomputes the size, even if the height and width haven't changed
@@ -30207,7 +28425,7 @@ var VirtualRenderer = function(container, theme) {
      * @param {Number} height The hiehgt of the editor, in pixels
      *
      **/
-    this.onResize = function(force, gutterWidth, width, height) {
+    onResize(force, gutterWidth, width, height) {
         if (this.resizing > 2)
             return;
         else if (this.resizing > 0)
@@ -30223,6 +28441,7 @@ var VirtualRenderer = function(container, theme) {
             width = el.clientWidth || el.scrollWidth;
         var changes = this.$updateCachedSize(force, gutterWidth, width, height);
 
+        if (this.$resizeTimer) this.$resizeTimer.cancel();
         
         if (!this.$size.scrollerHeight || (!width && !height))
             return this.resizing = 0;
@@ -30243,9 +28462,9 @@ var VirtualRenderer = function(container, theme) {
         if (this.$customScrollbar) {
             this.$updateCustomScrollbar(true);
         }
-    };
+    }
     
-    this.$updateCachedSize = function(force, gutterWidth, width, height) {
+    $updateCachedSize(force, gutterWidth, width, height) {
         height -= (this.$extraHeight || 0);
         var changes = 0;
         var size = this.$size;
@@ -30301,9 +28520,9 @@ var VirtualRenderer = function(container, theme) {
             this._signal("resize", oldSize);
 
         return changes;
-    };
+    }
 
-    this.onGutterResize = function(width) {
+    onGutterResize(width) {
         var gutterWidth = this.$showGutter ? width : 0;
         if (gutterWidth != this.gutterWidth)
             this.$changes |= this.$updateCachedSize(true, gutterWidth, this.$size.width, this.$size.height);
@@ -30315,134 +28534,134 @@ var VirtualRenderer = function(container, theme) {
         } else {
             this.$computeLayerConfig();
         }
-    };
+    }
 
     /**
      * Adjusts the wrap limit, which is the number of characters that can fit within the width of the edit area on screen.
      **/
-    this.adjustWrapLimit = function() {
+    adjustWrapLimit() {
         var availableWidth = this.$size.scrollerWidth - this.$padding * 2;
         var limit = Math.floor(availableWidth / this.characterWidth);
         return this.session.adjustWrapLimit(limit, this.$showPrintMargin && this.$printMarginColumn);
-    };
+    }
 
     /**
      * Identifies whether you want to have an animated scroll or not.
      * @param {Boolean} shouldAnimate Set to `true` to show animated scrolls
      *
      **/
-    this.setAnimatedScroll = function(shouldAnimate){
+    setAnimatedScroll(shouldAnimate){
         this.setOption("animatedScroll", shouldAnimate);
-    };
+    }
 
     /**
      * Returns whether an animated scroll happens or not.
      * @returns {Boolean}
      **/
-    this.getAnimatedScroll = function() {
+    getAnimatedScroll() {
         return this.$animatedScroll;
-    };
+    }
 
     /**
      * Identifies whether you want to show invisible characters or not.
      * @param {Boolean} showInvisibles Set to `true` to show invisibles
      *
      **/
-    this.setShowInvisibles = function(showInvisibles) {
+    setShowInvisibles(showInvisibles) {
         this.setOption("showInvisibles", showInvisibles);
         this.session.$bidiHandler.setShowInvisibles(showInvisibles);
-    };
+    }
 
     /**
      * Returns whether invisible characters are being shown or not.
      * @returns {Boolean}
      **/
-    this.getShowInvisibles = function() {
+    getShowInvisibles() {
         return this.getOption("showInvisibles");
-    };
-    this.getDisplayIndentGuides = function() {
+    }
+    getDisplayIndentGuide() {
         return this.getOption("displayIndentGuides");
-    };
+    }
 
-    this.setDisplayIndentGuides = function(display) {
+    setDisplayIndentGuides(display) {
         this.setOption("displayIndentGuides", display);
-    };
+    }
 
-    this.getHighlightIndentGuides = function() {
+    getHighlightIndentGuides() {
         return this.getOption("highlightIndentGuides");
-    };
+    }
 
-    this.setHighlightIndentGuides = function(highlight) {
+    setHighlightIndentGuides(highlight) {
         this.setOption("highlightIndentGuides", highlight);
-    };
+    }
 
     /**
      * Identifies whether you want to show the print margin or not.
      * @param {Boolean} showPrintMargin Set to `true` to show the print margin
      *
      **/
-    this.setShowPrintMargin = function(showPrintMargin) {
+    setShowPrintMargin(showPrintMargin) {
         this.setOption("showPrintMargin", showPrintMargin);
-    };
+    }
 
     /**
      * Returns whether the print margin is being shown or not.
      * @returns {Boolean}
      **/
-    this.getShowPrintMargin = function() {
+    getShowPrintMargin() {
         return this.getOption("showPrintMargin");
-    };
+    }
     /**
      * Identifies whether you want to show the print margin column or not.
      * @param {Boolean} showPrintMargin Set to `true` to show the print margin column
      *
      **/
-    this.setPrintMarginColumn = function(showPrintMargin) {
+    setPrintMarginColumn(showPrintMargin) {
         this.setOption("printMarginColumn", showPrintMargin);
-    };
+    }
 
     /**
      * Returns whether the print margin column is being shown or not.
      * @returns {Boolean}
      **/
-    this.getPrintMarginColumn = function() {
+    getPrintMarginColumn() {
         return this.getOption("printMarginColumn");
-    };
+    }
 
     /**
      * Returns `true` if the gutter is being shown.
      * @returns {Boolean}
      **/
-    this.getShowGutter = function(){
+    getShowGutter(){
         return this.getOption("showGutter");
-    };
+    }
 
     /**
      * Identifies whether you want to show the gutter or not.
      * @param {Boolean} show Set to `true` to show the gutter
      *
      **/
-    this.setShowGutter = function(show){
+    setShowGutter(show){
         return this.setOption("showGutter", show);
-    };
+    }
 
-    this.getFadeFoldWidgets = function(){
+    getFadeFoldWidgets(){
         return this.getOption("fadeFoldWidgets");
-    };
+    }
 
-    this.setFadeFoldWidgets = function(show) {
+    setFadeFoldWidgets(show) {
         this.setOption("fadeFoldWidgets", show);
-    };
+    }
 
-    this.setHighlightGutterLine = function(shouldHighlight) {
+    setHighlightGutterLine(shouldHighlight) {
         this.setOption("highlightGutterLine", shouldHighlight);
-    };
+    }
 
-    this.getHighlightGutterLine = function() {
+    getHighlightGutterLine() {
         return this.getOption("highlightGutterLine");
-    };
+    }
 
-    this.$updatePrintMargin = function() {
+    $updatePrintMargin() {
         if (!this.$showPrintMargin && !this.$printMarginEl)
             return;
 
@@ -30461,38 +28680,38 @@ var VirtualRenderer = function(container, theme) {
         
         if (this.session && this.session.$wrap == -1)
             this.adjustWrapLimit();
-    };
+    }
 
     /**
      *
      * Returns the root element containing this renderer.
      * @returns {Element}
      **/
-    this.getContainerElement = function() {
+    getContainerElement() {
         return this.container;
-    };
+    }
 
     /**
      *
      * Returns the element that the mouse events are attached to
      * @returns {Element}
      **/
-    this.getMouseEventTarget = function() {
+    getMouseEventTarget() {
         return this.scroller;
-    };
+    }
 
     /**
      *
      * Returns the element to which the hidden text area is added.
      * @returns {Element}
      **/
-    this.getTextAreaContainer = function() {
+    getTextAreaContainer() {
         return this.container;
-    };
+    }
 
     // move text input over the cursor
     // this is required for IME
-    this.$moveTextAreaToCursor = function() {
+    $moveTextAreaToCursor() {
         if (this.$isMousePressed) return;
         var style = this.textarea.style;
         var composition = this.$composition;
@@ -30511,7 +28730,7 @@ var VirtualRenderer = function(container, theme) {
         var posLeft = pixelPos.left;
         posTop -= config.offset;
 
-        var h = composition && composition.useTextareaForIME ? this.lineHeight : HIDE_TEXTAREA ? 0 : 1;
+        var h = composition && composition.useTextareaForIME || useragent.isMobile ? this.lineHeight : 1;
         if (posTop < 0 || posTop > config.height - h) {
             dom.translate(this.textarea, 0, 0);
             return;
@@ -30541,56 +28760,54 @@ var VirtualRenderer = function(container, theme) {
         dom.setStyle(style, "height", h + "px");
         dom.setStyle(style, "width", w + "px");
         dom.translate(this.textarea, Math.min(posLeft, this.$size.scrollerWidth - w), Math.min(posTop, maxTop));
-    };
+    }
 
     /**
      * [Returns the index of the first visible row.]{: #VirtualRenderer.getFirstVisibleRow}
      * @returns {Number}
      **/
-    this.getFirstVisibleRow = function() {
+    getFirstVisibleRow() {
         return this.layerConfig.firstRow;
-    };
+    }
 
     /**
      *
      * Returns the index of the first fully visible row. "Fully" here means that the characters in the row are not truncated; that the top and the bottom of the row are on the screen.
      * @returns {Number}
      **/
-    this.getFirstFullyVisibleRow = function() {
+    getFirstFullyVisibleRow() {
         return this.layerConfig.firstRow + (this.layerConfig.offset === 0 ? 0 : 1);
-    };
+    }
 
     /**
      *
      * Returns the index of the last fully visible row. "Fully" here means that the characters in the row are not truncated; that the top and the bottom of the row are on the screen.
      * @returns {Number}
      **/
-    this.getLastFullyVisibleRow = function() {
+    getLastFullyVisibleRow() {
         var config = this.layerConfig;
         var lastRow = config.lastRow;
         var top = this.session.documentToScreenRow(lastRow, 0) * config.lineHeight;
         if (top - this.session.getScrollTop() > config.height - config.lineHeight)
             return lastRow - 1;
         return lastRow;
-    };
+    }
 
     /**
      *
      * [Returns the index of the last visible row.]{: #VirtualRenderer.getLastVisibleRow}
      * @returns {Number}
      **/
-    this.getLastVisibleRow = function() {
+    getLastVisibleRow() {
         return this.layerConfig.lastRow;
-    };
-
-    this.$padding = null;
+    }
 
     /**
      * Sets the padding for all the layers.
      * @param {Number} padding A new padding value (in pixels)
      *
      **/
-    this.setPadding = function(padding) {
+    setPadding(padding) {
         this.$padding = padding;
         this.$textLayer.setPadding(padding);
         this.$cursorLayer.setPadding(padding);
@@ -30598,9 +28815,9 @@ var VirtualRenderer = function(container, theme) {
         this.$markerBack.setPadding(padding);
         this.$loop.schedule(this.CHANGE_FULL);
         this.$updatePrintMargin();
-    };
+    }
     
-    this.setScrollMargin = function(top, bottom, left, right) {
+    setScrollMargin(top, bottom, left, right) {
         var sm = this.scrollMargin;
         sm.top = top|0;
         sm.bottom = bottom|0;
@@ -30611,9 +28828,9 @@ var VirtualRenderer = function(container, theme) {
         if (sm.top && this.scrollTop <= 0 && this.session)
             this.session.setScrollTop(-sm.top);
         this.updateFull();
-    };
+    }
     
-    this.setMargin = function(top, bottom, left, right) {
+    setMargin(top, bottom, left, right) {
         var sm = this.margin;
         sm.top = top|0;
         sm.bottom = bottom|0;
@@ -30623,40 +28840,40 @@ var VirtualRenderer = function(container, theme) {
         sm.h = sm.left + sm.right;
         this.$updateCachedSize(true, this.gutterWidth, this.$size.width, this.$size.height);
         this.updateFull();
-    };
+    }
 
     /**
      * Returns whether the horizontal scrollbar is set to be always visible.
      * @returns {Boolean}
      **/
-    this.getHScrollBarAlwaysVisible = function() {
+    getHScrollBarAlwaysVisible() {
         return this.$hScrollBarAlwaysVisible;
-    };
+    }
 
     /**
      * Identifies whether you want to show the horizontal scrollbar or not.
      * @param {Boolean} alwaysVisible Set to `true` to make the horizontal scroll bar visible
      **/
-    this.setHScrollBarAlwaysVisible = function(alwaysVisible) {
+    setHScrollBarAlwaysVisible(alwaysVisible) {
         this.setOption("hScrollBarAlwaysVisible", alwaysVisible);
-    };
+    }
     /**
      * Returns whether the horizontal scrollbar is set to be always visible.
      * @returns {Boolean}
      **/
-    this.getVScrollBarAlwaysVisible = function() {
+    getVScrollBarAlwaysVisible() {
         return this.$vScrollBarAlwaysVisible;
-    };
+    }
 
     /**
      * Identifies whether you want to show the horizontal scrollbar or not.
      * @param {Boolean} alwaysVisible Set to `true` to make the horizontal scroll bar visible
      **/
-    this.setVScrollBarAlwaysVisible = function(alwaysVisible) {
+    setVScrollBarAlwaysVisible(alwaysVisible) {
         this.setOption("vScrollBarAlwaysVisible", alwaysVisible);
-    };
+    }
 
-    this.$updateScrollBarV = function() {
+    $updateScrollBarV() {
         var scrollHeight = this.layerConfig.maxHeight;
         var scrollerHeight = this.$size.scrollerHeight;
         if (!this.$maxLines && this.$scrollPastEnd) {
@@ -30668,22 +28885,21 @@ var VirtualRenderer = function(container, theme) {
         }
         this.scrollBarV.setScrollHeight(scrollHeight + this.scrollMargin.v);
         this.scrollBarV.setScrollTop(this.scrollTop + this.scrollMargin.top);
-    };
-    this.$updateScrollBarH = function() {
+    }
+    $updateScrollBarH() {
         this.scrollBarH.setScrollWidth(this.layerConfig.width + 2 * this.$padding + this.scrollMargin.h);
         this.scrollBarH.setScrollLeft(this.scrollLeft + this.scrollMargin.left);
-    };
-    
-    this.$frozen = false;
-    this.freeze = function() {
-        this.$frozen = true;
-    };
-    
-    this.unfreeze = function() {
-        this.$frozen = false;
-    };
+    }
 
-    this.$renderChanges = function(changes, force) {
+    freeze() {
+        this.$frozen = true;
+    }
+    
+    unfreeze() {
+        this.$frozen = false;
+    }
+
+    $renderChanges(changes, force) {
         if (this.$changes) {
             changes |= this.$changes;
             this.$changes = 0;
@@ -30722,7 +28938,7 @@ var VirtualRenderer = function(container, theme) {
             // scrollTop so that the cursor and onscreen content stays in the same place.
             // TODO: find a better way to handle this, that works non wrapped case and doesn't compute layerConfig twice
             if (config.firstRow != this.layerConfig.firstRow && config.firstRowScreen == this.layerConfig.firstRowScreen) {
-                var st = this.scrollTop + (config.firstRow - this.layerConfig.firstRow) * this.lineHeight;
+                var st = this.scrollTop + (config.firstRow - Math.max(this.layerConfig.firstRow, 0)) * this.lineHeight;
                 if (st > 0) {
                     // this check is needed as a workaround for the documentToScreenRow returning -1 if document.length == 0
                     this.scrollTop = st;
@@ -30838,10 +29054,10 @@ var VirtualRenderer = function(container, theme) {
         }
 
         this._signal("afterRender", changes);
-    };
+    }
 
     
-    this.$autosize = function() {
+    $autosize() {
         var height = this.session.getScreenLength() * this.lineHeight;
         var maxHeight = this.$maxLines * this.lineHeight;
         var desiredHeight = Math.min(maxHeight, 
@@ -30870,9 +29086,9 @@ var VirtualRenderer = function(container, theme) {
             
             this._signal("autosize");
         }
-    };
+    }
     
-    this.$computeLayerConfig = function() {
+    $computeLayerConfig() {
         var session = this.session;
         var size = this.$size;
         
@@ -30976,9 +29192,9 @@ var VirtualRenderer = function(container, theme) {
         // console.log(JSON.stringify(this.layerConfig));
 
         return changes;
-    };
+    }
 
-    this.$updateLines = function() {
+    $updateLines() {
         if (!this.$changedLines) return;
         var firstRow = this.$changedLines.firstRow;
         var lastRow = this.$changedLines.lastRow;
@@ -31000,9 +29216,9 @@ var VirtualRenderer = function(container, theme) {
         // else update only the changed rows
         this.$textLayer.updateLines(layerConfig, firstRow, lastRow);
         return true;
-    };
+    }
 
-    this.$getLongestLine = function() {
+    $getLongestLine() {
         var charCount = this.session.getScreenWidth();
         if (this.showInvisibles && !this.session.$useWrapMode)
             charCount += 1;
@@ -31011,171 +29227,178 @@ var VirtualRenderer = function(container, theme) {
             charCount = this.$textLayer.MAX_LINE_LENGTH + 30;
 
         return Math.max(this.$size.scrollerWidth - 2 * this.$padding, Math.round(charCount * this.characterWidth));
-    };
+    }
 
     /**
      * Schedules an update to all the front markers in the document.
      **/
-    this.updateFrontMarkers = function() {
+    updateFrontMarkers() {
         this.$markerFront.setMarkers(this.session.getMarkers(true));
         this.$loop.schedule(this.CHANGE_MARKER_FRONT);
-    };
+    }
 
     /**
      *
      * Schedules an update to all the back markers in the document.
      **/
-    this.updateBackMarkers = function() {
+    updateBackMarkers() {
         this.$markerBack.setMarkers(this.session.getMarkers());
         this.$loop.schedule(this.CHANGE_MARKER_BACK);
-    };
+    }
 
     /**
      *
      * Deprecated; (moved to [[EditSession]])
      * @deprecated
      **/
-    this.addGutterDecoration = function(row, className){
+    addGutterDecoration(row, className){
         this.$gutterLayer.addGutterDecoration(row, className);
-    };
+    }
 
     /**
      * Deprecated; (moved to [[EditSession]])
      * @deprecated
      **/
-    this.removeGutterDecoration = function(row, className){
+    removeGutterDecoration(row, className){
         this.$gutterLayer.removeGutterDecoration(row, className);
-    };
+    }
 
     /**
      *
      * Redraw breakpoints.
      **/
-    this.updateBreakpoints = function(rows) {
+    updateBreakpoints(rows) {
         this.$loop.schedule(this.CHANGE_GUTTER);
-    };
+    }
 
     /**
      * Sets annotations for the gutter.
      * @param {Annotation[]} annotations An array containing annotations
      *
      **/
-    this.setAnnotations = function(annotations) {
+    setAnnotations(annotations) {
         this.$gutterLayer.setAnnotations(annotations);
         this.$loop.schedule(this.CHANGE_GUTTER);
-    };
+    }
 
     /**
      *
      * Updates the cursor icon.
      **/
-    this.updateCursor = function() {
+    updateCursor() {
         this.$loop.schedule(this.CHANGE_CURSOR);
-    };
+    }
 
     /**
      *
      * Hides the cursor icon.
      **/
-    this.hideCursor = function() {
+    hideCursor() {
         this.$cursorLayer.hideCursor();
-    };
+    }
 
     /**
      *
      * Shows the cursor icon.
      **/
-    this.showCursor = function() {
+    showCursor() {
         this.$cursorLayer.showCursor();
-    };
+    }
 
-    this.scrollSelectionIntoView = function(anchor, lead, offset) {
+    scrollSelectionIntoView(anchor, lead, offset) {
         // first scroll anchor into view then scroll lead into view
         this.scrollCursorIntoView(anchor, offset);
         this.scrollCursorIntoView(lead, offset);
-    };
+    }
 
     /**
      *
      * Scrolls the cursor into the first visibile area of the editor
      **/
-    this.scrollCursorIntoView = function(cursor, offset, $viewMargin) {
+    scrollCursorIntoView(cursor, offset, $viewMargin) {
         // the editor is not visible
         if (this.$size.scrollerHeight === 0)
             return;
 
         var pos = this.$cursorLayer.getPixelPosition(cursor);
 
-        var left = pos.left;
-        var top = pos.top;
-        
+        var newLeft = pos.left;
+        var newTop = pos.top;
+
         var topMargin = $viewMargin && $viewMargin.top || 0;
         var bottomMargin = $viewMargin && $viewMargin.bottom || 0;
 
         if (this.$scrollAnimation) {
             this.$stopAnimation = true;
         }
-        
-        var scrollTop = this.$scrollAnimation ? this.session.getScrollTop() : this.scrollTop;
-        
-        if (scrollTop + topMargin > top) {
-            if (offset && scrollTop + topMargin > top + this.lineHeight)
-                top -= offset * this.$size.scrollerHeight;
-            if (top === 0)
-                top = -this.scrollMargin.top;
-            this.session.setScrollTop(top);
-        } else if (scrollTop + this.$size.scrollerHeight - bottomMargin < top + this.lineHeight) {
-            if (offset && scrollTop + this.$size.scrollerHeight - bottomMargin < top -  this.lineHeight)
-                top += offset * this.$size.scrollerHeight;
-            this.session.setScrollTop(top + this.lineHeight + bottomMargin - this.$size.scrollerHeight);
+
+        var currentTop = this.$scrollAnimation ? this.session.getScrollTop() : this.scrollTop;
+
+        if (currentTop + topMargin > newTop) {
+            if (offset && currentTop + topMargin > newTop + this.lineHeight)
+                newTop -= offset * this.$size.scrollerHeight;
+            if (newTop === 0)
+                newTop = -this.scrollMargin.top;
+            this.session.setScrollTop(newTop);
+        } else if (currentTop + this.$size.scrollerHeight - bottomMargin < newTop + this.lineHeight) {
+            if (offset && currentTop + this.$size.scrollerHeight - bottomMargin < newTop -  this.lineHeight)
+                newTop += offset * this.$size.scrollerHeight;
+            this.session.setScrollTop(newTop + this.lineHeight + bottomMargin - this.$size.scrollerHeight);
         }
 
-        var scrollLeft = this.scrollLeft;
+        var currentLeft = this.scrollLeft;
+        // Show 2 context characters of the line when moving to it
+        var twoCharsWidth = 2 * this.layerConfig.characterWidth;
 
-        if (scrollLeft > left) {
-            if (left < this.$padding + 2 * this.layerConfig.characterWidth)
-                left = -this.scrollMargin.left;
-            this.session.setScrollLeft(left);
-        } else if (scrollLeft + this.$size.scrollerWidth < left + this.characterWidth) {
-            this.session.setScrollLeft(Math.round(left + this.characterWidth - this.$size.scrollerWidth));
-        } else if (scrollLeft <= this.$padding && left - scrollLeft < this.characterWidth) {
-            this.session.setScrollLeft(0);
+        if (newLeft - twoCharsWidth < currentLeft) {
+            newLeft -= twoCharsWidth;
+            if (newLeft < this.$padding + twoCharsWidth) {
+                newLeft = -this.scrollMargin.left;
+            }
+            this.session.setScrollLeft(newLeft);
+        } else {
+            newLeft += twoCharsWidth;
+            if (currentLeft + this.$size.scrollerWidth < newLeft + this.characterWidth) {
+                this.session.setScrollLeft(Math.round(newLeft + this.characterWidth - this.$size.scrollerWidth));
+            } else if (currentLeft <= this.$padding && newLeft - currentLeft < this.characterWidth) {
+                this.session.setScrollLeft(0);
+            }
         }
-    };
+    }
 
     /**
      * {:EditSession.getScrollTop}
      * @related EditSession.getScrollTop
      * @returns {Number}
      **/
-    this.getScrollTop = function() {
+    getScrollTop() {
         return this.session.getScrollTop();
-    };
+    }
 
     /**
      * {:EditSession.getScrollLeft}
      * @related EditSession.getScrollLeft
      * @returns {Number}
      **/
-    this.getScrollLeft = function() {
+    getScrollLeft() {
         return this.session.getScrollLeft();
-    };
+    }
 
     /**
      * Returns the first visible row, regardless of whether it's fully visible or not.
      * @returns {Number}
      **/
-    this.getScrollTopRow = function() {
+    getScrollTopRow() {
         return this.scrollTop / this.lineHeight;
-    };
+    }
 
     /**
      * Returns the last visible row, regardless of whether it's fully visible or not.
      * @returns {Number}
      **/
-    this.getScrollBottomRow = function() {
+    getScrollBottomRow() {
         return Math.max(0, Math.floor((this.scrollTop + this.$size.scrollerHeight) / this.lineHeight) - 1);
-    };
+    }
 
     /**
      * Gracefully scrolls from the top of the editor to the row indicated.
@@ -31183,11 +29406,11 @@ var VirtualRenderer = function(container, theme) {
      *
      * @related EditSession.setScrollTop
      **/
-    this.scrollToRow = function(row) {
+    scrollToRow(row) {
         this.session.setScrollTop(row * this.lineHeight);
-    };
+    }
 
-    this.alignCursor = function(cursor, alignment) {
+    alignCursor(cursor, alignment) {
         if (typeof cursor == "number")
             cursor = {row: cursor, column: 0};
 
@@ -31197,10 +29420,9 @@ var VirtualRenderer = function(container, theme) {
 
         this.session.setScrollTop(offset);
         return offset;
-    };
+    }
 
-    this.STEPS = 8;
-    this.$calcSteps = function(fromValue, toValue){
+    $calcSteps(fromValue, toValue){
         var i = 0;
         var l = this.STEPS;
         var steps = [];
@@ -31213,7 +29435,7 @@ var VirtualRenderer = function(container, theme) {
             steps.push(func(i / this.STEPS, fromValue, toValue - fromValue));
 
         return steps;
-    };
+    }
 
     /**
      * Gracefully scrolls the editor to the row indicated.
@@ -31223,7 +29445,7 @@ var VirtualRenderer = function(container, theme) {
      * @param {Function} callback Function to be called after the animation has finished
      *
      **/
-    this.scrollToLine = function(line, center, animate, callback) {
+    scrollToLine(line, center, animate, callback) {
         var pos = this.$cursorLayer.getPixelPosition({row: line, column: 0});
         var offset = pos.top;
         if (center)
@@ -31233,9 +29455,9 @@ var VirtualRenderer = function(container, theme) {
         this.session.setScrollTop(offset);
         if (animate !== false)
             this.animateScrolling(initialScroll, callback);
-    };
+    }
 
-    this.animateScrolling = function(fromValue, callback) {
+    animateScrolling(fromValue, callback) {
         var toValue = this.scrollTop;
         if (!this.$animatedScroll)
             return;
@@ -31289,7 +29511,7 @@ var VirtualRenderer = function(container, theme) {
                 endAnimation();
             }
         }, 10);
-    };
+    }
 
     /**
      * Scrolls the editor to the y pixel indicated.
@@ -31297,14 +29519,14 @@ var VirtualRenderer = function(container, theme) {
      *
      * @returns {Number}
      **/
-    this.scrollToY = function(scrollTop) {
+    scrollToY(scrollTop) {
         // after calling scrollBar.setScrollTop
         // scrollbar sends us event with same scrollTop. ignore it
         if (this.scrollTop !== scrollTop) {
             this.$loop.schedule(this.CHANGE_SCROLL);
             this.scrollTop = scrollTop;
         }
-    };
+    }
 
     /**
      * Scrolls the editor across the x-axis to the pixel indicated.
@@ -31312,31 +29534,31 @@ var VirtualRenderer = function(container, theme) {
      *
      * @returns {Number}
      **/
-    this.scrollToX = function(scrollLeft) {
+    scrollToX(scrollLeft) {
         if (this.scrollLeft !== scrollLeft)
             this.scrollLeft = scrollLeft;
         this.$loop.schedule(this.CHANGE_H_SCROLL);
-    };
+    }
 
     /**
      * Scrolls the editor across both x- and y-axes.
      * @param {Number} x The x value to scroll to
      * @param {Number} y The y value to scroll to
      **/
-    this.scrollTo = function(x, y) {
+    scrollTo(x, y) {
         this.session.setScrollTop(y);
         this.session.setScrollLeft(x);
-    };
+    }
     
     /**
      * Scrolls the editor across both x- and y-axes.
      * @param {Number} deltaX The x value to scroll by
      * @param {Number} deltaY The y value to scroll by
      **/
-    this.scrollBy = function(deltaX, deltaY) {
+    scrollBy(deltaX, deltaY) {
         deltaY && this.session.setScrollTop(this.session.getScrollTop() + deltaY);
         deltaX && this.session.setScrollLeft(this.session.getScrollLeft() + deltaX);
-    };
+    }
 
     /**
      * Returns `true` if you can still scroll by either parameter; in other words, you haven't reached the end of the file or line.
@@ -31345,7 +29567,7 @@ var VirtualRenderer = function(container, theme) {
      *
      * @returns {Boolean}
      **/
-    this.isScrollableBy = function(deltaX, deltaY) {
+    isScrollableBy(deltaX, deltaY) {
         if (deltaY < 0 && this.session.getScrollTop() >= 1 - this.scrollMargin.top)
            return true;
         if (deltaY > 0 && this.session.getScrollTop() + this.$size.scrollerHeight
@@ -31356,9 +29578,9 @@ var VirtualRenderer = function(container, theme) {
         if (deltaX > 0 && this.session.getScrollLeft() + this.$size.scrollerWidth
             - this.layerConfig.width < -1 + this.scrollMargin.right)
            return true;
-    };
+    }
 
-    this.pixelToScreenCoordinates = function(x, y) {
+    pixelToScreenCoordinates(x, y) {
         var canvasPos;
         if (this.$hasCssTransforms) {
             canvasPos = {top:0, left: 0};
@@ -31375,9 +29597,9 @@ var VirtualRenderer = function(container, theme) {
         var col = this.$blockCursor ? Math.floor(offset) : Math.round(offset);
 
         return {row: row, column: col, side: offset - col > 0 ? 1 : -1, offsetX:  offsetX};
-    };
+    }
 
-    this.screenToTextCoordinates = function(x, y) {
+    screenToTextCoordinates(x, y) {
         var canvasPos;
         if (this.$hasCssTransforms) {
             canvasPos = {top:0, left: 0};
@@ -31395,7 +29617,7 @@ var VirtualRenderer = function(container, theme) {
         var row = Math.floor((y + this.scrollTop - canvasPos.top) / this.lineHeight);
 
         return this.session.screenToDocumentPosition(row, Math.max(col, 0), offsetX);
-    };
+    }
 
     /**
      * Returns an object containing the `pageX` and `pageY` coordinates of the document position.
@@ -31404,7 +29626,7 @@ var VirtualRenderer = function(container, theme) {
      *
      * @returns {Object}
      **/
-    this.textToScreenCoordinates = function(row, column) {
+    textToScreenCoordinates(row, column) {
         var canvasPos = this.scroller.getBoundingClientRect();
         var pos = this.session.documentToScreenPosition(row, column);
 
@@ -31418,30 +29640,30 @@ var VirtualRenderer = function(container, theme) {
             pageX: canvasPos.left + x - this.scrollLeft,
             pageY: canvasPos.top + y - this.scrollTop
         };
-    };
+    }
 
     /**
      *
      * Focuses the current container.
      **/
-    this.visualizeFocus = function() {
+    visualizeFocus() {
         dom.addCssClass(this.container, "ace_focus");
-    };
+    }
 
     /**
      *
      * Blurs the current container.
      **/
-    this.visualizeBlur = function() {
+    visualizeBlur() {
         dom.removeCssClass(this.container, "ace_focus");
-    };
+    }
 
     /**
-     * @param {Number} position
+     * @param {Object} composition
      *
      * @private
      **/
-    this.showComposition = function(composition) {
+    showComposition(composition) {
         this.$composition = composition;
         if (!composition.cssText) {
             composition.cssText = this.textarea.style.cssText;
@@ -31458,24 +29680,24 @@ var VirtualRenderer = function(container, theme) {
         else {
             composition.markerId = this.session.addMarker(composition.markerRange, "ace_composition_marker", "text");
         }
-    };
+    }
 
     /**
      * @param {String} text A string of text to use
      *
      * Sets the inner text of the current composition to `text`.
      **/
-    this.setCompositionText = function(text) {
+    setCompositionText(text) {
         var cursor = this.session.selection.cursor;
         this.addToken(text, "composition_placeholder", cursor.row, cursor.column);
         this.$moveTextAreaToCursor();
-    };
+    }
 
     /**
      *
      * Hides the current composition.
      **/
-    this.hideComposition = function() {
+    hideComposition() {
         if (!this.$composition)
             return;
         
@@ -31488,14 +29710,53 @@ var VirtualRenderer = function(container, theme) {
         this.removeExtraToken(cursor.row, cursor.column);
         this.$composition = null;
         this.$cursorLayer.element.style.display = "";
-    };
-    
-    this.addToken = function(text, type, row, column) {
+    }
+
+    setGhostText(text, position) {
+        var cursor = this.session.selection.cursor;
+        var insertPosition = position || { row: cursor.row, column: cursor.column };
+
+        this.removeGhostText();
+
+        var textLines = text.split("\n");
+        this.addToken(textLines[0], "ghost_text", insertPosition.row, insertPosition.column);
+        this.$ghostText = {
+            text: text,
+            position: {
+                row: insertPosition.row,
+                column: insertPosition. column
+            }
+        };
+        if (textLines.length > 1) {
+            this.$ghostTextWidget = {
+                text: textLines.slice(1).join("\n"),
+                row: insertPosition.row,
+                column: insertPosition.column,
+                className: "ace_ghost_text"
+            };
+            this.session.widgetManager.addLineWidget(this.$ghostTextWidget);
+        }
+        
+    }
+
+    removeGhostText() {
+        if (!this.$ghostText) return;
+
+        var position = this.$ghostText.position;
+        this.removeExtraToken(position.row, position.column);
+        if (this.$ghostTextWidget) {
+            this.session.widgetManager.removeLineWidget(this.$ghostTextWidget);
+            this.$ghostTextWidget = null;
+        }
+        this.$ghostText = null;
+    }
+
+    addToken(text, type, row, column) {
         var session = this.session;
         session.bgTokenizer.lines[row] = null;
         var newToken = {type: type, value: text};
         var tokens = session.getTokens(row);
-        if (column == null) {
+        if (column == null || !tokens.length) {
             tokens.push(newToken);
         } else {
             var l = 0;
@@ -31513,19 +29774,20 @@ var VirtualRenderer = function(container, theme) {
             }
         }
         this.updateLines(row, row);
-    };
+    }
 
-    this.removeExtraToken = function(row, column) {
+    removeExtraToken(row, column) {
+        this.session.bgTokenizer.lines[row] = null;
         this.updateLines(row, row);
-    };
+    }
 
     /**
      * [Sets a new theme for the editor. `theme` should exist, and be a directory path, like `ace/theme/textmate`.]{: #VirtualRenderer.setTheme}
-     * @param {String} theme The path to a theme
-     * @param {Function} cb optional callback
+     * @param {String} [theme] The path to a theme
+     * @param {Function} [cb] optional callback
      *
      **/
-    this.setTheme = function(theme, cb) {
+    setTheme(theme, cb) {
         var _self = this;
         this.$themeId = theme;
         _self._dispatchEvent('themeChange',{theme:theme});
@@ -31574,15 +29836,15 @@ var VirtualRenderer = function(container, theme) {
             _self._dispatchEvent('themeLoaded', {theme:module});
             cb && cb();
         }
-    };
+    }
 
     /**
      * [Returns the path of the current theme.]{: #VirtualRenderer.getTheme}
      * @returns {String}
      **/
-    this.getTheme = function() {
+    getTheme() {
         return this.$themeId;
-    };
+    }
 
     // Methods allows to add / remove CSS classnames to the editor element.
     // This feature can be used by plug-ins to provide a visual indication of
@@ -31593,47 +29855,48 @@ var VirtualRenderer = function(container, theme) {
      * @param {String} style A class name
      *
      **/
-    this.setStyle = function(style, include) {
+    setStyle(style, include) {
         dom.setCssClass(this.container, style, include !== false);
-    };
+    }
 
     /**
      * [Removes the class `style` from the editor.]{: #VirtualRenderer.unsetStyle}
      * @param {String} style A class name
      *
      **/
-    this.unsetStyle = function(style) {
+    unsetStyle(style) {
         dom.removeCssClass(this.container, style);
-    };
+    }
     
-    this.setCursorStyle = function(style) {
+    setCursorStyle(style) {
         dom.setStyle(this.scroller.style, "cursor", style);
-    };
+    }
 
     /**
      * @param {String} cursorStyle A css cursor style
      *
      **/
-    this.setMouseCursor = function(cursorStyle) {
+    setMouseCursor(cursorStyle) {
         dom.setStyle(this.scroller.style, "cursor", cursorStyle);
-    };
+    }
     
-    this.attachToShadowRoot = function() {
+    attachToShadowRoot() {
         dom.importCssString(editorCss, "ace_editor.css", this.container);
-    };
+    }
 
     /**
      * Destroys the text and cursor layers for this renderer.
      **/
-    this.destroy = function() {
+    destroy() {
         this.freeze();
         this.$fontMetrics.destroy();
         this.$cursorLayer.destroy();
         this.removeAllListeners();
         this.container.textContent = "";
-    };
+        this.setOption("useResizeObserver", false);
+    }
 
-    this.$updateCustomScrollbar = function (val) {
+    $updateCustomScrollbar(val) {
         var _self = this;
         this.$horizScroll = this.$vScroll = null;
         this.scrollBarV.element.remove();
@@ -31666,12 +29929,61 @@ var VirtualRenderer = function(container, theme) {
                 if (!_self.$scrollAnimation) _self.session.setScrollLeft(e.data - _self.scrollMargin.left);
             });
         }
-    };
+    }
 
-}).call(VirtualRenderer.prototype);
+    $addResizeObserver() {
+        if (!window.ResizeObserver || this.$resizeObserver) return;
+        var self = this;
+        this.$resizeTimer = lang.delayedCall(function() {
+            if (!self.destroyed)  self.onResize();
+        }, 50);
+        this.$resizeObserver = new window.ResizeObserver(function(e) {
+            var w = e[0].contentRect.width;
+            var h = e[0].contentRect.height;
+            if (
+                Math.abs(self.$size.width - w) > 1
+                || Math.abs(self.$size.height - h) > 1
+            ) {
+                self.$resizeTimer.delay();
+            } else {
+                self.$resizeTimer.cancel();
+            }
+        });
+        this.$resizeObserver.observe(this.container);
+    }
 
+}
+
+VirtualRenderer.prototype.CHANGE_CURSOR = 1;
+VirtualRenderer.prototype.CHANGE_MARKER = 2;
+VirtualRenderer.prototype.CHANGE_GUTTER = 4;
+VirtualRenderer.prototype.CHANGE_SCROLL = 8;
+VirtualRenderer.prototype.CHANGE_LINES = 16;
+VirtualRenderer.prototype.CHANGE_TEXT = 32;
+VirtualRenderer.prototype.CHANGE_SIZE = 64;
+VirtualRenderer.prototype.CHANGE_MARKER_BACK = 128;
+VirtualRenderer.prototype.CHANGE_MARKER_FRONT = 256;
+VirtualRenderer.prototype.CHANGE_FULL = 512;
+VirtualRenderer.prototype.CHANGE_H_SCROLL = 1024;
+VirtualRenderer.prototype.$changes = 0;
+VirtualRenderer.prototype.$padding = null;
+VirtualRenderer.prototype.$frozen = false;
+VirtualRenderer.prototype.STEPS = 8;
+
+oop.implement(VirtualRenderer.prototype, EventEmitter);
 
 config.defineOptions(VirtualRenderer.prototype, "renderer", {
+    useResizeObserver: {
+        set: function(value) {
+            if (!value && this.$resizeObserver) {
+                this.$resizeObserver.disconnect();
+                this.$resizeTimer.cancel();
+                this.$resizeTimer = this.$resizeObserver = null;
+            } else if (value && !this.$resizeObserver) {
+                this.$addResizeObserver();
+            }
+        }
+    },
     animatedScroll: {initialValue: false},
     showInvisibles: {
         set: function(value) {
@@ -31706,6 +30018,12 @@ config.defineOptions(VirtualRenderer.prototype, "renderer", {
             this.onGutterResize();
         },
         initialValue: true
+    },
+    useSvgGutterIcons: {
+        set: function(value){
+            this.$gutterLayer.$useSvgGutterIcons = value;
+        },
+        initialValue: false
     },
     fadeFoldWidgets: {
         set: function(show) {
@@ -31833,7 +30151,7 @@ exports.VirtualRenderer = VirtualRenderer;
 
 /***/ }),
 
-/***/ 1451:
+/***/ 91451:
 /***/ ((__unused_webpack_module, exports) => {
 
 // not implemented
@@ -31861,16 +30179,16 @@ module.exports = webpackEmptyContext;
 
 /***/ }),
 
-/***/ 9578:
+/***/ 49578:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -31884,16 +30202,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".toggle-block {\n    position: absolut
 
 /***/ }),
 
-/***/ 2100:
+/***/ 12100:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -31907,27 +30225,27 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: Tahoma, sans-
 
 /***/ }),
 
-/***/ 9229:
+/***/ 19229:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1667);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61667);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(7112), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(7149), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(6475), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(2527), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(87112), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(87149), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(66475), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(72527), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
@@ -31941,16 +30259,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".menuButton {\n    height: 100%;\n    
 
 /***/ }),
 
-/***/ 8753:
+/***/ 18753:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -31964,16 +30282,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".panelbar {\n    display:flex;\n    he
 
 /***/ }),
 
-/***/ 8329:
+/***/ 78329:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
@@ -31987,7 +30305,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".tabContainer {\n    align-items: stre
 
 /***/ }),
 
-/***/ 3645:
+/***/ 23645:
 /***/ ((module) => {
 
 "use strict";
@@ -32096,7 +30414,7 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ 1667:
+/***/ 61667:
 /***/ ((module) => {
 
 "use strict";
@@ -32132,7 +30450,7 @@ module.exports = function (url, options) {
 
 /***/ }),
 
-/***/ 7537:
+/***/ 87537:
 /***/ ((module) => {
 
 "use strict";
@@ -32161,7 +30479,7 @@ module.exports = function (item) {
 
 /***/ }),
 
-/***/ 7187:
+/***/ 17187:
 /***/ ((module) => {
 
 "use strict";
@@ -32666,7 +30984,7 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ 1937:
+/***/ 51937:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -32674,19 +30992,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9578);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(49578);
 
       
       
@@ -32718,7 +31036,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 4646:
+/***/ 34646:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -32726,19 +31044,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2100);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12100);
 
       
       
@@ -32770,7 +31088,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 3694:
+/***/ 23694:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -32778,19 +31096,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9229);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19229);
 
       
       
@@ -32822,7 +31140,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 3612:
+/***/ 73612:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -32830,19 +31148,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8753);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(18753);
 
       
       
@@ -32874,7 +31192,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 2463:
+/***/ 52463:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -32882,19 +31200,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8329);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(78329);
 
       
       
@@ -32926,7 +31244,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 3379:
+/***/ 93379:
 /***/ ((module) => {
 
 "use strict";
@@ -33037,7 +31355,7 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ 569:
+/***/ 90569:
 /***/ ((module) => {
 
 "use strict";
@@ -33083,7 +31401,7 @@ module.exports = insertBySelector;
 
 /***/ }),
 
-/***/ 9216:
+/***/ 19216:
 /***/ ((module) => {
 
 "use strict";
@@ -33197,7 +31515,7 @@ module.exports = domAPI;
 
 /***/ }),
 
-/***/ 4589:
+/***/ 44589:
 /***/ ((module) => {
 
 "use strict";
@@ -33220,15 +31538,15 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 2583:
+/***/ 92583:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.CommandManager = void 0;
-var event = __webpack_require__(7989);
-var keyUtil = __webpack_require__(1797);
+var event = __webpack_require__(17989);
+var keyUtil = __webpack_require__(11797);
 var hash_handler_1 = __webpack_require__(7116);
 var CommandManager = /** @class */ (function () {
     function CommandManager() {
@@ -33252,7 +31570,7 @@ exports.CommandManager = CommandManager;
 
 /***/ }),
 
-/***/ 2656:
+/***/ 12656:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -33676,7 +31994,7 @@ exports.tabCommands = [
 
 /***/ }),
 
-/***/ 5328:
+/***/ 25328:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -33697,21 +32015,21 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-var layout_1 = __webpack_require__(9251);
-var dom = (__webpack_require__(5079).dom);
-var event = __webpack_require__(7989);
+var layout_1 = __webpack_require__(49251);
+var dom = (__webpack_require__(25079).dom);
+var event = __webpack_require__(17989);
 var hash_handler_1 = __webpack_require__(7116);
 var box_1 = __webpack_require__(8795);
-var panel_1 = __webpack_require__(279);
-var accordion_1 = __webpack_require__(4563);
+var panel_1 = __webpack_require__(40279);
+var accordion_1 = __webpack_require__(64563);
 var tabManager_1 = __webpack_require__(8478);
-var panelManager_1 = __webpack_require__(6790);
-var menu_example_1 = __webpack_require__(2845);
-var keyUtil = __webpack_require__(1797);
-var menuManager_1 = __webpack_require__(7282);
-var toolbar_1 = __webpack_require__(6319);
-var menuToolbar_1 = __webpack_require__(2631);
-var panelBar_1 = __webpack_require__(8659);
+var panelManager_1 = __webpack_require__(16790);
+var menu_example_1 = __webpack_require__(12845);
+var keyUtil = __webpack_require__(11797);
+var menuManager_1 = __webpack_require__(97282);
+var toolbar_1 = __webpack_require__(76319);
+var menuToolbar_1 = __webpack_require__(72631);
+var panelBar_1 = __webpack_require__(68659);
 var FindBar = /** @class */ (function (_super) {
     __extends(FindBar, _super);
     function FindBar() {
@@ -33937,14 +32255,14 @@ consoleBox.renderButtons([{
 
 /***/ }),
 
-/***/ 2845:
+/***/ 12845:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.addExampleMenuItems = exports.menuDefs = void 0;
-var commandManager_1 = __webpack_require__(2583);
+var commandManager_1 = __webpack_require__(92583);
 exports.menuDefs = {
     "AWS Cloud9": "50,,,,",
     "File": "100,,,,",
@@ -34514,7 +32832,7 @@ exports.addExampleMenuItems = addExampleMenuItems;
 
 /***/ }),
 
-/***/ 9583:
+/***/ 89583:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -34522,8 +32840,8 @@ exports.addExampleMenuItems = addExampleMenuItems;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AccordionHandler = void 0;
 var box_1 = __webpack_require__(8795);
-var lib_1 = __webpack_require__(3723);
-var event = __webpack_require__(7989);
+var lib_1 = __webpack_require__(53723);
+var event = __webpack_require__(17989);
 var AccordionHandler;
 (function (AccordionHandler) {
     AccordionHandler.toggleBarMouseDown = function (e, accordionConstructor) {
@@ -34772,16 +33090,16 @@ var AccordionHandler;
 
 /***/ }),
 
-/***/ 1966:
+/***/ 11966:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabbarHandler = void 0;
-var lib_1 = __webpack_require__(3723);
-var dom_1 = __webpack_require__(5079);
-var event = __webpack_require__(7989);
+var lib_1 = __webpack_require__(53723);
+var dom_1 = __webpack_require__(25079);
+var event = __webpack_require__(17989);
 var TabbarHandler;
 (function (TabbarHandler) {
     TabbarHandler.tabbarMouseDown = function (e, tabConstructor, tabBarConstructor, showSplit) {
@@ -35101,7 +33419,7 @@ window.addEventListener("mouseup", function () {
 
 /***/ }),
 
-/***/ 5079:
+/***/ 25079:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -35109,7 +33427,7 @@ window.addEventListener("mouseup", function () {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.dom = void 0;
 //Picked from ace-code 1.10
-var useragent = __webpack_require__(618);
+var useragent = __webpack_require__(50618);
 var XHTML_NS = "http://www.w3.org/1999/xhtml";
 var dom;
 (function (dom) {
@@ -35381,7 +33699,7 @@ var dom;
 
 /***/ }),
 
-/***/ 3723:
+/***/ 53723:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -35447,7 +33765,7 @@ var Utils;
 
 /***/ }),
 
-/***/ 3130:
+/***/ 33130:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -35468,7 +33786,7 @@ var EditorType;
 
 /***/ }),
 
-/***/ 4563:
+/***/ 64563:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -35490,11 +33808,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Accordion = void 0;
-var accordion_handler_1 = __webpack_require__(9583);
+var accordion_handler_1 = __webpack_require__(89583);
 var box_1 = __webpack_require__(8795);
-var lib_1 = __webpack_require__(3723);
-var dom_1 = __webpack_require__(5079);
-var accordionCSS = __webpack_require__(1937);
+var lib_1 = __webpack_require__(53723);
+var dom_1 = __webpack_require__(25079);
+var accordionCSS = __webpack_require__(51937);
 dom_1.dom.importCssString(accordionCSS, "accordion.css");
 var BOX_MIN_SIZE = 80;
 var Accordion = /** @class */ (function (_super) {
@@ -35864,11 +34182,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Box = void 0;
-var lib_1 = __webpack_require__(3723);
-var params_1 = __webpack_require__(3130);
-var event = __webpack_require__(7989);
-var events = __webpack_require__(7187);
-var dom_1 = __webpack_require__(5079);
+var lib_1 = __webpack_require__(53723);
+var params_1 = __webpack_require__(33130);
+var event = __webpack_require__(17989);
+var events = __webpack_require__(17187);
+var dom_1 = __webpack_require__(25079);
 var SPLITTER_SIZE = 1;
 var BOX_MIN_SIZE = 40;
 var Box = /** @class */ (function (_super) {
@@ -36431,7 +34749,7 @@ exports.Box = Box;
 
 /***/ }),
 
-/***/ 3167:
+/***/ 43167:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -36454,11 +34772,11 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Pane = void 0;
 var box_1 = __webpack_require__(8795);
-var dom_1 = __webpack_require__(5079);
-var aceEditor_1 = __webpack_require__(9704);
-var previewEditor_1 = __webpack_require__(8575);
-var params_1 = __webpack_require__(3130);
-var lib_1 = __webpack_require__(3723);
+var dom_1 = __webpack_require__(25079);
+var aceEditor_1 = __webpack_require__(39704);
+var previewEditor_1 = __webpack_require__(68575);
+var params_1 = __webpack_require__(33130);
+var lib_1 = __webpack_require__(53723);
 var tabBar_1 = __webpack_require__(3242);
 var Pane = /** @class */ (function (_super) {
     __extends(Pane, _super);
@@ -36633,26 +34951,21 @@ exports.Pane = Pane;
 
 /***/ }),
 
-/***/ 9704:
+/***/ 39704:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AceEditor = void 0;
-var editor_1 = __webpack_require__(2880);
-var theme = __webpack_require__(3687);
-var virtual_renderer_1 = __webpack_require__(3049);
-var ace = __webpack_require__(9100);
-var modeList = __webpack_require__(352);
-var javascript_1 = __webpack_require__(8057);
-var css_1 = __webpack_require__(8771);
-var html_1 = __webpack_require__(5528);
-var typescript_1 = __webpack_require__(3123);
-__webpack_require__(1105);
+var esm_resolver_1 = __webpack_require__(46992);
+var editor_1 = __webpack_require__(82880);
+var virtual_renderer_1 = __webpack_require__(63049);
+var modeList = __webpack_require__(90352);
+__webpack_require__(11105);
 var AceEditor = /** @class */ (function () {
     function AceEditor() {
-        this.editor = new editor_1.Editor(new virtual_renderer_1.VirtualRenderer(null, theme));
+        this.editor = new editor_1.Editor(new virtual_renderer_1.VirtualRenderer(null));
         this.container = this.editor.container;
         this.container.style.position = "absolute";
         this.editor.setOptions({
@@ -36670,7 +34983,7 @@ var AceEditor = /** @class */ (function () {
         this.editor.focus();
     };
     AceEditor.prototype.destroy = function () {
-        this.editor.setSession(ace.createEditSession("", this.getMode()));
+        this.editor.setSession(esm_resolver_1.default.createEditSession("", this.getMode()));
         this.editor.destroy();
         this.container.remove();
     };
@@ -36684,7 +34997,7 @@ var AceEditor = /** @class */ (function () {
         var _b;
         if (this.tab.session && value == null)
             return;
-        (_a = (_b = this.tab).session) !== null && _a !== void 0 ? _a : (_b.session = ace.createEditSession(value !== null && value !== void 0 ? value : "", this.getMode()));
+        (_a = (_b = this.tab).session) !== null && _a !== void 0 ? _a : (_b.session = esm_resolver_1.default.createEditSession(value !== null && value !== void 0 ? value : "", this.getMode()));
         if (value == null) {
             this.restoreSessionFromJson(this.tab);
         }
@@ -36694,22 +35007,11 @@ var AceEditor = /** @class */ (function () {
     };
     AceEditor.prototype.getMode = function () {
         if (this.tab.path !== undefined) {
-            var mode = modeList.getModeForPath(this.tab.path).mode;
-            //TODO: set mode
-            switch (mode) {
-                case "ace/mode/javascript":
-                    return new javascript_1.Mode();
-                case "ace/mode/css":
-                    return new css_1.Mode();
-                case "ace/mode/html":
-                    return new html_1.Mode();
-                case "ace/mode/typescript":
-                    return new typescript_1.Mode();
-            }
+            return modeList.getModeForPath(this.tab.path).mode;
         }
         return null;
     };
-    AceEditor.prototype.sessionToJSON = function (tab) {
+    AceEditor.getSessionState = function (tab) {
         var session = tab.session;
         var undoManager = session.getUndoManager();
         return JSON.stringify({
@@ -36722,6 +35024,9 @@ var AceEditor = /** @class */ (function () {
                 session.getScrollTop()
             ],
         });
+    };
+    AceEditor.prototype.sessionToJSON = function (tab) {
+        return AceEditor.getSessionState(tab);
     };
     AceEditor.prototype.restoreSessionFromJson = function (tab) {
         if (!tab.session || !tab.sessionValue)
@@ -36750,7 +35055,7 @@ exports.AceEditor = AceEditor;
 
 /***/ }),
 
-/***/ 8575:
+/***/ 68575:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -36790,15 +35095,15 @@ exports.PreviewEditor = PreviewEditor;
 
 /***/ }),
 
-/***/ 9251:
+/***/ 49251:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AceLayout = void 0;
-var layoutCSS = __webpack_require__(4646);
-var dom_1 = __webpack_require__(5079);
+var layoutCSS = __webpack_require__(34646);
+var dom_1 = __webpack_require__(25079);
 var AceLayout = /** @class */ (function () {
     function AceLayout(startBox, css) {
         dom_1.dom.importCssString(css !== null && css !== void 0 ? css : layoutCSS, "layout.css");
@@ -36811,7 +35116,7 @@ exports.AceLayout = AceLayout;
 
 /***/ }),
 
-/***/ 9367:
+/***/ 99367:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -36833,9 +35138,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MenuSearchBox = exports.MenuPopup = exports.MenuBar = exports.Menu = void 0;
-var lib_1 = __webpack_require__(3723);
-var dom_1 = __webpack_require__(5079);
-var menuCSS = __webpack_require__(3694);
+var lib_1 = __webpack_require__(53723);
+var dom_1 = __webpack_require__(25079);
+var menuCSS = __webpack_require__(23694);
 dom_1.dom.importCssString(menuCSS, "menu.css");
 var Menu = /** @class */ (function () {
     function Menu() {
@@ -37587,17 +35892,17 @@ exports.MenuSearchBox = MenuSearchBox;
 
 /***/ }),
 
-/***/ 7282:
+/***/ 97282:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MenuItems = exports.MenuManager = void 0;
-var menu_1 = __webpack_require__(9367);
+var menu_1 = __webpack_require__(99367);
 var hash_handler_1 = __webpack_require__(7116);
-var event = __webpack_require__(7989);
-var keyUtil = __webpack_require__(1797);
+var event = __webpack_require__(17989);
+var keyUtil = __webpack_require__(11797);
 function getPrevSibling(node, conditionFn, parentElement) {
     parentElement = node ? node.parentElement : parentElement;
     var wrapped = false;
@@ -37929,7 +36234,7 @@ exports.MenuItems = MenuItems;
 
 /***/ }),
 
-/***/ 279:
+/***/ 40279:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -37951,10 +36256,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Panel = void 0;
-var panelManager_1 = __webpack_require__(6790);
-var dom_1 = __webpack_require__(5079);
-var panelCSS = __webpack_require__(3612);
-var tabPanel_1 = __webpack_require__(6751);
+var panelManager_1 = __webpack_require__(16790);
+var dom_1 = __webpack_require__(25079);
+var panelCSS = __webpack_require__(73612);
+var tabPanel_1 = __webpack_require__(96751);
 dom_1.dom.importCssString(panelCSS, "panel.css");
 var Panel = /** @class */ (function (_super) {
     __extends(Panel, _super);
@@ -38002,7 +36307,7 @@ exports.Panel = Panel;
 
 /***/ }),
 
-/***/ 6790:
+/***/ 16790:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -38010,8 +36315,8 @@ exports.Panel = Panel;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PanelManager = void 0;
 var box_1 = __webpack_require__(8795);
-var accordion_1 = __webpack_require__(4563);
-var panelBar_1 = __webpack_require__(8659);
+var accordion_1 = __webpack_require__(64563);
+var panelBar_1 = __webpack_require__(68659);
 var PanelManager = /** @class */ (function () {
     function PanelManager(options) {
         this.layout = options.layout;
@@ -38131,10 +36436,10 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Tab = void 0;
 var tabManager_1 = __webpack_require__(8478);
-var dom_1 = __webpack_require__(5079);
-var tabCSS = __webpack_require__(2463);
-var params_1 = __webpack_require__(3130);
-var tabPanel_1 = __webpack_require__(6751);
+var dom_1 = __webpack_require__(25079);
+var tabCSS = __webpack_require__(52463);
+var params_1 = __webpack_require__(33130);
+var tabPanel_1 = __webpack_require__(96751);
 dom_1.dom.importCssString(tabCSS, "tab.css");
 var Tab = /** @class */ (function (_super) {
     __extends(Tab, _super);
@@ -38233,15 +36538,15 @@ exports.Tab = Tab;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabManager = void 0;
-var tabCommands_1 = __webpack_require__(2656);
+var tabCommands_1 = __webpack_require__(12656);
 var box_1 = __webpack_require__(8795);
-var oop = __webpack_require__(9359);
-var event_emitter_1 = __webpack_require__(3056);
-var useragent = __webpack_require__(618);
+var oop = __webpack_require__(89359);
+var event_emitter_1 = __webpack_require__(23056);
+var useragent = __webpack_require__(50618);
 var tab_1 = __webpack_require__(9165);
-var pane_1 = __webpack_require__(3167);
-var menuManager_1 = __webpack_require__(7282);
-var commandManager_1 = __webpack_require__(2583);
+var pane_1 = __webpack_require__(43167);
+var menuManager_1 = __webpack_require__(97282);
+var commandManager_1 = __webpack_require__(92583);
 var newTabCounter = 1;
 var TabManager = /** @class */ (function () {
     function TabManager(options) {
@@ -38457,7 +36762,7 @@ oop.implement(TabManager.prototype, event_emitter_1.EventEmitter);
 
 /***/ }),
 
-/***/ 6751:
+/***/ 96751:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -38485,7 +36790,7 @@ exports.TabPanel = TabPanel;
 
 /***/ }),
 
-/***/ 2631:
+/***/ 72631:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -38507,9 +36812,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MenuToolbar = void 0;
-var toolbar_1 = __webpack_require__(6319);
-var dom_1 = __webpack_require__(5079);
-var menuManager_1 = __webpack_require__(7282);
+var toolbar_1 = __webpack_require__(76319);
+var dom_1 = __webpack_require__(25079);
+var menuManager_1 = __webpack_require__(97282);
 var MenuToolbar = /** @class */ (function (_super) {
     __extends(MenuToolbar, _super);
     function MenuToolbar() {
@@ -38543,7 +36848,7 @@ exports.MenuToolbar = MenuToolbar;
 
 /***/ }),
 
-/***/ 8659:
+/***/ 68659:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -38565,10 +36870,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PanelBar = void 0;
-var tabPanelBar_1 = __webpack_require__(9225);
-var dom_1 = __webpack_require__(5079);
-var tabbar_handler_1 = __webpack_require__(1966);
-var panel_1 = __webpack_require__(279);
+var tabPanelBar_1 = __webpack_require__(29225);
+var dom_1 = __webpack_require__(25079);
+var tabbar_handler_1 = __webpack_require__(11966);
+var panel_1 = __webpack_require__(40279);
 var PanelBar = /** @class */ (function (_super) {
     __extends(PanelBar, _super);
     function PanelBar() {
@@ -38675,11 +36980,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabBar = void 0;
-var lib_1 = __webpack_require__(3723);
-var dom_1 = __webpack_require__(5079);
-var tabbar_handler_1 = __webpack_require__(1966);
+var lib_1 = __webpack_require__(53723);
+var dom_1 = __webpack_require__(25079);
+var tabbar_handler_1 = __webpack_require__(11966);
 var tabManager_1 = __webpack_require__(8478);
-var tabPanelBar_1 = __webpack_require__(9225);
+var tabPanelBar_1 = __webpack_require__(29225);
 var tab_1 = __webpack_require__(9165);
 var TabBar = /** @class */ (function (_super) {
     __extends(TabBar, _super);
@@ -38989,7 +37294,7 @@ exports.TabBar = TabBar;
 
 /***/ }),
 
-/***/ 9225:
+/***/ 29225:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -39011,7 +37316,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabPanelBar = void 0;
-var toolbar_1 = __webpack_require__(6319);
+var toolbar_1 = __webpack_require__(76319);
 var TabPanelBar = /** @class */ (function (_super) {
     __extends(TabPanelBar, _super);
     function TabPanelBar(options) {
@@ -39261,14 +37566,14 @@ exports.TabPanelBar = TabPanelBar;
 
 /***/ }),
 
-/***/ 6319:
+/***/ 76319:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Toolbar = void 0;
-var lib_1 = __webpack_require__(3723);
+var lib_1 = __webpack_require__(53723);
 var Toolbar = /** @class */ (function () {
     function Toolbar(options) {
         this.direction = (options === null || options === void 0 ? void 0 : options.direction) || "horizontal";
@@ -39285,7 +37590,7 @@ exports.Toolbar = Toolbar;
 
 /***/ }),
 
-/***/ 6475:
+/***/ 66475:
 /***/ ((module) => {
 
 "use strict";
@@ -39293,7 +37598,7 @@ module.exports = "data:image/gif;base64,R0lGODlhDAAjAJEAAAAAAP///////wAAACH5BAEA
 
 /***/ }),
 
-/***/ 7149:
+/***/ 87149:
 /***/ ((module) => {
 
 "use strict";
@@ -39301,7 +37606,7 @@ module.exports = "data:image/gif;base64,R0lGODlhDAAjAJEAAAAAAP///////wAAACH5BAEA
 
 /***/ }),
 
-/***/ 7112:
+/***/ 87112:
 /***/ ((module) => {
 
 "use strict";
@@ -39309,7 +37614,7 @@ module.exports = "data:image/gif;base64,R0lGODlhBAAeAJEAAAAAAP///////wAAACH5BAEA
 
 /***/ }),
 
-/***/ 2527:
+/***/ 72527:
 /***/ ((module) => {
 
 "use strict";
@@ -39359,6 +37664,36 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -39371,9 +37706,89 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/ensure chunk */
+/******/ 	(() => {
+/******/ 		__webpack_require__.f = {};
+/******/ 		// This file contains only the entry chunk.
+/******/ 		// The chunk loading function for additional chunks
+/******/ 		__webpack_require__.e = (chunkId) => {
+/******/ 			return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
+/******/ 				__webpack_require__.f[key](chunkId, promises);
+/******/ 				return promises;
+/******/ 			}, []));
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/get javascript chunk filename */
+/******/ 	(() => {
+/******/ 		// This function allow to reference async chunks
+/******/ 		__webpack_require__.u = (chunkId) => {
+/******/ 			// return url for filenames based on template
+/******/ 			return "bundle." + chunkId + ".js";
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/load script */
+/******/ 	(() => {
+/******/ 		var inProgress = {};
+/******/ 		var dataWebpackPrefix = "ace-layout:";
+/******/ 		// loadScript function to load a script via script tag
+/******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
+/******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
+/******/ 			var script, needAttach;
+/******/ 			if(key !== undefined) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				for(var i = 0; i < scripts.length; i++) {
+/******/ 					var s = scripts[i];
+/******/ 					if(s.getAttribute("src") == url || s.getAttribute("data-webpack") == dataWebpackPrefix + key) { script = s; break; }
+/******/ 				}
+/******/ 			}
+/******/ 			if(!script) {
+/******/ 				needAttach = true;
+/******/ 				script = document.createElement('script');
+/******/ 		
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
+/******/ 				script.src = url;
+/******/ 			}
+/******/ 			inProgress[url] = [done];
+/******/ 			var onScriptComplete = (prev, event) => {
+/******/ 				// avoid mem leaks in IE.
+/******/ 				script.onerror = script.onload = null;
+/******/ 				clearTimeout(timeout);
+/******/ 				var doneFns = inProgress[url];
+/******/ 				delete inProgress[url];
+/******/ 				script.parentNode && script.parentNode.removeChild(script);
+/******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
+/******/ 				if(prev) return prev(event);
+/******/ 			}
+/******/ 			;
+/******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
+/******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
+/******/ 			script.onload = onScriptComplete.bind(null, script.onload);
+/******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -39387,6 +37802,26 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		__webpack_require__.b = document.baseURI || self.location.href;
@@ -39395,10 +37830,47 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			225: 0
+/******/ 			7225: 0
 /******/ 		};
 /******/ 		
-/******/ 		// no chunk on demand loading
+/******/ 		__webpack_require__.f.j = (chunkId, promises) => {
+/******/ 				// JSONP chunk loading for javascript
+/******/ 				var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 				if(installedChunkData !== 0) { // 0 means "already installed".
+/******/ 		
+/******/ 					// a Promise means "currently loading".
+/******/ 					if(installedChunkData) {
+/******/ 						promises.push(installedChunkData[2]);
+/******/ 					} else {
+/******/ 						if(true) { // all chunks have JS
+/******/ 							// setup Promise in chunk cache
+/******/ 							var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
+/******/ 							promises.push(installedChunkData[2] = promise);
+/******/ 		
+/******/ 							// start chunk loading
+/******/ 							var url = __webpack_require__.p + __webpack_require__.u(chunkId);
+/******/ 							// create error before stack unwound to get useful stacktrace later
+/******/ 							var error = new Error();
+/******/ 							var loadingEnded = (event) => {
+/******/ 								if(__webpack_require__.o(installedChunks, chunkId)) {
+/******/ 									installedChunkData = installedChunks[chunkId];
+/******/ 									if(installedChunkData !== 0) installedChunks[chunkId] = undefined;
+/******/ 									if(installedChunkData) {
+/******/ 										var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 										var realSrc = event && event.target && event.target.src;
+/******/ 										error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 										error.name = 'ChunkLoadError';
+/******/ 										error.type = errorType;
+/******/ 										error.request = realSrc;
+/******/ 										installedChunkData[1](error);
+/******/ 									}
+/******/ 								}
+/******/ 							};
+/******/ 							__webpack_require__.l(url, loadingEnded, "chunk-" + chunkId, chunkId);
+/******/ 						} else installedChunks[chunkId] = 0;
+/******/ 					}
+/******/ 				}
+/******/ 		};
 /******/ 		
 /******/ 		// no prefetching
 /******/ 		
@@ -39410,7 +37882,34 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		
 /******/ 		// no on chunks loaded
 /******/ 		
-/******/ 		// no jsonp function
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 		
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkace_layout"] = self["webpackChunkace_layout"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
@@ -39423,7 +37922,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(5328);
+/******/ 	var __webpack_exports__ = __webpack_require__(25328);
 /******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()
