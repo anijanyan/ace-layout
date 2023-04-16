@@ -15,7 +15,7 @@ import {dom} from "ace-layout/utils/dom";
 
 import keyUtil from "ace-code/src/lib/keys";
 
-import event from "ace-code/src/lib/event";
+import * as event from "ace-code/src/lib/event";
 
 class FindBar extends Toolbar{
     render() {
