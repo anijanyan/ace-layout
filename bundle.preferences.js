@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(self, () => {
-return /******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -635,7 +625,7 @@ exports.isMobile = exports.isIOS || exports.isAndroid;
 
 /***/ }),
 
-/***/ 49578:
+/***/ 21705:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -650,14 +640,14 @@ exports.isMobile = exports.isIOS || exports.isAndroid;
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}", "",{"version":3,"sources":["webpack://./styles/accordion.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;;AAGA;IACI,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,oBAAoB;IACpB,kBAAkB;AACtB;AACA;IACI,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,UAAU;IACV,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf","sourcesContent":[".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/accordion.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;;AAGA;IACI,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,oBAAoB;IACpB,kBAAkB;AACtB;AACA;IACI,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,UAAU;IACV,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf","sourcesContent":[".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 17724:
+/***/ 75715:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -672,14 +662,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".toggle-block {\n    position: absolut
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}", "",{"version":3,"sources":["webpack://./styles/button.css"],"names":[],"mappings":"AAAA;IACI,gGAAgG;IAChG,wFAAwF;IACxF,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,+BAA+B;AACnC;AACA;IACI,oIAAoI;AACxI;AACA;IACI,sIAAsI;AAC1I;AACA;IACI,qCAAqC;AACzC","sourcesContent":[".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/button.css"],"names":[],"mappings":"AAAA;IACI,gGAAgG;IAChG,wFAAwF;IACxF,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,+BAA+B;AACnC;AACA;IACI,oIAAoI;AACxI;AACA;IACI,sIAAsI;AAC1I;AACA;IACI,qCAAqC;AACzC","sourcesContent":[".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 58659:
+/***/ 86800:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -695,40 +685,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".blackbutton {\n    background-image: 
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(153), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(37113), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".black_dropdown {\n    display: inline-block;\n    position: relative;\n    overflow: hidden;\n    height: 21px;\n    border-radius: 3px;\n    border: 1px solid #1c1c1c;\n    background: #383838 linear-gradient(0deg, #323232 0%, #383838 100%);\n    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1);\n    text-shadow: none;\n    min-height: 19px !important;\n    max-height: 19px !important;\n}\n.black_dropdown .lbl {\n    position: relative;\n    overflow: hidden;\n    height: 17px;\n    padding: 4px 0 0 6px;\n    margin: 0 19px 0 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n    color: #c0dabe;\n    line-height: 13px;\n    border-right: 1px solid #1c1c1c;\n    cursor: default;\n    white-space: nowrap;\n}\n.black_dropdown .button {\n    width: 19px;\n    border-left: 1px solid #4d4c4d;\n    bottom: 0;\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-repeat: no-repeat;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: 9px 13px;\n    background-position: 4px 4px;\n}\n.black_dropdownOver {\n    background-image: linear-gradient(0deg, #2f2f2f 0%, #3f3f3f 100%);\n}\n.black_dropdownDown {\n    background: #2d2d2d linear-gradient(0deg, #2d2d2d 0%, #363636 100%);\n}", "",{"version":3,"sources":["webpack://./styles/dropdown.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,kBAAkB;IAClB,gBAAgB;IAChB,YAAY;IACZ,kBAAkB;IAClB,yBAAyB;IACzB,mEAAmE;IACnE,iGAAiG;IACjG,iBAAiB;IACjB,2BAA2B;IAC3B,2BAA2B;AAC/B;AACA;IACI,kBAAkB;IAClB,gBAAgB;IAChB,YAAY;IACZ,oBAAoB;IACpB,kBAAkB;IAClB,yCAAyC;IACzC,eAAe;IACf,cAAc;IACd,iBAAiB;IACjB,+BAA+B;IAC/B,eAAe;IACf,mBAAmB;AACvB;AACA;IACI,WAAW;IACX,8BAA8B;IAC9B,SAAS;IACT,kBAAkB;IAClB,MAAM;IACN,QAAQ;IACR,4BAA4B;IAC5B,yDAAmE;IACnE,yBAAyB;IACzB,4BAA4B;AAChC;AACA;IACI,iEAAiE;AACrE;AACA;IACI,mEAAmE;AACvE","sourcesContent":[".black_dropdown {\n    display: inline-block;\n    position: relative;\n    overflow: hidden;\n    height: 21px;\n    border-radius: 3px;\n    border: 1px solid #1c1c1c;\n    background: #383838 linear-gradient(0deg, #323232 0%, #383838 100%);\n    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1);\n    text-shadow: none;\n    min-height: 19px !important;\n    max-height: 19px !important;\n}\n.black_dropdown .lbl {\n    position: relative;\n    overflow: hidden;\n    height: 17px;\n    padding: 4px 0 0 6px;\n    margin: 0 19px 0 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n    color: #c0dabe;\n    line-height: 13px;\n    border-right: 1px solid #1c1c1c;\n    cursor: default;\n    white-space: nowrap;\n}\n.black_dropdown .button {\n    width: 19px;\n    border-left: 1px solid #4d4c4d;\n    bottom: 0;\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-repeat: no-repeat;\n    background-image: url(../images/dropdown-dark-glossy/button@1x.png);\n    background-size: 9px 13px;\n    background-position: 4px 4px;\n}\n.black_dropdownOver {\n    background-image: linear-gradient(0deg, #2f2f2f 0%, #3f3f3f 100%);\n}\n.black_dropdownDown {\n    background: #2d2d2d linear-gradient(0deg, #2d2d2d 0%, #363636 100%);\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".black_dropdown {\n    display: inline-block;\n    position: relative;\n    overflow: hidden;\n    height: 21px;\n    border-radius: 3px;\n    border: 1px solid #1c1c1c;\n    background: #383838 linear-gradient(0deg, #323232 0%, #383838 100%);\n    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1);\n    text-shadow: none;\n    min-height: 19px !important;\n    max-height: 19px !important;\n}\n.black_dropdown .lbl {\n    position: relative;\n    overflow: hidden;\n    height: 17px;\n    padding: 4px 0 0 6px;\n    margin: 0 19px 0 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n    color: #c0dabe;\n    line-height: 13px;\n    border-right: 1px solid #1c1c1c;\n    cursor: default;\n    white-space: nowrap;\n}\n.black_dropdown .button {\n    width: 19px;\n    border-left: 1px solid #4d4c4d;\n    bottom: 0;\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-repeat: no-repeat;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: 9px 13px;\n    background-position: 4px 4px;\n}\n.black_dropdownOver {\n    background-image: linear-gradient(0deg, #2f2f2f 0%, #3f3f3f 100%);\n}\n.black_dropdownDown {\n    background: #2d2d2d linear-gradient(0deg, #2d2d2d 0%, #363636 100%);\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/dropdown.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,kBAAkB;IAClB,gBAAgB;IAChB,YAAY;IACZ,kBAAkB;IAClB,yBAAyB;IACzB,mEAAmE;IACnE,iGAAiG;IACjG,iBAAiB;IACjB,2BAA2B;IAC3B,2BAA2B;AAC/B;AACA;IACI,kBAAkB;IAClB,gBAAgB;IAChB,YAAY;IACZ,oBAAoB;IACpB,kBAAkB;IAClB,yCAAyC;IACzC,eAAe;IACf,cAAc;IACd,iBAAiB;IACjB,+BAA+B;IAC/B,eAAe;IACf,mBAAmB;AACvB;AACA;IACI,WAAW;IACX,8BAA8B;IAC9B,SAAS;IACT,kBAAkB;IAClB,MAAM;IACN,QAAQ;IACR,4BAA4B;IAC5B,yDAAmE;IACnE,yBAAyB;IACzB,4BAA4B;AAChC;AACA;IACI,iEAAiE;AACrE;AACA;IACI,mEAAmE;AACvE","sourcesContent":[".black_dropdown {\n    display: inline-block;\n    position: relative;\n    overflow: hidden;\n    height: 21px;\n    border-radius: 3px;\n    border: 1px solid #1c1c1c;\n    background: #383838 linear-gradient(0deg, #323232 0%, #383838 100%);\n    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 0px 0px rgba(255, 255, 255, 0.1);\n    text-shadow: none;\n    min-height: 19px !important;\n    max-height: 19px !important;\n}\n.black_dropdown .lbl {\n    position: relative;\n    overflow: hidden;\n    height: 17px;\n    padding: 4px 0 0 6px;\n    margin: 0 19px 0 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n    color: #c0dabe;\n    line-height: 13px;\n    border-right: 1px solid #1c1c1c;\n    cursor: default;\n    white-space: nowrap;\n}\n.black_dropdown .button {\n    width: 19px;\n    border-left: 1px solid #4d4c4d;\n    bottom: 0;\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-repeat: no-repeat;\n    background-image: url(../images/dropdown-dark-glossy/button@1x.png);\n    background-size: 9px 13px;\n    background-position: 4px 4px;\n}\n.black_dropdownOver {\n    background-image: linear-gradient(0deg, #2f2f2f 0%, #3f3f3f 100%);\n}\n.black_dropdownDown {\n    background: #2d2d2d linear-gradient(0deg, #2d2d2d 0%, #363636 100%);\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 12100:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0px;\n    position: absolute;\n    right: 3px;\n    top: 0px;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}", "",{"version":3,"sources":["webpack://./styles/layout.css"],"names":[],"mappings":"AAAA;IACI,+BAA+B;AACnC;;AAEA,2BAA2B,oBAAoB,CAAC;;AAEhD;IACI,iCAAiC;IACjC,UAAU;IACV,kBAAkB;AACtB;;AAEA;IACI,UAAU;IACV,iBAAiB;AACrB;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,iDAAiD;AACrD;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA;AACA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;;AAGA,mBAAmB,iBAAiB;AACpC;IACI,yBAAyB;IACzB,oBAAoB;AACxB;AACA;IACI,oBAAoB;AACxB;;;AAGA;IACI,0BAA0B;IAC1B,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,4BAA4B;IAC5B,0BAA0B;IAC1B,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,yBAAyB;IACzB,aAAa;IACb,YAAY;IACZ,kBAAkB;IAClB,UAAU;IACV,QAAQ;IACR,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,wDAAwD;IACxD,4DAA4D;AAChE;;;AAGA;IACI,4BAA4B;IAC5B,wDAAwD;IACxD,mCAAmC;AACvC;;;AAGA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,2CAA2C;IAC3C,kBAAkB;IAClB,sBAAsB;AAC1B;AACA;IACI,8CAA8C;IAC9C,sBAAsB;AAC1B;AACA;IACI,2CAA2C;AAC/C;;AAEA;IACI,6BAA6B;IAC7B,yBAAyB;IACzB,2BAA2B;AAC/B;;AAEA;IACI;AACJ;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,YAAY;AAChB;AACA;IACI;AACJ;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ;AACJ;AACA;;IAEI,4BAA4B;IAC5B;AACJ;AACA;IACI,uBAAuB;IACvB,cAAc;AAClB;AACA;IACI,mCAAmC;IACnC;AACJ;AACA;IACI,oBAAoB;IACpB,qBAAqB;AACzB;;AAEA;IACI,+CAA+C;IAC/C,oBAAoB;IACpB,YAAY;AAChB;;;AAGA;IACI,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,SAAS;IACT,eAAe;IACf,aAAa;IACb,wBAAwB;AAC5B","sourcesContent":["body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0px;\n    position: absolute;\n    right: 3px;\n    top: 0px;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 19229:
+/***/ 47594:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -744,9 +712,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: Tahoma, sans-
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(87112), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(87149), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(66475), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(24403), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(6646), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(21527), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(72527), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
@@ -754,14 +722,14 @@ var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}", "",{"version":3,"sources":["webpack://./styles/menu.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,sBAAsB;IACtB,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,qBAAqB;IACrB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,sBAAsB;IACtB,gCAAgC;IAChC,yBAAyB,EAAE,sBAAsB,EAAE,qBAAqB,EAAE,iBAAiB;AAC/F;AACA;IACI,yBAAyB;IACzB,+FAA+F;IAC/F,cAAc;AAClB;AACA;IACI,mBAAmB;IACnB,yBAAyB;IACzB,iGAAiG;IACjG,SAAS;IACT,eAAe;IACf,sBAAsB;IACtB,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,OAAO;IACP,MAAM;AACV;AACA;IACI,WAAW;AACf;AACA;IACI,eAAe;IACf,iBAAiB;IACjB,4BAA4B;AAChC;;;AAGA;IACI,kBAAkB;IAClB,oBAAoB;IACpB,cAAc;IACd,kBAAkB;IAClB,iBAAiB;IACjB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,aAAa;IACb,yBAAyB;IACzB,gDAAgD;IAChD,yBAAyB;IACzB,gCAAgC;IAChC,gBAAgB;AACpB;AACA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB;AACA;IACI,yBAAyB;IACzB,iBAAiB;IACjB,cAAc;IACd,iBAAiB;AACrB;AACA;IACI,yBAAyB;IACzB,cAAc;AAClB;AACA;IACI,iBAAiB;IACjB,UAAU;IACV,cAAc;IACd,eAAe;IACf,6BAA6B;IAC7B,gCAAgC;IAChC,SAAS;AACb;AACA;IACI,WAAW;IACX,eAAe;IACf,WAAW;IACX,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;AAChB;AACA;IACI,yEAAoE;IACpE,UAAU;IACV,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,UAAU;IACV,iBAAiB;IACjB,WAAW;AACf;AACA;IACI,yEAAoE;AACxE;AACA;IACI,cAAc;IACd,iBAAiB;IACjB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,WAAW;IACX,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,gBAAgB;AACpB;AACA;IACI,WAAW;AACf;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,YAAY;AAChB;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,yBAAyB;IACzB,yBAAyB;IACzB,YAAY;IACZ,kBAAkB;IAClB,0BAA0B;IAC1B,eAAe;AACnB;;AAEA;IACI,cAAc;AAClB;AACA;IACI,mEAA+Q;IAC/Q,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;AACA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,mEAAsD;IACtD,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;;AAEA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB","sourcesContent":[".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(\"../images/check.gif\") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/menu.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,sBAAsB;IACtB,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,qBAAqB;IACrB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,sBAAsB;IACtB,gCAAgC;IAChC,yBAAyB,EAAE,sBAAsB,EAAE,qBAAqB,EAAE,iBAAiB;AAC/F;AACA;IACI,yBAAyB;IACzB,+FAA+F;IAC/F,cAAc;AAClB;AACA;IACI,mBAAmB;IACnB,yBAAyB;IACzB,iGAAiG;IACjG,SAAS;IACT,eAAe;IACf,sBAAsB;IACtB,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,OAAO;IACP,MAAM;AACV;AACA;IACI,WAAW;AACf;AACA;IACI,eAAe;IACf,iBAAiB;IACjB,4BAA4B;AAChC;;;AAGA;IACI,kBAAkB;IAClB,oBAAoB;IACpB,cAAc;IACd,kBAAkB;IAClB,iBAAiB;IACjB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,aAAa;IACb,yBAAyB;IACzB,gDAAgD;IAChD,yBAAyB;IACzB,gCAAgC;IAChC,gBAAgB;AACpB;AACA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB;AACA;IACI,yBAAyB;IACzB,iBAAiB;IACjB,cAAc;IACd,iBAAiB;AACrB;AACA;IACI,yBAAyB;IACzB,cAAc;AAClB;AACA;IACI,iBAAiB;IACjB,UAAU;IACV,cAAc;IACd,eAAe;IACf,6BAA6B;IAC7B,gCAAgC;IAChC,SAAS;AACb;AACA;IACI,WAAW;IACX,eAAe;IACf,WAAW;IACX,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;AAChB;AACA;IACI,yEAAoE;IACpE,UAAU;IACV,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,UAAU;IACV,iBAAiB;IACjB,WAAW;AACf;AACA;IACI,yEAAoE;AACxE;AACA;IACI,cAAc;IACd,iBAAiB;IACjB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,WAAW;IACX,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,gBAAgB;AACpB;AACA;IACI,WAAW;AACf;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,YAAY;AAChB;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,yBAAyB;IACzB,yBAAyB;IACzB,YAAY;IACZ,kBAAkB;IAClB,0BAA0B;IAC1B,eAAe;AACnB;;AAEA;IACI,cAAc;AAClB;AACA;IACI,mEAA+Q;IAC/Q,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;AACA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,mEAAsD;IACtD,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;;AAEA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB","sourcesContent":[".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(\"../images/check.gif\") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 18753:
+/***/ 52368:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -776,36 +744,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".menuButton {\n    height: 100%;\n    
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n", "",{"version":3,"sources":["webpack://./styles/panel.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;IACI,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,sBAAsB;IACtB,iCAAiC;IACjC,8BAA8B;IAC9B,iBAAiB;IACjB,YAAY;IACZ,WAAW;IACX,kBAAkB;AACtB;AACA;IACI,mBAAmB;IACnB,4BAA4B;AAChC;AACA;IACI,yBAAyB;AAC7B;AACA;IACI,sCAAsC;IACtC,4BAA4B;AAChC;AACA;IACI,OAAO;IACP,cAAc;IACd,gBAAgB;IAChB,uBAAuB;IACvB,mBAAmB;AACvB","sourcesContent":[".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/panel.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;IACI,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,sBAAsB;IACtB,iCAAiC;IACjC,8BAA8B;IAC9B,iBAAiB;IACjB,YAAY;IACZ,WAAW;IACX,kBAAkB;AACtB;AACA;IACI,mBAAmB;IACnB,4BAA4B;AAChC;AACA;IACI,yBAAyB;AAC7B;AACA;IACI,sCAAsC;IACtC,4BAA4B;AAChC;AACA;IACI,OAAO;IACP,cAAc;IACd,gBAAgB;IAChB,uBAAuB;IACvB,mBAAmB;AACvB","sourcesContent":[".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 812:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".bar-preferences {\n    overflow-y: hidden;\n    overflow-x: hidden;\n    color: #ddd;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    text-shadow: 0 1px #232323;\n    background: #363636;\n}\n\n.bar-preferences .panelbar {\n    background: #363636;\n}\n.bar-preferences > div {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .search_results {\n    color: white;\n}\n\n.bar-preferences .header {\n    padding: 8px 15px 8px 15px;\n    font-size: 14px;\n    color: #dddddd;\n    border-bottom: 1px solid #232323;\n    background-color: #313131;\n    margin: 0\n}\n\n.bar-preferences .tbsimple {\n    background: rgba(255, 255, 255, 0.1);\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    height: 15px;\n    color: #cccccc;\n    padding: 3px;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    border-radius: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .tbsimpleFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: none;\n}\n\n.preferenceItem {\n    padding: 2px 2px 2px 16px;\n    position: relative;\n    overflow: visible;\n    color: #333;\n}\n\n.bar-preferences .label, .bar-preferences .preferenceItem span {\n    color: #999999;\n    font-size: 12px;\n    text-overflow: ellipsis;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    top: 0;\n    font-family: Tahoma, Arial;\n    cursor: default;\n    padding: 1px 3px 2px 7px;\n    position: relative;\n    overflow: visible;\n    display: inline-block;\n    line-height: 13px;\n    white-space: nowrap;\n    width: 300px;\n}\n\n.spinner {\n    display: inline-block;\n    height: 19px;\n    margin: 0;\n    padding: 0;\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    background: rgba(255, 255, 255, 0.1);\n    min-height: 18px;\n    max-height: 18px;\n    text-align: right;\n}\n\n.spinnerFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: 0;\n}\n\n.spinner input {\n    outline: none;\n    border-right: 0;\n    padding: 1px 1px 2px 0;\n    text-align: right;\n    left: 0;\n    height: 14px;\n    color: #cccccc;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    margin: 0;\n    z-index: 10000;\n    border: 0;\n    background: transparent;\n}\n\n::-webkit-scrollbar {\n    background: none;\n    width: 16px;\n    height: 16px;\n}\n\n::-webkit-scrollbar-thumb {\n    border: solid 0 rgba(0, 0, 0, 0);\n    border-right-width: 4px;\n    border-left-width: 4px;\n    -webkit-border-radius: 9px 4px;\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.2), inset 0 0 0 4px rgba(128, 128, 128, 0.2);\n}\n\n::-webkit-scrollbar-track-piece {\n    margin: 4px 0;\n}\n\n::-webkit-scrollbar-thumb:horizontal {\n    border-right-width: 0;\n    border-left-width: 0;\n    border-top-width: 4px;\n    border-bottom-width: 4px;\n    -webkit-border-radius: 4px 9px;\n}\n\n::-webkit-scrollbar-thumb:hover {\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.9), inset 0 0 0 4px rgba(128, 128, 128, 0.9);\n}\n\n::-webkit-scrollbar-corner {\n    background: transparent;\n}\n\n.ace_scrollbar-h {\n    margin: 0 2px\n}", "",{"version":3,"sources":["webpack://./styles/preferences.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,kBAAkB;IAClB,WAAW;IACX,0BAA0B;IAC1B,eAAe;IACf,0BAA0B;IAC1B,mBAAmB;AACvB;;AAEA;IACI,mBAAmB;AACvB;AACA;IACI,yCAAyC;IACzC,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,eAAe;IACf,cAAc;IACd,gCAAgC;IAChC,yBAAyB;IACzB;AACJ;;AAEA;IACI,oCAAoC;IACpC,oCAAoC;IACpC,YAAY;IACZ,cAAc;IACd,YAAY;IACZ,mCAAmC;IACnC,kCAAkC;IAClC,gBAAgB;IAChB,yCAAyC;IACzC,eAAe;AACnB;;AAEA;IACI,oCAAoC;IACpC,gBAAgB;AACpB;;AAEA;IACI,yBAAyB;IACzB,kBAAkB;IAClB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,cAAc;IACd,eAAe;IACf,uBAAuB;IACvB,mCAAmC;IACnC,kCAAkC;IAClC,MAAM;IACN,0BAA0B;IAC1B,eAAe;IACf,wBAAwB;IACxB,kBAAkB;IAClB,iBAAiB;IACjB,qBAAqB;IACrB,iBAAiB;IACjB,mBAAmB;IACnB,YAAY;AAChB;;AAEA;IACI,qBAAqB;IACrB,YAAY;IACZ,SAAS;IACT,UAAU;IACV,oCAAoC;IACpC,oCAAoC;IACpC,gBAAgB;IAChB,gBAAgB;IAChB,iBAAiB;AACrB;;AAEA;IACI,oCAAoC;IACpC,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,eAAe;IACf,sBAAsB;IACtB,iBAAiB;IACjB,OAAO;IACP,YAAY;IACZ,cAAc;IACd,0BAA0B;IAC1B,eAAe;IACf,SAAS;IACT,cAAc;IACd,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,gBAAgB;IAChB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,gCAAgC;IAChC,uBAAuB;IACvB,sBAAsB;IACtB,8BAA8B;IAC9B,sGAAsG;AAC1G;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,qBAAqB;IACrB,oBAAoB;IACpB,qBAAqB;IACrB,wBAAwB;IACxB,8BAA8B;AAClC;;AAEA;IACI,sGAAsG;AAC1G;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI;AACJ","sourcesContent":[".bar-preferences {\n    overflow-y: hidden;\n    overflow-x: hidden;\n    color: #ddd;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    text-shadow: 0 1px #232323;\n    background: #363636;\n}\n\n.bar-preferences .panelbar {\n    background: #363636;\n}\n.bar-preferences > div {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .search_results {\n    color: white;\n}\n\n.bar-preferences .header {\n    padding: 8px 15px 8px 15px;\n    font-size: 14px;\n    color: #dddddd;\n    border-bottom: 1px solid #232323;\n    background-color: #313131;\n    margin: 0\n}\n\n.bar-preferences .tbsimple {\n    background: rgba(255, 255, 255, 0.1);\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    height: 15px;\n    color: #cccccc;\n    padding: 3px;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    border-radius: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .tbsimpleFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: none;\n}\n\n.preferenceItem {\n    padding: 2px 2px 2px 16px;\n    position: relative;\n    overflow: visible;\n    color: #333;\n}\n\n.bar-preferences .label, .bar-preferences .preferenceItem span {\n    color: #999999;\n    font-size: 12px;\n    text-overflow: ellipsis;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    top: 0;\n    font-family: Tahoma, Arial;\n    cursor: default;\n    padding: 1px 3px 2px 7px;\n    position: relative;\n    overflow: visible;\n    display: inline-block;\n    line-height: 13px;\n    white-space: nowrap;\n    width: 300px;\n}\n\n.spinner {\n    display: inline-block;\n    height: 19px;\n    margin: 0;\n    padding: 0;\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    background: rgba(255, 255, 255, 0.1);\n    min-height: 18px;\n    max-height: 18px;\n    text-align: right;\n}\n\n.spinnerFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: 0;\n}\n\n.spinner input {\n    outline: none;\n    border-right: 0;\n    padding: 1px 1px 2px 0;\n    text-align: right;\n    left: 0;\n    height: 14px;\n    color: #cccccc;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    margin: 0;\n    z-index: 10000;\n    border: 0;\n    background: transparent;\n}\n\n::-webkit-scrollbar {\n    background: none;\n    width: 16px;\n    height: 16px;\n}\n\n::-webkit-scrollbar-thumb {\n    border: solid 0 rgba(0, 0, 0, 0);\n    border-right-width: 4px;\n    border-left-width: 4px;\n    -webkit-border-radius: 9px 4px;\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.2), inset 0 0 0 4px rgba(128, 128, 128, 0.2);\n}\n\n::-webkit-scrollbar-track-piece {\n    margin: 4px 0;\n}\n\n::-webkit-scrollbar-thumb:horizontal {\n    border-right-width: 0;\n    border-left-width: 0;\n    border-top-width: 4px;\n    border-bottom-width: 4px;\n    -webkit-border-radius: 4px 9px;\n}\n\n::-webkit-scrollbar-thumb:hover {\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.9), inset 0 0 0 4px rgba(128, 128, 128, 0.9);\n}\n\n::-webkit-scrollbar-corner {\n    background: transparent;\n}\n\n.ace_scrollbar-h {\n    margin: 0 2px\n}"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ 44251:
+/***/ 83619:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -821,13 +767,35 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".bar-preferences {\n    overflow-y: hi
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(68334), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(25203), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(85981), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(7486), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".cboffline {\n    width: 55px;\n    height: 21px;\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat 0 -21px;\n    display: inline-block;\n}\n.cbofflineDown {\n    background-position: 0 0px;\n}\n.cbofflineChecked {\n    background-position: 0 0px;\n}\n\n.checkbox {\n    display: inline-block;\n    width: 16px;\n    height: 17px;\n    background-repeat: no-repeat;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n    background-size: 16px 136px;\n    background-position: 0 0;\n}\n\n.checkboxOver {\n    background-position: 0 -17px;\n}\n\n.checkboxDown {\n    background-position: 0 -34px;\n}\n\n.checkboxChecked {\n    background-position: 0 -51px;\n}", "",{"version":3,"sources":["webpack://./styles/switcher.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,qEAAuD;IACvD,qBAAqB;AACzB;AACA;IACI,0BAA0B;AAC9B;AACA;IACI,0BAA0B;AAC9B;;AAEA;IACI,qBAAqB;IACrB,WAAW;IACX,YAAY;IACZ,4BAA4B;IAC5B,yDAAwD;IACxD,2BAA2B;IAC3B,wBAAwB;AAC5B;;AAEA;IACI,4BAA4B;AAChC;;AAEA;IACI,4BAA4B;AAChC;;AAEA;IACI,4BAA4B;AAChC","sourcesContent":[".cboffline {\n    width: 55px;\n    height: 21px;\n    background: url(\"../images/sync.png\") no-repeat 0 -21px;\n    display: inline-block;\n}\n.cbofflineDown {\n    background-position: 0 0px;\n}\n.cbofflineChecked {\n    background-position: 0 0px;\n}\n\n.checkbox {\n    display: inline-block;\n    width: 16px;\n    height: 17px;\n    background-repeat: no-repeat;\n    background-image: url(\"../images/checkbox_black@1x.png\");\n    background-size: 16px 136px;\n    background-position: 0 0;\n}\n\n.checkboxOver {\n    background-position: 0 -17px;\n}\n\n.checkboxDown {\n    background-position: 0 -34px;\n}\n\n.checkboxChecked {\n    background-position: 0 -51px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".cboffline {\n    width: 55px;\n    height: 21px;\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat 0 -21px;\n    display: inline-block;\n}\n.cbofflineDown {\n    background-position: 0 0px;\n}\n.cbofflineChecked {\n    background-position: 0 0px;\n}\n\n.checkbox {\n    display: inline-block;\n    width: 16px;\n    height: 17px;\n    background-repeat: no-repeat;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n    background-size: 16px 136px;\n    background-position: 0 0;\n}\n\n.checkboxOver {\n    background-position: 0 -17px;\n}\n\n.checkboxDown {\n    background-position: 0 -34px;\n}\n\n.checkboxChecked {\n    background-position: 0 -51px;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/switcher.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,qEAAuD;IACvD,qBAAqB;AACzB;AACA;IACI,0BAA0B;AAC9B;AACA;IACI,0BAA0B;AAC9B;;AAEA;IACI,qBAAqB;IACrB,WAAW;IACX,YAAY;IACZ,4BAA4B;IAC5B,yDAAwD;IACxD,2BAA2B;IAC3B,wBAAwB;AAC5B;;AAEA;IACI,4BAA4B;AAChC;;AAEA;IACI,4BAA4B;AAChC;;AAEA;IACI,4BAA4B;AAChC","sourcesContent":[".cboffline {\n    width: 55px;\n    height: 21px;\n    background: url(\"../images/sync.png\") no-repeat 0 -21px;\n    display: inline-block;\n}\n.cbofflineDown {\n    background-position: 0 0px;\n}\n.cbofflineChecked {\n    background-position: 0 0px;\n}\n\n.checkbox {\n    display: inline-block;\n    width: 16px;\n    height: 17px;\n    background-repeat: no-repeat;\n    background-image: url(\"../images/checkbox_black@1x.png\");\n    background-size: 16px 136px;\n    background-position: 0 0;\n}\n\n.checkboxOver {\n    background-position: 0 -17px;\n}\n\n.checkboxDown {\n    background-position: 0 -34px;\n}\n\n.checkboxChecked {\n    background-position: 0 -51px;\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ 85334:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(87537);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23645);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".bar-preferences {\n    overflow-y: hidden;\n    overflow-x: hidden;\n    color: #ddd;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    text-shadow: 0 1px #232323;\n    background: #363636;\n}\n\n.bar-preferences .panelbar {\n    background: #363636;\n}\n.bar-preferences > div {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .search_results {\n    color: white;\n}\n\n.bar-preferences .header {\n    padding: 8px 15px 8px 15px;\n    font-size: 14px;\n    color: #dddddd;\n    border-bottom: 1px solid #232323;\n    background-color: #313131;\n    margin: 0\n}\n\n.bar-preferences .tbsimple {\n    background: rgba(255, 255, 255, 0.1);\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    height: 15px;\n    color: #cccccc;\n    padding: 3px;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    border-radius: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .tbsimpleFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: none;\n}\n\n.preferenceItem {\n    padding: 2px 2px 2px 16px;\n    position: relative;\n    overflow: visible;\n    color: #333;\n}\n\n.bar-preferences .label, .bar-preferences .preferenceItem span {\n    color: #999999;\n    font-size: 12px;\n    text-overflow: ellipsis;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    top: 0;\n    font-family: Tahoma, Arial;\n    cursor: default;\n    padding: 1px 3px 2px 7px;\n    position: relative;\n    overflow: visible;\n    display: inline-block;\n    line-height: 13px;\n    white-space: nowrap;\n    width: 300px;\n}\n\n.spinner {\n    display: inline-block;\n    height: 19px;\n    margin: 0;\n    padding: 0;\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    background: rgba(255, 255, 255, 0.1);\n    min-height: 18px;\n    max-height: 18px;\n    text-align: right;\n}\n\n.spinnerFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: 0;\n}\n\n.spinner input {\n    outline: none;\n    border-right: 0;\n    padding: 1px 1px 2px 0;\n    text-align: right;\n    left: 0;\n    height: 14px;\n    color: #cccccc;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    margin: 0;\n    z-index: 10000;\n    border: 0;\n    background: transparent;\n}\n\n::-webkit-scrollbar {\n    background: none;\n    width: 16px;\n    height: 16px;\n}\n\n::-webkit-scrollbar-thumb {\n    border: solid 0 rgba(0, 0, 0, 0);\n    border-right-width: 4px;\n    border-left-width: 4px;\n    -webkit-border-radius: 9px 4px;\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.2), inset 0 0 0 4px rgba(128, 128, 128, 0.2);\n}\n\n::-webkit-scrollbar-track-piece {\n    margin: 4px 0;\n}\n\n::-webkit-scrollbar-thumb:horizontal {\n    border-right-width: 0;\n    border-left-width: 0;\n    border-top-width: 4px;\n    border-bottom-width: 4px;\n    -webkit-border-radius: 4px 9px;\n}\n\n::-webkit-scrollbar-thumb:hover {\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.9), inset 0 0 0 4px rgba(128, 128, 128, 0.9);\n}\n\n::-webkit-scrollbar-corner {\n    background: transparent;\n}\n\n.ace_scrollbar-h {\n    margin: 0 2px\n}", "",{"version":3,"sources":["webpack://./packages/demo/preferences/preferences.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,kBAAkB;IAClB,WAAW;IACX,0BAA0B;IAC1B,eAAe;IACf,0BAA0B;IAC1B,mBAAmB;AACvB;;AAEA;IACI,mBAAmB;AACvB;AACA;IACI,yCAAyC;IACzC,eAAe;AACnB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,eAAe;IACf,cAAc;IACd,gCAAgC;IAChC,yBAAyB;IACzB;AACJ;;AAEA;IACI,oCAAoC;IACpC,oCAAoC;IACpC,YAAY;IACZ,cAAc;IACd,YAAY;IACZ,mCAAmC;IACnC,kCAAkC;IAClC,gBAAgB;IAChB,yCAAyC;IACzC,eAAe;AACnB;;AAEA;IACI,oCAAoC;IACpC,gBAAgB;AACpB;;AAEA;IACI,yBAAyB;IACzB,kBAAkB;IAClB,iBAAiB;IACjB,WAAW;AACf;;AAEA;IACI,cAAc;IACd,eAAe;IACf,uBAAuB;IACvB,mCAAmC;IACnC,kCAAkC;IAClC,MAAM;IACN,0BAA0B;IAC1B,eAAe;IACf,wBAAwB;IACxB,kBAAkB;IAClB,iBAAiB;IACjB,qBAAqB;IACrB,iBAAiB;IACjB,mBAAmB;IACnB,YAAY;AAChB;;AAEA;IACI,qBAAqB;IACrB,YAAY;IACZ,SAAS;IACT,UAAU;IACV,oCAAoC;IACpC,oCAAoC;IACpC,gBAAgB;IAChB,gBAAgB;IAChB,iBAAiB;AACrB;;AAEA;IACI,oCAAoC;IACpC,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,eAAe;IACf,sBAAsB;IACtB,iBAAiB;IACjB,OAAO;IACP,YAAY;IACZ,cAAc;IACd,0BAA0B;IAC1B,eAAe;IACf,SAAS;IACT,cAAc;IACd,SAAS;IACT,uBAAuB;AAC3B;;AAEA;IACI,gBAAgB;IAChB,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,gCAAgC;IAChC,uBAAuB;IACvB,sBAAsB;IACtB,8BAA8B;IAC9B,sGAAsG;AAC1G;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,qBAAqB;IACrB,oBAAoB;IACpB,qBAAqB;IACrB,wBAAwB;IACxB,8BAA8B;AAClC;;AAEA;IACI,sGAAsG;AAC1G;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI;AACJ","sourcesContent":[".bar-preferences {\n    overflow-y: hidden;\n    overflow-x: hidden;\n    color: #ddd;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    text-shadow: 0 1px #232323;\n    background: #363636;\n}\n\n.bar-preferences .panelbar {\n    background: #363636;\n}\n.bar-preferences > div {\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .search_results {\n    color: white;\n}\n\n.bar-preferences .header {\n    padding: 8px 15px 8px 15px;\n    font-size: 14px;\n    color: #dddddd;\n    border-bottom: 1px solid #232323;\n    background-color: #313131;\n    margin: 0\n}\n\n.bar-preferences .tbsimple {\n    background: rgba(255, 255, 255, 0.1);\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    height: 15px;\n    color: #cccccc;\n    padding: 3px;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    border-radius: 0;\n    font-family: Arial, Helvetica, sans-serif;\n    font-size: 12px;\n}\n\n.bar-preferences .tbsimpleFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: none;\n}\n\n.preferenceItem {\n    padding: 2px 2px 2px 16px;\n    position: relative;\n    overflow: visible;\n    color: #333;\n}\n\n.bar-preferences .label, .bar-preferences .preferenceItem span {\n    color: #999999;\n    font-size: 12px;\n    text-overflow: ellipsis;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    top: 0;\n    font-family: Tahoma, Arial;\n    cursor: default;\n    padding: 1px 3px 2px 7px;\n    position: relative;\n    overflow: visible;\n    display: inline-block;\n    line-height: 13px;\n    white-space: nowrap;\n    width: 300px;\n}\n\n.spinner {\n    display: inline-block;\n    height: 19px;\n    margin: 0;\n    padding: 0;\n    border: 1px solid rgba(0, 0, 0, 0.5);\n    background: rgba(255, 255, 255, 0.1);\n    min-height: 18px;\n    max-height: 18px;\n    text-align: right;\n}\n\n.spinnerFocus {\n    border: 1px solid rgba(0, 0, 0, 0.8);\n    box-shadow: 0;\n}\n\n.spinner input {\n    outline: none;\n    border-right: 0;\n    padding: 1px 1px 2px 0;\n    text-align: right;\n    left: 0;\n    height: 14px;\n    color: #cccccc;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    margin: 0;\n    z-index: 10000;\n    border: 0;\n    background: transparent;\n}\n\n::-webkit-scrollbar {\n    background: none;\n    width: 16px;\n    height: 16px;\n}\n\n::-webkit-scrollbar-thumb {\n    border: solid 0 rgba(0, 0, 0, 0);\n    border-right-width: 4px;\n    border-left-width: 4px;\n    -webkit-border-radius: 9px 4px;\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.2), inset 0 0 0 4px rgba(128, 128, 128, 0.2);\n}\n\n::-webkit-scrollbar-track-piece {\n    margin: 4px 0;\n}\n\n::-webkit-scrollbar-thumb:horizontal {\n    border-right-width: 0;\n    border-left-width: 0;\n    border-top-width: 4px;\n    border-bottom-width: 4px;\n    -webkit-border-radius: 4px 9px;\n}\n\n::-webkit-scrollbar-thumb:hover {\n    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 128, 128, 0.9), inset 0 0 0 4px rgba(128, 128, 128, 0.9);\n}\n\n::-webkit-scrollbar-corner {\n    background: transparent;\n}\n\n.ace_scrollbar-h {\n    margin: 0 2px\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1509,7 +1477,7 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ 51937:
+/***/ 9734:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1528,7 +1496,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(49578);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(21705);
 
       
       
@@ -1560,7 +1528,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 30183:
+/***/ 61262:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1579,7 +1547,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(17724);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(75715);
 
       
       
@@ -1611,7 +1579,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 28638:
+/***/ 81982:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1630,7 +1598,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_dropdown_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(58659);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_dropdown_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(86800);
 
       
       
@@ -1662,7 +1630,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 34646:
+/***/ 77111:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1681,58 +1649,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12100);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 23694:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19229);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(47594);
 
       
       
@@ -1764,7 +1681,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 73612:
+/***/ 58659:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1783,7 +1700,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(18753);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(52368);
 
       
       
@@ -1815,7 +1732,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 87455:
+/***/ 94622:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1834,58 +1751,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(812);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 20923:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(44251);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(83619);
 
       
       
@@ -1913,6 +1779,57 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
+
+
+/***/ }),
+
+/***/ 63712:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(85334);
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
 
 
 /***/ }),
@@ -2205,14 +2122,14 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 89583:
+/***/ 18108:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AccordionHandler = void 0;
-var box_1 = __webpack_require__(8795);
-var lib_1 = __webpack_require__(53723);
+var box_1 = __webpack_require__(95561);
+var lib_1 = __webpack_require__(80930);
 var event = __webpack_require__(17989);
 var AccordionHandler;
 (function (AccordionHandler) {
@@ -2462,14 +2379,14 @@ var AccordionHandler;
 
 /***/ }),
 
-/***/ 11966:
+/***/ 21649:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabbarHandler = void 0;
-var lib_1 = __webpack_require__(53723);
-var dom_1 = __webpack_require__(25079);
+var lib_1 = __webpack_require__(80930);
+var dom_1 = __webpack_require__(91444);
 var event = __webpack_require__(17989);
 var TabbarHandler;
 (function (TabbarHandler) {
@@ -2790,7 +2707,7 @@ window.addEventListener("mouseup", function () {
 
 /***/ }),
 
-/***/ 25079:
+/***/ 91444:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
@@ -3069,7 +2986,7 @@ var dom;
 
 /***/ }),
 
-/***/ 53723:
+/***/ 80930:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -3134,7 +3051,7 @@ var Utils;
 
 /***/ }),
 
-/***/ 33130:
+/***/ 60524:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -3154,7 +3071,7 @@ var EditorType;
 
 /***/ }),
 
-/***/ 64563:
+/***/ 29930:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3175,11 +3092,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Accordion = void 0;
-var accordion_handler_1 = __webpack_require__(89583);
-var box_1 = __webpack_require__(8795);
-var lib_1 = __webpack_require__(53723);
-var dom_1 = __webpack_require__(25079);
-var accordionCSS = __webpack_require__(51937);
+var accordion_handler_1 = __webpack_require__(18108);
+var box_1 = __webpack_require__(95561);
+var lib_1 = __webpack_require__(80930);
+var dom_1 = __webpack_require__(91444);
+var accordionCSS = __webpack_require__(9734);
 dom_1.dom.importCssString(accordionCSS, "accordion.css");
 var BOX_MIN_SIZE = 80;
 var Accordion = /** @class */ (function (_super) {
@@ -3527,7 +3444,7 @@ exports.Accordion = Accordion;
 
 /***/ }),
 
-/***/ 8795:
+/***/ 95561:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -3548,11 +3465,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Box = void 0;
-var lib_1 = __webpack_require__(53723);
-var params_1 = __webpack_require__(33130);
+var lib_1 = __webpack_require__(80930);
+var params_1 = __webpack_require__(60524);
 var event = __webpack_require__(17989);
 var events = __webpack_require__(17187);
-var dom_1 = __webpack_require__(25079);
+var dom_1 = __webpack_require__(91444);
 var SPLITTER_SIZE = 1;
 var BOX_MIN_SIZE = 40;
 var Box = /** @class */ (function (_super) {
@@ -4115,7 +4032,7 @@ exports.Box = Box;
 
 /***/ }),
 
-/***/ 75765:
+/***/ 82478:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4143,8 +4060,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Button = void 0;
-var dom_1 = __webpack_require__(25079);
-var buttonCSS = __webpack_require__(30183);
+var dom_1 = __webpack_require__(91444);
+var buttonCSS = __webpack_require__(61262);
 dom_1.dom.importCssString(buttonCSS, "button.css");
 var Button = /** @class */ (function () {
     function Button(options) {
@@ -4184,7 +4101,7 @@ exports.Button = Button;
 
 /***/ }),
 
-/***/ 96087:
+/***/ 11945:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4212,10 +4129,10 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Dropdown = void 0;
-var lib_1 = __webpack_require__(53723);
-var dom_1 = __webpack_require__(25079);
-var dropdownCSS = __webpack_require__(28638);
-var menuCSS = __webpack_require__(23694);
+var lib_1 = __webpack_require__(80930);
+var dom_1 = __webpack_require__(91444);
+var dropdownCSS = __webpack_require__(81982);
+var menuCSS = __webpack_require__(77111);
 dom_1.dom.importCssString(dropdownCSS, "dropdown.css");
 dom_1.dom.importCssString(menuCSS, "menu.css");
 var DEFAULT_WIDTH = 200;
@@ -4522,13 +4439,13 @@ var Popup = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 12061:
+/***/ 43717:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SettingsSearchBox = void 0;
-var dom_1 = __webpack_require__(25079);
+var dom_1 = __webpack_require__(91444);
 var SettingsSearchBox = /** @class */ (function () {
     function SettingsSearchBox(prefsParentNode) {
         this.hideFiltered = false;
@@ -4652,7 +4569,7 @@ exports.SettingsSearchBox = SettingsSearchBox;
 
 /***/ }),
 
-/***/ 63208:
+/***/ 37887:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4680,8 +4597,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Switcher = void 0;
-var dom_1 = __webpack_require__(25079);
-var switcherCSS = __webpack_require__(20923);
+var dom_1 = __webpack_require__(91444);
+var switcherCSS = __webpack_require__(94622);
 dom_1.dom.importCssString(switcherCSS, "switcher.css");
 var Switcher = /** @class */ (function () {
     function Switcher(options) {
@@ -4714,7 +4631,7 @@ exports.Switcher = Switcher;
 
 /***/ }),
 
-/***/ 40279:
+/***/ 23429:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4735,10 +4652,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Panel = void 0;
-var panelManager_1 = __webpack_require__(16790);
-var dom_1 = __webpack_require__(25079);
-var panelCSS = __webpack_require__(73612);
-var tabPanel_1 = __webpack_require__(96751);
+var panelManager_1 = __webpack_require__(38404);
+var dom_1 = __webpack_require__(91444);
+var panelCSS = __webpack_require__(58659);
+var tabPanel_1 = __webpack_require__(41074);
 dom_1.dom.importCssString(panelCSS, "panel.css");
 var Panel = /** @class */ (function (_super) {
     __extends(Panel, _super);
@@ -4786,15 +4703,15 @@ exports.Panel = Panel;
 
 /***/ }),
 
-/***/ 16790:
+/***/ 38404:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PanelManager = void 0;
-var box_1 = __webpack_require__(8795);
-var accordion_1 = __webpack_require__(64563);
-var panelBar_1 = __webpack_require__(68659);
+var box_1 = __webpack_require__(95561);
+var accordion_1 = __webpack_require__(29930);
+var panelBar_1 = __webpack_require__(44526);
 var PanelManager = /** @class */ (function () {
     function PanelManager(options) {
         this.layout = options.layout;
@@ -4891,7 +4808,7 @@ exports.PanelManager = PanelManager;
 
 /***/ }),
 
-/***/ 96751:
+/***/ 41074:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -4918,7 +4835,7 @@ exports.TabPanel = TabPanel;
 
 /***/ }),
 
-/***/ 68659:
+/***/ 44526:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -4939,10 +4856,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PanelBar = void 0;
-var tabPanelBar_1 = __webpack_require__(29225);
-var dom_1 = __webpack_require__(25079);
-var tabbar_handler_1 = __webpack_require__(11966);
-var panel_1 = __webpack_require__(40279);
+var tabPanelBar_1 = __webpack_require__(59892);
+var dom_1 = __webpack_require__(91444);
+var tabbar_handler_1 = __webpack_require__(21649);
+var panel_1 = __webpack_require__(23429);
 var PanelBar = /** @class */ (function (_super) {
     __extends(PanelBar, _super);
     function PanelBar() {
@@ -5027,7 +4944,7 @@ exports.PanelBar = PanelBar;
 
 /***/ }),
 
-/***/ 29225:
+/***/ 59892:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -5048,7 +4965,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabPanelBar = void 0;
-var toolbar_1 = __webpack_require__(76319);
+var toolbar_1 = __webpack_require__(5527);
 var TabPanelBar = /** @class */ (function (_super) {
     __extends(TabPanelBar, _super);
     function TabPanelBar(options) {
@@ -5298,13 +5215,13 @@ exports.TabPanelBar = TabPanelBar;
 
 /***/ }),
 
-/***/ 76319:
+/***/ 5527:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Toolbar = void 0;
-var lib_1 = __webpack_require__(53723);
+var lib_1 = __webpack_require__(80930);
 var Toolbar = /** @class */ (function () {
     function Toolbar(options) {
         this.direction = (options === null || options === void 0 ? void 0 : options.direction) || "horizontal";
@@ -5321,42 +5238,42 @@ exports.Toolbar = Toolbar;
 
 /***/ }),
 
-/***/ 66475:
+/***/ 21527:
 /***/ ((module) => {
 
 module.exports = "data:image/gif;base64,R0lGODlhDAAjAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAMACMAAAItlI+py+2fgAMSVUGvoZjHrFkeE0LmiabqagZO4CKxAM8GTONJrSv1ywoKh4oCADs=";
 
 /***/ }),
 
-/***/ 25203:
+/***/ 7486:
 /***/ ((module) => {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAACICAYAAADuxmtPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBQkU4MzRBNDE1RjcxMUUyQjBEREY4NkZDMkM2NDc5MyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBQkU4MzRBNTE1RjcxMUUyQjBEREY4NkZDMkM2NDc5MyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkFCRTgzNEEyMTVGNzExRTJCMERERjg2RkMyQzY0NzkzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkFCRTgzNEEzMTVGNzExRTJCMERERjg2RkMyQzY0NzkzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+JumAiwAACF9JREFUeNrsmX9sU9cVx6/t599J6JrUSZyfjg2OnR+khB91qdRQ0a4pVA3QlgilaemP/TFtfyG1f7VSxRqgQ9M2RZUYYh2MpghNKlJAqVKphbUNtEAggRjHTuwk2IlJ45g48e8fb+cY+8XGdvADNHVdrnQU5/l+z73vnnM+795nDk3TBFthUZES/jSCFYHxSfoWBLODXbplt5vxAhUTP9Xe3r772c2bnywuLlZQFCVMpw6FQv6pqSlzb2/vedB8Ck6+o+BD1Wttbbtfb29vlUDj8XhkiSaUSqUauVxeweFyceApLmie2LJliy4vL08CIxMOh7OkYR/s+0Jz85Og3UAFg8HHKioqqvBLNg00CtSiA0oIjbBsqEFtdBHZjp7Yog64sCAP5OB/fAYCgSAMzc/n81lFArMSNGGuTCZz2Ww2y70S6G6zWq2WwsJCF7e5uXnk9OnTfRBTD65FNoZ9UYNa3r/Pnbt9+PBhemx83A+5Lc7Nzc2DeuClGxVuNTAxMWH6rKurx2g0ftnZ2dnHiZWz/I8HD9aePHmyDKotF0ZIW1F4z1Ct8607d1r37NlzDS5Nxh1gewRMBibFyGZYuwiYG+wW2BwTxhgT8uFPAwugzD1coLzz9tut+fn5EizMTIkFtysEmGgqKyuTgbJjxw5daWmpRCwWR8OUKfb4HfbBvtu3bYsChYtQ0Gq1VWxTGDSLQIF0Zg0U1KD2/svwYVXjL2EGCJQYHO4fKFCiFrYjj4+PLwLl1KlTfYFAwJMtjbAvahigHDp0iB4bG/MXxYACKcvLMO2AxWIxHT16tGdoaOiXAhSscSIrLHxq//79R0wm0w2/3++LRCJ0OsPvoI++o6PjCGqis4cPVR/BBY/H4wbq0tkY9t0HA4JWeQco27frYIEkMArJxrDvtpaWxR1KWVlZVcJiZtVAswgUeI4I0TObhhpmh8JWnFLO/+8OECiQYQ8GlJuw28A8YGMTN28uAqW7u7vP6/V6ss1E7Isa1GI5r2hra3tOqVQ246a7pKSkCp7OgkxAgb2R+cyZM31ms/nL48eP9y4D5SEAhVQqFLsMBoMeFo6+l/3j7HH6nc9+F/0Mmhuo5SYCZSk7N/Qt+fOlT4g3h5DWY2+wA4rRaiJ7v/uYqDR1ZNBwmfx9R2d6oDidTjLnc5HK4ookBx+eO0CK5OXkqk1PPtr8HtHKNIyGG3eA1m3qIa1f7CZfXOlmrr3f8wdC5YqIfsZE2hUvkeeVm5nvksrZ5pwk/xw8QTZqmkjH9wdJmBMm8/4FYgtOE/OCjazJXUV+r/tNSukzMyheUUQOvfJX0m+6QGoVa0i3uZd8cvEwmfbfJnlBiny8ZS+JhJKLKuUW5MI7TkasNwgH6qlW0UicM5PkLy0HCD9EpVRl1EEcKPGLpUI5+dvL4GRyiFwd6yd7n/+AFPFlKWLYI2QGSrmohHRu+xP57YY3yAZZ45JA4b351lu5kN/59fX1aogtP97hUf4jpLZAm1bs8/k8n5840aNSqb5ZBkoiUA4cOGIaGbkB4fHRGRp+B330Hfv2JQMFL8DKuuksG/bFARmgIKYyYSzR4kDBz4g/Bijl5eX3PPJ8PXiWAcorn75GQLMIFDzmLbXFGbLoU4CCmpQjj91uJ8NjxhQHcaBcA6B8AEB5vKwhuZzjKRoHyokL/2KuvXvq/SSgtNRsZb5LygOTbSQroKQ9saA3lVx5T6CIheKkoko58qgLVmYEyqPiX6U/MyFQEA5xr9rHqlOAsipflVLSEIHMR566Qi0DlOdWPrPkkScKlNHR0fzGxkY1xJYpInleMVlXuiatGAjowVNLRWXlN8yRxwJHHvCY3ZHn2LEe/fKRZ3mHsrxDWd6hLO9QMr+Ura6u3rimoUEAa8CDqaZ9O4dlbLPZVlzu71eA5nvmpeyqlSs3Nj39NIWxnZyaCtMZnvUcaCKxmLdp0yY+/LMRX8pSMNp6iEBk1uFwZ3NmDgYCYfgTUCoUAojEOgoQJRPw+X62J3gY2IdaCoT8OxuwAOujP2gFVGxx7vsFws/EARRH+IEcwALe/wzgUR70er00lDLNMgL4sj5ESaVSx5zLJc7JyWEVx4WFBQFoZ7hqtXrQefu2yOf1YpbR2Rj2RQ1qsZwFT+h0TZM22yqJROIWCYVBSHk6ww8UHJ/fL4CHq1heUmK6cP782TgPJLt27VL/ePGi1u12F8D9UWm3dHDPOO3169bpu7q6huGSJxEoiDFxLDKZXrZj5xCYF4N3N1DKHuhn4/8KUKanpwukOTkRAEqENVAcDseKUbO5GtfBr1b3A1BoBAo3ASgZ2+zsrHRkdLTu1Vd3ctauXe8dNhrrYvulZKBACCU4GoTKEx95fn5eCiOvbmnZDmnPd8AmRCISifxgQdQy5QwO+HAmrANnPJVSeRE7QcJIzBbL6q1bXxTAw2r2hx/OS6zWieDaxkb93NwchpNHxTbPBKa4uqnpmTwej0t/9VVvA0Tjus1qrf918wtiHoj7+y8Jx8bMIRBfn5mZWYgvNDdWGCKYgcR+y+7iC0Sz1ZoaLizQehDnwPPWOThwVTQyYqTr6+pQ7IK+4TiEqNjP4PNajebalf7LNcFAkC4vrwjKi+XBUDBMhg0GvslkDDc0NAzMOBxz4VCITgEKzCAETuya6urIwMCVGlhdqrS0LARnCmp42EBg5GsQZmfoLnESUGBaUSdQomRg8KoWOlND+uuc2pqaQVj5mbupFQcKD7JJhSXNo6gQdoLmhp2HxzBsKIAM1UNopz1ebzgMm+1Ec83PY724eDqdjsCZSSWEZIoe8WG7BIXvUVZV/QQjO8FBOBIOk0QDqHAgIaRarfbHjECB6XFwi//zB8p/BBgAHNqa8EdleScAAAAASUVORK5CYII=";
 
 /***/ }),
 
-/***/ 153:
+/***/ 37113:
 /***/ ((module) => {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAANCAYAAAB7AEQGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozNEM5MTlGOTAwMDQxMUUyQjQxMkIyMEY3MzE5QTlBRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozNEM5MTlGQTAwMDQxMUUyQjQxMkIyMEY3MzE5QTlBRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjM0QzkxOUY3MDAwNDExRTJCNDEyQjIwRjczMTlBOUFEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjM0QzkxOUY4MDAwNDExRTJCNDEyQjIwRjczMTlBOUFEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+52cTFgAAAQdJREFUeNpi+v//PwMyZuQUUEEXY2JAAkxcghMV5OVug2hkcWQTJgRFxPy/c+fOf3efwP9Afg9MDqagx9bZ4/+lS5f+Hzhw4P/Fixf/Wzu6gRS2g+WBDHNDfb0T82dNYXj18iXEDUxMDIJCQgwxSRkMN27e0oObBMRfgfg/Ev4ANwlsJ8TRXECKnQEVfPn37f1vsCKggnZOTo4KNjY2FBVfv35j+PPnDxvIKkNdY8v/V69e+//w4UM4Pn/+wn9VHSOQtZpwkzTV1Srys1IYWJiZGX79+sXQO3kmw937D5qA1tWjhJOhuc3/qdOm/Tcws8YMJ2SFojJKIAUTkMUZsMSdEroYQIABAD4w1u/PTSI1AAAAAElFTkSuQmCC";
 
 /***/ }),
 
-/***/ 87149:
+/***/ 6646:
 /***/ ((module) => {
 
 module.exports = "data:image/gif;base64,R0lGODlhDAAjAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAMACMAAAIjlI+py+0PDZhs2mWpyqDqCIbiSJbmEqRMyqJs4LbxSdf2UgAAOw==";
 
 /***/ }),
 
-/***/ 87112:
+/***/ 24403:
 /***/ ((module) => {
 
 module.exports = "data:image/gif;base64,R0lGODlhBAAeAJEAAAAAAP///////wAAACH5BAEAAAIALAAAAAAEAB4AAAIXhA4maeyr1Jm02mvDDFpw/YVe12HmaRUAOw==";
 
 /***/ }),
 
-/***/ 68334:
+/***/ 85981:
 /***/ ((module) => {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAqCAYAAAAXk8MDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjQyQUZBRjU3QkFEMTFFMjhCODRFOEFGNTQyODdCNTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjQyQUZBRjY3QkFEMTFFMjhCODRFOEFGNTQyODdCNTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NDJBRkFGMzdCQUQxMUUyOEI4NEU4QUY1NDI4N0I1NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NDJBRkFGNDdCQUQxMUUyOEI4NEU4QUY1NDI4N0I1NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv8NHYkAAASLSURBVHja3FhLbyNFEP7aHj+z3k1k5yGUxYmEtICSFRJrIXHYUyBCAo6cOEX5BZz4I9y4J3vgEIG0h0U5RQpIK22AA4l4HJIgsrE3b4f4MdN0tdPj2cnMZCZMj1eU1B67uz1dX9dX1V3FOOcgmZqa4pZlQQljzP6u5jjHqM85xz3Xa4yE1uh0Omi1Wi/1m6aJdDp9bZ9Xv/qdSqWQyWSwt7cnFzfo4/XqXV6e3UflXhuFIVKMtEMkoencBk8gr87pCjzbz4DPPvoCDx98gvKdCuKUF0d1PP7+W1RGK7xRbzBjenqaj71Tx1StjXwOyGYj4/IF45a/fwc+//RL1N78AC+eH+D5X/uxgjMMAx8+/BhGJo2JiQlukElfe7uF27eAYh5IG32FfU1kc9ADpEe/GvvzEHir+h7q9Tp0CNGd3v3g/vv4qvU1DPKN0h0gLyyWE82msuIZcynrBZpf8x81zUyhdd654sOxg7zoSj+UdiJAwhfBxNNSyvK+4szHWld05N4W7QeTDLrdLnSLWsNQypCilhkyciAABHNZEg5rQr/VXvLBHl1oV8XTuqqk7Uf29kcInS56irMmWXC0mATGewBvJF5+6YNhIOCIkhYPCBIxiMV7h3iitLQuaWn7HPP3KWdw4dzHz3ytlrDl5FXqv9IypPCkaWlbzlQ7G4GKLGTUvPxNm5g8La1eM60QoFjEyDlIWirLmWbIcy5MtPQZGwg40+pbL+qFuXd+BQNVF+uebycITvoA9/C3EH7nqSf3n2dhANHy4kxkBKVwlvM8CvzSIBfgtLi/nreaKGSLWkGdXzTlM0Xg6n9k0WkLenb7FvRrloPCgfMUDR3ziiL7+G33R2k9ne3ZLz8gl8vB2N7eZpN3J7mR2cf4vQ6Ktx0WivF2QlIcBtZ/fgRLbOIbk++K/PFWrBZr/nOKn359iu++eYLDw0PGlA9Uq1W7huKujzh/O31G1VKuq7k451JC2W63Zb6lQ6iWQsD6KY8QKthQi3tRWiybzcrCDRVwiC7UvC7U7qJSUBHKb/Od/dJylUqFLy4uYn5+HqOjo7GCo7R/dXUVy8vLGBsbk3UOVQUjsOq7U6hf9ak5zuqZc9w9dnJygqOjI+zs7DA2Pj7OFxYWMDc3JzvjzpQJzPDwMNbW1rCysoJyuay3xCBof3BwgOPjYxhExVqtpr1oMzs7i6WlJapK2TTSdeaNjIxIgLL6RdbSfbjSGtZlJh43MOf7FO3tgJJk0UYXMK/AYySd+rsVC77ehdfLa64nOL+diCVhddDyOuWj6uBmha/ldFhTvTPsu6Pq4J5veJ0z2soMCdKf1hqoz4XdhCD93If8KxNQwvraTfyf/pMoLZNeK3bLBUVaXRE4UVr6vS8p+it2JOpz/wvLvQpHAVlPgjs7O8PQ0JDWxZrNZmDYjlMoGSCWpChL3tjY0F602dzcRD6fT8RilJfSRhqNRoOJ/EfyZWZmBqVSKdbFTk9PsbW1hfX1de2JKmUeAo9su7u7/QIRAbxJ/SRsClMoFGSuFaYmEnXcfWOhih59/1eAAQAVvW4V+Ky7cAAAAABJRU5ErkJggg==";
@@ -5476,18 +5393,17 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 var exports = __webpack_exports__;
+var __webpack_unused_export__;
 
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var box_1 = __webpack_require__(8795);
-var search_1 = __webpack_require__(12061);
-var switcher_1 = __webpack_require__(63208);
-var button_1 = __webpack_require__(75765);
-var dropdown_1 = __webpack_require__(96087);
-var dom_1 = __webpack_require__(25079);
-var layoutCSS = __webpack_require__(34646);
-var preferencesCSS = __webpack_require__(87455);
-var panelBar_1 = __webpack_require__(68659);
-dom_1.dom.importCssString(layoutCSS, "layout.css");
+__webpack_unused_export__ = ({ value: true });
+var box_1 = __webpack_require__(95561);
+var search_1 = __webpack_require__(43717);
+var switcher_1 = __webpack_require__(37887);
+var button_1 = __webpack_require__(82478);
+var dropdown_1 = __webpack_require__(11945);
+var dom_1 = __webpack_require__(91444);
+var preferencesCSS = __webpack_require__(63712);
+var panelBar_1 = __webpack_require__(44526);
 dom_1.dom.importCssString(preferencesCSS, "preferences.css");
 var navigation;
 var app;
@@ -6674,8 +6590,6 @@ onResize();
 
 })();
 
-/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-});
 //# sourceMappingURL=bundle.preferences.js.map

@@ -1,4 +1,4 @@
-(self["webpackChunkace_layout"] = self["webpackChunkace_layout"] || []).push([[1531],{
+(self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[1531],{
 
 /***/ 26991:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -263,8 +263,8 @@ var Range = (__webpack_require__(59082)/* .Range */ .e);
 var dom = __webpack_require__(6359);
 var shortcuts = __webpack_require__(26991);
 var FilteredList= (__webpack_require__(39528)/* .FilteredList */ .Xy);
-var AcePopup = (__webpack_require__(42985).AcePopup);
-var $singleLineEditor = (__webpack_require__(42985).$singleLineEditor);
+var AcePopup = (__webpack_require__(42985)/* .AcePopup */ .uE);
+var $singleLineEditor = (__webpack_require__(42985)/* .$singleLineEditor */ .LT);
 var UndoManager = (__webpack_require__(40718)/* .UndoManager */ .H);
 var Tokenizer = (__webpack_require__(60760)/* .Tokenizer */ .d);
 var overlayPage = (__webpack_require__(9613).overlayPage);

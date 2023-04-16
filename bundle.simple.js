@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(self, () => {
-return /******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 46992:
@@ -769,9 +759,9 @@ exports.B = function(docLines, delta, doNotValidate) {
 
 
 var HashHandler = (__webpack_require__(7116).HashHandler);
-var AcePopup = (__webpack_require__(42985).AcePopup);
+var AcePopup = (__webpack_require__(42985)/* .AcePopup */ .uE);
 var AceInline = (__webpack_require__(44525)/* .AceInline */ .r);
-var getAriaId = (__webpack_require__(42985).getAriaId);
+var getAriaId = (__webpack_require__(42985)/* .getAriaId */ .i1);
 var util = __webpack_require__(83860);
 var lang = __webpack_require__(20124);
 var dom = __webpack_require__(6359);
@@ -2076,9 +2066,9 @@ dom.importCssString(`
 }
 `, "autocompletion.css", false);
 
-exports.AcePopup = AcePopup;
-exports.$singleLineEditor = $singleLineEditor;
-exports.getAriaId = getAriaId;
+exports.uE = AcePopup;
+exports.LT = $singleLineEditor;
+exports.i1 = getAriaId;
 
 
 /***/ }),
@@ -34827,7 +34817,7 @@ exports.VirtualRenderer = VirtualRenderer;
 
 /***/ }),
 
-/***/ 49578:
+/***/ 21705:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34843,14 +34833,14 @@ exports.VirtualRenderer = VirtualRenderer;
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}", "",{"version":3,"sources":["webpack://./styles/accordion.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;;AAGA;IACI,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,oBAAoB;IACpB,kBAAkB;AACtB;AACA;IACI,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,UAAU;IACV,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf","sourcesContent":[".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/accordion.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,2BAA2B;AAC/B;;;AAGA;IACI,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;AACA;IACI,oBAAoB;IACpB,kBAAkB;AACtB;AACA;IACI,oBAAoB;AACxB;;AAEA;IACI,kBAAkB;IAClB,SAAS;IACT,UAAU;IACV,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,YAAY;IACZ,WAAW;AACf;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf","sourcesContent":[".toggle-block {\n    position: absolute;\n    /*border: 1px solid black;*/\n}\n\n\n.toggle-bar {\n    display:flex;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n    cursor: pointer;\n}\n.toggleBlockDragging {\n    pointer-events: none;\n    overflow-y: hidden;\n}\n.toggleBlockDragging  .title{\n    pointer-events: none;\n}\n\n.toggle-bar .title {\n    position: absolute;\n    top: auto;\n    left: auto;\n    width: auto;\n    height: auto;\n}\n\n.toggle-bar-h {\n    width: 20px;\n    height: 100%;\n}\n\n.toggle-bar-v {\n    height: 20px;\n    width: 100%;\n}\n.toggle-bar-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.toggle-bar-v div {\n    margin-top: -2px;\n    height: 5px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 50265:
+/***/ 65463:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34866,14 +34856,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".toggle-block {\n    position: absolut
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".ace-tree-wrapper {\n    height: 100%;\n}", "",{"version":3,"sources":["webpack://./styles/ace-tree.css"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB","sourcesContent":[".ace-tree-wrapper {\n    height: 100%;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".ace-tree-wrapper {\n    height: 100%;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/ace-tree.css"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB","sourcesContent":[".ace-tree-wrapper {\n    height: 100%;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 17724:
+/***/ 75715:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34889,14 +34879,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".ace-tree-wrapper {\n    height: 100%;
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}", "",{"version":3,"sources":["webpack://./styles/button.css"],"names":[],"mappings":"AAAA;IACI,gGAAgG;IAChG,wFAAwF;IACxF,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,+BAA+B;AACnC;AACA;IACI,oIAAoI;AACxI;AACA;IACI,sIAAsI;AAC1I;AACA;IACI,qCAAqC;AACzC","sourcesContent":[".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/button.css"],"names":[],"mappings":"AAAA;IACI,gGAAgG;IAChG,wFAAwF;IACxF,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,+BAA+B;AACnC;AACA;IACI,oIAAoI;AACxI;AACA;IACI,sIAAsI;AAC1I;AACA;IACI,qCAAqC;AACzC","sourcesContent":[".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 12100:
+/***/ 94936:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34912,14 +34902,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".blackbutton {\n    background-image: 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0px;\n    position: absolute;\n    right: 3px;\n    top: 0px;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}", "",{"version":3,"sources":["webpack://./styles/layout.css"],"names":[],"mappings":"AAAA;IACI,+BAA+B;AACnC;;AAEA,2BAA2B,oBAAoB,CAAC;;AAEhD;IACI,iCAAiC;IACjC,UAAU;IACV,kBAAkB;AACtB;;AAEA;IACI,UAAU;IACV,iBAAiB;AACrB;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,iDAAiD;AACrD;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA;AACA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;;AAGA,mBAAmB,iBAAiB;AACpC;IACI,yBAAyB;IACzB,oBAAoB;AACxB;AACA;IACI,oBAAoB;AACxB;;;AAGA;IACI,0BAA0B;IAC1B,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,4BAA4B;IAC5B,0BAA0B;IAC1B,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,yBAAyB;IACzB,aAAa;IACb,YAAY;IACZ,kBAAkB;IAClB,UAAU;IACV,QAAQ;IACR,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,wDAAwD;IACxD,4DAA4D;AAChE;;;AAGA;IACI,4BAA4B;IAC5B,wDAAwD;IACxD,mCAAmC;AACvC;;;AAGA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,2CAA2C;IAC3C,kBAAkB;IAClB,sBAAsB;AAC1B;AACA;IACI,8CAA8C;IAC9C,sBAAsB;AAC1B;AACA;IACI,2CAA2C;AAC/C;;AAEA;IACI,6BAA6B;IAC7B,yBAAyB;IACzB,2BAA2B;AAC/B;;AAEA;IACI;AACJ;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,YAAY;AAChB;AACA;IACI;AACJ;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ;AACJ;AACA;;IAEI,4BAA4B;IAC5B;AACJ;AACA;IACI,uBAAuB;IACvB,cAAc;AAClB;AACA;IACI,mCAAmC;IACnC;AACJ;AACA;IACI,oBAAoB;IACpB,qBAAqB;AACzB;;AAEA;IACI,+CAA+C;IAC/C,oBAAoB;IACpB,YAAY;AAChB;;;AAGA;IACI,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,SAAS;IACT,eAAe;IACf,aAAa;IACb,wBAAwB;AAC5B","sourcesContent":["body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0px;\n    position: absolute;\n    right: 3px;\n    top: 0px;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0px;\n    position: absolute;\n    right: 3px;\n    top: 0px;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/layout.css"],"names":[],"mappings":"AAAA;IACI,+BAA+B;AACnC;;AAEA,2BAA2B,oBAAoB,CAAC;;AAEhD;IACI,iCAAiC;IACjC,UAAU;IACV,kBAAkB;AACtB;;AAEA;IACI,UAAU;IACV,iBAAiB;AACrB;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,iDAAiD;AACrD;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA;AACA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;;AAGA,mBAAmB,iBAAiB;AACpC;IACI,yBAAyB;IACzB,oBAAoB;AACxB;AACA;IACI,oBAAoB;AACxB;;;AAGA;IACI,0BAA0B;IAC1B,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,4BAA4B;IAC5B,0BAA0B;IAC1B,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,yBAAyB;IACzB,aAAa;IACb,YAAY;IACZ,kBAAkB;IAClB,UAAU;IACV,QAAQ;IACR,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,wDAAwD;IACxD,4DAA4D;AAChE;;;AAGA;IACI,4BAA4B;IAC5B,wDAAwD;IACxD,mCAAmC;AACvC;;;AAGA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,2CAA2C;IAC3C,kBAAkB;IAClB,sBAAsB;AAC1B;AACA;IACI,8CAA8C;IAC9C,sBAAsB;AAC1B;AACA;IACI,2CAA2C;AAC/C;;AAEA;IACI,6BAA6B;IAC7B,yBAAyB;IACzB,2BAA2B;AAC/B;;AAEA;IACI;AACJ;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,YAAY;AAChB;AACA;IACI;AACJ;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ;AACJ;AACA;;IAEI,4BAA4B;IAC5B;AACJ;AACA;IACI,uBAAuB;IACvB,cAAc;AAClB;AACA;IACI,mCAAmC;IACnC;AACJ;AACA;IACI,oBAAoB;IACpB,qBAAqB;AACzB;;AAEA;IACI,+CAA+C;IAC/C,oBAAoB;IACpB,YAAY;AAChB;;;AAGA;IACI,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,SAAS;IACT,eAAe;IACf,aAAa;IACb,wBAAwB;AAC5B","sourcesContent":["body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0px;\n    position: absolute;\n    right: 3px;\n    top: 0px;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 19229:
+/***/ 47594:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34936,9 +34926,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: Tahoma, sans-
 
 
 
-var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(87112), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(87149), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(66475), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(24403), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(6646), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(21527), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(72527), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
@@ -34946,14 +34936,14 @@ var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_g
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}", "",{"version":3,"sources":["webpack://./styles/menu.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,sBAAsB;IACtB,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,qBAAqB;IACrB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,sBAAsB;IACtB,gCAAgC;IAChC,yBAAyB,EAAE,sBAAsB,EAAE,qBAAqB,EAAE,iBAAiB;AAC/F;AACA;IACI,yBAAyB;IACzB,+FAA+F;IAC/F,cAAc;AAClB;AACA;IACI,mBAAmB;IACnB,yBAAyB;IACzB,iGAAiG;IACjG,SAAS;IACT,eAAe;IACf,sBAAsB;IACtB,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,OAAO;IACP,MAAM;AACV;AACA;IACI,WAAW;AACf;AACA;IACI,eAAe;IACf,iBAAiB;IACjB,4BAA4B;AAChC;;;AAGA;IACI,kBAAkB;IAClB,oBAAoB;IACpB,cAAc;IACd,kBAAkB;IAClB,iBAAiB;IACjB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,aAAa;IACb,yBAAyB;IACzB,gDAAgD;IAChD,yBAAyB;IACzB,gCAAgC;IAChC,gBAAgB;AACpB;AACA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB;AACA;IACI,yBAAyB;IACzB,iBAAiB;IACjB,cAAc;IACd,iBAAiB;AACrB;AACA;IACI,yBAAyB;IACzB,cAAc;AAClB;AACA;IACI,iBAAiB;IACjB,UAAU;IACV,cAAc;IACd,eAAe;IACf,6BAA6B;IAC7B,gCAAgC;IAChC,SAAS;AACb;AACA;IACI,WAAW;IACX,eAAe;IACf,WAAW;IACX,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;AAChB;AACA;IACI,yEAAoE;IACpE,UAAU;IACV,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,UAAU;IACV,iBAAiB;IACjB,WAAW;AACf;AACA;IACI,yEAAoE;AACxE;AACA;IACI,cAAc;IACd,iBAAiB;IACjB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,WAAW;IACX,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,gBAAgB;AACpB;AACA;IACI,WAAW;AACf;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,YAAY;AAChB;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,yBAAyB;IACzB,yBAAyB;IACzB,YAAY;IACZ,kBAAkB;IAClB,0BAA0B;IAC1B,eAAe;AACnB;;AAEA;IACI,cAAc;AAClB;AACA;IACI,mEAA+Q;IAC/Q,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;AACA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,mEAAsD;IACtD,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;;AAEA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB","sourcesContent":[".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(\"../images/check.gif\") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/menu.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,sBAAsB;IACtB,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,qBAAqB;IACrB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,sBAAsB;IACtB,gCAAgC;IAChC,yBAAyB,EAAE,sBAAsB,EAAE,qBAAqB,EAAE,iBAAiB;AAC/F;AACA;IACI,yBAAyB;IACzB,+FAA+F;IAC/F,cAAc;AAClB;AACA;IACI,mBAAmB;IACnB,yBAAyB;IACzB,iGAAiG;IACjG,SAAS;IACT,eAAe;IACf,sBAAsB;IACtB,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,kBAAkB;AACtB;AACA;IACI,cAAc;AAClB;AACA;IACI,iBAAiB;AACrB;AACA;IACI,OAAO;IACP,MAAM;AACV;AACA;IACI,WAAW;AACf;AACA;IACI,eAAe;IACf,iBAAiB;IACjB,4BAA4B;AAChC;;;AAGA;IACI,kBAAkB;IAClB,oBAAoB;IACpB,cAAc;IACd,kBAAkB;IAClB,iBAAiB;IACjB,0BAA0B;IAC1B,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,aAAa;IACb,yBAAyB;IACzB,gDAAgD;IAChD,yBAAyB;IACzB,gCAAgC;IAChC,gBAAgB;AACpB;AACA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB;AACA;IACI,yBAAyB;IACzB,iBAAiB;IACjB,cAAc;IACd,iBAAiB;AACrB;AACA;IACI,yBAAyB;IACzB,cAAc;AAClB;AACA;IACI,iBAAiB;IACjB,UAAU;IACV,cAAc;IACd,eAAe;IACf,6BAA6B;IAC7B,gCAAgC;IAChC,SAAS;AACb;AACA;IACI,WAAW;IACX,eAAe;IACf,WAAW;IACX,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;AAChB;AACA;IACI,yEAAoE;IACpE,UAAU;IACV,WAAW;IACX,cAAc;IACd,kBAAkB;IAClB,UAAU;IACV,iBAAiB;IACjB,WAAW;AACf;AACA;IACI,yEAAoE;AACxE;AACA;IACI,cAAc;IACd,iBAAiB;IACjB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,WAAW;IACX,YAAY;IACZ,kBAAkB;IAClB,SAAS;IACT,gBAAgB;AACpB;AACA;IACI,WAAW;AACf;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,YAAY;AAChB;AACA;IACI,qEAAwD;AAC5D;AACA;IACI,qEAAwD;AAC5D;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,yBAAyB;IACzB,yBAAyB;IACzB,YAAY;IACZ,kBAAkB;IAClB,0BAA0B;IAC1B,eAAe;AACnB;;AAEA;IACI,cAAc;AAClB;AACA;IACI,mEAA+Q;IAC/Q,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;AACA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,mEAAsD;IACtD,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,eAAe;IACf,qBAAqB;IACrB,UAAU;IACV,YAAY;IACZ,WAAW;IACX,qBAAqB;AACzB;;AAEA;IACI,yBAAyB;IACzB,6BAA6B;IAC7B,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,mBAAmB;IACnB,eAAe;IACf,gBAAgB;IAChB,YAAY;AAChB","sourcesContent":[".menuButton {\n    height: 100%;\n    box-sizing: border-box;\n    overflow: visible;\n    cursor: default;\n    position: relative;\n    display: inline-block;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n    line-height: 14px;\n    color: #cecece;\n    padding: 4px 7px 0 7px;\n    text-shadow: #292a2b 0px 1px 0px;\n    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;\n}\n.menuButtonOver, .menuButton:hover {\n    background-color: #333333;\n    box-shadow: 1px -1px 0 0 #000000, -1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    color: #d4d4d4;\n}\n.menuButton.menuButtonDown {\n    font-weight: normal;\n    background-color: #494949;\n    box-shadow: 1px 0 0 0 #000000 inset, 1px 0 0 0 #000000, 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;\n    border: 0;\n    border-width: 0;\n    padding: 4px 7px 0 7px;\n    z-index: 100000000;\n}\n.menuButtonDisabled.menuButton .label {\n    color: #999999;\n}\n.menuButtonIcon {\n    padding-left: 24px;\n}\n.menuButtonIcon .icon {\n    display: block;\n}\n.menuButtonEmpty {\n    padding-left: 7px;\n}\n.menuButtonEmpty .icon {\n    left: 0;\n    top: 0;\n}\n.menuButtonDisabled {\n    color: gray;\n}\n.menuButton.btn {\n    min-width: 12px;\n    font-weight: bold;\n    background-position: 2px 50%;\n}\n\n\n.menu {\n    margin: -1px 0 0 0;\n    padding: 3px 0 3px 0;\n    z-index: 10000;\n    position: absolute;\n    overflow: visible;\n    font-family: Tahoma, Arial;\n    font-size: 11px;\n    line-height: 14px;\n    color: #f1f1f1;\n    cursor: default;\n    display: none;\n    border: 1px solid #00040a;\n    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.65);\n    background-color: #494949;\n    text-shadow: 0px 1px 0px #2c2c2c;\n    border-radius: 0;\n}\n.menu > div.menu_item {\n    padding: 3px 16px 5px 23px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}\n.menu > div.menu_item.update {\n    background-color: #748512;\n    font-weight: bold;\n    color: #f1f1f1;\n    text-shadow: none;\n}\n.menu > div.menu_item.hover {\n    background-color: #262626;\n    color: #a0b42a;\n}\n.menu > div.menu_divider {\n    overflow: visible;\n    padding: 0;\n    font-size: 1px;\n    margin: 2px 3px;\n    border-top: 1px solid #353535;\n    border-bottom: 1px solid #565656;\n    height: 0;\n}\n.menu > div.menu_item > .shortcut {\n    right: 15px;\n    margin-top: 0px;\n    z-index: 10;\n    text-align: right;\n    padding-left: 15px;\n    float: right;\n}\n.menu > div.submenu > .shortcut {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n    width: 4px;\n    height: 7px;\n    display: block;\n    position: absolute;\n    right: 8px;\n    margin: 4px 0 0 0;\n    z-index: 10;\n}\n.menu > div.submenu.hover > span {\n    background: url(\"../images/submenu_arrow.gif\") no-repeat right -15px;\n}\n.menu > div.menu_item.disabled {\n    color: #808080;\n    text-shadow: none;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.menu > div.menu_item > u {\n    width: 16px;\n    height: 16px;\n    position: absolute;\n    left: 3px;\n    margin-top: -1px;\n}\n.menu > div.menu_item > a {\n    float: left;\n}\n.menu > div.menu_item.selected > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected:hover > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.checked:hover > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.disabled > u {\n    opacity: 0.2;\n}\n.menu > div.menu_item.checked.disabled > u {\n    background: url(\"../images/check.gif\") no-repeat 0 -16px;\n}\n.menu > div.menu_item.selected.disabled > u {\n    background: url(\"../images/radio.gif\") no-repeat 0 -16px;\n}\n\n.menu_searchbox {\n    height: auto;\n    width: auto;\n    border: 1px solid #be1100;\n    background-color: #653b13;\n    color: white;\n    position: absolute;\n    font-family: Tahoma, Arial;\n    font-size: 12px;\n}\n\n.menu-completion-highlight {\n    color: #2d69c7;\n}\n.searchbtn_close {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n.searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.searchbtn_filter {\n    background: url(\"../images/check.gif\") no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px; \n    display: inline-block;\n}\n\n.searchbtn_filter:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.menu_no_result {\n    padding: 3px 10px 5px 20px;\n    white-space: nowrap;\n    cursor: default;\n    z-index: 1100000;\n    height: 13px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 18753:
+/***/ 52368:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34969,14 +34959,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".menuButton {\n    height: 100%;\n    
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n", "",{"version":3,"sources":["webpack://./styles/panel.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;IACI,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,sBAAsB;IACtB,iCAAiC;IACjC,8BAA8B;IAC9B,iBAAiB;IACjB,YAAY;IACZ,WAAW;IACX,kBAAkB;AACtB;AACA;IACI,mBAAmB;IACnB,4BAA4B;AAChC;AACA;IACI,yBAAyB;AAC7B;AACA;IACI,sCAAsC;IACtC,4BAA4B;AAChC;AACA;IACI,OAAO;IACP,cAAc;IACd,gBAAgB;IAChB,uBAAuB;IACvB,mBAAmB;AACvB","sourcesContent":[".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/panel.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;IACI,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,sBAAsB;IACtB,iCAAiC;IACjC,8BAA8B;IAC9B,iBAAiB;IACjB,YAAY;IACZ,WAAW;IACX,kBAAkB;AACtB;AACA;IACI,mBAAmB;IACnB,4BAA4B;AAChC;AACA;IACI,yBAAyB;AAC7B;AACA;IACI,sCAAsC;IACtC,4BAA4B;AAChC;AACA;IACI,OAAO;IACP,cAAc;IACd,gBAAgB;IAChB,uBAAuB;IACvB,mBAAmB;AACvB","sourcesContent":[".panelbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n.panelbar.vertical {\n}\n\n.panelbar.vertical .panelButton {\n}\n.panelbar.vertical.right .panelButton {\n}\n\n.panelButton {\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    border-left: #b3b3b3 solid 1px;\n    user-select: none;\n    height: 30px;\n    width: 30px;\n    position: absolute;\n}\n.panelButton:hover {\n    background: #e0e0e0;\n    border-radius: 10px 10px 0 0;\n}\n.panelButton.selected {\n    background-color: #e7e7e7;\n}\n.panelButton.active {\n    background-color: whitesmoke!important;\n    border-radius: 10px 10px 0 0;\n}\n.panelTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ 78329:
+/***/ 67303:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -34992,7 +34982,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".panelbar {\n    display:flex;\n    he
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".tabContainer {\n    align-items: stretch;\n    justify-content: stretch;\n    height: 30px;\n}\n\n.tabPlusButton {\n    --color: #ababab;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    padding: 8px;\n    color: transparent;\n}\n.tabPlusButton:after {\n    content: \"\";\n    background-image: linear-gradient(to bottom, transparent 40%, var(--color) 40%, var(--color) 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, var(--color) 40%, var(--color) 60%, transparent 60%);\n        position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 8px;\n}\n.tabPlusButton:hover:after {\n    --color: #35cc95\n\n}\n\n.tabPlusButton:active {\n    color: darkgreen\n}\n\n.tabScroller {\n    overflow: hidden;\n    position: relative;\n}\n.tab.changed>.tabCloseButton {\n    background: #afafaf;\n    border: transparent;\n}\n\n.tabbar {\n    display:flex;\n    background: var(--toolbar-background);\n    color: #333;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n}\n.tab {\n    font-size: 12px;\n    height: 100%;\n    /*min-width: 100px;*/\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    background: var(--toolbar-background);\n    border-left: transparent solid 1px;\n    border-right: transparent solid 1px;\n    user-select: none;\n    position: absolute;\n}\n\n.tab.selected.active:after {\n    content: \"\";\n    border-bottom: 2px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n.tab.focused.active:after {\n    content: \"\";\n    border-bottom: 3px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n\n.tab.scrolledLeft {\n    border-color: var(--splitter-color);\n    box-shadow: 0px 0px 2px 0px #d0d0d0;\n}\n.tabIcon {\n    display: none;\n}\n\n.tabLeftOverflow {\n\n}\n.tabRightOverflow {\n\n}\n.tabDragging {\n    display: flex;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    user-select: none;\n    z-index: 100000;\n    pointer-events: none;\n    position: absolute;\n}\n\n.tab:hover {\n    background: var(--hover-background);\n}\n.tab.selected {\n    background-color: #e7e7e7;\n}\n.tab.active {\n    background-color: whitesmoke;\n}\n .tabDragging > .tab.active {\n    background-color: #e7e7e7;\n}\n\n.tabCloseButton {\n    transform: rotate(45deg);\n    width: 11px;\n    height: 11px;\n    display: inline-block;\n    border-radius: 10px;\n    cursor: pointer;\n    opacity: 0;\n    background: linear-gradient(to bottom, transparent 40%, #ababab 40%, #ababab 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #ababab 40%, #ababab 60%, transparent 60%);\n}\n\n\n.tabCloseButton:hover {\n    background-color: #ababab;\n    border: 1px solid #ababab;\n    background-image: linear-gradient(to bottom, transparent 40%, #fff 40%, #fff 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #fff 40%, #fff 60%, transparent 60%);\n\n}\n\n.tab.active .tabCloseButton,\n.tab:hover .tabCloseButton,\n.tabCloseButton.changed {\n    opacity: 1\n}\n\n.tabIcon {\n    color: yellow;\n    padding: 0 4px 0 0;\n}\n.tab.active .tabIcon {\n    color: orange\n}\n.tabTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n\n\n.tabbar.vertical .tab {\n    transform: rotate(180deg);\n}\n\n\n.split-area {\n    position: absolute;\n    background: rgba(0, 0, 0, 0.05);\n    border: 1px solid rgba(0, 0, 0, 0.2);\n    z-index: 100000;\n    pointer-events: none;\n    box-sizing: border-box;\n    cursor: default;\n}\n\n.dark.split-area {\n    background: rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    box-shadow: 0 0 200px rgba(255, 255, 255, 0.15) inset;\n    outline: 1px solid black;\n}\n\n.tab-editor {\n    position: absolute;\n}", "",{"version":3,"sources":["webpack://./styles/tab.css"],"names":[],"mappings":"AAAA;IACI,oBAAoB;IACpB,wBAAwB;IACxB,YAAY;AAChB;;AAEA;IACI,gBAAgB;IAChB,eAAe;IACf,aAAa;IACb,mBAAmB;IACnB,YAAY;IACZ,kBAAkB;AACtB;AACA;IACI,WAAW;IACX;uGACmG;QAC/F,kBAAkB;IACtB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;AACA;IACI;;AAEJ;;AAEA;IACI;AACJ;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;AACA;IACI,mBAAmB;IACnB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,qCAAqC;IACrC,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;AACrB;AACA;IACI,eAAe;IACf,YAAY;IACZ,oBAAoB;IACpB,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,sBAAsB;IACtB,qCAAqC;IACrC,kCAAkC;IAClC,mCAAmC;IACnC,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,2CAA2C;IAC3C,wBAAwB;IACxB,SAAS;IACT,kBAAkB;AACtB;AACA;IACI,WAAW;IACX,2CAA2C;IAC3C,wBAAwB;IACxB,SAAS;IACT,kBAAkB;AACtB;;AAEA;IACI,mCAAmC;IACnC,mCAAmC;AACvC;AACA;IACI,aAAa;AACjB;;AAEA;;AAEA;AACA;;AAEA;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,iCAAiC;IACjC,iBAAiB;IACjB,eAAe;IACf,oBAAoB;IACpB,kBAAkB;AACtB;;AAEA;IACI,mCAAmC;AACvC;AACA;IACI,yBAAyB;AAC7B;AACA;IACI,4BAA4B;AAChC;CACC;IACG,yBAAyB;AAC7B;;AAEA;IACI,wBAAwB;IACxB,WAAW;IACX,YAAY;IACZ,qBAAqB;IACrB,mBAAmB;IACnB,eAAe;IACf,UAAU;IACV;6FACyF;AAC7F;;;AAGA;IACI,yBAAyB;IACzB,yBAAyB;IACzB;uFACmF;;AAEvF;;AAEA;;;IAGI;AACJ;;AAEA;IACI,aAAa;IACb,kBAAkB;AACtB;AACA;IACI;AACJ;AACA;IACI,OAAO;IACP,cAAc;IACd,gBAAgB;IAChB,uBAAuB;IACvB,mBAAmB;AACvB;;;;AAIA;IACI,yBAAyB;AAC7B;;;AAGA;IACI,kBAAkB;IAClB,+BAA+B;IAC/B,oCAAoC;IACpC,eAAe;IACf,oBAAoB;IACpB,sBAAsB;IACtB,eAAe;AACnB;;AAEA;IACI,qCAAqC;IACrC,0CAA0C;IAC1C,qDAAqD;IACrD,wBAAwB;AAC5B;;AAEA;IACI,kBAAkB;AACtB","sourcesContent":[".tabContainer {\n    align-items: stretch;\n    justify-content: stretch;\n    height: 30px;\n}\n\n.tabPlusButton {\n    --color: #ababab;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    padding: 8px;\n    color: transparent;\n}\n.tabPlusButton:after {\n    content: \"\";\n    background-image: linear-gradient(to bottom, transparent 40%, var(--color) 40%, var(--color) 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, var(--color) 40%, var(--color) 60%, transparent 60%);\n        position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 8px;\n}\n.tabPlusButton:hover:after {\n    --color: #35cc95\n\n}\n\n.tabPlusButton:active {\n    color: darkgreen\n}\n\n.tabScroller {\n    overflow: hidden;\n    position: relative;\n}\n.tab.changed>.tabCloseButton {\n    background: #afafaf;\n    border: transparent;\n}\n\n.tabbar {\n    display:flex;\n    background: var(--toolbar-background);\n    color: #333;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n}\n.tab {\n    font-size: 12px;\n    height: 100%;\n    /*min-width: 100px;*/\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    background: var(--toolbar-background);\n    border-left: transparent solid 1px;\n    border-right: transparent solid 1px;\n    user-select: none;\n    position: absolute;\n}\n\n.tab.selected.active:after {\n    content: \"\";\n    border-bottom: 2px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n.tab.focused.active:after {\n    content: \"\";\n    border-bottom: 3px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n\n.tab.scrolledLeft {\n    border-color: var(--splitter-color);\n    box-shadow: 0px 0px 2px 0px #d0d0d0;\n}\n.tabIcon {\n    display: none;\n}\n\n.tabLeftOverflow {\n\n}\n.tabRightOverflow {\n\n}\n.tabDragging {\n    display: flex;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    user-select: none;\n    z-index: 100000;\n    pointer-events: none;\n    position: absolute;\n}\n\n.tab:hover {\n    background: var(--hover-background);\n}\n.tab.selected {\n    background-color: #e7e7e7;\n}\n.tab.active {\n    background-color: whitesmoke;\n}\n .tabDragging > .tab.active {\n    background-color: #e7e7e7;\n}\n\n.tabCloseButton {\n    transform: rotate(45deg);\n    width: 11px;\n    height: 11px;\n    display: inline-block;\n    border-radius: 10px;\n    cursor: pointer;\n    opacity: 0;\n    background: linear-gradient(to bottom, transparent 40%, #ababab 40%, #ababab 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #ababab 40%, #ababab 60%, transparent 60%);\n}\n\n\n.tabCloseButton:hover {\n    background-color: #ababab;\n    border: 1px solid #ababab;\n    background-image: linear-gradient(to bottom, transparent 40%, #fff 40%, #fff 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #fff 40%, #fff 60%, transparent 60%);\n\n}\n\n.tab.active .tabCloseButton,\n.tab:hover .tabCloseButton,\n.tabCloseButton.changed {\n    opacity: 1\n}\n\n.tabIcon {\n    color: yellow;\n    padding: 0 4px 0 0;\n}\n.tab.active .tabIcon {\n    color: orange\n}\n.tabTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n\n\n.tabbar.vertical .tab {\n    transform: rotate(180deg);\n}\n\n\n.split-area {\n    position: absolute;\n    background: rgba(0, 0, 0, 0.05);\n    border: 1px solid rgba(0, 0, 0, 0.2);\n    z-index: 100000;\n    pointer-events: none;\n    box-sizing: border-box;\n    cursor: default;\n}\n\n.dark.split-area {\n    background: rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    box-shadow: 0 0 200px rgba(255, 255, 255, 0.15) inset;\n    outline: 1px solid black;\n}\n\n.tab-editor {\n    position: absolute;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".tabContainer {\n    align-items: stretch;\n    justify-content: stretch;\n    height: 30px;\n}\n\n.tabPlusButton {\n    --color: #ababab;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    padding: 8px;\n    color: transparent;\n}\n.tabPlusButton:after {\n    content: \"\";\n    background-image: linear-gradient(to bottom, transparent 40%, var(--color) 40%, var(--color) 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, var(--color) 40%, var(--color) 60%, transparent 60%);\n        position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 8px;\n}\n.tabPlusButton:hover:after {\n    --color: #35cc95\n\n}\n\n.tabPlusButton:active {\n    color: darkgreen\n}\n\n.tabScroller {\n    overflow: hidden;\n    position: relative;\n}\n.tab.changed>.tabCloseButton {\n    background: #afafaf;\n    border: transparent;\n}\n\n.tabbar {\n    display:flex;\n    background: var(--toolbar-background);\n    color: #333;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n}\n.tab {\n    font-size: 12px;\n    height: 100%;\n    /*min-width: 100px;*/\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    background: var(--toolbar-background);\n    border-left: transparent solid 1px;\n    border-right: transparent solid 1px;\n    user-select: none;\n    position: absolute;\n}\n\n.tab.selected.active:after {\n    content: \"\";\n    border-bottom: 2px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n.tab.focused.active:after {\n    content: \"\";\n    border-bottom: 3px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n\n.tab.scrolledLeft {\n    border-color: var(--splitter-color);\n    box-shadow: 0px 0px 2px 0px #d0d0d0;\n}\n.tabIcon {\n    display: none;\n}\n\n.tabLeftOverflow {\n\n}\n.tabRightOverflow {\n\n}\n.tabDragging {\n    display: flex;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    user-select: none;\n    z-index: 100000;\n    pointer-events: none;\n    position: absolute;\n}\n\n.tab:hover {\n    background: var(--hover-background);\n}\n.tab.selected {\n    background-color: #e7e7e7;\n}\n.tab.active {\n    background-color: whitesmoke;\n}\n .tabDragging > .tab.active {\n    background-color: #e7e7e7;\n}\n\n.tabCloseButton {\n    transform: rotate(45deg);\n    width: 11px;\n    height: 11px;\n    display: inline-block;\n    border-radius: 10px;\n    cursor: pointer;\n    opacity: 0;\n    background: linear-gradient(to bottom, transparent 40%, #ababab 40%, #ababab 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #ababab 40%, #ababab 60%, transparent 60%);\n}\n\n\n.tabCloseButton:hover {\n    background-color: #ababab;\n    border: 1px solid #ababab;\n    background-image: linear-gradient(to bottom, transparent 40%, #fff 40%, #fff 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #fff 40%, #fff 60%, transparent 60%);\n\n}\n\n.tab.active .tabCloseButton,\n.tab:hover .tabCloseButton,\n.tabCloseButton.changed {\n    opacity: 1\n}\n\n.tabIcon {\n    color: yellow;\n    padding: 0 4px 0 0;\n}\n.tab.active .tabIcon {\n    color: orange\n}\n.tabTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n\n\n.tabbar.vertical .tab {\n    transform: rotate(180deg);\n}\n\n\n.split-area {\n    position: absolute;\n    background: rgba(0, 0, 0, 0.05);\n    border: 1px solid rgba(0, 0, 0, 0.2);\n    z-index: 100000;\n    pointer-events: none;\n    box-sizing: border-box;\n    cursor: default;\n}\n\n.dark.split-area {\n    background: rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    box-shadow: 0 0 200px rgba(255, 255, 255, 0.15) inset;\n    outline: 1px solid black;\n}\n\n.tab-editor {\n    position: absolute;\n}", "",{"version":3,"sources":["webpack://./packages/ace-layout/styles/tab.css"],"names":[],"mappings":"AAAA;IACI,oBAAoB;IACpB,wBAAwB;IACxB,YAAY;AAChB;;AAEA;IACI,gBAAgB;IAChB,eAAe;IACf,aAAa;IACb,mBAAmB;IACnB,YAAY;IACZ,kBAAkB;AACtB;AACA;IACI,WAAW;IACX;uGACmG;QAC/F,kBAAkB;IACtB,WAAW;IACX,YAAY;IACZ,QAAQ;AACZ;AACA;IACI;;AAEJ;;AAEA;IACI;AACJ;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;AACtB;AACA;IACI,mBAAmB;IACnB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,qCAAqC;IACrC,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;IAClB,iBAAiB;AACrB;AACA;IACI,eAAe;IACf,YAAY;IACZ,oBAAoB;IACpB,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,eAAe;IACf,sBAAsB;IACtB,qCAAqC;IACrC,kCAAkC;IAClC,mCAAmC;IACnC,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,2CAA2C;IAC3C,wBAAwB;IACxB,SAAS;IACT,kBAAkB;AACtB;AACA;IACI,WAAW;IACX,2CAA2C;IAC3C,wBAAwB;IACxB,SAAS;IACT,kBAAkB;AACtB;;AAEA;IACI,mCAAmC;IACnC,mCAAmC;AACvC;AACA;IACI,aAAa;AACjB;;AAEA;;AAEA;AACA;;AAEA;AACA;IACI,aAAa;IACb,sBAAsB;IACtB,iCAAiC;IACjC,iBAAiB;IACjB,eAAe;IACf,oBAAoB;IACpB,kBAAkB;AACtB;;AAEA;IACI,mCAAmC;AACvC;AACA;IACI,yBAAyB;AAC7B;AACA;IACI,4BAA4B;AAChC;CACC;IACG,yBAAyB;AAC7B;;AAEA;IACI,wBAAwB;IACxB,WAAW;IACX,YAAY;IACZ,qBAAqB;IACrB,mBAAmB;IACnB,eAAe;IACf,UAAU;IACV;6FACyF;AAC7F;;;AAGA;IACI,yBAAyB;IACzB,yBAAyB;IACzB;uFACmF;;AAEvF;;AAEA;;;IAGI;AACJ;;AAEA;IACI,aAAa;IACb,kBAAkB;AACtB;AACA;IACI;AACJ;AACA;IACI,OAAO;IACP,cAAc;IACd,gBAAgB;IAChB,uBAAuB;IACvB,mBAAmB;AACvB;;;;AAIA;IACI,yBAAyB;AAC7B;;;AAGA;IACI,kBAAkB;IAClB,+BAA+B;IAC/B,oCAAoC;IACpC,eAAe;IACf,oBAAoB;IACpB,sBAAsB;IACtB,eAAe;AACnB;;AAEA;IACI,qCAAqC;IACrC,0CAA0C;IAC1C,qDAAqD;IACrD,wBAAwB;AAC5B;;AAEA;IACI,kBAAkB;AACtB","sourcesContent":[".tabContainer {\n    align-items: stretch;\n    justify-content: stretch;\n    height: 30px;\n}\n\n.tabPlusButton {\n    --color: #ababab;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    padding: 8px;\n    color: transparent;\n}\n.tabPlusButton:after {\n    content: \"\";\n    background-image: linear-gradient(to bottom, transparent 40%, var(--color) 40%, var(--color) 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, var(--color) 40%, var(--color) 60%, transparent 60%);\n        position: absolute;\n    width: 12px;\n    height: 12px;\n    top: 8px;\n}\n.tabPlusButton:hover:after {\n    --color: #35cc95\n\n}\n\n.tabPlusButton:active {\n    color: darkgreen\n}\n\n.tabScroller {\n    overflow: hidden;\n    position: relative;\n}\n.tab.changed>.tabCloseButton {\n    background: #afafaf;\n    border: transparent;\n}\n\n.tabbar {\n    display:flex;\n    background: var(--toolbar-background);\n    color: #333;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n    user-select: none;\n}\n.tab {\n    font-size: 12px;\n    height: 100%;\n    /*min-width: 100px;*/\n    cursor: default;\n    display:flex;\n    align-items: center;\n    padding: 0 10px;\n    box-sizing: border-box;\n    background: var(--toolbar-background);\n    border-left: transparent solid 1px;\n    border-right: transparent solid 1px;\n    user-select: none;\n    position: absolute;\n}\n\n.tab.selected.active:after {\n    content: \"\";\n    border-bottom: 2px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n.tab.focused.active:after {\n    content: \"\";\n    border-bottom: 3px solid rgb(127, 127, 191);\n    width: calc(100% - 22px);\n    bottom: 0;\n    position: absolute;\n}\n\n.tab.scrolledLeft {\n    border-color: var(--splitter-color);\n    box-shadow: 0px 0px 2px 0px #d0d0d0;\n}\n.tabIcon {\n    display: none;\n}\n\n.tabLeftOverflow {\n\n}\n.tabRightOverflow {\n\n}\n.tabDragging {\n    display: flex;\n    box-sizing: border-box;\n    transition: 0.5s background-color;\n    user-select: none;\n    z-index: 100000;\n    pointer-events: none;\n    position: absolute;\n}\n\n.tab:hover {\n    background: var(--hover-background);\n}\n.tab.selected {\n    background-color: #e7e7e7;\n}\n.tab.active {\n    background-color: whitesmoke;\n}\n .tabDragging > .tab.active {\n    background-color: #e7e7e7;\n}\n\n.tabCloseButton {\n    transform: rotate(45deg);\n    width: 11px;\n    height: 11px;\n    display: inline-block;\n    border-radius: 10px;\n    cursor: pointer;\n    opacity: 0;\n    background: linear-gradient(to bottom, transparent 40%, #ababab 40%, #ababab 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #ababab 40%, #ababab 60%, transparent 60%);\n}\n\n\n.tabCloseButton:hover {\n    background-color: #ababab;\n    border: 1px solid #ababab;\n    background-image: linear-gradient(to bottom, transparent 40%, #fff 40%, #fff 60%,  transparent 60%),\n        linear-gradient(to right, transparent 40%, #fff 40%, #fff 60%, transparent 60%);\n\n}\n\n.tab.active .tabCloseButton,\n.tab:hover .tabCloseButton,\n.tabCloseButton.changed {\n    opacity: 1\n}\n\n.tabIcon {\n    color: yellow;\n    padding: 0 4px 0 0;\n}\n.tab.active .tabIcon {\n    color: orange\n}\n.tabTitle {\n    flex: 1;\n    padding: 0 2px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\n\n\n.tabbar.vertical .tab {\n    transform: rotate(180deg);\n}\n\n\n.split-area {\n    position: absolute;\n    background: rgba(0, 0, 0, 0.05);\n    border: 1px solid rgba(0, 0, 0, 0.2);\n    z-index: 100000;\n    pointer-events: none;\n    box-sizing: border-box;\n    cursor: default;\n}\n\n.dark.split-area {\n    background: rgba(255, 255, 255, 0.05);\n    border: 1px solid rgba(255, 255, 255, 0.3);\n    box-shadow: 0 0 200px rgba(255, 255, 255, 0.15) inset;\n    outline: 1px solid black;\n}\n\n.tab-editor {\n    position: absolute;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -35678,7 +35668,7 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ 51937:
+/***/ 9734:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35698,7 +35688,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(49578);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(21705);
 
       
       
@@ -35730,7 +35720,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 10153:
+/***/ 4863:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35750,7 +35740,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ace_tree_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(50265);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ace_tree_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(65463);
 
       
       
@@ -35782,7 +35772,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 30183:
+/***/ 61262:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35802,7 +35792,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(17724);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(75715);
 
       
       
@@ -35834,7 +35824,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 34646:
+/***/ 42498:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35854,7 +35844,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12100);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(94936);
 
       
       
@@ -35886,7 +35876,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 23694:
+/***/ 77111:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35906,7 +35896,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19229);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(47594);
 
       
       
@@ -35938,7 +35928,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 73612:
+/***/ 58659:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35958,7 +35948,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(18753);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(52368);
 
       
       
@@ -35990,7 +35980,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ 52463:
+/***/ 87757:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -36010,7 +36000,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(78329);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(67303);
 
       
       
@@ -36350,7 +36340,7 @@ module.exports = "\n      import API from \"!../../../style-loader/dist/runtime/
 
 /***/ }),
 
-/***/ 92583:
+/***/ 9300:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -36382,7 +36372,7 @@ exports.CommandManager = CommandManager;
 
 /***/ }),
 
-/***/ 12656:
+/***/ 20682:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -36398,8 +36388,8 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.tabCommands = void 0;
-var tab_1 = __webpack_require__(9165);
-var tabManager_1 = __webpack_require__(8478);
+var tab_1 = __webpack_require__(94271);
+var tabManager_1 = __webpack_require__(58923);
 function getCurrentPaneTabs(element) {
     var _a, _b, _c, _d;
     if (element instanceof tab_1.Tab) {
@@ -36806,759 +36796,7 @@ exports.tabCommands = [
 
 /***/ }),
 
-/***/ 12845:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.addExampleMenuItems = exports.menuDefs = void 0;
-var commandManager_1 = __webpack_require__(92583);
-exports.menuDefs = {
-    "AWS Cloud9": "50,,,,",
-    "File": "100,,,,",
-    "Edit": "200,,,,",
-    "Find": "300,,,,",
-    "View": "400,,,,",
-    "Go": "500,,,,",
-    "Tools": "700,,,,",
-    "Window": "800,,,,",
-    "File/~1000000": "1000000,,,,",
-    "View/~9999": "9999,,,,",
-    "Window/Presets": "10200,,false,, ",
-    "Window/Presets/Full IDE": "100,,false,, ",
-    "Window/Presets/Minimal Editor": "200,,false,, ",
-    "Window/Presets/Sublime Mode": "300,,false,, ",
-    "View/Menu Bar": "250,check,true,false,",
-    "Edit/~300": "300,,,,",
-    "Edit/Cut": "400,,false,false,Ctrl-X",
-    "Edit/Copy": "500,,false,false,Ctrl-C",
-    "Edit/Paste": "600,,false,false,Ctrl-V",
-    "View/Editors": "100,,false,, ",
-    "View/~200": "200,,,,",
-    "View/Tab Buttons": "300,check,true,false,",
-    "AWS Cloud9/~280": "280,,,,",
-    "AWS Cloud9/Preferences": "300,,false,false,Ctrl-,",
-    "Tools/~100000": "100000,,,,",
-    "Tools/Developer": "100100,,false,, ",
-    "Tools/Developer/Start in Debug Mode": "900,,false,, ",
-    "Window/Environment": "100,check,true,,Ctrl-I",
-    "File/~600": "600,,,,",
-    "File/Save": "700,,false,false,Ctrl-S",
-    "File/Save As...": "800,,false,false,Ctrl-Shift-S",
-    "File/Save All": "900,,false,false,",
-    "File/Revert to Saved": "1000,,false,false,Ctrl-Shift-Q",
-    "File/Revert All to Saved": "1100,,false,false,Alt-Shift-Q",
-    "View/Editors/Image Viewer": "40000,radio,false,true, ",
-    "View/Editors/Image Editor": "40000,radio,false,true, ",
-    "File/New File": "100,,false,false,Alt-N",
-    "File/New From Template": "200,,false,false, ",
-    "File/New From Template/Text File": "200,,false,false, ",
-    "File/New From Template/JavaScript File": "200,,false,false, ",
-    "File/New From Template/HTML File": "200,,false,false, ",
-    "File/New From Template/XML File": "200,,false,false, ",
-    "File/New From Template/Python File": "200,,false,false, ",
-    "File/New From Template/PHP File": "200,,false,false, ",
-    "File/New From Template/C File": "200,,false,false, ",
-    "File/New From Template/C++ File": "200,,false,false, ",
-    "File/New From Template/Go File": "200,,false,false, ",
-    "File/New From Template/Markdown": "200,,false,false, ",
-    "File/New From Template/Node.js Web Server": "200,,false,false, ",
-    "File/New From Template/Java Console Application": "200,,false,false, ",
-    "File/Open...": "400,,false,false,Ctrl-E|Ctrl-O",
-    "Edit/Undo": "100,,false,true,Ctrl-Z",
-    "Edit/Redo": "200,,false,true,Ctrl-Shift-Z|Ctrl-Y",
-    "Help": "1000,,,,",
-    "Help/Key Bindings Editor": "250,,false,,",
-    "View/Editors/Ace": "40000,radio,false,true, ",
-    "Tools/Toggle Macro Recording": "20100,,false,false,Alt-Shift-R",
-    "Tools/Play Macro": "20200,,false,false,Alt-R",
-    "Edit/~700": "700,,,,",
-    "Edit/Selection": "800,,false,, ",
-    "Edit/Line": "900,,false,, ",
-    "Edit/Text": "1000,,false,, ",
-    "Edit/Comment": "1100,,false,, ",
-    "Edit/Code Folding": "1200,,false,, ",
-    "Edit/Line/Indent": "100,,false,false,Tab",
-    "Edit/Line/Outdent": "200,,false,false,Shift-Tab",
-    "Edit/Line/Move Line Up": "300,,false,false,Alt-Up",
-    "Edit/Line/Move Line Down": "400,,false,false,Alt-Down",
-    "Edit/Line/~500": "500,,,false,",
-    "Edit/Line/Copy Lines Up": "600,,false,false,Alt-Shift-Up",
-    "Edit/Line/Copy Lines Down": "700,,false,false,Alt-Shift-Down",
-    "Edit/Line/~800": "800,,,false,",
-    "Edit/Line/Remove Line": "900,,false,false,Ctrl-D",
-    "Edit/Line/Remove to Line End": "1000,,false,false,Alt-Delete",
-    "Edit/Line/Remove to Line Start": "1100,,false,false,Alt-Backspace",
-    "Edit/Line/~1200": "1200,,,false,",
-    "Edit/Line/Split Line": "1300,,false,false,",
-    "Edit/Comment/Toggle Comment": "100,,false,false,Ctrl-/",
-    "Edit/Text/Remove Word Right": "100,,false,false,Ctrl-Delete",
-    "Edit/Text/Remove Word Left": "200,,false,false,Ctrl-Backspace",
-    "Edit/Text/~300": "300,,,false,",
-    "Edit/Text/Align": "400,,false,false,Ctrl-Alt-A",
-    "Edit/Text/Transpose Letters": "500,,false,false,Alt-Shift-X",
-    "Edit/Text/~600": "600,,,false,",
-    "Edit/Text/To Upper Case": "700,,false,false,Ctrl-U",
-    "Edit/Text/To Lower Case": "800,,false,false,Ctrl-Shift-U",
-    "Edit/Code Folding/Toggle Fold": "100,,false,false,F2",
-    "Edit/Code Folding/Unfold": "200,,false,false,Alt-Shift-L|Ctrl-Shift-F1",
-    "Edit/Code Folding/~300": "300,,,false,",
-    "Edit/Code Folding/Fold Other": "400,,false,false,Alt-0",
-    "Edit/Code Folding/Fold All": "500,,false,false,",
-    "Edit/Code Folding/Unfold All": "600,,false,false,Alt-Shift-0",
-    "Edit/Selection/Select All": "100,,false,false,Ctrl-A",
-    "Edit/Selection/Split Into Lines": "200,,false,false,Ctrl-Alt-L",
-    "Edit/Selection/Single Selection": "300,,false,true,esc",
-    "Edit/Selection/~400": "400,,,false,",
-    "Edit/Selection/Multiple Selections": "500,,false,false, ",
-    "Edit/Selection/~600": "600,,,false,",
-    "Edit/Selection/Select Word Right": "700,,false,false,Ctrl-Shift-Right",
-    "Edit/Selection/Select Word Left": "800,,false,false,Ctrl-Shift-Left",
-    "Edit/Selection/~900": "900,,,false,",
-    "Edit/Selection/Select to Line End": "1000,,false,false,Alt-Shift-Right",
-    "Edit/Selection/Select to Line Start": "1100,,false,false,Alt-Shift-Left",
-    "Edit/Selection/~1200": "1200,,,false,",
-    "Edit/Selection/Select to Document End": "1300,,false,false,Ctrl-Shift-End",
-    "Edit/Selection/Select to Document Start": "1400,,false,false,Ctrl-Shift-Home",
-    "Edit/Selection/Multiple Selections/Add Cursor Up": "100,,false,false,Ctrl-Alt-Up",
-    "Edit/Selection/Multiple Selections/Add Cursor Down": "200,,false,false,Ctrl-Alt-Down",
-    "Edit/Selection/Multiple Selections/Move Active Cursor Up": "300,,false,false,Ctrl-Alt-Shift-Up",
-    "Edit/Selection/Multiple Selections/Move Active Cursor Down": "400,,false,false,Ctrl-Alt-Shift-Down",
-    "Edit/Selection/Multiple Selections/~500": "500,,,,",
-    "Edit/Selection/Multiple Selections/Add Next Selection Match": "600,,false,false,Ctrl-Alt-Right",
-    "Edit/Selection/Multiple Selections/Add Previous Selection Match": "700,,false,false,Ctrl-Alt-Left",
-    "Edit/Selection/Multiple Selections/~800": "800,,,,",
-    "Edit/Selection/Multiple Selections/Merge Selection Range": "900,,false,false,Ctrl-Alt-L",
-    "View/~290000": "290000,,,,",
-    "View/Font Size": "290001,,false,, ",
-    "View/Font Size/Increase Font Size": "100,,false,false,Ctrl-+|Ctrl-=",
-    "View/Font Size/Decrease Font Size": "200,,false,false,Ctrl--",
-    "View/Gutter": "500,check,true,, ",
-    "File/~1400": "1400,,,,",
-    "File/Line Endings": "1500,,false,, ",
-    "File/Line Endings/Windows (CRLF)": "200,radio,false,false, ",
-    "File/Line Endings/Unix (LF)": "300,radio,false,false, ",
-    "View/Syntax": "300000,,false,, ",
-    "View/~400000": "400000,,,,",
-    "View/Wrap Lines": "500000,check,false,false, ",
-    "View/Wrap To Print Margin": "600000,check,false,false, ",
-    "Go/~399": "399,,,,",
-    "Go/Next Error": "499,,false,false,Alt-E",
-    "Go/Previous Error": "599,,false,false,Alt-Shift-E",
-    "Go/~799": "799,,,,",
-    "Go/Word Right": "899,,false,false,Ctrl-Right",
-    "Go/Word Left": "999,,false,false,Ctrl-Left",
-    "Go/~1099": "1099,,,,",
-    "Go/Line End": "1199,,false,false,Alt-Right|End",
-    "Go/Line Start": "1299,,false,false,Alt-Left|Home",
-    "Go/~1399": "1399,,,,",
-    "Go/Jump to Matching Brace": "1499,,false,false,Ctrl-P",
-    "Go/~1599": "1599,,,,",
-    "Go/Scroll to Selection": "1699,,false,false,",
-    "View/Themes": "350000,,false,false, ",
-    "Go/Go to Anything...": "100,,false,false,Ctrl-P",
-    "Go/Go to Symbol...": "110,,false,false,Ctrl-Shift-O",
-    "Go/Go to File...": "120,,false,false,Ctrl-E|Ctrl-O",
-    "Go/Go to Command...": "130,,false,false,Ctrl-.",
-    "Window/Go": "10,check,true,, ",
-    "AWS Cloud9/~300": "300,,,,",
-    "AWS Cloud9/Go To Your Dashboard": "310,,false,, ",
-    "AWS Cloud9/~350": "350,,,,",
-    "AWS Cloud9/Open Your Project Settings": "400,,false,, ",
-    "AWS Cloud9/Open Your User Settings": "400,,false,, ",
-    "AWS Cloud9/Open Your Keymap": "600,,false,, ",
-    "AWS Cloud9/Open Your Init Script": "700,,false,, ",
-    "AWS Cloud9/Open Your Stylesheet": "800,,false,, ",
-    "AWS Cloud9/Restart AWS Cloud9": "2000080,,false,false,Ctrl-R",
-    "Tools/Strip Trailing Space": "100,,false,false,",
-    "Tools/~200": "200,,,,",
-    "Go/Go to Line...": "200,,false,false,Ctrl-G",
-    "View/Status Bar": "600,check,true,, ",
-    "File/~100000": "100000,,,,",
-    "File/Close File": "110000,,false,false,Alt-W",
-    "File/Close All Files": "120000,,false,false,Alt-Shift-W",
-    "Window/Tabs": "10100,,false,, ",
-    "Window/Tabs/Close Pane": "100,,false,,Ctrl-W",
-    "Window/Tabs/Close All Tabs In All Panes": "200,,false,,Alt-Shift-W",
-    "Window/Tabs/Close All But Current Tab": "300,,false,,Ctrl-Alt-W",
-    "Window/Tabs/~1000000": "1000000,,,,",
-    "Window/Tabs/Split Pane in Two Rows": "1000100,,false,,",
-    "Window/Tabs/Split Pane in Two Columns": "1000200,,false,,",
-    "Window/Tabs/~1000300": "1000300,,,,",
-    "Window/Tabs/~1000400": "1000400,,,,",
-    "Window/~9000": "9000,,,,",
-    "Window/Navigation": "9100,,false,, ",
-    "Window/Navigation/Tab to the Right": "100,,false,true,Ctrl-]",
-    "Window/Navigation/Tab to the Left": "200,,false,true,Ctrl-[",
-    "Window/Navigation/Next Tab in History": "300,,false,true,Ctrl-Tab|Alt-`",
-    "Window/Navigation/Previous Tab in History": "400,,false,true,Ctrl-Shift-Tab|Alt-Shift-`",
-    "Window/Navigation/~500": "500,,,,",
-    "Window/Navigation/Move Tab to Right": "600,,false,false,Ctrl-Meta-Right",
-    "Window/Navigation/Move Tab to Left": "700,,false,false,Ctrl-Meta-Left",
-    "Window/Navigation/Move Tab to Up": "800,,false,false,Ctrl-Meta-Up",
-    "Window/Navigation/Move Tab to Down": "900,,false,false,Ctrl-Meta-Down",
-    "Window/Navigation/~1000": "1000,,,,",
-    "Window/Navigation/Go to Pane to Right": "1100,,false,false,Ctrl-Meta-Right",
-    "Window/Navigation/Go to Pane to Left": "1200,,false,false,Ctrl-Meta-Left",
-    "Window/Navigation/Go to Pane to Up": "1300,,false,false,Ctrl-Meta-Up",
-    "Window/Navigation/Go to Pane to Down": "1400,,false,false,Ctrl-Meta-Down",
-    "Window/Navigation/~1500": "1500,,,,",
-    "Window/Navigation/Next Pane in History": "1600,,false,false,Ctrl-`",
-    "Window/Navigation/Previous Pane in History": "1700,,false,false,Ctrl-Shift-`",
-    "Window/~10000": "10000,,,,",
-    "/context": ",,,,",
-    "/context/tree": "0,,false,,",
-    "/context/tree/Copy file path": "800,,false,false,",
-    "/context/tree/~850": "850,,,false,",
-    /*"/context/tabs": {
-        "Reveal in File Tree": "100,,false,false,Ctrl-Shift-L",
-        "~200": "200,,,,",
-        "Copy file path": "230,,false,false,",
-        "~260": "260,,,,",
-        "Close Tab": "300,,false,false,Alt-W",
-        "Close All Tabs": "450,,false,false,Ctrl-W",
-        "Close Other Tabs": "500,,false,false,Ctrl-Alt-W",
-        "Close Tabs to the Left": "600,,false,true,",
-        "Close Tabs to the Right": "700,,false,true,",
-        "~750": "750,,,,",
-        "Split Pane in Two Rows": "800,,false,false,",
-        "Split Pane in Two Columns": "900,,false,false,",
-        "~1000": "1000,,,,",
-        "Duplicate View": "1010,,false,false,",
-        "Run This File": "150,,false,false, ",
-    },*/
-    "View/~800": "800,,,,",
-    "View/Layout": "900,,false,, ",
-    "View/Layout/Single": "100,,false,false,",
-    "View/Layout/Vertical Split": "100,,false,false,",
-    "View/Layout/Horizontal Split": "200,,false,false,",
-    "View/Layout/Cross Split": "300,,false,false,",
-    "View/Layout/Split 1:2": "400,,false,false,",
-    "View/Layout/Split 2:1": "500,,false,false,",
-    "Window/Saved Layouts": "10050,,false,, ",
-    "Edit/~650": "650,,,,",
-    "Edit/Keyboard Mode": "660,,false,, ",
-    "Edit/Keyboard Mode/Default": "1100,radio,true,, ",
-    "Edit/Keyboard Mode/Vim": "1200,radio,false,, ",
-    "Edit/Keyboard Mode/Emacs": "1300,radio,false,, ",
-    "Edit/Keyboard Mode/Sublime": "1400,radio,false,, ",
-    "Find/~10000": "10000,,,,",
-    "Find/Find in Files...": "20000,,false,false,Ctrl-Shift-F",
-    "Find/Find...": "100,,false,false,Ctrl-F",
-    "Find/Find Next": "200,,false,false,Ctrl-K",
-    "Find/Find Previous": "300,,false,false,Ctrl-Shift-K",
-    "Find/~400": "400,,,,",
-    "Find/Replace...": "500,,false,false,Alt-Shift-F|Ctrl-H",
-    "Find/Replace Next": "600,,false,false,",
-    "Find/Replace Previous": "700,,false,false,",
-    "Find/Replace All": "800,,false,false,",
-    "Tools/~2000": "2000,,,,",
-    "Tools/Show Autocomplete": "2100,,false,false,Ctrl-Space|Alt-Space",
-    "Tools/~10000": "10000,,,,",
-    "Tools/Rename variable": "2100,,false,false,Ctrl-Alt-R",
-    "Go/Jump to Definition": "1450,,false,false,F3",
-    "Go/Find References": "1450,,false,false,Shift-F3",
-    "Window/Debugger": "100,check,true,,",
-    "Run": "600,,,,",
-    "Run/Run": "1100,,false,true,Alt-F5",
-    "Run/Run Last": "1200,,false,true,F5",
-    "Run/~1300": "1300,,,,",
-    "Run/Run With": "1400,,false,, ",
-    "Run/Run History": "1500,,false,true, ",
-    "Run/Run Configurations": "1600,,false,, ",
-    "Run/~2600": "2600,,,,",
-    "Run/Show Debugger at Break": "2700,check,true,, ",
-    "Run/Run Configurations/~1000": "1000,,,,",
-    "Run/Run Configurations/New Run Configuration": "1100,,false,, ",
-    "Run/Run Configurations/Manage...": "1200,,false,, ",
-    "Run/Run With/~1000": "1000,,,,",
-    "Run/Run With/New Runner": "1100,,false,, ",
-    "Run/Run With/Edit Runner": "1200,,false,, ",
-    "Window/New Terminal": "30,,false,false,Alt-T",
-    "Window/Navigation/Switch Between Editor and Terminal": "1550,,false,false,Alt-S",
-    "Run/~10100": "10100,,,,",
-    "Run/Build": "10200,,false,false,Ctrl-B",
-    "Run/Cancel Build": "10300,,false,true,Ctrl-Shift-C",
-    "Run/Build System": "10400,,false,, ",
-    "Run/Show Build Result": "10500,,false,, ",
-    "Run/~10600": "10600,,,,",
-    "Run/Automatically Build Supported Files": "10700,check,false,, ",
-    "Run/Save All on Build": "10800,check,true,, ",
-    "Run/Build System/Automatic": "100,radio,true,, ",
-    "Run/Build System/~200": "200,,,,",
-    "Run/Build System/~1200": "1200,,,,",
-    "Run/Build System/New Build System": "1300,,false,, ",
-    "Window/New Immediate Window": "31,,false,, ",
-    "View/Editors/Preview": "40000,radio,false,true, ",
-    "Tools/Preview": "1000,,false,, ",
-    "Tools/Preview/Live Preview Files": "100,,false,true, ",
-    "Tools/Preview/Preview Running Application": "200,,false,, ",
-    "Tools/Preview/~2000": "2000,,,,",
-    "Tools/Preview/~4000": "4000,,,,",
-    "Tools/Preview/Configure Preview URL...": "4200,,false,, ",
-    "Tools/Preview/Show Active Servers...": "4300,,false,, ",
-    "File/~1200": "1200,,,,",
-    "File/Upload Local Files...": "1300,,false,, ",
-    "Window/Outline": "50,check,true,,Ctrl-Shift-E",
-    "View/Open Files": "210,check,false,, ",
-    "Tools/Process List": "1100,,false,false,Ctrl-Alt-P",
-    "Window/Installer...": "38,,false,false,",
-    "Edit/Code Formatting": "1400,,false,, ",
-    "Edit/Code Formatting/Apply Code Formatting": "100,,true,,Ctrl-Shift-B",
-    "Edit/Code Formatting/Open Language & Formatting Preferences...": "200,,true,,",
-    "File/Download Project": "1300,,false,, ",
-    "File/Open Recent": "500,,false,, ",
-    "File/Open Recent/~1000000": "1000000,,,,",
-    "File/Open Recent/Clear Menu": "2000000,,false,true, ",
-    "/user_info": "600,,,,",
-    "/user_info/Go To Dashboard": "600,,false,, ",
-    "Window/~40": "40,,,,",
-    "/context/ace": "0,,false,,",
-    "/context/ace-gutter": "0,,false,,",
-    "/context/ace-gutter/Gutter Options": "1100,,false,, ",
-    "/context/ace-gutter/Gutter Options/Show Line Numbers": "100,,false,,",
-    "/context/ace-gutter/Gutter Options/Show Fold Widgets": "200,,false,,",
-    "/context/terminal": ",,false,,",
-    "/context/terminal/New Terminal Tab": "200,,false,,",
-    "/context/terminal/~300": "300,,,,",
-    "/context/terminal/Copy": "400,,false,,",
-    "/context/terminal/Paste": "500,,false,,",
-    "/context/terminal/Select All": "600,,false,,",
-    "/context/terminal/Clear Buffer": "700,,false,,",
-    "/context/terminal/~800": "800,,,,",
-    "/context/terminal/Hint: Use Alt To Toggle Mouse Mode": "900,,false,,",
-    "View/Syntax/Auto-Select": "100,radio,false,, ",
-    "View/Syntax/Plain Text": "200,radio,true,, ",
-    "View/Syntax/~300": "300,,,,",
-    "View/Syntax/C and C++": "400,radio,false,, ",
-    "View/Syntax/C#": "500,radio,false,, ",
-    "View/Syntax/Clojure": "600,radio,false,, ",
-    "View/Syntax/CoffeeScript": "700,radio,false,, ",
-    "View/Syntax/CSS": "800,radio,false,, ",
-    "View/Syntax/Dart": "900,radio,false,, ",
-    "View/Syntax/Go": "1000,radio,false,, ",
-    "View/Syntax/HTML": "1100,radio,false,, ",
-    "View/Syntax/Jade": "1200,radio,false,, ",
-    "View/Syntax/Java": "1300,radio,false,, ",
-    "View/Syntax/JavaScript": "1400,radio,false,, ",
-    "View/Syntax/JSON": "1500,radio,false,, ",
-    "View/Syntax/LESS": "1600,radio,false,, ",
-    "View/Syntax/Lua": "1700,radio,false,, ",
-    "View/Syntax/Perl": "1800,radio,false,, ",
-    "View/Syntax/PHP": "1900,radio,false,, ",
-    "View/Syntax/Python": "2000,radio,false,, ",
-    "View/Syntax/Ruby": "2100,radio,false,, ",
-    "View/Syntax/Scala": "2200,radio,false,, ",
-    "View/Syntax/SCSS": "2300,radio,false,, ",
-    "View/Syntax/SH": "2400,radio,false,, ",
-    "View/Syntax/SQL": "2500,radio,false,, ",
-    "View/Syntax/Stylus": "2600,radio,false,, ",
-    "View/Syntax/Text": "2700,radio,true,, ",
-    "View/Syntax/Typescript": "2800,radio,false,, ",
-    "View/Syntax/XML": "2900,radio,false,, ",
-    "View/Syntax/XQuery": "3000,radio,false,, ",
-    "View/Syntax/YAML": "3100,radio,false,, ",
-    "View/Syntax/~3200": "3200,,,,",
-    "View/Syntax/ABAP": "3300,radio,false,, ",
-    "View/Syntax/ABC": "3400,radio,false,, ",
-    "View/Syntax/ActionScript": "3500,radio,false,, ",
-    "View/Syntax/ADA": "3600,radio,false,, ",
-    "View/Syntax/Apache Conf": "3700,radio,false,, ",
-    "View/Syntax/Apex": "3800,radio,false,, ",
-    "View/Syntax/AQL": "3900,radio,false,, ",
-    "View/Syntax/AsciiDoc": "4000,radio,false,, ",
-    "View/Syntax/ASL": "4100,radio,false,, ",
-    "View/Syntax/Assembly x86": "4200,radio,false,, ",
-    "View/Syntax/AutoHotkey ": ",,false,,",
-    "View/Syntax/AutoHotkey / AutoIt": "4300,,false,,",
-    "View/Syntax/BatchFile": "4400,radio,false,, ",
-    "View/Syntax/C9Search": "4500,radio,false,, ",
-    "View/Syntax/Cirru": "4600,radio,false,, ",
-    "View/Syntax/Cobol": "4700,radio,false,, ",
-    "View/Syntax/ColdFusion": "4800,radio,false,, ",
-    "View/Syntax/Crystal": "4900,radio,false,, ",
-    "View/Syntax/Csound": "5000,radio,false,, ",
-    "View/Syntax/Csound Document": "5100,radio,false,, ",
-    "View/Syntax/Csound Score": "5200,radio,false,, ",
-    "View/Syntax/Curly": "5300,radio,false,, ",
-    "View/Syntax/D": "5400,radio,false,, ",
-    "View/Syntax/Diff": "5500,radio,false,, ",
-    "View/Syntax/Django": "5600,radio,false,, ",
-    "View/Syntax/Dockerfile": "5700,radio,false,, ",
-    "View/Syntax/Dot": "5800,radio,false,, ",
-    "View/Syntax/Drools": "5900,radio,false,, ",
-    "View/Syntax/Edifact": "6000,radio,false,, ",
-    "View/Syntax/Eiffel": "6100,radio,false,, ",
-    "View/Syntax/EJS": "6200,radio,false,, ",
-    "View/Syntax/Elixir": "6300,radio,false,, ",
-    "View/Syntax/Elm": "6400,radio,false,, ",
-    "View/Syntax/Erlang": "6500,radio,false,, ",
-    "View/Syntax/Forth": "6600,radio,false,, ",
-    "View/Syntax/Fortran": "6700,radio,false,, ",
-    "View/Syntax/FreeMarker": "6800,radio,false,, ",
-    "View/Syntax/FSharp": "6900,radio,false,, ",
-    "View/Syntax/FSL": "7000,radio,false,, ",
-    "View/Syntax/Gcode": "7100,radio,false,, ",
-    "View/Syntax/Gherkin": "7200,radio,false,, ",
-    "View/Syntax/Gitignore": "7300,radio,false,, ",
-    "View/Syntax/Glsl": "7400,radio,false,, ",
-    "View/Syntax/Gobstones": "7500,radio,false,, ",
-    "View/Syntax/GraphQLSchema": "7600,radio,false,, ",
-    "View/Syntax/Groovy": "7700,radio,false,, ",
-    "View/Syntax/HAML": "7800,radio,false,, ",
-    "View/Syntax/Handlebars": "7900,radio,false,, ",
-    "View/Syntax/Haskell": "8000,radio,false,, ",
-    "View/Syntax/Haskell Cabal": "8100,radio,false,, ",
-    "View/Syntax/haXe": "8200,radio,false,, ",
-    "View/Syntax/Hjson": "8300,radio,false,, ",
-    "View/Syntax/HTML (Elixir)": "8400,radio,false,, ",
-    "View/Syntax/HTML (Ruby)": "8500,radio,false,, ",
-    "View/Syntax/INI": "8600,radio,false,, ",
-    "View/Syntax/Io": "8700,radio,false,, ",
-    "View/Syntax/Jack": "8800,radio,false,, ",
-    "View/Syntax/JSONiq": "8900,radio,false,, ",
-    "View/Syntax/JSP": "9000,radio,false,, ",
-    "View/Syntax/JSSM": "9100,radio,false,, ",
-    "View/Syntax/JSX": "9200,radio,false,, ",
-    "View/Syntax/Julia": "9300,radio,false,, ",
-    "View/Syntax/Kotlin": "9400,radio,false,, ",
-    "View/Syntax/LaTeX": "9500,radio,false,, ",
-    "View/Syntax/Liquid": "9600,radio,false,, ",
-    "View/Syntax/Lisp": "9700,radio,false,, ",
-    "View/Syntax/LiveScript": "9800,radio,false,, ",
-    "View/Syntax/LogiQL": "9900,radio,false,, ",
-    "View/Syntax/LSL": "10000,radio,false,, ",
-    "View/Syntax/LuaPage": "10100,radio,false,, ",
-    "View/Syntax/Lucene": "10200,radio,false,, ",
-    "View/Syntax/Makefile": "10300,radio,false,, ",
-    "View/Syntax/Markdown": "10400,radio,false,, ",
-    "View/Syntax/Mask": "10500,radio,false,, ",
-    "View/Syntax/MATLAB": "10600,radio,false,, ",
-    "View/Syntax/Maze": "10700,radio,false,, ",
-    "View/Syntax/MEL": "10800,radio,false,, ",
-    "View/Syntax/MIXAL": "10900,radio,false,, ",
-    "View/Syntax/MUSHCode": "11000,radio,false,, ",
-    "View/Syntax/MySQL": "11100,radio,false,, ",
-    "View/Syntax/Nginx": "11200,radio,false,, ",
-    "View/Syntax/Nim": "11300,radio,false,, ",
-    "View/Syntax/Nix": "11400,radio,false,, ",
-    "View/Syntax/NSIS": "11500,radio,false,, ",
-    "View/Syntax/Objective-C": "11600,radio,false,, ",
-    "View/Syntax/OCaml": "11700,radio,false,, ",
-    "View/Syntax/Pascal": "11800,radio,false,, ",
-    "View/Syntax/Perl 6": "11900,radio,false,, ",
-    "View/Syntax/pgSQL": "12000,radio,false,, ",
-    "View/Syntax/PHP (Blade Template)": "12100,radio,false,, ",
-    "View/Syntax/Pig": "12200,radio,false,, ",
-    "View/Syntax/Powershell": "12300,radio,false,, ",
-    "View/Syntax/Praat": "12400,radio,false,, ",
-    "View/Syntax/Prolog": "12500,radio,false,, ",
-    "View/Syntax/Properties": "12600,radio,false,, ",
-    "View/Syntax/Protobuf": "12700,radio,false,, ",
-    "View/Syntax/Puppet": "12800,radio,false,, ",
-    "View/Syntax/R": "12900,radio,false,, ",
-    "View/Syntax/Razor": "13000,radio,false,, ",
-    "View/Syntax/RDoc": "13100,radio,false,, ",
-    "View/Syntax/Red": "13200,radio,false,, ",
-    "View/Syntax/RHTML": "13300,radio,false,, ",
-    "View/Syntax/RST": "13400,radio,false,, ",
-    "View/Syntax/Rust": "13500,radio,false,, ",
-    "View/Syntax/SASS": "13600,radio,false,, ",
-    "View/Syntax/SCAD": "13700,radio,false,, ",
-    "View/Syntax/Scheme": "13800,radio,false,, ",
-    "View/Syntax/SJS": "13900,radio,false,, ",
-    "View/Syntax/Slim": "14000,radio,false,, ",
-    "View/Syntax/Smarty": "14100,radio,false,, ",
-    "View/Syntax/Soy Template": "14200,radio,false,, ",
-    "View/Syntax/Space": "14300,radio,false,, ",
-    "View/Syntax/SQLServer": "14400,radio,false,, ",
-    "View/Syntax/SVG": "14500,radio,false,, ",
-    "View/Syntax/Swift": "14600,radio,false,, ",
-    "View/Syntax/Tcl": "14700,radio,false,, ",
-    "View/Syntax/Terraform": "14800,radio,false,, ",
-    "View/Syntax/Tex": "14900,radio,false,, ",
-    "View/Syntax/Textile": "15000,radio,false,, ",
-    "View/Syntax/Toml": "15100,radio,false,, ",
-    "View/Syntax/TSX": "15200,radio,false,, ",
-    "View/Syntax/Twig": "15300,radio,false,, ",
-    "View/Syntax/Vala": "15400,radio,false,, ",
-    "View/Syntax/VBScript": "15500,radio,false,, ",
-    "View/Syntax/Velocity": "15600,radio,false,, ",
-    "View/Syntax/Verilog": "15700,radio,false,, ",
-    "View/Syntax/VHDL": "15800,radio,false,, ",
-    "View/Syntax/Visualforce": "15900,radio,false,, ",
-    "View/Syntax/Wollok": "16000,radio,false,, ",
-    "View/Syntax/Zeek": "16100,radio,false,, ",
-    "View/Themes/UI Themes": "0,,false,false, ",
-    "View/Themes/~200": "200,,,false,",
-    "View/Themes/UI Themes/Classic Dark": "0,radio,false,, ",
-    "View/Themes/UI Themes/Classic Dark Gray": "0,radio,false,, ",
-    "View/Themes/UI Themes/Flat Light": "0,radio,false,, ",
-    "View/Themes/Ambiance": "200,radio,false,false, ",
-    "View/Themes/Chrome": "201,radio,false,false, ",
-    "View/Themes/Cloud9": "202,,false,false, ",
-    "View/Themes/Cloud9/Cloud9 Day": ",radio,false,, ",
-    "View/Themes/Cloud9/Cloud9 Night": ",radio,false,, ",
-    "View/Themes/Cloud9/Cloud9 Night Low-Color": ",radio,false,, ",
-    "View/Themes/Clouds": "203,,false,false, ",
-    "View/Themes/Clouds/Clouds": ",radio,false,, ",
-    "View/Themes/Clouds/Clouds Midnight": ",radio,false,, ",
-    "View/Themes/Cobalt": "204,radio,false,false, ",
-    "View/Themes/Crimson Editor": "205,radio,false,false, ",
-    "View/Themes/Dawn": "206,radio,false,false, ",
-    "View/Themes/Dreamweaver": "207,radio,false,false, ",
-    "View/Themes/Eclipse": "208,radio,false,false, ",
-    "View/Themes/GitHub": "209,radio,false,false, ",
-    "View/Themes/Idle Fingers": "210,radio,false,false, ",
-    "View/Themes/Kr Theme": "211,radio,false,false, ",
-    "View/Themes/Merbivore": "212,,false,false, ",
-    "View/Themes/Merbivore/Merbivore": ",radio,false,, ",
-    "View/Themes/Merbivore/Merbivore Soft": ",radio,false,, ",
-    "View/Themes/Mono Industrial": "213,radio,false,false, ",
-    "View/Themes/Monokai": "214,radio,false,false, ",
-    "View/Themes/Pastel On Dark": "215,radio,false,false, ",
-    "View/Themes/Solarized": "216,,false,false, ",
-    "View/Themes/Solarized/Solarized Dark": ",radio,false,, ",
-    "View/Themes/Solarized/Solarized Light": ",radio,false,, ",
-    "View/Themes/TextMate": "217,radio,false,false, ",
-    "View/Themes/Tomorrow": "218,,false,false, ",
-    "View/Themes/Tomorrow/Tomorrow": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night Blue": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night Bright": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night Eighties": ",radio,false,, ",
-    "View/Themes/Twilight": "219,radio,false,false, ",
-    "View/Themes/Vibrant Ink": "220,radio,false,false, ",
-    "View/Themes/Xcode": "221,radio,false,false, ",
-    "View/Themes/Jett": "222,radio,false,false, ",
-    "Window/Saved Layouts/Save...": "100,,false,,",
-    "Window/Saved Layouts/Save And Close All...": "200,,false,,",
-    "Window/Saved Layouts/~300": "300,,,,",
-    "Window/Saved Layouts/Show Saved Layouts in File Tree": "400,,false,, ",
-    "Window/Saved Layouts/~500": "500,,,,"
-};
-function addExampleMenuItems(menuManager, root, menuDefinitions) {
-    if (menuDefinitions === void 0) { menuDefinitions = exports.menuDefs; }
-    var commands = [];
-    Object.keys(menuDefinitions).forEach(function (x) {
-        var _a;
-        var item = menuDefinitions[x];
-        var exec;
-        if (typeof item == "object") {
-            if (item.properties != undefined) {
-                exec = item.exec;
-                item = item.properties;
-            }
-            else {
-                return addExampleMenuItems(menuManager, x, item);
-            }
-        }
-        var parts = (_a = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item)) !== null && _a !== void 0 ? _a : [];
-        var path = root ? root + "/" + x : x;
-        var hotKey = (parts[5] || "").trim();
-        if (exec && hotKey) {
-            commands.push({
-                bindKey: {
-                    win: hotKey,
-                    mac: hotKey
-                },
-                exec: exec
-            });
-        }
-        menuManager.addByPath(path, {
-            className: path == "AWS Cloud9" ? "c9btn" : undefined,
-            type: parts[2],
-            checked: parts[3] == "true",
-            disabled: parts[4] == "true",
-            position: parseInt(parts[1]),
-            hotKey: hotKey,
-            exec: exec
-        });
-    });
-    commandManager_1.CommandManager.registerCommands(commands);
-}
-exports.addExampleMenuItems = addExampleMenuItems;
-
-
-/***/ }),
-
-/***/ 56950:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var _a;
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var box_1 = __webpack_require__(8795);
-var tabManager_1 = __webpack_require__(8478);
-var panelManager_1 = __webpack_require__(16790);
-var button_1 = __webpack_require__(75765);
-var file_system_web_1 = __webpack_require__(67517);
-var ace_tree_1 = __webpack_require__(69982);
-var dom_1 = __webpack_require__(25079);
-var menu_example_1 = __webpack_require__(12845);
-var menuManager_1 = __webpack_require__(97282);
-var layout_1 = __webpack_require__(49251);
-var menuToolbar_1 = __webpack_require__(72631);
-var panelBar_1 = __webpack_require__(68659);
-var mainBox, outerBox, consoleBox;
-var fileTree;
-document.body.innerHTML = "";
-var base = new box_1.Box({
-    vertical: false,
-    toolBars: {
-        top: new menuToolbar_1.MenuToolbar(),
-        bottom: new panelBar_1.PanelBar({})
-    },
-    0: outerBox = new box_1.Box({
-        vertical: true,
-        0: new box_1.Box({
-            vertical: false,
-            0: fileTree = new box_1.Box({
-                size: 200,
-            }),
-            1: mainBox = new box_1.Box({
-                isMain: true,
-            }),
-        }),
-        1: consoleBox = new box_1.Box({
-            ratio: 1,
-            size: 100,
-            isMain: true
-        }),
-        toolBars: {},
-    }),
-});
-new layout_1.AceLayout(base);
-window["fileTreeWrapper"] = fileTree;
-var fileSystem = new file_system_web_1.FileSystemWeb();
-function renderFileTree() {
-    var _this = this;
-    var button = new button_1.Button({ value: "Open Folder" });
-    var buttonWrapper = ["div", {}, button.render()];
-    var aceTree = new ace_tree_1.AceTreeWrapper();
-    var aceTreeWrapper = ["div", { style: "height: 100%" }, aceTree.element];
-    button.element.addEventListener("mousedown", function (e) { return __awaiter(_this, void 0, void 0, function () {
-        var nodes;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, fileSystem.open()];
-                case 1:
-                    nodes = _a.sent();
-                    aceTree.updateTreeData(nodes);
-                    aceTree.element.addEventListener("item-click", function (evt) {
-                        fileSystem.openFile(evt.detail);
-                    });
-                    return [2 /*return*/];
-            }
-        });
-    }); });
-    dom_1.dom.buildDom(["div", { style: "height: 100%" }, buttonWrapper, aceTreeWrapper], fileTree.element);
-}
-menu_example_1.menuDefs["View/Console"] = {
-    properties: "700,check,false,false,F6",
-    exec: function () { return consoleBox.toggleShowHide(); }
-};
-(0, menu_example_1.addExampleMenuItems)(menuManager_1.MenuManager.getInstance(), "", menu_example_1.menuDefs);
-base.render();
-var onResize = function () {
-    base.setBox(0, 0, window.innerWidth, window.innerHeight);
-};
-window.onresize = onResize;
-document.body.appendChild(base.element);
-var tabManager = tabManager_1.TabManager.getInstance({
-    containers: {
-        main: mainBox,
-        console: consoleBox
-    },
-    fileSystem: fileSystem
-});
-(_a = tabManager.fileSystem) === null || _a === void 0 ? void 0 : _a.on("openFile", function (treeNode, fileContent) {
-    tabManager.open({
-        path: treeNode.path,
-        title: treeNode.path.split('/').pop()
-    }, undefined, fileContent);
-});
-var panelManager = panelManager_1.PanelManager.getInstance({
-    layout: base,
-    locations: {
-        left: {
-            parent: base,
-            index: 0,
-            size: 200
-        }
-    }
-});
-window.onbeforeunload = function () {
-    tabManager.saveTo(localStorage);
-    localStorage.tabs = JSON.stringify(tabManager.toJSON());
-    localStorage.panels = JSON.stringify(panelManager.toJSON());
-};
-var tabState = {};
-var panelState = {};
-try {
-    if (localStorage.tabs)
-        tabState = JSON.parse(localStorage.tabs);
-    if (localStorage.panels)
-        panelState = JSON.parse(localStorage.panels);
-}
-catch (e) {
-}
-tabManager.setState(tabState);
-panelManager.setState(panelState);
-tabManager.restoreFrom(localStorage);
-renderFileTree();
-onResize();
-consoleBox.renderButtons([{
-        class: "consoleCloseBtn",
-        title: "F6",
-        onclick: function () {
-            consoleBox.hide();
-        },
-        content: "x"
-    }]);
-
-
-/***/ }),
-
-/***/ 67517:
+/***/ 87975:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -37616,7 +36854,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.FileSystemWeb = void 0;
-var fileEntries_1 = __webpack_require__(56940);
+var fileEntries_1 = __webpack_require__(365);
 var events_1 = __webpack_require__(17187);
 var FileSystemWeb = /** @class */ (function (_super) {
     __extends(FileSystemWeb, _super);
@@ -37696,7 +36934,7 @@ exports.FileSystemWeb = FileSystemWeb;
 
 /***/ }),
 
-/***/ 1020:
+/***/ 79029:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -37802,7 +37040,7 @@ function getIconNameFromFileName(filename) {
 
 /***/ }),
 
-/***/ 56940:
+/***/ 365:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -38104,15 +37342,15 @@ exports.Directory = Directory;
 
 /***/ }),
 
-/***/ 89583:
+/***/ 18108:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AccordionHandler = void 0;
-var box_1 = __webpack_require__(8795);
-var lib_1 = __webpack_require__(53723);
+var box_1 = __webpack_require__(95561);
+var lib_1 = __webpack_require__(80930);
 var event = __webpack_require__(17989);
 var AccordionHandler;
 (function (AccordionHandler) {
@@ -38362,15 +37600,15 @@ var AccordionHandler;
 
 /***/ }),
 
-/***/ 11966:
+/***/ 21649:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabbarHandler = void 0;
-var lib_1 = __webpack_require__(53723);
-var dom_1 = __webpack_require__(25079);
+var lib_1 = __webpack_require__(80930);
+var dom_1 = __webpack_require__(91444);
 var event = __webpack_require__(17989);
 var TabbarHandler;
 (function (TabbarHandler) {
@@ -38691,7 +37929,7 @@ window.addEventListener("mouseup", function () {
 
 /***/ }),
 
-/***/ 25079:
+/***/ 91444:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -38971,7 +38209,7 @@ var dom;
 
 /***/ }),
 
-/***/ 53723:
+/***/ 80930:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -39037,7 +38275,7 @@ var Utils;
 
 /***/ }),
 
-/***/ 33130:
+/***/ 60524:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -39058,7 +38296,7 @@ var EditorType;
 
 /***/ }),
 
-/***/ 64563:
+/***/ 29930:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -39080,11 +38318,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Accordion = void 0;
-var accordion_handler_1 = __webpack_require__(89583);
-var box_1 = __webpack_require__(8795);
-var lib_1 = __webpack_require__(53723);
-var dom_1 = __webpack_require__(25079);
-var accordionCSS = __webpack_require__(51937);
+var accordion_handler_1 = __webpack_require__(18108);
+var box_1 = __webpack_require__(95561);
+var lib_1 = __webpack_require__(80930);
+var dom_1 = __webpack_require__(91444);
+var accordionCSS = __webpack_require__(9734);
 dom_1.dom.importCssString(accordionCSS, "accordion.css");
 var BOX_MIN_SIZE = 80;
 var Accordion = /** @class */ (function (_super) {
@@ -39432,7 +38670,7 @@ exports.Accordion = Accordion;
 
 /***/ }),
 
-/***/ 8795:
+/***/ 95561:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -39454,11 +38692,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Box = void 0;
-var lib_1 = __webpack_require__(53723);
-var params_1 = __webpack_require__(33130);
+var lib_1 = __webpack_require__(80930);
+var params_1 = __webpack_require__(60524);
 var event = __webpack_require__(17989);
 var events = __webpack_require__(17187);
-var dom_1 = __webpack_require__(25079);
+var dom_1 = __webpack_require__(91444);
 var SPLITTER_SIZE = 1;
 var BOX_MIN_SIZE = 40;
 var Box = /** @class */ (function (_super) {
@@ -40021,7 +39259,7 @@ exports.Box = Box;
 
 /***/ }),
 
-/***/ 43167:
+/***/ 29659:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -40043,13 +39281,13 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Pane = void 0;
-var box_1 = __webpack_require__(8795);
-var dom_1 = __webpack_require__(25079);
-var aceEditor_1 = __webpack_require__(39704);
-var previewEditor_1 = __webpack_require__(68575);
-var params_1 = __webpack_require__(33130);
-var lib_1 = __webpack_require__(53723);
-var tabBar_1 = __webpack_require__(3242);
+var box_1 = __webpack_require__(95561);
+var dom_1 = __webpack_require__(91444);
+var aceEditor_1 = __webpack_require__(32664);
+var previewEditor_1 = __webpack_require__(64287);
+var params_1 = __webpack_require__(60524);
+var lib_1 = __webpack_require__(80930);
+var tabBar_1 = __webpack_require__(62277);
 var Pane = /** @class */ (function (_super) {
     __extends(Pane, _super);
     function Pane(options) {
@@ -40223,7 +39461,7 @@ exports.Pane = Pane;
 
 /***/ }),
 
-/***/ 39704:
+/***/ 32664:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -40327,7 +39565,7 @@ exports.AceEditor = AceEditor;
 
 /***/ }),
 
-/***/ 68575:
+/***/ 64287:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -40367,7 +39605,7 @@ exports.PreviewEditor = PreviewEditor;
 
 /***/ }),
 
-/***/ 75765:
+/***/ 82478:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -40396,8 +39634,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Button = void 0;
-var dom_1 = __webpack_require__(25079);
-var buttonCSS = __webpack_require__(30183);
+var dom_1 = __webpack_require__(91444);
+var buttonCSS = __webpack_require__(61262);
 dom_1.dom.importCssString(buttonCSS, "button.css");
 var Button = /** @class */ (function () {
     function Button(options) {
@@ -40437,15 +39675,15 @@ exports.Button = Button;
 
 /***/ }),
 
-/***/ 49251:
+/***/ 97341:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AceLayout = void 0;
-var layoutCSS = __webpack_require__(34646);
-var dom_1 = __webpack_require__(25079);
+var layoutCSS = __webpack_require__(42498);
+var dom_1 = __webpack_require__(91444);
 var AceLayout = /** @class */ (function () {
     function AceLayout(startBox, css) {
         dom_1.dom.importCssString(css !== null && css !== void 0 ? css : layoutCSS, "layout.css");
@@ -40458,7 +39696,7 @@ exports.AceLayout = AceLayout;
 
 /***/ }),
 
-/***/ 99367:
+/***/ 57744:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -40480,9 +39718,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MenuSearchBox = exports.MenuPopup = exports.MenuBar = exports.Menu = void 0;
-var lib_1 = __webpack_require__(53723);
-var dom_1 = __webpack_require__(25079);
-var menuCSS = __webpack_require__(23694);
+var lib_1 = __webpack_require__(80930);
+var dom_1 = __webpack_require__(91444);
+var menuCSS = __webpack_require__(77111);
 dom_1.dom.importCssString(menuCSS, "menu.css");
 var Menu = /** @class */ (function () {
     function Menu() {
@@ -41234,14 +40472,14 @@ exports.MenuSearchBox = MenuSearchBox;
 
 /***/ }),
 
-/***/ 97282:
+/***/ 2505:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MenuItems = exports.MenuManager = void 0;
-var menu_1 = __webpack_require__(99367);
+var menu_1 = __webpack_require__(57744);
 var hash_handler_1 = __webpack_require__(7116);
 var event = __webpack_require__(17989);
 var keyUtil = __webpack_require__(11797);
@@ -41576,7 +40814,7 @@ exports.MenuItems = MenuItems;
 
 /***/ }),
 
-/***/ 40279:
+/***/ 23429:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -41598,10 +40836,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Panel = void 0;
-var panelManager_1 = __webpack_require__(16790);
-var dom_1 = __webpack_require__(25079);
-var panelCSS = __webpack_require__(73612);
-var tabPanel_1 = __webpack_require__(96751);
+var panelManager_1 = __webpack_require__(38404);
+var dom_1 = __webpack_require__(91444);
+var panelCSS = __webpack_require__(58659);
+var tabPanel_1 = __webpack_require__(41074);
 dom_1.dom.importCssString(panelCSS, "panel.css");
 var Panel = /** @class */ (function (_super) {
     __extends(Panel, _super);
@@ -41649,16 +40887,16 @@ exports.Panel = Panel;
 
 /***/ }),
 
-/***/ 16790:
+/***/ 38404:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PanelManager = void 0;
-var box_1 = __webpack_require__(8795);
-var accordion_1 = __webpack_require__(64563);
-var panelBar_1 = __webpack_require__(68659);
+var box_1 = __webpack_require__(95561);
+var accordion_1 = __webpack_require__(29930);
+var panelBar_1 = __webpack_require__(44526);
 var PanelManager = /** @class */ (function () {
     function PanelManager(options) {
         this.layout = options.layout;
@@ -41755,7 +40993,7 @@ exports.PanelManager = PanelManager;
 
 /***/ }),
 
-/***/ 9165:
+/***/ 94271:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -41777,11 +41015,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Tab = void 0;
-var tabManager_1 = __webpack_require__(8478);
-var dom_1 = __webpack_require__(25079);
-var tabCSS = __webpack_require__(52463);
-var params_1 = __webpack_require__(33130);
-var tabPanel_1 = __webpack_require__(96751);
+var tabManager_1 = __webpack_require__(58923);
+var dom_1 = __webpack_require__(91444);
+var tabCSS = __webpack_require__(87757);
+var params_1 = __webpack_require__(60524);
+var tabPanel_1 = __webpack_require__(41074);
 dom_1.dom.importCssString(tabCSS, "tab.css");
 var Tab = /** @class */ (function (_super) {
     __extends(Tab, _super);
@@ -41873,22 +41111,22 @@ exports.Tab = Tab;
 
 /***/ }),
 
-/***/ 8478:
+/***/ 58923:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabManager = void 0;
-var tabCommands_1 = __webpack_require__(12656);
-var box_1 = __webpack_require__(8795);
+var tabCommands_1 = __webpack_require__(20682);
+var box_1 = __webpack_require__(95561);
 var oop = __webpack_require__(89359);
 var event_emitter_1 = __webpack_require__(23056);
 var useragent = __webpack_require__(50618);
-var tab_1 = __webpack_require__(9165);
-var pane_1 = __webpack_require__(43167);
-var menuManager_1 = __webpack_require__(97282);
-var commandManager_1 = __webpack_require__(92583);
+var tab_1 = __webpack_require__(94271);
+var pane_1 = __webpack_require__(29659);
+var menuManager_1 = __webpack_require__(2505);
+var commandManager_1 = __webpack_require__(9300);
 var newTabCounter = 1;
 var TabManager = /** @class */ (function () {
     function TabManager(options) {
@@ -42104,7 +41342,7 @@ oop.implement(TabManager.prototype, event_emitter_1.EventEmitter);
 
 /***/ }),
 
-/***/ 96751:
+/***/ 41074:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -42132,7 +41370,7 @@ exports.TabPanel = TabPanel;
 
 /***/ }),
 
-/***/ 72631:
+/***/ 22177:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -42154,9 +41392,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.MenuToolbar = void 0;
-var toolbar_1 = __webpack_require__(76319);
-var dom_1 = __webpack_require__(25079);
-var menuManager_1 = __webpack_require__(97282);
+var toolbar_1 = __webpack_require__(5527);
+var dom_1 = __webpack_require__(91444);
+var menuManager_1 = __webpack_require__(2505);
 var MenuToolbar = /** @class */ (function (_super) {
     __extends(MenuToolbar, _super);
     function MenuToolbar() {
@@ -42190,7 +41428,7 @@ exports.MenuToolbar = MenuToolbar;
 
 /***/ }),
 
-/***/ 68659:
+/***/ 44526:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -42212,10 +41450,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PanelBar = void 0;
-var tabPanelBar_1 = __webpack_require__(29225);
-var dom_1 = __webpack_require__(25079);
-var tabbar_handler_1 = __webpack_require__(11966);
-var panel_1 = __webpack_require__(40279);
+var tabPanelBar_1 = __webpack_require__(59892);
+var dom_1 = __webpack_require__(91444);
+var tabbar_handler_1 = __webpack_require__(21649);
+var panel_1 = __webpack_require__(23429);
 var PanelBar = /** @class */ (function (_super) {
     __extends(PanelBar, _super);
     function PanelBar() {
@@ -42300,7 +41538,7 @@ exports.PanelBar = PanelBar;
 
 /***/ }),
 
-/***/ 3242:
+/***/ 62277:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -42322,12 +41560,12 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabBar = void 0;
-var lib_1 = __webpack_require__(53723);
-var dom_1 = __webpack_require__(25079);
-var tabbar_handler_1 = __webpack_require__(11966);
-var tabManager_1 = __webpack_require__(8478);
-var tabPanelBar_1 = __webpack_require__(29225);
-var tab_1 = __webpack_require__(9165);
+var lib_1 = __webpack_require__(80930);
+var dom_1 = __webpack_require__(91444);
+var tabbar_handler_1 = __webpack_require__(21649);
+var tabManager_1 = __webpack_require__(58923);
+var tabPanelBar_1 = __webpack_require__(59892);
+var tab_1 = __webpack_require__(94271);
 var TabBar = /** @class */ (function (_super) {
     __extends(TabBar, _super);
     function TabBar() {
@@ -42636,7 +41874,7 @@ exports.TabBar = TabBar;
 
 /***/ }),
 
-/***/ 29225:
+/***/ 59892:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -42658,7 +41896,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TabPanelBar = void 0;
-var toolbar_1 = __webpack_require__(76319);
+var toolbar_1 = __webpack_require__(5527);
 var TabPanelBar = /** @class */ (function (_super) {
     __extends(TabPanelBar, _super);
     function TabPanelBar(options) {
@@ -42908,14 +42146,14 @@ exports.TabPanelBar = TabPanelBar;
 
 /***/ }),
 
-/***/ 76319:
+/***/ 5527:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Toolbar = void 0;
-var lib_1 = __webpack_require__(53723);
+var lib_1 = __webpack_require__(80930);
 var Toolbar = /** @class */ (function () {
     function Toolbar(options) {
         this.direction = (options === null || options === void 0 ? void 0 : options.direction) || "horizontal";
@@ -42932,7 +42170,7 @@ exports.Toolbar = Toolbar;
 
 /***/ }),
 
-/***/ 69982:
+/***/ 39046:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -42941,11 +42179,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AceTreeWrapper = void 0;
 var Tree = __webpack_require__(22170);
 var DataProvider = __webpack_require__(83671);
-var dom_1 = __webpack_require__(25079);
+var dom_1 = __webpack_require__(91444);
 var oop = __webpack_require__(89359);
 var event_emitter_1 = __webpack_require__(23056);
-var file_type_icons_1 = __webpack_require__(1020);
-var aceTreeCSS = __webpack_require__(10153);
+var file_type_icons_1 = __webpack_require__(79029);
+var aceTreeCSS = __webpack_require__(4863);
 dom_1.dom.importCssString(aceTreeCSS, "ace-tree.css");
 function transform(node) {
     var path = node["path"] || "";
@@ -43013,7 +42251,759 @@ oop.implement(AceTreeWrapper.prototype, event_emitter_1.EventEmitter);
 
 /***/ }),
 
-/***/ 66475:
+/***/ 55849:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.addExampleMenuItems = exports.menuDefs = void 0;
+var commandManager_1 = __webpack_require__(9300);
+exports.menuDefs = {
+    "AWS Cloud9": "50,,,,",
+    "File": "100,,,,",
+    "Edit": "200,,,,",
+    "Find": "300,,,,",
+    "View": "400,,,,",
+    "Go": "500,,,,",
+    "Tools": "700,,,,",
+    "Window": "800,,,,",
+    "File/~1000000": "1000000,,,,",
+    "View/~9999": "9999,,,,",
+    "Window/Presets": "10200,,false,, ",
+    "Window/Presets/Full IDE": "100,,false,, ",
+    "Window/Presets/Minimal Editor": "200,,false,, ",
+    "Window/Presets/Sublime Mode": "300,,false,, ",
+    "View/Menu Bar": "250,check,true,false,",
+    "Edit/~300": "300,,,,",
+    "Edit/Cut": "400,,false,false,Ctrl-X",
+    "Edit/Copy": "500,,false,false,Ctrl-C",
+    "Edit/Paste": "600,,false,false,Ctrl-V",
+    "View/Editors": "100,,false,, ",
+    "View/~200": "200,,,,",
+    "View/Tab Buttons": "300,check,true,false,",
+    "AWS Cloud9/~280": "280,,,,",
+    "AWS Cloud9/Preferences": "300,,false,false,Ctrl-,",
+    "Tools/~100000": "100000,,,,",
+    "Tools/Developer": "100100,,false,, ",
+    "Tools/Developer/Start in Debug Mode": "900,,false,, ",
+    "Window/Environment": "100,check,true,,Ctrl-I",
+    "File/~600": "600,,,,",
+    "File/Save": "700,,false,false,Ctrl-S",
+    "File/Save As...": "800,,false,false,Ctrl-Shift-S",
+    "File/Save All": "900,,false,false,",
+    "File/Revert to Saved": "1000,,false,false,Ctrl-Shift-Q",
+    "File/Revert All to Saved": "1100,,false,false,Alt-Shift-Q",
+    "View/Editors/Image Viewer": "40000,radio,false,true, ",
+    "View/Editors/Image Editor": "40000,radio,false,true, ",
+    "File/New File": "100,,false,false,Alt-N",
+    "File/New From Template": "200,,false,false, ",
+    "File/New From Template/Text File": "200,,false,false, ",
+    "File/New From Template/JavaScript File": "200,,false,false, ",
+    "File/New From Template/HTML File": "200,,false,false, ",
+    "File/New From Template/XML File": "200,,false,false, ",
+    "File/New From Template/Python File": "200,,false,false, ",
+    "File/New From Template/PHP File": "200,,false,false, ",
+    "File/New From Template/C File": "200,,false,false, ",
+    "File/New From Template/C++ File": "200,,false,false, ",
+    "File/New From Template/Go File": "200,,false,false, ",
+    "File/New From Template/Markdown": "200,,false,false, ",
+    "File/New From Template/Node.js Web Server": "200,,false,false, ",
+    "File/New From Template/Java Console Application": "200,,false,false, ",
+    "File/Open...": "400,,false,false,Ctrl-E|Ctrl-O",
+    "Edit/Undo": "100,,false,true,Ctrl-Z",
+    "Edit/Redo": "200,,false,true,Ctrl-Shift-Z|Ctrl-Y",
+    "Help": "1000,,,,",
+    "Help/Key Bindings Editor": "250,,false,,",
+    "View/Editors/Ace": "40000,radio,false,true, ",
+    "Tools/Toggle Macro Recording": "20100,,false,false,Alt-Shift-R",
+    "Tools/Play Macro": "20200,,false,false,Alt-R",
+    "Edit/~700": "700,,,,",
+    "Edit/Selection": "800,,false,, ",
+    "Edit/Line": "900,,false,, ",
+    "Edit/Text": "1000,,false,, ",
+    "Edit/Comment": "1100,,false,, ",
+    "Edit/Code Folding": "1200,,false,, ",
+    "Edit/Line/Indent": "100,,false,false,Tab",
+    "Edit/Line/Outdent": "200,,false,false,Shift-Tab",
+    "Edit/Line/Move Line Up": "300,,false,false,Alt-Up",
+    "Edit/Line/Move Line Down": "400,,false,false,Alt-Down",
+    "Edit/Line/~500": "500,,,false,",
+    "Edit/Line/Copy Lines Up": "600,,false,false,Alt-Shift-Up",
+    "Edit/Line/Copy Lines Down": "700,,false,false,Alt-Shift-Down",
+    "Edit/Line/~800": "800,,,false,",
+    "Edit/Line/Remove Line": "900,,false,false,Ctrl-D",
+    "Edit/Line/Remove to Line End": "1000,,false,false,Alt-Delete",
+    "Edit/Line/Remove to Line Start": "1100,,false,false,Alt-Backspace",
+    "Edit/Line/~1200": "1200,,,false,",
+    "Edit/Line/Split Line": "1300,,false,false,",
+    "Edit/Comment/Toggle Comment": "100,,false,false,Ctrl-/",
+    "Edit/Text/Remove Word Right": "100,,false,false,Ctrl-Delete",
+    "Edit/Text/Remove Word Left": "200,,false,false,Ctrl-Backspace",
+    "Edit/Text/~300": "300,,,false,",
+    "Edit/Text/Align": "400,,false,false,Ctrl-Alt-A",
+    "Edit/Text/Transpose Letters": "500,,false,false,Alt-Shift-X",
+    "Edit/Text/~600": "600,,,false,",
+    "Edit/Text/To Upper Case": "700,,false,false,Ctrl-U",
+    "Edit/Text/To Lower Case": "800,,false,false,Ctrl-Shift-U",
+    "Edit/Code Folding/Toggle Fold": "100,,false,false,F2",
+    "Edit/Code Folding/Unfold": "200,,false,false,Alt-Shift-L|Ctrl-Shift-F1",
+    "Edit/Code Folding/~300": "300,,,false,",
+    "Edit/Code Folding/Fold Other": "400,,false,false,Alt-0",
+    "Edit/Code Folding/Fold All": "500,,false,false,",
+    "Edit/Code Folding/Unfold All": "600,,false,false,Alt-Shift-0",
+    "Edit/Selection/Select All": "100,,false,false,Ctrl-A",
+    "Edit/Selection/Split Into Lines": "200,,false,false,Ctrl-Alt-L",
+    "Edit/Selection/Single Selection": "300,,false,true,esc",
+    "Edit/Selection/~400": "400,,,false,",
+    "Edit/Selection/Multiple Selections": "500,,false,false, ",
+    "Edit/Selection/~600": "600,,,false,",
+    "Edit/Selection/Select Word Right": "700,,false,false,Ctrl-Shift-Right",
+    "Edit/Selection/Select Word Left": "800,,false,false,Ctrl-Shift-Left",
+    "Edit/Selection/~900": "900,,,false,",
+    "Edit/Selection/Select to Line End": "1000,,false,false,Alt-Shift-Right",
+    "Edit/Selection/Select to Line Start": "1100,,false,false,Alt-Shift-Left",
+    "Edit/Selection/~1200": "1200,,,false,",
+    "Edit/Selection/Select to Document End": "1300,,false,false,Ctrl-Shift-End",
+    "Edit/Selection/Select to Document Start": "1400,,false,false,Ctrl-Shift-Home",
+    "Edit/Selection/Multiple Selections/Add Cursor Up": "100,,false,false,Ctrl-Alt-Up",
+    "Edit/Selection/Multiple Selections/Add Cursor Down": "200,,false,false,Ctrl-Alt-Down",
+    "Edit/Selection/Multiple Selections/Move Active Cursor Up": "300,,false,false,Ctrl-Alt-Shift-Up",
+    "Edit/Selection/Multiple Selections/Move Active Cursor Down": "400,,false,false,Ctrl-Alt-Shift-Down",
+    "Edit/Selection/Multiple Selections/~500": "500,,,,",
+    "Edit/Selection/Multiple Selections/Add Next Selection Match": "600,,false,false,Ctrl-Alt-Right",
+    "Edit/Selection/Multiple Selections/Add Previous Selection Match": "700,,false,false,Ctrl-Alt-Left",
+    "Edit/Selection/Multiple Selections/~800": "800,,,,",
+    "Edit/Selection/Multiple Selections/Merge Selection Range": "900,,false,false,Ctrl-Alt-L",
+    "View/~290000": "290000,,,,",
+    "View/Font Size": "290001,,false,, ",
+    "View/Font Size/Increase Font Size": "100,,false,false,Ctrl-+|Ctrl-=",
+    "View/Font Size/Decrease Font Size": "200,,false,false,Ctrl--",
+    "View/Gutter": "500,check,true,, ",
+    "File/~1400": "1400,,,,",
+    "File/Line Endings": "1500,,false,, ",
+    "File/Line Endings/Windows (CRLF)": "200,radio,false,false, ",
+    "File/Line Endings/Unix (LF)": "300,radio,false,false, ",
+    "View/Syntax": "300000,,false,, ",
+    "View/~400000": "400000,,,,",
+    "View/Wrap Lines": "500000,check,false,false, ",
+    "View/Wrap To Print Margin": "600000,check,false,false, ",
+    "Go/~399": "399,,,,",
+    "Go/Next Error": "499,,false,false,Alt-E",
+    "Go/Previous Error": "599,,false,false,Alt-Shift-E",
+    "Go/~799": "799,,,,",
+    "Go/Word Right": "899,,false,false,Ctrl-Right",
+    "Go/Word Left": "999,,false,false,Ctrl-Left",
+    "Go/~1099": "1099,,,,",
+    "Go/Line End": "1199,,false,false,Alt-Right|End",
+    "Go/Line Start": "1299,,false,false,Alt-Left|Home",
+    "Go/~1399": "1399,,,,",
+    "Go/Jump to Matching Brace": "1499,,false,false,Ctrl-P",
+    "Go/~1599": "1599,,,,",
+    "Go/Scroll to Selection": "1699,,false,false,",
+    "View/Themes": "350000,,false,false, ",
+    "Go/Go to Anything...": "100,,false,false,Ctrl-P",
+    "Go/Go to Symbol...": "110,,false,false,Ctrl-Shift-O",
+    "Go/Go to File...": "120,,false,false,Ctrl-E|Ctrl-O",
+    "Go/Go to Command...": "130,,false,false,Ctrl-.",
+    "Window/Go": "10,check,true,, ",
+    "AWS Cloud9/~300": "300,,,,",
+    "AWS Cloud9/Go To Your Dashboard": "310,,false,, ",
+    "AWS Cloud9/~350": "350,,,,",
+    "AWS Cloud9/Open Your Project Settings": "400,,false,, ",
+    "AWS Cloud9/Open Your User Settings": "400,,false,, ",
+    "AWS Cloud9/Open Your Keymap": "600,,false,, ",
+    "AWS Cloud9/Open Your Init Script": "700,,false,, ",
+    "AWS Cloud9/Open Your Stylesheet": "800,,false,, ",
+    "AWS Cloud9/Restart AWS Cloud9": "2000080,,false,false,Ctrl-R",
+    "Tools/Strip Trailing Space": "100,,false,false,",
+    "Tools/~200": "200,,,,",
+    "Go/Go to Line...": "200,,false,false,Ctrl-G",
+    "View/Status Bar": "600,check,true,, ",
+    "File/~100000": "100000,,,,",
+    "File/Close File": "110000,,false,false,Alt-W",
+    "File/Close All Files": "120000,,false,false,Alt-Shift-W",
+    "Window/Tabs": "10100,,false,, ",
+    "Window/Tabs/Close Pane": "100,,false,,Ctrl-W",
+    "Window/Tabs/Close All Tabs In All Panes": "200,,false,,Alt-Shift-W",
+    "Window/Tabs/Close All But Current Tab": "300,,false,,Ctrl-Alt-W",
+    "Window/Tabs/~1000000": "1000000,,,,",
+    "Window/Tabs/Split Pane in Two Rows": "1000100,,false,,",
+    "Window/Tabs/Split Pane in Two Columns": "1000200,,false,,",
+    "Window/Tabs/~1000300": "1000300,,,,",
+    "Window/Tabs/~1000400": "1000400,,,,",
+    "Window/~9000": "9000,,,,",
+    "Window/Navigation": "9100,,false,, ",
+    "Window/Navigation/Tab to the Right": "100,,false,true,Ctrl-]",
+    "Window/Navigation/Tab to the Left": "200,,false,true,Ctrl-[",
+    "Window/Navigation/Next Tab in History": "300,,false,true,Ctrl-Tab|Alt-`",
+    "Window/Navigation/Previous Tab in History": "400,,false,true,Ctrl-Shift-Tab|Alt-Shift-`",
+    "Window/Navigation/~500": "500,,,,",
+    "Window/Navigation/Move Tab to Right": "600,,false,false,Ctrl-Meta-Right",
+    "Window/Navigation/Move Tab to Left": "700,,false,false,Ctrl-Meta-Left",
+    "Window/Navigation/Move Tab to Up": "800,,false,false,Ctrl-Meta-Up",
+    "Window/Navigation/Move Tab to Down": "900,,false,false,Ctrl-Meta-Down",
+    "Window/Navigation/~1000": "1000,,,,",
+    "Window/Navigation/Go to Pane to Right": "1100,,false,false,Ctrl-Meta-Right",
+    "Window/Navigation/Go to Pane to Left": "1200,,false,false,Ctrl-Meta-Left",
+    "Window/Navigation/Go to Pane to Up": "1300,,false,false,Ctrl-Meta-Up",
+    "Window/Navigation/Go to Pane to Down": "1400,,false,false,Ctrl-Meta-Down",
+    "Window/Navigation/~1500": "1500,,,,",
+    "Window/Navigation/Next Pane in History": "1600,,false,false,Ctrl-`",
+    "Window/Navigation/Previous Pane in History": "1700,,false,false,Ctrl-Shift-`",
+    "Window/~10000": "10000,,,,",
+    "/context": ",,,,",
+    "/context/tree": "0,,false,,",
+    "/context/tree/Copy file path": "800,,false,false,",
+    "/context/tree/~850": "850,,,false,",
+    /*"/context/tabs": {
+        "Reveal in File Tree": "100,,false,false,Ctrl-Shift-L",
+        "~200": "200,,,,",
+        "Copy file path": "230,,false,false,",
+        "~260": "260,,,,",
+        "Close Tab": "300,,false,false,Alt-W",
+        "Close All Tabs": "450,,false,false,Ctrl-W",
+        "Close Other Tabs": "500,,false,false,Ctrl-Alt-W",
+        "Close Tabs to the Left": "600,,false,true,",
+        "Close Tabs to the Right": "700,,false,true,",
+        "~750": "750,,,,",
+        "Split Pane in Two Rows": "800,,false,false,",
+        "Split Pane in Two Columns": "900,,false,false,",
+        "~1000": "1000,,,,",
+        "Duplicate View": "1010,,false,false,",
+        "Run This File": "150,,false,false, ",
+    },*/
+    "View/~800": "800,,,,",
+    "View/Layout": "900,,false,, ",
+    "View/Layout/Single": "100,,false,false,",
+    "View/Layout/Vertical Split": "100,,false,false,",
+    "View/Layout/Horizontal Split": "200,,false,false,",
+    "View/Layout/Cross Split": "300,,false,false,",
+    "View/Layout/Split 1:2": "400,,false,false,",
+    "View/Layout/Split 2:1": "500,,false,false,",
+    "Window/Saved Layouts": "10050,,false,, ",
+    "Edit/~650": "650,,,,",
+    "Edit/Keyboard Mode": "660,,false,, ",
+    "Edit/Keyboard Mode/Default": "1100,radio,true,, ",
+    "Edit/Keyboard Mode/Vim": "1200,radio,false,, ",
+    "Edit/Keyboard Mode/Emacs": "1300,radio,false,, ",
+    "Edit/Keyboard Mode/Sublime": "1400,radio,false,, ",
+    "Find/~10000": "10000,,,,",
+    "Find/Find in Files...": "20000,,false,false,Ctrl-Shift-F",
+    "Find/Find...": "100,,false,false,Ctrl-F",
+    "Find/Find Next": "200,,false,false,Ctrl-K",
+    "Find/Find Previous": "300,,false,false,Ctrl-Shift-K",
+    "Find/~400": "400,,,,",
+    "Find/Replace...": "500,,false,false,Alt-Shift-F|Ctrl-H",
+    "Find/Replace Next": "600,,false,false,",
+    "Find/Replace Previous": "700,,false,false,",
+    "Find/Replace All": "800,,false,false,",
+    "Tools/~2000": "2000,,,,",
+    "Tools/Show Autocomplete": "2100,,false,false,Ctrl-Space|Alt-Space",
+    "Tools/~10000": "10000,,,,",
+    "Tools/Rename variable": "2100,,false,false,Ctrl-Alt-R",
+    "Go/Jump to Definition": "1450,,false,false,F3",
+    "Go/Find References": "1450,,false,false,Shift-F3",
+    "Window/Debugger": "100,check,true,,",
+    "Run": "600,,,,",
+    "Run/Run": "1100,,false,true,Alt-F5",
+    "Run/Run Last": "1200,,false,true,F5",
+    "Run/~1300": "1300,,,,",
+    "Run/Run With": "1400,,false,, ",
+    "Run/Run History": "1500,,false,true, ",
+    "Run/Run Configurations": "1600,,false,, ",
+    "Run/~2600": "2600,,,,",
+    "Run/Show Debugger at Break": "2700,check,true,, ",
+    "Run/Run Configurations/~1000": "1000,,,,",
+    "Run/Run Configurations/New Run Configuration": "1100,,false,, ",
+    "Run/Run Configurations/Manage...": "1200,,false,, ",
+    "Run/Run With/~1000": "1000,,,,",
+    "Run/Run With/New Runner": "1100,,false,, ",
+    "Run/Run With/Edit Runner": "1200,,false,, ",
+    "Window/New Terminal": "30,,false,false,Alt-T",
+    "Window/Navigation/Switch Between Editor and Terminal": "1550,,false,false,Alt-S",
+    "Run/~10100": "10100,,,,",
+    "Run/Build": "10200,,false,false,Ctrl-B",
+    "Run/Cancel Build": "10300,,false,true,Ctrl-Shift-C",
+    "Run/Build System": "10400,,false,, ",
+    "Run/Show Build Result": "10500,,false,, ",
+    "Run/~10600": "10600,,,,",
+    "Run/Automatically Build Supported Files": "10700,check,false,, ",
+    "Run/Save All on Build": "10800,check,true,, ",
+    "Run/Build System/Automatic": "100,radio,true,, ",
+    "Run/Build System/~200": "200,,,,",
+    "Run/Build System/~1200": "1200,,,,",
+    "Run/Build System/New Build System": "1300,,false,, ",
+    "Window/New Immediate Window": "31,,false,, ",
+    "View/Editors/Preview": "40000,radio,false,true, ",
+    "Tools/Preview": "1000,,false,, ",
+    "Tools/Preview/Live Preview Files": "100,,false,true, ",
+    "Tools/Preview/Preview Running Application": "200,,false,, ",
+    "Tools/Preview/~2000": "2000,,,,",
+    "Tools/Preview/~4000": "4000,,,,",
+    "Tools/Preview/Configure Preview URL...": "4200,,false,, ",
+    "Tools/Preview/Show Active Servers...": "4300,,false,, ",
+    "File/~1200": "1200,,,,",
+    "File/Upload Local Files...": "1300,,false,, ",
+    "Window/Outline": "50,check,true,,Ctrl-Shift-E",
+    "View/Open Files": "210,check,false,, ",
+    "Tools/Process List": "1100,,false,false,Ctrl-Alt-P",
+    "Window/Installer...": "38,,false,false,",
+    "Edit/Code Formatting": "1400,,false,, ",
+    "Edit/Code Formatting/Apply Code Formatting": "100,,true,,Ctrl-Shift-B",
+    "Edit/Code Formatting/Open Language & Formatting Preferences...": "200,,true,,",
+    "File/Download Project": "1300,,false,, ",
+    "File/Open Recent": "500,,false,, ",
+    "File/Open Recent/~1000000": "1000000,,,,",
+    "File/Open Recent/Clear Menu": "2000000,,false,true, ",
+    "/user_info": "600,,,,",
+    "/user_info/Go To Dashboard": "600,,false,, ",
+    "Window/~40": "40,,,,",
+    "/context/ace": "0,,false,,",
+    "/context/ace-gutter": "0,,false,,",
+    "/context/ace-gutter/Gutter Options": "1100,,false,, ",
+    "/context/ace-gutter/Gutter Options/Show Line Numbers": "100,,false,,",
+    "/context/ace-gutter/Gutter Options/Show Fold Widgets": "200,,false,,",
+    "/context/terminal": ",,false,,",
+    "/context/terminal/New Terminal Tab": "200,,false,,",
+    "/context/terminal/~300": "300,,,,",
+    "/context/terminal/Copy": "400,,false,,",
+    "/context/terminal/Paste": "500,,false,,",
+    "/context/terminal/Select All": "600,,false,,",
+    "/context/terminal/Clear Buffer": "700,,false,,",
+    "/context/terminal/~800": "800,,,,",
+    "/context/terminal/Hint: Use Alt To Toggle Mouse Mode": "900,,false,,",
+    "View/Syntax/Auto-Select": "100,radio,false,, ",
+    "View/Syntax/Plain Text": "200,radio,true,, ",
+    "View/Syntax/~300": "300,,,,",
+    "View/Syntax/C and C++": "400,radio,false,, ",
+    "View/Syntax/C#": "500,radio,false,, ",
+    "View/Syntax/Clojure": "600,radio,false,, ",
+    "View/Syntax/CoffeeScript": "700,radio,false,, ",
+    "View/Syntax/CSS": "800,radio,false,, ",
+    "View/Syntax/Dart": "900,radio,false,, ",
+    "View/Syntax/Go": "1000,radio,false,, ",
+    "View/Syntax/HTML": "1100,radio,false,, ",
+    "View/Syntax/Jade": "1200,radio,false,, ",
+    "View/Syntax/Java": "1300,radio,false,, ",
+    "View/Syntax/JavaScript": "1400,radio,false,, ",
+    "View/Syntax/JSON": "1500,radio,false,, ",
+    "View/Syntax/LESS": "1600,radio,false,, ",
+    "View/Syntax/Lua": "1700,radio,false,, ",
+    "View/Syntax/Perl": "1800,radio,false,, ",
+    "View/Syntax/PHP": "1900,radio,false,, ",
+    "View/Syntax/Python": "2000,radio,false,, ",
+    "View/Syntax/Ruby": "2100,radio,false,, ",
+    "View/Syntax/Scala": "2200,radio,false,, ",
+    "View/Syntax/SCSS": "2300,radio,false,, ",
+    "View/Syntax/SH": "2400,radio,false,, ",
+    "View/Syntax/SQL": "2500,radio,false,, ",
+    "View/Syntax/Stylus": "2600,radio,false,, ",
+    "View/Syntax/Text": "2700,radio,true,, ",
+    "View/Syntax/Typescript": "2800,radio,false,, ",
+    "View/Syntax/XML": "2900,radio,false,, ",
+    "View/Syntax/XQuery": "3000,radio,false,, ",
+    "View/Syntax/YAML": "3100,radio,false,, ",
+    "View/Syntax/~3200": "3200,,,,",
+    "View/Syntax/ABAP": "3300,radio,false,, ",
+    "View/Syntax/ABC": "3400,radio,false,, ",
+    "View/Syntax/ActionScript": "3500,radio,false,, ",
+    "View/Syntax/ADA": "3600,radio,false,, ",
+    "View/Syntax/Apache Conf": "3700,radio,false,, ",
+    "View/Syntax/Apex": "3800,radio,false,, ",
+    "View/Syntax/AQL": "3900,radio,false,, ",
+    "View/Syntax/AsciiDoc": "4000,radio,false,, ",
+    "View/Syntax/ASL": "4100,radio,false,, ",
+    "View/Syntax/Assembly x86": "4200,radio,false,, ",
+    "View/Syntax/AutoHotkey ": ",,false,,",
+    "View/Syntax/AutoHotkey / AutoIt": "4300,,false,,",
+    "View/Syntax/BatchFile": "4400,radio,false,, ",
+    "View/Syntax/C9Search": "4500,radio,false,, ",
+    "View/Syntax/Cirru": "4600,radio,false,, ",
+    "View/Syntax/Cobol": "4700,radio,false,, ",
+    "View/Syntax/ColdFusion": "4800,radio,false,, ",
+    "View/Syntax/Crystal": "4900,radio,false,, ",
+    "View/Syntax/Csound": "5000,radio,false,, ",
+    "View/Syntax/Csound Document": "5100,radio,false,, ",
+    "View/Syntax/Csound Score": "5200,radio,false,, ",
+    "View/Syntax/Curly": "5300,radio,false,, ",
+    "View/Syntax/D": "5400,radio,false,, ",
+    "View/Syntax/Diff": "5500,radio,false,, ",
+    "View/Syntax/Django": "5600,radio,false,, ",
+    "View/Syntax/Dockerfile": "5700,radio,false,, ",
+    "View/Syntax/Dot": "5800,radio,false,, ",
+    "View/Syntax/Drools": "5900,radio,false,, ",
+    "View/Syntax/Edifact": "6000,radio,false,, ",
+    "View/Syntax/Eiffel": "6100,radio,false,, ",
+    "View/Syntax/EJS": "6200,radio,false,, ",
+    "View/Syntax/Elixir": "6300,radio,false,, ",
+    "View/Syntax/Elm": "6400,radio,false,, ",
+    "View/Syntax/Erlang": "6500,radio,false,, ",
+    "View/Syntax/Forth": "6600,radio,false,, ",
+    "View/Syntax/Fortran": "6700,radio,false,, ",
+    "View/Syntax/FreeMarker": "6800,radio,false,, ",
+    "View/Syntax/FSharp": "6900,radio,false,, ",
+    "View/Syntax/FSL": "7000,radio,false,, ",
+    "View/Syntax/Gcode": "7100,radio,false,, ",
+    "View/Syntax/Gherkin": "7200,radio,false,, ",
+    "View/Syntax/Gitignore": "7300,radio,false,, ",
+    "View/Syntax/Glsl": "7400,radio,false,, ",
+    "View/Syntax/Gobstones": "7500,radio,false,, ",
+    "View/Syntax/GraphQLSchema": "7600,radio,false,, ",
+    "View/Syntax/Groovy": "7700,radio,false,, ",
+    "View/Syntax/HAML": "7800,radio,false,, ",
+    "View/Syntax/Handlebars": "7900,radio,false,, ",
+    "View/Syntax/Haskell": "8000,radio,false,, ",
+    "View/Syntax/Haskell Cabal": "8100,radio,false,, ",
+    "View/Syntax/haXe": "8200,radio,false,, ",
+    "View/Syntax/Hjson": "8300,radio,false,, ",
+    "View/Syntax/HTML (Elixir)": "8400,radio,false,, ",
+    "View/Syntax/HTML (Ruby)": "8500,radio,false,, ",
+    "View/Syntax/INI": "8600,radio,false,, ",
+    "View/Syntax/Io": "8700,radio,false,, ",
+    "View/Syntax/Jack": "8800,radio,false,, ",
+    "View/Syntax/JSONiq": "8900,radio,false,, ",
+    "View/Syntax/JSP": "9000,radio,false,, ",
+    "View/Syntax/JSSM": "9100,radio,false,, ",
+    "View/Syntax/JSX": "9200,radio,false,, ",
+    "View/Syntax/Julia": "9300,radio,false,, ",
+    "View/Syntax/Kotlin": "9400,radio,false,, ",
+    "View/Syntax/LaTeX": "9500,radio,false,, ",
+    "View/Syntax/Liquid": "9600,radio,false,, ",
+    "View/Syntax/Lisp": "9700,radio,false,, ",
+    "View/Syntax/LiveScript": "9800,radio,false,, ",
+    "View/Syntax/LogiQL": "9900,radio,false,, ",
+    "View/Syntax/LSL": "10000,radio,false,, ",
+    "View/Syntax/LuaPage": "10100,radio,false,, ",
+    "View/Syntax/Lucene": "10200,radio,false,, ",
+    "View/Syntax/Makefile": "10300,radio,false,, ",
+    "View/Syntax/Markdown": "10400,radio,false,, ",
+    "View/Syntax/Mask": "10500,radio,false,, ",
+    "View/Syntax/MATLAB": "10600,radio,false,, ",
+    "View/Syntax/Maze": "10700,radio,false,, ",
+    "View/Syntax/MEL": "10800,radio,false,, ",
+    "View/Syntax/MIXAL": "10900,radio,false,, ",
+    "View/Syntax/MUSHCode": "11000,radio,false,, ",
+    "View/Syntax/MySQL": "11100,radio,false,, ",
+    "View/Syntax/Nginx": "11200,radio,false,, ",
+    "View/Syntax/Nim": "11300,radio,false,, ",
+    "View/Syntax/Nix": "11400,radio,false,, ",
+    "View/Syntax/NSIS": "11500,radio,false,, ",
+    "View/Syntax/Objective-C": "11600,radio,false,, ",
+    "View/Syntax/OCaml": "11700,radio,false,, ",
+    "View/Syntax/Pascal": "11800,radio,false,, ",
+    "View/Syntax/Perl 6": "11900,radio,false,, ",
+    "View/Syntax/pgSQL": "12000,radio,false,, ",
+    "View/Syntax/PHP (Blade Template)": "12100,radio,false,, ",
+    "View/Syntax/Pig": "12200,radio,false,, ",
+    "View/Syntax/Powershell": "12300,radio,false,, ",
+    "View/Syntax/Praat": "12400,radio,false,, ",
+    "View/Syntax/Prolog": "12500,radio,false,, ",
+    "View/Syntax/Properties": "12600,radio,false,, ",
+    "View/Syntax/Protobuf": "12700,radio,false,, ",
+    "View/Syntax/Puppet": "12800,radio,false,, ",
+    "View/Syntax/R": "12900,radio,false,, ",
+    "View/Syntax/Razor": "13000,radio,false,, ",
+    "View/Syntax/RDoc": "13100,radio,false,, ",
+    "View/Syntax/Red": "13200,radio,false,, ",
+    "View/Syntax/RHTML": "13300,radio,false,, ",
+    "View/Syntax/RST": "13400,radio,false,, ",
+    "View/Syntax/Rust": "13500,radio,false,, ",
+    "View/Syntax/SASS": "13600,radio,false,, ",
+    "View/Syntax/SCAD": "13700,radio,false,, ",
+    "View/Syntax/Scheme": "13800,radio,false,, ",
+    "View/Syntax/SJS": "13900,radio,false,, ",
+    "View/Syntax/Slim": "14000,radio,false,, ",
+    "View/Syntax/Smarty": "14100,radio,false,, ",
+    "View/Syntax/Soy Template": "14200,radio,false,, ",
+    "View/Syntax/Space": "14300,radio,false,, ",
+    "View/Syntax/SQLServer": "14400,radio,false,, ",
+    "View/Syntax/SVG": "14500,radio,false,, ",
+    "View/Syntax/Swift": "14600,radio,false,, ",
+    "View/Syntax/Tcl": "14700,radio,false,, ",
+    "View/Syntax/Terraform": "14800,radio,false,, ",
+    "View/Syntax/Tex": "14900,radio,false,, ",
+    "View/Syntax/Textile": "15000,radio,false,, ",
+    "View/Syntax/Toml": "15100,radio,false,, ",
+    "View/Syntax/TSX": "15200,radio,false,, ",
+    "View/Syntax/Twig": "15300,radio,false,, ",
+    "View/Syntax/Vala": "15400,radio,false,, ",
+    "View/Syntax/VBScript": "15500,radio,false,, ",
+    "View/Syntax/Velocity": "15600,radio,false,, ",
+    "View/Syntax/Verilog": "15700,radio,false,, ",
+    "View/Syntax/VHDL": "15800,radio,false,, ",
+    "View/Syntax/Visualforce": "15900,radio,false,, ",
+    "View/Syntax/Wollok": "16000,radio,false,, ",
+    "View/Syntax/Zeek": "16100,radio,false,, ",
+    "View/Themes/UI Themes": "0,,false,false, ",
+    "View/Themes/~200": "200,,,false,",
+    "View/Themes/UI Themes/Classic Dark": "0,radio,false,, ",
+    "View/Themes/UI Themes/Classic Dark Gray": "0,radio,false,, ",
+    "View/Themes/UI Themes/Flat Light": "0,radio,false,, ",
+    "View/Themes/Ambiance": "200,radio,false,false, ",
+    "View/Themes/Chrome": "201,radio,false,false, ",
+    "View/Themes/Cloud9": "202,,false,false, ",
+    "View/Themes/Cloud9/Cloud9 Day": ",radio,false,, ",
+    "View/Themes/Cloud9/Cloud9 Night": ",radio,false,, ",
+    "View/Themes/Cloud9/Cloud9 Night Low-Color": ",radio,false,, ",
+    "View/Themes/Clouds": "203,,false,false, ",
+    "View/Themes/Clouds/Clouds": ",radio,false,, ",
+    "View/Themes/Clouds/Clouds Midnight": ",radio,false,, ",
+    "View/Themes/Cobalt": "204,radio,false,false, ",
+    "View/Themes/Crimson Editor": "205,radio,false,false, ",
+    "View/Themes/Dawn": "206,radio,false,false, ",
+    "View/Themes/Dreamweaver": "207,radio,false,false, ",
+    "View/Themes/Eclipse": "208,radio,false,false, ",
+    "View/Themes/GitHub": "209,radio,false,false, ",
+    "View/Themes/Idle Fingers": "210,radio,false,false, ",
+    "View/Themes/Kr Theme": "211,radio,false,false, ",
+    "View/Themes/Merbivore": "212,,false,false, ",
+    "View/Themes/Merbivore/Merbivore": ",radio,false,, ",
+    "View/Themes/Merbivore/Merbivore Soft": ",radio,false,, ",
+    "View/Themes/Mono Industrial": "213,radio,false,false, ",
+    "View/Themes/Monokai": "214,radio,false,false, ",
+    "View/Themes/Pastel On Dark": "215,radio,false,false, ",
+    "View/Themes/Solarized": "216,,false,false, ",
+    "View/Themes/Solarized/Solarized Dark": ",radio,false,, ",
+    "View/Themes/Solarized/Solarized Light": ",radio,false,, ",
+    "View/Themes/TextMate": "217,radio,false,false, ",
+    "View/Themes/Tomorrow": "218,,false,false, ",
+    "View/Themes/Tomorrow/Tomorrow": ",radio,false,, ",
+    "View/Themes/Tomorrow/Tomorrow Night": ",radio,false,, ",
+    "View/Themes/Tomorrow/Tomorrow Night Blue": ",radio,false,, ",
+    "View/Themes/Tomorrow/Tomorrow Night Bright": ",radio,false,, ",
+    "View/Themes/Tomorrow/Tomorrow Night Eighties": ",radio,false,, ",
+    "View/Themes/Twilight": "219,radio,false,false, ",
+    "View/Themes/Vibrant Ink": "220,radio,false,false, ",
+    "View/Themes/Xcode": "221,radio,false,false, ",
+    "View/Themes/Jett": "222,radio,false,false, ",
+    "Window/Saved Layouts/Save...": "100,,false,,",
+    "Window/Saved Layouts/Save And Close All...": "200,,false,,",
+    "Window/Saved Layouts/~300": "300,,,,",
+    "Window/Saved Layouts/Show Saved Layouts in File Tree": "400,,false,, ",
+    "Window/Saved Layouts/~500": "500,,,,"
+};
+function addExampleMenuItems(menuManager, root, menuDefinitions) {
+    if (menuDefinitions === void 0) { menuDefinitions = exports.menuDefs; }
+    var commands = [];
+    Object.keys(menuDefinitions).forEach(function (x) {
+        var _a;
+        var item = menuDefinitions[x];
+        var exec;
+        if (typeof item == "object") {
+            if (item.properties != undefined) {
+                exec = item.exec;
+                item = item.properties;
+            }
+            else {
+                return addExampleMenuItems(menuManager, x, item);
+            }
+        }
+        var parts = (_a = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item)) !== null && _a !== void 0 ? _a : [];
+        var path = root ? root + "/" + x : x;
+        var hotKey = (parts[5] || "").trim();
+        if (exec && hotKey) {
+            commands.push({
+                bindKey: {
+                    win: hotKey,
+                    mac: hotKey
+                },
+                exec: exec
+            });
+        }
+        menuManager.addByPath(path, {
+            className: path == "AWS Cloud9" ? "c9btn" : undefined,
+            type: parts[2],
+            checked: parts[3] == "true",
+            disabled: parts[4] == "true",
+            position: parseInt(parts[1]),
+            hotKey: hotKey,
+            exec: exec
+        });
+    });
+    commandManager_1.CommandManager.registerCommands(commands);
+}
+exports.addExampleMenuItems = addExampleMenuItems;
+
+
+/***/ }),
+
+/***/ 67626:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var box_1 = __webpack_require__(95561);
+var tabManager_1 = __webpack_require__(58923);
+var panelManager_1 = __webpack_require__(38404);
+var button_1 = __webpack_require__(82478);
+var file_system_web_1 = __webpack_require__(87975);
+var ace_tree_1 = __webpack_require__(39046);
+var dom_1 = __webpack_require__(91444);
+var menu_example_1 = __webpack_require__(55849);
+var menuManager_1 = __webpack_require__(2505);
+var layout_1 = __webpack_require__(97341);
+var menuToolbar_1 = __webpack_require__(22177);
+var panelBar_1 = __webpack_require__(44526);
+var mainBox, outerBox, consoleBox;
+var fileTree;
+document.body.innerHTML = "";
+var base = new box_1.Box({
+    vertical: false,
+    toolBars: {
+        top: new menuToolbar_1.MenuToolbar(),
+        bottom: new panelBar_1.PanelBar({})
+    },
+    0: outerBox = new box_1.Box({
+        vertical: true,
+        0: new box_1.Box({
+            vertical: false,
+            0: fileTree = new box_1.Box({
+                size: 200,
+            }),
+            1: mainBox = new box_1.Box({
+                isMain: true,
+            }),
+        }),
+        1: consoleBox = new box_1.Box({
+            ratio: 1,
+            size: 100,
+            isMain: true
+        }),
+        toolBars: {},
+    }),
+});
+new layout_1.AceLayout(base);
+window["fileTreeWrapper"] = fileTree;
+var fileSystem = new file_system_web_1.FileSystemWeb();
+function renderFileTree() {
+    var _this = this;
+    var button = new button_1.Button({ value: "Open Folder" });
+    var buttonWrapper = ["div", {}, button.render()];
+    var aceTree = new ace_tree_1.AceTreeWrapper();
+    var aceTreeWrapper = ["div", { style: "height: 100%" }, aceTree.element];
+    button.element.addEventListener("mousedown", function (e) { return __awaiter(_this, void 0, void 0, function () {
+        var nodes;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, fileSystem.open()];
+                case 1:
+                    nodes = _a.sent();
+                    aceTree.updateTreeData(nodes);
+                    aceTree.element.addEventListener("item-click", function (evt) {
+                        fileSystem.openFile(evt.detail);
+                    });
+                    return [2 /*return*/];
+            }
+        });
+    }); });
+    dom_1.dom.buildDom(["div", { style: "height: 100%" }, buttonWrapper, aceTreeWrapper], fileTree.element);
+}
+menu_example_1.menuDefs["View/Console"] = {
+    properties: "700,check,false,false,F6",
+    exec: function () { return consoleBox.toggleShowHide(); }
+};
+(0, menu_example_1.addExampleMenuItems)(menuManager_1.MenuManager.getInstance(), "", menu_example_1.menuDefs);
+base.render();
+var onResize = function () {
+    base.setBox(0, 0, window.innerWidth, window.innerHeight);
+};
+window.onresize = onResize;
+document.body.appendChild(base.element);
+var tabManager = tabManager_1.TabManager.getInstance({
+    containers: {
+        main: mainBox,
+        console: consoleBox
+    },
+    fileSystem: fileSystem
+});
+(_a = tabManager.fileSystem) === null || _a === void 0 ? void 0 : _a.on("openFile", function (treeNode, fileContent) {
+    tabManager.open({
+        path: treeNode.path,
+        title: treeNode.path.split('/').pop()
+    }, undefined, fileContent);
+});
+var panelManager = panelManager_1.PanelManager.getInstance({
+    layout: base,
+    locations: {
+        left: {
+            parent: base,
+            index: 0,
+            size: 200
+        }
+    }
+});
+window.onbeforeunload = function () {
+    tabManager.saveTo(localStorage);
+    localStorage.tabs = JSON.stringify(tabManager.toJSON());
+    localStorage.panels = JSON.stringify(panelManager.toJSON());
+};
+var tabState = {};
+var panelState = {};
+try {
+    if (localStorage.tabs)
+        tabState = JSON.parse(localStorage.tabs);
+    if (localStorage.panels)
+        panelState = JSON.parse(localStorage.panels);
+}
+catch (e) {
+}
+tabManager.setState(tabState);
+panelManager.setState(panelState);
+tabManager.restoreFrom(localStorage);
+renderFileTree();
+onResize();
+consoleBox.renderButtons([{
+        class: "consoleCloseBtn",
+        title: "F6",
+        onclick: function () {
+            consoleBox.hide();
+        },
+        content: "x"
+    }]);
+
+
+/***/ }),
+
+/***/ 21527:
 /***/ ((module) => {
 
 "use strict";
@@ -43021,7 +43011,7 @@ module.exports = "data:image/gif;base64,R0lGODlhDAAjAJEAAAAAAP///////wAAACH5BAEA
 
 /***/ }),
 
-/***/ 87149:
+/***/ 6646:
 /***/ ((module) => {
 
 "use strict";
@@ -43029,7 +43019,7 @@ module.exports = "data:image/gif;base64,R0lGODlhDAAjAJEAAAAAAP///////wAAACH5BAEA
 
 /***/ }),
 
-/***/ 87112:
+/***/ 24403:
 /***/ ((module) => {
 
 "use strict";
@@ -43171,7 +43161,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "ace-layout:";
+/******/ 		var dataWebpackPrefix = "ace-layout-root:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -43330,7 +43320,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkace_layout"] = self["webpackChunkace_layout"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -43345,10 +43335,8 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(56950);
+/******/ 	var __webpack_exports__ = __webpack_require__(67626);
 /******/ 	
-/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-});
 //# sourceMappingURL=bundle.simple.js.map
