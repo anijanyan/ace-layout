@@ -1,17 +1,17 @@
 "use strict";
 
-import {Box} from "../../widgets/boxes/box";
-import {TabManager} from "../../widgets/tabs/tabManager";
-import {PanelManager} from "../../widgets/tabs/panelManager";
-import {Button} from "../../widgets/elements/button";
-import {FileSystemWeb} from "../../file-system/file-system-web";
-import {AceTreeWrapper} from "../../widgets/trees/ace-tree";
-import {dom} from "../../utils/dom";
+import {Box} from "ace-layout/widgets/boxes/box";
+import {TabManager} from "ace-layout/widgets/tabs/tabManager";
+import {PanelManager} from "ace-layout/widgets/tabs/panelManager";
+import {Button} from "ace-layout/widgets/elements/button";
+import {FileSystemWeb} from "ace-layout/file-system/file-system-web";
+import {AceTreeWrapper} from "ace-layout/widgets/trees/ace-tree";
+import {dom} from "ace-layout/utils/dom";
 import {addExampleMenuItems, menuDefs} from "../menu_example";
-import {MenuManager} from "../../widgets/menu/menuManager";
-import {AceLayout} from "../../widgets/layout";
-import {MenuToolbar} from "../../widgets/toolbars/menuToolbar";
-import {PanelBar} from "../../widgets/toolbars/panelBar";
+import {MenuManager} from "ace-layout/widgets/menu/menuManager";
+import {AceLayout} from "ace-layout/widgets/layout";
+import {MenuToolbar} from "ace-layout/widgets/toolbars/menuToolbar";
+import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
 
 let mainBox: Box, outerBox: Box, consoleBox: Box;
 let fileTree

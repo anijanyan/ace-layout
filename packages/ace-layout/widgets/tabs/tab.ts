@@ -6,7 +6,7 @@ import {
 } from "../widget";
 import {TabManager} from "./tabManager";
 import {dom} from "../../utils/dom";
-import * as tabCSS from "../../../styles/tab.css";
+import * as tabCSS from "../../styles/tab.css";
 import {EditorType} from "../../utils/params";
 import {TabPanel} from "./tabPanel";
 import type {TabBar} from "../toolbars/tabBar";

@@ -3,7 +3,7 @@ import {Box} from "../boxes/box";
 import {PanelOptions} from "../widget";
 import {PanelManager} from "./panelManager";
 import {dom} from "../../utils/dom";
-import * as panelCSS from "../../../styles/panel.css";
+import * as panelCSS from "../../styles/panel.css";
 import {TabPanel} from "./tabPanel";
 import type {PanelBar} from "../toolbars/panelBar";
 

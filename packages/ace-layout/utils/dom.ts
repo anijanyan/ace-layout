@@ -2,7 +2,8 @@
 
 //Picked from ace-code 1.10
 
-var useragent = require("ace-code/src/lib/useragent");
+import * as useragent from "ace-code/src/lib/useragent";
+
 var XHTML_NS = "http://www.w3.org/1999/xhtml";
 export namespace dom {
     export var buildDom = function (arr, parent?: HTMLElement, refs?: any) {

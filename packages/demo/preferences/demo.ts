@@ -1,14 +1,12 @@
-import {Box} from "../../widgets/boxes/box";
-import {SettingsSearchBox} from "../../widgets/elements/search";
-import {Switcher} from "../../widgets/elements/switcher";
-import {Button} from "../../widgets/elements/button";
-import {Dropdown} from "../../widgets/elements/dropdown";
-import {dom} from "../../utils/dom";
-import * as layoutCSS from "../../../styles/layout.css";
-import * as preferencesCSS from "../../../styles/preferences.css";
-import {PanelBar} from "../../widgets/toolbars/panelBar";
+import {Box} from "ace-layout/widgets/boxes/box";
+import {SettingsSearchBox} from "ace-layout/widgets/elements/search";
+import {Switcher} from "ace-layout/widgets/elements/switcher";
+import {Button} from "ace-layout/widgets/elements/button";
+import {Dropdown} from "ace-layout/widgets/elements/dropdown";
+import {dom} from "ace-layout/utils/dom";
+import * as preferencesCSS from "./preferences.css";
+import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
 
-dom.importCssString(layoutCSS, "layout.css");
 dom.importCssString(preferencesCSS, "preferences.css");
 
 let navigation;
