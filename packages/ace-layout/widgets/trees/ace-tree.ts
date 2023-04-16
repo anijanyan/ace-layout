@@ -5,7 +5,7 @@ import {dom} from "../../utils/dom";
 import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import {getIconUrl} from "../../file-system/file-type-icons";
-import * as aceTreeCSS from "../../../styles/ace-tree.css";
+import * as aceTreeCSS from "../../styles/ace-tree.css";
 
 dom.importCssString(aceTreeCSS, "ace-tree.css");
 

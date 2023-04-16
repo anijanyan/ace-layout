@@ -1,20 +1,21 @@
-import {AceLayout} from "../../widgets/layout";
-
-const {dom} = require("../../utils/dom");
-import event = require("ace-code/src/lib/event");
+import {AceLayout} from "ace-layout/widgets/layout";
 import {HashHandler} from "ace-code/src/keyboard/hash_handler";
-import {Box} from "../../widgets/boxes/box";
-import {Panel} from "../../widgets/tabs/panel";
-import {Accordion} from "../../widgets/boxes/accordion";
-import {TabManager} from "../../widgets/tabs/tabManager";
-import {PanelManager} from "../../widgets/tabs/panelManager";
+import {Box} from "ace-layout/widgets/boxes/box";
+import {Panel} from "ace-layout/widgets/tabs/panel";
+import {Accordion} from "ace-layout/widgets/boxes/accordion";
+import {TabManager} from "ace-layout/widgets/tabs/tabManager";
+import {PanelManager} from "ace-layout/widgets/tabs/panelManager";
 import {addExampleMenuItems, menuDefs} from "../menu_example";
+import {MenuManager} from "ace-layout/widgets/menu/menuManager";
+import {Toolbar} from "ace-layout/widgets/toolbars/toolbar";
+import {MenuToolbar} from "ace-layout/widgets/toolbars/menuToolbar";
+import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
 
-let keyUtil = require("ace-code/src/lib/keys");
-import {MenuManager} from "../../widgets/menu/menuManager";
-import {Toolbar} from "../../widgets/toolbars/toolbar";
-import {MenuToolbar} from "../../widgets/toolbars/menuToolbar";
-import {PanelBar} from "../../widgets/toolbars/panelBar";
+import {dom} from "ace-layout/utils/dom";
+
+import keyUtil from "ace-code/src/lib/keys";
+
+import * as event from "ace-code/src/lib/event";
 
 class FindBar extends Toolbar{
     render() {

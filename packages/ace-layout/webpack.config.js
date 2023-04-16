@@ -1,5 +1,4 @@
 "use strict";
-const CopyPlugin = require("copy-webpack-plugin");
 module.exports = (env, argv) => {
     let loader;
     loader = {
@@ -15,11 +14,10 @@ module.exports = (env, argv) => {
     return {
         devtool: 'source-map',
         entry: {
-            simple: './packages/demo/simple/demo.ts',
-            preferences: './packages/demo/preferences/demo.ts',
-            layout: './packages/demo/layout/demo.ts'
+            index: './index.ts'
         },
         mode: "production",
+        externals: /ace-code/,
         module: {
             rules: [
                 loader,
@@ -46,7 +44,8 @@ module.exports = (env, argv) => {
         },
         output: {
             filename: 'bundle.[name].js',
-            path: __dirname + '/built'
+            path: __dirname + '/build',
+            libraryTarget: 'umd'
         },
         optimization: {
             minimize: false
@@ -57,26 +56,6 @@ module.exports = (env, argv) => {
             client: {
                 overlay: false
             }
-        },
-        plugins: [
-            new CopyPlugin({
-                patterns: [
-                    {
-                        from: "packages/demo/index.html",
-                        to: "."
-                    },
-                    {
-                        from: "packages/demo/simple/index.html",
-                        to: "simple"
-                    }, {
-                        from: "packages/demo/preferences/index.html",
-                        to: "preferences"
-                    }, {
-                        from: "packages/demo/layout/index.html",
-                        to: "layout"
-                    }
-                ]
-            })
-        ]
+        }
     };
 };
