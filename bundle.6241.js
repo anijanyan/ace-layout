@@ -528,7 +528,7 @@ var commands = __webpack_require__(73190);
 }).call(commands.CommandManager.prototype);
 
 // incremental search config option
-var Editor = (__webpack_require__(82880).Editor);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 (__webpack_require__(13188).defineOptions)(Editor.prototype, "editor", {
     useIncrementalSearch: {
         set: function(val) {

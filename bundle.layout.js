@@ -1,367 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 46992:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-var _src_ace__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport fake namespace object from non-harmony */ _src_ace__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (_src_ace__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(_src_ace__WEBPACK_IMPORTED_MODULE_0__, 2)))
-/* harmony export */ });
-/* harmony import */ var _src_ace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(59100);
-
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/abap', () => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 10989, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/abc', () => __webpack_require__.e(/* import() */ 4064).then(__webpack_require__.t.bind(__webpack_require__, 84064, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/actionscript', () => __webpack_require__.e(/* import() */ 3682).then(__webpack_require__.t.bind(__webpack_require__, 73682, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ada', () => __webpack_require__.e(/* import() */ 4049).then(__webpack_require__.t.bind(__webpack_require__, 14049, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/alda', () => __webpack_require__.e(/* import() */ 8331).then(__webpack_require__.t.bind(__webpack_require__, 98331, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/apache_conf', () => __webpack_require__.e(/* import() */ 553).then(__webpack_require__.t.bind(__webpack_require__, 10553, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/apex', () => __webpack_require__.e(/* import() */ 3764).then(__webpack_require__.t.bind(__webpack_require__, 73764, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/applescript', () => __webpack_require__.e(/* import() */ 3335).then(__webpack_require__.t.bind(__webpack_require__, 53335, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/aql', () => __webpack_require__.e(/* import() */ 5633).then(__webpack_require__.t.bind(__webpack_require__, 85633, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/asciidoc', () => __webpack_require__.e(/* import() */ 9853).then(__webpack_require__.t.bind(__webpack_require__, 59853, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/asl', () => __webpack_require__.e(/* import() */ 7241).then(__webpack_require__.t.bind(__webpack_require__, 37241, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/assembly_x86', () => __webpack_require__.e(/* import() */ 2392).then(__webpack_require__.t.bind(__webpack_require__, 62392, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/autohotkey', () => __webpack_require__.e(/* import() */ 7390).then(__webpack_require__.t.bind(__webpack_require__, 27390, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/batchfile', () => __webpack_require__.e(/* import() */ 6609).then(__webpack_require__.t.bind(__webpack_require__, 96609, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/bibtex', () => __webpack_require__.e(/* import() */ 2908).then(__webpack_require__.t.bind(__webpack_require__, 12908, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/c9search', () => __webpack_require__.e(/* import() */ 1281).then(__webpack_require__.t.bind(__webpack_require__, 81281, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/c_cpp', () => __webpack_require__.e(/* import() */ 2671).then(__webpack_require__.t.bind(__webpack_require__, 82671, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/cirru', () => __webpack_require__.e(/* import() */ 7515).then(__webpack_require__.t.bind(__webpack_require__, 37515, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/clojure', () => __webpack_require__.e(/* import() */ 4155).then(__webpack_require__.t.bind(__webpack_require__, 4155, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/cobol', () => __webpack_require__.e(/* import() */ 6976).then(__webpack_require__.t.bind(__webpack_require__, 96976, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/coffee', () => __webpack_require__.e(/* import() */ 6725).then(__webpack_require__.t.bind(__webpack_require__, 46725, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/coldfusion', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4873)]).then(__webpack_require__.t.bind(__webpack_require__, 84873, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/crystal', () => __webpack_require__.e(/* import() */ 2299).then(__webpack_require__.t.bind(__webpack_require__, 22299, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csharp', () => __webpack_require__.e(/* import() */ 2985).then(__webpack_require__.t.bind(__webpack_require__, 82985, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csound_document', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(163), __webpack_require__.e(8248)]).then(__webpack_require__.t.bind(__webpack_require__, 18248, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csound_orchestra', () => Promise.all(/* import() */[__webpack_require__.e(163), __webpack_require__.e(5482)]).then(__webpack_require__.t.bind(__webpack_require__, 65482, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csound_score', () => __webpack_require__.e(/* import() */ 8878).then(__webpack_require__.t.bind(__webpack_require__, 28878, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/csp', () => __webpack_require__.e(/* import() */ 4780).then(__webpack_require__.t.bind(__webpack_require__, 4780, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/css', () => __webpack_require__.e(/* import() */ 8771).then(__webpack_require__.t.bind(__webpack_require__, 98771, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/curly', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(3865)]).then(__webpack_require__.t.bind(__webpack_require__, 13865, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/d', () => __webpack_require__.e(/* import() */ 1139).then(__webpack_require__.t.bind(__webpack_require__, 91139, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/dart', () => __webpack_require__.e(/* import() */ 4325).then(__webpack_require__.t.bind(__webpack_require__, 34325, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/diff', () => __webpack_require__.e(/* import() */ 47).then(__webpack_require__.t.bind(__webpack_require__, 20047, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/django', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4050)]).then(__webpack_require__.t.bind(__webpack_require__, 4050, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/dockerfile', () => __webpack_require__.e(/* import() */ 8408).then(__webpack_require__.t.bind(__webpack_require__, 78408, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/dot', () => __webpack_require__.e(/* import() */ 7349).then(__webpack_require__.t.bind(__webpack_require__, 47349, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/drools', () => __webpack_require__.e(/* import() */ 134).then(__webpack_require__.t.bind(__webpack_require__, 50134, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/edifact', () => __webpack_require__.e(/* import() */ 9646).then(__webpack_require__.t.bind(__webpack_require__, 9646, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/eiffel', () => __webpack_require__.e(/* import() */ 135).then(__webpack_require__.t.bind(__webpack_require__, 135, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ejs', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(8781)]).then(__webpack_require__.t.bind(__webpack_require__, 48781, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/elixir', () => __webpack_require__.e(/* import() */ 7445).then(__webpack_require__.t.bind(__webpack_require__, 7445, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/elm', () => __webpack_require__.e(/* import() */ 5661).then(__webpack_require__.t.bind(__webpack_require__, 85661, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/erlang', () => __webpack_require__.e(/* import() */ 2720).then(__webpack_require__.t.bind(__webpack_require__, 82720, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/forth', () => __webpack_require__.e(/* import() */ 233).then(__webpack_require__.t.bind(__webpack_require__, 30233, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/fortran', () => __webpack_require__.e(/* import() */ 9553).then(__webpack_require__.t.bind(__webpack_require__, 39553, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/fsharp', () => __webpack_require__.e(/* import() */ 1451).then(__webpack_require__.t.bind(__webpack_require__, 11451, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/fsl', () => __webpack_require__.e(/* import() */ 6434).then(__webpack_require__.t.bind(__webpack_require__, 46434, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ftl', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4006)]).then(__webpack_require__.t.bind(__webpack_require__, 94006, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gcode', () => __webpack_require__.e(/* import() */ 4800).then(__webpack_require__.t.bind(__webpack_require__, 54800, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gherkin', () => __webpack_require__.e(/* import() */ 3622).then(__webpack_require__.t.bind(__webpack_require__, 53622, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gitignore', () => __webpack_require__.e(/* import() */ 6763).then(__webpack_require__.t.bind(__webpack_require__, 36763, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/glsl', () => __webpack_require__.e(/* import() */ 1365).then(__webpack_require__.t.bind(__webpack_require__, 41365, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/gobstones', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1816)]).then(__webpack_require__.t.bind(__webpack_require__, 91816, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/golang', () => __webpack_require__.e(/* import() */ 7561).then(__webpack_require__.t.bind(__webpack_require__, 77561, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/graphqlschema', () => __webpack_require__.e(/* import() */ 8434).then(__webpack_require__.t.bind(__webpack_require__, 8434, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/groovy', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1354)]).then(__webpack_require__.t.bind(__webpack_require__, 11354, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haml', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(5772), __webpack_require__.e(2304)]).then(__webpack_require__.t.bind(__webpack_require__, 22304, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/handlebars', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(7821)]).then(__webpack_require__.t.bind(__webpack_require__, 57821, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haskell', () => __webpack_require__.e(/* import() */ 7823).then(__webpack_require__.t.bind(__webpack_require__, 27823, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haskell_cabal', () => __webpack_require__.e(/* import() */ 2176).then(__webpack_require__.t.bind(__webpack_require__, 22176, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/haxe', () => __webpack_require__.e(/* import() */ 2102).then(__webpack_require__.t.bind(__webpack_require__, 12102, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/hjson', () => __webpack_require__.e(/* import() */ 7908).then(__webpack_require__.t.bind(__webpack_require__, 37908, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/html', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528)]).then(__webpack_require__.t.bind(__webpack_require__, 75528, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/html_elixir', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1471)]).then(__webpack_require__.t.bind(__webpack_require__, 31471, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/html_ruby', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(95)]).then(__webpack_require__.t.bind(__webpack_require__, 80095, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ini', () => __webpack_require__.e(/* import() */ 1335).then(__webpack_require__.t.bind(__webpack_require__, 21335, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/io', () => __webpack_require__.e(/* import() */ 7628).then(__webpack_require__.t.bind(__webpack_require__, 17628, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ion', () => __webpack_require__.e(/* import() */ 9705).then(__webpack_require__.t.bind(__webpack_require__, 69705, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jack', () => __webpack_require__.e(/* import() */ 8240).then(__webpack_require__.t.bind(__webpack_require__, 48240, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jade', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4885)]).then(__webpack_require__.t.bind(__webpack_require__, 4885, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/java', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(3262)]).then(__webpack_require__.t.bind(__webpack_require__, 33262, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/javascript', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(8057)]).then(__webpack_require__.t.bind(__webpack_require__, 88057, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jexl', () => __webpack_require__.e(/* import() */ 7201).then(__webpack_require__.t.bind(__webpack_require__, 87201, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/json', () => __webpack_require__.e(/* import() */ 5654).then(__webpack_require__.t.bind(__webpack_require__, 35654, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/json5', () => __webpack_require__.e(/* import() */ 9548).then(__webpack_require__.t.bind(__webpack_require__, 49548, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jsp', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4981)]).then(__webpack_require__.t.bind(__webpack_require__, 84981, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jssm', () => __webpack_require__.e(/* import() */ 2612).then(__webpack_require__.t.bind(__webpack_require__, 62612, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/jsx', () => __webpack_require__.e(/* import() */ 2522).then(__webpack_require__.t.bind(__webpack_require__, 92522, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/julia', () => __webpack_require__.e(/* import() */ 2623).then(__webpack_require__.t.bind(__webpack_require__, 92623, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/kotlin', () => __webpack_require__.e(/* import() */ 1987).then(__webpack_require__.t.bind(__webpack_require__, 11987, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/latex', () => __webpack_require__.e(/* import() */ 9302).then(__webpack_require__.t.bind(__webpack_require__, 39302, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/latte', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4444)]).then(__webpack_require__.t.bind(__webpack_require__, 24444, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/less', () => __webpack_require__.e(/* import() */ 4629).then(__webpack_require__.t.bind(__webpack_require__, 94629, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/liquid', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(31)]).then(__webpack_require__.t.bind(__webpack_require__, 20031, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lisp', () => __webpack_require__.e(/* import() */ 75).then(__webpack_require__.t.bind(__webpack_require__, 10075, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/livescript', () => __webpack_require__.e(/* import() */ 6575).then(__webpack_require__.t.bind(__webpack_require__, 96575, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/logiql', () => __webpack_require__.e(/* import() */ 6664).then(__webpack_require__.t.bind(__webpack_require__, 26664, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/logtalk', () => __webpack_require__.e(/* import() */ 4152).then(__webpack_require__.t.bind(__webpack_require__, 94152, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lsl', () => __webpack_require__.e(/* import() */ 8950).then(__webpack_require__.t.bind(__webpack_require__, 78950, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lua', () => __webpack_require__.e(/* import() */ 2585).then(__webpack_require__.t.bind(__webpack_require__, 22585, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/luapage', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1299)]).then(__webpack_require__.t.bind(__webpack_require__, 41299, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/lucene', () => __webpack_require__.e(/* import() */ 2814).then(__webpack_require__.t.bind(__webpack_require__, 82814, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/makefile', () => __webpack_require__.e(/* import() */ 4890).then(__webpack_require__.t.bind(__webpack_require__, 94890, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/markdown', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(259)]).then(__webpack_require__.t.bind(__webpack_require__, 80259, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mask', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(8394)]).then(__webpack_require__.t.bind(__webpack_require__, 18394, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/matlab', () => __webpack_require__.e(/* import() */ 581).then(__webpack_require__.t.bind(__webpack_require__, 80581, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/maze', () => __webpack_require__.e(/* import() */ 3014).then(__webpack_require__.t.bind(__webpack_require__, 13014, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mediawiki', () => __webpack_require__.e(/* import() */ 7527).then(__webpack_require__.t.bind(__webpack_require__, 77527, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mel', () => __webpack_require__.e(/* import() */ 9242).then(__webpack_require__.t.bind(__webpack_require__, 39242, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mips', () => __webpack_require__.e(/* import() */ 1524).then(__webpack_require__.t.bind(__webpack_require__, 91524, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mixal', () => __webpack_require__.e(/* import() */ 3521).then(__webpack_require__.t.bind(__webpack_require__, 33521, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mushcode', () => __webpack_require__.e(/* import() */ 9067).then(__webpack_require__.t.bind(__webpack_require__, 69067, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/mysql', () => __webpack_require__.e(/* import() */ 6789).then(__webpack_require__.t.bind(__webpack_require__, 86789, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nginx', () => __webpack_require__.e(/* import() */ 2435).then(__webpack_require__.t.bind(__webpack_require__, 32435, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nim', () => __webpack_require__.e(/* import() */ 7614).then(__webpack_require__.t.bind(__webpack_require__, 7614, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nix', () => __webpack_require__.e(/* import() */ 3645).then(__webpack_require__.t.bind(__webpack_require__, 3645, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nsis', () => __webpack_require__.e(/* import() */ 8254).then(__webpack_require__.t.bind(__webpack_require__, 8254, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/nunjucks', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(9382)]).then(__webpack_require__.t.bind(__webpack_require__, 99382, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/objectivec', () => __webpack_require__.e(/* import() */ 9886).then(__webpack_require__.t.bind(__webpack_require__, 69886, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ocaml', () => __webpack_require__.e(/* import() */ 6708).then(__webpack_require__.t.bind(__webpack_require__, 96708, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/partiql', () => __webpack_require__.e(/* import() */ 1910).then(__webpack_require__.t.bind(__webpack_require__, 81910, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/pascal', () => __webpack_require__.e(/* import() */ 8361).then(__webpack_require__.t.bind(__webpack_require__, 58361, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/perl', () => __webpack_require__.e(/* import() */ 6918).then(__webpack_require__.t.bind(__webpack_require__, 26918, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/pgsql', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(8374)]).then(__webpack_require__.t.bind(__webpack_require__, 38374, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/php', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(8681)]).then(__webpack_require__.t.bind(__webpack_require__, 48681, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/php_laravel_blade', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(8681), __webpack_require__.e(184)]).then(__webpack_require__.t.bind(__webpack_require__, 70184, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/pig', () => __webpack_require__.e(/* import() */ 3114).then(__webpack_require__.t.bind(__webpack_require__, 53114, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/plain_text', () => __webpack_require__.e(/* import() */ 1660).then(__webpack_require__.t.bind(__webpack_require__, 1660, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/plsql', () => __webpack_require__.e(/* import() */ 1345).then(__webpack_require__.t.bind(__webpack_require__, 11345, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/powershell', () => __webpack_require__.e(/* import() */ 6700).then(__webpack_require__.t.bind(__webpack_require__, 36700, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/praat', () => __webpack_require__.e(/* import() */ 8142).then(__webpack_require__.t.bind(__webpack_require__, 58142, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/prisma', () => __webpack_require__.e(/* import() */ 311).then(__webpack_require__.t.bind(__webpack_require__, 40311, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/prolog', () => __webpack_require__.e(/* import() */ 2566).then(__webpack_require__.t.bind(__webpack_require__, 92566, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/properties', () => __webpack_require__.e(/* import() */ 8435).then(__webpack_require__.t.bind(__webpack_require__, 28435, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/protobuf', () => __webpack_require__.e(/* import() */ 9847).then(__webpack_require__.t.bind(__webpack_require__, 29847, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/puppet', () => __webpack_require__.e(/* import() */ 2016).then(__webpack_require__.t.bind(__webpack_require__, 92016, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/python', () => __webpack_require__.e(/* import() */ 9420).then(__webpack_require__.t.bind(__webpack_require__, 39420, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/qml', () => __webpack_require__.e(/* import() */ 987).then(__webpack_require__.t.bind(__webpack_require__, 80987, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/r', () => __webpack_require__.e(/* import() */ 2858).then(__webpack_require__.t.bind(__webpack_require__, 72858, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/raku', () => __webpack_require__.e(/* import() */ 7962).then(__webpack_require__.t.bind(__webpack_require__, 47962, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/razor', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(6562)]).then(__webpack_require__.t.bind(__webpack_require__, 86562, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rdoc', () => __webpack_require__.e(/* import() */ 9229).then(__webpack_require__.t.bind(__webpack_require__, 69229, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/red', () => __webpack_require__.e(/* import() */ 8223).then(__webpack_require__.t.bind(__webpack_require__, 48223, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/redshift', () => __webpack_require__.e(/* import() */ 8544).then(__webpack_require__.t.bind(__webpack_require__, 78544, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rhtml', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5181)]).then(__webpack_require__.t.bind(__webpack_require__, 65181, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/robot', () => __webpack_require__.e(/* import() */ 9793).then(__webpack_require__.t.bind(__webpack_require__, 29793, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rst', () => __webpack_require__.e(/* import() */ 5800).then(__webpack_require__.t.bind(__webpack_require__, 25800, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/ruby', () => Promise.all(/* import() */[__webpack_require__.e(5772), __webpack_require__.e(5433)]).then(__webpack_require__.t.bind(__webpack_require__, 45433, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/rust', () => __webpack_require__.e(/* import() */ 5727).then(__webpack_require__.t.bind(__webpack_require__, 25727, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sac', () => __webpack_require__.e(/* import() */ 9815).then(__webpack_require__.t.bind(__webpack_require__, 29815, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sass', () => __webpack_require__.e(/* import() */ 9736).then(__webpack_require__.t.bind(__webpack_require__, 79736, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scad', () => __webpack_require__.e(/* import() */ 3057).then(__webpack_require__.t.bind(__webpack_require__, 33057, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scala', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(9445)]).then(__webpack_require__.t.bind(__webpack_require__, 19445, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scheme', () => __webpack_require__.e(/* import() */ 833).then(__webpack_require__.t.bind(__webpack_require__, 10833, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scrypt', () => __webpack_require__.e(/* import() */ 5735).then(__webpack_require__.t.bind(__webpack_require__, 25735, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/scss', () => __webpack_require__.e(/* import() */ 6852).then(__webpack_require__.t.bind(__webpack_require__, 36852, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sh', () => __webpack_require__.e(/* import() */ 8887).then(__webpack_require__.t.bind(__webpack_require__, 88887, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sjs', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(4116)]).then(__webpack_require__.t.bind(__webpack_require__, 24116, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/slim', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(259), __webpack_require__.e(1442)]).then(__webpack_require__.t.bind(__webpack_require__, 81442, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/smarty', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4602)]).then(__webpack_require__.t.bind(__webpack_require__, 74602, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/smithy', () => __webpack_require__.e(/* import() */ 3011).then(__webpack_require__.t.bind(__webpack_require__, 33011, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/snippets', () => __webpack_require__.e(/* import() */ 2942).then(__webpack_require__.t.bind(__webpack_require__, 82942, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/soy_template', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1771)]).then(__webpack_require__.t.bind(__webpack_require__, 61771, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/space', () => __webpack_require__.e(/* import() */ 888).then(__webpack_require__.t.bind(__webpack_require__, 60888, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sparql', () => __webpack_require__.e(/* import() */ 3400).then(__webpack_require__.t.bind(__webpack_require__, 33400, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sql', () => __webpack_require__.e(/* import() */ 9562).then(__webpack_require__.t.bind(__webpack_require__, 99562, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/sqlserver', () => __webpack_require__.e(/* import() */ 8730).then(__webpack_require__.t.bind(__webpack_require__, 63612, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/stylus', () => __webpack_require__.e(/* import() */ 2420).then(__webpack_require__.t.bind(__webpack_require__, 52420, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/svg', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2207), __webpack_require__.e(4589)]).then(__webpack_require__.t.bind(__webpack_require__, 24589, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/swift', () => __webpack_require__.e(/* import() */ 5177).then(__webpack_require__.t.bind(__webpack_require__, 65177, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/tcl', () => __webpack_require__.e(/* import() */ 678).then(__webpack_require__.t.bind(__webpack_require__, 678, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/terraform', () => __webpack_require__.e(/* import() */ 2052).then(__webpack_require__.t.bind(__webpack_require__, 92052, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/tex', () => __webpack_require__.e(/* import() */ 3772).then(__webpack_require__.t.bind(__webpack_require__, 33772, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/text', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 98030, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/textile', () => __webpack_require__.e(/* import() */ 501).then(__webpack_require__.t.bind(__webpack_require__, 90501, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/toml', () => __webpack_require__.e(/* import() */ 8795).then(__webpack_require__.t.bind(__webpack_require__, 38795, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/tsx', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(300)]).then(__webpack_require__.t.bind(__webpack_require__, 40300, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/turtle', () => __webpack_require__.e(/* import() */ 1947).then(__webpack_require__.t.bind(__webpack_require__, 51947, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/twig', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(2329)]).then(__webpack_require__.t.bind(__webpack_require__, 82329, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/typescript', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(3123)]).then(__webpack_require__.t.bind(__webpack_require__, 23123, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/vala', () => __webpack_require__.e(/* import() */ 5754).then(__webpack_require__.t.bind(__webpack_require__, 25754, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/vbscript', () => __webpack_require__.e(/* import() */ 6389).then(__webpack_require__.t.bind(__webpack_require__, 96389, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/velocity', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5525)]).then(__webpack_require__.t.bind(__webpack_require__, 95525, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/verilog', () => __webpack_require__.e(/* import() */ 6614).then(__webpack_require__.t.bind(__webpack_require__, 66614, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/vhdl', () => __webpack_require__.e(/* import() */ 11).then(__webpack_require__.t.bind(__webpack_require__, 60011, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/visualforce', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(9160)]).then(__webpack_require__.t.bind(__webpack_require__, 61660, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/wollok', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1638)]).then(__webpack_require__.t.bind(__webpack_require__, 21638, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/xml', () => __webpack_require__.e(/* import() */ 4268).then(__webpack_require__.t.bind(__webpack_require__, 94268, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/yaml', () => __webpack_require__.e(/* import() */ 3348).then(__webpack_require__.t.bind(__webpack_require__, 43348, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/mode/zeek', () => __webpack_require__.e(/* import() */ 6958).then(__webpack_require__.t.bind(__webpack_require__, 16958, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/abc', () => __webpack_require__.e(/* import() */ 4551).then(__webpack_require__.t.bind(__webpack_require__, 64551, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/abc.snippets', () => __webpack_require__.e(/* import() */ 4269).then(__webpack_require__.t.bind(__webpack_require__, 24269, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/actionscript', () => __webpack_require__.e(/* import() */ 6009).then(__webpack_require__.t.bind(__webpack_require__, 26009, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/actionscript.snippets', () => __webpack_require__.e(/* import() */ 1711).then(__webpack_require__.t.bind(__webpack_require__, 71711, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/c_cpp', () => __webpack_require__.e(/* import() */ 3423).then(__webpack_require__.t.bind(__webpack_require__, 73423, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/c_cpp.snippets', () => __webpack_require__.e(/* import() */ 1275).then(__webpack_require__.t.bind(__webpack_require__, 31275, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/clojure', () => __webpack_require__.e(/* import() */ 7679).then(__webpack_require__.t.bind(__webpack_require__, 87679, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/clojure.snippets', () => __webpack_require__.e(/* import() */ 614).then(__webpack_require__.t.bind(__webpack_require__, 90614, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/coffee', () => __webpack_require__.e(/* import() */ 7956).then(__webpack_require__.t.bind(__webpack_require__, 67956, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/coffee.snippets', () => __webpack_require__.e(/* import() */ 6217).then(__webpack_require__.t.bind(__webpack_require__, 56217, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_document', () => __webpack_require__.e(/* import() */ 8101).then(__webpack_require__.t.bind(__webpack_require__, 28101, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_document.snippets', () => __webpack_require__.e(/* import() */ 7200).then(__webpack_require__.t.bind(__webpack_require__, 17200, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_orchestra', () => __webpack_require__.e(/* import() */ 4430).then(__webpack_require__.t.bind(__webpack_require__, 4430, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/csound_orchestra.snippets', () => __webpack_require__.e(/* import() */ 698).then(__webpack_require__.t.bind(__webpack_require__, 10698, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/css', () => __webpack_require__.e(/* import() */ 4968).then(__webpack_require__.t.bind(__webpack_require__, 44968, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/css.snippets', () => __webpack_require__.e(/* import() */ 507).then(__webpack_require__.t.bind(__webpack_require__, 90507, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/dart', () => __webpack_require__.e(/* import() */ 2951).then(__webpack_require__.t.bind(__webpack_require__, 92951, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/dart.snippets', () => __webpack_require__.e(/* import() */ 793).then(__webpack_require__.t.bind(__webpack_require__, 10793, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/diff', () => __webpack_require__.e(/* import() */ 7406).then(__webpack_require__.t.bind(__webpack_require__, 17406, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/diff.snippets', () => __webpack_require__.e(/* import() */ 806).then(__webpack_require__.t.bind(__webpack_require__, 10806, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/django', () => __webpack_require__.e(/* import() */ 1180).then(__webpack_require__.t.bind(__webpack_require__, 11180, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/django.snippets', () => __webpack_require__.e(/* import() */ 6104).then(__webpack_require__.t.bind(__webpack_require__, 26104, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/drools', () => __webpack_require__.e(/* import() */ 8291).then(__webpack_require__.t.bind(__webpack_require__, 58291, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/drools.snippets', () => __webpack_require__.e(/* import() */ 2966).then(__webpack_require__.t.bind(__webpack_require__, 54155, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/edifact', () => __webpack_require__.e(/* import() */ 817).then(__webpack_require__.t.bind(__webpack_require__, 70817, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/edifact.snippets', () => __webpack_require__.e(/* import() */ 4165).then(__webpack_require__.t.bind(__webpack_require__, 74165, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/erlang', () => __webpack_require__.e(/* import() */ 5598).then(__webpack_require__.t.bind(__webpack_require__, 45598, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/erlang.snippets', () => __webpack_require__.e(/* import() */ 7826).then(__webpack_require__.t.bind(__webpack_require__, 17826, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/fsl', () => __webpack_require__.e(/* import() */ 1580).then(__webpack_require__.t.bind(__webpack_require__, 81580, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/fsl.snippets', () => __webpack_require__.e(/* import() */ 5079).then(__webpack_require__.t.bind(__webpack_require__, 15079, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/gobstones', () => __webpack_require__.e(/* import() */ 1789).then(__webpack_require__.t.bind(__webpack_require__, 91789, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/gobstones.snippets', () => __webpack_require__.e(/* import() */ 9104).then(__webpack_require__.t.bind(__webpack_require__, 69104, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/graphqlschema', () => __webpack_require__.e(/* import() */ 6978).then(__webpack_require__.t.bind(__webpack_require__, 36978, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/graphqlschema.snippets', () => __webpack_require__.e(/* import() */ 1990).then(__webpack_require__.t.bind(__webpack_require__, 71990, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haml', () => __webpack_require__.e(/* import() */ 1989).then(__webpack_require__.t.bind(__webpack_require__, 11989, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haml.snippets', () => __webpack_require__.e(/* import() */ 5362).then(__webpack_require__.t.bind(__webpack_require__, 95362, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haskell', () => __webpack_require__.e(/* import() */ 1895).then(__webpack_require__.t.bind(__webpack_require__, 71895, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/haskell.snippets', () => __webpack_require__.e(/* import() */ 3153).then(__webpack_require__.t.bind(__webpack_require__, 63153, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/html', () => __webpack_require__.e(/* import() */ 6663).then(__webpack_require__.t.bind(__webpack_require__, 86663, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/html.snippets', () => __webpack_require__.e(/* import() */ 7805).then(__webpack_require__.t.bind(__webpack_require__, 37805, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/io', () => __webpack_require__.e(/* import() */ 5250).then(__webpack_require__.t.bind(__webpack_require__, 25250, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/java', () => __webpack_require__.e(/* import() */ 9369).then(__webpack_require__.t.bind(__webpack_require__, 99369, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/java.snippets', () => __webpack_require__.e(/* import() */ 2944).then(__webpack_require__.t.bind(__webpack_require__, 44805, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/javascript', () => __webpack_require__.e(/* import() */ 6383).then(__webpack_require__.t.bind(__webpack_require__, 66383, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/javascript.snippets', () => __webpack_require__.e(/* import() */ 5336).then(__webpack_require__.t.bind(__webpack_require__, 95336, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/jsp', () => __webpack_require__.e(/* import() */ 8222).then(__webpack_require__.t.bind(__webpack_require__, 68222, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/jsp.snippets', () => __webpack_require__.e(/* import() */ 2018).then(__webpack_require__.t.bind(__webpack_require__, 82018, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/liquid', () => __webpack_require__.e(/* import() */ 4915).then(__webpack_require__.t.bind(__webpack_require__, 44915, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/liquid.snippets', () => __webpack_require__.e(/* import() */ 3762).then(__webpack_require__.t.bind(__webpack_require__, 23762, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lsl', () => __webpack_require__.e(/* import() */ 3642).then(__webpack_require__.t.bind(__webpack_require__, 43642, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lsl.snippets', () => __webpack_require__.e(/* import() */ 3449).then(__webpack_require__.t.bind(__webpack_require__, 93449, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lua', () => __webpack_require__.e(/* import() */ 6452).then(__webpack_require__.t.bind(__webpack_require__, 56452, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/lua.snippets', () => __webpack_require__.e(/* import() */ 4801).then(__webpack_require__.t.bind(__webpack_require__, 74801, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/makefile', () => __webpack_require__.e(/* import() */ 5741).then(__webpack_require__.t.bind(__webpack_require__, 5741, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/makefile.snippets', () => __webpack_require__.e(/* import() */ 165).then(__webpack_require__.t.bind(__webpack_require__, 70165, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/markdown', () => __webpack_require__.e(/* import() */ 6745).then(__webpack_require__.t.bind(__webpack_require__, 6745, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/markdown.snippets', () => __webpack_require__.e(/* import() */ 6196).then(__webpack_require__.t.bind(__webpack_require__, 86196, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/maze', () => __webpack_require__.e(/* import() */ 7076).then(__webpack_require__.t.bind(__webpack_require__, 57076, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/maze.snippets', () => __webpack_require__.e(/* import() */ 5282).then(__webpack_require__.t.bind(__webpack_require__, 25282, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/perl', () => __webpack_require__.e(/* import() */ 6343).then(__webpack_require__.t.bind(__webpack_require__, 36343, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/perl.snippets', () => __webpack_require__.e(/* import() */ 6220).then(__webpack_require__.t.bind(__webpack_require__, 86220, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/php', () => __webpack_require__.e(/* import() */ 7038).then(__webpack_require__.t.bind(__webpack_require__, 87038, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/php.snippets', () => __webpack_require__.e(/* import() */ 5192).then(__webpack_require__.t.bind(__webpack_require__, 85192, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/python', () => __webpack_require__.e(/* import() */ 4805).then(__webpack_require__.t.bind(__webpack_require__, 94805, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/python.snippets', () => __webpack_require__.e(/* import() */ 3363).then(__webpack_require__.t.bind(__webpack_require__, 3363, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/r', () => __webpack_require__.e(/* import() */ 4386).then(__webpack_require__.t.bind(__webpack_require__, 14386, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/r.snippets', () => __webpack_require__.e(/* import() */ 7576).then(__webpack_require__.t.bind(__webpack_require__, 17576, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/razor', () => __webpack_require__.e(/* import() */ 4943).then(__webpack_require__.t.bind(__webpack_require__, 74943, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/razor.snippets', () => __webpack_require__.e(/* import() */ 5770).then(__webpack_require__.t.bind(__webpack_require__, 85770, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/robot', () => __webpack_require__.e(/* import() */ 3093).then(__webpack_require__.t.bind(__webpack_require__, 33093, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/robot.snippets', () => __webpack_require__.e(/* import() */ 6528).then(__webpack_require__.t.bind(__webpack_require__, 16528, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/rst', () => __webpack_require__.e(/* import() */ 5828).then(__webpack_require__.t.bind(__webpack_require__, 75828, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/rst.snippets', () => __webpack_require__.e(/* import() */ 4254).then(__webpack_require__.t.bind(__webpack_require__, 34254, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/ruby', () => __webpack_require__.e(/* import() */ 4391).then(__webpack_require__.t.bind(__webpack_require__, 74391, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/ruby.snippets', () => __webpack_require__.e(/* import() */ 6902).then(__webpack_require__.t.bind(__webpack_require__, 76902, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sh', () => __webpack_require__.e(/* import() */ 6807).then(__webpack_require__.t.bind(__webpack_require__, 6807, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sh.snippets', () => __webpack_require__.e(/* import() */ 6013).then(__webpack_require__.t.bind(__webpack_require__, 6013, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/snippets', () => __webpack_require__.e(/* import() */ 3239).then(__webpack_require__.t.bind(__webpack_require__, 23239, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/snippets.snippets', () => __webpack_require__.e(/* import() */ 488).then(__webpack_require__.t.bind(__webpack_require__, 10488, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sql', () => __webpack_require__.e(/* import() */ 7687).then(__webpack_require__.t.bind(__webpack_require__, 57687, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sql.snippets', () => __webpack_require__.e(/* import() */ 2782).then(__webpack_require__.t.bind(__webpack_require__, 32782, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sqlserver', () => __webpack_require__.e(/* import() */ 2619).then(__webpack_require__.t.bind(__webpack_require__, 72619, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/sqlserver.snippets', () => __webpack_require__.e(/* import() */ 8389).then(__webpack_require__.t.bind(__webpack_require__, 68389, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tcl', () => __webpack_require__.e(/* import() */ 2646).then(__webpack_require__.t.bind(__webpack_require__, 72646, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tcl.snippets', () => __webpack_require__.e(/* import() */ 7483).then(__webpack_require__.t.bind(__webpack_require__, 37483, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tex', () => __webpack_require__.e(/* import() */ 1884).then(__webpack_require__.t.bind(__webpack_require__, 51884, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/tex.snippets', () => __webpack_require__.e(/* import() */ 2526).then(__webpack_require__.t.bind(__webpack_require__, 52526, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/textile', () => __webpack_require__.e(/* import() */ 4287).then(__webpack_require__.t.bind(__webpack_require__, 84287, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/textile.snippets', () => __webpack_require__.e(/* import() */ 9094).then(__webpack_require__.t.bind(__webpack_require__, 49094, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/vala', () => __webpack_require__.e(/* import() */ 5201).then(__webpack_require__.t.bind(__webpack_require__, 85201, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/velocity', () => __webpack_require__.e(/* import() */ 1142).then(__webpack_require__.t.bind(__webpack_require__, 91142, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/velocity.snippets', () => __webpack_require__.e(/* import() */ 6373).then(__webpack_require__.t.bind(__webpack_require__, 36373, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/wollok', () => __webpack_require__.e(/* import() */ 4479).then(__webpack_require__.t.bind(__webpack_require__, 84479, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/snippets/wollok.snippets', () => __webpack_require__.e(/* import() */ 5334).then(__webpack_require__.t.bind(__webpack_require__, 15334, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/ambiance', () => __webpack_require__.e(/* import() */ 7738).then(__webpack_require__.t.bind(__webpack_require__, 57738, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/chaos', () => __webpack_require__.e(/* import() */ 5296).then(__webpack_require__.t.bind(__webpack_require__, 25296, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/chrome', () => __webpack_require__.e(/* import() */ 1923).then(__webpack_require__.t.bind(__webpack_require__, 51923, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cloud9_day', () => __webpack_require__.e(/* import() */ 3759).then(__webpack_require__.t.bind(__webpack_require__, 23759, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cloud9_night', () => __webpack_require__.e(/* import() */ 6168).then(__webpack_require__.t.bind(__webpack_require__, 36168, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cloud9_night_low_color', () => __webpack_require__.e(/* import() */ 2139).then(__webpack_require__.t.bind(__webpack_require__, 72139, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/clouds', () => __webpack_require__.e(/* import() */ 7510).then(__webpack_require__.t.bind(__webpack_require__, 97510, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/clouds_midnight', () => __webpack_require__.e(/* import() */ 3251).then(__webpack_require__.t.bind(__webpack_require__, 93251, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/cobalt', () => __webpack_require__.e(/* import() */ 3128).then(__webpack_require__.t.bind(__webpack_require__, 73128, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/crimson_editor', () => __webpack_require__.e(/* import() */ 4270).then(__webpack_require__.t.bind(__webpack_require__, 14270, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/dawn', () => __webpack_require__.e(/* import() */ 3782).then(__webpack_require__.t.bind(__webpack_require__, 13782, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/dracula', () => __webpack_require__.e(/* import() */ 7482).then(__webpack_require__.t.bind(__webpack_require__, 27482, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/dreamweaver', () => __webpack_require__.e(/* import() */ 8390).then(__webpack_require__.t.bind(__webpack_require__, 28390, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/eclipse', () => __webpack_require__.e(/* import() */ 8385).then(__webpack_require__.t.bind(__webpack_require__, 38385, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/github', () => __webpack_require__.e(/* import() */ 4103).then(__webpack_require__.t.bind(__webpack_require__, 94103, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gob', () => __webpack_require__.e(/* import() */ 1375).then(__webpack_require__.t.bind(__webpack_require__, 81375, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gruvbox', () => __webpack_require__.e(/* import() */ 8642).then(__webpack_require__.t.bind(__webpack_require__, 8642, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gruvbox_dark_hard', () => __webpack_require__.e(/* import() */ 9475).then(__webpack_require__.t.bind(__webpack_require__, 99475, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/gruvbox_light_hard', () => __webpack_require__.e(/* import() */ 3553).then(__webpack_require__.t.bind(__webpack_require__, 93553, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/idle_fingers', () => __webpack_require__.e(/* import() */ 6921).then(__webpack_require__.t.bind(__webpack_require__, 46921, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/iplastic', () => __webpack_require__.e(/* import() */ 2261).then(__webpack_require__.t.bind(__webpack_require__, 82261, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/katzenmilch', () => __webpack_require__.e(/* import() */ 8024).then(__webpack_require__.t.bind(__webpack_require__, 68024, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/kr_theme', () => __webpack_require__.e(/* import() */ 9729).then(__webpack_require__.t.bind(__webpack_require__, 89729, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/kuroir', () => __webpack_require__.e(/* import() */ 4747).then(__webpack_require__.t.bind(__webpack_require__, 94747, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/merbivore', () => __webpack_require__.e(/* import() */ 6579).then(__webpack_require__.t.bind(__webpack_require__, 36579, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/merbivore_soft', () => __webpack_require__.e(/* import() */ 7403).then(__webpack_require__.t.bind(__webpack_require__, 77403, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/mono_industrial', () => __webpack_require__.e(/* import() */ 744).then(__webpack_require__.t.bind(__webpack_require__, 90744, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/monokai', () => __webpack_require__.e(/* import() */ 5567).then(__webpack_require__.t.bind(__webpack_require__, 65567, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/nord_dark', () => __webpack_require__.e(/* import() */ 4689).then(__webpack_require__.t.bind(__webpack_require__, 4689, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/one_dark', () => __webpack_require__.e(/* import() */ 2407).then(__webpack_require__.t.bind(__webpack_require__, 2407, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/pastel_on_dark', () => __webpack_require__.e(/* import() */ 599).then(__webpack_require__.t.bind(__webpack_require__, 70599, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/solarized_dark', () => __webpack_require__.e(/* import() */ 1257).then(__webpack_require__.t.bind(__webpack_require__, 81257, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/solarized_light', () => __webpack_require__.e(/* import() */ 3951).then(__webpack_require__.t.bind(__webpack_require__, 13951, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/sqlserver', () => __webpack_require__.e(/* import() */ 7302).then(__webpack_require__.t.bind(__webpack_require__, 77302, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/terminal', () => __webpack_require__.e(/* import() */ 9576).then(__webpack_require__.t.bind(__webpack_require__, 19576, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/textmate', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 93687, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow', () => __webpack_require__.e(/* import() */ 9946).then(__webpack_require__.t.bind(__webpack_require__, 29946, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night', () => __webpack_require__.e(/* import() */ 9764).then(__webpack_require__.t.bind(__webpack_require__, 79764, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night_blue', () => __webpack_require__.e(/* import() */ 7342).then(__webpack_require__.t.bind(__webpack_require__, 17342, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night_bright', () => __webpack_require__.e(/* import() */ 672).then(__webpack_require__.t.bind(__webpack_require__, 672, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/tomorrow_night_eighties', () => __webpack_require__.e(/* import() */ 9327).then(__webpack_require__.t.bind(__webpack_require__, 59327, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/twilight', () => __webpack_require__.e(/* import() */ 587).then(__webpack_require__.t.bind(__webpack_require__, 40587, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/vibrant_ink', () => __webpack_require__.e(/* import() */ 3200).then(__webpack_require__.t.bind(__webpack_require__, 13200, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/theme/xcode', () => __webpack_require__.e(/* import() */ 6787).then(__webpack_require__.t.bind(__webpack_require__, 96787, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/vim', () => __webpack_require__.e(/* import() */ 2403).then(__webpack_require__.t.bind(__webpack_require__, 2403, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/emacs', () => __webpack_require__.e(/* import() */ 6241).then(__webpack_require__.t.bind(__webpack_require__, 26241, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/sublime', () => __webpack_require__.e(/* import() */ 4176).then(__webpack_require__.t.bind(__webpack_require__, 74176, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/keyboard/vscode', () => __webpack_require__.e(/* import() */ 8143).then(__webpack_require__.t.bind(__webpack_require__, 58143, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/beautify', () => __webpack_require__.e(/* import() */ 682).then(__webpack_require__.t.bind(__webpack_require__, 50682, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/code_lens', () => __webpack_require__.e(/* import() */ 2447).then(__webpack_require__.t.bind(__webpack_require__, 62447, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/elastic_tabstops_lite', () => __webpack_require__.e(/* import() */ 7720).then(__webpack_require__.t.bind(__webpack_require__, 37720, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/emmet', () => __webpack_require__.e(/* import() */ 4836).then(__webpack_require__.t.bind(__webpack_require__, 24836, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/error_marker', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 18552, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/hardwrap', () => __webpack_require__.e(/* import() */ 2165).then(__webpack_require__.t.bind(__webpack_require__, 52165, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/inline_autocomplete', () => __webpack_require__.e(/* import() */ 371).then(__webpack_require__.t.bind(__webpack_require__, 90371, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/keybinding_menu', () => __webpack_require__.e(/* import() */ 3228).then(__webpack_require__.t.bind(__webpack_require__, 83228, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/language_tools', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 11105, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/linking', () => __webpack_require__.e(/* import() */ 9044).then(__webpack_require__.t.bind(__webpack_require__, 19044, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/modelist', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 90352, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/options', () => __webpack_require__.e(/* import() */ 3056).then(__webpack_require__.t.bind(__webpack_require__, 32814, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/prompt', () => __webpack_require__.e(/* import() */ 1531).then(__webpack_require__.t.bind(__webpack_require__, 81531, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/rtl', () => __webpack_require__.e(/* import() */ 1095).then(__webpack_require__.t.bind(__webpack_require__, 91095, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/searchbox', () => __webpack_require__.e(/* import() */ 2892).then(__webpack_require__.t.bind(__webpack_require__, 32892, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/settings_menu', () => __webpack_require__.e(/* import() */ 3275).then(__webpack_require__.t.bind(__webpack_require__, 93275, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/spellcheck', () => __webpack_require__.e(/* import() */ 2093).then(__webpack_require__.t.bind(__webpack_require__, 12093, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/split', () => __webpack_require__.e(/* import() */ 3877).then(__webpack_require__.t.bind(__webpack_require__, 3877, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/static_highlight', () => __webpack_require__.e(/* import() */ 2841).then(__webpack_require__.t.bind(__webpack_require__, 82841, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/statusbar', () => __webpack_require__.e(/* import() */ 7872).then(__webpack_require__.t.bind(__webpack_require__, 77872, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/textarea', () => __webpack_require__.e(/* import() */ 4404).then(__webpack_require__.t.bind(__webpack_require__, 54404, 23)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/themelist', () => __webpack_require__.e(/* import() */ 4953).then(__webpack_require__.t.bind(__webpack_require__, 84953, 19)));
-_src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/whitespace', () => __webpack_require__.e(/* import() */ 5107).then(__webpack_require__.t.bind(__webpack_require__, 85107, 19)));
-
-
-
-/***/ }),
-
 /***/ 59100:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -378,10 +17,10 @@ _src_ace__WEBPACK_IMPORTED_MODULE_0__.config.setModuleLoader('ace/ext/whitespace
 var dom = __webpack_require__(6359);
 
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var Editor = (__webpack_require__(82880).Editor);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 var EditSession = (__webpack_require__(66480)/* .EditSession */ .m);
 var UndoManager = (__webpack_require__(40718)/* .UndoManager */ .H);
-var Renderer = (__webpack_require__(63049).VirtualRenderer);
+var Renderer = (__webpack_require__(63049)/* .VirtualRenderer */ ._);
 
 // The following require()s are for inclusion in the built ace file
 __webpack_require__(91451);
@@ -468,7 +107,7 @@ exports.version = exports.config.version;
 
 
 var oop = __webpack_require__(89359);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 /**
  * Defines a floating pointer in the document. Whenever text is inserted or deleted before the cursor, the position of the anchor is updated.
@@ -1620,8 +1259,8 @@ exports.r = AceInline;
 "use strict";
 
 
-var Renderer = (__webpack_require__(63049).VirtualRenderer);
-var Editor = (__webpack_require__(82880).Editor);
+var Renderer = (__webpack_require__(63049)/* .VirtualRenderer */ ._);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
 var event = __webpack_require__(17989);
 var lang = __webpack_require__(20124);
@@ -2201,7 +1840,7 @@ exports.getCompletionPrefix = function (editor) {
 
 
 var oop = __webpack_require__(89359);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 
 /**
@@ -2810,7 +2449,7 @@ module.exports = {
 
 var oop = __webpack_require__(89359);
 var MultiHashHandler = (__webpack_require__(7116).MultiHashHandler);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 class CommandManager extends MultiHashHandler{
     /**
@@ -4744,7 +4383,7 @@ module.exports = `
 
 var oop = __webpack_require__(89359);
 var applyDelta = (__webpack_require__(38934)/* .applyDelta */ .B);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
 var Anchor = (__webpack_require__(27869)/* .Anchor */ .e);
 
@@ -5411,7 +5050,7 @@ var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var BidiHandler = (__webpack_require__(45087)/* .BidiHandler */ .l);
 var config = __webpack_require__(13188);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var Selection = (__webpack_require__(88939)/* .Selection */ .Y);
 var TextMode = (__webpack_require__(98030).Mode);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
@@ -9641,7 +9280,7 @@ var KeyBinding = (__webpack_require__(78229)/* .KeyBinding */ .M);
 var EditSession = (__webpack_require__(66480)/* .EditSession */ .m);
 var Search = (__webpack_require__(46745)/* .Search */ .o);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var CommandManager = (__webpack_require__(73190).CommandManager);
 var defaultCommands = (__webpack_require__(70883)/* .commands */ .C);
 var config = __webpack_require__(13188);
@@ -12610,7 +12249,7 @@ var relativeNumberRenderer = {
     }
 };
 
-exports.Editor = Editor;
+exports.M = Editor;
 
 
 /***/ }),
@@ -12966,7 +12605,7 @@ var doLiveAutocomplete = function(e) {
     }
 };
 
-var Editor = (__webpack_require__(82880).Editor);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 (__webpack_require__(13188).defineOptions)(Editor.prototype, "editor", {
     enableBasicAutocompletion: {
         set: function(val) {
@@ -14678,7 +14317,7 @@ exports.C = Cursor;
 
 var dom = __webpack_require__(6359);
 var oop = __webpack_require__(89359);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 class Decorator {
     constructor(parent, renderer) {
@@ -14816,7 +14455,7 @@ var dom = __webpack_require__(6359);
 var lang = __webpack_require__(20124);
 var event = __webpack_require__(17989);
 var useragent = __webpack_require__(50618);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 var CHAR_COUNT = 512;
 var USE_OBSERVER = typeof ResizeObserver == "function";
@@ -15027,7 +14666,7 @@ exports.c = FontMetrics;
 var dom = __webpack_require__(6359);
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var Lines = (__webpack_require__(55388)/* .Lines */ .x);
 
 class Gutter{
@@ -15852,7 +15491,7 @@ var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
 var lang = __webpack_require__(20124);
 var Lines = (__webpack_require__(55388)/* .Lines */ .x);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 
 class Text {
@@ -16597,7 +16236,7 @@ exports.x = Text;
 "no use strict";
 
 var oop = __webpack_require__(89359);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 var optionsProvider = {
     setOptions: function(optList) {
@@ -17898,7 +17537,7 @@ EventEmitter.removeAllListeners = function(eventName) {
     if (this._defaultHandlers) this._defaultHandlers[eventName] = undefined;
 };
 
-exports.EventEmitter = EventEmitter;
+exports.v = EventEmitter;
 
 
 /***/ }),
@@ -22023,7 +21662,7 @@ var EditSession = (__webpack_require__(66480)/* .EditSession */ .m);
 }).call(Selection.prototype);
 
 // extend Editor
-var Editor = (__webpack_require__(82880).Editor);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 (function() {
 
     /** 
@@ -22666,7 +22305,7 @@ exports.MultiSelect = MultiSelect;
 
 
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var oop = __webpack_require__(89359);
 
 class PlaceHolder {
@@ -23706,7 +23345,7 @@ var __webpack_unused_export__;
 var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
 var event = __webpack_require__(17989);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 // on ie maximal element height is smaller than what we get from 4-5K line document
 // so scrollbar doesn't work, as a workaround we do not set height higher than MAX_SCROLL_H
 // and rescale scrolltop
@@ -23952,7 +23591,7 @@ var __webpack_unused_export__;
 var oop = __webpack_require__(89359);
 var dom = __webpack_require__(6359);
 var event = __webpack_require__(17989);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 
 dom.importCssString(`.ace_editor>.ace_sb-v div, .ace_editor>.ace_sb-h div{
   position: absolute;
@@ -24764,7 +24403,7 @@ exports.t = SearchHighlight;
 
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
 
 /**
@@ -25687,7 +25326,7 @@ exports.Y = Selection;
 
 var dom = __webpack_require__(6359);
 var oop = __webpack_require__(89359);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var lang = __webpack_require__(20124);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
 var RangeList = (__webpack_require__(16510)/* .RangeList */ .$);
@@ -26714,7 +26353,7 @@ dom.importCssString(`
 exports.w = new SnippetManager();
 
 
-var Editor = (__webpack_require__(82880).Editor);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 (function() {
     this.insertSnippet = function(content, options) {
         return exports.w.insertSnippet(this, content, options);
@@ -28121,7 +27760,7 @@ var HScrollBarCustom = (__webpack_require__(66810)/* .HScrollBar */ .ii);
 var VScrollBarCustom = (__webpack_require__(66810)/* .VScrollBar */ .oX);
 var RenderLoop = (__webpack_require__(93081)/* .RenderLoop */ .d);
 var FontMetrics = (__webpack_require__(89506)/* .FontMetrics */ .c);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var editorCss = __webpack_require__(20610);
 var Decorator = (__webpack_require__(22113)/* .Decorator */ .S);
 
@@ -30136,7 +29775,7 @@ config.defineOptions(VirtualRenderer.prototype, "renderer", {
     }
 });
 
-exports.VirtualRenderer = VirtualRenderer;
+exports._ = VirtualRenderer;
 
 
 /***/ }),
@@ -30974,266 +30613,6 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ 9734:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(21705);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 42498:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(94936);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_layout_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 77111:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(47594);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 58659:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(52368);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 87757:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(67303);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_tab_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
 /***/ 93379:
 /***/ ((module) => {
 
@@ -31528,6058 +30907,6 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 9300:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.CommandManager = void 0;
-var event = __webpack_require__(17989);
-var keyUtil = __webpack_require__(11797);
-var hash_handler_1 = __webpack_require__(7116);
-var CommandManager = /** @class */ (function () {
-    function CommandManager() {
-    }
-    CommandManager.registerCommands = function (commands, context) {
-        var menuKb = new hash_handler_1.HashHandler(commands);
-        var _this = context;
-        event.addCommandKeyListener(window, function (e, hashId, keyCode) {
-            var keyString = keyUtil.keyCodeToString(keyCode);
-            var command = menuKb.findKeyCommand(hashId, keyString);
-            if (command) {
-                event.stopEvent(e);
-                command.exec(_this);
-            }
-        });
-    };
-    return CommandManager;
-}());
-exports.CommandManager = CommandManager;
-
-
-/***/ }),
-
-/***/ 20682:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.tabCommands = void 0;
-var tab_1 = __webpack_require__(94271);
-var tabManager_1 = __webpack_require__(58923);
-function getCurrentPaneTabs(element) {
-    var _a, _b, _c, _d;
-    if (element instanceof tab_1.Tab) {
-        return {
-            tabs: __spreadArray([], (_b = (_a = element.parent) === null || _a === void 0 ? void 0 : _a.tabList) !== null && _b !== void 0 ? _b : [], true),
-            activeTab: element
-        };
-    }
-    else {
-        return {
-            tabs: __spreadArray([], (_d = (_c = element.activePane) === null || _c === void 0 ? void 0 : _c.tabBar.tabList) !== null && _d !== void 0 ? _d : [], true),
-            activeTab: element.activeTab
-        };
-    }
-}
-function goToTab(el, tabNum) {
-    var currentPaneTabs = getCurrentPaneTabs(el);
-    var tabs = currentPaneTabs.tabs;
-    var activeTab = currentPaneTabs.activeTab;
-    var index = tabNum !== null && tabNum !== void 0 ? tabNum : tabs.indexOf(activeTab);
-    tabManager_1.TabManager.getInstance().navigateToTab(index, activeTab, tabs);
-}
-exports.tabCommands = [
-    {
-        name: "clonetab",
-        mac: "",
-        win: "",
-        desc: "Create a new tab with a view on the same file"
-    }, {
-        name: "Close Tab",
-        mac: "Option-W",
-        win: "Alt-W",
-        desc: "close the tab that is currently active",
-        position: 300,
-        exec: function (el) {
-            if (el instanceof tab_1.Tab) {
-                el.remove();
-            }
-            else {
-                el.activeTab.remove();
-            }
-        }
-    }, {
-        name: "Close All Tabs",
-        mac: "Option-Shift-W",
-        win: "Alt-Shift-W",
-        desc: "Close all opened tabs",
-        position: 310,
-        exec: function () {
-            var tabs = tabManager_1.TabManager.getInstance().tabs;
-            for (var i in tabs) {
-                tabs[i].remove();
-            }
-        }
-    }, {
-        name: "Close other tabs",
-        mac: "Option-Ctrl-W",
-        win: "Ctrl-Alt-W",
-        desc: "close all opened tabs, except the tab that is currently active",
-        position: 320,
-        exec: function (el) {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            for (var _i = 0, tabs_1 = tabs; _i < tabs_1.length; _i++) {
-                var tab = tabs_1[_i];
-                if (tab != activeTab)
-                    tab.remove();
-            }
-        }
-    }, {
-        name: "Go to tab right",
-        mac: "Command-}",
-        win: "Ctrl-}",
-        desc: "navigate to the next tab, right to the tab that is currently active",
-        position: 330,
-        exec: function (el) {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
-            tabManager_1.TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
-        }
-    }, {
-        name: "Go to tab left",
-        mac: "Command-{",
-        win: "Ctrl-{",
-        desc: "navigate to the next tab, left to the tab that is currently active",
-        position: 340,
-        exec: function (el) {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
-            tabManager_1.TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
-        }
-    }, {
-        name: "movetabright",
-        mac: "Command-Option-Shift-Right",
-        win: "Ctrl-Meta-Right",
-        desc: "move the tab that is currently"
-            + " active to the right. Will create a split tab to the right if it's the right most tab."
-    }, {
-        name: "movetableft",
-        mac: "Command-Option-Shift-Left",
-        win: "Ctrl-Meta-Left",
-        desc: "move the tab that is currently active"
-            + " to the left. Will create a split tab to the left if it's the left most tab."
-    }, {
-        name: "movetabup",
-        mac: "Command-Option-Shift-Up",
-        win: "Ctrl-Meta-Up",
-        desc: "move the tab that is currently active to the"
-            + " up. Will create a split tab to the top if it's the top most tab."
-    }, {
-        name: "movetabdown",
-        mac: "Command-Option-Shift-Down",
-        win: "Ctrl-Meta-Down",
-        desc: "move the tab that is currently active"
-            + " to the down. Will create a split tab to the bottom if it's the bottom most tab."
-    }, {
-        name: "Go to first tab",
-        mac: "Command-1",
-        win: "Ctrl-1",
-        desc: "navigate to the first tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 0);
-        }
-    }, {
-        name: "Go to second tab",
-        mac: "Command-2",
-        win: "Ctrl-2",
-        desc: "navigate to the second tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 1);
-        }
-    }, {
-        name: "Go to third tab",
-        mac: "Command-3",
-        win: "Ctrl-3",
-        desc: "navigate to the third tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 2);
-        }
-    }, {
-        name: "tab4",
-        mac: "Command-4",
-        win: "Ctrl-4",
-        desc: "navigate to the fourth tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 3);
-        }
-    }, {
-        name: "tab5",
-        mac: "Command-5",
-        win: "Ctrl-5",
-        desc: "navigate to the fifth tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 4);
-        }
-    }, {
-        name: "tab6",
-        mac: "Command-6",
-        win: "Ctrl-6",
-        desc: "navigate to the sixth tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 5);
-        }
-    }, {
-        name: "tab7",
-        mac: "Command-7",
-        win: "Ctrl-7",
-        desc: "navigate to the seventh tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 6);
-        }
-    }, {
-        name: "tab8",
-        mac: "Command-8",
-        win: "Ctrl-8",
-        desc: "navigate to the eighth tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 7);
-        }
-    }, {
-        name: "tab9",
-        mac: "Command-9",
-        win: "Ctrl-9",
-        desc: "navigate to the ninth tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 8);
-        }
-    }, {
-        name: "tab0",
-        mac: "Command-0",
-        win: "Ctrl-0",
-        desc: "navigate to the tenth tab",
-        position: 340,
-        exec: function (el) {
-            goToTab(el, 9);
-        }
-    }, {
-        name: "Reveal tab",
-        mac: "Command-Shift-L",
-        win: "Ctrl-Shift-L",
-        desc: "reveal current tab in the file tree",
-        position: 340,
-        exec: function (el) {
-            //TODO: 
-            /*let path;
-            if (el instanceof Tab) {
-                path = el.path;
-            } else {
-                path = el.activeTab.path;
-            }*/
-            /*fileTree.popup.data.some((item, i) => {
-                if (item.path === path) {
-                    let scrollTo = fileTree.popup.session.documentToScreenRow(i, 0);
-                    fileTree.popup.session.setScrollTop(scrollTo)
-                    fileTree.popup.setRow(i);
-                }
-            });*/
-        }
-    }, {
-        name: "Go to next tab",
-        mac: "Option-Tab",
-        win: "Ctrl-Tab|Alt-`",
-        desc: "navigate to the next tab in the stack of accessed tabs",
-        position: 340,
-        exec: function (el) {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
-            if (index < tabs.length - 1) {
-                tabManager_1.TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
-            }
-            else {
-                tabManager_1.TabManager.getInstance().navigateToTab(0, activeTab, tabs);
-            }
-        }
-    }, {
-        name: "Go to previous tab",
-        mac: "Option-Shift-Tab",
-        win: "Ctrl-Shift-Tab|Alt-Shift-`",
-        desc: "navigate to the previous tab in the stack of accessed tabs",
-        position: 340,
-        exec: function (el) {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
-            if (index > 0) {
-                tabManager_1.TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
-            }
-            else {
-                tabManager_1.TabManager.getInstance().navigateToTab(tabs.length - 1, activeTab, tabs);
-            }
-        }
-    }, {
-        name: "nextpane",
-        mac: "Option-ESC",
-        win: "Ctrl-`",
-        desc: "navigate to the next tab in the stack of panes"
-    }, {
-        name: "previouspane",
-        mac: "Option-Shift-ESC",
-        win: "Ctrl-Shift-`",
-        desc: "navigate to the previous tab in the stack of panes"
-    }, {
-        name: "gotopaneright",
-        mac: "Ctrl-Meta-Right",
-        win: "Ctrl-Meta-Right",
-        desc: "navigate to the pane on the right"
-    }, {
-        name: "gotopaneleft",
-        mac: "Ctrl-Meta-Left",
-        win: "Ctrl-Meta-Left",
-        desc: "navigate to the pane on the left"
-    }, {
-        name: "gotopaneup",
-        mac: "Ctrl-Meta-Up",
-        win: "Ctrl-Meta-Up",
-        desc: "navigate to the pane on the top"
-    }, {
-        name: "gotopanedown",
-        mac: "Ctrl-Meta-Down",
-        win: "Ctrl-Meta-Down",
-        desc: "navigate to the pane on the bottom"
-    }, {
-        name: "reopenLastTab",
-        mac: "Option-Shift-T",
-        win: "Alt-Shift-T",
-        /*exec: function () {
-            return menuClosedItems.length;
-        },*/
-        desc: "reopen last closed tab"
-    }, {
-        name: "Close all to the right",
-        mac: "",
-        win: "",
-        desc: "close all tabs to the right of the focussed tab",
-        position: 340,
-        exec: function (el) {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
-            if (index < tabs.length - 1) {
-                for (var i = index + 1; i < tabs.length; i++) {
-                    tabs[i].remove();
-                }
-            }
-        }
-    }, {
-        name: "Close all to the left",
-        mac: "",
-        win: "",
-        desc: "close all tabs to the left of the focussed tab",
-        position: 340,
-        exec: function (el) {
-            var currentPaneTabs = getCurrentPaneTabs(el);
-            var tabs = currentPaneTabs.tabs;
-            var activeTab = currentPaneTabs.activeTab;
-            var index = tabs.indexOf(activeTab);
-            if (index > 0) {
-                for (var i = 0; i < index; i++) {
-                    tabs[i].remove();
-                }
-            }
-        }
-    }, {
-        name: "Close pane",
-        mac: "Command-Ctrl-W",
-        win: "Ctrl-W",
-        desc: "close this pane",
-        position: 340,
-        exec: function (el) {
-            var _a, _b;
-            var tabs;
-            if (el instanceof tab_1.Tab) {
-                tabs = __spreadArray([], (_b = (_a = el.parent) === null || _a === void 0 ? void 0 : _a.tabList) !== null && _b !== void 0 ? _b : [], true);
-            }
-            else {
-                tabs = __spreadArray([], el.activePane.tabBar.tabList, true);
-            }
-            for (var _i = 0, tabs_2 = tabs; _i < tabs_2.length; _i++) {
-                var tab = tabs_2[_i];
-                tab.remove();
-            }
-        }
-    }, {
-        name: "nosplit",
-        mac: "",
-        win: "",
-        desc: "no split"
-    }, {
-        name: "hsplit",
-        mac: "",
-        win: "",
-        desc: "split the current pane in two columns and move the active tab to it"
-    }, {
-        name: "vsplit",
-        mac: "",
-        win: "",
-        desc: "split the current pane in two rows and move the active tab to it"
-    }, {
-        name: "twovsplit",
-        mac: "",
-        win: "",
-        desc: "create a two pane row layout"
-    }, {
-        name: "twohsplit",
-        mac: "",
-        win: "",
-        desc: "create a two pane column layout"
-    }, {
-        name: "foursplit",
-        mac: "",
-        win: "",
-        desc: "create a four pane layout"
-    }, {
-        name: "threeleft",
-        mac: "",
-        win: "",
-        desc: "create a three pane layout with the stack on the left side"
-    }, {
-        name: "threeright",
-        mac: "",
-        win: "",
-        desc: "create a three pane layout with the stack on the right side"
-    }
-];
-
-
-/***/ }),
-
-/***/ 18108:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.AccordionHandler = void 0;
-var box_1 = __webpack_require__(95561);
-var lib_1 = __webpack_require__(80930);
-var event = __webpack_require__(17989);
-var AccordionHandler;
-(function (AccordionHandler) {
-    AccordionHandler.toggleBarMouseDown = function (e, accordionConstructor) {
-        var toggleBlock = lib_1.Utils.findNode(e.target, "toggle-block");
-        if (!toggleBlock)
-            return;
-        var accordionBox, accordionBoxRect, toggleBlockDragging, toggleBlockRect;
-        var startIndex, changeIndex, previousIndex;
-        var toggleBar, section, splitter;
-        var startX = e.clientX, startY = e.clientY;
-        var isDragging = false;
-        var posX, posY, prevY, prevX;
-        var prevBlock, topMaxY, nextBlock, bottomMaxY;
-        function distance(dx, dy) {
-            return dx * dx + dy * dy;
-        }
-        function calculateNearbyBlocksData() {
-            if (!accordionBox)
-                return;
-            prevBlock = accordionBox.toggleBlockList[changeIndex - 1] || null;
-            nextBlock = accordionBox.toggleBlockList[changeIndex + 1] || null;
-            topMaxY = prevBlock && (parseInt(prevBlock.style.top, 10) + parseInt(prevBlock.style.height, 10) / 2 + accordionBoxRect.top);
-            bottomMaxY = nextBlock && (parseInt(nextBlock.style.top, 10) + parseInt(nextBlock.style.height, 10) / 2 + accordionBoxRect.top);
-        }
-        function startDragging() {
-            if (isDragging)
-                return;
-            accordionBox = lib_1.Utils.findHost(toggleBlock, accordionConstructor);
-            if (!accordionBox)
-                return;
-            accordionBoxRect = accordionBox.element.getBoundingClientRect();
-            startIndex = changeIndex = previousIndex = toggleBlock.$index;
-            toggleBlockRect = toggleBlock.getBoundingClientRect();
-            toggleBlockDragging = toggleBlock.cloneNode(true);
-            toggleBlockDragging.$hostAccordionBox = accordionBox;
-            toggleBlockDragging.$hostIndex = startIndex;
-            toggleBlockDragging.classList.add("toggleBlockDragging");
-            lib_1.Utils.setBox(toggleBlockDragging, toggleBlockRect.left, toggleBlockRect.top, toggleBlockRect.width, toggleBlockRect.height);
-            posX = startX - toggleBlockRect.left;
-            posY = startY - toggleBlockRect.top;
-            document.body.appendChild(toggleBlockDragging);
-            toggleBlock.style.opacity = 0;
-            calculateNearbyBlocksData();
-            isDragging = true;
-        }
-        function recalculateIndexes(arr) {
-            for (var i = 0; i < arr.length; i++) {
-                arr[i].$index = i;
-            }
-        }
-        function accordionDataChanged() {
-            if (!accordionBox)
-                return;
-            recalculateIndexes(accordionBox.sections);
-            recalculateIndexes(accordionBox.toggleBarList);
-            recalculateIndexes(accordionBox.toggleBlockList);
-            recalculateIndexes(accordionBox.splitterList);
-            accordionBox.resize();
-        }
-        function addToAccordionBox(index) {
-            if (!accordionBox)
-                return;
-            accordionBox.sections.splice(index, 0, section);
-            accordionBox.toggleBarList.splice(index, 0, toggleBar);
-            accordionBox.toggleBlockList.splice(index, 0, toggleBlock);
-            calculateNearbyBlocksData();
-            if (nextBlock) {
-                accordionBox.element.insertBefore(splitter, nextBlock);
-                accordionBox.element.insertBefore(toggleBlock, splitter);
-                accordionBox.splitterList.splice(index - 1, 0, splitter);
-            }
-            else {
-                accordionBox.element.appendChild(splitter);
-                accordionBox.element.appendChild(toggleBlock);
-                accordionBox.splitterList.push(splitter);
-            }
-            toggleBlock.$parent = accordionBox;
-            splitter.$parent = accordionBox;
-            accordionBox.calculateSectionsSizesPercents();
-            accordionBox.recalculateChildrenSizes();
-            accordionDataChanged();
-        }
-        function removeFromAccordionBox() {
-            if (!accordionBox)
-                return;
-            section = accordionBox.sections.splice(previousIndex, 1)[0];
-            toggleBar = accordionBox.toggleBarList.splice(previousIndex, 1)[0];
-            toggleBlock = accordionBox.toggleBlockList.splice(previousIndex, 1)[0];
-            var splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex - 1;
-            splitter = accordionBox.splitterList.splice(splitterIndex, 1)[0];
-            toggleBlockDragging.style.height = accordionBox.toggleBarHeight + "px";
-            toggleBlock.remove();
-            splitter.remove();
-            accordionBox.calculateSectionsSizesPercents();
-            accordionBox.recalculateChildrenSizes();
-            accordionDataChanged();
-            accordionBox = undefined;
-            toggleBlock.$parent = null;
-            splitter.$parent = null;
-        }
-        function finishDragging() {
-            if (!accordionBox) {
-                accordionBox = toggleBlockDragging.$hostAccordionBox;
-                addToAccordionBox(toggleBlockDragging.$hostIndex);
-            }
-            toggleBlockDragging.remove();
-            toggleBlock.style.opacity = 1;
-            isDragging = false;
-        }
-        var onMouseMove = function (e) {
-            if (e.type !== "mousemove")
-                return;
-            if (!isDragging) {
-                if (distance(e.clientX - startX, e.clientY - startY) < 25)
-                    return;
-                startDragging();
-            }
-            var left = e.clientX - posX;
-            var top = e.clientY - posY;
-            if (accordionBox) {
-                if (left < accordionBoxRect.left - accordionBoxRect.width || left > accordionBoxRect.left + accordionBoxRect.width) {
-                    removeFromAccordionBox();
-                }
-            }
-            if (!accordionBox) {
-                accordionBox = lib_1.Utils.findHost(e.target, accordionConstructor);
-                if (accordionBox) {
-                    accordionBoxRect = accordionBox.element.getBoundingClientRect();
-                    nextBlock = lib_1.Utils.findNode(e.target, "toggle-block");
-                    if (nextBlock) {
-                        startIndex = nextBlock.$index;
-                    }
-                    else {
-                        startIndex = accordionBox.toggleBlockList.length;
-                    }
-                    previousIndex = changeIndex = startIndex;
-                    addToAccordionBox(previousIndex);
-                    toggleBlockDragging.style.height = toggleBlock.style.height;
-                }
-            }
-            if (accordionBox) {
-                left = accordionBoxRect.left;
-                if (e.clientY < prevY && topMaxY && top < topMaxY) {
-                    changeIndex--;
-                }
-                else if (e.clientY > prevY && bottomMaxY && top + toggleBlockRect.height > bottomMaxY) {
-                    changeIndex++;
-                }
-                if (changeIndex !== previousIndex) {
-                    accordionBox.element.insertBefore(toggleBlock, accordionBox.toggleBlockList[changeIndex]);
-                    var splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex + 1;
-                    accordionBox.element.insertBefore(accordionBox.toggleBlockList[changeIndex], accordionBox.splitterList[splitterIndex]);
-                    accordionBox.sections.splice(changeIndex, 0, accordionBox.sections.splice(previousIndex, 1)[0]);
-                    accordionBox.toggleBarList.splice(changeIndex, 0, accordionBox.toggleBarList.splice(previousIndex, 1)[0]);
-                    accordionBox.toggleBlockList.splice(changeIndex, 0, accordionBox.toggleBlockList.splice(previousIndex, 1)[0]);
-                    calculateNearbyBlocksData();
-                    accordionDataChanged();
-                    previousIndex = changeIndex;
-                }
-            }
-            toggleBlockDragging.style.left = left + "px";
-            toggleBlockDragging.style.top = top + "px";
-            prevX = e.clientX;
-            prevY = e.clientY;
-        };
-        var onMouseUp = function (e) {
-            if (!isDragging)
-                return;
-            finishDragging();
-        };
-        event.capture(window, onMouseMove, onMouseUp);
-        return e.preventDefault();
-    };
-    AccordionHandler.toggleBarOnClick = function (e) {
-        var toggleBlock = lib_1.Utils.findNode(e.target, "toggle-block");
-        if (!toggleBlock)
-            return;
-        var accordionBox = toggleBlock.$parent;
-        var index = toggleBlock.$index;
-        var isOpened = accordionBox.isOpenedBlock(toggleBlock);
-        if (!isOpened) {
-            toggleBlock.classList.add("toggle-opened");
-            index = undefined;
-        }
-        else {
-            toggleBlock.classList.remove("toggle-opened");
-        }
-        accordionBox.recalculateChildrenSizes(index);
-        box_1.Box.enableAnimation();
-        var node = accordionBox.element;
-        node.addEventListener('transitionend', function handler() {
-            node.removeEventListener('transitionend', handler);
-            box_1.Box.disableAnimation();
-        });
-        accordionBox.resize();
-    };
-    AccordionHandler.splitterMouseDown = function (e) {
-        var button = e.button;
-        if (button !== 0)
-            return;
-        var splitter = lib_1.Utils.findNode(e.target, "splitter");
-        if (!splitter)
-            return;
-        var accordionBox = splitter.$parent;
-        var x = e.clientX;
-        var y = e.clientY;
-        var splitterIndex = splitter.$index + 1;
-        var prevX = x;
-        var prevY = y;
-        if (!accordionBox.hasNextOpenedBlocks(splitterIndex) || !accordionBox.hasPrevOpenedBlocks(splitterIndex))
-            return;
-        accordionBox.keepState();
-        var onMouseMove = function (e) {
-            x = e.clientX;
-            y = e.clientY;
-            var changedSize = 0;
-            if (prevY > y) {
-                changedSize = accordionBox.recalculatePreviousSectionsSize(splitterIndex, y);
-                if (changedSize === 0)
-                    return;
-                accordionBox.expandNextSections(splitterIndex, changedSize);
-            }
-            else if (prevY < y) {
-                changedSize = accordionBox.recalculateNextSectionsSize(splitterIndex, y);
-                if (changedSize === 0)
-                    return;
-                accordionBox.expandPreviousSections(splitterIndex, changedSize);
-            }
-            else {
-                return;
-            }
-            prevY = y;
-            accordionBox.resize();
-        };
-        var onResizeEnd = function (e) {
-            accordionBox.dischargeState();
-            box_1.Box.setGlobalCursor("");
-            accordionBox.calculateSectionsSizesPercents();
-        };
-        box_1.Box.setGlobalCursor("".concat(accordionBox.vertical ? "ns" : "ew", "-resize"));
-        event.capture(window, onMouseMove, onResizeEnd);
-        return e.preventDefault();
-    };
-})(AccordionHandler = exports.AccordionHandler || (exports.AccordionHandler = {}));
-
-
-/***/ }),
-
-/***/ 21649:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabbarHandler = void 0;
-var lib_1 = __webpack_require__(80930);
-var dom_1 = __webpack_require__(91444);
-var event = __webpack_require__(17989);
-var TabbarHandler;
-(function (TabbarHandler) {
-    TabbarHandler.tabbarMouseDown = function (e, tabConstructor, tabBarConstructor, showSplit) {
-        if (showSplit === void 0) { showSplit = false; }
-        var divSplit, splitPosition, pane;
-        function hideSplitPosition() {
-            if (!divSplit)
-                return;
-            divSplit.remove();
-            divSplit = splitPosition = pane = null;
-        }
-        function showSplitPosition(e) {
-            var el = e.target;
-            if (tabBar) {
-                hideSplitPosition();
-                return;
-            }
-            pane = lib_1.Utils.findHost(el);
-            // If aml is not the pane we seek, lets abort
-            if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
-                hideSplitPosition();
-                return;
-            }
-            // Cannot split pane that would be removed later
-            if (pane.tabBar.tabList.length === 0) {
-                hideSplitPosition();
-                return;
-            }
-            var dark = false; // !tab || tab.classList.constains("dark");
-            if (!divSplit) {
-                divSplit = document.createElement("div");
-                document.body.appendChild(divSplit);
-            }
-            divSplit.className = "split-area" + (dark ? " dark" : "");
-            // Find the rotated quarter that we're in
-            var rect = pane.element.getBoundingClientRect();
-            // TODO add getContentRect?
-            // Get buttons height
-            var bHeight = pane.tabBar.element.clientHeight - 1;
-            rect = {
-                left: rect.left,
-                top: rect.top + bHeight,
-                width: rect.width,
-                height: rect.height - bHeight,
-            };
-            var left = (e.clientX - rect.left) / rect.width;
-            var right = 1 - left;
-            var top = (e.clientY - rect.top) / rect.height;
-            var bottom = 1 - top;
-            // Anchor to closes side
-            var min = Math.min(left, top, right, bottom);
-            if (min == left) {
-                splitPosition = [true, false]; // Left
-                lib_1.Utils.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
-            }
-            else if (min == right) {
-                splitPosition = [false, false]; // Right
-                lib_1.Utils.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
-            }
-            else if (min == top) {
-                splitPosition = [true, true]; // Top
-                lib_1.Utils.setBox(divSplit, rect.left, rect.top, rect.width, rect.height / 2);
-            }
-            else if (min == bottom) {
-                splitPosition = [false, true]; // Bottom
-                lib_1.Utils.setBox(divSplit, rect.left, rect.top + rect.height / 2, rect.width, rect.height / 2);
-            }
-        }
-        if (e.target.classList.contains("tabCloseButton")) { //TODO not sure
-            return;
-        }
-        var tab = lib_1.Utils.findHost(e.target, tabConstructor);
-        if (!tab)
-            return;
-        var tabBar = lib_1.Utils.findHost(e.target, tabBarConstructor);
-        if (!tabBar)
-            return;
-        var isVertical = tabBar.isVertical();
-        tabBar.tabMouseDown(tab, e.shiftKey, e.ctrlKey);
-        if (e.shiftKey || e.ctrlKey)
-            return;
-        var isDragging = false;
-        var posX, posY, prevX, prevY;
-        var startX = e.clientX, startY = e.clientY;
-        var parentRect, tabElement, index, selectedTabs, hostTabBar, hostIndex;
-        var prevTab, leftMaxX, topMaxY, nextTab, rightMaxX, bottomMaxY;
-        var tabDragElementSize = 0; //TODO rename these
-        var tabDragElementLeft = 0;
-        var tabDragElementTop = 0;
-        var calculateNearbyTabsData = function () {
-            if (isVertical) {
-                topMaxY = prevTab && (parseInt(prevTab.style.top, 10) + parseInt(prevTab.style.height, 10) / 2 + parentRect.top);
-                bottomMaxY = nextTab && (parseInt(nextTab.style.top, 10) + parseInt(nextTab.style.height, 10) / 2 + parentRect.top);
-            }
-            else {
-                if (prevTab) {
-                    var prevSibling = prevTab.previousSibling;
-                    leftMaxX = prevSibling ? parseInt(prevSibling.style.left, 10) + parseInt(prevSibling.style.width, 10) + parentRect.left : parentRect.left;
-                }
-                rightMaxX = nextTab && (parseInt(nextTab.style.left, 10) + parseInt(nextTab.style.width, 10) / 2 + parentRect.left);
-            }
-        };
-        var startDragging = function () {
-            if (isDragging || !tabBar)
-                return;
-            tabElement = dom_1.dom.buildDom(["div", {
-                    class: "tabDragging"
-                }]);
-            var activeIndex = index = tabBar.tabList.indexOf(tab);
-            tabBar.tabContainer.insertBefore(tabElement, tab.element);
-            tabDragElementLeft = parseInt(tab.element.style.left, 10);
-            tabDragElementTop = parseInt(tab.element.style.top, 10);
-            selectedTabs = [];
-            var selectedTab, selectedTabElement;
-            for (var i = 0; i < tabBar.selectedTabs.length; i++) {
-                selectedTab = tabBar.selectedTabs[i];
-                selectedTab.currentIndex = tabBar.tabList.indexOf(selectedTab);
-                if (selectedTab.currentIndex < activeIndex) {
-                    index--;
-                    if (isVertical) {
-                        tabDragElementTop -= parseInt(selectedTab.element.style.top, 10);
-                    }
-                    else {
-                        tabDragElementLeft -= parseInt(selectedTab.element.style.width, 10);
-                    }
-                }
-                selectedTabs.push(selectedTab);
-            }
-            selectedTabs.sort(function (tab1, tab2) {
-                return tab1.currentIndex - tab2.currentIndex;
-            });
-            for (var i = 0; i < selectedTabs.length; i++) {
-                selectedTab = selectedTabs[i];
-                selectedTabElement = selectedTab.element;
-                tabElement.appendChild(selectedTabElement);
-                selectedTabElement.style.pointerEvents = "none";
-                if (isVertical) {
-                    selectedTabElement.style.top = tabDragElementSize + "px";
-                    tabDragElementSize += parseInt(selectedTabElement.style.height, 10);
-                }
-                else {
-                    selectedTabElement.style.left = tabDragElementSize + "px";
-                    tabDragElementSize += parseInt(selectedTabElement.style.width, 10);
-                }
-                tabBar.removeTab(selectedTab);
-            }
-            prevTab = tabElement.previousSibling;
-            nextTab = tabElement.nextSibling;
-            parentRect = tabBar.element.getBoundingClientRect();
-            if (isVertical) {
-                tabDragElementTop += parentRect.top;
-                posY = startY - tabDragElementTop;
-                posX = startX - parentRect.left;
-            }
-            else {
-                tabDragElementLeft += parentRect.left;
-                posX = startX - tabDragElementLeft;
-                posY = startY - parentRect.top;
-            }
-            prevX = e.clientX;
-            prevY = e.clientY;
-            hostTabBar = tabBar;
-            hostIndex = index;
-            calculateNearbyTabsData();
-            isDragging = true;
-            document.body.appendChild(tabElement);
-            if (isVertical) {
-                lib_1.Utils.setBox(tabElement, tabDragElementTop, parentRect.left, parentRect.width, tabDragElementSize);
-            }
-            else {
-                lib_1.Utils.setBox(tabElement, tabDragElementLeft, parentRect.top, tabDragElementSize, parentRect.height);
-            }
-            tabBar.startTabDragging(tabElement, index);
-        };
-        var finishDragging = function () {
-            if (pane && pane.split && splitPosition) {
-                var newPane = pane.split.apply(pane, splitPosition);
-                tabBar = newPane.tabBar;
-            }
-            else if (!tabBar) {
-                tabBar = hostTabBar;
-            }
-            tabBar.removeSelections();
-            tabElement.remove();
-            var selectedTab;
-            for (var i = 0; i < selectedTabs.length; i++) {
-                selectedTab = selectedTabs[i];
-                selectedTab.element.style.pointerEvents = "";
-                if (selectedTab === tab) {
-                    selectedTab.active = true;
-                }
-                tabBar.addTab(selectedTab, index++);
-                tabBar.addSelection(selectedTab);
-            }
-            if (tabBar !== hostTabBar) {
-                hostTabBar.removeSelections();
-                hostTabBar.activatePrevious(hostIndex);
-            }
-            tabBar.finishTabDragging();
-            isDragging = false;
-            hideSplitPosition();
-        };
-        function distance(dx, dy) {
-            return dx * dx + dy * dy;
-        }
-        var onMouseMove = function (e) {
-            var _a, _b;
-            if (e.type !== "mousemove")
-                return;
-            if (!isDragging) {
-                if (distance(e.clientX - startX, e.clientY - startY) < 25)
-                    return;
-                startDragging();
-            }
-            function removeTabFromBar() {
-                tabBar.finishTabDragging();
-                tabBar = undefined;
-            }
-            if (tabBar) {
-                tabBar.startTabDragging(tabElement, index);
-                if ((!isVertical && (e.clientX < parentRect.left || e.clientX > parentRect.left + parentRect.width))
-                    || (isVertical && (e.clientY < parentRect.top || e.clientY > parentRect.top + parentRect.height))) {
-                    removeTabFromBar();
-                }
-            }
-            else {
-                tabBar = lib_1.Utils.findHost(e.target, tabBarConstructor);
-                if (tabBar) {
-                    isVertical = tabBar.isVertical();
-                    var nextTabHost = lib_1.Utils.findHost(e.target, tabConstructor);
-                    if (nextTabHost) {
-                        index = tabBar.tabList.indexOf(nextTabHost);
-                        nextTab = nextTabHost.element;
-                        prevTab = nextTab.previousSibling;
-                    }
-                    else {
-                        index = tabBar.tabList.length;
-                        nextTab = null;
-                        prevTab = tabBar.tabContainer.childNodes[index - 1];
-                    }
-                    tabBar.startTabDragging(tabElement, index);
-                    parentRect = tabBar.element.getBoundingClientRect();
-                    calculateNearbyTabsData();
-                }
-            }
-            if (showSplit)
-                showSplitPosition(e);
-            var left = e.clientX - posX;
-            var top = e.clientY - posY;
-            var x = left;
-            var y = top;
-            if (tabBar) {
-                if ((isVertical && (x < parentRect.left - parentRect.width || x > parentRect.left + parentRect.width)) ||
-                    (!isVertical && (y < parentRect.top - parentRect.height || y > parentRect.top + parentRect.height))) {
-                    removeTabFromBar();
-                }
-                else {
-                    if (isVertical) {
-                        x = parentRect.left;
-                    }
-                    else {
-                        y = parentRect.top;
-                    }
-                    if ((isVertical && e.clientY < prevY && topMaxY && top < topMaxY) ||
-                        (!isVertical && e.clientX < prevX && leftMaxX && left < leftMaxX)) {
-                        if (isVertical) {
-                            prevTab.style.top = (parseInt(prevTab.style.top, 10) + tabDragElementSize) + "px";
-                        }
-                        else {
-                            prevTab.style.left = (parseInt(prevTab.style.left, 10) + tabDragElementSize) + "px";
-                        }
-                        index--;
-                        _a = [prevTab.previousSibling, prevTab], prevTab = _a[0], nextTab = _a[1];
-                        calculateNearbyTabsData();
-                    }
-                    else if ((isVertical && e.clientY > prevY && bottomMaxY && top + tabDragElementSize > bottomMaxY) ||
-                        (!isVertical && e.clientX > prevX && rightMaxX && left + tabDragElementSize > rightMaxX)) {
-                        if (isVertical) {
-                            nextTab.style.top = (parseInt(nextTab.style.top, 10) - tabDragElementSize) + "px";
-                        }
-                        else {
-                            nextTab.style.left = (parseInt(nextTab.style.left, 10) - tabDragElementSize) + "px";
-                        }
-                        index++;
-                        _b = [nextTab, nextTab.nextSibling], prevTab = _b[0], nextTab = _b[1];
-                        calculateNearbyTabsData();
-                    }
-                }
-            }
-            prevX = e.clientX;
-            prevY = e.clientY;
-            tabElement.style.left = x + "px";
-            tabElement.style.top = y + "px";
-        };
-        var onMouseUp = function (e) {
-            if (!isDragging) {
-                if (tabBar.selectedTabs.length > 1) {
-                    tabBar.removeSelections();
-                    tabBar.addSelection(tab);
-                }
-            }
-            else {
-                finishDragging();
-            }
-        };
-        event.capture(window, onMouseMove, onMouseUp);
-        return e.preventDefault();
-    };
-})(TabbarHandler = exports.TabbarHandler || (exports.TabbarHandler = {}));
-window.addEventListener("mousedown", function () {
-    document.body.classList.add("disableIframe");
-}, true);
-window.addEventListener("mouseup", function () {
-    document.body.classList.remove("disableIframe");
-}, true);
-
-
-/***/ }),
-
-/***/ 91444:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.dom = void 0;
-//Picked from ace-code 1.10
-var useragent = __webpack_require__(50618);
-var XHTML_NS = "http://www.w3.org/1999/xhtml";
-var dom;
-(function (dom) {
-    dom.buildDom = function (arr, parent, refs) {
-        if (typeof arr == "string" && arr) {
-            var txt = document.createTextNode(arr);
-            if (parent)
-                parent.appendChild(txt);
-            return txt;
-        }
-        if (!Array.isArray(arr)) {
-            if (arr && arr.appendChild && parent)
-                parent.appendChild(arr);
-            return arr;
-        }
-        if (typeof arr[0] != "string" || !arr[0]) {
-            var els = [];
-            for (var i = 0; i < arr.length; i++) {
-                var ch = dom.buildDom(arr[i], parent, refs);
-                ch && els.push(ch);
-            }
-            return els;
-        }
-        var el = document.createElement(arr[0]);
-        var options = arr[1];
-        var childIndex = 1;
-        if (options && typeof options == "object" && !Array.isArray(options))
-            childIndex = 2;
-        for (var i = childIndex; i < arr.length; i++)
-            dom.buildDom(arr[i], el, refs);
-        if (childIndex == 2) {
-            Object.keys(options).forEach(function (n) {
-                var val = options[n];
-                if (n === "class") {
-                    el.className = Array.isArray(val) ? val.join(" ") : val;
-                }
-                else if (typeof val == "function" || n == "value" || n[0] == "$") {
-                    el[n] = val;
-                }
-                else if (n === "ref") {
-                    if (refs)
-                        refs[val] = el;
-                }
-                else if (n === "style") {
-                    if (typeof val == "string")
-                        el.style.cssText = val;
-                }
-                else if (val != null) {
-                    el.setAttribute(n, val);
-                }
-            });
-        }
-        if (parent)
-            parent.appendChild(el);
-        return el;
-    };
-    dom.getDocumentHead = function (doc) {
-        if (!doc)
-            doc = document;
-        return doc.head || doc.getElementsByTagName("head")[0] || doc.documentElement;
-    };
-    dom.createElement = function (tag, ns) {
-        return document.createElementNS ?
-            document.createElementNS(ns || XHTML_NS, tag) :
-            document.createElement(tag);
-    };
-    dom.removeChildren = function (element) {
-        element.innerHTML = "";
-    };
-    dom.createTextNode = function (textContent, element) {
-        var doc = element ? element.ownerDocument : document;
-        return doc.createTextNode(textContent);
-    };
-    dom.createFragment = function (element) {
-        var doc = element ? element.ownerDocument : document;
-        return doc.createDocumentFragment();
-    };
-    dom.hasCssClass = function (el, name) {
-        var classes = (el.className + "").split(/\s+/g);
-        return classes.indexOf(name) !== -1;
-    };
-    /*
-    * Add a CSS class to the list of classes on the given node
-    */
-    dom.addCssClass = function (el, name) {
-        if (!dom.hasCssClass(el, name)) {
-            el.className += " " + name;
-        }
-    };
-    /*
-    * Remove a CSS class from the list of classes on the given node
-    */
-    dom.removeCssClass = function (el, name) {
-        var classes = el.className.split(/\s+/g);
-        while (true) {
-            var index = classes.indexOf(name);
-            if (index == -1) {
-                break;
-            }
-            classes.splice(index, 1);
-        }
-        el.className = classes.join(" ");
-    };
-    dom.toggleCssClass = function (el, name) {
-        var classes = el.className.split(/\s+/g), add = true;
-        while (true) {
-            var index = classes.indexOf(name);
-            if (index == -1) {
-                break;
-            }
-            add = false;
-            classes.splice(index, 1);
-        }
-        if (add)
-            classes.push(name);
-        el.className = classes.join(" ");
-        return add;
-    };
-    /*
-        * Add or remove a CSS class from the list of classes on the given node
-        * depending on the value of <tt>include</tt>
-        */
-    dom.setCssClass = function (node, className, include) {
-        if (include) {
-            dom.addCssClass(node, className);
-        }
-        else {
-            dom.removeCssClass(node, className);
-        }
-    };
-    dom.hasCssString = function (id, doc) {
-        var index = 0, sheets;
-        doc = doc || document;
-        if ((sheets = doc.querySelectorAll("style"))) {
-            while (index < sheets.length) {
-                if (sheets[index++].id === id) {
-                    return true;
-                }
-            }
-        }
-    };
-    dom.removeElementById = function (id, doc) {
-        doc = doc || document;
-        if (doc.getElementById(id)) {
-            doc.getElementById(id).remove();
-        }
-    };
-    var strictCSP;
-    var cssCache = [];
-    dom.useStrictCSP = function (value) {
-        strictCSP = value;
-        if (value == false)
-            insertPendingStyles();
-        else if (!cssCache)
-            cssCache = [];
-    };
-    function insertPendingStyles() {
-        var cache = cssCache;
-        cssCache = null;
-        cache && cache.forEach(function (item) {
-            importCssString(item[0], item[1]);
-        });
-    }
-    function importCssString(cssText, id, target) {
-        if (typeof document == "undefined")
-            return;
-        if (cssCache) {
-            if (target) {
-                insertPendingStyles();
-            }
-            else if (target === false) {
-                return cssCache.push([cssText, id]);
-            }
-        }
-        if (strictCSP)
-            return;
-        var container = target;
-        if (!target || !target.getRootNode) {
-            container = document;
-        }
-        else {
-            container = target.getRootNode();
-            if (!container || container == target)
-                container = document;
-        }
-        var doc = container.ownerDocument || container;
-        // If style is already imported return immediately.
-        if (id && dom.hasCssString(id, container))
-            return null;
-        if (id)
-            cssText += "\n/*# sourceURL=ace/css/" + id + " */";
-        var style = dom.createElement("style");
-        style.appendChild(doc.createTextNode(cssText));
-        if (id)
-            style.id = id;
-        if (container == doc)
-            container = dom.getDocumentHead(doc);
-        container.insertBefore(style, container.firstChild);
-    }
-    dom.importCssString = importCssString;
-    dom.importCssStylsheet = function (uri, doc) {
-        dom.buildDom(["link", { rel: "stylesheet", href: uri }], dom.getDocumentHead(doc));
-    };
-    dom.scrollbarWidth = function (document) {
-        var inner = dom.createElement("ace_inner");
-        inner.style.width = "100%";
-        inner.style.minWidth = "0px";
-        inner.style.height = "200px";
-        inner.style.display = "block";
-        var outer = dom.createElement("ace_outer");
-        var style = outer.style;
-        style.position = "absolute";
-        style.left = "-10000px";
-        style.overflow = "hidden";
-        style.width = "200px";
-        style.minWidth = "0px";
-        style.height = "150px";
-        style.display = "block";
-        outer.appendChild(inner);
-        var body = document.documentElement;
-        body.appendChild(outer);
-        var noScrollbar = inner.offsetWidth;
-        style.overflow = "scroll";
-        var withScrollbar = inner.offsetWidth;
-        if (noScrollbar == withScrollbar) {
-            withScrollbar = outer.clientWidth;
-        }
-        body.removeChild(outer);
-        return noScrollbar - withScrollbar;
-    };
-    dom.computedStyle = function (element, style) {
-        return window.getComputedStyle(element, "") || {};
-    };
-    dom.setStyle = function (styles, property, value) {
-        if (styles[property] !== value) {
-            //console.log("set style", property, styles[property], value);
-            styles[property] = value;
-        }
-    };
-    dom.HAS_CSS_ANIMATION = false;
-    dom.HAS_CSS_TRANSFORMS = false;
-    dom.HI_DPI = useragent.isWin
-        ? typeof window !== "undefined" && window.devicePixelRatio >= 1.5
-        : true;
-    if (useragent.isChromeOS)
-        dom.HI_DPI = false;
-    if (typeof document !== "undefined") {
-        // detect CSS transformation support
-        var div = document.createElement("div");
-        if (dom.HI_DPI && div.style.transform !== undefined)
-            dom.HAS_CSS_TRANSFORMS = true;
-        if (!useragent.isEdge && typeof div.style.animationName !== "undefined")
-            dom.HAS_CSS_ANIMATION = true;
-        div = null;
-    }
-    if (dom.HAS_CSS_TRANSFORMS) {
-        dom.translate = function (element, tx, ty) {
-            element.style.transform = "translate(" + Math.round(tx) + "px, " + Math.round(ty) + "px)";
-        };
-    }
-    else {
-        dom.translate = function (element, tx, ty) {
-            element.style.top = Math.round(ty) + "px";
-            element.style.left = Math.round(tx) + "px";
-        };
-    }
-})(dom = exports.dom || (exports.dom = {}));
-
-
-/***/ }),
-
-/***/ 80930:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Utils = void 0;
-var Utils;
-(function (Utils) {
-    Utils.findHost = function (el, constructor) {
-        while (el) {
-            if (el.$host && (!constructor || el.$host.constructor === constructor))
-                return el.$host;
-            el = el.parentElement;
-        }
-    };
-    Utils.findNode = function (node, className) {
-        while (node && node.classList) {
-            if (node.classList.contains(className))
-                return node;
-            node = node.parentNode;
-        }
-        return null;
-    };
-    Utils.findHostTarget = function (target) {
-        while (target) {
-            if (target.$host)
-                return target;
-            target = target.parentElement;
-        }
-        return null;
-    };
-    Utils.setBox = function (el, x, y, w, h) {
-        if (w) {
-            w = Math.max(w, 0);
-        }
-        if (h) {
-            h = Math.max(h, 0);
-        }
-        var s = el.style;
-        s.left = x + "px";
-        s.top = y + "px";
-        s.width = w + "px";
-        s.height = h + "px";
-    };
-    function getEdge(style, dir) {
-        return parseInt(style["padding" + dir], 10) +
-            parseInt(style["margin" + dir], 10) +
-            parseInt(style["border" + dir], 10);
-    }
-    Utils.getEdge = getEdge;
-    function getElementEdges(element) {
-        var style = getComputedStyle(element);
-        return {
-            "top": getEdge(style, "Top"),
-            "bottom": getEdge(style, "Bottom"),
-            "left": getEdge(style, "Left"),
-            "right": getEdge(style, "Right")
-        };
-    }
-    Utils.getElementEdges = getElementEdges;
-})(Utils = exports.Utils || (exports.Utils = {}));
-
-
-/***/ }),
-
-/***/ 60524:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.EditorType = exports.SizeUnit = void 0;
-var SizeUnit;
-(function (SizeUnit) {
-    SizeUnit[SizeUnit["px"] = 0] = "px";
-    SizeUnit[SizeUnit["percent"] = 1] = "percent";
-})(SizeUnit = exports.SizeUnit || (exports.SizeUnit = {}));
-var EditorType;
-(function (EditorType) {
-    EditorType["ace"] = "ace";
-    EditorType["preview"] = "preview";
-})(EditorType = exports.EditorType || (exports.EditorType = {}));
-
-
-/***/ }),
-
-/***/ 29930:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Accordion = void 0;
-var accordion_handler_1 = __webpack_require__(18108);
-var box_1 = __webpack_require__(95561);
-var lib_1 = __webpack_require__(80930);
-var dom_1 = __webpack_require__(91444);
-var accordionCSS = __webpack_require__(9734);
-dom_1.dom.importCssString(accordionCSS, "accordion.css");
-var BOX_MIN_SIZE = 80;
-var Accordion = /** @class */ (function (_super) {
-    __extends(Accordion, _super);
-    function Accordion(options) {
-        var _this = this;
-        var _a;
-        _this = _super.call(this, options) || this;
-        _this.toggleBarList = [];
-        _this.splitterList = [];
-        _this.toggleBlockList = [];
-        _this.boxMinSize = 30;
-        _this.toggleBarHeight = 20;
-        _this.splitterSize = 1;
-        _this.vertical = options.vertical || false;
-        _this.color = (_a = options.color) !== null && _a !== void 0 ? _a : "";
-        _this.sections = options.sections;
-        _this.minSize = options.minSize || BOX_MIN_SIZE;
-        _this.minVerticalSize = options.minVerticalSize || _this.minSize;
-        _this.minHorizontalSize = options.minHorizontalSize || _this.minSize;
-        _this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
-        _this.size = options.size;
-        return _this;
-    }
-    Accordion.prototype.hasNextOpenedBlocks = function (index) {
-        for (var i = index; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i))
-                return true;
-        }
-        return false;
-    };
-    Accordion.prototype.hasPrevOpenedBlocks = function (index) {
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i))
-                return true;
-        }
-        return false;
-    };
-    Accordion.prototype.isOpenedByIndex = function (index) {
-        return this.isOpenedBlock(this.toggleBlockList[index]);
-    };
-    Accordion.prototype.isOpenedBlock = function (toggleBlock) {
-        return toggleBlock.classList.contains("toggle-opened");
-    };
-    Accordion.prototype.keepState = function () {
-        this.nextChangedIndexes = [];
-        this.prevChangedIndexes = [];
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
-                var section = this.sections[i];
-                section.previousSize = section.currentSize;
-            }
-        }
-    };
-    Accordion.prototype.dischargeState = function () {
-        this.nextChangedIndexes = undefined;
-        this.prevChangedIndexes = undefined;
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i))
-                this.sections[i].previousSize = undefined;
-        }
-    };
-    Accordion.prototype.recalculatePreviousSectionsSize = function (index, top, maxChangeSize) {
-        var changedSize = 0;
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i)) {
-                var section = this.sections[i];
-                var rect = section.box.element.getBoundingClientRect();
-                var done = false;
-                var prevSize = rect.height;
-                var currentSize = Math.max(top - rect.top, this.boxMinSize);
-                top -= rect.height;
-                if (currentSize < prevSize) {
-                    if (currentSize > this.boxMinSize)
-                        done = true;
-                    if (!this.prevChangedIndexes.includes(i))
-                        this.prevChangedIndexes.unshift(i);
-                    section.currentSize = currentSize;
-                    changedSize += (prevSize - currentSize);
-                    if (done || (maxChangeSize != undefined && changedSize >= maxChangeSize))
-                        break;
-                }
-            }
-            top -= this.toggleBarHeight;
-        }
-        return changedSize;
-    };
-    Accordion.prototype.recalculateNextSectionsSize = function (index, top, maxChangeSize) {
-        var changedSize = 0;
-        for (var i = index; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
-                var section = this.sections[i];
-                var rect = section.box.element.getBoundingClientRect();
-                var done = false;
-                var prevSize = rect.height;
-                var currentSize = Math.max(rect.bottom - top - this.toggleBarHeight, this.boxMinSize);
-                top += rect.height;
-                if (currentSize < prevSize) {
-                    if (currentSize > this.boxMinSize)
-                        done = true;
-                    if (!this.nextChangedIndexes.includes(i))
-                        this.nextChangedIndexes.unshift(i);
-                    section.currentSize = currentSize;
-                    changedSize += (prevSize - currentSize);
-                    if (done || (maxChangeSize != undefined && changedSize >= maxChangeSize))
-                        break;
-                }
-            }
-            top += this.toggleBarHeight;
-            top += this.splitterSize;
-        }
-        return changedSize;
-    };
-    Accordion.prototype.restoreChangedSizes = function (size, changedIndexes) {
-        if (!changedIndexes)
-            return size;
-        while (changedIndexes.length && size > 0) {
-            var index = changedIndexes[0];
-            var section = this.sections[index];
-            var currSize = section.currentSize;
-            section.currentSize = Math.min(section.previousSize, currSize + size);
-            size -= (section.currentSize - currSize);
-            if (section.currentSize >= section.previousSize)
-                changedIndexes.shift();
-        }
-        return size;
-    };
-    Accordion.prototype.expandPreviousSections = function (index, size) {
-        size = this.restoreChangedSizes(size, this.prevChangedIndexes);
-        if (size <= 0)
-            return;
-        var openedSectionsList = [];
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i))
-                openedSectionsList.push(this.sections[i]);
-        }
-        this.applySizeToOpenedSections(size, openedSectionsList);
-    };
-    Accordion.prototype.expandNextSections = function (index, size) {
-        size = this.restoreChangedSizes(size, this.nextChangedIndexes);
-        if (size <= 0)
-            return;
-        var openedSectionsList = [];
-        for (var i = index; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
-                openedSectionsList.push(this.sections[i]);
-            }
-        }
-        this.applySizeToOpenedSections(size, openedSectionsList);
-    };
-    Accordion.prototype.applySizeToOpenedSections = function (size, openedSections) {
-        var count = openedSections.length;
-        if (!count)
-            return;
-        var remainder = size % count;
-        var addSize = (size - remainder) / count;
-        for (var i = 0; i < count; i++) {
-            openedSections[i].currentSize += addSize;
-        }
-        openedSections[0].currentSize += remainder;
-    };
-    Accordion.prototype.resize = function () {
-        this.$updateChildSize.apply(this, this.rect);
-    };
-    Accordion.prototype.render = function () {
-        var _a, _b;
-        if (this.element)
-            return this.element;
-        this.element = dom_1.dom.buildDom(["div", {
-                class: "box accordion",
-                $host: this,
-            }]);
-        var section;
-        var splitter;
-        var toggleBlock;
-        var toggleBar;
-        for (var i = 0; i < this.sections.length; i++) {
-            section = this.sections[i];
-            if (i > 0) {
-                splitter = dom_1.dom.buildDom(["div", {
-                        class: "splitter accordion-splitter splitter".concat(this.vertical ? "-v" : "-h"),
-                        $index: i - 1,
-                        $parent: this,
-                        onmousedown: function (e) {
-                            accordion_handler_1.AccordionHandler.splitterMouseDown(e);
-                        }
-                    }, ["div"]]);
-                this.element.appendChild(splitter);
-                this.splitterList.push(splitter);
-            }
-            toggleBlock = dom_1.dom.buildDom(["div", {
-                    class: "toggle-block",
-                    $index: i,
-                    $parent: this
-                }]);
-            toggleBar = dom_1.dom.buildDom(["div", {
-                    class: "toggle-bar toggle-bar".concat(this.vertical ? "-v" : "-h"),
-                    onmousedown: function (e) {
-                        accordion_handler_1.AccordionHandler.toggleBarMouseDown(e, Accordion);
-                    },
-                    onclick: function (e) {
-                        accordion_handler_1.AccordionHandler.toggleBarOnClick(e);
-                    }
-                }, ["div", { class: "title" }, section.title]]);
-            section.currentSize = section.savedSize = parseInt((_b = (_a = section.box.size) === null || _a === void 0 ? void 0 : _a.toString()) !== null && _b !== void 0 ? _b : "", 10);
-            toggleBlock.appendChild(toggleBar);
-            this.toggleBarList.push(toggleBar);
-            toggleBlock.appendChild(section.box.render());
-            this.element.appendChild(toggleBlock);
-            this.toggleBlockList.push(toggleBlock);
-        }
-        this.element.style.backgroundColor = this.color;
-        this.element.style.position = "absolute";
-        this.calculateSectionsSizesPercents();
-        return this.element;
-    };
-    Accordion.prototype.calculateSectionsSizesPercents = function () {
-        var totalSize = 0;
-        var actualSizes = [];
-        for (var i = 0; i < this.sections.length; i++) {
-            var section = this.sections[i];
-            actualSizes.push(this.isOpenedByIndex(i) ? section.currentSize : section.savedSize);
-            totalSize += actualSizes[i];
-        }
-        var minPercent = Math.floor(this.boxMinSize / totalSize * 100);
-        var maxPercent = 100 - minPercent * (this.sections.length - 1);
-        var totalPercent = 0;
-        for (var i = 0; i < this.sections.length; i++) {
-            var section = this.sections[i];
-            section.sizePercent = Math.floor(actualSizes[i] / totalSize * 100);
-            section.sizePercent = Math.min(Math.max(section.sizePercent, minPercent), maxPercent);
-            totalPercent += section.sizePercent;
-        }
-        if (totalPercent !== 100)
-            this.sections[this.sections.length - 1].sizePercent += (100 - totalPercent);
-    };
-    Accordion.prototype.setBox = function (x, y, w, h) {
-        this.rect = [x, y, w, h];
-        lib_1.Utils.setBox(this.element, x, y, w, h);
-        this.recalculateChildrenSizes();
-        this.$updateChildSize(x, y, w, h);
-    };
-    Accordion.prototype.recalculateChildrenSizes = function (index) {
-        var height = this.rect[3];
-        height -= this.toggleBarHeight * this.toggleBarList.length;
-        height -= this.splitterSize * this.splitterList.length;
-        var totalSize = 0;
-        var openedIndexes = [];
-        for (var i = 0; i < this.sections.length; i++) {
-            var section = this.sections[i];
-            section.currentSize = Math.max(Math.floor((height * section.sizePercent) / 100), this.boxMinSize);
-            if (this.isOpenedByIndex(i)) {
-                totalSize += section.currentSize;
-                openedIndexes.push(i);
-            }
-            else {
-                section.savedSize = section.currentSize;
-                section.currentSize = 0;
-            }
-        }
-        var spareSize = height - totalSize;
-        if (!spareSize)
-            return;
-        if (index !== undefined) {
-            var prevOpenedIndexes = [];
-            while (openedIndexes.length && openedIndexes[0] < index) {
-                prevOpenedIndexes.push(openedIndexes.shift());
-            }
-            if (!openedIndexes.length)
-                openedIndexes = prevOpenedIndexes;
-        }
-        var prevSize, changedSize, openedBoxesCount, remainder, addSize;
-        while (openedIndexes.length && spareSize) {
-            var changedIndexes = [];
-            openedBoxesCount = openedIndexes.length;
-            remainder = spareSize % openedBoxesCount;
-            addSize = (spareSize - remainder) / openedBoxesCount;
-            for (var i = 0; i < openedIndexes.length; i++) {
-                var section = this.sections[openedIndexes[i]];
-                prevSize = section.currentSize;
-                if (openedBoxesCount === 1)
-                    addSize += remainder;
-                section.currentSize += addSize;
-                section.currentSize = Math.max(section.currentSize, this.boxMinSize);
-                changedSize = section.currentSize - prevSize;
-                spareSize -= changedSize;
-                openedBoxesCount--;
-                if (changedSize < 0)
-                    changedIndexes.push(openedIndexes[i]);
-            }
-            openedIndexes = changedIndexes;
-        }
-    };
-    Accordion.prototype.$updateChildSize = function (x, y, w, h) {
-        x = 0;
-        y = 0;
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            var toggleBlock = this.toggleBlockList[i];
-            var section = this.sections[i];
-            var boxSize = section.currentSize;
-            h = this.toggleBarHeight + boxSize;
-            lib_1.Utils.setBox(toggleBlock, x, y, w, h);
-            y += this.toggleBarHeight;
-            section.box.setBox(0, this.toggleBarHeight, w, boxSize);
-            y += boxSize;
-            if (this.splitterList[i]) {
-                lib_1.Utils.setBox(this.splitterList[i], x, y, w, this.splitterSize);
-                y += this.splitterSize;
-            }
-        }
-    };
-    Accordion.prototype.remove = function () {
-        if (this.element)
-            this.element.remove();
-        if (this.parent) {
-            if (this.vertical === this.parent.vertical)
-                this.parent.minSize -= this.minSize; //TODO why did we need this?
-            if (this.parent[0] == this)
-                this.parent[0] = undefined;
-            if (this.parent[1] == this)
-                this.parent[1] = undefined;
-        }
-    };
-    Accordion.prototype.toJSON = function () {
-        var sections = [];
-        var section;
-        for (var i = 0; i < this.sections.length; i++) {
-            section = this.sections[i];
-            sections.push({
-                title: section.title,
-                boxData: section.box.toJSON()
-            });
-        }
-        return {
-            type: "accordion",
-            vertical: this.vertical,
-            size: this.size,
-            sections: sections
-        };
-    };
-    return Accordion;
-}(box_1.Box));
-exports.Accordion = Accordion;
-
-
-/***/ }),
-
-/***/ 95561:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Box = void 0;
-var lib_1 = __webpack_require__(80930);
-var params_1 = __webpack_require__(60524);
-var event = __webpack_require__(17989);
-var events = __webpack_require__(17187);
-var dom_1 = __webpack_require__(91444);
-var SPLITTER_SIZE = 1;
-var BOX_MIN_SIZE = 40;
-var Box = /** @class */ (function (_super) {
-    __extends(Box, _super);
-    function Box(options) {
-        var _this = this;
-        var _a, _b, _c, _d;
-        _this = _super.call(this) || this;
-        _this.$editorAdded = function (editor) {
-            _this.emit("editorAdded", editor);
-        };
-        if (options.splitter !== false) {
-        }
-        _this.vertical = options.vertical || false;
-        _this.color = (_a = options.color) !== null && _a !== void 0 ? _a : "";
-        _this.isMain = options.isMain || false;
-        _this[0] = options[0];
-        _this[1] = options[1];
-        if (_this[0])
-            _this[0].parent = _this;
-        if (_this[1])
-            _this[1].parent = _this;
-        _this.ratio = options.ratio;
-        _this.toolBars = options.toolBars || {};
-        _this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
-        _this.size = options.size;
-        _this.sizeUnit = (_b = options.sizeUnit) !== null && _b !== void 0 ? _b : params_1.SizeUnit.px;
-        _this.minSize = options.minSize || BOX_MIN_SIZE;
-        _this.minVerticalSize = options.minVerticalSize || _this.minSize;
-        _this.minHorizontalSize = options.minHorizontalSize || _this.minSize;
-        _this.classNames = (_c = options.classNames) !== null && _c !== void 0 ? _c : "";
-        _this.hidden = (_d = options.hidden) !== null && _d !== void 0 ? _d : false;
-        _this.fixedSize = options.fixedSize;
-        return _this;
-    }
-    Box.enableAnimation = function () {
-        document.documentElement.classList.add("animateBoxes");
-    };
-    Box.disableAnimation = function () {
-        document.documentElement.classList.remove("animateBoxes");
-    };
-    Box.setGlobalCursor = function (value) {
-        if (value)
-            document.documentElement.classList.add("inheritCursor");
-        else
-            document.documentElement.classList.remove("inheritCursor");
-        document.documentElement.style.cursor = value;
-    };
-    Box.prototype.toJSON = function () {
-        return {
-            0: this[0] && this[0].toJSON(),
-            1: this[1] && this[1].toJSON(),
-            ratio: this.ratio,
-            type: this.vertical ? "vbox" : "hbox",
-            fixedSize: this.fixedSize || null,
-            hidden: this.hidden,
-            color: this.color,
-            size: this.size
-        };
-    };
-    Box.prototype.onMouseDown = function (e) {
-        var button = e.button;
-        if (button !== 0)
-            return;
-        var box = this;
-        var rect = this.element.getBoundingClientRect();
-        var x = e.clientX;
-        var y = e.clientY;
-        document.body.classList.add('dragging');
-        var onMouseMove = function (e) {
-            x = e.clientX - rect.left - box.padding.left;
-            y = e.clientY - rect.top - box.padding.top;
-            var height = rect.height - box.padding.top - box.padding.bottom;
-            var width = rect.width - box.padding.left - box.padding.right;
-            if (box.fixedChild) {
-                if (box.vertical) {
-                    box.fixedChild.fixedSize = (box.fixedChild === box[1]) ? height - y : y;
-                }
-                else {
-                    box.fixedChild.fixedSize = (box.fixedChild === box[1]) ? width - x : x;
-                }
-                box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize, box.fixedChild.minSize);
-                box.ratio = undefined;
-            }
-            else {
-                if (box.vertical) {
-                    box.ratio = y / height;
-                }
-                else {
-                    box.ratio = x / width;
-                }
-                box.ratio = Math.max(box.minRatio, Math.min(box.ratio, box.maxRatio));
-            }
-            box.resize();
-        };
-        var onResizeEnd = function (e) {
-            Box.setGlobalCursor("");
-            document.body.classList.remove('dragging');
-        };
-        Box.setGlobalCursor("".concat(box.vertical ? "ns" : "ew", "-resize"));
-        event.capture(window, onMouseMove, onResizeEnd);
-        return e.preventDefault();
-    };
-    Box.prototype.resize = function () {
-        if (!this.box)
-            return;
-        this.setBox.apply(this, this.box);
-    };
-    Box.prototype.calculateMinMaxRatio = function () {
-        if (!this.box || (!this[0] && !this[1]))
-            return;
-        var propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
-        var size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
-        this.minRatio = this[0] ? this[0][propertyName] / size : 0;
-        this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
-    };
-    Box.prototype.render = function () {
-        if (this.element)
-            return this.element;
-        this.element = dom_1.dom.buildDom(["div", {
-                class: "box" + this.classNames,
-                $host: this,
-            }]);
-        this.splitter = dom_1.dom.buildDom(["div", {
-                class: "splitter splitter".concat(this.vertical ? "-v" : "-h")
-            }, ["div"]]);
-        this.splitter.onmousedown = this.onMouseDown.bind(this);
-        this.element.appendChild(this.splitter);
-        this.element.$host = this;
-        this.element.style.backgroundColor = this.color;
-        this.element.style.position = "absolute";
-        this.renderToolBarList();
-        this.renderChildren();
-        if (!this.ratio)
-            this.calculateRatio();
-        return this.element;
-    };
-    Box.prototype.renderToolBarList = function () {
-        for (var position in this.toolBars) {
-            this.addToolBar(position, this.toolBars[position]);
-        }
-    };
-    Box.prototype.addToolBar = function (position, bar) {
-        var _a, _b;
-        if (position == "left" || position == "right")
-            bar.direction = "vertical";
-        (_b = (_a = this.toolBars[position]) === null || _a === void 0 ? void 0 : _a.element) === null || _b === void 0 ? void 0 : _b.remove();
-        bar.position = position;
-        this.padding[position] = bar.size;
-        this.element.appendChild(bar.render());
-        this.toolBars[position] = bar;
-    };
-    Box.prototype.removeToolBar = function (position) {
-        delete this.toolBars[position];
-        this.padding[position] = 0;
-    };
-    Box.prototype.renderChildren = function () {
-        this.renderChild(this[0]);
-        this.renderChild(this[1]);
-        this.calculateMinSize();
-    };
-    Box.prototype.renderChild = function (child) {
-        if (!child)
-            return;
-        child.on("editorAdded", this.$editorAdded);
-        this.element.appendChild(child.render());
-    };
-    Box.prototype.calculateMinSize = function (forceChildrenSize) {
-        var _this = this;
-        if (forceChildrenSize === void 0) { forceChildrenSize = false; }
-        var childrenMinVerticalSize = 0;
-        var childrenMinHorizontalSize = 0;
-        var calculateChildBoxMinSize = function (childBox) {
-            if (_this.vertical) {
-                childrenMinVerticalSize += childBox.minVerticalSize;
-                childrenMinHorizontalSize = Math.max(childBox.minHorizontalSize, childrenMinHorizontalSize);
-            }
-            else {
-                childrenMinVerticalSize = Math.max(childBox.minVerticalSize, childrenMinVerticalSize);
-                childrenMinHorizontalSize += childBox.minHorizontalSize;
-            }
-        };
-        if (this[0])
-            calculateChildBoxMinSize(this[0]);
-        if (this[1])
-            calculateChildBoxMinSize(this[1]);
-        if (forceChildrenSize) {
-            this.minVerticalSize = childrenMinVerticalSize;
-            this.minHorizontalSize = childrenMinHorizontalSize;
-        }
-        else {
-            this.minVerticalSize = Math.max(this.minVerticalSize, childrenMinVerticalSize);
-            this.minHorizontalSize = Math.max(this.minHorizontalSize, childrenMinHorizontalSize);
-        }
-        this.minSize = this.vertical ? this.minVerticalSize : this.minHorizontalSize;
-        this.calculateMinMaxRatio();
-    };
-    Box.prototype.calculateRatio = function () {
-        if (this[0]) {
-            this.calculateChildRatio(this[0]);
-        }
-        if (this.ratio || this.fixedChild) {
-            return;
-        }
-        if (this[1]) {
-            this.calculateChildRatio(this[1]);
-        }
-        if (!this.ratio && !this.fixedChild) {
-            this.ratio = 0.5;
-        }
-    };
-    Box.prototype.calculateChildRatio = function (childBox, isSecond) {
-        if (isSecond === void 0) { isSecond = false; }
-        if (!childBox.size) {
-            return;
-        }
-        var size = childBox.size;
-        switch (this.sizeUnit) {
-            case params_1.SizeUnit.px:
-                childBox.fixedSize = size;
-                this.fixedChild = childBox;
-                break;
-            case params_1.SizeUnit.percent:
-                if (isSecond) {
-                    size = 100 - size;
-                }
-                this.ratio = Math.min(size / 100, 1);
-                break;
-        }
-    };
-    Box.prototype.renderButtons = function (buttonList) {
-        var buttons = buttonList.map(function (button) {
-            return dom_1.dom.buildDom(["div", {
-                    class: "button " + button.class,
-                    title: button.title,
-                    onclick: button.onclick
-                }, button.content]);
-        });
-        this.setButtons(buttons);
-    };
-    /**
-     * Sets buttons of this box top-right tabBar
-     */
-    Box.prototype.setButtons = function (buttons) {
-        if (this.topRightPane)
-            this.topRightPane.removeButtons();
-        this.topRightPane = this.getTopRightPane();
-        if (this.topRightPane)
-            this.topRightPane.setButtons(buttons);
-    };
-    Box.prototype.addButton = function (button) {
-        this.topRightPane = this.getTopRightPane();
-        if (this.topRightPane)
-            this.topRightPane.addButton(button);
-    };
-    /**
-     * Finds the most top-right Pane
-     */
-    Box.prototype.getTopRightPane = function () {
-        var childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
-        if (!childBox)
-            return;
-        return childBox.getTopRightPane();
-    };
-    Box.prototype.setBox = function (x, y, w, h) {
-        this.box = [x, y, w, h];
-        if (this.isMaximized) {
-            x = 0;
-            y = 0;
-            w = window.innerWidth;
-            h = window.innerHeight;
-        }
-        lib_1.Utils.setBox(this.element, x, y, w, h);
-        this.calculateMinMaxRatio();
-        this.$updateChildSize(x, y, w, h);
-    };
-    Box.prototype.$updateChildSize = function (x, y, w, h) {
-        var _a;
-        var splitterSize = SPLITTER_SIZE;
-        if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
-            this.splitter.style.display = "none";
-            splitterSize = 0;
-        }
-        else {
-            this.splitter.style.display = "";
-        }
-        this.updateToolBarSize(w, h);
-        w -= this.padding.left + this.padding.right;
-        h -= this.padding.top + this.padding.bottom;
-        x = this.padding.left;
-        y = this.padding.top;
-        if (this.fixedChild) {
-            var size = this.fixedChild.fixedSize;
-            if (this.fixedChild === this[1]) {
-                size = this.vertical ? h - size : w - size;
-            }
-            this.ratio = this.vertical ? size / h : size / w;
-        }
-        this.ratio = Math.max(this.minRatio, Math.min((_a = this.ratio) !== null && _a !== void 0 ? _a : this.maxRatio, this.maxRatio));
-        var ratio = this.ratio;
-        if (!this[0] || this[0].hidden) {
-            ratio = 0;
-        }
-        else if (!this[1] || this[1].hidden) {
-            ratio = 1;
-        }
-        if (this.vertical) {
-            var splitY = h * ratio - splitterSize;
-            if (this.splitter)
-                lib_1.Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
-            if (this[0])
-                this[0].setBox(x, y, w, splitY);
-            //TODO: here was 5th param
-            if (this[1])
-                this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
-        }
-        else {
-            var splitX = w * ratio - splitterSize;
-            if (this.splitter)
-                lib_1.Utils.setBox(this.splitter, x + splitX, y, splitterSize, h);
-            if (this[0])
-                this[0].setBox(x, y, splitX, h);
-            if (this[1])
-                this[1].setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
-        }
-    };
-    Box.prototype.updateToolBarSize = function (width, height) {
-        var bar, x, y, w, h;
-        for (var type in this.toolBars) {
-            x = 0;
-            y = 0;
-            w = width;
-            h = height;
-            bar = this.toolBars[type];
-            switch (type) {
-                case "top":
-                case "bottom":
-                    h = bar.size;
-                    if (type === "bottom")
-                        y = height - bar.size;
-                    break;
-                case "left":
-                case "right":
-                    w = bar.size;
-                    y = this.padding.top;
-                    h -= (this.padding.top + this.padding.bottom);
-                    if (type === "right")
-                        x = width - bar.size;
-                    break;
-                default:
-                    continue;
-            }
-            bar.setBox(x, y, w, h);
-        }
-    };
-    Box.prototype.restore = function (disableAnimation) {
-        var _this = this;
-        if (disableAnimation === void 0) { disableAnimation = false; }
-        var node = this.element;
-        function rmClass(ch, cls) {
-            for (var i = 0; i < ch.length; i++) {
-                if (ch[i].classList)
-                    ch[i].classList.remove(cls);
-            }
-        }
-        var finishRestore = function () {
-            classes.forEach(function (className) {
-                rmClass(document.querySelectorAll("." + className), className);
-            });
-            _this.setBox.apply(_this, _this.box);
-        };
-        var classes = [
-            "fullScreenSibling", "fullScreenNode", "fullScreenParent"
-        ];
-        this.isMaximized = false;
-        if (disableAnimation) {
-            finishRestore();
-        }
-        else {
-            Box.enableAnimation();
-            node.addEventListener('transitionend', function handler(l) {
-                Box.disableAnimation();
-                node.removeEventListener('transitionend', handler);
-                finishRestore();
-            });
-        }
-        var parentRect = node.parentNode.getBoundingClientRect();
-        var top = parentRect.top + this.box[1];
-        var left = parentRect.left + this.box[0];
-        lib_1.Utils.setBox(node, left, top, this.box[2], this.box[3]);
-    };
-    Box.prototype.maximize = function (disableAnimation) {
-        if (disableAnimation === void 0) { disableAnimation = false; }
-        var node = this.element;
-        function addClasses() {
-            node.classList.add("fullScreenNode");
-            var parent = node.parentNode;
-            while (parent && parent !== document.body) {
-                if (parent.classList)
-                    parent.classList.add("fullScreenParent");
-                var childNodes = parent.childNodes;
-                for (var i = 0; i < childNodes.length; i++) {
-                    var childNode = childNodes[i];
-                    if (childNode != node && childNode.classList && !childNode.classList.contains("fullScreenParent"))
-                        childNode.classList.add("fullScreenSibling");
-                }
-                parent = parent.parentNode;
-            }
-        }
-        var rect = node.getBoundingClientRect();
-        lib_1.Utils.setBox(node, rect.left, rect.top, rect.width, rect.height);
-        addClasses();
-        this.isMaximized = true;
-        node.getBoundingClientRect();
-        if (!disableAnimation) {
-            Box.enableAnimation();
-            node.addEventListener('transitionend', function handler() {
-                node.removeEventListener('transitionend', handler);
-                Box.disableAnimation();
-            });
-        }
-        this.setBox.apply(this, this.box);
-    };
-    Box.prototype.toggleMaximize = function () {
-        if (this.isMaximized)
-            this.restore();
-        else
-            this.maximize();
-    };
-    Box.prototype.remove = function () {
-        this.removeAllChildren();
-        if (this.element)
-            this.element.remove();
-        if (this.parent) {
-            if (this.parent[0] == this)
-                this.parent[0] = undefined;
-            if (this.parent[1] == this)
-                this.parent[1] = undefined;
-            this.parent.recalculateAllMinSizes();
-            this.parent = undefined;
-        }
-    };
-    Box.prototype.removeAllChildren = function () {
-        this.removeChild(this[0]);
-        this.removeChild(this[1]);
-        this[0] = undefined;
-        this[1] = undefined;
-    };
-    Box.prototype.removeChild = function (child) {
-        if (!child)
-            return;
-        child.off("editorAdded", this.$editorAdded);
-        child.remove();
-        child.element.remove();
-    };
-    Box.prototype.toggleShowHide = function () {
-        var _a;
-        Box.enableAnimation();
-        this.hidden = !this.hidden;
-        (_a = this.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            var _a;
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            (_a = self.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        });
-    };
-    Box.prototype.hide = function () {
-        var _a;
-        Box.enableAnimation();
-        this.hidden = true;
-        (_a = this.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            var _a;
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            (_a = self.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        });
-    };
-    Box.prototype.show = function () {
-        var _a;
-        Box.enableAnimation();
-        this.hidden = false;
-        (_a = this.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            var _a;
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            (_a = self.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        });
-    };
-    /**
-     *
-     * @param {Number} previousBoxIndex
-     * @param {Box} box
-     * @returns {Box}
-     */
-    Box.prototype.addChildBox = function (previousBoxIndex, box) {
-        var previousBox, index;
-        if (previousBoxIndex instanceof Box) {
-            previousBox = previousBoxIndex;
-            index = this[0] == previousBox ? 0 : 1;
-        }
-        else {
-            index = previousBoxIndex;
-            previousBox = this[index];
-        }
-        if (previousBox && previousBox === box)
-            return previousBox;
-        var previousParent = box.parent;
-        if (previousParent && previousParent !== this) {
-            var previousIndex = previousParent[0] === box ? 0 : 1;
-            previousParent[previousIndex] = null;
-            previousParent.ratio = 1;
-            if (previousParent.fixedChild && previousParent.fixedChild === box) {
-                previousParent.fixedChild = null;
-            }
-            previousParent.resize();
-        }
-        this[index] = box;
-        box.parent = this;
-        this.renderChild(box);
-        if (previousBox && previousBox.isMaximized) {
-            previousBox.restore(true);
-            box.maximize(true);
-        }
-        if (previousBox && previousBox.parent === this) {
-            if (this.fixedChild && this.fixedChild == previousBox) {
-                box.fixedSize = previousBox.fixedSize;
-                if (!box.size)
-                    box.size = previousBox.size;
-                previousBox.fixedSize = previousBox.size = null;
-                this.fixedChild = box;
-            }
-            previousBox.remove();
-        }
-        if (!this.fixedChild)
-            this.calculateChildRatio(box);
-        this.recalculateAllMinSizes();
-        this.resize();
-        return box;
-    };
-    Box.prototype.recalculateAllMinSizes = function () {
-        var node = this;
-        while (node) {
-            node.calculateMinSize(true);
-            node = node.parent;
-        }
-    };
-    return Box;
-}(events.EventEmitter));
-exports.Box = Box;
-
-
-/***/ }),
-
-/***/ 29659:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Pane = void 0;
-var box_1 = __webpack_require__(95561);
-var dom_1 = __webpack_require__(91444);
-var aceEditor_1 = __webpack_require__(32664);
-var previewEditor_1 = __webpack_require__(64287);
-var params_1 = __webpack_require__(60524);
-var lib_1 = __webpack_require__(80930);
-var tabBar_1 = __webpack_require__(62277);
-var Pane = /** @class */ (function (_super) {
-    __extends(Pane, _super);
-    function Pane(options) {
-        if (options === void 0) { options = {}; }
-        var _this = this;
-        var _a;
-        var tabBar = new tabBar_1.TabBar({
-            tabList: options.tabList
-        });
-        options.toolBars = (_a = options.toolBars) !== null && _a !== void 0 ? _a : {};
-        options.toolBars.top = tabBar;
-        _this = _super.call(this, options) || this;
-        tabBar.parent = _this;
-        _this.tabBar = tabBar;
-        return _this;
-    }
-    Pane.prototype.toJSON = function () {
-        return {
-            type: "pane",
-            tabBar: this.tabBar.toJSON()
-        };
-    };
-    Pane.prototype.render = function () {
-        _super.prototype.render.call(this);
-        this.element.classList.add("tabPanel");
-        this.tabEditorBoxElement = dom_1.dom.buildDom(["div", {
-                class: "tab-editor"
-            }]);
-        this.element.appendChild(this.tabEditorBoxElement);
-        return this.element;
-    };
-    Pane.prototype.acceptsTab = function (tab) {
-        // TODO accept editor tabs, and not sidebar buttons
-        return true;
-    };
-    Pane.prototype.split = function (far, vertical) {
-        var _a;
-        var newPane = new Pane({});
-        var root = this.parent;
-        var wrapper = new box_1.Box((_a = {},
-            _a[far ? 1 : 0] = this,
-            _a[far ? 0 : 1] = newPane,
-            _a.vertical = vertical,
-            _a.ratio = 0.5,
-            _a));
-        root.addChildBox(this, wrapper);
-        if (this.isButtonHost) {
-            var buttons = this.tabBar.buttons;
-            this.removeButtons();
-            wrapper.setButtons(buttons);
-        }
-        return newPane;
-    };
-    Pane.prototype.setButtons = function (buttons) {
-        this.isButtonHost = true;
-        if (buttons) {
-            this.tabBar.setButtons(buttons);
-        }
-        else {
-            this.tabBar.removeButtons();
-        }
-    };
-    Pane.prototype.addButton = function (button) {
-        this.isButtonHost = true;
-        this.tabBar.addButton(button);
-    };
-    Pane.prototype.$updateChildSize = function (x, y, w, h) {
-        this.updateToolBarSize(w, h);
-        w -= this.padding.left + this.padding.right;
-        h -= this.padding.top + this.padding.bottom;
-        x = this.padding.left;
-        y = this.padding.top;
-        if (this.editor) {
-            lib_1.Utils.setBox(this.editor.container, x, y, w, h);
-            this.editor.resize();
-        }
-    };
-    Pane.prototype.removeButtons = function () {
-        this.tabBar.removeButtons();
-        this.isButtonHost = false;
-    };
-    Pane.prototype.remove = function () {
-        var wrapper = this.parent;
-        var root = wrapper.parent;
-        var paneIndex = wrapper[0] == this ? 1 : 0;
-        var pane = wrapper[paneIndex] || null;
-        var rootIndex = root[0] == wrapper ? 0 : 1;
-        if (pane) {
-            pane.parent = root;
-            root[rootIndex] = pane;
-            root.element.appendChild(pane.element);
-            if (root.fixedChild && root.fixedChild == wrapper) {
-                pane.fixedSize = wrapper.fixedSize;
-                pane.size = wrapper.size;
-                root.fixedChild = pane;
-            }
-            wrapper.element.remove();
-        }
-        else {
-            if (wrapper.isMain) {
-                root = wrapper;
-            }
-            else {
-                wrapper.element.remove();
-            }
-            root.ratio = 1;
-        }
-        root.recalculateAllMinSizes();
-        root.resize();
-        if (this.isButtonHost)
-            root.setButtons(this.tabBar.buttons);
-        this.clearEditors();
-        this.tabBar.clear();
-    };
-    Pane.prototype.getTopRightPane = function () {
-        return this;
-    };
-    Pane.prototype.createEditor = function () {
-        var editor = this.createEditorByType();
-        this.emit("editorAdded", editor);
-        return editor;
-    };
-    Pane.prototype.createEditorByType = function () {
-        switch (this.currentEditorType) {
-            case params_1.EditorType.preview:
-                return new previewEditor_1.PreviewEditor();
-            case params_1.EditorType.ace:
-            default:
-                return new aceEditor_1.AceEditor();
-        }
-    };
-    Pane.prototype.initEditor = function (editorType) {
-        var _a, _b;
-        var _c;
-        if (editorType === void 0) { editorType = params_1.EditorType.ace; }
-        if (this.currentEditorType == editorType)
-            return;
-        this.hidePreviousEditor();
-        (_a = this.editors) !== null && _a !== void 0 ? _a : (this.editors = {});
-        this.currentEditorType = editorType;
-        (_b = (_c = this.editors)[editorType]) !== null && _b !== void 0 ? _b : (_c[editorType] = this.createEditor());
-        this.editor = this.editors[editorType];
-        this.element.appendChild(this.editor.container);
-    };
-    Pane.prototype.hidePreviousEditor = function () {
-        if (!this.editor)
-            return;
-        this.element.removeChild(this.editor.container);
-    };
-    Pane.prototype.getEditor = function (editorType) {
-        if (editorType === void 0) { editorType = params_1.EditorType.ace; }
-        return this.editors[editorType];
-    };
-    Pane.prototype.getOrCreateEditor = function (editorType) {
-        if (editorType === void 0) { editorType = params_1.EditorType.ace; }
-        this.initEditor(editorType);
-        return this.editor;
-    };
-    Pane.prototype.clearEditors = function () {
-        for (var i in this.editors) {
-            this.editors[i].destroy();
-        }
-        this.editors = {};
-        this.currentEditorType = undefined;
-        this.editor = undefined;
-    };
-    return Pane;
-}(box_1.Box));
-exports.Pane = Pane;
-
-
-/***/ }),
-
-/***/ 32664:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.AceEditor = void 0;
-var esm_resolver_1 = __webpack_require__(46992);
-var editor_1 = __webpack_require__(82880);
-var virtual_renderer_1 = __webpack_require__(63049);
-var modeList = __webpack_require__(90352);
-__webpack_require__(11105);
-var AceEditor = /** @class */ (function () {
-    function AceEditor() {
-        this.editor = new editor_1.Editor(new virtual_renderer_1.VirtualRenderer(null));
-        this.container = this.editor.container;
-        this.container.style.position = "absolute";
-        this.editor.setOptions({
-            customScrollbar: true,
-            newLineMode: "unix",
-            enableLiveAutocompletion: true,
-            enableBasicAutocompletion: true,
-            showPrintMargin: false,
-        });
-    }
-    AceEditor.prototype.resize = function () {
-        this.editor.resize();
-    };
-    AceEditor.prototype.focus = function () {
-        this.editor.focus();
-    };
-    AceEditor.prototype.destroy = function () {
-        this.editor.setSession(esm_resolver_1.default.createEditSession("", this.getMode()));
-        this.editor.destroy();
-        this.container.remove();
-    };
-    AceEditor.prototype.setSession = function (tab, value) {
-        this.tab = tab;
-        this.initTabSession(value);
-        this.editor.setSession(this.tab.session);
-    };
-    AceEditor.prototype.initTabSession = function (value) {
-        var _a;
-        var _b;
-        if (this.tab.session && value == null)
-            return;
-        (_a = (_b = this.tab).session) !== null && _a !== void 0 ? _a : (_b.session = esm_resolver_1.default.createEditSession(value !== null && value !== void 0 ? value : "", this.getMode()));
-        if (value == null) {
-            this.restoreSessionFromJson(this.tab);
-        }
-        else {
-            this.tab.session.setValue(value);
-        }
-    };
-    AceEditor.prototype.getMode = function () {
-        if (this.tab.path !== undefined) {
-            return modeList.getModeForPath(this.tab.path).mode;
-        }
-        return null;
-    };
-    AceEditor.getSessionState = function (tab) {
-        var session = tab.session;
-        var undoManager = session.getUndoManager();
-        return JSON.stringify({
-            selection: session.selection.toJSON(),
-            //@ts-ignore
-            undoManager: undoManager.toJSON(),
-            value: session.getValue(),
-            scroll: [
-                session.getScrollLeft(),
-                session.getScrollTop()
-            ],
-        });
-    };
-    AceEditor.prototype.sessionToJSON = function (tab) {
-        return AceEditor.getSessionState(tab);
-    };
-    AceEditor.prototype.restoreSessionFromJson = function (tab) {
-        if (!tab.session || !tab.sessionValue)
-            return;
-        var session = tab.session;
-        var json = JSON.parse(tab.sessionValue);
-        try {
-            if (typeof json.value == "string" && json.value != session.getValue())
-                session.doc.setValue(json.value);
-            if (json.selection)
-                session.selection.fromJSON(json.selection);
-            if (json.scroll) {
-                session.setScrollLeft(json.scroll[0]);
-                session.setScrollTop(json.scroll[1]);
-            }
-            tab.sessionValue = undefined;
-        }
-        catch (e) {
-            console.error(e);
-        }
-    };
-    return AceEditor;
-}());
-exports.AceEditor = AceEditor;
-
-
-/***/ }),
-
-/***/ 64287:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.PreviewEditor = void 0;
-var PreviewEditor = /** @class */ (function () {
-    function PreviewEditor() {
-        this.container = document.createElement("iframe");
-        this.container.style.position = "absolute";
-    }
-    PreviewEditor.prototype.resize = function () {
-    };
-    PreviewEditor.prototype.focus = function () {
-    };
-    PreviewEditor.prototype.destroy = function () {
-        this.container.remove();
-    };
-    PreviewEditor.prototype.setSession = function (tab, value) {
-        this.tab = tab;
-        value !== null && value !== void 0 ? value : (value = tab.session);
-        tab.session = value;
-        this.container.setAttribute("srcdoc", value);
-    };
-    PreviewEditor.prototype.restoreSessionFromJson = function (tab) {
-        var _a;
-        tab.session = (_a = tab.sessionValue) !== null && _a !== void 0 ? _a : "";
-        tab.sessionValue = undefined;
-    };
-    PreviewEditor.prototype.sessionToJSON = function (tab) {
-        return tab.session;
-    };
-    return PreviewEditor;
-}());
-exports.PreviewEditor = PreviewEditor;
-
-
-/***/ }),
-
-/***/ 97341:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.AceLayout = void 0;
-var layoutCSS = __webpack_require__(42498);
-var dom_1 = __webpack_require__(91444);
-var AceLayout = /** @class */ (function () {
-    function AceLayout(startBox, css) {
-        dom_1.dom.importCssString(css !== null && css !== void 0 ? css : layoutCSS, "layout.css");
-        this.box = startBox;
-    }
-    return AceLayout;
-}());
-exports.AceLayout = AceLayout;
-
-
-/***/ }),
-
-/***/ 57744:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.MenuSearchBox = exports.MenuPopup = exports.MenuBar = exports.Menu = void 0;
-var lib_1 = __webpack_require__(80930);
-var dom_1 = __webpack_require__(91444);
-var menuCSS = __webpack_require__(77111);
-dom_1.dom.importCssString(menuCSS, "menu.css");
-var Menu = /** @class */ (function () {
-    function Menu() {
-    }
-    Menu.prototype.getLastOpenPopup = function () {
-        return !this.menuPopup ? this : this.menuPopup.getLastOpenPopup();
-    };
-    Menu.prototype.getLastSelectedMenu = function () {
-        return !this.menuPopup || !this.menuPopup.selectedMenu ? this.selectedMenu : this.menuPopup.getLastSelectedMenu();
-    };
-    Menu.prototype.closeLastMenu = function () {
-        if (this.menuPopup && this.menuPopup.menuPopup) {
-            this.menuPopup.closeLastMenu();
-        }
-        else {
-            this.closeMenu();
-        }
-    };
-    Menu.prototype.selectMenu = function (menu) {
-        menu.buttonElement.classList.add(this.selectedClass);
-        this.selectedMenu = menu;
-    };
-    Menu.prototype.unselectMenu = function () {
-        if (!this.selectedMenu)
-            return;
-        this.selectedMenu.buttonElement.classList.remove(this.selectedClass);
-        this.selectedMenu = undefined;
-    };
-    Menu.prototype.openMenu = function (direction) {
-        if (!direction && this.constructor.name === "MenuPopup")
-            direction = "right";
-        if (this.menuPopup)
-            return this.menuPopup;
-        this.menuPopup = new MenuPopup();
-        this.menuPopup.direction = direction !== null && direction !== void 0 ? direction : "";
-        this.menuPopup.isSubMenu = this.constructor.name === "MenuPopup";
-        this.menuPopup.menuManager = this.menuManager;
-        this.menuPopup.menu = this.selectedMenu;
-        this.menuPopup.parentMenu = this;
-        this.menuPopup.open();
-        if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen) {
-            if (!this.menuPopup.isSubMenu) {
-                this.menuManager.searchBox.setParentPopup(this.menuPopup);
-            }
-            else {
-                this.menuManager.searchBox.addSymbol("/");
-            }
-        }
-        return this.menuPopup;
-    };
-    Menu.prototype.closeMenu = function () {
-        if (!this.menuPopup) {
-            return;
-        }
-        if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen && this.menuPopup.isSubMenu && this.menuManager.searchBox.value.substring(this.menuManager.searchBox.value.length - 1) === "/") {
-            this.menuManager.searchBox.removeSymbol();
-        }
-        this.menuPopup.close();
-        this.menuPopup = undefined;
-    };
-    Menu.prototype.moveOnTarget = function (target) {
-        var host = target ? target.$host : null;
-        if (!host) {
-            return;
-        }
-        if (this.selectedMenu) {
-            if (host.path === this.selectedMenu.path) {
-                return;
-            }
-            else {
-                this.unselectMenu();
-            }
-        }
-        if (this.menuPopup) {
-            this.closeMenu();
-        }
-        host.buttonElement = host.$buttonElement || target;
-        this.selectMenu(host);
-    };
-    Menu.prototype.openMenuByPath = function (path) {
-        var _a;
-        if (typeof path === "string")
-            path = path.split("/");
-        var menu = this.getMenuByPath(path.shift());
-        if (!menu)
-            return;
-        if (!menu.$host)
-            menu.$host = menu;
-        this.moveOnTarget(menu);
-        if (!menu.$host.map)
-            return;
-        this.openMenu();
-        if (path.length)
-            (_a = this.menuPopup) === null || _a === void 0 ? void 0 : _a.openMenuByPath(path);
-    };
-    return Menu;
-}());
-exports.Menu = Menu;
-var MenuBar = /** @class */ (function (_super) {
-    __extends(MenuBar, _super);
-    function MenuBar() {
-        var _this_1 = _super !== null && _super.apply(this, arguments) || this;
-        _this_1.selectedClass = "menuButtonDown";
-        _this_1.onMouseMove = function (e) {
-            var target = _this_1.menuManager.getTarget(e.target);
-            _this_1.moveOnTarget(target);
-        };
-        return _this_1;
-    }
-    MenuBar.prototype.build = function (parent) {
-        var _this_1 = this;
-        this.element = parent;
-        var items = this.menus.map;
-        Object.keys(items).filter(Boolean).map(function (key) { return items[key]; }).sort(function (item1, item2) {
-            return item1.position - item2.position;
-        }).map(function (item) {
-            item.$buttonElement = dom_1.dom.buildDom(["div", {
-                    class: "menuButton" + (item.className ? " " + item.className : ""),
-                    $host: item,
-                    onmousedown: function (e) { return _this_1.onMouseDown(e); },
-                }, item.label + ""], _this_1.element);
-        });
-        var rect = this.element.getBoundingClientRect();
-        this.bottom = rect.bottom;
-    };
-    MenuBar.prototype.activateMenu = function () {
-        this.element.addEventListener("mousemove", this.onMouseMove);
-    };
-    MenuBar.prototype.inactivateMenu = function () {
-        this.unselectMenu();
-        this.closeMenu();
-        this.element.removeEventListener("mousemove", this.onMouseMove);
-    };
-    /*** event handlers ***/
-    MenuBar.prototype.onMouseDown = function (e) {
-        e.preventDefault();
-        var activate = true;
-        if (this.menuManager.isActive) {
-            this.menuManager.inactivateMenu();
-        }
-        else {
-            var target = e.target;
-            target.$host.buttonElement = target.$host.$buttonElement;
-            this.selectMenu(target.$host);
-            this.openMenu();
-            this.menuManager.activeMenu = this;
-            this.menuManager.activateMenu();
-        }
-    };
-    MenuBar.prototype.moveOnTarget = function (target) {
-        var _a;
-        _super.prototype.moveOnTarget.call(this, target);
-        if ((_a = this.selectedMenu) === null || _a === void 0 ? void 0 : _a.map)
-            this.openMenu();
-    };
-    MenuBar.prototype.getMenuByPath = function (path) {
-        return this.menuManager.find(path);
-    };
-    return MenuBar;
-}(Menu));
-exports.MenuBar = MenuBar;
-var MenuPopup = /** @class */ (function (_super) {
-    __extends(MenuPopup, _super);
-    function MenuPopup() {
-        var _this_1 = _super !== null && _super.apply(this, arguments) || this;
-        _this_1.selectedClass = "hover";
-        _this_1.isSubMenu = false;
-        //handle events
-        _this_1.onMouseMove = function (e) {
-            var _a;
-            if (e.target === _this_1.element)
-                return;
-            if (_this_1.menuPopup && _this_1.isDirectedToSubMenu(e))
-                return;
-            var target = _this_1.menuManager.getTarget(e.target);
-            if (target === _this_1.element)
-                return;
-            _this_1.moveOnTarget(target);
-            if ((_a = _this_1.selectedMenu) === null || _a === void 0 ? void 0 : _a.map)
-                _this_1.openMenu();
-        };
-        _this_1.onMouseUp = function (e) {
-            if (e.target === _this_1.element)
-                return;
-            var target = _this_1.menuManager.getTarget(e.target);
-            if (!target || target === _this_1.element)
-                return;
-            var host = target.$host;
-            if (host && host.buttonElement) {
-                e.preventDefault();
-                if (host.exec)
-                    host.exec(_this_1.menuManager.currentHost);
-            }
-            if (!host.map)
-                _this_1.menuManager.inactivateMenu();
-        };
-        return _this_1;
-    }
-    MenuPopup.prototype.inactivateMenu = function () {
-        this.close();
-    };
-    MenuPopup.prototype.activateMenu = function () {
-    };
-    MenuPopup.prototype.open = function () {
-        this.build();
-        this.render();
-    };
-    MenuPopup.prototype.build = function () {
-        if (this.element) {
-            return;
-        }
-        if (this.menu.element) {
-            this.element = this.menu.element;
-            return;
-        }
-        var result = [];
-        if (this.menu.map) {
-            //TODO: ?
-            var items = Object.values(this.menu.map).sort(function (item1, item2) {
-                return item1.position - item2.position;
-            });
-            var afterDivider_1 = true;
-            result = items
-                .map(function (item) {
-                if (item.label[0] === "~") {
-                    if (afterDivider_1)
-                        return;
-                    afterDivider_1 = true;
-                    return [
-                        "div",
-                        {
-                            class: "menu_divider",
-                            $host: item,
-                        },
-                    ];
-                }
-                afterDivider_1 = false;
-                var classList = ["menu_item"];
-                if (item.checked)
-                    classList.push(item.type === "check" ? "checked" : "selected");
-                if (item.map)
-                    classList.push("submenu");
-                if (item.disabled)
-                    classList.push("disabled");
-                return [
-                    "div",
-                    {
-                        class: classList.join(" "),
-                        $host: item,
-                    },
-                    ["u", " "],
-                    ["a", item.label + ""],
-                    [
-                        "span",
-                        {
-                            class: "shortcut",
-                        },
-                        item.hotKey,
-                    ],
-                ];
-            })
-                .filter(Boolean);
-            if (afterDivider_1)
-                result.pop();
-        }
-        this.menu.element = dom_1.dom.buildDom([
-            "blockquote",
-            {
-                class: "menu",
-                style: "display:block",
-                $host: this.menu,
-                onmousemove: this.onMouseMove,
-                onmouseup: this.onMouseUp
-            },
-            result,
-        ], document.body);
-        this.element = this.menu.element;
-    };
-    MenuPopup.prototype.render = function () {
-        if (!this.element)
-            return;
-        if (this.element.style.maxWidth)
-            this.element.style.maxWidth = window.innerWidth + "px";
-        if (this.element.style.maxHeight)
-            this.element.style.maxHeight = window.innerHeight + "px";
-        var elRect = this.element.getBoundingClientRect();
-        var edge = lib_1.Utils.getElementEdges(this.element);
-        var parentRect, top, left;
-        if (this.menu && this.menu.buttonElement)
-            parentRect = this.menu.buttonElement.getBoundingClientRect();
-        if (parentRect) {
-            if (this.isSubMenu) {
-                top = parentRect.top - edge.top;
-                left = parentRect.right;
-            }
-            else {
-                top = parentRect.bottom;
-                left = parentRect.left;
-            }
-        }
-        else {
-            top = this.position.y;
-            left = this.position.x;
-        }
-        var targetH = Math.min(elRect.height, window.innerHeight);
-        var availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
-        if (availableH < targetH && (!parentRect || this.isSubMenu)) {
-            var tmpTop = parentRect ? window.innerHeight : top;
-            top = tmpTop - targetH - edge.top;
-            top = Math.max(top, this.menuManager.menuBar.bottom);
-            availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
-        }
-        this.element.style.maxHeight = (availableH - 10) + "px";
-        elRect = this.element.getBoundingClientRect();
-        var availableW = window.innerWidth - left - edge.left - edge.right - 2;
-        if (availableW < elRect.width) {
-            if (parentRect) {
-                var tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
-                if (tmpLeft > availableW) {
-                    this.direction = "left";
-                    left = tmpLeft - elRect.width + edge.left;
-                    left = Math.max(left, 0);
-                    availableW = tmpLeft + edge.left + edge.right;
-                }
-                if (availableW < elRect.width) {
-                    this.element.style.maxWidth = availableW + "px";
-                    this.element.style.overflowX = "auto";
-                }
-            }
-            else {
-                left = window.innerWidth - elRect.width - edge.left - edge.right;
-            }
-        }
-        this.element.style.top = top + "px";
-        this.element.style.left = left + "px";
-        this.element.style.position = "absolute";
-        this.element.style.zIndex = String(195055);
-        this.element.style.overflowY = "auto";
-    };
-    MenuPopup.prototype.close = function () {
-        if (this.menuPopup) {
-            this.closeMenu();
-        }
-        if (this.element) {
-            this.element.remove();
-            delete this.element;
-        }
-        if (this.menu.element) {
-            delete this.menu.element;
-        }
-    };
-    MenuPopup.prototype.scrollIfNeeded = function () {
-        if (!this.selectedMenu)
-            return;
-        var menu = this.element;
-        var item = this.selectedMenu.buttonElement;
-        var menuRect = menu.getBoundingClientRect();
-        var itemRect = item.getBoundingClientRect();
-        if (itemRect.top < menuRect.top) {
-            item.scrollIntoView(true);
-        }
-        else if (itemRect.bottom > menuRect.bottom) {
-            item.scrollIntoView(false);
-        }
-    };
-    MenuPopup.prototype.moveOnTarget = function (target) {
-        _super.prototype.moveOnTarget.call(this, target);
-    };
-    MenuPopup.prototype.isDirectedToSubMenu = function (e) {
-        var currPos = { x: e.clientX, y: e.clientY };
-        var prevPos = this.menuManager.prevPos;
-        var rect = this.menuPopup.element.getBoundingClientRect();
-        var rectYTop = rect.top;
-        var rectYBottom = rect.bottom;
-        if (currPos.y < rectYTop || currPos.y > rectYBottom) {
-            return false;
-        }
-        var rectX = this.menuPopup.direction === "left" ? rect.right : rect.left;
-        var prevDiffX = Math.abs(rectX - prevPos.x);
-        var currDiffX = Math.abs(rectX - currPos.x);
-        if (prevDiffX < currDiffX) {
-            return false;
-        }
-        var directedToBottom = currPos.y > prevPos.y;
-        var prevDiffY = directedToBottom ? rectYBottom - prevPos.y : prevPos.y - rectYTop;
-        var tng = prevDiffY / prevDiffX;
-        var maxYDiff = tng * currDiffX;
-        return (directedToBottom && rectYBottom - maxYDiff >= currPos.y) || (!directedToBottom && rectYTop + maxYDiff <= currPos.y);
-    };
-    MenuPopup.prototype.renderRecursive = function () {
-        this.render();
-        if (this.menuPopup) {
-            this.menuPopup.renderRecursive();
-        }
-    };
-    MenuPopup.prototype.getMenuByPath = function (path) {
-        var childNode;
-        var childNodes = this.element.childNodes;
-        for (var i = 0; i < childNodes.length; i++) {
-            childNode = childNodes[i];
-            if (childNode.$host && childNode.$host.id === path) {
-                if (childNode.classList.contains("menu_item") && !childNode.classList.contains("disabled")) {
-                    return childNode;
-                }
-            }
-        }
-        return null;
-    };
-    return MenuPopup;
-}(Menu));
-exports.MenuPopup = MenuPopup;
-var MenuSearchBox = /** @class */ (function () {
-    function MenuSearchBox() {
-        this.isOpen = false;
-        this.hideFiltered = false;
-        this.value = "";
-        this.currValue = "";
-    }
-    MenuSearchBox.prototype.open = function () {
-        if (!this.element) {
-            this.build();
-        }
-        this.isOpen = true;
-        document.body.appendChild(this.element);
-        this.calcElementPosition();
-    };
-    MenuSearchBox.prototype.close = function () {
-        this.isOpen = false;
-        if (this.parentPopup && this.parentPopup.element) {
-            if (this.parentPopup.prevMaxHeight) {
-                this.parentPopup.element.style.maxHeight = this.parentPopup.prevMaxHeight;
-            }
-        }
-        if (this.value.length) {
-            this.value = "";
-            this.currValue = "";
-            this.update();
-        }
-        this.parentPopup = undefined;
-        this.element.remove();
-    };
-    MenuSearchBox.prototype.setParentPopup = function (parentPopup) {
-        var _a;
-        if (this.parentPopup && this.parentPopup.element) {
-            if (this.parentPopup.prevMaxHeight) {
-                this.parentPopup.element.style.maxHeight = this.parentPopup.prevMaxHeight;
-            }
-        }
-        this.parentPopup = parentPopup;
-        this.currPopupMenu = parentPopup;
-        if (this.isOpen) {
-            this.calcElementPosition();
-            var currPopupMenu = parentPopup;
-            var valueArr = this.value.split("/");
-            while (currPopupMenu) {
-                this.currPopupMenu = currPopupMenu;
-                this.currValue = (_a = valueArr.shift()) !== null && _a !== void 0 ? _a : "";
-                this.isChanged = true;
-                this.update();
-                this.isOpen = false;
-                currPopupMenu = this.currPopupMenu.selectedMenu && this.currPopupMenu.selectedMenu.map ? this.currPopupMenu.openMenu() : null;
-                this.isOpen = true;
-            }
-        }
-    };
-    MenuSearchBox.prototype.calcElementPosition = function () {
-        if (!this.parentPopup)
-            return;
-        this.parentPopup.prevMaxHeight = null;
-        var parentRect = this.parentPopup.element.getBoundingClientRect();
-        var top = parentRect.top - 20;
-        if (top < this.menuManager.menuBar.bottom) {
-            top = parentRect.bottom;
-            if (parentRect.bottom + 20 > window.innerHeight) {
-                this.parentPopup.prevMaxHeight = this.parentPopup.element.style.maxHeight;
-                this.parentPopup.element.style.maxHeight = (parseInt(this.parentPopup.element.style.maxHeight, 10) - 20) + "px";
-                top -= 20;
-            }
-        }
-        this.element.style.top = top + "px";
-        this.element.style.right = (window.innerWidth - parentRect.right) + "px";
-    };
-    MenuSearchBox.prototype.addSymbol = function (symbol) {
-        var _a;
-        if (symbol === "/" && this.value.substring(this.value.length - 1) === "/") {
-            return;
-        }
-        this.value += symbol;
-        if (symbol === "/") {
-            if (((_a = this.currPopupMenu) === null || _a === void 0 ? void 0 : _a.selectedMenu) && this.currPopupMenu.selectedMenu.map) {
-                this.currPopupMenu = this.currPopupMenu.openMenu();
-                this.currValue = "";
-            }
-            this.isChanged = false;
-        }
-        else {
-            this.currValue += symbol;
-            this.isChanged = true;
-        }
-        this.update();
-    };
-    MenuSearchBox.prototype.removeSymbol = function () {
-        var _a, _b;
-        if (!this.isOpen) {
-            return;
-        }
-        var removed = this.value.substring(this.value.length - 1);
-        this.value = this.value.substring(0, this.value.length - 1);
-        if (removed === "/") {
-            this.currValue = (_a = this.value.split("/").pop()) !== null && _a !== void 0 ? _a : "";
-            this.currPopupMenu = (((_b = this.currPopupMenu) === null || _b === void 0 ? void 0 : _b.parentMenu) instanceof MenuPopup) ? this.currPopupMenu.parentMenu : undefined;
-            this.isChanged = false;
-        }
-        else {
-            this.currValue = this.currValue.substring(0, this.currValue.length - 1);
-            this.isChanged = true;
-        }
-        this.update();
-        if (!this.value.length) {
-            this.close();
-        }
-    };
-    MenuSearchBox.prototype.update = function () {
-        this.searchField.textContent = this.value;
-        if (this.currPopupMenu && this.currPopupMenu.element && this.isChanged) {
-            this.setPopupMenuHighlights();
-            if (this.hideFiltered) {
-                this.calcElementPosition();
-            }
-        }
-    };
-    MenuSearchBox.prototype.switchShowHideFiltered = function () {
-        this.hideFiltered = !this.hideFiltered;
-        this.update();
-        if (!this.hideFiltered) {
-            this.calcElementPosition();
-        }
-    };
-    MenuSearchBox.prototype.showHideMenuNode = function (menu, show) {
-        var _a;
-        show = show || false;
-        if (!show && menu.classList.contains("hover") && ((_a = this.currPopupMenu) === null || _a === void 0 ? void 0 : _a.menuPopup)) {
-            show = true;
-        }
-        menu.isFiltered = !show;
-        show = show || !this.hideFiltered;
-        menu.style.display = show ? "block" : "none";
-    };
-    MenuSearchBox.prototype.setPopupMenuHighlights = function () {
-        var _this_1 = this;
-        var _a;
-        if (!((_a = this.currPopupMenu) === null || _a === void 0 ? void 0 : _a.element))
-            return;
-        var childNode;
-        var width = 0;
-        this.selectMenu = null;
-        this.secondarySelectMenu = null;
-        if (this.hideFiltered) {
-            var rect = this.currPopupMenu.element.getBoundingClientRect();
-            var edges = lib_1.Utils.getElementEdges(this.currPopupMenu.element);
-            width = rect.width - edges.left - edges.right;
-        }
-        var afterDivider = true;
-        var noResult = true;
-        for (var i = 0; i < this.currPopupMenu.element.childNodes.length; i++) {
-            childNode = this.currPopupMenu.element.childNodes[i];
-            if (childNode.classList.contains("menu_item")) {
-                this.setHighlights(childNode);
-                afterDivider = afterDivider && childNode.isFiltered;
-                if (noResult && !childNode.isFiltered) {
-                    noResult = false;
-                }
-            }
-            else if (childNode.classList.contains("menu_divider")) {
-                this.showHideMenuNode(childNode, !afterDivider);
-                afterDivider = true;
-            }
-        }
-        if (this.hideFiltered) {
-            this.currPopupMenu.element.style.width = Math.ceil(width) + "px"; //TODO
-            var noResultEl = this.currPopupMenu.element.querySelector(".menu_no_result");
-            if (noResult && !noResultEl) {
-                dom_1.dom.buildDom(["div", { class: "menu_no_result" }, "No matching result"], this.currPopupMenu.element);
-            }
-            else if (!noResult && noResultEl) {
-                noResultEl.remove();
-            }
-        }
-        this.selectMenu = this.selectMenu || this.secondarySelectMenu;
-        if (this.selectMenu) {
-            this.currPopupMenu.moveOnTarget(this.selectMenu);
-            this.currPopupMenu.scrollIfNeeded();
-        }
-        if (this.hideFiltered) {
-            this.currPopupMenu.renderRecursive();
-        }
-        if (this.suggestionPopup) {
-            this.suggestionPopup.close();
-        }
-        if (noResult) {
-            this.currValue = this.value;
-            var suggestionList_1 = {};
-            var addToSuggestionList_1 = function (menus) {
-                Object.keys(menus).forEach(function (name) {
-                    var item = menus[name];
-                    if (item.label && item.label[0] === "~") {
-                        return;
-                    }
-                    if (!item.path) {
-                        console.log(item);
-                        return;
-                    }
-                    var path = item.path;
-                    var tokens = _this_1.getTokens(path);
-                    if (tokens) {
-                        suggestionList_1[path] = {
-                            label: path,
-                            tokens: tokens
-                        };
-                    }
-                    if (item.map) {
-                        addToSuggestionList_1(item.map);
-                    }
-                });
-            };
-            addToSuggestionList_1(this.menuManager.menus.map);
-            this.suggestionPopup = new MenuPopup();
-            this.suggestionPopup.direction = "right";
-            this.suggestionPopup.isSubMenu = true;
-            this.suggestionPopup.menuManager = this.menuManager;
-            this.suggestionPopup.menu = {
-                buttonElement: this.element,
-                map: suggestionList_1
-            };
-            this.suggestionPopup.parentMenu = this;
-            this.suggestionPopup.open();
-            for (var i = 0; i < this.suggestionPopup.element.childNodes.length; i++) {
-                var childNode_1 = this.suggestionPopup.element.childNodes[i];
-                var menuTitle = childNode_1.querySelector("a");
-                var innerHtml = "";
-                for (var t = 0; t < childNode_1.$host.tokens.length; t++) {
-                    innerHtml += "<span class='menu-" + childNode_1.$host.tokens[t].type + "'>" + childNode_1.$host.tokens[t].value + "</span>";
-                }
-                menuTitle.innerHTML = innerHtml;
-            }
-        }
-    };
-    MenuSearchBox.prototype.setHighlights = function (menu) {
-        var text = menu.$host.label;
-        var menuTitle = menu.querySelector("a");
-        if (!this.currValue || !this.currValue.length) {
-            menuTitle.innerHTML = text;
-            this.showHideMenuNode(menu, true);
-            return;
-        }
-        var tokens = this.getTokens(text);
-        var innerHtml = "";
-        var show = true;
-        if (tokens) {
-            if (menu.classList.contains("disabled")) {
-                innerHtml = text;
-            }
-            else {
-                this.secondarySelectMenu = this.secondarySelectMenu || menu;
-                if (!this.selectMenu && tokens[0].type === "completion-highlight") {
-                    this.selectMenu = menu;
-                }
-                for (var i = 0; i < tokens.length; i++) {
-                    innerHtml += "<span class='menu-" + tokens[i].type + "'>" + tokens[i].value + "</span>";
-                }
-            }
-        }
-        else {
-            innerHtml = text;
-            show = false;
-        }
-        this.showHideMenuNode(menu, show);
-        menuTitle.innerHTML = innerHtml;
-    };
-    MenuSearchBox.prototype.getTokens = function (string) {
-        var tokens = [];
-        var caption = string.toLowerCase();
-        var lower = this.currValue.toLowerCase();
-        var upper = this.currValue.toUpperCase();
-        function addToken(value, className) {
-            value && tokens.push({
-                type: className || "",
-                value: value
-            });
-        }
-        var lastIndex = -1;
-        var matchMask = 0;
-        var index, distance;
-        var fullMatchIndex = caption.indexOf(lower);
-        if (fullMatchIndex === -1) {
-            for (var j = 0; j < this.currValue.length; j++) {
-                var i1 = caption.indexOf(lower[j], lastIndex + 1);
-                var i2 = caption.indexOf(upper[j], lastIndex + 1);
-                index = (i1 >= 0) ? ((i2 < 0 || i1 < i2) ? i1 : i2) : i2;
-                if (index < 0)
-                    return;
-                distance = index - lastIndex - 1;
-                if (distance > 0) {
-                    matchMask = matchMask | (1 << j);
-                }
-                lastIndex = index;
-            }
-        }
-        var filterText = lower;
-        lower = caption.toLowerCase();
-        lastIndex = 0;
-        var lastI = 0;
-        for (var i = 0; i <= filterText.length; i++) {
-            if (i !== lastI && (matchMask & (1 << i) || i === filterText.length)) {
-                var sub = filterText.slice(lastI, i);
-                lastI = i;
-                index = lower.indexOf(sub, lastIndex);
-                if (index === -1)
-                    continue;
-                addToken(string.slice(lastIndex, index), "");
-                lastIndex = index + sub.length;
-                addToken(string.slice(index, lastIndex), "completion-highlight");
-            }
-        }
-        addToken(string.slice(lastIndex, string.length), "");
-        return tokens;
-    };
-    MenuSearchBox.prototype.build = function () {
-        var _a, _b, _c, _d;
-        this.element = dom_1.dom.buildDom(["div", { class: "menu_searchbox" },
-            ["span", { class: "search_field" }],
-            ["span", { class: "searchbtn_filter" }],
-            ["span", { class: "searchbtn_close" }]
-        ]);
-        this.element.$host = this;
-        this.searchField = this.element.querySelector(".search_field");
-        var _this = this;
-        (_b = (_a = this.element) === null || _a === void 0 ? void 0 : _a.querySelector(".searchbtn_close")) === null || _b === void 0 ? void 0 : _b.addEventListener("mousedown", function (e) {
-            _this.close();
-        });
-        (_d = (_c = this.element) === null || _c === void 0 ? void 0 : _c.querySelector(".searchbtn_filter")) === null || _d === void 0 ? void 0 : _d.addEventListener("mousedown", function (e) {
-            _this.switchShowHideFiltered();
-        });
-    };
-    return MenuSearchBox;
-}());
-exports.MenuSearchBox = MenuSearchBox;
-
-
-/***/ }),
-
-/***/ 2505:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.MenuItems = exports.MenuManager = void 0;
-var menu_1 = __webpack_require__(57744);
-var hash_handler_1 = __webpack_require__(7116);
-var event = __webpack_require__(17989);
-var keyUtil = __webpack_require__(11797);
-function getPrevSibling(node, conditionFn, parentElement) {
-    parentElement = node ? node.parentElement : parentElement;
-    var wrapped = false;
-    do {
-        node = node && node.previousSibling;
-        if (!node && !wrapped) {
-            node = parentElement === null || parentElement === void 0 ? void 0 : parentElement.lastChild;
-            wrapped = true;
-        }
-        if (!node)
-            return;
-    } while (!conditionFn(node));
-    return node;
-}
-function getNextSibling(node, conditionFn, parentElement) {
-    parentElement = node ? node.parentElement : parentElement;
-    var wrapped = false;
-    do {
-        node = node && node.nextSibling;
-        if (!node && !wrapped) {
-            node = parentElement === null || parentElement === void 0 ? void 0 : parentElement.firstChild;
-            wrapped = true;
-        }
-        if (!node)
-            return;
-    } while (!conditionFn(node));
-    return node;
-}
-var MenuManager = /** @class */ (function () {
-    function MenuManager() {
-        var _this_1 = this;
-        this.menus = new MenuItems();
-        //event handlers
-        this.onMouseDown = function (e) {
-            var target = _this_1.getTarget(e.target, function (target) { return target.$host instanceof MenuItems; });
-            if (!target)
-                _this_1.inactivateMenu();
-        };
-        this.onMouseMove = function (e) {
-            var lastPos = { x: e.clientX, y: e.clientY };
-            if (_this_1.lastPos && _this_1.lastPos.x === lastPos.x && _this_1.lastPos.y === lastPos.y) {
-                return;
-            }
-            _this_1.prevPos = _this_1.lastPos;
-            _this_1.lastPos = lastPos;
-        };
-        this.onWindowResize = function (e) {
-            if (!_this_1.activeMenu) {
-                return;
-            }
-            var menuPopup = _this_1.activeMenu instanceof menu_1.MenuPopup ? _this_1.activeMenu : _this_1.activeMenu.menuPopup;
-            if (menuPopup) {
-                menuPopup.renderRecursive();
-            }
-        };
-        this.onContextMenuOpen = function (e) {
-            e.preventDefault();
-            var target = _this_1.getTarget(e.target, function (target) { return target.$host.contextMenu; });
-            if (!target) {
-                return;
-            }
-            var pos = { x: e.clientX + 2, y: e.clientY + 2 };
-            _this_1.openMenuByPath("/context/" + target.$host.contextMenu, pos);
-            _this_1.currentHost = target.$host;
-        };
-        this.add = this.addByPath;
-    }
-    MenuManager.getInstance = function () {
-        if (!MenuManager._instance) {
-            MenuManager._instance = new MenuManager();
-        }
-        return MenuManager._instance;
-    };
-    MenuManager.prototype.find = function (path, item) {
-        if (typeof path === "string")
-            path = path.split("/");
-        item = item || this.menus;
-        path.forEach(function (part) {
-            if (!item || !item.map)
-                return;
-            item = item.map[part];
-        });
-        return item;
-    };
-    MenuManager.prototype.addByPath = function (path, options) {
-        var _a, _b, _c, _d, _e;
-        if (options === void 0) { options = {}; }
-        if (typeof path == "string")
-            path = path.split("/");
-        var item = this.menus;
-        path.forEach(function (part) {
-            var _a, _b;
-            var _c;
-            (_a = item.map) !== null && _a !== void 0 ? _a : (item.map = {});
-            (_b = (_c = item.map)[part]) !== null && _b !== void 0 ? _b : (_c[part] = new MenuItems());
-            item = item.map[part];
-        });
-        item.path = path.join("/");
-        var name = path.pop();
-        item.id = name;
-        item.label = options.label || name;
-        item.position = (_a = options.position) !== null && _a !== void 0 ? _a : 0;
-        item.hotKey = options.hotKey;
-        item.type = (_b = options.type) !== null && _b !== void 0 ? _b : "";
-        item.checked = (_c = options.checked) !== null && _c !== void 0 ? _c : false;
-        item.disabled = (_d = options.disabled) !== null && _d !== void 0 ? _d : false;
-        item.className = (_e = options.className) !== null && _e !== void 0 ? _e : "";
-        item.exec = options.exec;
-    };
-    MenuManager.prototype.getTarget = function (target, callback) {
-        while (target) {
-            if (target.$host && (!callback || callback(target)))
-                return target;
-            target = target.parentElement;
-        }
-        return;
-    };
-    MenuManager.prototype.bindKeys = function () {
-        function isMenuBarItem(node) {
-            return node.classList.contains("menuButton");
-        }
-        function isMenuPopupActiveItem(node) {
-            return node.classList.contains("menu_item") && !node.classList.contains("disabled") && !node.isFiltered;
-        }
-        function menuKeyDown(menuManager) {
-            var _a;
-            var menuPopup = (_a = menuManager.activeMenu) === null || _a === void 0 ? void 0 : _a.getLastOpenPopup();
-            if (!menuPopup)
-                return;
-            var menu = menuPopup.selectedMenu ? menuPopup.selectedMenu.buttonElement : null;
-            var nextMenu = getNextSibling(menu, isMenuPopupActiveItem, menuPopup.element);
-            menuPopup.moveOnTarget(nextMenu);
-            menuPopup.scrollIfNeeded();
-        }
-        var menuKb = new hash_handler_1.HashHandler([
-            {
-                bindKey: "Esc",
-                name: "Esc",
-                exec: function (menuManager) {
-                    if (menuManager.searchBox && menuManager.searchBox.isOpen) {
-                        menuManager.searchBox.close();
-                        return;
-                    }
-                    var activeMenu = menuManager.activeMenu;
-                    if (!activeMenu.menuPopup && activeMenu !== menuManager.menuBar) {
-                        activeMenu.close();
-                        menuManager.inactivateMenu();
-                    }
-                    else {
-                        activeMenu.closeLastMenu();
-                        if (!activeMenu.menuPopup && activeMenu === menuManager.menuBar) {
-                            menuManager.inactivateMenu();
-                        }
-                    }
-                }
-            }, {
-                bindKey: "Left",
-                name: "Left",
-                exec: function (menuManager) {
-                    var activeMenu = menuManager.activeMenu;
-                    activeMenu.closeLastMenu();
-                    if (!activeMenu.menuPopup) {
-                        if (activeMenu === menuManager.menuBar) {
-                            var prevMenu = getPrevSibling(activeMenu.selectedMenu.buttonElement, isMenuBarItem);
-                            if (prevMenu) {
-                                activeMenu.moveOnTarget(prevMenu);
-                            }
-                        }
-                        else if (!activeMenu.element) {
-                            menuManager.inactivateMenu();
-                        }
-                    }
-                }
-            }, {
-                bindKey: "Right",
-                name: "Right",
-                exec: function (menuManager) {
-                    function moveToNextOnBar() {
-                        if (menuManager.activeMenu !== menuManager.menuBar) {
-                            return;
-                        }
-                        var nextMenu = getNextSibling(menuManager.menuBar.selectedMenu.buttonElement, isMenuBarItem);
-                        if (nextMenu) {
-                            menuManager.menuBar.moveOnTarget(nextMenu);
-                        }
-                    }
-                    var menuPopup = menuManager.activeMenu.getLastOpenPopup();
-                    var menu = menuManager.activeMenu.getLastSelectedMenu();
-                    if (!menu) {
-                        return;
-                    }
-                    var moveToNext = !menu.map || (menuManager.activeMenu === menuManager.menuBar && !menuManager.activeMenu.menuPopup.selectedMenu);
-                    if (!moveToNext && ((!menuPopup.selectedMenu && (menuManager.activeMenu.menuPopup !== menuPopup || menuManager.activeMenu !== menuPopup))
-                        || menuPopup.selectedMenu === menu)) {
-                        var isNewOpened = false;
-                        if (menuPopup.selectedMenu === menu) {
-                            menuPopup.openMenu();
-                            isNewOpened = true;
-                        }
-                        menuKeyDown(menuManager);
-                        if (!isNewOpened && !menuPopup.selectedMenu) {
-                            moveToNext = true;
-                        }
-                    }
-                    if (moveToNext) {
-                        moveToNextOnBar();
-                    }
-                }
-            }, {
-                bindKey: "Enter",
-                name: "Enter",
-                exec: function (menuManager) {
-                    var menuPopup = menuManager.activeMenu.getLastOpenPopup();
-                    var menu = menuManager.activeMenu.getLastSelectedMenu();
-                    if (menu && menu.map && menuPopup.selectedMenu === menu) {
-                        menuPopup.openMenu();
-                    }
-                }
-            }, {
-                bindKey: "Up",
-                name: "Up",
-                exec: function (menuManager) {
-                    var menuPopup = menuManager.activeMenu.getLastOpenPopup();
-                    var menu = menuPopup.selectedMenu ? menuPopup.selectedMenu.buttonElement : null;
-                    var prevMenu = getPrevSibling(menu, isMenuPopupActiveItem, menuPopup.element);
-                    menuPopup.moveOnTarget(prevMenu);
-                    menuPopup.scrollIfNeeded();
-                }
-            }, {
-                bindKey: "Backspace",
-                name: "Backspace",
-                exec: function (menuManager) {
-                    menuManager.searchBox.removeSymbol();
-                }
-            }, {
-                bindKey: "Down",
-                name: "Down",
-                exec: menuKeyDown
-            }
-        ]);
-        var _this = this;
-        event.addCommandKeyListener(window, function (e, hashId, keyCode) {
-            if (!_this.isActive) {
-                return;
-            }
-            event.stopEvent(e);
-            var keyString = keyUtil.keyCodeToString(keyCode);
-            var command = menuKb.findKeyCommand(hashId, keyString);
-            if (command) {
-                command.exec(_this);
-            }
-            else if (e.key.length === 1) {
-                MenuManager.getInstance().addSymbolToSearchBox(e.key);
-            }
-        });
-    };
-    MenuManager.prototype.build = function () {
-        window.addEventListener("contextmenu", this.onContextMenuOpen);
-    };
-    MenuManager.prototype.buildMenuBar = function (parent) {
-        this.menuBar = new menu_1.MenuBar();
-        this.menuBar.menus = this.menus;
-        this.menuBar.menuManager = this;
-        this.menuBar.build(parent);
-    };
-    MenuManager.prototype.openMenuByPath = function (path, position) {
-        if (typeof path === "string")
-            path = path.split("/");
-        if (path[0] && path[0].length) { //TODO context menu
-            this.activeMenu = this.menuBar;
-        }
-        else {
-            this.activeMenu = new menu_1.MenuPopup();
-            this.activeMenu.menuManager = this;
-            this.activeMenu.position = position;
-            this.activeMenu.menu = this.find(path);
-            this.activeMenu.open();
-        }
-        this.activateMenu();
-        this.activeMenu.openMenuByPath(path);
-    };
-    MenuManager.prototype.activateMenu = function () {
-        var _a;
-        this.isActive = true;
-        window.addEventListener("mousedown", this.onMouseDown);
-        window.addEventListener("mousemove", this.onMouseMove);
-        window.addEventListener("resize", this.onWindowResize);
-        if ((_a = this.activeMenu) === null || _a === void 0 ? void 0 : _a.activateMenu)
-            this.activeMenu.activateMenu();
-    };
-    MenuManager.prototype.inactivateMenu = function () {
-        var _a;
-        this.isActive = false;
-        window.removeEventListener("mousedown", this.onMouseDown);
-        window.removeEventListener("mousemove", this.onMouseMove);
-        window.removeEventListener("resize", this.onWindowResize);
-        if ((_a = this.activeMenu) === null || _a === void 0 ? void 0 : _a.inactivateMenu)
-            this.activeMenu.inactivateMenu();
-        this.activeMenu = undefined;
-        if (this.searchBox)
-            this.searchBox.close();
-        this.currentHost = null;
-    };
-    MenuManager.prototype.addSymbolToSearchBox = function (symbol) {
-        if (!this.searchBox || !this.searchBox.isOpen) {
-            this.openSearchBox();
-        }
-        this.searchBox.addSymbol(symbol);
-    };
-    MenuManager.prototype.openSearchBox = function () {
-        var _a;
-        if (!this.searchBox) {
-            this.searchBox = new menu_1.MenuSearchBox();
-            this.searchBox.menuManager = this;
-        }
-        this.searchBox.setParentPopup((_a = this.activeMenu) === null || _a === void 0 ? void 0 : _a.getLastOpenPopup());
-        this.searchBox.open();
-    };
-    return MenuManager;
-}());
-exports.MenuManager = MenuManager;
-var MenuItems = /** @class */ (function () {
-    function MenuItems() {
-    }
-    return MenuItems;
-}());
-exports.MenuItems = MenuItems;
-
-
-/***/ }),
-
-/***/ 23429:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Panel = void 0;
-var panelManager_1 = __webpack_require__(38404);
-var dom_1 = __webpack_require__(91444);
-var panelCSS = __webpack_require__(58659);
-var tabPanel_1 = __webpack_require__(41074);
-dom_1.dom.importCssString(panelCSS, "panel.css");
-var Panel = /** @class */ (function (_super) {
-    __extends(Panel, _super);
-    function Panel(options) {
-        var _this = this;
-        var _a;
-        _this = _super.call(this, options) || this;
-        _this.location = options.location;
-        _this.panelBody = options.panelBody;
-        _this.autoHide = (_a = options.autoHide) !== null && _a !== void 0 ? _a : false;
-        _this.title = options.title;
-        return _this;
-    }
-    Panel.prototype.activate = function () {
-        _super.prototype.activate.call(this);
-        panelManager_1.PanelManager.getInstance().activatePanel(this);
-    };
-    Panel.prototype.deactivate = function () {
-        _super.prototype.deactivate.call(this);
-        panelManager_1.PanelManager.getInstance().deactivatePanel(this);
-    };
-    Panel.prototype.render = function () {
-        this.element = dom_1.dom.buildDom(["div", {
-                class: "panelButton" + (this.active ? " active" : ""),
-            }, ["span", {
-                    class: "panelTitle"
-                }, this.title]]);
-        this.element.$host = this;
-        return this.element;
-    };
-    Panel.prototype.toJSON = function () {
-        return {
-            active: this.active,
-            title: this.title,
-            autoHide: this.autoHide,
-            panelBody: this.panelBody.toJSON(),
-        };
-    };
-    Panel.prototype.remove = function () {
-    };
-    return Panel;
-}(tabPanel_1.TabPanel));
-exports.Panel = Panel;
-
-
-/***/ }),
-
-/***/ 38404:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.PanelManager = void 0;
-var box_1 = __webpack_require__(95561);
-var accordion_1 = __webpack_require__(29930);
-var panelBar_1 = __webpack_require__(44526);
-var PanelManager = /** @class */ (function () {
-    function PanelManager(options) {
-        this.layout = options.layout;
-        this.locations = options.locations;
-    }
-    PanelManager.getInstance = function (options) {
-        if (!PanelManager._instance)
-            PanelManager._instance = new PanelManager(options);
-        return PanelManager._instance;
-    };
-    PanelManager.prototype.toJSON = function () {
-        return {
-            panelBars: this.panelBarsToJSON()
-        };
-    };
-    PanelManager.prototype.panelBarsToJSON = function () {
-        var panelBars = {};
-        for (var _i = 0, _a = Object.entries(this.layout.toolBars); _i < _a.length; _i++) {
-            var _b = _a[_i], position = _b[0], panelBar = _b[1];
-            if (panelBar instanceof panelBar_1.PanelBar)
-                panelBars[position] = panelBar.toJSON();
-        }
-        return panelBars;
-    };
-    PanelManager.prototype.setState = function (state) {
-        var _a;
-        var panelBars = (_a = state.panelBars) !== null && _a !== void 0 ? _a : {};
-        var panelBar, panelList, panel;
-        var panelBody, panelBodyData;
-        for (var _i = 0, _b = Object.keys(panelBars); _i < _b.length; _i++) {
-            var position = _b[_i];
-            panelList = [];
-            var tabList = panelBars[position].tabList;
-            for (var i = 0; i < tabList.length; i++) {
-                panel = tabList[i];
-                panelBodyData = panel.panelBody;
-                if (panelBodyData.type === "accordion") { //todo
-                    var accordionSections = [];
-                    var sections = panelBodyData.sections;
-                    for (var index = 0; index < sections.length; index++) {
-                        accordionSections.push({
-                            title: sections[index].title,
-                            box: new box_1.Box(sections[index].boxData)
-                        });
-                    }
-                    panelBody = new accordion_1.Accordion({
-                        vertical: panelBodyData.vertical,
-                        size: panelBodyData.size,
-                        sections: accordionSections
-                    });
-                }
-                else {
-                    panelBody = new box_1.Box({
-                        vertical: panelBodyData.type === "vbox",
-                        color: panelBodyData.color,
-                        size: panelBodyData.size,
-                        hidden: panelBodyData.hidden,
-                        fixedSize: panelBodyData.fixedSize
-                    });
-                }
-                panelList.push({
-                    active: panel.active,
-                    title: panel.title,
-                    autoHide: panel.autoHide,
-                    panelBody: panelBody,
-                });
-            }
-            panelBar = new panelBar_1.PanelBar({ panelList: {} });
-            this.layout.addToolBar(position, panelBar);
-            panelBar.addTabList(panelList);
-        }
-    };
-    PanelManager.prototype.activatePanel = function (panel) {
-        var location = this.locations[panel.parent.position];
-        if (!location)
-            return;
-        var index = location.index;
-        var parent = location.parent;
-        panel.panelBody.size = location.size;
-        var newBox = parent.addChildBox(index, panel.panelBody);
-        if (newBox.fixedSize && !parent.fixedChild)
-            parent.fixedChild = newBox;
-        location.box = newBox;
-        newBox.show();
-    };
-    PanelManager.prototype.deactivatePanel = function (panel) {
-        var location = this.locations[panel.parent.position];
-        location === null || location === void 0 ? void 0 : location.box.hide();
-    };
-    return PanelManager;
-}());
-exports.PanelManager = PanelManager;
-
-
-/***/ }),
-
-/***/ 94271:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Tab = void 0;
-var tabManager_1 = __webpack_require__(58923);
-var dom_1 = __webpack_require__(91444);
-var tabCSS = __webpack_require__(87757);
-var params_1 = __webpack_require__(60524);
-var tabPanel_1 = __webpack_require__(41074);
-dom_1.dom.importCssString(tabCSS, "tab.css");
-var Tab = /** @class */ (function (_super) {
-    __extends(Tab, _super);
-    function Tab(options) {
-        var _this = this;
-        var _a, _b, _c;
-        _this = _super.call(this, options) || this;
-        _this.contextMenu = "tabs";
-        _this.tabIcon = (_a = options.icon) !== null && _a !== void 0 ? _a : "";
-        _this.path = options.path;
-        _this.preview = (_b = options.preview) !== null && _b !== void 0 ? _b : false;
-        _this.editorType = (_c = options.editorType) !== null && _c !== void 0 ? _c : params_1.EditorType.ace;
-        return _this;
-    }
-    Tab.prototype.toJSON = function () {
-        return {
-            title: this.title,
-            icon: this.tabIcon || undefined,
-            active: this.active || undefined,
-            path: this.path,
-            preview: this.preview || undefined,
-            editorType: this.editorType
-        };
-    };
-    Tab.prototype.activate = function (content) {
-        _super.prototype.activate.call(this);
-        this.activatePane();
-        var tabManager = tabManager_1.TabManager.getInstance();
-        tabManager.loadFile(this, content);
-        tabManager.activePane.resize();
-    };
-    Tab.prototype.activatePane = function () {
-        var _a;
-        tabManager_1.TabManager.getInstance().activePane = (_a = this.parent) === null || _a === void 0 ? void 0 : _a.parent;
-    };
-    Tab.prototype.remove = function () {
-        var _a;
-        (_a = this.parent) === null || _a === void 0 ? void 0 : _a.closeTab(this);
-    };
-    Object.defineProperty(Tab.prototype, "caption", {
-        get: function () {
-            return this.$caption;
-        },
-        set: function (value) {
-            this.$caption = value;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Tab.prototype.render = function () {
-        this.element = dom_1.dom.buildDom(["div",
-            {
-                class: "tab" + (this.active ? " active" : ""),
-                title: this.path
-            },
-            ["span", { class: "tabIcon" }, this.tabIcon],
-            ["span", { class: "tabTitle", ref: "$title" }, this.title],
-            ["span", { class: "tabCloseButton" }],
-        ], undefined, this);
-        if (this.preview)
-            this.element.style.fontStyle = "italic";
-        this.element.$host = this;
-        return this.element;
-    };
-    Tab.prototype.setTitle = function (title) {
-        this.title = title;
-        this.element.getElementsByClassName("tabTitle")[0].innerHTML = title;
-    };
-    Object.defineProperty(Tab.prototype, "isActive", {
-        get: function () {
-            var _a;
-            return ((_a = this.parent) === null || _a === void 0 ? void 0 : _a.activeTab) == this;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Tab.prototype, "editor", {
-        get: function () {
-            var _a;
-            return (_a = this.parent) === null || _a === void 0 ? void 0 : _a.parent.getEditor(this.editorType);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return Tab;
-}(tabPanel_1.TabPanel));
-exports.Tab = Tab;
-
-
-/***/ }),
-
-/***/ 58923:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabManager = void 0;
-var tabCommands_1 = __webpack_require__(20682);
-var box_1 = __webpack_require__(95561);
-var oop = __webpack_require__(89359);
-var event_emitter_1 = __webpack_require__(23056);
-var useragent = __webpack_require__(50618);
-var tab_1 = __webpack_require__(94271);
-var pane_1 = __webpack_require__(29659);
-var menuManager_1 = __webpack_require__(2505);
-var commandManager_1 = __webpack_require__(9300);
-var newTabCounter = 1;
-var TabManager = /** @class */ (function () {
-    function TabManager(options) {
-        var _this = this;
-        this.$setBoxState = function (box, state) {
-            if (!box)
-                return;
-            box.removeAllChildren();
-            _this.setBoxData(box, state);
-            if (!box[0] && box.isMain)
-                _this.setChildBoxData(box, [{ type: "pane" }], 0);
-        };
-        this.containers = options.containers;
-        this.tabs = {};
-        this.fileSystem = options.fileSystem;
-        this.commandsInit();
-    }
-    TabManager.getInstance = function (options) {
-        if (!TabManager._instance)
-            TabManager._instance = new TabManager(options);
-        return TabManager._instance;
-    };
-    TabManager.prototype.commandsInit = function () {
-        menuManager_1.MenuManager.getInstance().addByPath("/context/tabs");
-        var commandsKeys = [];
-        for (var _i = 0, tabCommands_2 = tabCommands_1.tabCommands; _i < tabCommands_2.length; _i++) {
-            var command = tabCommands_2[_i];
-            if (command.exec !== undefined) {
-                menuManager_1.MenuManager.getInstance().addByPath("/context/tabs/" + command.name, {
-                    position: command.position,
-                    hotKey: (useragent.isMac ? command.mac : command.win),
-                    exec: command.exec
-                });
-                commandsKeys.push({
-                    bindKey: {
-                        win: command.win,
-                        mac: command.mac
-                    },
-                    exec: command.exec
-                });
-            }
-        }
-        commandManager_1.CommandManager.registerCommands(commandsKeys, this);
-    };
-    TabManager.prototype.toJSON = function () {
-        var _this = this;
-        var containers = Object.keys(this.containers);
-        return Object.fromEntries(containers.map(function (container) { var _a; return [container, (_a = _this.containers[container]) === null || _a === void 0 ? void 0 : _a.toJSON()]; }));
-    };
-    TabManager.prototype.setChildBoxData = function (box, boxData, index) {
-        if (!boxData[index])
-            return;
-        var boxType = boxData[index].type;
-        if (!box[index])
-            box.addChildBox(index, boxType === "pane" ? new pane_1.Pane() : new box_1.Box({ vertical: boxType === "vbox" }));
-        this.setBoxData(box[index], boxData[index]);
-    };
-    TabManager.prototype.setBoxData = function (box, boxData) {
-        var _this = this;
-        if (!boxData)
-            return;
-        if (boxData.fixedSize)
-            box.fixedSize = boxData.fixedSize;
-        if (box instanceof pane_1.Pane) {
-            if (boxData.tabBar) {
-                box.tabBar.scrollLeft = boxData.tabBar.scrollLeft;
-                if (boxData.tabBar.tabList) {
-                    box.tabBar.freeze = true;
-                    boxData.tabBar.tabList.forEach(function (tabData) {
-                        var tab = box.tabBar.addTab(new tab_1.Tab(tabData));
-                        _this.tabs[tab.path] = tab;
-                        if (tab.preview)
-                            _this.previewTab = tab;
-                    });
-                    box.tabBar.freeze = false;
-                    box.tabBar.configure();
-                }
-            }
-        }
-        else {
-            box.hidden = boxData.hidden;
-            box.ratio = boxData.ratio;
-            this.setChildBoxData(box, boxData, 0);
-            this.setChildBoxData(box, boxData, 1);
-        }
-    };
-    TabManager.prototype.setState = function (state) {
-        this.activePane = undefined;
-        this.tabs = {};
-        this.previewTab = undefined;
-        for (var container in this.containers) {
-            this.setContainerState(container, state[container]);
-        }
-    };
-    TabManager.prototype.setContainerState = function (container, state) {
-        this.$setBoxState(this.containers[container], state);
-    };
-    TabManager.prototype.clear = function () {
-    };
-    TabManager.prototype.getPanes = function () {
-    };
-    TabManager.prototype.getTabs = function () {
-        return this.tabs;
-    };
-    Object.defineProperty(TabManager.prototype, "activeTab", {
-        get: function () {
-            var _a;
-            return (_a = this.activePane) === null || _a === void 0 ? void 0 : _a.tabBar.activeTab;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    TabManager.prototype.open = function (tabOptions, container, fileContent) {
-        var _a;
-        var tab = this.tabs[tabOptions.path];
-        tabOptions.active = (_a = tabOptions.active) !== null && _a !== void 0 ? _a : true;
-        if (!tab || !tab.parent) {
-            var pane = void 0;
-            if (container) {
-                pane = this.getContainerPane(container);
-            }
-            else {
-                pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane
-                    : this.getContainerPane("main");
-            }
-            if (this.previewTab)
-                this.previewTab.remove();
-            tab = pane.tabBar.addTab(new tab_1.Tab(tabOptions), undefined, fileContent);
-            if (tabOptions.preview)
-                this.previewTab = tab;
-            tab.parent.scrollTabIntoView(tab);
-            this.tabs[tab.path] = tab;
-        }
-        if (!tabOptions.preview) {
-            if (this.previewTab == tab) {
-                this.clearPreviewStatus(tab);
-            }
-            else if (this.previewTab) {
-                this.previewTab.remove();
-            }
-        }
-        tab.parent.removeSelections();
-        //TODO: duplicate of activateTab?
-        tab.parent.activateTab(tab, fileContent);
-        return tab;
-    };
-    TabManager.prototype.getContainerPane = function (container) {
-        return this.containers[container].element.querySelector(".tabPanel").$host;
-    };
-    TabManager.prototype.clearPreviewStatus = function (tab) {
-        tab.preview = false;
-        tab.element.style.fontStyle = "";
-        if (this.previewTab == tab)
-            this.previewTab = undefined;
-    };
-    Object.defineProperty(TabManager.prototype, "newTabPath", {
-        get: function () {
-            return "untitled_".concat(newTabCounter);
-        },
-        enumerable: false,
-        configurable: true
-    });
-    TabManager.prototype.addNewTab = function (pane, options) {
-        while (this.tabs.hasOwnProperty(this.newTabPath)) {
-            newTabCounter++;
-        }
-        options !== null && options !== void 0 ? options : (options = { title: "Untitled ".concat(newTabCounter), path: this.newTabPath });
-        options.active = true;
-        var newTab = pane.tabBar.addTab(new tab_1.Tab(options));
-        this.tabs[this.newTabPath] = newTab;
-        return newTab;
-    };
-    ;
-    TabManager.prototype.removeTab = function (tab) {
-        delete this.tabs[tab.path];
-    };
-    //TODO: move to separate class
-    TabManager.prototype.loadFile = function (tab, fileContent) {
-        var editor = tab.parent.parent.getOrCreateEditor(tab.editorType);
-        editor.setSession(tab, fileContent);
-    };
-    ;
-    TabManager.prototype.navigateToTab = function (index, tab, tabs) {
-        var _a;
-        var tabsList = tabs || this.tabs;
-        var activeTab = tab || this.activeTab;
-        //TODO: seems we need better `activate` method for Tab
-        if (index >= 0 && tabsList.length > index)
-            (_a = activeTab === null || activeTab === void 0 ? void 0 : activeTab.parent) === null || _a === void 0 ? void 0 : _a.activateTab(tabsList[index], undefined, true);
-    };
-    TabManager.prototype.saveTo = function (storage) {
-        for (var _i = 0, _a = Object.entries(this.tabs); _i < _a.length; _i++) {
-            var _b = _a[_i], path = _b[0], tab = _b[1];
-            storage["@file@" + path] = tab.session ? tab.editor.sessionToJSON(tab) : tab.sessionValue;
-        }
-    };
-    TabManager.prototype.restoreFrom = function (storage) {
-        for (var _i = 0, _a = Object.entries(this.tabs); _i < _a.length; _i++) {
-            var _b = _a[_i], path = _b[0], tab = _b[1];
-            tab.sessionValue = storage["@file@" + path];
-            if (tab.session)
-                tab.editor.restoreSessionFromJson(tab);
-        }
-    };
-    TabManager.prototype.getTab = function (path) {
-        return this.tabs[path];
-    };
-    return TabManager;
-}());
-exports.TabManager = TabManager;
-oop.implement(TabManager.prototype, event_emitter_1.EventEmitter);
-
-
-/***/ }),
-
-/***/ 41074:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabPanel = void 0;
-var TabPanel = /** @class */ (function () {
-    function TabPanel(options) {
-        var _a;
-        this.active = (_a = options.active) !== null && _a !== void 0 ? _a : false;
-        this.title = options.title;
-    }
-    TabPanel.prototype.activate = function () {
-        this.active = true;
-        this.element.classList.add("active");
-    };
-    TabPanel.prototype.deactivate = function () {
-        this.active = false;
-        this.element.classList.remove("active");
-    };
-    return TabPanel;
-}());
-exports.TabPanel = TabPanel;
-
-
-/***/ }),
-
-/***/ 22177:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.MenuToolbar = void 0;
-var toolbar_1 = __webpack_require__(5527);
-var dom_1 = __webpack_require__(91444);
-var menuManager_1 = __webpack_require__(2505);
-var MenuToolbar = /** @class */ (function (_super) {
-    __extends(MenuToolbar, _super);
-    function MenuToolbar() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MenuToolbar.prototype.render = function () {
-        if (!this.element) {
-            this.element = dom_1.dom.buildDom(["div", {
-                    class: "menuToolBar",
-                }, [
-                    "div", {
-                        class: "menuBar",
-                        ref: "menuBar"
-                    }
-                ]], undefined, this);
-            var menuManager = menuManager_1.MenuManager.getInstance();
-            menuManager.build();
-            menuManager.buildMenuBar(this.menuBar);
-            menuManager.bindKeys();
-        }
-        return this.element;
-    };
-    MenuToolbar.prototype.remove = function () {
-    };
-    MenuToolbar.prototype.toJSON = function () {
-    };
-    return MenuToolbar;
-}(toolbar_1.Toolbar));
-exports.MenuToolbar = MenuToolbar;
-
-
-/***/ }),
-
-/***/ 44526:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.PanelBar = void 0;
-var tabPanelBar_1 = __webpack_require__(59892);
-var dom_1 = __webpack_require__(91444);
-var tabbar_handler_1 = __webpack_require__(21649);
-var panel_1 = __webpack_require__(23429);
-var PanelBar = /** @class */ (function (_super) {
-    __extends(PanelBar, _super);
-    function PanelBar() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    PanelBar.prototype.setBox = function (x, y, w, h) {
-        _super.prototype.setBox.call(this, x, y, w, h);
-        this.configure();
-    };
-    PanelBar.prototype.configure = function () {
-        var tabElement;
-        var tabSize = 30; //TODO
-        var position = 0;
-        for (var i = 0; i < this.tabList.length; i++) {
-            tabElement = this.tabList[i].element;
-            if (this.draggingElementIndex === i)
-                position += this.getDraggingElementSize();
-            if (this.isVertical()) {
-                tabElement.style.left = 0 + "px";
-                tabElement.style.height = tabSize + "px";
-                tabElement.style.top = position + "px";
-            }
-            else {
-                tabElement.style.top = 0 + "px";
-                tabElement.style.width = tabSize + "px";
-                tabElement.style.left = position + "px";
-            }
-            position += tabSize;
-        }
-    };
-    PanelBar.prototype.render = function () {
-        var _this = this;
-        if (!this.element) {
-            this.element = dom_1.dom.buildDom(["div", {
-                    class: "panelbar " + this.direction + " " + this.position,
-                }, ["div", {
-                        class: "tabContainer",
-                        ref: "tabContainer",
-                        onmousedown: function (e) {
-                            tabbar_handler_1.TabbarHandler.tabbarMouseDown(e, panel_1.Panel, PanelBar);
-                        },
-                        onmouseup: function (e) {
-                            if (_this.activeTabClicked) {
-                                var activeTab = _this.activeTab;
-                                _this.removeSelection(activeTab);
-                                activeTab.deactivate();
-                                _this.activeTab = undefined;
-                                if (_this.activeTabHistory.length && activeTab.autoHide) {
-                                    var previousTab = activeTab;
-                                    while (previousTab === activeTab && _this.activeTabHistory.length) {
-                                        previousTab = _this.activeTabHistory.pop();
-                                    }
-                                    if (previousTab !== activeTab)
-                                        _this.activateTab(previousTab);
-                                }
-                            }
-                        },
-                    }]], undefined, this);
-        }
-        if (this.initTabList && this.initTabList.length) {
-            for (var i = 0; i < this.initTabList.length; i++) {
-                this.addTab(this.initTabList[i]);
-            }
-        }
-        this.element.$host = this;
-        return this.element;
-    };
-    PanelBar.prototype.addTabList = function (tabList, index) {
-        index = index || this.tabList.length;
-        var tab;
-        for (var i = 0; i < tabList.length; i++) {
-            tab = new panel_1.Panel(tabList[i]);
-            this.addTab(tab, index++);
-        }
-    };
-    PanelBar.prototype.remove = function () {
-    };
-    return PanelBar;
-}(tabPanelBar_1.TabPanelBar));
-exports.PanelBar = PanelBar;
-
-
-/***/ }),
-
-/***/ 62277:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabBar = void 0;
-var lib_1 = __webpack_require__(80930);
-var dom_1 = __webpack_require__(91444);
-var tabbar_handler_1 = __webpack_require__(21649);
-var tabManager_1 = __webpack_require__(58923);
-var tabPanelBar_1 = __webpack_require__(59892);
-var tab_1 = __webpack_require__(94271);
-var TabBar = /** @class */ (function (_super) {
-    __extends(TabBar, _super);
-    function TabBar() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.inverted = true;
-        _this.buttonsWidth = 0;
-        _this.buttons = [];
-        _this.onTabMouseUp = function (e) {
-            if (e.button == 1) {
-                var tab = lib_1.Utils.findHost(e.target, tab_1.Tab);
-                if (tab)
-                    tab.remove();
-            }
-        };
-        _this.onTabMouseDown = function (e) {
-            if (e.button == 0)
-                tabbar_handler_1.TabbarHandler.tabbarMouseDown(e, tab_1.Tab, TabBar, true);
-        };
-        _this.onTabPlusClick = function (e) {
-            _this.removeSelections();
-            tabManager_1.TabManager.getInstance().addNewTab(_this.parent);
-        };
-        _this.onTabClick = function (e) {
-            var target = e.target;
-            var tab = lib_1.Utils.findHost(target, tab_1.Tab);
-            if (tab) {
-                if (e.button == 0 && target.classList.contains("tabCloseButton")) {
-                    _this.closeTab(tab);
-                }
-                else if (e.button == 0 && tab.isActive && tab.editor) {
-                    tab.editor.focus();
-                }
-                else if (e.button == 1) {
-                    tab.remove();
-                }
-            }
-        };
-        return _this;
-    }
-    TabBar.prototype.setBox = function (x, y, w, h) {
-        _super.prototype.setBox.call(this, x, y, w, h);
-        this.width = w;
-        this.configure();
-    };
-    TabBar.prototype.renderElement = function () {
-        this.element = dom_1.dom.buildDom(["div", {
-                class: "tabbar " + this.direction,
-                onwheel: this.onMouseWheel,
-                $host: this,
-            },
-            ["span", { class: "tabMenuButton" }],
-            [
-                "div",
-                {
-                    class: "tabScroller",
-                },
-                ["div", {
-                        class: "tabContainer",
-                        ref: "tabContainer",
-                        onclick: this.onTabClick,
-                        onmouseup: this.onTabMouseUp,
-                        onmousedown: this.onTabMouseDown,
-                    }]
-            ],
-            ["span", {
-                    class: "tabPlusButton",
-                    ref: "tabPlusButton",
-                    onclick: this.onTabPlusClick
-                }, "+"],
-            ["span", {
-                    class: "sizer"
-                }],
-            ["span", {
-                    class: "buttons",
-                    ref: "additionalButtons"
-                }],
-        ], undefined, this);
-        if (this.initTabList && this.initTabList.length) {
-            for (var i = 0; i < this.initTabList.length; i++) {
-                this.addTab(this.initTabList[i]);
-            }
-        }
-    };
-    TabBar.prototype.render = function () {
-        if (!this.element)
-            this.renderElement();
-        return this.element;
-    };
-    TabBar.prototype.computeConfig = function () {
-        var draggingElementSize = this.getDraggingElementSize();
-        this.plusButtonWidth = this.tabPlusButton.getBoundingClientRect().width;
-        this.containerWidth = this.width - this.plusButtonWidth - this.buttonsWidth;
-        var tabsCount = this.tabList.length;
-        if (tabsCount * this.MAX_TAB_SIZE + draggingElementSize < this.containerWidth) {
-            this.tabWidth = this.MAX_TAB_SIZE;
-            this.containerWidth = tabsCount * this.tabWidth + draggingElementSize;
-        }
-        else if (tabsCount * this.MIN_TAB_SIZE + draggingElementSize < this.containerWidth) {
-            this.tabWidth = (this.containerWidth - draggingElementSize) / tabsCount;
-        }
-        else {
-            this.tabWidth = this.MIN_TAB_SIZE;
-        }
-        var tabsWidth = this.tabWidth * tabsCount + draggingElementSize;
-        this.scrollLeft = Math.min(Math.max(this.scrollLeft, 0), tabsWidth - this.containerWidth);
-    };
-    TabBar.prototype.configure = function () {
-        if (!this.width || this.freeze)
-            return;
-        var shadowWidth = 4;
-        this.computeConfig();
-        this.tabContainer.style.width = this.containerWidth + "px";
-        var draggingElementSize = this.getDraggingElementSize();
-        if (this.inverted) {
-            var zIndex = this.tabList.length;
-            var min = shadowWidth - this.tabWidth;
-            var max = this.containerWidth;
-            var maxPos = (max - this.tabWidth) / 2;
-            var i = 0;
-            for (; i < this.tabList.length; i++) {
-                var tab = this.tabList[i];
-                var el = tab.element;
-                var pos = this.tabWidth * i - this.scrollLeft;
-                if (this.tabDraggingElement && i >= this.draggingElementIndex) {
-                    pos += draggingElementSize;
-                }
-                if (tab === this.activeTab) {
-                    var activeMin = Math.max(min + this.tabWidth * 0.25, -this.tabWidth * 0.75);
-                    if (pos < activeMin)
-                        min = activeMin;
-                }
-                if (pos < min) {
-                    pos = min;
-                    min += shadowWidth;
-                    el.classList.add("scrolledLeft");
-                }
-                else if (pos > maxPos) {
-                    break;
-                }
-                else {
-                    el.classList.remove("scrolledLeft");
-                }
-                el.style.width = this.tabWidth + "px";
-                el.style.zIndex = String(zIndex);
-                zIndex--;
-                this.transform(el, pos, 0);
-            }
-            var lastRendered = i;
-            zIndex = this.tabList.length;
-            for (var i_1 = this.tabList.length - 1; i_1 >= lastRendered; i_1--) {
-                var tab = this.tabList[i_1];
-                var el = tab.element;
-                var pos = this.tabWidth * i_1 - this.scrollLeft;
-                if (this.tabDraggingElement && i_1 >= this.draggingElementIndex) {
-                    pos += draggingElementSize;
-                }
-                if (tab === this.activeTab) {
-                    var activeMax = Math.min(max - this.tabWidth * 0.25, this.containerWidth - this.tabWidth * 0.25);
-                    if (pos > activeMax)
-                        max = activeMax;
-                }
-                if (pos > max) {
-                    pos = max;
-                    max -= shadowWidth;
-                    el.classList.add("scrolledLeft");
-                }
-                else {
-                    el.classList.remove("scrolledLeft");
-                }
-                el.style.width = this.tabWidth + "px";
-                el.style.zIndex = String(zIndex);
-                zIndex--;
-                this.transform(el, pos, 0);
-            }
-        }
-        else {
-            /*let min = 0;
-            let max = containerWidth - w;
-            let zIndex = 0
-            let zdir = 1
-            for (let i = 0; i < this.tabs.length; i++){
-                let tab = this.tabs[i];
-                let el = tab.element
-                let pos = -this.scrollPos + w * i
-                if (tab == this.activeTab) {
-                    zdir = -1
-                    zIndex = this.tabs.length
-                }
-                if (pos < min) {
-                    pos = min
-                    min += 4
-
-                } else if (pos > max/2) {
-                    break;
-                }
-
-                el.style.zIndex = zIndex
-                zIndex += zdir
-
-                translate(el, pos, 0)
-                el.style.width = w - 1 + "px"
-                el.style.transitionDuration = "0s"
-            }
-            let lastRendered = i
-            let zIndex = 0
-            let zdir = 1
-            for (let i = this.tabs.length - 1; i >= lastRendered; i--){
-                let tab = this.tabs[i];
-                let el = tab.element
-                let pos = -this.scrollPos + w * i
-                if (tab == this.activeTab) {
-                    zdir = -1
-                    zIndex = this.tabs.length
-                }
-                if (pos > max) {
-                    pos = max
-                    max -= 4;
-                }
-
-                el.style.zIndex = zIndex
-                zIndex += zdir
-
-                translate(el, pos, 0)
-                el.style.width = w - 1 + "px"
-                el.style.transitionDuration = "0s"
-            }*/
-        }
-    };
-    TabBar.prototype.addButton = function (button) {
-        this.buttons.push(button);
-        this.setButtons(this.buttons);
-    };
-    TabBar.prototype.setButtons = function (buttons) {
-        var _this = this;
-        this.additionalButtons.innerHTML = "";
-        this.buttons = buttons;
-        buttons.forEach(function (button) { return _this.additionalButtons.appendChild(button); });
-        var rect = this.additionalButtons.getBoundingClientRect();
-        this.buttonsWidth = rect.width;
-        this.configure();
-    };
-    TabBar.prototype.removeButtons = function () {
-        if (!this.buttons.length)
-            return;
-        this.buttons = [];
-        this.additionalButtons.innerHTML = "";
-        this.buttonsWidth = 0;
-        this.configure();
-    };
-    TabBar.prototype.clear = function () {
-        this.removeButtons();
-        this.tabList = [];
-    };
-    TabBar.prototype.remove = function () {
-    };
-    TabBar.prototype.closeTab = function (tab) {
-        var index = this.tabList.indexOf(tab);
-        var isActiveTab = this.activeTab === tab;
-        var isAnchorTab = this.anchorTab === tab;
-        this.removeTab(tab);
-        this.removeSelection(tab);
-        if (isActiveTab) {
-            this.activeTab = undefined;
-            this.activatePrevious(index);
-        }
-        if (isAnchorTab)
-            this.anchorTab = null;
-        if (tab.element)
-            tab.element.remove();
-        tabManager_1.TabManager.getInstance().removeTab(tab); //TODO need big refactor for all TabManagement
-        this.configure();
-    };
-    TabBar.prototype.activateTab = function (tab, content, removeSelections) {
-        if (removeSelections === void 0) { removeSelections = false; }
-        removeSelections && this.removeSelections();
-        this.activeTabClicked = false;
-        this.addSelection(tab);
-        if (this.activeTab) {
-            if (this.activeTab === tab) {
-                this.activeTabClicked = true;
-                tab.activatePane();
-                return;
-            }
-            if (this.activeTabHistory.indexOf(this.activeTab) >= 0)
-                this.activeTabHistory.splice(this.activeTabHistory.indexOf(this.activeTab), 1);
-            this.activeTabHistory.push(this.activeTab);
-            this.activeTab.deactivate();
-        }
-        tab.activate(content);
-        this.activeTab = tab;
-        this.configure();
-    };
-    TabBar.prototype.activatePrevious = function (index) {
-        if (this.tabList.length) {
-            var tab = this.tabList[index - 1] || this.tabList[this.tabList.length - 1];
-            this.activateTab(tab);
-        }
-        else if (this.parent) {
-            this.parent.remove();
-        }
-    };
-    return TabBar;
-}(tabPanelBar_1.TabPanelBar));
-exports.TabBar = TabBar;
-
-
-/***/ }),
-
-/***/ 59892:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabPanelBar = void 0;
-var toolbar_1 = __webpack_require__(5527);
-var TabPanelBar = /** @class */ (function (_super) {
-    __extends(TabPanelBar, _super);
-    function TabPanelBar(options) {
-        var _this = this;
-        var _a, _b;
-        _this = _super.call(this, options) || this;
-        _this.selectedTabs = [];
-        _this.tabList = [];
-        _this.scrollLeft = 0;
-        _this.animationSteps = 0;
-        _this.MIN_TAB_SIZE = 120;
-        _this.MAX_TAB_SIZE = 150;
-        _this.activeTabHistory = [];
-        _this.onMouseWheel = function (e) {
-            var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-            if (Math.abs(d) > 50) {
-                _this.animateScroll(d);
-            }
-            else {
-                _this.stopScrollAnimation();
-                _this.setScrollPosition((_this.scrollLeft || 0) + d);
-            }
-        };
-        _this.initTabList = (_b = (_a = options.tabList) !== null && _a !== void 0 ? _a : options.panelList) !== null && _b !== void 0 ? _b : [];
-        return _this;
-    }
-    TabPanelBar.prototype.isVertical = function () {
-        return this.direction === "vertical";
-    };
-    TabPanelBar.prototype.getDraggingElementSize = function () {
-        if (!this.tabDraggingElement)
-            return 0;
-        var draggingElementSize = this.isVertical() ? this.tabDraggingElement.style.height : this.tabDraggingElement.style.width;
-        return parseInt(draggingElementSize, 10);
-    };
-    TabPanelBar.prototype.tabMouseDown = function (tab, expand, toggle) {
-        if (expand === void 0) { expand = false; }
-        if (toggle === void 0) { toggle = false; }
-        if (expand) {
-            this.expandSelection(tab, toggle);
-        }
-        else {
-            this.anchorTab = null;
-            if (toggle) {
-                this.toggleSelection(tab);
-            }
-            else {
-                this.activateTab(tab, undefined, this.selectedTabs.indexOf(tab) < 0);
-            }
-        }
-    };
-    TabPanelBar.prototype.expandSelection = function (tab, toggle) {
-        var _a;
-        var _this = this;
-        if (toggle === void 0) { toggle = false; }
-        if (!this.anchorTab)
-            this.anchorTab = this.activeTab;
-        var prevSelectedTabs = this.selectedTabs;
-        this.selectedTabs = [];
-        var start = this.tabList.indexOf(this.anchorTab);
-        var end = this.tabList.indexOf(tab);
-        if (end < start) {
-            _a = [end, start], start = _a[0], end = _a[1];
-        }
-        for (var i = start; i <= end; i++) {
-            this.addSelection(this.tabList[i]);
-        }
-        prevSelectedTabs.forEach(function (selectedTab) {
-            if (_this.selectedTabs.indexOf(selectedTab) < 0) {
-                if (!toggle) {
-                    _this.deselectTab(selectedTab);
-                }
-                else {
-                    _this.addSelection(selectedTab);
-                }
-            }
-        });
-        this.activateTab(tab);
-    };
-    TabPanelBar.prototype.toggleSelection = function (tab) {
-        var index = this.selectedTabs.indexOf(tab);
-        if (index < 0) {
-            this.activateTab(tab);
-        }
-        else if (tab !== this.activeTab) {
-            this.removeSelection(tab);
-        }
-    };
-    TabPanelBar.prototype.addSelection = function (tab) {
-        if (this.selectedTabs.indexOf(tab) < 0) {
-            this.selectTab(tab);
-            this.selectedTabs.push(tab);
-        }
-    };
-    TabPanelBar.prototype.selectTab = function (tab) {
-        tab.element.classList.add("selected");
-    };
-    TabPanelBar.prototype.deselectTab = function (tab) {
-        tab.element.classList.remove("selected");
-    };
-    TabPanelBar.prototype.removeSelection = function (tab) {
-        if (this.selectedTabs.indexOf(tab) < 0)
-            return;
-        this.deselectTab(tab);
-        this.selectedTabs.splice(this.selectedTabs.indexOf(tab), 1);
-    };
-    TabPanelBar.prototype.removeSelections = function () {
-        var _this = this;
-        this.selectedTabs.forEach(function (selectedTab) {
-            _this.deselectTab(selectedTab);
-        });
-        this.selectedTabs = [];
-    };
-    TabPanelBar.prototype.scrollTabIntoView = function (tab) {
-        var index = this.tabList.indexOf(tab);
-        this.setScrollPosition((index + 1) * this.tabWidth);
-    };
-    TabPanelBar.prototype.activateTab = function (tab, content, removeSelections) {
-        if (removeSelections === void 0) { removeSelections = false; }
-        removeSelections && this.removeSelections();
-        this.activeTabClicked = false;
-        this.addSelection(tab);
-        if (this.activeTab) {
-            if (this.activeTab === tab) {
-                this.activeTabClicked = true;
-                return;
-            }
-            if (this.activeTabHistory.indexOf(this.activeTab) >= 0)
-                this.activeTabHistory.splice(this.activeTabHistory.indexOf(this.activeTab), 1);
-            this.activeTabHistory.push(this.activeTab);
-            this.activeTab.deactivate();
-        }
-        tab.activate();
-        this.activeTab = tab;
-        this.configure();
-    };
-    TabPanelBar.prototype.removeTab = function (tab) {
-        if (tab === this.activeTab)
-            this.activeTab = undefined;
-        var index = this.tabList.indexOf(tab);
-        if (index >= 0)
-            this.tabList.splice(index, 1);
-        tab.parent = undefined;
-    };
-    TabPanelBar.prototype.activatePrevious = function (index) {
-        if (this.tabList.length) {
-            var tab = this.tabList[index - 1] || this.tabList[this.tabList.length - 1];
-            this.activateTab(tab);
-        }
-    };
-    TabPanelBar.prototype.addTab = function (tab, index, content) {
-        if (!tab.element)
-            tab.render();
-        tab.parent = this;
-        if (index === undefined || index === null || index >= this.tabList.length) {
-            this.tabContainer.appendChild(tab.element);
-            this.tabList.push(tab);
-        }
-        else {
-            this.tabContainer.insertBefore(tab.element, this.tabContainer.childNodes[index]);
-            this.tabList.splice(index, 0, tab);
-        }
-        if (tab.active)
-            this.activateTab(tab, content, true);
-        this.configure();
-        return tab;
-    };
-    TabPanelBar.prototype.setScrollPosition = function (scrollLeft) {
-        this.scrollLeft = scrollLeft;
-        this.configure();
-    };
-    TabPanelBar.prototype.animateScroll = function (v) {
-        var _this = this;
-        this.vX = v / 80;
-        this.animationSteps += 15;
-        if (this.animationSteps > 15) {
-            this.vX *= 1.2 * this.animationSteps / 10;
-            this.animationSteps = 15 + Math.ceil((this.animationSteps - 15) * 0.75);
-        }
-        if (this.animationTimer)
-            return;
-        this.animationTimer = setInterval(function () {
-            if (_this.animationSteps-- <= 0) {
-                return _this.stopScrollAnimation();
-            }
-            var vX = _this.vX;
-            if (Math.abs(_this.vX) < 0.01)
-                vX = 0;
-            vX = 0.9 * vX;
-            var oldScrollLeft = _this.scrollLeft;
-            _this.setScrollPosition(_this.scrollLeft + 10 * vX);
-            if (oldScrollLeft == _this.scrollLeft)
-                _this.animationSteps = 0;
-            _this.vX = vX;
-        }, 10);
-    };
-    TabPanelBar.prototype.stopScrollAnimation = function () {
-        clearInterval(this.animationTimer);
-        this.animationTimer = null;
-        this.animationScrollLeft = null;
-        this.vX = 0;
-    };
-    TabPanelBar.prototype.transform = function (el, dx, dy) {
-        el.style.left = Math.round(dx) + "px";
-        el.dx = dx;
-        el.dy = dy;
-    };
-    TabPanelBar.prototype.startTabDragging = function (element, index) {
-        if (this.isDragging)
-            return;
-        this.tabDraggingElement = element;
-        this.draggingElementIndex = index;
-        this.configure();
-        this.isDragging = true;
-    };
-    TabPanelBar.prototype.finishTabDragging = function () {
-        var _this = this;
-        this.draggingElementIndex = undefined;
-        this.tabDraggingElement = undefined;
-        if (this.activeTabHistory.length) {
-            var removedHistoryTabs = [];
-            for (var i = 0; i < this.activeTabHistory.length; i++) {
-                if (this.tabList.indexOf(this.activeTabHistory[i]) < 0) {
-                    removedHistoryTabs.push(this.activeTabHistory[i]);
-                }
-            }
-            removedHistoryTabs.forEach(function (tab) {
-                var index = _this.activeTabHistory.indexOf(tab);
-                if (index >= 0) {
-                    _this.activeTabHistory.splice(index, 1);
-                }
-            });
-        }
-        this.configure();
-        this.isDragging = false;
-    };
-    TabPanelBar.prototype.toJSON = function () {
-        return {
-            tabList: this.tabList.map(function (tab) { return tab.toJSON(); }),
-            scrollLeft: this.scrollLeft
-        };
-    };
-    return TabPanelBar;
-}(toolbar_1.Toolbar));
-exports.TabPanelBar = TabPanelBar;
-
-
-/***/ }),
-
-/***/ 5527:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Toolbar = void 0;
-var lib_1 = __webpack_require__(80930);
-var Toolbar = /** @class */ (function () {
-    function Toolbar(options) {
-        this.direction = (options === null || options === void 0 ? void 0 : options.direction) || "horizontal";
-        this.size = (options === null || options === void 0 ? void 0 : options.size) || 27; //TODO
-        this.position = options === null || options === void 0 ? void 0 : options.position;
-    }
-    Toolbar.prototype.setBox = function (x, y, w, h) {
-        lib_1.Utils.setBox(this.element, x, y, w, h);
-    };
-    return Toolbar;
-}());
-exports.Toolbar = Toolbar;
-
-
-/***/ }),
-
-/***/ 87634:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var layout_1 = __webpack_require__(97341);
-var hash_handler_1 = __webpack_require__(7116);
-var box_1 = __webpack_require__(95561);
-var panel_1 = __webpack_require__(23429);
-var accordion_1 = __webpack_require__(29930);
-var tabManager_1 = __webpack_require__(58923);
-var panelManager_1 = __webpack_require__(38404);
-var menu_example_1 = __webpack_require__(55849);
-var menuManager_1 = __webpack_require__(2505);
-var toolbar_1 = __webpack_require__(5527);
-var menuToolbar_1 = __webpack_require__(22177);
-var panelBar_1 = __webpack_require__(44526);
-var dom_1 = __webpack_require__(91444);
-var keys_1 = __webpack_require__(11797);
-var event = __webpack_require__(17989);
-var FindBar = /** @class */ (function (_super) {
-    __extends(FindBar, _super);
-    function FindBar() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    FindBar.prototype.render = function () {
-        var _a;
-        (_a = this.element) !== null && _a !== void 0 ? _a : (this.element = dom_1.dom.buildDom(["div", {
-                class: "findbar",
-            }]));
-        return this.element;
-    };
-    FindBar.prototype.close = function () {
-        var element = this.element;
-        var rect = element.getBoundingClientRect();
-        element.style.top = rect.top + rect.height + "px";
-    };
-    FindBar.prototype.remove = function () {
-    };
-    FindBar.prototype.toJSON = function () {
-    };
-    return FindBar;
-}(toolbar_1.Toolbar));
-document.body.innerHTML = "";
-var mainBox;
-var consoleBox;
-var base = new box_1.Box({
-    vertical: false,
-    toolBars: {
-        top: new menuToolbar_1.MenuToolbar(),
-        left: new panelBar_1.PanelBar({
-            panelList: [
-                new panel_1.Panel({
-                    title: "Workspace",
-                    panelBody: new accordion_1.Accordion({
-                        vertical: true,
-                        size: 200,
-                        sections: [
-                            { title: "open editors", box: new box_1.Box({ vertical: false, size: 200, color: "blue" }) },
-                            { title: "project name", box: new box_1.Box({ vertical: false, size: 500, color: "red" }) },
-                            { title: "outline", box: new box_1.Box({ vertical: false, size: 500, color: "green" }) },
-                            { title: "timeline", box: new box_1.Box({ vertical: false, size: 500, color: "pink" }) }
-                        ]
-                    }),
-                    location: "left"
-                }),
-                new panel_1.Panel({
-                    title: "Navigate",
-                    panelBody: new box_1.Box({
-                        size: 200,
-                        color: "yellow"
-                    }),
-                    location: "left",
-                    autoHide: true
-                }),
-                new panel_1.Panel({
-                    title: "Commands",
-                    panelBody: new box_1.Box({
-                        size: 200,
-                        color: "orange"
-                    }),
-                    location: "left",
-                    autoHide: true
-                }),
-                new panel_1.Panel({
-                    title: "Changes",
-                    panelBody: new box_1.Box({
-                        size: 200,
-                        color: "violet"
-                    }),
-                    location: "left",
-                    autoHide: true
-                })
-            ]
-        }),
-        right: new panelBar_1.PanelBar({
-            panelList: [
-                new panel_1.Panel({
-                    title: "Outline",
-                    panelBody: new box_1.Box({
-                        size: 200,
-                        color: "red"
-                    }),
-                    location: "right"
-                }),
-                new panel_1.Panel({
-                    title: "Debugger",
-                    panelBody: new box_1.Box({
-                        size: 200,
-                        color: "yellow"
-                    }),
-                    location: "right"
-                })
-            ]
-        }),
-        bottom: new panelBar_1.PanelBar({})
-    },
-    1: new box_1.Box({
-        vertical: false,
-        0: mainBox = new box_1.Box({
-            vertical: true,
-            0: new box_1.Box({
-                ratio: 1,
-                isMain: true,
-            }),
-            1: consoleBox = new box_1.Box({
-                ratio: 1,
-                isMain: true,
-                size: 100
-            }),
-        }),
-        toolBars: {},
-    }),
-});
-new layout_1.AceLayout(base);
-(0, menu_example_1.addExampleMenuItems)(menuManager_1.MenuManager.getInstance(), "", menu_example_1.menuDefs);
-base.render();
-var onResize = function () {
-    base.setBox(0, 0, window.innerWidth, window.innerHeight);
-};
-window.onresize = onResize;
-document.body.appendChild(base.element);
-var SearchManager = /** @class */ (function () {
-    function SearchManager(box) {
-        this.box = box;
-    }
-    SearchManager.prototype.addTransitioningToElement = function (element) {
-        box_1.Box.enableAnimation();
-        element.addEventListener('transitionend', function x() {
-            element.removeEventListener('transitionend', x);
-            box_1.Box.disableAnimation();
-        });
-    };
-    SearchManager.prototype.animateBox = function (box) {
-        this.addTransitioningToElement(box.element);
-    };
-    SearchManager.prototype.openFindBar = function () {
-        var _a;
-        this.animateBox(this.box);
-        (_a = this.findBar) !== null && _a !== void 0 ? _a : (this.findBar = new FindBar());
-        this.box.addToolBar("bottom", this.findBar);
-        this.box.resize();
-    };
-    ;
-    SearchManager.prototype.closeFindBar = function () {
-        this.animateBox(this.box);
-        this.box.removeToolBar("bottom");
-        this.findBar.close();
-        this.box.resize();
-    };
-    return SearchManager;
-}());
-var searchManager = new SearchManager(mainBox);
-var menuKb = new hash_handler_1.HashHandler([
-    {
-        bindKey: "F6",
-        name: "F6",
-        exec: function () {
-            consoleBox.toggleShowHide();
-        }
-    }
-]);
-event.addCommandKeyListener(window, function (e, hashId, keyCode) {
-    var keyString = keys_1.default.keyCodeToString(keyCode);
-    var command = menuKb.findKeyCommand(hashId, keyString);
-    if (command) {
-        event.stopEvent(e);
-        command.exec();
-    }
-});
-window.onbeforeunload = function () {
-    var storage = {};
-    tabManager.saveTo(storage);
-    localStorage["layout"] = JSON.stringify(storage);
-    localStorage.layout_tabs = JSON.stringify(tabManager.toJSON());
-    localStorage.layout_panels = JSON.stringify(panelManager.toJSON());
-};
-var tabManager = tabManager_1.TabManager.getInstance({
-    containers: {
-        main: mainBox[0],
-        console: consoleBox
-    }
-});
-var panelManager = panelManager_1.PanelManager.getInstance({
-    layout: base,
-    locations: {
-        left: {
-            parent: base,
-            index: 0,
-            size: 200
-        },
-        right: {
-            parent: base[1],
-            index: 1,
-            size: 200
-        }
-    }
-});
-var tabState = {};
-var panelState = {};
-try {
-    if (localStorage.layout_tabs)
-        tabState = JSON.parse(localStorage.layout_tabs);
-    if (localStorage.layout_panels)
-        panelState = JSON.parse(localStorage.layout_panels);
-}
-catch (e) {
-}
-tabManager.setState(tabState);
-panelManager.setState(panelState);
-if (localStorage["layout"])
-    tabManager.restoreFrom(JSON.parse(localStorage["layout"]));
-onResize();
-consoleBox.renderButtons([{
-        class: "consoleCloseBtn",
-        title: "F6",
-        onclick: function () {
-            consoleBox.hide();
-        },
-        content: "x"
-    }]);
-
-
-/***/ }),
-
-/***/ 55849:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.addExampleMenuItems = exports.menuDefs = void 0;
-var commandManager_1 = __webpack_require__(9300);
-exports.menuDefs = {
-    "AWS Cloud9": "50,,,,",
-    "File": "100,,,,",
-    "Edit": "200,,,,",
-    "Find": "300,,,,",
-    "View": "400,,,,",
-    "Go": "500,,,,",
-    "Tools": "700,,,,",
-    "Window": "800,,,,",
-    "File/~1000000": "1000000,,,,",
-    "View/~9999": "9999,,,,",
-    "Window/Presets": "10200,,false,, ",
-    "Window/Presets/Full IDE": "100,,false,, ",
-    "Window/Presets/Minimal Editor": "200,,false,, ",
-    "Window/Presets/Sublime Mode": "300,,false,, ",
-    "View/Menu Bar": "250,check,true,false,",
-    "Edit/~300": "300,,,,",
-    "Edit/Cut": "400,,false,false,Ctrl-X",
-    "Edit/Copy": "500,,false,false,Ctrl-C",
-    "Edit/Paste": "600,,false,false,Ctrl-V",
-    "View/Editors": "100,,false,, ",
-    "View/~200": "200,,,,",
-    "View/Tab Buttons": "300,check,true,false,",
-    "AWS Cloud9/~280": "280,,,,",
-    "AWS Cloud9/Preferences": "300,,false,false,Ctrl-,",
-    "Tools/~100000": "100000,,,,",
-    "Tools/Developer": "100100,,false,, ",
-    "Tools/Developer/Start in Debug Mode": "900,,false,, ",
-    "Window/Environment": "100,check,true,,Ctrl-I",
-    "File/~600": "600,,,,",
-    "File/Save": "700,,false,false,Ctrl-S",
-    "File/Save As...": "800,,false,false,Ctrl-Shift-S",
-    "File/Save All": "900,,false,false,",
-    "File/Revert to Saved": "1000,,false,false,Ctrl-Shift-Q",
-    "File/Revert All to Saved": "1100,,false,false,Alt-Shift-Q",
-    "View/Editors/Image Viewer": "40000,radio,false,true, ",
-    "View/Editors/Image Editor": "40000,radio,false,true, ",
-    "File/New File": "100,,false,false,Alt-N",
-    "File/New From Template": "200,,false,false, ",
-    "File/New From Template/Text File": "200,,false,false, ",
-    "File/New From Template/JavaScript File": "200,,false,false, ",
-    "File/New From Template/HTML File": "200,,false,false, ",
-    "File/New From Template/XML File": "200,,false,false, ",
-    "File/New From Template/Python File": "200,,false,false, ",
-    "File/New From Template/PHP File": "200,,false,false, ",
-    "File/New From Template/C File": "200,,false,false, ",
-    "File/New From Template/C++ File": "200,,false,false, ",
-    "File/New From Template/Go File": "200,,false,false, ",
-    "File/New From Template/Markdown": "200,,false,false, ",
-    "File/New From Template/Node.js Web Server": "200,,false,false, ",
-    "File/New From Template/Java Console Application": "200,,false,false, ",
-    "File/Open...": "400,,false,false,Ctrl-E|Ctrl-O",
-    "Edit/Undo": "100,,false,true,Ctrl-Z",
-    "Edit/Redo": "200,,false,true,Ctrl-Shift-Z|Ctrl-Y",
-    "Help": "1000,,,,",
-    "Help/Key Bindings Editor": "250,,false,,",
-    "View/Editors/Ace": "40000,radio,false,true, ",
-    "Tools/Toggle Macro Recording": "20100,,false,false,Alt-Shift-R",
-    "Tools/Play Macro": "20200,,false,false,Alt-R",
-    "Edit/~700": "700,,,,",
-    "Edit/Selection": "800,,false,, ",
-    "Edit/Line": "900,,false,, ",
-    "Edit/Text": "1000,,false,, ",
-    "Edit/Comment": "1100,,false,, ",
-    "Edit/Code Folding": "1200,,false,, ",
-    "Edit/Line/Indent": "100,,false,false,Tab",
-    "Edit/Line/Outdent": "200,,false,false,Shift-Tab",
-    "Edit/Line/Move Line Up": "300,,false,false,Alt-Up",
-    "Edit/Line/Move Line Down": "400,,false,false,Alt-Down",
-    "Edit/Line/~500": "500,,,false,",
-    "Edit/Line/Copy Lines Up": "600,,false,false,Alt-Shift-Up",
-    "Edit/Line/Copy Lines Down": "700,,false,false,Alt-Shift-Down",
-    "Edit/Line/~800": "800,,,false,",
-    "Edit/Line/Remove Line": "900,,false,false,Ctrl-D",
-    "Edit/Line/Remove to Line End": "1000,,false,false,Alt-Delete",
-    "Edit/Line/Remove to Line Start": "1100,,false,false,Alt-Backspace",
-    "Edit/Line/~1200": "1200,,,false,",
-    "Edit/Line/Split Line": "1300,,false,false,",
-    "Edit/Comment/Toggle Comment": "100,,false,false,Ctrl-/",
-    "Edit/Text/Remove Word Right": "100,,false,false,Ctrl-Delete",
-    "Edit/Text/Remove Word Left": "200,,false,false,Ctrl-Backspace",
-    "Edit/Text/~300": "300,,,false,",
-    "Edit/Text/Align": "400,,false,false,Ctrl-Alt-A",
-    "Edit/Text/Transpose Letters": "500,,false,false,Alt-Shift-X",
-    "Edit/Text/~600": "600,,,false,",
-    "Edit/Text/To Upper Case": "700,,false,false,Ctrl-U",
-    "Edit/Text/To Lower Case": "800,,false,false,Ctrl-Shift-U",
-    "Edit/Code Folding/Toggle Fold": "100,,false,false,F2",
-    "Edit/Code Folding/Unfold": "200,,false,false,Alt-Shift-L|Ctrl-Shift-F1",
-    "Edit/Code Folding/~300": "300,,,false,",
-    "Edit/Code Folding/Fold Other": "400,,false,false,Alt-0",
-    "Edit/Code Folding/Fold All": "500,,false,false,",
-    "Edit/Code Folding/Unfold All": "600,,false,false,Alt-Shift-0",
-    "Edit/Selection/Select All": "100,,false,false,Ctrl-A",
-    "Edit/Selection/Split Into Lines": "200,,false,false,Ctrl-Alt-L",
-    "Edit/Selection/Single Selection": "300,,false,true,esc",
-    "Edit/Selection/~400": "400,,,false,",
-    "Edit/Selection/Multiple Selections": "500,,false,false, ",
-    "Edit/Selection/~600": "600,,,false,",
-    "Edit/Selection/Select Word Right": "700,,false,false,Ctrl-Shift-Right",
-    "Edit/Selection/Select Word Left": "800,,false,false,Ctrl-Shift-Left",
-    "Edit/Selection/~900": "900,,,false,",
-    "Edit/Selection/Select to Line End": "1000,,false,false,Alt-Shift-Right",
-    "Edit/Selection/Select to Line Start": "1100,,false,false,Alt-Shift-Left",
-    "Edit/Selection/~1200": "1200,,,false,",
-    "Edit/Selection/Select to Document End": "1300,,false,false,Ctrl-Shift-End",
-    "Edit/Selection/Select to Document Start": "1400,,false,false,Ctrl-Shift-Home",
-    "Edit/Selection/Multiple Selections/Add Cursor Up": "100,,false,false,Ctrl-Alt-Up",
-    "Edit/Selection/Multiple Selections/Add Cursor Down": "200,,false,false,Ctrl-Alt-Down",
-    "Edit/Selection/Multiple Selections/Move Active Cursor Up": "300,,false,false,Ctrl-Alt-Shift-Up",
-    "Edit/Selection/Multiple Selections/Move Active Cursor Down": "400,,false,false,Ctrl-Alt-Shift-Down",
-    "Edit/Selection/Multiple Selections/~500": "500,,,,",
-    "Edit/Selection/Multiple Selections/Add Next Selection Match": "600,,false,false,Ctrl-Alt-Right",
-    "Edit/Selection/Multiple Selections/Add Previous Selection Match": "700,,false,false,Ctrl-Alt-Left",
-    "Edit/Selection/Multiple Selections/~800": "800,,,,",
-    "Edit/Selection/Multiple Selections/Merge Selection Range": "900,,false,false,Ctrl-Alt-L",
-    "View/~290000": "290000,,,,",
-    "View/Font Size": "290001,,false,, ",
-    "View/Font Size/Increase Font Size": "100,,false,false,Ctrl-+|Ctrl-=",
-    "View/Font Size/Decrease Font Size": "200,,false,false,Ctrl--",
-    "View/Gutter": "500,check,true,, ",
-    "File/~1400": "1400,,,,",
-    "File/Line Endings": "1500,,false,, ",
-    "File/Line Endings/Windows (CRLF)": "200,radio,false,false, ",
-    "File/Line Endings/Unix (LF)": "300,radio,false,false, ",
-    "View/Syntax": "300000,,false,, ",
-    "View/~400000": "400000,,,,",
-    "View/Wrap Lines": "500000,check,false,false, ",
-    "View/Wrap To Print Margin": "600000,check,false,false, ",
-    "Go/~399": "399,,,,",
-    "Go/Next Error": "499,,false,false,Alt-E",
-    "Go/Previous Error": "599,,false,false,Alt-Shift-E",
-    "Go/~799": "799,,,,",
-    "Go/Word Right": "899,,false,false,Ctrl-Right",
-    "Go/Word Left": "999,,false,false,Ctrl-Left",
-    "Go/~1099": "1099,,,,",
-    "Go/Line End": "1199,,false,false,Alt-Right|End",
-    "Go/Line Start": "1299,,false,false,Alt-Left|Home",
-    "Go/~1399": "1399,,,,",
-    "Go/Jump to Matching Brace": "1499,,false,false,Ctrl-P",
-    "Go/~1599": "1599,,,,",
-    "Go/Scroll to Selection": "1699,,false,false,",
-    "View/Themes": "350000,,false,false, ",
-    "Go/Go to Anything...": "100,,false,false,Ctrl-P",
-    "Go/Go to Symbol...": "110,,false,false,Ctrl-Shift-O",
-    "Go/Go to File...": "120,,false,false,Ctrl-E|Ctrl-O",
-    "Go/Go to Command...": "130,,false,false,Ctrl-.",
-    "Window/Go": "10,check,true,, ",
-    "AWS Cloud9/~300": "300,,,,",
-    "AWS Cloud9/Go To Your Dashboard": "310,,false,, ",
-    "AWS Cloud9/~350": "350,,,,",
-    "AWS Cloud9/Open Your Project Settings": "400,,false,, ",
-    "AWS Cloud9/Open Your User Settings": "400,,false,, ",
-    "AWS Cloud9/Open Your Keymap": "600,,false,, ",
-    "AWS Cloud9/Open Your Init Script": "700,,false,, ",
-    "AWS Cloud9/Open Your Stylesheet": "800,,false,, ",
-    "AWS Cloud9/Restart AWS Cloud9": "2000080,,false,false,Ctrl-R",
-    "Tools/Strip Trailing Space": "100,,false,false,",
-    "Tools/~200": "200,,,,",
-    "Go/Go to Line...": "200,,false,false,Ctrl-G",
-    "View/Status Bar": "600,check,true,, ",
-    "File/~100000": "100000,,,,",
-    "File/Close File": "110000,,false,false,Alt-W",
-    "File/Close All Files": "120000,,false,false,Alt-Shift-W",
-    "Window/Tabs": "10100,,false,, ",
-    "Window/Tabs/Close Pane": "100,,false,,Ctrl-W",
-    "Window/Tabs/Close All Tabs In All Panes": "200,,false,,Alt-Shift-W",
-    "Window/Tabs/Close All But Current Tab": "300,,false,,Ctrl-Alt-W",
-    "Window/Tabs/~1000000": "1000000,,,,",
-    "Window/Tabs/Split Pane in Two Rows": "1000100,,false,,",
-    "Window/Tabs/Split Pane in Two Columns": "1000200,,false,,",
-    "Window/Tabs/~1000300": "1000300,,,,",
-    "Window/Tabs/~1000400": "1000400,,,,",
-    "Window/~9000": "9000,,,,",
-    "Window/Navigation": "9100,,false,, ",
-    "Window/Navigation/Tab to the Right": "100,,false,true,Ctrl-]",
-    "Window/Navigation/Tab to the Left": "200,,false,true,Ctrl-[",
-    "Window/Navigation/Next Tab in History": "300,,false,true,Ctrl-Tab|Alt-`",
-    "Window/Navigation/Previous Tab in History": "400,,false,true,Ctrl-Shift-Tab|Alt-Shift-`",
-    "Window/Navigation/~500": "500,,,,",
-    "Window/Navigation/Move Tab to Right": "600,,false,false,Ctrl-Meta-Right",
-    "Window/Navigation/Move Tab to Left": "700,,false,false,Ctrl-Meta-Left",
-    "Window/Navigation/Move Tab to Up": "800,,false,false,Ctrl-Meta-Up",
-    "Window/Navigation/Move Tab to Down": "900,,false,false,Ctrl-Meta-Down",
-    "Window/Navigation/~1000": "1000,,,,",
-    "Window/Navigation/Go to Pane to Right": "1100,,false,false,Ctrl-Meta-Right",
-    "Window/Navigation/Go to Pane to Left": "1200,,false,false,Ctrl-Meta-Left",
-    "Window/Navigation/Go to Pane to Up": "1300,,false,false,Ctrl-Meta-Up",
-    "Window/Navigation/Go to Pane to Down": "1400,,false,false,Ctrl-Meta-Down",
-    "Window/Navigation/~1500": "1500,,,,",
-    "Window/Navigation/Next Pane in History": "1600,,false,false,Ctrl-`",
-    "Window/Navigation/Previous Pane in History": "1700,,false,false,Ctrl-Shift-`",
-    "Window/~10000": "10000,,,,",
-    "/context": ",,,,",
-    "/context/tree": "0,,false,,",
-    "/context/tree/Copy file path": "800,,false,false,",
-    "/context/tree/~850": "850,,,false,",
-    /*"/context/tabs": {
-        "Reveal in File Tree": "100,,false,false,Ctrl-Shift-L",
-        "~200": "200,,,,",
-        "Copy file path": "230,,false,false,",
-        "~260": "260,,,,",
-        "Close Tab": "300,,false,false,Alt-W",
-        "Close All Tabs": "450,,false,false,Ctrl-W",
-        "Close Other Tabs": "500,,false,false,Ctrl-Alt-W",
-        "Close Tabs to the Left": "600,,false,true,",
-        "Close Tabs to the Right": "700,,false,true,",
-        "~750": "750,,,,",
-        "Split Pane in Two Rows": "800,,false,false,",
-        "Split Pane in Two Columns": "900,,false,false,",
-        "~1000": "1000,,,,",
-        "Duplicate View": "1010,,false,false,",
-        "Run This File": "150,,false,false, ",
-    },*/
-    "View/~800": "800,,,,",
-    "View/Layout": "900,,false,, ",
-    "View/Layout/Single": "100,,false,false,",
-    "View/Layout/Vertical Split": "100,,false,false,",
-    "View/Layout/Horizontal Split": "200,,false,false,",
-    "View/Layout/Cross Split": "300,,false,false,",
-    "View/Layout/Split 1:2": "400,,false,false,",
-    "View/Layout/Split 2:1": "500,,false,false,",
-    "Window/Saved Layouts": "10050,,false,, ",
-    "Edit/~650": "650,,,,",
-    "Edit/Keyboard Mode": "660,,false,, ",
-    "Edit/Keyboard Mode/Default": "1100,radio,true,, ",
-    "Edit/Keyboard Mode/Vim": "1200,radio,false,, ",
-    "Edit/Keyboard Mode/Emacs": "1300,radio,false,, ",
-    "Edit/Keyboard Mode/Sublime": "1400,radio,false,, ",
-    "Find/~10000": "10000,,,,",
-    "Find/Find in Files...": "20000,,false,false,Ctrl-Shift-F",
-    "Find/Find...": "100,,false,false,Ctrl-F",
-    "Find/Find Next": "200,,false,false,Ctrl-K",
-    "Find/Find Previous": "300,,false,false,Ctrl-Shift-K",
-    "Find/~400": "400,,,,",
-    "Find/Replace...": "500,,false,false,Alt-Shift-F|Ctrl-H",
-    "Find/Replace Next": "600,,false,false,",
-    "Find/Replace Previous": "700,,false,false,",
-    "Find/Replace All": "800,,false,false,",
-    "Tools/~2000": "2000,,,,",
-    "Tools/Show Autocomplete": "2100,,false,false,Ctrl-Space|Alt-Space",
-    "Tools/~10000": "10000,,,,",
-    "Tools/Rename variable": "2100,,false,false,Ctrl-Alt-R",
-    "Go/Jump to Definition": "1450,,false,false,F3",
-    "Go/Find References": "1450,,false,false,Shift-F3",
-    "Window/Debugger": "100,check,true,,",
-    "Run": "600,,,,",
-    "Run/Run": "1100,,false,true,Alt-F5",
-    "Run/Run Last": "1200,,false,true,F5",
-    "Run/~1300": "1300,,,,",
-    "Run/Run With": "1400,,false,, ",
-    "Run/Run History": "1500,,false,true, ",
-    "Run/Run Configurations": "1600,,false,, ",
-    "Run/~2600": "2600,,,,",
-    "Run/Show Debugger at Break": "2700,check,true,, ",
-    "Run/Run Configurations/~1000": "1000,,,,",
-    "Run/Run Configurations/New Run Configuration": "1100,,false,, ",
-    "Run/Run Configurations/Manage...": "1200,,false,, ",
-    "Run/Run With/~1000": "1000,,,,",
-    "Run/Run With/New Runner": "1100,,false,, ",
-    "Run/Run With/Edit Runner": "1200,,false,, ",
-    "Window/New Terminal": "30,,false,false,Alt-T",
-    "Window/Navigation/Switch Between Editor and Terminal": "1550,,false,false,Alt-S",
-    "Run/~10100": "10100,,,,",
-    "Run/Build": "10200,,false,false,Ctrl-B",
-    "Run/Cancel Build": "10300,,false,true,Ctrl-Shift-C",
-    "Run/Build System": "10400,,false,, ",
-    "Run/Show Build Result": "10500,,false,, ",
-    "Run/~10600": "10600,,,,",
-    "Run/Automatically Build Supported Files": "10700,check,false,, ",
-    "Run/Save All on Build": "10800,check,true,, ",
-    "Run/Build System/Automatic": "100,radio,true,, ",
-    "Run/Build System/~200": "200,,,,",
-    "Run/Build System/~1200": "1200,,,,",
-    "Run/Build System/New Build System": "1300,,false,, ",
-    "Window/New Immediate Window": "31,,false,, ",
-    "View/Editors/Preview": "40000,radio,false,true, ",
-    "Tools/Preview": "1000,,false,, ",
-    "Tools/Preview/Live Preview Files": "100,,false,true, ",
-    "Tools/Preview/Preview Running Application": "200,,false,, ",
-    "Tools/Preview/~2000": "2000,,,,",
-    "Tools/Preview/~4000": "4000,,,,",
-    "Tools/Preview/Configure Preview URL...": "4200,,false,, ",
-    "Tools/Preview/Show Active Servers...": "4300,,false,, ",
-    "File/~1200": "1200,,,,",
-    "File/Upload Local Files...": "1300,,false,, ",
-    "Window/Outline": "50,check,true,,Ctrl-Shift-E",
-    "View/Open Files": "210,check,false,, ",
-    "Tools/Process List": "1100,,false,false,Ctrl-Alt-P",
-    "Window/Installer...": "38,,false,false,",
-    "Edit/Code Formatting": "1400,,false,, ",
-    "Edit/Code Formatting/Apply Code Formatting": "100,,true,,Ctrl-Shift-B",
-    "Edit/Code Formatting/Open Language & Formatting Preferences...": "200,,true,,",
-    "File/Download Project": "1300,,false,, ",
-    "File/Open Recent": "500,,false,, ",
-    "File/Open Recent/~1000000": "1000000,,,,",
-    "File/Open Recent/Clear Menu": "2000000,,false,true, ",
-    "/user_info": "600,,,,",
-    "/user_info/Go To Dashboard": "600,,false,, ",
-    "Window/~40": "40,,,,",
-    "/context/ace": "0,,false,,",
-    "/context/ace-gutter": "0,,false,,",
-    "/context/ace-gutter/Gutter Options": "1100,,false,, ",
-    "/context/ace-gutter/Gutter Options/Show Line Numbers": "100,,false,,",
-    "/context/ace-gutter/Gutter Options/Show Fold Widgets": "200,,false,,",
-    "/context/terminal": ",,false,,",
-    "/context/terminal/New Terminal Tab": "200,,false,,",
-    "/context/terminal/~300": "300,,,,",
-    "/context/terminal/Copy": "400,,false,,",
-    "/context/terminal/Paste": "500,,false,,",
-    "/context/terminal/Select All": "600,,false,,",
-    "/context/terminal/Clear Buffer": "700,,false,,",
-    "/context/terminal/~800": "800,,,,",
-    "/context/terminal/Hint: Use Alt To Toggle Mouse Mode": "900,,false,,",
-    "View/Syntax/Auto-Select": "100,radio,false,, ",
-    "View/Syntax/Plain Text": "200,radio,true,, ",
-    "View/Syntax/~300": "300,,,,",
-    "View/Syntax/C and C++": "400,radio,false,, ",
-    "View/Syntax/C#": "500,radio,false,, ",
-    "View/Syntax/Clojure": "600,radio,false,, ",
-    "View/Syntax/CoffeeScript": "700,radio,false,, ",
-    "View/Syntax/CSS": "800,radio,false,, ",
-    "View/Syntax/Dart": "900,radio,false,, ",
-    "View/Syntax/Go": "1000,radio,false,, ",
-    "View/Syntax/HTML": "1100,radio,false,, ",
-    "View/Syntax/Jade": "1200,radio,false,, ",
-    "View/Syntax/Java": "1300,radio,false,, ",
-    "View/Syntax/JavaScript": "1400,radio,false,, ",
-    "View/Syntax/JSON": "1500,radio,false,, ",
-    "View/Syntax/LESS": "1600,radio,false,, ",
-    "View/Syntax/Lua": "1700,radio,false,, ",
-    "View/Syntax/Perl": "1800,radio,false,, ",
-    "View/Syntax/PHP": "1900,radio,false,, ",
-    "View/Syntax/Python": "2000,radio,false,, ",
-    "View/Syntax/Ruby": "2100,radio,false,, ",
-    "View/Syntax/Scala": "2200,radio,false,, ",
-    "View/Syntax/SCSS": "2300,radio,false,, ",
-    "View/Syntax/SH": "2400,radio,false,, ",
-    "View/Syntax/SQL": "2500,radio,false,, ",
-    "View/Syntax/Stylus": "2600,radio,false,, ",
-    "View/Syntax/Text": "2700,radio,true,, ",
-    "View/Syntax/Typescript": "2800,radio,false,, ",
-    "View/Syntax/XML": "2900,radio,false,, ",
-    "View/Syntax/XQuery": "3000,radio,false,, ",
-    "View/Syntax/YAML": "3100,radio,false,, ",
-    "View/Syntax/~3200": "3200,,,,",
-    "View/Syntax/ABAP": "3300,radio,false,, ",
-    "View/Syntax/ABC": "3400,radio,false,, ",
-    "View/Syntax/ActionScript": "3500,radio,false,, ",
-    "View/Syntax/ADA": "3600,radio,false,, ",
-    "View/Syntax/Apache Conf": "3700,radio,false,, ",
-    "View/Syntax/Apex": "3800,radio,false,, ",
-    "View/Syntax/AQL": "3900,radio,false,, ",
-    "View/Syntax/AsciiDoc": "4000,radio,false,, ",
-    "View/Syntax/ASL": "4100,radio,false,, ",
-    "View/Syntax/Assembly x86": "4200,radio,false,, ",
-    "View/Syntax/AutoHotkey ": ",,false,,",
-    "View/Syntax/AutoHotkey / AutoIt": "4300,,false,,",
-    "View/Syntax/BatchFile": "4400,radio,false,, ",
-    "View/Syntax/C9Search": "4500,radio,false,, ",
-    "View/Syntax/Cirru": "4600,radio,false,, ",
-    "View/Syntax/Cobol": "4700,radio,false,, ",
-    "View/Syntax/ColdFusion": "4800,radio,false,, ",
-    "View/Syntax/Crystal": "4900,radio,false,, ",
-    "View/Syntax/Csound": "5000,radio,false,, ",
-    "View/Syntax/Csound Document": "5100,radio,false,, ",
-    "View/Syntax/Csound Score": "5200,radio,false,, ",
-    "View/Syntax/Curly": "5300,radio,false,, ",
-    "View/Syntax/D": "5400,radio,false,, ",
-    "View/Syntax/Diff": "5500,radio,false,, ",
-    "View/Syntax/Django": "5600,radio,false,, ",
-    "View/Syntax/Dockerfile": "5700,radio,false,, ",
-    "View/Syntax/Dot": "5800,radio,false,, ",
-    "View/Syntax/Drools": "5900,radio,false,, ",
-    "View/Syntax/Edifact": "6000,radio,false,, ",
-    "View/Syntax/Eiffel": "6100,radio,false,, ",
-    "View/Syntax/EJS": "6200,radio,false,, ",
-    "View/Syntax/Elixir": "6300,radio,false,, ",
-    "View/Syntax/Elm": "6400,radio,false,, ",
-    "View/Syntax/Erlang": "6500,radio,false,, ",
-    "View/Syntax/Forth": "6600,radio,false,, ",
-    "View/Syntax/Fortran": "6700,radio,false,, ",
-    "View/Syntax/FreeMarker": "6800,radio,false,, ",
-    "View/Syntax/FSharp": "6900,radio,false,, ",
-    "View/Syntax/FSL": "7000,radio,false,, ",
-    "View/Syntax/Gcode": "7100,radio,false,, ",
-    "View/Syntax/Gherkin": "7200,radio,false,, ",
-    "View/Syntax/Gitignore": "7300,radio,false,, ",
-    "View/Syntax/Glsl": "7400,radio,false,, ",
-    "View/Syntax/Gobstones": "7500,radio,false,, ",
-    "View/Syntax/GraphQLSchema": "7600,radio,false,, ",
-    "View/Syntax/Groovy": "7700,radio,false,, ",
-    "View/Syntax/HAML": "7800,radio,false,, ",
-    "View/Syntax/Handlebars": "7900,radio,false,, ",
-    "View/Syntax/Haskell": "8000,radio,false,, ",
-    "View/Syntax/Haskell Cabal": "8100,radio,false,, ",
-    "View/Syntax/haXe": "8200,radio,false,, ",
-    "View/Syntax/Hjson": "8300,radio,false,, ",
-    "View/Syntax/HTML (Elixir)": "8400,radio,false,, ",
-    "View/Syntax/HTML (Ruby)": "8500,radio,false,, ",
-    "View/Syntax/INI": "8600,radio,false,, ",
-    "View/Syntax/Io": "8700,radio,false,, ",
-    "View/Syntax/Jack": "8800,radio,false,, ",
-    "View/Syntax/JSONiq": "8900,radio,false,, ",
-    "View/Syntax/JSP": "9000,radio,false,, ",
-    "View/Syntax/JSSM": "9100,radio,false,, ",
-    "View/Syntax/JSX": "9200,radio,false,, ",
-    "View/Syntax/Julia": "9300,radio,false,, ",
-    "View/Syntax/Kotlin": "9400,radio,false,, ",
-    "View/Syntax/LaTeX": "9500,radio,false,, ",
-    "View/Syntax/Liquid": "9600,radio,false,, ",
-    "View/Syntax/Lisp": "9700,radio,false,, ",
-    "View/Syntax/LiveScript": "9800,radio,false,, ",
-    "View/Syntax/LogiQL": "9900,radio,false,, ",
-    "View/Syntax/LSL": "10000,radio,false,, ",
-    "View/Syntax/LuaPage": "10100,radio,false,, ",
-    "View/Syntax/Lucene": "10200,radio,false,, ",
-    "View/Syntax/Makefile": "10300,radio,false,, ",
-    "View/Syntax/Markdown": "10400,radio,false,, ",
-    "View/Syntax/Mask": "10500,radio,false,, ",
-    "View/Syntax/MATLAB": "10600,radio,false,, ",
-    "View/Syntax/Maze": "10700,radio,false,, ",
-    "View/Syntax/MEL": "10800,radio,false,, ",
-    "View/Syntax/MIXAL": "10900,radio,false,, ",
-    "View/Syntax/MUSHCode": "11000,radio,false,, ",
-    "View/Syntax/MySQL": "11100,radio,false,, ",
-    "View/Syntax/Nginx": "11200,radio,false,, ",
-    "View/Syntax/Nim": "11300,radio,false,, ",
-    "View/Syntax/Nix": "11400,radio,false,, ",
-    "View/Syntax/NSIS": "11500,radio,false,, ",
-    "View/Syntax/Objective-C": "11600,radio,false,, ",
-    "View/Syntax/OCaml": "11700,radio,false,, ",
-    "View/Syntax/Pascal": "11800,radio,false,, ",
-    "View/Syntax/Perl 6": "11900,radio,false,, ",
-    "View/Syntax/pgSQL": "12000,radio,false,, ",
-    "View/Syntax/PHP (Blade Template)": "12100,radio,false,, ",
-    "View/Syntax/Pig": "12200,radio,false,, ",
-    "View/Syntax/Powershell": "12300,radio,false,, ",
-    "View/Syntax/Praat": "12400,radio,false,, ",
-    "View/Syntax/Prolog": "12500,radio,false,, ",
-    "View/Syntax/Properties": "12600,radio,false,, ",
-    "View/Syntax/Protobuf": "12700,radio,false,, ",
-    "View/Syntax/Puppet": "12800,radio,false,, ",
-    "View/Syntax/R": "12900,radio,false,, ",
-    "View/Syntax/Razor": "13000,radio,false,, ",
-    "View/Syntax/RDoc": "13100,radio,false,, ",
-    "View/Syntax/Red": "13200,radio,false,, ",
-    "View/Syntax/RHTML": "13300,radio,false,, ",
-    "View/Syntax/RST": "13400,radio,false,, ",
-    "View/Syntax/Rust": "13500,radio,false,, ",
-    "View/Syntax/SASS": "13600,radio,false,, ",
-    "View/Syntax/SCAD": "13700,radio,false,, ",
-    "View/Syntax/Scheme": "13800,radio,false,, ",
-    "View/Syntax/SJS": "13900,radio,false,, ",
-    "View/Syntax/Slim": "14000,radio,false,, ",
-    "View/Syntax/Smarty": "14100,radio,false,, ",
-    "View/Syntax/Soy Template": "14200,radio,false,, ",
-    "View/Syntax/Space": "14300,radio,false,, ",
-    "View/Syntax/SQLServer": "14400,radio,false,, ",
-    "View/Syntax/SVG": "14500,radio,false,, ",
-    "View/Syntax/Swift": "14600,radio,false,, ",
-    "View/Syntax/Tcl": "14700,radio,false,, ",
-    "View/Syntax/Terraform": "14800,radio,false,, ",
-    "View/Syntax/Tex": "14900,radio,false,, ",
-    "View/Syntax/Textile": "15000,radio,false,, ",
-    "View/Syntax/Toml": "15100,radio,false,, ",
-    "View/Syntax/TSX": "15200,radio,false,, ",
-    "View/Syntax/Twig": "15300,radio,false,, ",
-    "View/Syntax/Vala": "15400,radio,false,, ",
-    "View/Syntax/VBScript": "15500,radio,false,, ",
-    "View/Syntax/Velocity": "15600,radio,false,, ",
-    "View/Syntax/Verilog": "15700,radio,false,, ",
-    "View/Syntax/VHDL": "15800,radio,false,, ",
-    "View/Syntax/Visualforce": "15900,radio,false,, ",
-    "View/Syntax/Wollok": "16000,radio,false,, ",
-    "View/Syntax/Zeek": "16100,radio,false,, ",
-    "View/Themes/UI Themes": "0,,false,false, ",
-    "View/Themes/~200": "200,,,false,",
-    "View/Themes/UI Themes/Classic Dark": "0,radio,false,, ",
-    "View/Themes/UI Themes/Classic Dark Gray": "0,radio,false,, ",
-    "View/Themes/UI Themes/Flat Light": "0,radio,false,, ",
-    "View/Themes/Ambiance": "200,radio,false,false, ",
-    "View/Themes/Chrome": "201,radio,false,false, ",
-    "View/Themes/Cloud9": "202,,false,false, ",
-    "View/Themes/Cloud9/Cloud9 Day": ",radio,false,, ",
-    "View/Themes/Cloud9/Cloud9 Night": ",radio,false,, ",
-    "View/Themes/Cloud9/Cloud9 Night Low-Color": ",radio,false,, ",
-    "View/Themes/Clouds": "203,,false,false, ",
-    "View/Themes/Clouds/Clouds": ",radio,false,, ",
-    "View/Themes/Clouds/Clouds Midnight": ",radio,false,, ",
-    "View/Themes/Cobalt": "204,radio,false,false, ",
-    "View/Themes/Crimson Editor": "205,radio,false,false, ",
-    "View/Themes/Dawn": "206,radio,false,false, ",
-    "View/Themes/Dreamweaver": "207,radio,false,false, ",
-    "View/Themes/Eclipse": "208,radio,false,false, ",
-    "View/Themes/GitHub": "209,radio,false,false, ",
-    "View/Themes/Idle Fingers": "210,radio,false,false, ",
-    "View/Themes/Kr Theme": "211,radio,false,false, ",
-    "View/Themes/Merbivore": "212,,false,false, ",
-    "View/Themes/Merbivore/Merbivore": ",radio,false,, ",
-    "View/Themes/Merbivore/Merbivore Soft": ",radio,false,, ",
-    "View/Themes/Mono Industrial": "213,radio,false,false, ",
-    "View/Themes/Monokai": "214,radio,false,false, ",
-    "View/Themes/Pastel On Dark": "215,radio,false,false, ",
-    "View/Themes/Solarized": "216,,false,false, ",
-    "View/Themes/Solarized/Solarized Dark": ",radio,false,, ",
-    "View/Themes/Solarized/Solarized Light": ",radio,false,, ",
-    "View/Themes/TextMate": "217,radio,false,false, ",
-    "View/Themes/Tomorrow": "218,,false,false, ",
-    "View/Themes/Tomorrow/Tomorrow": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night Blue": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night Bright": ",radio,false,, ",
-    "View/Themes/Tomorrow/Tomorrow Night Eighties": ",radio,false,, ",
-    "View/Themes/Twilight": "219,radio,false,false, ",
-    "View/Themes/Vibrant Ink": "220,radio,false,false, ",
-    "View/Themes/Xcode": "221,radio,false,false, ",
-    "View/Themes/Jett": "222,radio,false,false, ",
-    "Window/Saved Layouts/Save...": "100,,false,,",
-    "Window/Saved Layouts/Save And Close All...": "200,,false,,",
-    "Window/Saved Layouts/~300": "300,,,,",
-    "Window/Saved Layouts/Show Saved Layouts in File Tree": "400,,false,, ",
-    "Window/Saved Layouts/~500": "500,,,,"
-};
-function addExampleMenuItems(menuManager, root, menuDefinitions) {
-    if (menuDefinitions === void 0) { menuDefinitions = exports.menuDefs; }
-    var commands = [];
-    Object.keys(menuDefinitions).forEach(function (x) {
-        var _a;
-        var item = menuDefinitions[x];
-        var exec;
-        if (typeof item == "object") {
-            if (item.properties != undefined) {
-                exec = item.exec;
-                item = item.properties;
-            }
-            else {
-                return addExampleMenuItems(menuManager, x, item);
-            }
-        }
-        var parts = (_a = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item)) !== null && _a !== void 0 ? _a : [];
-        var path = root ? root + "/" + x : x;
-        var hotKey = (parts[5] || "").trim();
-        if (exec && hotKey) {
-            commands.push({
-                bindKey: {
-                    win: hotKey,
-                    mac: hotKey
-                },
-                exec: exec
-            });
-        }
-        menuManager.addByPath(path, {
-            className: path == "AWS Cloud9" ? "c9btn" : undefined,
-            type: parts[2],
-            checked: parts[3] == "true",
-            disabled: parts[4] == "true",
-            position: parseInt(parts[1]),
-            hotKey: hotKey,
-            exec: exec
-        });
-    });
-    commandManager_1.CommandManager.registerCommands(commands);
-}
-exports.addExampleMenuItems = addExampleMenuItems;
-
-
-/***/ }),
-
 /***/ 21527:
 /***/ ((module) => {
 
@@ -37632,7 +30959,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -37773,7 +31100,6 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 				doneFns && doneFns.forEach((fn) => (fn(event)));
 /******/ 				if(prev) return prev(event);
 /******/ 			}
-/******/ 			;
 /******/ 			var timeout = setTimeout(onScriptComplete.bind(null, undefined, { type: 'timeout', target: script }), 120000);
 /******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
 /******/ 			script.onload = onScriptComplete.bind(null, script.onload);
@@ -37799,7 +31125,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		var document = __webpack_require__.g.document;
 /******/ 		if (!scriptUrl && document) {
 /******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
+/******/ 				scriptUrl = document.currentScript.src;
 /******/ 			if (!scriptUrl) {
 /******/ 				var scripts = document.getElementsByTagName("script");
 /******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
@@ -37908,12 +31234,5936 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(87634);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/layout.css
+var layout_namespaceObject = {};
+__webpack_require__.r(layout_namespaceObject);
+__webpack_require__.d(layout_namespaceObject, {
+  "default": () => (styles_layout)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/accordion.css
+var accordion_namespaceObject = {};
+__webpack_require__.r(accordion_namespaceObject);
+__webpack_require__.d(accordion_namespaceObject, {
+  "default": () => (styles_accordion)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/panel.css
+var panel_namespaceObject = {};
+__webpack_require__.r(panel_namespaceObject);
+__webpack_require__.d(panel_namespaceObject, {
+  "default": () => (styles_panel)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/tab.css
+var tab_namespaceObject = {};
+__webpack_require__.r(tab_namespaceObject);
+__webpack_require__.d(tab_namespaceObject, {
+  "default": () => (styles_tab)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/menu.css
+var menu_namespaceObject = {};
+__webpack_require__.r(menu_namespaceObject);
+__webpack_require__.d(menu_namespaceObject, {
+  "default": () => (styles_menu)
+});
+
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(93379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(90569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(19216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(44589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/layout.css
+var layout = __webpack_require__(94936);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/layout.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(layout/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const styles_layout = (layout/* default */.Z && layout/* default.locals */.Z.locals ? layout/* default.locals */.Z.locals : undefined);
+
+// EXTERNAL MODULE: ./node_modules/ace-code/src/lib/useragent.js
+var useragent = __webpack_require__(50618);
+;// CONCATENATED MODULE: ./packages/ace-layout/utils/dom.ts
+
+
+var XHTML_NS = "http://www.w3.org/1999/xhtml";
+var dom;
+((dom2) => {
+  dom2.buildDom = function(arr, parent, refs) {
+    if (typeof arr == "string" && arr) {
+      var txt = document.createTextNode(arr);
+      if (parent)
+        parent.appendChild(txt);
+      return txt;
+    }
+    if (!Array.isArray(arr)) {
+      if (arr && arr.appendChild && parent)
+        parent.appendChild(arr);
+      return arr;
+    }
+    if (typeof arr[0] != "string" || !arr[0]) {
+      var els = [];
+      for (var i = 0; i < arr.length; i++) {
+        var ch = (0, dom2.buildDom)(arr[i], parent, refs);
+        ch && els.push(ch);
+      }
+      return els;
+    }
+    var el = document.createElement(arr[0]);
+    var options = arr[1];
+    var childIndex = 1;
+    if (options && typeof options == "object" && !Array.isArray(options))
+      childIndex = 2;
+    for (var i = childIndex; i < arr.length; i++)
+      (0, dom2.buildDom)(arr[i], el, refs);
+    if (childIndex == 2) {
+      Object.keys(options).forEach(function(n) {
+        var val = options[n];
+        if (n === "class") {
+          el.className = Array.isArray(val) ? val.join(" ") : val;
+        } else if (typeof val == "function" || n == "value" || n[0] == "$") {
+          el[n] = val;
+        } else if (n === "ref") {
+          if (refs)
+            refs[val] = el;
+        } else if (n === "style") {
+          if (typeof val == "string")
+            el.style.cssText = val;
+        } else if (val != null) {
+          el.setAttribute(n, val);
+        }
+      });
+    }
+    if (parent)
+      parent.appendChild(el);
+    return el;
+  };
+  dom2.getDocumentHead = function(doc) {
+    if (!doc)
+      doc = document;
+    return doc.head || doc.getElementsByTagName("head")[0] || doc.documentElement;
+  };
+  dom2.createElement = function(tag, ns) {
+    return document.createElementNS ? document.createElementNS(ns || XHTML_NS, tag) : document.createElement(tag);
+  };
+  dom2.removeChildren = function(element) {
+    element.innerHTML = "";
+  };
+  dom2.createTextNode = function(textContent, element) {
+    var doc = element ? element.ownerDocument : document;
+    return doc.createTextNode(textContent);
+  };
+  dom2.createFragment = function(element) {
+    var doc = element ? element.ownerDocument : document;
+    return doc.createDocumentFragment();
+  };
+  dom2.hasCssClass = function(el, name) {
+    var classes = (el.className + "").split(/\s+/g);
+    return classes.indexOf(name) !== -1;
+  };
+  dom2.addCssClass = function(el, name) {
+    if (!(0, dom2.hasCssClass)(el, name)) {
+      el.className += " " + name;
+    }
+  };
+  dom2.removeCssClass = function(el, name) {
+    var classes = el.className.split(/\s+/g);
+    while (true) {
+      var index = classes.indexOf(name);
+      if (index == -1) {
+        break;
+      }
+      classes.splice(index, 1);
+    }
+    el.className = classes.join(" ");
+  };
+  dom2.toggleCssClass = function(el, name) {
+    var classes = el.className.split(/\s+/g), add = true;
+    while (true) {
+      var index = classes.indexOf(name);
+      if (index == -1) {
+        break;
+      }
+      add = false;
+      classes.splice(index, 1);
+    }
+    if (add)
+      classes.push(name);
+    el.className = classes.join(" ");
+    return add;
+  };
+  dom2.setCssClass = function(node, className, include) {
+    if (include) {
+      (0, dom2.addCssClass)(node, className);
+    } else {
+      (0, dom2.removeCssClass)(node, className);
+    }
+  };
+  dom2.hasCssString = function(id, doc) {
+    var index = 0, sheets;
+    doc = doc || document;
+    if (sheets = doc.querySelectorAll("style")) {
+      while (index < sheets.length) {
+        if (sheets[index++].id === id) {
+          return true;
+        }
+      }
+    }
+  };
+  dom2.removeElementById = function(id, doc) {
+    doc = doc || document;
+    if (doc.getElementById(id)) {
+      doc.getElementById(id).remove();
+    }
+  };
+  var strictCSP;
+  var cssCache = [];
+  dom2.useStrictCSP = function(value) {
+    strictCSP = value;
+    if (value == false)
+      insertPendingStyles();
+    else if (!cssCache)
+      cssCache = [];
+  };
+  function insertPendingStyles() {
+    var cache = cssCache;
+    cssCache = null;
+    cache && cache.forEach(function(item) {
+      importCssString(item[0], item[1]);
+    });
+  }
+  function importCssString(cssText, id, target) {
+    if (typeof document == "undefined")
+      return;
+    if (cssCache) {
+      if (target) {
+        insertPendingStyles();
+      } else if (target === false) {
+        return cssCache.push([cssText, id]);
+      }
+    }
+    if (strictCSP)
+      return;
+    var container = target;
+    if (!target || !target.getRootNode) {
+      container = document;
+    } else {
+      container = target.getRootNode();
+      if (!container || container == target)
+        container = document;
+    }
+    var doc = container.ownerDocument || container;
+    if (id && (0, dom2.hasCssString)(id, container))
+      return null;
+    if (id)
+      cssText += "\n/*# sourceURL=ace/css/" + id + " */";
+    var style = (0, dom2.createElement)("style");
+    style.appendChild(doc.createTextNode(cssText));
+    if (id)
+      style.id = id;
+    if (container == doc)
+      container = (0, dom2.getDocumentHead)(doc);
+    container.insertBefore(style, container.firstChild);
+  }
+  dom2.importCssString = importCssString;
+  dom2.importCssStylsheet = function(uri, doc) {
+    (0, dom2.buildDom)(["link", { rel: "stylesheet", href: uri }], (0, dom2.getDocumentHead)(doc));
+  };
+  dom2.scrollbarWidth = function(document2) {
+    var inner = (0, dom2.createElement)("ace_inner");
+    inner.style.width = "100%";
+    inner.style.minWidth = "0px";
+    inner.style.height = "200px";
+    inner.style.display = "block";
+    var outer = (0, dom2.createElement)("ace_outer");
+    var style = outer.style;
+    style.position = "absolute";
+    style.left = "-10000px";
+    style.overflow = "hidden";
+    style.width = "200px";
+    style.minWidth = "0px";
+    style.height = "150px";
+    style.display = "block";
+    outer.appendChild(inner);
+    var body = document2.documentElement;
+    body.appendChild(outer);
+    var noScrollbar = inner.offsetWidth;
+    style.overflow = "scroll";
+    var withScrollbar = inner.offsetWidth;
+    if (noScrollbar == withScrollbar) {
+      withScrollbar = outer.clientWidth;
+    }
+    body.removeChild(outer);
+    return noScrollbar - withScrollbar;
+  };
+  dom2.computedStyle = function(element, style) {
+    return window.getComputedStyle(element, "") || {};
+  };
+  dom2.setStyle = function(styles, property, value) {
+    if (styles[property] !== value) {
+      styles[property] = value;
+    }
+  };
+  dom2.HAS_CSS_ANIMATION = false;
+  dom2.HAS_CSS_TRANSFORMS = false;
+  dom2.HI_DPI = useragent.isWin ? typeof window !== "undefined" && window.devicePixelRatio >= 1.5 : true;
+  if (useragent.isChromeOS)
+    dom2.HI_DPI = false;
+  if (typeof document !== "undefined") {
+    var div = document.createElement("div");
+    if (dom2.HI_DPI && div.style.transform !== void 0)
+      dom2.HAS_CSS_TRANSFORMS = true;
+    if (!useragent.isEdge && typeof div.style.animationName !== "undefined")
+      dom2.HAS_CSS_ANIMATION = true;
+    div = null;
+  }
+  if (dom2.HAS_CSS_TRANSFORMS) {
+    dom2.translate = function(element, tx, ty) {
+      element.style.transform = "translate(" + Math.round(tx) + "px, " + Math.round(ty) + "px)";
+    };
+  } else {
+    dom2.translate = function(element, tx, ty) {
+      element.style.top = Math.round(ty) + "px";
+      element.style.left = Math.round(tx) + "px";
+    };
+  }
+})(dom || (dom = {}));
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/layout.ts
+
+
+class AceLayout {
+  constructor(startBox, css) {
+    dom.importCssString(css != null ? css : layout_namespaceObject, "layout.css");
+    this.box = startBox;
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/ace-code/src/keyboard/hash_handler.js
+var hash_handler = __webpack_require__(7116);
+;// CONCATENATED MODULE: ./packages/ace-layout/utils/lib.ts
+var Utils;
+((Utils2) => {
+  Utils2.findHost = function(el, constructor) {
+    while (el) {
+      if (el.$host && (!constructor || el.$host.constructor === constructor))
+        return el.$host;
+      el = el.parentElement;
+    }
+  };
+  Utils2.findNode = function(node, className) {
+    while (node && node.classList) {
+      if (node.classList.contains(className))
+        return node;
+      node = node.parentNode;
+    }
+    return null;
+  };
+  Utils2.findHostTarget = function(target) {
+    while (target) {
+      if (target.$host)
+        return target;
+      target = target.parentElement;
+    }
+    return null;
+  };
+  Utils2.setBox = function(el, x, y, w, h) {
+    if (w) {
+      w = Math.max(w, 0);
+    }
+    if (h) {
+      h = Math.max(h, 0);
+    }
+    let s = el.style;
+    s.left = x + "px";
+    s.top = y + "px";
+    s.width = w + "px";
+    s.height = h + "px";
+  };
+  function getEdge(style, dir) {
+    return parseInt(style["padding" + dir], 10) + parseInt(style["margin" + dir], 10) + parseInt(style["border" + dir], 10);
+  }
+  Utils2.getEdge = getEdge;
+  function getElementEdges(element) {
+    let style = getComputedStyle(element);
+    return {
+      "top": getEdge(style, "Top"),
+      "bottom": getEdge(style, "Bottom"),
+      "left": getEdge(style, "Left"),
+      "right": getEdge(style, "Right")
+    };
+  }
+  Utils2.getElementEdges = getElementEdges;
+})(Utils || (Utils = {}));
+
+;// CONCATENATED MODULE: ./packages/ace-layout/utils/params.ts
+var SizeUnit = /* @__PURE__ */ ((SizeUnit2) => {
+  SizeUnit2[SizeUnit2["px"] = 0] = "px";
+  SizeUnit2[SizeUnit2["percent"] = 1] = "percent";
+  return SizeUnit2;
+})(SizeUnit || {});
+var EditorType = /* @__PURE__ */ ((EditorType2) => {
+  EditorType2["ace"] = "ace";
+  EditorType2["preview"] = "preview";
+  return EditorType2;
+})(EditorType || {});
+
+// EXTERNAL MODULE: ./node_modules/ace-code/src/lib/event.js
+var lib_event = __webpack_require__(17989);
+// EXTERNAL MODULE: ./node_modules/events/events.js
+var events = __webpack_require__(17187);
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/boxes/box.ts
+
+
+
+
+
+const SPLITTER_SIZE = 1;
+const BOX_MIN_SIZE = 40;
+class Box extends events.EventEmitter {
+  constructor(options) {
+    var _a, _b, _c, _d;
+    super();
+    this.$editorAdded = (editor) => {
+      this.emit("editorAdded", editor);
+    };
+    if (options.splitter !== false) {
+    }
+    this.vertical = options.vertical || false;
+    this.color = (_a = options.color) != null ? _a : "";
+    this.isMain = options.isMain || false;
+    this[0] = options[0];
+    this[1] = options[1];
+    if (this[0])
+      this[0].parent = this;
+    if (this[1])
+      this[1].parent = this;
+    this.ratio = options.ratio;
+    this.toolBars = options.toolBars || {};
+    this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
+    this.size = options.size;
+    this.sizeUnit = (_b = options.sizeUnit) != null ? _b : SizeUnit.px;
+    this.minSize = options.minSize || BOX_MIN_SIZE;
+    this.minVerticalSize = options.minVerticalSize || this.minSize;
+    this.minHorizontalSize = options.minHorizontalSize || this.minSize;
+    this.classNames = (_c = options.classNames) != null ? _c : "";
+    this.hidden = (_d = options.hidden) != null ? _d : false;
+    this.fixedSize = options.fixedSize;
+  }
+  static enableAnimation() {
+    document.documentElement.classList.add("animateBoxes");
+  }
+  static disableAnimation() {
+    document.documentElement.classList.remove("animateBoxes");
+  }
+  static setGlobalCursor(value) {
+    if (value)
+      document.documentElement.classList.add("inheritCursor");
+    else
+      document.documentElement.classList.remove("inheritCursor");
+    document.documentElement.style.cursor = value;
+  }
+  toJSON() {
+    return {
+      0: this[0] && this[0].toJSON(),
+      1: this[1] && this[1].toJSON(),
+      ratio: this.ratio,
+      type: this.vertical ? "vbox" : "hbox",
+      fixedSize: this.fixedSize || null,
+      hidden: this.hidden,
+      color: this.color,
+      size: this.size
+    };
+  }
+  onMouseDown(e) {
+    let button = e.button;
+    if (button !== 0)
+      return;
+    let box = this;
+    let rect = this.element.getBoundingClientRect();
+    let x = e.clientX;
+    let y = e.clientY;
+    document.body.classList.add("dragging");
+    let onMouseMove = function(e2) {
+      x = e2.clientX - rect.left - box.padding.left;
+      y = e2.clientY - rect.top - box.padding.top;
+      let height = rect.height - box.padding.top - box.padding.bottom;
+      let width = rect.width - box.padding.left - box.padding.right;
+      if (box.fixedChild) {
+        if (box.vertical) {
+          box.fixedChild.fixedSize = box.fixedChild === box[1] ? height - y : y;
+        } else {
+          box.fixedChild.fixedSize = box.fixedChild === box[1] ? width - x : x;
+        }
+        box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize, box.fixedChild.minSize);
+        box.ratio = void 0;
+      } else {
+        if (box.vertical) {
+          box.ratio = y / height;
+        } else {
+          box.ratio = x / width;
+        }
+        box.ratio = Math.max(box.minRatio, Math.min(box.ratio, box.maxRatio));
+      }
+      box.resize();
+    };
+    let onResizeEnd = function(e2) {
+      Box.setGlobalCursor("");
+      document.body.classList.remove("dragging");
+    };
+    Box.setGlobalCursor(`${box.vertical ? "ns" : "ew"}-resize`);
+    lib_event.capture(window, onMouseMove, onResizeEnd);
+    return e.preventDefault();
+  }
+  resize() {
+    if (!this.box)
+      return;
+    this.setBox(...this.box);
+  }
+  calculateMinMaxRatio() {
+    if (!this.box || !this[0] && !this[1])
+      return;
+    let propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
+    let size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
+    this.minRatio = this[0] ? this[0][propertyName] / size : 0;
+    this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
+  }
+  render() {
+    if (this.element)
+      return this.element;
+    this.element = dom.buildDom(["div", {
+      class: "box" + this.classNames,
+      $host: this
+    }]);
+    this.splitter = dom.buildDom(["div", {
+      class: `splitter splitter${this.vertical ? "-v" : "-h"}`
+    }, ["div"]]);
+    this.splitter.onmousedown = this.onMouseDown.bind(this);
+    this.element.appendChild(this.splitter);
+    this.element.$host = this;
+    this.element.style.backgroundColor = this.color;
+    this.element.style.position = "absolute";
+    this.renderToolBarList();
+    this.renderChildren();
+    if (!this.ratio)
+      this.calculateRatio();
+    return this.element;
+  }
+  renderToolBarList() {
+    for (let position in this.toolBars) {
+      this.addToolBar(position, this.toolBars[position]);
+    }
+  }
+  addToolBar(position, bar) {
+    var _a, _b;
+    if (position == "left" || position == "right")
+      bar.direction = "vertical";
+    (_b = (_a = this.toolBars[position]) == null ? void 0 : _a.element) == null ? void 0 : _b.remove();
+    bar.position = position;
+    this.padding[position] = bar.size;
+    this.element.appendChild(bar.render());
+    this.toolBars[position] = bar;
+  }
+  removeToolBar(position) {
+    delete this.toolBars[position];
+    this.padding[position] = 0;
+  }
+  renderChildren() {
+    this.renderChild(this[0]);
+    this.renderChild(this[1]);
+    this.calculateMinSize();
+  }
+  renderChild(child) {
+    if (!child)
+      return;
+    child.on("editorAdded", this.$editorAdded);
+    this.element.appendChild(child.render());
+  }
+  calculateMinSize(forceChildrenSize = false) {
+    let childrenMinVerticalSize = 0;
+    let childrenMinHorizontalSize = 0;
+    let calculateChildBoxMinSize = (childBox) => {
+      if (this.vertical) {
+        childrenMinVerticalSize += childBox.minVerticalSize;
+        childrenMinHorizontalSize = Math.max(childBox.minHorizontalSize, childrenMinHorizontalSize);
+      } else {
+        childrenMinVerticalSize = Math.max(childBox.minVerticalSize, childrenMinVerticalSize);
+        childrenMinHorizontalSize += childBox.minHorizontalSize;
+      }
+    };
+    if (this[0])
+      calculateChildBoxMinSize(this[0]);
+    if (this[1])
+      calculateChildBoxMinSize(this[1]);
+    if (forceChildrenSize) {
+      this.minVerticalSize = childrenMinVerticalSize;
+      this.minHorizontalSize = childrenMinHorizontalSize;
+    } else {
+      this.minVerticalSize = Math.max(this.minVerticalSize, childrenMinVerticalSize);
+      this.minHorizontalSize = Math.max(this.minHorizontalSize, childrenMinHorizontalSize);
+    }
+    this.minSize = this.vertical ? this.minVerticalSize : this.minHorizontalSize;
+    this.calculateMinMaxRatio();
+  }
+  calculateRatio() {
+    if (this[0]) {
+      this.calculateChildRatio(this[0]);
+    }
+    if (this.ratio || this.fixedChild) {
+      return;
+    }
+    if (this[1]) {
+      this.calculateChildRatio(this[1]);
+    }
+    if (!this.ratio && !this.fixedChild) {
+      this.ratio = 0.5;
+    }
+  }
+  calculateChildRatio(childBox, isSecond = false) {
+    if (!childBox.size) {
+      return;
+    }
+    let size = childBox.size;
+    switch (this.sizeUnit) {
+      case SizeUnit.px:
+        childBox.fixedSize = size;
+        this.fixedChild = childBox;
+        break;
+      case SizeUnit.percent:
+        if (isSecond) {
+          size = 100 - size;
+        }
+        this.ratio = Math.min(size / 100, 1);
+        break;
+    }
+  }
+  renderButtons(buttonList) {
+    let buttons = buttonList.map((button) => {
+      return dom.buildDom(["div", {
+        class: "button " + button.class,
+        title: button.title,
+        onclick: button.onclick
+      }, button.content]);
+    });
+    this.setButtons(buttons);
+  }
+  /**
+   * Sets buttons of this box top-right tabBar
+   */
+  setButtons(buttons) {
+    if (this.topRightPane)
+      this.topRightPane.removeButtons();
+    this.topRightPane = this.getTopRightPane();
+    if (this.topRightPane)
+      this.topRightPane.setButtons(buttons);
+  }
+  addButton(button) {
+    this.topRightPane = this.getTopRightPane();
+    if (this.topRightPane)
+      this.topRightPane.addButton(button);
+  }
+  /**
+   * Finds the most top-right Pane
+   */
+  getTopRightPane() {
+    let childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
+    if (!childBox)
+      return;
+    return childBox.getTopRightPane();
+  }
+  setBox(x, y, w, h) {
+    this.box = [x, y, w, h];
+    if (this.isMaximized) {
+      x = 0;
+      y = 0;
+      w = window.innerWidth;
+      h = window.innerHeight;
+    }
+    Utils.setBox(this.element, x, y, w, h);
+    this.calculateMinMaxRatio();
+    this.$updateChildSize(x, y, w, h);
+  }
+  $updateChildSize(x, y, w, h) {
+    var _a;
+    let splitterSize = SPLITTER_SIZE;
+    if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
+      this.splitter.style.display = "none";
+      splitterSize = 0;
+    } else {
+      this.splitter.style.display = "";
+    }
+    this.updateToolBarSize(w, h);
+    w -= this.padding.left + this.padding.right;
+    h -= this.padding.top + this.padding.bottom;
+    x = this.padding.left;
+    y = this.padding.top;
+    if (this.fixedChild) {
+      let size = this.fixedChild.fixedSize;
+      if (this.fixedChild === this[1]) {
+        size = this.vertical ? h - size : w - size;
+      }
+      this.ratio = this.vertical ? size / h : size / w;
+    }
+    this.ratio = Math.max(this.minRatio, Math.min((_a = this.ratio) != null ? _a : this.maxRatio, this.maxRatio));
+    let ratio = this.ratio;
+    if (!this[0] || this[0].hidden) {
+      ratio = 0;
+    } else if (!this[1] || this[1].hidden) {
+      ratio = 1;
+    }
+    if (this.vertical) {
+      let splitY = h * ratio - splitterSize;
+      if (this.splitter)
+        Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
+      if (this[0])
+        this[0].setBox(x, y, w, splitY);
+      if (this[1])
+        this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
+    } else {
+      let splitX = w * ratio - splitterSize;
+      if (this.splitter)
+        Utils.setBox(this.splitter, x + splitX, y, splitterSize, h);
+      if (this[0])
+        this[0].setBox(x, y, splitX, h);
+      if (this[1])
+        this[1].setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
+    }
+  }
+  updateToolBarSize(width, height) {
+    let bar, x, y, w, h;
+    for (let type in this.toolBars) {
+      x = 0;
+      y = 0;
+      w = width;
+      h = height;
+      bar = this.toolBars[type];
+      switch (type) {
+        case "top":
+        case "bottom":
+          h = bar.size;
+          if (type === "bottom")
+            y = height - bar.size;
+          break;
+        case "left":
+        case "right":
+          w = bar.size;
+          y = this.padding.top;
+          h -= this.padding.top + this.padding.bottom;
+          if (type === "right")
+            x = width - bar.size;
+          break;
+        default:
+          continue;
+      }
+      bar.setBox(x, y, w, h);
+    }
+  }
+  restore(disableAnimation = false) {
+    let node = this.element;
+    function rmClass(ch, cls) {
+      for (let i = 0; i < ch.length; i++) {
+        if (ch[i].classList)
+          ch[i].classList.remove(cls);
+      }
+    }
+    let finishRestore = () => {
+      classes.forEach(function(className) {
+        rmClass(document.querySelectorAll("." + className), className);
+      });
+      this.setBox(...this.box);
+    };
+    let classes = [
+      "fullScreenSibling",
+      "fullScreenNode",
+      "fullScreenParent"
+    ];
+    this.isMaximized = false;
+    if (disableAnimation) {
+      finishRestore();
+    } else {
+      Box.enableAnimation();
+      node.addEventListener("transitionend", function handler(l) {
+        Box.disableAnimation();
+        node.removeEventListener("transitionend", handler);
+        finishRestore();
+      });
+    }
+    let parentRect = node.parentNode.getBoundingClientRect();
+    let top = parentRect.top + this.box[1];
+    let left = parentRect.left + this.box[0];
+    Utils.setBox(node, left, top, this.box[2], this.box[3]);
+  }
+  maximize(disableAnimation = false) {
+    let node = this.element;
+    function addClasses() {
+      node.classList.add("fullScreenNode");
+      let parent = node.parentNode;
+      while (parent && parent !== document.body) {
+        if (parent.classList)
+          parent.classList.add("fullScreenParent");
+        let childNodes = parent.childNodes;
+        for (let i = 0; i < childNodes.length; i++) {
+          let childNode = childNodes[i];
+          if (childNode != node && childNode.classList && !childNode.classList.contains("fullScreenParent"))
+            childNode.classList.add("fullScreenSibling");
+        }
+        parent = parent.parentNode;
+      }
+    }
+    let rect = node.getBoundingClientRect();
+    Utils.setBox(node, rect.left, rect.top, rect.width, rect.height);
+    addClasses();
+    this.isMaximized = true;
+    node.getBoundingClientRect();
+    if (!disableAnimation) {
+      Box.enableAnimation();
+      node.addEventListener("transitionend", function handler() {
+        node.removeEventListener("transitionend", handler);
+        Box.disableAnimation();
+      });
+    }
+    this.setBox(...this.box);
+  }
+  toggleMaximize() {
+    if (this.isMaximized)
+      this.restore();
+    else
+      this.maximize();
+  }
+  remove() {
+    this.removeAllChildren();
+    if (this.element)
+      this.element.remove();
+    if (this.parent) {
+      if (this.parent[0] == this)
+        this.parent[0] = void 0;
+      if (this.parent[1] == this)
+        this.parent[1] = void 0;
+      this.parent.recalculateAllMinSizes();
+      this.parent = void 0;
+    }
+  }
+  removeAllChildren() {
+    this.removeChild(this[0]);
+    this.removeChild(this[1]);
+    this[0] = void 0;
+    this[1] = void 0;
+  }
+  removeChild(child) {
+    if (!child)
+      return;
+    child.off("editorAdded", this.$editorAdded);
+    child.remove();
+    child.element.remove();
+  }
+  toggleShowHide() {
+    var _a;
+    Box.enableAnimation();
+    this.hidden = !this.hidden;
+    (_a = this.parent) == null ? void 0 : _a.resize();
+    let node = this.element;
+    let self = this;
+    node.addEventListener("transitionend", function handler() {
+      var _a2;
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+      (_a2 = self.parent) == null ? void 0 : _a2.resize();
+    });
+  }
+  hide() {
+    var _a;
+    Box.enableAnimation();
+    this.hidden = true;
+    (_a = this.parent) == null ? void 0 : _a.resize();
+    let node = this.element;
+    let self = this;
+    node.addEventListener("transitionend", function handler() {
+      var _a2;
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+      (_a2 = self.parent) == null ? void 0 : _a2.resize();
+    });
+  }
+  show() {
+    var _a;
+    Box.enableAnimation();
+    this.hidden = false;
+    (_a = this.parent) == null ? void 0 : _a.resize();
+    let node = this.element;
+    let self = this;
+    node.addEventListener("transitionend", function handler() {
+      var _a2;
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+      (_a2 = self.parent) == null ? void 0 : _a2.resize();
+    });
+  }
+  /**
+   *
+   * @param {Number} previousBoxIndex
+   * @param {Box} box
+   * @returns {Box}
+   */
+  addChildBox(previousBoxIndex, box) {
+    let previousBox, index;
+    if (previousBoxIndex instanceof Box) {
+      previousBox = previousBoxIndex;
+      index = this[0] == previousBox ? 0 : 1;
+    } else {
+      index = previousBoxIndex;
+      previousBox = this[index];
+    }
+    if (previousBox && previousBox === box)
+      return previousBox;
+    let previousParent = box.parent;
+    if (previousParent && previousParent !== this) {
+      let previousIndex = previousParent[0] === box ? 0 : 1;
+      previousParent[previousIndex] = null;
+      previousParent.ratio = 1;
+      if (previousParent.fixedChild && previousParent.fixedChild === box) {
+        previousParent.fixedChild = null;
+      }
+      previousParent.resize();
+    }
+    this[index] = box;
+    box.parent = this;
+    this.renderChild(box);
+    if (previousBox && previousBox.isMaximized) {
+      previousBox.restore(true);
+      box.maximize(true);
+    }
+    if (previousBox && previousBox.parent === this) {
+      if (this.fixedChild && this.fixedChild == previousBox) {
+        box.fixedSize = previousBox.fixedSize;
+        if (!box.size)
+          box.size = previousBox.size;
+        previousBox.fixedSize = previousBox.size = null;
+        this.fixedChild = box;
+      }
+      previousBox.remove();
+    }
+    if (!this.fixedChild)
+      this.calculateChildRatio(box);
+    this.recalculateAllMinSizes();
+    this.resize();
+    return box;
+  }
+  recalculateAllMinSizes() {
+    let node = this;
+    while (node) {
+      node.calculateMinSize(true);
+      node = node.parent;
+    }
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/mouse/accordion_handler.ts
+
+
+let accordion_handler_event = __webpack_require__(17989);
+var AccordionHandler;
+((AccordionHandler2) => {
+  AccordionHandler2.toggleBarMouseDown = function(e, accordionConstructor) {
+    let toggleBlock = Utils.findNode(e.target, "toggle-block");
+    if (!toggleBlock)
+      return;
+    let accordionBox, accordionBoxRect, toggleBlockDragging, toggleBlockRect;
+    let startIndex, changeIndex, previousIndex;
+    let toggleBar, section, splitter;
+    let startX = e.clientX, startY = e.clientY;
+    let isDragging = false;
+    let posX, posY, prevY, prevX;
+    let prevBlock, topMaxY, nextBlock, bottomMaxY;
+    function distance(dx, dy) {
+      return dx * dx + dy * dy;
+    }
+    function calculateNearbyBlocksData() {
+      if (!accordionBox)
+        return;
+      prevBlock = accordionBox.toggleBlockList[changeIndex - 1] || null;
+      nextBlock = accordionBox.toggleBlockList[changeIndex + 1] || null;
+      topMaxY = prevBlock && parseInt(prevBlock.style.top, 10) + parseInt(prevBlock.style.height, 10) / 2 + accordionBoxRect.top;
+      bottomMaxY = nextBlock && parseInt(nextBlock.style.top, 10) + parseInt(nextBlock.style.height, 10) / 2 + accordionBoxRect.top;
+    }
+    function startDragging() {
+      if (isDragging)
+        return;
+      accordionBox = Utils.findHost(toggleBlock, accordionConstructor);
+      if (!accordionBox)
+        return;
+      accordionBoxRect = accordionBox.element.getBoundingClientRect();
+      startIndex = changeIndex = previousIndex = toggleBlock.$index;
+      toggleBlockRect = toggleBlock.getBoundingClientRect();
+      toggleBlockDragging = toggleBlock.cloneNode(true);
+      toggleBlockDragging.$hostAccordionBox = accordionBox;
+      toggleBlockDragging.$hostIndex = startIndex;
+      toggleBlockDragging.classList.add("toggleBlockDragging");
+      Utils.setBox(toggleBlockDragging, toggleBlockRect.left, toggleBlockRect.top, toggleBlockRect.width, toggleBlockRect.height);
+      posX = startX - toggleBlockRect.left;
+      posY = startY - toggleBlockRect.top;
+      document.body.appendChild(toggleBlockDragging);
+      toggleBlock.style.opacity = 0;
+      calculateNearbyBlocksData();
+      isDragging = true;
+    }
+    function recalculateIndexes(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        arr[i].$index = i;
+      }
+    }
+    function accordionDataChanged() {
+      if (!accordionBox)
+        return;
+      recalculateIndexes(accordionBox.sections);
+      recalculateIndexes(accordionBox.toggleBarList);
+      recalculateIndexes(accordionBox.toggleBlockList);
+      recalculateIndexes(accordionBox.splitterList);
+      accordionBox.resize();
+    }
+    function addToAccordionBox(index) {
+      if (!accordionBox)
+        return;
+      accordionBox.sections.splice(index, 0, section);
+      accordionBox.toggleBarList.splice(index, 0, toggleBar);
+      accordionBox.toggleBlockList.splice(index, 0, toggleBlock);
+      calculateNearbyBlocksData();
+      if (nextBlock) {
+        accordionBox.element.insertBefore(splitter, nextBlock);
+        accordionBox.element.insertBefore(toggleBlock, splitter);
+        accordionBox.splitterList.splice(index - 1, 0, splitter);
+      } else {
+        accordionBox.element.appendChild(splitter);
+        accordionBox.element.appendChild(toggleBlock);
+        accordionBox.splitterList.push(splitter);
+      }
+      toggleBlock.$parent = accordionBox;
+      splitter.$parent = accordionBox;
+      accordionBox.calculateSectionsSizesPercents();
+      accordionBox.recalculateChildrenSizes();
+      accordionDataChanged();
+    }
+    function removeFromAccordionBox() {
+      if (!accordionBox)
+        return;
+      section = accordionBox.sections.splice(previousIndex, 1)[0];
+      toggleBar = accordionBox.toggleBarList.splice(previousIndex, 1)[0];
+      toggleBlock = accordionBox.toggleBlockList.splice(previousIndex, 1)[0];
+      let splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex - 1;
+      splitter = accordionBox.splitterList.splice(splitterIndex, 1)[0];
+      toggleBlockDragging.style.height = accordionBox.toggleBarHeight + "px";
+      toggleBlock.remove();
+      splitter.remove();
+      accordionBox.calculateSectionsSizesPercents();
+      accordionBox.recalculateChildrenSizes();
+      accordionDataChanged();
+      accordionBox = void 0;
+      toggleBlock.$parent = null;
+      splitter.$parent = null;
+    }
+    function finishDragging() {
+      if (!accordionBox) {
+        accordionBox = toggleBlockDragging.$hostAccordionBox;
+        addToAccordionBox(toggleBlockDragging.$hostIndex);
+      }
+      toggleBlockDragging.remove();
+      toggleBlock.style.opacity = 1;
+      isDragging = false;
+    }
+    let onMouseMove = function(e2) {
+      if (e2.type !== "mousemove")
+        return;
+      if (!isDragging) {
+        if (distance(e2.clientX - startX, e2.clientY - startY) < 25)
+          return;
+        startDragging();
+      }
+      let left = e2.clientX - posX;
+      let top = e2.clientY - posY;
+      if (accordionBox) {
+        if (left < accordionBoxRect.left - accordionBoxRect.width || left > accordionBoxRect.left + accordionBoxRect.width) {
+          removeFromAccordionBox();
+        }
+      }
+      if (!accordionBox) {
+        accordionBox = Utils.findHost(e2.target, accordionConstructor);
+        if (accordionBox) {
+          accordionBoxRect = accordionBox.element.getBoundingClientRect();
+          nextBlock = Utils.findNode(e2.target, "toggle-block");
+          if (nextBlock) {
+            startIndex = nextBlock.$index;
+          } else {
+            startIndex = accordionBox.toggleBlockList.length;
+          }
+          previousIndex = changeIndex = startIndex;
+          addToAccordionBox(previousIndex);
+          toggleBlockDragging.style.height = toggleBlock.style.height;
+        }
+      }
+      if (accordionBox) {
+        left = accordionBoxRect.left;
+        if (e2.clientY < prevY && topMaxY && top < topMaxY) {
+          changeIndex--;
+        } else if (e2.clientY > prevY && bottomMaxY && top + toggleBlockRect.height > bottomMaxY) {
+          changeIndex++;
+        }
+        if (changeIndex !== previousIndex) {
+          accordionBox.element.insertBefore(toggleBlock, accordionBox.toggleBlockList[changeIndex]);
+          let splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex + 1;
+          accordionBox.element.insertBefore(accordionBox.toggleBlockList[changeIndex], accordionBox.splitterList[splitterIndex]);
+          accordionBox.sections.splice(changeIndex, 0, accordionBox.sections.splice(previousIndex, 1)[0]);
+          accordionBox.toggleBarList.splice(changeIndex, 0, accordionBox.toggleBarList.splice(previousIndex, 1)[0]);
+          accordionBox.toggleBlockList.splice(changeIndex, 0, accordionBox.toggleBlockList.splice(previousIndex, 1)[0]);
+          calculateNearbyBlocksData();
+          accordionDataChanged();
+          previousIndex = changeIndex;
+        }
+      }
+      toggleBlockDragging.style.left = left + "px";
+      toggleBlockDragging.style.top = top + "px";
+      prevX = e2.clientX;
+      prevY = e2.clientY;
+    };
+    let onMouseUp = function(e2) {
+      if (!isDragging)
+        return;
+      finishDragging();
+    };
+    accordion_handler_event.capture(window, onMouseMove, onMouseUp);
+    return e.preventDefault();
+  };
+  AccordionHandler2.toggleBarOnClick = function(e) {
+    let toggleBlock = Utils.findNode(e.target, "toggle-block");
+    if (!toggleBlock)
+      return;
+    let accordionBox = toggleBlock.$parent;
+    let index = toggleBlock.$index;
+    let isOpened = accordionBox.isOpenedBlock(toggleBlock);
+    if (!isOpened) {
+      toggleBlock.classList.add("toggle-opened");
+      index = void 0;
+    } else {
+      toggleBlock.classList.remove("toggle-opened");
+    }
+    accordionBox.recalculateChildrenSizes(index);
+    Box.enableAnimation();
+    let node = accordionBox.element;
+    node.addEventListener("transitionend", function handler() {
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+    });
+    accordionBox.resize();
+  };
+  AccordionHandler2.splitterMouseDown = function(e) {
+    let button = e.button;
+    if (button !== 0)
+      return;
+    let splitter = Utils.findNode(e.target, "splitter");
+    if (!splitter)
+      return;
+    let accordionBox = splitter.$parent;
+    let x = e.clientX;
+    let y = e.clientY;
+    let splitterIndex = splitter.$index + 1;
+    let prevX = x;
+    let prevY = y;
+    if (!accordionBox.hasNextOpenedBlocks(splitterIndex) || !accordionBox.hasPrevOpenedBlocks(splitterIndex))
+      return;
+    accordionBox.keepState();
+    let onMouseMove = function(e2) {
+      x = e2.clientX;
+      y = e2.clientY;
+      let changedSize = 0;
+      if (prevY > y) {
+        changedSize = accordionBox.recalculatePreviousSectionsSize(splitterIndex, y);
+        if (changedSize === 0)
+          return;
+        accordionBox.expandNextSections(splitterIndex, changedSize);
+      } else if (prevY < y) {
+        changedSize = accordionBox.recalculateNextSectionsSize(splitterIndex, y);
+        if (changedSize === 0)
+          return;
+        accordionBox.expandPreviousSections(splitterIndex, changedSize);
+      } else {
+        return;
+      }
+      prevY = y;
+      accordionBox.resize();
+    };
+    let onResizeEnd = function(e2) {
+      accordionBox.dischargeState();
+      Box.setGlobalCursor("");
+      accordionBox.calculateSectionsSizesPercents();
+    };
+    Box.setGlobalCursor(`${accordionBox.vertical ? "ns" : "ew"}-resize`);
+    accordion_handler_event.capture(window, onMouseMove, onResizeEnd);
+    return e.preventDefault();
+  };
+})(AccordionHandler || (AccordionHandler = {}));
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/accordion.css
+var accordion = __webpack_require__(21705);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/accordion.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var accordion_options = {};
+
+accordion_options.styleTagTransform = (styleTagTransform_default());
+accordion_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      accordion_options.insert = insertBySelector_default().bind(null, "head");
+    
+accordion_options.domAPI = (styleDomAPI_default());
+accordion_options.insertStyleElement = (insertStyleElement_default());
+
+var accordion_update = injectStylesIntoStyleTag_default()(accordion/* default */.Z, accordion_options);
+
+
+
+
+       /* harmony default export */ const styles_accordion = (accordion/* default */.Z && accordion/* default.locals */.Z.locals ? accordion/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/boxes/accordion.ts
+
+
+
+
+
+dom.importCssString(accordion_namespaceObject, "accordion.css");
+const accordion_BOX_MIN_SIZE = 80;
+class Accordion extends Box {
+  constructor(options) {
+    var _a;
+    super(options);
+    //TODO extending from Box isn't right
+    this.toggleBarList = [];
+    this.splitterList = [];
+    this.toggleBlockList = [];
+    this.boxMinSize = 30;
+    this.toggleBarHeight = 20;
+    this.splitterSize = 1;
+    this.vertical = options.vertical || false;
+    this.color = (_a = options.color) != null ? _a : "";
+    this.sections = options.sections;
+    this.minSize = options.minSize || accordion_BOX_MIN_SIZE;
+    this.minVerticalSize = options.minVerticalSize || this.minSize;
+    this.minHorizontalSize = options.minHorizontalSize || this.minSize;
+    this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
+    this.size = options.size;
+  }
+  hasNextOpenedBlocks(index) {
+    for (let i = index; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i))
+        return true;
+    }
+    return false;
+  }
+  hasPrevOpenedBlocks(index) {
+    for (let i = index - 1; i >= 0; i--) {
+      if (this.isOpenedByIndex(i))
+        return true;
+    }
+    return false;
+  }
+  isOpenedByIndex(index) {
+    return this.isOpenedBlock(this.toggleBlockList[index]);
+  }
+  isOpenedBlock(toggleBlock) {
+    return toggleBlock.classList.contains("toggle-opened");
+  }
+  keepState() {
+    this.nextChangedIndexes = [];
+    this.prevChangedIndexes = [];
+    for (let i = 0; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i)) {
+        let section = this.sections[i];
+        section.previousSize = section.currentSize;
+      }
+    }
+  }
+  dischargeState() {
+    this.nextChangedIndexes = void 0;
+    this.prevChangedIndexes = void 0;
+    for (let i = 0; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i))
+        this.sections[i].previousSize = void 0;
+    }
+  }
+  recalculatePreviousSectionsSize(index, top, maxChangeSize) {
+    let changedSize = 0;
+    for (let i = index - 1; i >= 0; i--) {
+      if (this.isOpenedByIndex(i)) {
+        let section = this.sections[i];
+        let rect = section.box.element.getBoundingClientRect();
+        let done = false;
+        let prevSize = rect.height;
+        let currentSize = Math.max(top - rect.top, this.boxMinSize);
+        top -= rect.height;
+        if (currentSize < prevSize) {
+          if (currentSize > this.boxMinSize)
+            done = true;
+          if (!this.prevChangedIndexes.includes(i))
+            this.prevChangedIndexes.unshift(i);
+          section.currentSize = currentSize;
+          changedSize += prevSize - currentSize;
+          if (done || maxChangeSize != void 0 && changedSize >= maxChangeSize)
+            break;
+        }
+      }
+      top -= this.toggleBarHeight;
+    }
+    return changedSize;
+  }
+  recalculateNextSectionsSize(index, top, maxChangeSize) {
+    let changedSize = 0;
+    for (let i = index; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i)) {
+        let section = this.sections[i];
+        let rect = section.box.element.getBoundingClientRect();
+        let done = false;
+        let prevSize = rect.height;
+        let currentSize = Math.max(rect.bottom - top - this.toggleBarHeight, this.boxMinSize);
+        top += rect.height;
+        if (currentSize < prevSize) {
+          if (currentSize > this.boxMinSize)
+            done = true;
+          if (!this.nextChangedIndexes.includes(i))
+            this.nextChangedIndexes.unshift(i);
+          section.currentSize = currentSize;
+          changedSize += prevSize - currentSize;
+          if (done || maxChangeSize != void 0 && changedSize >= maxChangeSize)
+            break;
+        }
+      }
+      top += this.toggleBarHeight;
+      top += this.splitterSize;
+    }
+    return changedSize;
+  }
+  restoreChangedSizes(size, changedIndexes) {
+    if (!changedIndexes)
+      return size;
+    while (changedIndexes.length && size > 0) {
+      let index = changedIndexes[0];
+      let section = this.sections[index];
+      let currSize = section.currentSize;
+      section.currentSize = Math.min(section.previousSize, currSize + size);
+      size -= section.currentSize - currSize;
+      if (section.currentSize >= section.previousSize)
+        changedIndexes.shift();
+    }
+    return size;
+  }
+  expandPreviousSections(index, size) {
+    size = this.restoreChangedSizes(size, this.prevChangedIndexes);
+    if (size <= 0)
+      return;
+    let openedSectionsList = [];
+    for (let i = index - 1; i >= 0; i--) {
+      if (this.isOpenedByIndex(i))
+        openedSectionsList.push(this.sections[i]);
+    }
+    this.applySizeToOpenedSections(size, openedSectionsList);
+  }
+  expandNextSections(index, size) {
+    size = this.restoreChangedSizes(size, this.nextChangedIndexes);
+    if (size <= 0)
+      return;
+    let openedSectionsList = [];
+    for (let i = index; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i)) {
+        openedSectionsList.push(this.sections[i]);
+      }
+    }
+    this.applySizeToOpenedSections(size, openedSectionsList);
+  }
+  applySizeToOpenedSections(size, openedSections) {
+    let count = openedSections.length;
+    if (!count)
+      return;
+    let remainder = size % count;
+    let addSize = (size - remainder) / count;
+    for (let i = 0; i < count; i++) {
+      openedSections[i].currentSize += addSize;
+    }
+    openedSections[0].currentSize += remainder;
+  }
+  resize() {
+    this.$updateChildSize(...this.rect);
+  }
+  render() {
+    var _a, _b;
+    if (this.element)
+      return this.element;
+    this.element = dom.buildDom(["div", {
+      class: "box accordion",
+      $host: this
+    }]);
+    let section;
+    let splitter;
+    let toggleBlock;
+    let toggleBar;
+    for (let i = 0; i < this.sections.length; i++) {
+      section = this.sections[i];
+      if (i > 0) {
+        splitter = dom.buildDom(["div", {
+          class: `splitter accordion-splitter splitter${this.vertical ? "-v" : "-h"}`,
+          $index: i - 1,
+          $parent: this,
+          onmousedown: function(e) {
+            AccordionHandler.splitterMouseDown(e);
+          }
+        }, ["div"]]);
+        this.element.appendChild(splitter);
+        this.splitterList.push(splitter);
+      }
+      toggleBlock = dom.buildDom(["div", {
+        class: `toggle-block`,
+        $index: i,
+        $parent: this
+      }]);
+      toggleBar = dom.buildDom(["div", {
+        class: `toggle-bar toggle-bar${this.vertical ? "-v" : "-h"}`,
+        onmousedown: function(e) {
+          AccordionHandler.toggleBarMouseDown(e, Accordion);
+        },
+        onclick: function(e) {
+          AccordionHandler.toggleBarOnClick(e);
+        }
+      }, ["div", { class: "title" }, section.title]]);
+      section.currentSize = section.savedSize = parseInt((_b = (_a = section.box.size) == null ? void 0 : _a.toString()) != null ? _b : "", 10);
+      toggleBlock.appendChild(toggleBar);
+      this.toggleBarList.push(toggleBar);
+      toggleBlock.appendChild(section.box.render());
+      this.element.appendChild(toggleBlock);
+      this.toggleBlockList.push(toggleBlock);
+    }
+    this.element.style.backgroundColor = this.color;
+    this.element.style.position = "absolute";
+    this.calculateSectionsSizesPercents();
+    return this.element;
+  }
+  calculateSectionsSizesPercents() {
+    let totalSize = 0;
+    let actualSizes = [];
+    for (let i = 0; i < this.sections.length; i++) {
+      let section = this.sections[i];
+      actualSizes.push(this.isOpenedByIndex(i) ? section.currentSize : section.savedSize);
+      totalSize += actualSizes[i];
+    }
+    let minPercent = Math.floor(this.boxMinSize / totalSize * 100);
+    let maxPercent = 100 - minPercent * (this.sections.length - 1);
+    let totalPercent = 0;
+    for (let i = 0; i < this.sections.length; i++) {
+      let section = this.sections[i];
+      section.sizePercent = Math.floor(actualSizes[i] / totalSize * 100);
+      section.sizePercent = Math.min(Math.max(section.sizePercent, minPercent), maxPercent);
+      totalPercent += section.sizePercent;
+    }
+    if (totalPercent !== 100)
+      this.sections[this.sections.length - 1].sizePercent += 100 - totalPercent;
+  }
+  setBox(x, y, w, h) {
+    this.rect = [x, y, w, h];
+    Utils.setBox(this.element, x, y, w, h);
+    this.recalculateChildrenSizes();
+    this.$updateChildSize(x, y, w, h);
+  }
+  recalculateChildrenSizes(index) {
+    let height = this.rect[3];
+    height -= this.toggleBarHeight * this.toggleBarList.length;
+    height -= this.splitterSize * this.splitterList.length;
+    let totalSize = 0;
+    let openedIndexes = [];
+    for (let i = 0; i < this.sections.length; i++) {
+      let section = this.sections[i];
+      section.currentSize = Math.max(Math.floor(height * section.sizePercent / 100), this.boxMinSize);
+      if (this.isOpenedByIndex(i)) {
+        totalSize += section.currentSize;
+        openedIndexes.push(i);
+      } else {
+        section.savedSize = section.currentSize;
+        section.currentSize = 0;
+      }
+    }
+    let spareSize = height - totalSize;
+    if (!spareSize)
+      return;
+    if (index !== void 0) {
+      let prevOpenedIndexes = [];
+      while (openedIndexes.length && openedIndexes[0] < index) {
+        prevOpenedIndexes.push(openedIndexes.shift());
+      }
+      if (!openedIndexes.length)
+        openedIndexes = prevOpenedIndexes;
+    }
+    let prevSize, changedSize, openedBoxesCount, remainder, addSize;
+    while (openedIndexes.length && spareSize) {
+      let changedIndexes = [];
+      openedBoxesCount = openedIndexes.length;
+      remainder = spareSize % openedBoxesCount;
+      addSize = (spareSize - remainder) / openedBoxesCount;
+      for (let i = 0; i < openedIndexes.length; i++) {
+        let section = this.sections[openedIndexes[i]];
+        prevSize = section.currentSize;
+        if (openedBoxesCount === 1)
+          addSize += remainder;
+        section.currentSize += addSize;
+        section.currentSize = Math.max(section.currentSize, this.boxMinSize);
+        changedSize = section.currentSize - prevSize;
+        spareSize -= changedSize;
+        openedBoxesCount--;
+        if (changedSize < 0)
+          changedIndexes.push(openedIndexes[i]);
+      }
+      openedIndexes = changedIndexes;
+    }
+  }
+  $updateChildSize(x, y, w, h) {
+    x = 0;
+    y = 0;
+    for (let i = 0; i < this.toggleBlockList.length; i++) {
+      let toggleBlock = this.toggleBlockList[i];
+      let section = this.sections[i];
+      let boxSize = section.currentSize;
+      h = this.toggleBarHeight + boxSize;
+      Utils.setBox(toggleBlock, x, y, w, h);
+      y += this.toggleBarHeight;
+      section.box.setBox(0, this.toggleBarHeight, w, boxSize);
+      y += boxSize;
+      if (this.splitterList[i]) {
+        Utils.setBox(this.splitterList[i], x, y, w, this.splitterSize);
+        y += this.splitterSize;
+      }
+    }
+  }
+  remove() {
+    if (this.element)
+      this.element.remove();
+    if (this.parent) {
+      if (this.vertical === this.parent.vertical)
+        this.parent.minSize -= this.minSize;
+      if (this.parent[0] == this)
+        this.parent[0] = void 0;
+      if (this.parent[1] == this)
+        this.parent[1] = void 0;
+    }
+  }
+  toJSON() {
+    let sections = [];
+    let section;
+    for (let i = 0; i < this.sections.length; i++) {
+      section = this.sections[i];
+      sections.push({
+        title: section.title,
+        boxData: section.box.toJSON()
+      });
+    }
+    return {
+      type: "accordion",
+      vertical: this.vertical,
+      size: this.size,
+      sections
+    };
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/toolbar.ts
+
+class Toolbar {
+  setBox(x, y, w, h) {
+    Utils.setBox(this.element, x, y, w, h);
+  }
+  constructor(options) {
+    this.direction = (options == null ? void 0 : options.direction) || "horizontal";
+    this.size = (options == null ? void 0 : options.size) || 27;
+    this.position = options == null ? void 0 : options.position;
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/tabPanelBar.ts
+
+class TabPanelBar extends Toolbar {
+  constructor(options) {
+    var _a, _b;
+    super(options);
+    this.selectedTabs = [];
+    this.tabList = [];
+    this.scrollLeft = 0;
+    this.animationSteps = 0;
+    this.MIN_TAB_SIZE = 120;
+    this.MAX_TAB_SIZE = 150;
+    this.activeTabHistory = [];
+    this.onMouseWheel = (e) => {
+      let d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (Math.abs(d) > 50) {
+        this.animateScroll(d);
+      } else {
+        this.stopScrollAnimation();
+        this.setScrollPosition((this.scrollLeft || 0) + d);
+      }
+    };
+    this.initTabList = (_b = (_a = options.tabList) != null ? _a : options.panelList) != null ? _b : [];
+  }
+  isVertical() {
+    return this.direction === "vertical";
+  }
+  getDraggingElementSize() {
+    if (!this.tabDraggingElement)
+      return 0;
+    let draggingElementSize = this.isVertical() ? this.tabDraggingElement.style.height : this.tabDraggingElement.style.width;
+    return parseInt(draggingElementSize, 10);
+  }
+  tabMouseDown(tab, expand = false, toggle = false) {
+    if (expand) {
+      this.expandSelection(tab, toggle);
+    } else {
+      this.anchorTab = null;
+      if (toggle) {
+        this.toggleSelection(tab);
+      } else {
+        this.activateTab(tab, void 0, this.selectedTabs.indexOf(tab) < 0);
+      }
+    }
+  }
+  expandSelection(tab, toggle = false) {
+    if (!this.anchorTab)
+      this.anchorTab = this.activeTab;
+    let prevSelectedTabs = this.selectedTabs;
+    this.selectedTabs = [];
+    let start = this.tabList.indexOf(this.anchorTab);
+    let end = this.tabList.indexOf(tab);
+    if (end < start) {
+      [start, end] = [end, start];
+    }
+    for (let i = start; i <= end; i++) {
+      this.addSelection(this.tabList[i]);
+    }
+    prevSelectedTabs.forEach((selectedTab) => {
+      if (this.selectedTabs.indexOf(selectedTab) < 0) {
+        if (!toggle) {
+          this.deselectTab(selectedTab);
+        } else {
+          this.addSelection(selectedTab);
+        }
+      }
+    });
+    this.activateTab(tab);
+  }
+  toggleSelection(tab) {
+    let index = this.selectedTabs.indexOf(tab);
+    if (index < 0) {
+      this.activateTab(tab);
+    } else if (tab !== this.activeTab) {
+      this.removeSelection(tab);
+    }
+  }
+  addSelection(tab) {
+    if (this.selectedTabs.indexOf(tab) < 0) {
+      this.selectTab(tab);
+      this.selectedTabs.push(tab);
+    }
+  }
+  selectTab(tab) {
+    tab.element.classList.add("selected");
+  }
+  deselectTab(tab) {
+    tab.element.classList.remove("selected");
+  }
+  removeSelection(tab) {
+    if (this.selectedTabs.indexOf(tab) < 0)
+      return;
+    this.deselectTab(tab);
+    this.selectedTabs.splice(this.selectedTabs.indexOf(tab), 1);
+  }
+  removeSelections() {
+    this.selectedTabs.forEach((selectedTab) => {
+      this.deselectTab(selectedTab);
+    });
+    this.selectedTabs = [];
+  }
+  scrollTabIntoView(tab) {
+    let index = this.tabList.indexOf(tab);
+    this.setScrollPosition((index + 1) * this.tabWidth);
+  }
+  activateTab(tab, content, removeSelections = false) {
+    removeSelections && this.removeSelections();
+    this.activeTabClicked = false;
+    this.addSelection(tab);
+    if (this.activeTab) {
+      if (this.activeTab === tab) {
+        this.activeTabClicked = true;
+        return;
+      }
+      if (this.activeTabHistory.indexOf(this.activeTab) >= 0)
+        this.activeTabHistory.splice(this.activeTabHistory.indexOf(this.activeTab), 1);
+      this.activeTabHistory.push(this.activeTab);
+      this.activeTab.deactivate();
+    }
+    tab.activate();
+    this.activeTab = tab;
+    this.configure();
+  }
+  removeTab(tab) {
+    if (tab === this.activeTab)
+      this.activeTab = void 0;
+    let index = this.tabList.indexOf(tab);
+    if (index >= 0)
+      this.tabList.splice(index, 1);
+    tab.parent = void 0;
+  }
+  activatePrevious(index) {
+    if (this.tabList.length) {
+      let tab = this.tabList[index - 1] || this.tabList[this.tabList.length - 1];
+      this.activateTab(tab);
+    }
+  }
+  addTab(tab, index, content) {
+    if (!tab.element)
+      tab.render();
+    tab.parent = this;
+    if (index === void 0 || index === null || index >= this.tabList.length) {
+      this.tabContainer.appendChild(tab.element);
+      this.tabList.push(tab);
+    } else {
+      this.tabContainer.insertBefore(tab.element, this.tabContainer.childNodes[index]);
+      this.tabList.splice(index, 0, tab);
+    }
+    if (tab.active)
+      this.activateTab(tab, content, true);
+    this.configure();
+    return tab;
+  }
+  setScrollPosition(scrollLeft) {
+    this.scrollLeft = scrollLeft;
+    this.configure();
+  }
+  animateScroll(v) {
+    this.vX = v / 80;
+    this.animationSteps += 15;
+    if (this.animationSteps > 15) {
+      this.vX *= 1.2 * this.animationSteps / 10;
+      this.animationSteps = 15 + Math.ceil((this.animationSteps - 15) * 0.75);
+    }
+    if (this.animationTimer)
+      return;
+    this.animationTimer = setInterval(() => {
+      if (this.animationSteps-- <= 0) {
+        return this.stopScrollAnimation();
+      }
+      let vX = this.vX;
+      if (Math.abs(this.vX) < 0.01)
+        vX = 0;
+      vX = 0.9 * vX;
+      let oldScrollLeft = this.scrollLeft;
+      this.setScrollPosition(this.scrollLeft + 10 * vX);
+      if (oldScrollLeft == this.scrollLeft)
+        this.animationSteps = 0;
+      this.vX = vX;
+    }, 10);
+  }
+  stopScrollAnimation() {
+    clearInterval(this.animationTimer);
+    this.animationTimer = null;
+    this.animationScrollLeft = null;
+    this.vX = 0;
+  }
+  transform(el, dx, dy) {
+    el.style.left = Math.round(dx) + "px";
+    el.dx = dx;
+    el.dy = dy;
+  }
+  startTabDragging(element, index) {
+    if (this.isDragging)
+      return;
+    this.tabDraggingElement = element;
+    this.draggingElementIndex = index;
+    this.configure();
+    this.isDragging = true;
+  }
+  finishTabDragging() {
+    this.draggingElementIndex = void 0;
+    this.tabDraggingElement = void 0;
+    if (this.activeTabHistory.length) {
+      let removedHistoryTabs = [];
+      for (let i = 0; i < this.activeTabHistory.length; i++) {
+        if (this.tabList.indexOf(this.activeTabHistory[i]) < 0) {
+          removedHistoryTabs.push(this.activeTabHistory[i]);
+        }
+      }
+      removedHistoryTabs.forEach((tab) => {
+        let index = this.activeTabHistory.indexOf(tab);
+        if (index >= 0) {
+          this.activeTabHistory.splice(index, 1);
+        }
+      });
+    }
+    this.configure();
+    this.isDragging = false;
+  }
+  toJSON() {
+    return {
+      tabList: this.tabList.map((tab) => tab.toJSON()),
+      scrollLeft: this.scrollLeft
+    };
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/mouse/tabbar_handler.ts
+
+
+let tabbar_handler_event = __webpack_require__(17989);
+var TabbarHandler;
+((TabbarHandler2) => {
+  TabbarHandler2.tabbarMouseDown = function(e, tabConstructor, tabBarConstructor, showSplit = false) {
+    let divSplit, splitPosition, pane;
+    function hideSplitPosition() {
+      if (!divSplit)
+        return;
+      divSplit.remove();
+      divSplit = splitPosition = pane = null;
+    }
+    function showSplitPosition(e2) {
+      let el = e2.target;
+      if (tabBar) {
+        hideSplitPosition();
+        return;
+      }
+      pane = Utils.findHost(el);
+      if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
+        hideSplitPosition();
+        return;
+      }
+      if (pane.tabBar.tabList.length === 0) {
+        hideSplitPosition();
+        return;
+      }
+      let dark = false;
+      if (!divSplit) {
+        divSplit = document.createElement("div");
+        document.body.appendChild(divSplit);
+      }
+      divSplit.className = "split-area" + (dark ? " dark" : "");
+      let rect = pane.element.getBoundingClientRect();
+      let bHeight = pane.tabBar.element.clientHeight - 1;
+      rect = {
+        left: rect.left,
+        top: rect.top + bHeight,
+        width: rect.width,
+        height: rect.height - bHeight
+      };
+      let left = (e2.clientX - rect.left) / rect.width;
+      let right = 1 - left;
+      let top = (e2.clientY - rect.top) / rect.height;
+      let bottom = 1 - top;
+      let min = Math.min(left, top, right, bottom);
+      if (min == left) {
+        splitPosition = [true, false];
+        Utils.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
+      } else if (min == right) {
+        splitPosition = [false, false];
+        Utils.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
+      } else if (min == top) {
+        splitPosition = [true, true];
+        Utils.setBox(divSplit, rect.left, rect.top, rect.width, rect.height / 2);
+      } else if (min == bottom) {
+        splitPosition = [false, true];
+        Utils.setBox(divSplit, rect.left, rect.top + rect.height / 2, rect.width, rect.height / 2);
+      }
+    }
+    if (e.target.classList.contains("tabCloseButton")) {
+      return;
+    }
+    let tab = Utils.findHost(e.target, tabConstructor);
+    if (!tab)
+      return;
+    let tabBar = Utils.findHost(e.target, tabBarConstructor);
+    if (!tabBar)
+      return;
+    let isVertical = tabBar.isVertical();
+    tabBar.tabMouseDown(tab, e.shiftKey, e.ctrlKey);
+    if (e.shiftKey || e.ctrlKey)
+      return;
+    let isDragging = false;
+    let posX, posY, prevX, prevY;
+    let startX = e.clientX, startY = e.clientY;
+    let parentRect, tabElement, index, selectedTabs, hostTabBar, hostIndex;
+    let prevTab, leftMaxX, topMaxY, nextTab, rightMaxX, bottomMaxY;
+    let tabDragElementSize = 0;
+    let tabDragElementLeft = 0;
+    let tabDragElementTop = 0;
+    let calculateNearbyTabsData = function() {
+      if (isVertical) {
+        topMaxY = prevTab && parseInt(prevTab.style.top, 10) + parseInt(prevTab.style.height, 10) / 2 + parentRect.top;
+        bottomMaxY = nextTab && parseInt(nextTab.style.top, 10) + parseInt(nextTab.style.height, 10) / 2 + parentRect.top;
+      } else {
+        if (prevTab) {
+          let prevSibling = prevTab.previousSibling;
+          leftMaxX = prevSibling ? parseInt(prevSibling.style.left, 10) + parseInt(prevSibling.style.width, 10) + parentRect.left : parentRect.left;
+        }
+        rightMaxX = nextTab && parseInt(nextTab.style.left, 10) + parseInt(nextTab.style.width, 10) / 2 + parentRect.left;
+      }
+    };
+    let startDragging = function() {
+      if (isDragging || !tabBar)
+        return;
+      tabElement = dom.buildDom(["div", {
+        class: "tabDragging"
+      }]);
+      let activeIndex = index = tabBar.tabList.indexOf(tab);
+      tabBar.tabContainer.insertBefore(tabElement, tab.element);
+      tabDragElementLeft = parseInt(tab.element.style.left, 10);
+      tabDragElementTop = parseInt(tab.element.style.top, 10);
+      selectedTabs = [];
+      let selectedTab, selectedTabElement;
+      for (let i = 0; i < tabBar.selectedTabs.length; i++) {
+        selectedTab = tabBar.selectedTabs[i];
+        selectedTab.currentIndex = tabBar.tabList.indexOf(selectedTab);
+        if (selectedTab.currentIndex < activeIndex) {
+          index--;
+          if (isVertical) {
+            tabDragElementTop -= parseInt(selectedTab.element.style.top, 10);
+          } else {
+            tabDragElementLeft -= parseInt(selectedTab.element.style.width, 10);
+          }
+        }
+        selectedTabs.push(selectedTab);
+      }
+      selectedTabs.sort(function(tab1, tab2) {
+        return tab1.currentIndex - tab2.currentIndex;
+      });
+      for (let i = 0; i < selectedTabs.length; i++) {
+        selectedTab = selectedTabs[i];
+        selectedTabElement = selectedTab.element;
+        tabElement.appendChild(selectedTabElement);
+        selectedTabElement.style.pointerEvents = "none";
+        if (isVertical) {
+          selectedTabElement.style.top = tabDragElementSize + "px";
+          tabDragElementSize += parseInt(selectedTabElement.style.height, 10);
+        } else {
+          selectedTabElement.style.left = tabDragElementSize + "px";
+          tabDragElementSize += parseInt(selectedTabElement.style.width, 10);
+        }
+        tabBar.removeTab(selectedTab);
+      }
+      prevTab = tabElement.previousSibling;
+      nextTab = tabElement.nextSibling;
+      parentRect = tabBar.element.getBoundingClientRect();
+      if (isVertical) {
+        tabDragElementTop += parentRect.top;
+        posY = startY - tabDragElementTop;
+        posX = startX - parentRect.left;
+      } else {
+        tabDragElementLeft += parentRect.left;
+        posX = startX - tabDragElementLeft;
+        posY = startY - parentRect.top;
+      }
+      prevX = e.clientX;
+      prevY = e.clientY;
+      hostTabBar = tabBar;
+      hostIndex = index;
+      calculateNearbyTabsData();
+      isDragging = true;
+      document.body.appendChild(tabElement);
+      if (isVertical) {
+        Utils.setBox(tabElement, tabDragElementTop, parentRect.left, parentRect.width, tabDragElementSize);
+      } else {
+        Utils.setBox(tabElement, tabDragElementLeft, parentRect.top, tabDragElementSize, parentRect.height);
+      }
+      tabBar.startTabDragging(tabElement, index);
+    };
+    let finishDragging = function() {
+      if (pane && pane.split && splitPosition) {
+        let newPane = pane.split(...splitPosition);
+        tabBar = newPane.tabBar;
+      } else if (!tabBar) {
+        tabBar = hostTabBar;
+      }
+      tabBar.removeSelections();
+      tabElement.remove();
+      let selectedTab;
+      for (let i = 0; i < selectedTabs.length; i++) {
+        selectedTab = selectedTabs[i];
+        selectedTab.element.style.pointerEvents = "";
+        if (selectedTab === tab) {
+          selectedTab.active = true;
+        }
+        tabBar.addTab(selectedTab, index++);
+        tabBar.addSelection(selectedTab);
+      }
+      if (tabBar !== hostTabBar) {
+        hostTabBar.removeSelections();
+        hostTabBar.activatePrevious(hostIndex);
+      }
+      tabBar.finishTabDragging();
+      isDragging = false;
+      hideSplitPosition();
+    };
+    function distance(dx, dy) {
+      return dx * dx + dy * dy;
+    }
+    let onMouseMove = function(e2) {
+      if (e2.type !== "mousemove")
+        return;
+      if (!isDragging) {
+        if (distance(e2.clientX - startX, e2.clientY - startY) < 25)
+          return;
+        startDragging();
+      }
+      function removeTabFromBar() {
+        tabBar.finishTabDragging();
+        tabBar = void 0;
+      }
+      if (tabBar) {
+        tabBar.startTabDragging(tabElement, index);
+        if (!isVertical && (e2.clientX < parentRect.left || e2.clientX > parentRect.left + parentRect.width) || isVertical && (e2.clientY < parentRect.top || e2.clientY > parentRect.top + parentRect.height)) {
+          removeTabFromBar();
+        }
+      } else {
+        tabBar = Utils.findHost(e2.target, tabBarConstructor);
+        if (tabBar) {
+          isVertical = tabBar.isVertical();
+          let nextTabHost = Utils.findHost(e2.target, tabConstructor);
+          if (nextTabHost) {
+            index = tabBar.tabList.indexOf(nextTabHost);
+            nextTab = nextTabHost.element;
+            prevTab = nextTab.previousSibling;
+          } else {
+            index = tabBar.tabList.length;
+            nextTab = null;
+            prevTab = tabBar.tabContainer.childNodes[index - 1];
+          }
+          tabBar.startTabDragging(tabElement, index);
+          parentRect = tabBar.element.getBoundingClientRect();
+          calculateNearbyTabsData();
+        }
+      }
+      if (showSplit)
+        showSplitPosition(e2);
+      let left = e2.clientX - posX;
+      let top = e2.clientY - posY;
+      let x = left;
+      let y = top;
+      if (tabBar) {
+        if (isVertical && (x < parentRect.left - parentRect.width || x > parentRect.left + parentRect.width) || !isVertical && (y < parentRect.top - parentRect.height || y > parentRect.top + parentRect.height)) {
+          removeTabFromBar();
+        } else {
+          if (isVertical) {
+            x = parentRect.left;
+          } else {
+            y = parentRect.top;
+          }
+          if (isVertical && e2.clientY < prevY && topMaxY && top < topMaxY || !isVertical && e2.clientX < prevX && leftMaxX && left < leftMaxX) {
+            if (isVertical) {
+              prevTab.style.top = parseInt(prevTab.style.top, 10) + tabDragElementSize + "px";
+            } else {
+              prevTab.style.left = parseInt(prevTab.style.left, 10) + tabDragElementSize + "px";
+            }
+            index--;
+            [prevTab, nextTab] = [prevTab.previousSibling, prevTab];
+            calculateNearbyTabsData();
+          } else if (isVertical && e2.clientY > prevY && bottomMaxY && top + tabDragElementSize > bottomMaxY || !isVertical && e2.clientX > prevX && rightMaxX && left + tabDragElementSize > rightMaxX) {
+            if (isVertical) {
+              nextTab.style.top = parseInt(nextTab.style.top, 10) - tabDragElementSize + "px";
+            } else {
+              nextTab.style.left = parseInt(nextTab.style.left, 10) - tabDragElementSize + "px";
+            }
+            index++;
+            [prevTab, nextTab] = [nextTab, nextTab.nextSibling];
+            calculateNearbyTabsData();
+          }
+        }
+      }
+      prevX = e2.clientX;
+      prevY = e2.clientY;
+      tabElement.style.left = x + "px";
+      tabElement.style.top = y + "px";
+    };
+    let onMouseUp = function(e2) {
+      if (!isDragging) {
+        if (tabBar.selectedTabs.length > 1) {
+          tabBar.removeSelections();
+          tabBar.addSelection(tab);
+        }
+      } else {
+        finishDragging();
+      }
+    };
+    tabbar_handler_event.capture(window, onMouseMove, onMouseUp);
+    return e.preventDefault();
+  };
+})(TabbarHandler || (TabbarHandler = {}));
+window.addEventListener("mousedown", function() {
+  document.body.classList.add("disableIframe");
+}, true);
+window.addEventListener("mouseup", function() {
+  document.body.classList.remove("disableIframe");
+}, true);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/panelBar.ts
+
+
+
+
+class PanelBar extends TabPanelBar {
+  setBox(x, y, w, h) {
+    super.setBox(x, y, w, h);
+    this.configure();
+  }
+  configure() {
+    let tabElement;
+    let tabSize = 30;
+    let position = 0;
+    for (let i = 0; i < this.tabList.length; i++) {
+      tabElement = this.tabList[i].element;
+      if (this.draggingElementIndex === i)
+        position += this.getDraggingElementSize();
+      if (this.isVertical()) {
+        tabElement.style.left = "0px";
+        tabElement.style.height = tabSize + "px";
+        tabElement.style.top = position + "px";
+      } else {
+        tabElement.style.top = "0px";
+        tabElement.style.width = tabSize + "px";
+        tabElement.style.left = position + "px";
+      }
+      position += tabSize;
+    }
+  }
+  render() {
+    if (!this.element) {
+      this.element = dom.buildDom(["div", {
+        class: "panelbar " + this.direction + " " + this.position
+      }, ["div", {
+        class: "tabContainer",
+        ref: "tabContainer",
+        onmousedown: function(e) {
+          TabbarHandler.tabbarMouseDown(e, Panel, PanelBar);
+        },
+        onmouseup: (e) => {
+          if (this.activeTabClicked) {
+            let activeTab = this.activeTab;
+            this.removeSelection(activeTab);
+            activeTab.deactivate();
+            this.activeTab = void 0;
+            if (this.activeTabHistory.length && activeTab.autoHide) {
+              let previousTab = activeTab;
+              while (previousTab === activeTab && this.activeTabHistory.length) {
+                previousTab = this.activeTabHistory.pop();
+              }
+              if (previousTab !== activeTab)
+                this.activateTab(previousTab);
+            }
+          }
+        }
+      }]], void 0, this);
+    }
+    if (this.initTabList && this.initTabList.length) {
+      for (let i = 0; i < this.initTabList.length; i++) {
+        this.addTab(this.initTabList[i]);
+      }
+    }
+    this.element.$host = this;
+    return this.element;
+  }
+  addTabList(tabList, index) {
+    index = index || this.tabList.length;
+    let tab;
+    for (let i = 0; i < tabList.length; i++) {
+      tab = new Panel(tabList[i]);
+      this.addTab(tab, index++);
+    }
+  }
+  remove() {
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/panelManager.ts
+
+
+
+class PanelManager {
+  constructor(options) {
+    this.layout = options.layout;
+    this.locations = options.locations;
+  }
+  static getInstance(options) {
+    if (!PanelManager._instance)
+      PanelManager._instance = new PanelManager(options);
+    return PanelManager._instance;
+  }
+  toJSON() {
+    return {
+      panelBars: this.panelBarsToJSON()
+    };
+  }
+  panelBarsToJSON() {
+    let panelBars = {};
+    for (let [position, panelBar] of Object.entries(this.layout.toolBars)) {
+      if (panelBar instanceof PanelBar)
+        panelBars[position] = panelBar.toJSON();
+    }
+    return panelBars;
+  }
+  setState(state) {
+    var _a;
+    let panelBars = (_a = state.panelBars) != null ? _a : {};
+    let panelBar, panelList, panel;
+    let panelBody, panelBodyData;
+    for (let position of Object.keys(panelBars)) {
+      panelList = [];
+      let tabList = panelBars[position].tabList;
+      for (let i = 0; i < tabList.length; i++) {
+        panel = tabList[i];
+        panelBodyData = panel.panelBody;
+        if (panelBodyData.type === "accordion") {
+          let accordionSections = [];
+          let sections = panelBodyData.sections;
+          for (let index = 0; index < sections.length; index++) {
+            accordionSections.push({
+              title: sections[index].title,
+              box: new Box(sections[index].boxData)
+            });
+          }
+          panelBody = new Accordion({
+            vertical: panelBodyData.vertical,
+            size: panelBodyData.size,
+            sections: accordionSections
+          });
+        } else {
+          panelBody = new Box({
+            vertical: panelBodyData.type === "vbox",
+            color: panelBodyData.color,
+            size: panelBodyData.size,
+            hidden: panelBodyData.hidden,
+            fixedSize: panelBodyData.fixedSize
+          });
+        }
+        panelList.push({
+          active: panel.active,
+          title: panel.title,
+          autoHide: panel.autoHide,
+          panelBody
+        });
+      }
+      panelBar = new PanelBar({ panelList: {} });
+      this.layout.addToolBar(position, panelBar);
+      panelBar.addTabList(panelList);
+    }
+  }
+  activatePanel(panel) {
+    let location = this.locations[panel.parent.position];
+    if (!location)
+      return;
+    let index = location.index;
+    let parent = location.parent;
+    panel.panelBody.size = location.size;
+    let newBox = parent.addChildBox(index, panel.panelBody);
+    if (newBox.fixedSize && !parent.fixedChild)
+      parent.fixedChild = newBox;
+    location.box = newBox;
+    newBox.show();
+  }
+  deactivatePanel(panel) {
+    let location = this.locations[panel.parent.position];
+    location == null ? void 0 : location.box.hide();
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/panel.css
+var panel = __webpack_require__(52368);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/panel.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var panel_options = {};
+
+panel_options.styleTagTransform = (styleTagTransform_default());
+panel_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      panel_options.insert = insertBySelector_default().bind(null, "head");
+    
+panel_options.domAPI = (styleDomAPI_default());
+panel_options.insertStyleElement = (insertStyleElement_default());
+
+var panel_update = injectStylesIntoStyleTag_default()(panel/* default */.Z, panel_options);
+
+
+
+
+       /* harmony default export */ const styles_panel = (panel/* default */.Z && panel/* default.locals */.Z.locals ? panel/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/tabPanel.ts
+class TabPanel {
+  constructor(options) {
+    var _a;
+    this.active = (_a = options.active) != null ? _a : false;
+    this.title = options.title;
+  }
+  activate() {
+    this.active = true;
+    this.element.classList.add("active");
+  }
+  deactivate() {
+    this.active = false;
+    this.element.classList.remove("active");
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/panel.ts
+
+
+
+
+dom.importCssString(panel_namespaceObject, "panel.css");
+class Panel extends TabPanel {
+  constructor(options) {
+    var _a;
+    super(options);
+    this.location = options.location;
+    this.panelBody = options.panelBody;
+    this.autoHide = (_a = options.autoHide) != null ? _a : false;
+    this.title = options.title;
+  }
+  activate() {
+    super.activate();
+    PanelManager.getInstance().activatePanel(this);
+  }
+  deactivate() {
+    super.deactivate();
+    PanelManager.getInstance().deactivatePanel(this);
+  }
+  render() {
+    this.element = dom.buildDom(["div", {
+      class: "panelButton" + (this.active ? " active" : "")
+    }, ["span", {
+      class: "panelTitle"
+    }, this.title]]);
+    this.element.$host = this;
+    return this.element;
+  }
+  toJSON() {
+    return {
+      active: this.active,
+      title: this.title,
+      autoHide: this.autoHide,
+      panelBody: this.panelBody.toJSON()
+    };
+  }
+  remove() {
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/tab.css
+var tab = __webpack_require__(67303);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/tab.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var tab_options = {};
+
+tab_options.styleTagTransform = (styleTagTransform_default());
+tab_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      tab_options.insert = insertBySelector_default().bind(null, "head");
+    
+tab_options.domAPI = (styleDomAPI_default());
+tab_options.insertStyleElement = (insertStyleElement_default());
+
+var tab_update = injectStylesIntoStyleTag_default()(tab/* default */.Z, tab_options);
+
+
+
+
+       /* harmony default export */ const styles_tab = (tab/* default */.Z && tab/* default.locals */.Z.locals ? tab/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/tab.ts
+
+
+
+
+
+dom.importCssString(tab_namespaceObject, "tab.css");
+class Tab extends TabPanel {
+  constructor(options) {
+    var _a, _b, _c;
+    super(options);
+    this.contextMenu = "tabs";
+    this.tabIcon = (_a = options.icon) != null ? _a : "";
+    this.path = options.path;
+    this.preview = (_b = options.preview) != null ? _b : false;
+    this.editorType = (_c = options.editorType) != null ? _c : EditorType.ace;
+  }
+  toJSON() {
+    return {
+      title: this.title,
+      icon: this.tabIcon || void 0,
+      active: this.active || void 0,
+      path: this.path,
+      preview: this.preview || void 0,
+      editorType: this.editorType
+    };
+  }
+  activate(content) {
+    super.activate();
+    this.activatePane();
+    let tabManager = TabManager.getInstance();
+    tabManager.loadFile(this, content);
+    tabManager.activePane.resize();
+  }
+  activatePane() {
+    var _a;
+    TabManager.getInstance().activePane = (_a = this.parent) == null ? void 0 : _a.parent;
+  }
+  remove() {
+    var _a;
+    (_a = this.parent) == null ? void 0 : _a.closeTab(this);
+  }
+  set caption(value) {
+    this.$caption = value;
+  }
+  get caption() {
+    return this.$caption;
+  }
+  render() {
+    this.element = dom.buildDom([
+      "div",
+      {
+        class: "tab" + (this.active ? " active" : ""),
+        title: this.path
+      },
+      ["span", { class: "tabIcon" }, this.tabIcon],
+      ["span", { class: "tabTitle", ref: "$title" }, this.title],
+      ["span", { class: "tabCloseButton" }]
+    ], void 0, this);
+    if (this.preview)
+      this.element.style.fontStyle = "italic";
+    this.element.$host = this;
+    return this.element;
+  }
+  setTitle(title) {
+    this.title = title;
+    this.element.getElementsByClassName("tabTitle")[0].innerHTML = title;
+  }
+  get isActive() {
+    var _a;
+    return ((_a = this.parent) == null ? void 0 : _a.activeTab) == this;
+  }
+  get editor() {
+    var _a;
+    return (_a = this.parent) == null ? void 0 : _a.parent.getEditor(this.editorType);
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/commands/tabCommands.ts
+
+
+function getCurrentPaneTabs(element) {
+  var _a, _b, _c, _d;
+  if (element instanceof Tab) {
+    return {
+      tabs: [...(_b = (_a = element.parent) == null ? void 0 : _a.tabList) != null ? _b : []],
+      activeTab: element
+    };
+  } else {
+    return {
+      tabs: [...(_d = (_c = element.activePane) == null ? void 0 : _c.tabBar.tabList) != null ? _d : []],
+      activeTab: element.activeTab
+    };
+  }
+}
+function goToTab(el, tabNum) {
+  let currentPaneTabs = getCurrentPaneTabs(el);
+  let tabs = currentPaneTabs.tabs;
+  let activeTab = currentPaneTabs.activeTab;
+  let index = tabNum != null ? tabNum : tabs.indexOf(activeTab);
+  TabManager.getInstance().navigateToTab(index, activeTab, tabs);
+}
+let tabCommands = [
+  {
+    name: "clonetab",
+    mac: "",
+    win: "",
+    desc: "Create a new tab with a view on the same file"
+  },
+  {
+    name: "Close Tab",
+    mac: "Option-W",
+    win: "Alt-W",
+    desc: "close the tab that is currently active",
+    position: 300,
+    exec: (el) => {
+      if (el instanceof Tab) {
+        el.remove();
+      } else {
+        el.activeTab.remove();
+      }
+    }
+  },
+  {
+    name: "Close All Tabs",
+    mac: "Option-Shift-W",
+    win: "Alt-Shift-W",
+    desc: "Close all opened tabs",
+    position: 310,
+    exec: () => {
+      let tabs = TabManager.getInstance().tabs;
+      for (let i in tabs) {
+        tabs[i].remove();
+      }
+    }
+  },
+  {
+    name: "Close other tabs",
+    mac: "Option-Ctrl-W",
+    win: "Ctrl-Alt-W",
+    desc: "close all opened tabs, except the tab that is currently active",
+    position: 320,
+    exec: (el) => {
+      let currentPaneTabs = getCurrentPaneTabs(el);
+      let tabs = currentPaneTabs.tabs;
+      let activeTab = currentPaneTabs.activeTab;
+      for (let tab of tabs) {
+        if (tab != activeTab)
+          tab.remove();
+      }
+    }
+  },
+  {
+    name: "Go to tab right",
+    mac: "Command-}",
+    win: "Ctrl-}",
+    //TODO: used by ace
+    desc: "navigate to the next tab, right to the tab that is currently active",
+    position: 330,
+    exec: (el) => {
+      let currentPaneTabs = getCurrentPaneTabs(el);
+      let tabs = currentPaneTabs.tabs;
+      let activeTab = currentPaneTabs.activeTab;
+      let index = tabs.indexOf(activeTab);
+      TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
+    }
+  },
+  {
+    name: "Go to tab left",
+    mac: "Command-{",
+    win: "Ctrl-{",
+    //TODO: used by ace
+    desc: "navigate to the next tab, left to the tab that is currently active",
+    position: 340,
+    exec: (el) => {
+      let currentPaneTabs = getCurrentPaneTabs(el);
+      let tabs = currentPaneTabs.tabs;
+      let activeTab = currentPaneTabs.activeTab;
+      let index = tabs.indexOf(activeTab);
+      TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
+    }
+  },
+  {
+    name: "movetabright",
+    mac: "Command-Option-Shift-Right",
+    win: "Ctrl-Meta-Right",
+    desc: "move the tab that is currently active to the right. Will create a split tab to the right if it's the right most tab."
+  },
+  {
+    name: "movetableft",
+    mac: "Command-Option-Shift-Left",
+    win: "Ctrl-Meta-Left",
+    desc: "move the tab that is currently active to the left. Will create a split tab to the left if it's the left most tab."
+  },
+  {
+    name: "movetabup",
+    mac: "Command-Option-Shift-Up",
+    win: "Ctrl-Meta-Up",
+    desc: "move the tab that is currently active to the up. Will create a split tab to the top if it's the top most tab."
+  },
+  {
+    name: "movetabdown",
+    mac: "Command-Option-Shift-Down",
+    win: "Ctrl-Meta-Down",
+    desc: "move the tab that is currently active to the down. Will create a split tab to the bottom if it's the bottom most tab."
+  },
+  {
+    name: "Go to first tab",
+    mac: "Command-1",
+    win: "Ctrl-1",
+    desc: "navigate to the first tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 0);
+    }
+  },
+  {
+    name: "Go to second tab",
+    mac: "Command-2",
+    win: "Ctrl-2",
+    desc: "navigate to the second tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 1);
+    }
+  },
+  {
+    name: "Go to third tab",
+    mac: "Command-3",
+    win: "Ctrl-3",
+    desc: "navigate to the third tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 2);
+    }
+  },
+  {
+    name: "tab4",
+    mac: "Command-4",
+    win: "Ctrl-4",
+    desc: "navigate to the fourth tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 3);
+    }
+  },
+  {
+    name: "tab5",
+    mac: "Command-5",
+    win: "Ctrl-5",
+    desc: "navigate to the fifth tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 4);
+    }
+  },
+  {
+    name: "tab6",
+    mac: "Command-6",
+    win: "Ctrl-6",
+    desc: "navigate to the sixth tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 5);
+    }
+  },
+  {
+    name: "tab7",
+    mac: "Command-7",
+    win: "Ctrl-7",
+    desc: "navigate to the seventh tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 6);
+    }
+  },
+  {
+    name: "tab8",
+    mac: "Command-8",
+    win: "Ctrl-8",
+    desc: "navigate to the eighth tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 7);
+    }
+  },
+  {
+    name: "tab9",
+    mac: "Command-9",
+    win: "Ctrl-9",
+    desc: "navigate to the ninth tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 8);
+    }
+  },
+  {
+    name: "tab0",
+    mac: "Command-0",
+    win: "Ctrl-0",
+    desc: "navigate to the tenth tab",
+    position: 340,
+    exec: (el) => {
+      goToTab(el, 9);
+    }
+  },
+  {
+    name: "Reveal tab",
+    mac: "Command-Shift-L",
+    win: "Ctrl-Shift-L",
+    //TODO: used by ace
+    desc: "reveal current tab in the file tree",
+    position: 340,
+    exec: (el) => {
+    }
+  },
+  {
+    name: "Go to next tab",
+    mac: "Option-Tab",
+    win: "Ctrl-Tab|Alt-`",
+    desc: "navigate to the next tab in the stack of accessed tabs",
+    position: 340,
+    exec: (el) => {
+      let currentPaneTabs = getCurrentPaneTabs(el);
+      let tabs = currentPaneTabs.tabs;
+      let activeTab = currentPaneTabs.activeTab;
+      let index = tabs.indexOf(activeTab);
+      if (index < tabs.length - 1) {
+        TabManager.getInstance().navigateToTab(index + 1, activeTab, tabs);
+      } else {
+        TabManager.getInstance().navigateToTab(0, activeTab, tabs);
+      }
+    }
+  },
+  {
+    name: "Go to previous tab",
+    mac: "Option-Shift-Tab",
+    win: "Ctrl-Shift-Tab|Alt-Shift-`",
+    desc: "navigate to the previous tab in the stack of accessed tabs",
+    position: 340,
+    exec: (el) => {
+      let currentPaneTabs = getCurrentPaneTabs(el);
+      let tabs = currentPaneTabs.tabs;
+      let activeTab = currentPaneTabs.activeTab;
+      let index = tabs.indexOf(activeTab);
+      if (index > 0) {
+        TabManager.getInstance().navigateToTab(index - 1, activeTab, tabs);
+      } else {
+        TabManager.getInstance().navigateToTab(tabs.length - 1, activeTab, tabs);
+      }
+    }
+  },
+  {
+    name: "nextpane",
+    mac: "Option-ESC",
+    win: "Ctrl-`",
+    desc: "navigate to the next tab in the stack of panes"
+  },
+  {
+    name: "previouspane",
+    mac: "Option-Shift-ESC",
+    win: "Ctrl-Shift-`",
+    desc: "navigate to the previous tab in the stack of panes"
+  },
+  {
+    name: "gotopaneright",
+    mac: "Ctrl-Meta-Right",
+    win: "Ctrl-Meta-Right",
+    desc: "navigate to the pane on the right"
+  },
+  {
+    name: "gotopaneleft",
+    mac: "Ctrl-Meta-Left",
+    win: "Ctrl-Meta-Left",
+    desc: "navigate to the pane on the left"
+  },
+  {
+    name: "gotopaneup",
+    mac: "Ctrl-Meta-Up",
+    win: "Ctrl-Meta-Up",
+    desc: "navigate to the pane on the top"
+  },
+  {
+    name: "gotopanedown",
+    mac: "Ctrl-Meta-Down",
+    win: "Ctrl-Meta-Down",
+    desc: "navigate to the pane on the bottom"
+  },
+  {
+    name: "reopenLastTab",
+    mac: "Option-Shift-T",
+    win: "Alt-Shift-T",
+    /*exec: function () {
+        return menuClosedItems.length;
+    },*/
+    desc: "reopen last closed tab"
+  },
+  {
+    name: "Close all to the right",
+    mac: "",
+    win: "",
+    desc: "close all tabs to the right of the focussed tab",
+    position: 340,
+    exec: (el) => {
+      let currentPaneTabs = getCurrentPaneTabs(el);
+      let tabs = currentPaneTabs.tabs;
+      let activeTab = currentPaneTabs.activeTab;
+      let index = tabs.indexOf(activeTab);
+      if (index < tabs.length - 1) {
+        for (let i = index + 1; i < tabs.length; i++) {
+          tabs[i].remove();
+        }
+      }
+    }
+  },
+  {
+    name: "Close all to the left",
+    mac: "",
+    win: "",
+    desc: "close all tabs to the left of the focussed tab",
+    position: 340,
+    exec: (el) => {
+      let currentPaneTabs = getCurrentPaneTabs(el);
+      let tabs = currentPaneTabs.tabs;
+      let activeTab = currentPaneTabs.activeTab;
+      let index = tabs.indexOf(activeTab);
+      if (index > 0) {
+        for (let i = 0; i < index; i++) {
+          tabs[i].remove();
+        }
+      }
+    }
+  },
+  {
+    name: "Close pane",
+    mac: "Command-Ctrl-W",
+    win: "Ctrl-W",
+    desc: "close this pane",
+    position: 340,
+    exec: (el) => {
+      var _a, _b;
+      let tabs;
+      if (el instanceof Tab) {
+        tabs = [...(_b = (_a = el.parent) == null ? void 0 : _a.tabList) != null ? _b : []];
+      } else {
+        tabs = [...el.activePane.tabBar.tabList];
+      }
+      for (let tab of tabs) {
+        tab.remove();
+      }
+    }
+  },
+  {
+    name: "nosplit",
+    mac: "",
+    win: "",
+    desc: "no split"
+  },
+  {
+    name: "hsplit",
+    mac: "",
+    win: "",
+    desc: "split the current pane in two columns and move the active tab to it"
+  },
+  {
+    name: "vsplit",
+    mac: "",
+    win: "",
+    desc: "split the current pane in two rows and move the active tab to it"
+  },
+  {
+    name: "twovsplit",
+    mac: "",
+    win: "",
+    desc: "create a two pane row layout"
+  },
+  {
+    name: "twohsplit",
+    mac: "",
+    win: "",
+    desc: "create a two pane column layout"
+  },
+  {
+    name: "foursplit",
+    mac: "",
+    win: "",
+    desc: "create a four pane layout"
+  },
+  {
+    name: "threeleft",
+    mac: "",
+    win: "",
+    desc: "create a three pane layout with the stack on the left side"
+  },
+  {
+    name: "threeright",
+    mac: "",
+    win: "",
+    desc: "create a three pane layout with the stack on the right side"
+  }
+];
+
+// EXTERNAL MODULE: ./node_modules/ace-code/src/lib/event_emitter.js
+var event_emitter = __webpack_require__(23056);
+// EXTERNAL MODULE: ./node_modules/ace-code/src/ace.js
+var ace = __webpack_require__(59100);
+;// CONCATENATED MODULE: ./node_modules/ace-code/esm-resolver.js
+
+ace.config.setModuleLoader('ace/mode/abap', () => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 10989, 19)));
+ace.config.setModuleLoader('ace/mode/abc', () => __webpack_require__.e(/* import() */ 4064).then(__webpack_require__.t.bind(__webpack_require__, 84064, 19)));
+ace.config.setModuleLoader('ace/mode/actionscript', () => __webpack_require__.e(/* import() */ 3682).then(__webpack_require__.t.bind(__webpack_require__, 73682, 19)));
+ace.config.setModuleLoader('ace/mode/ada', () => __webpack_require__.e(/* import() */ 4049).then(__webpack_require__.t.bind(__webpack_require__, 14049, 19)));
+ace.config.setModuleLoader('ace/mode/alda', () => __webpack_require__.e(/* import() */ 8331).then(__webpack_require__.t.bind(__webpack_require__, 98331, 19)));
+ace.config.setModuleLoader('ace/mode/apache_conf', () => __webpack_require__.e(/* import() */ 553).then(__webpack_require__.t.bind(__webpack_require__, 10553, 19)));
+ace.config.setModuleLoader('ace/mode/apex', () => __webpack_require__.e(/* import() */ 3764).then(__webpack_require__.t.bind(__webpack_require__, 73764, 19)));
+ace.config.setModuleLoader('ace/mode/applescript', () => __webpack_require__.e(/* import() */ 3335).then(__webpack_require__.t.bind(__webpack_require__, 53335, 19)));
+ace.config.setModuleLoader('ace/mode/aql', () => __webpack_require__.e(/* import() */ 5633).then(__webpack_require__.t.bind(__webpack_require__, 85633, 19)));
+ace.config.setModuleLoader('ace/mode/asciidoc', () => __webpack_require__.e(/* import() */ 9853).then(__webpack_require__.t.bind(__webpack_require__, 59853, 19)));
+ace.config.setModuleLoader('ace/mode/asl', () => __webpack_require__.e(/* import() */ 7241).then(__webpack_require__.t.bind(__webpack_require__, 37241, 19)));
+ace.config.setModuleLoader('ace/mode/assembly_x86', () => __webpack_require__.e(/* import() */ 2392).then(__webpack_require__.t.bind(__webpack_require__, 62392, 19)));
+ace.config.setModuleLoader('ace/mode/autohotkey', () => __webpack_require__.e(/* import() */ 7390).then(__webpack_require__.t.bind(__webpack_require__, 27390, 19)));
+ace.config.setModuleLoader('ace/mode/batchfile', () => __webpack_require__.e(/* import() */ 6609).then(__webpack_require__.t.bind(__webpack_require__, 96609, 19)));
+ace.config.setModuleLoader('ace/mode/bibtex', () => __webpack_require__.e(/* import() */ 2908).then(__webpack_require__.t.bind(__webpack_require__, 12908, 19)));
+ace.config.setModuleLoader('ace/mode/c9search', () => __webpack_require__.e(/* import() */ 1281).then(__webpack_require__.t.bind(__webpack_require__, 81281, 19)));
+ace.config.setModuleLoader('ace/mode/c_cpp', () => __webpack_require__.e(/* import() */ 2671).then(__webpack_require__.t.bind(__webpack_require__, 82671, 19)));
+ace.config.setModuleLoader('ace/mode/cirru', () => __webpack_require__.e(/* import() */ 7515).then(__webpack_require__.t.bind(__webpack_require__, 37515, 19)));
+ace.config.setModuleLoader('ace/mode/clojure', () => __webpack_require__.e(/* import() */ 4155).then(__webpack_require__.t.bind(__webpack_require__, 4155, 19)));
+ace.config.setModuleLoader('ace/mode/cobol', () => __webpack_require__.e(/* import() */ 6976).then(__webpack_require__.t.bind(__webpack_require__, 96976, 19)));
+ace.config.setModuleLoader('ace/mode/coffee', () => __webpack_require__.e(/* import() */ 6725).then(__webpack_require__.t.bind(__webpack_require__, 46725, 19)));
+ace.config.setModuleLoader('ace/mode/coldfusion', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4873)]).then(__webpack_require__.t.bind(__webpack_require__, 84873, 19)));
+ace.config.setModuleLoader('ace/mode/crystal', () => __webpack_require__.e(/* import() */ 2299).then(__webpack_require__.t.bind(__webpack_require__, 22299, 19)));
+ace.config.setModuleLoader('ace/mode/csharp', () => __webpack_require__.e(/* import() */ 2985).then(__webpack_require__.t.bind(__webpack_require__, 82985, 19)));
+ace.config.setModuleLoader('ace/mode/csound_document', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(163), __webpack_require__.e(8248)]).then(__webpack_require__.t.bind(__webpack_require__, 18248, 19)));
+ace.config.setModuleLoader('ace/mode/csound_orchestra', () => Promise.all(/* import() */[__webpack_require__.e(163), __webpack_require__.e(5482)]).then(__webpack_require__.t.bind(__webpack_require__, 65482, 19)));
+ace.config.setModuleLoader('ace/mode/csound_score', () => __webpack_require__.e(/* import() */ 8878).then(__webpack_require__.t.bind(__webpack_require__, 28878, 19)));
+ace.config.setModuleLoader('ace/mode/csp', () => __webpack_require__.e(/* import() */ 4780).then(__webpack_require__.t.bind(__webpack_require__, 4780, 19)));
+ace.config.setModuleLoader('ace/mode/css', () => __webpack_require__.e(/* import() */ 8771).then(__webpack_require__.t.bind(__webpack_require__, 98771, 19)));
+ace.config.setModuleLoader('ace/mode/curly', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(3865)]).then(__webpack_require__.t.bind(__webpack_require__, 13865, 19)));
+ace.config.setModuleLoader('ace/mode/d', () => __webpack_require__.e(/* import() */ 1139).then(__webpack_require__.t.bind(__webpack_require__, 91139, 19)));
+ace.config.setModuleLoader('ace/mode/dart', () => __webpack_require__.e(/* import() */ 4325).then(__webpack_require__.t.bind(__webpack_require__, 34325, 19)));
+ace.config.setModuleLoader('ace/mode/diff', () => __webpack_require__.e(/* import() */ 47).then(__webpack_require__.t.bind(__webpack_require__, 20047, 19)));
+ace.config.setModuleLoader('ace/mode/django', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4050)]).then(__webpack_require__.t.bind(__webpack_require__, 4050, 19)));
+ace.config.setModuleLoader('ace/mode/dockerfile', () => __webpack_require__.e(/* import() */ 8408).then(__webpack_require__.t.bind(__webpack_require__, 78408, 19)));
+ace.config.setModuleLoader('ace/mode/dot', () => __webpack_require__.e(/* import() */ 7349).then(__webpack_require__.t.bind(__webpack_require__, 47349, 19)));
+ace.config.setModuleLoader('ace/mode/drools', () => __webpack_require__.e(/* import() */ 134).then(__webpack_require__.t.bind(__webpack_require__, 50134, 19)));
+ace.config.setModuleLoader('ace/mode/edifact', () => __webpack_require__.e(/* import() */ 9646).then(__webpack_require__.t.bind(__webpack_require__, 9646, 19)));
+ace.config.setModuleLoader('ace/mode/eiffel', () => __webpack_require__.e(/* import() */ 135).then(__webpack_require__.t.bind(__webpack_require__, 135, 19)));
+ace.config.setModuleLoader('ace/mode/ejs', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(8781)]).then(__webpack_require__.t.bind(__webpack_require__, 48781, 19)));
+ace.config.setModuleLoader('ace/mode/elixir', () => __webpack_require__.e(/* import() */ 7445).then(__webpack_require__.t.bind(__webpack_require__, 7445, 19)));
+ace.config.setModuleLoader('ace/mode/elm', () => __webpack_require__.e(/* import() */ 5661).then(__webpack_require__.t.bind(__webpack_require__, 85661, 19)));
+ace.config.setModuleLoader('ace/mode/erlang', () => __webpack_require__.e(/* import() */ 2720).then(__webpack_require__.t.bind(__webpack_require__, 82720, 19)));
+ace.config.setModuleLoader('ace/mode/forth', () => __webpack_require__.e(/* import() */ 233).then(__webpack_require__.t.bind(__webpack_require__, 30233, 19)));
+ace.config.setModuleLoader('ace/mode/fortran', () => __webpack_require__.e(/* import() */ 9553).then(__webpack_require__.t.bind(__webpack_require__, 39553, 19)));
+ace.config.setModuleLoader('ace/mode/fsharp', () => __webpack_require__.e(/* import() */ 1451).then(__webpack_require__.t.bind(__webpack_require__, 11451, 19)));
+ace.config.setModuleLoader('ace/mode/fsl', () => __webpack_require__.e(/* import() */ 6434).then(__webpack_require__.t.bind(__webpack_require__, 46434, 19)));
+ace.config.setModuleLoader('ace/mode/ftl', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4006)]).then(__webpack_require__.t.bind(__webpack_require__, 94006, 19)));
+ace.config.setModuleLoader('ace/mode/gcode', () => __webpack_require__.e(/* import() */ 4800).then(__webpack_require__.t.bind(__webpack_require__, 54800, 19)));
+ace.config.setModuleLoader('ace/mode/gherkin', () => __webpack_require__.e(/* import() */ 3622).then(__webpack_require__.t.bind(__webpack_require__, 53622, 19)));
+ace.config.setModuleLoader('ace/mode/gitignore', () => __webpack_require__.e(/* import() */ 6763).then(__webpack_require__.t.bind(__webpack_require__, 36763, 19)));
+ace.config.setModuleLoader('ace/mode/glsl', () => __webpack_require__.e(/* import() */ 1365).then(__webpack_require__.t.bind(__webpack_require__, 41365, 19)));
+ace.config.setModuleLoader('ace/mode/gobstones', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1816)]).then(__webpack_require__.t.bind(__webpack_require__, 91816, 19)));
+ace.config.setModuleLoader('ace/mode/golang', () => __webpack_require__.e(/* import() */ 7561).then(__webpack_require__.t.bind(__webpack_require__, 77561, 19)));
+ace.config.setModuleLoader('ace/mode/graphqlschema', () => __webpack_require__.e(/* import() */ 8434).then(__webpack_require__.t.bind(__webpack_require__, 8434, 19)));
+ace.config.setModuleLoader('ace/mode/groovy', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1354)]).then(__webpack_require__.t.bind(__webpack_require__, 11354, 19)));
+ace.config.setModuleLoader('ace/mode/haml', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(5772), __webpack_require__.e(2304)]).then(__webpack_require__.t.bind(__webpack_require__, 22304, 19)));
+ace.config.setModuleLoader('ace/mode/handlebars', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(7821)]).then(__webpack_require__.t.bind(__webpack_require__, 57821, 19)));
+ace.config.setModuleLoader('ace/mode/haskell', () => __webpack_require__.e(/* import() */ 7823).then(__webpack_require__.t.bind(__webpack_require__, 27823, 19)));
+ace.config.setModuleLoader('ace/mode/haskell_cabal', () => __webpack_require__.e(/* import() */ 2176).then(__webpack_require__.t.bind(__webpack_require__, 22176, 19)));
+ace.config.setModuleLoader('ace/mode/haxe', () => __webpack_require__.e(/* import() */ 2102).then(__webpack_require__.t.bind(__webpack_require__, 12102, 19)));
+ace.config.setModuleLoader('ace/mode/hjson', () => __webpack_require__.e(/* import() */ 7908).then(__webpack_require__.t.bind(__webpack_require__, 37908, 19)));
+ace.config.setModuleLoader('ace/mode/html', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528)]).then(__webpack_require__.t.bind(__webpack_require__, 75528, 19)));
+ace.config.setModuleLoader('ace/mode/html_elixir', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1471)]).then(__webpack_require__.t.bind(__webpack_require__, 31471, 19)));
+ace.config.setModuleLoader('ace/mode/html_ruby', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(95)]).then(__webpack_require__.t.bind(__webpack_require__, 80095, 19)));
+ace.config.setModuleLoader('ace/mode/ini', () => __webpack_require__.e(/* import() */ 1335).then(__webpack_require__.t.bind(__webpack_require__, 21335, 19)));
+ace.config.setModuleLoader('ace/mode/io', () => __webpack_require__.e(/* import() */ 7628).then(__webpack_require__.t.bind(__webpack_require__, 17628, 19)));
+ace.config.setModuleLoader('ace/mode/ion', () => __webpack_require__.e(/* import() */ 9705).then(__webpack_require__.t.bind(__webpack_require__, 69705, 19)));
+ace.config.setModuleLoader('ace/mode/jack', () => __webpack_require__.e(/* import() */ 8240).then(__webpack_require__.t.bind(__webpack_require__, 48240, 19)));
+ace.config.setModuleLoader('ace/mode/jade', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4885)]).then(__webpack_require__.t.bind(__webpack_require__, 4885, 19)));
+ace.config.setModuleLoader('ace/mode/java', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(3262)]).then(__webpack_require__.t.bind(__webpack_require__, 33262, 19)));
+ace.config.setModuleLoader('ace/mode/javascript', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(8057)]).then(__webpack_require__.t.bind(__webpack_require__, 88057, 19)));
+ace.config.setModuleLoader('ace/mode/jexl', () => __webpack_require__.e(/* import() */ 7201).then(__webpack_require__.t.bind(__webpack_require__, 87201, 19)));
+ace.config.setModuleLoader('ace/mode/json', () => __webpack_require__.e(/* import() */ 5654).then(__webpack_require__.t.bind(__webpack_require__, 35654, 19)));
+ace.config.setModuleLoader('ace/mode/json5', () => __webpack_require__.e(/* import() */ 9548).then(__webpack_require__.t.bind(__webpack_require__, 49548, 19)));
+ace.config.setModuleLoader('ace/mode/jsp', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(4981)]).then(__webpack_require__.t.bind(__webpack_require__, 84981, 19)));
+ace.config.setModuleLoader('ace/mode/jssm', () => __webpack_require__.e(/* import() */ 2612).then(__webpack_require__.t.bind(__webpack_require__, 62612, 19)));
+ace.config.setModuleLoader('ace/mode/jsx', () => __webpack_require__.e(/* import() */ 2522).then(__webpack_require__.t.bind(__webpack_require__, 92522, 19)));
+ace.config.setModuleLoader('ace/mode/julia', () => __webpack_require__.e(/* import() */ 2623).then(__webpack_require__.t.bind(__webpack_require__, 92623, 19)));
+ace.config.setModuleLoader('ace/mode/kotlin', () => __webpack_require__.e(/* import() */ 1987).then(__webpack_require__.t.bind(__webpack_require__, 11987, 19)));
+ace.config.setModuleLoader('ace/mode/latex', () => __webpack_require__.e(/* import() */ 9302).then(__webpack_require__.t.bind(__webpack_require__, 39302, 19)));
+ace.config.setModuleLoader('ace/mode/latte', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4444)]).then(__webpack_require__.t.bind(__webpack_require__, 24444, 19)));
+ace.config.setModuleLoader('ace/mode/less', () => __webpack_require__.e(/* import() */ 4629).then(__webpack_require__.t.bind(__webpack_require__, 94629, 19)));
+ace.config.setModuleLoader('ace/mode/liquid', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(31)]).then(__webpack_require__.t.bind(__webpack_require__, 20031, 19)));
+ace.config.setModuleLoader('ace/mode/lisp', () => __webpack_require__.e(/* import() */ 75).then(__webpack_require__.t.bind(__webpack_require__, 10075, 19)));
+ace.config.setModuleLoader('ace/mode/livescript', () => __webpack_require__.e(/* import() */ 6575).then(__webpack_require__.t.bind(__webpack_require__, 96575, 19)));
+ace.config.setModuleLoader('ace/mode/logiql', () => __webpack_require__.e(/* import() */ 6664).then(__webpack_require__.t.bind(__webpack_require__, 26664, 19)));
+ace.config.setModuleLoader('ace/mode/logtalk', () => __webpack_require__.e(/* import() */ 4152).then(__webpack_require__.t.bind(__webpack_require__, 94152, 19)));
+ace.config.setModuleLoader('ace/mode/lsl', () => __webpack_require__.e(/* import() */ 8950).then(__webpack_require__.t.bind(__webpack_require__, 78950, 19)));
+ace.config.setModuleLoader('ace/mode/lua', () => __webpack_require__.e(/* import() */ 2585).then(__webpack_require__.t.bind(__webpack_require__, 22585, 19)));
+ace.config.setModuleLoader('ace/mode/luapage', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1299)]).then(__webpack_require__.t.bind(__webpack_require__, 41299, 19)));
+ace.config.setModuleLoader('ace/mode/lucene', () => __webpack_require__.e(/* import() */ 2814).then(__webpack_require__.t.bind(__webpack_require__, 82814, 19)));
+ace.config.setModuleLoader('ace/mode/makefile', () => __webpack_require__.e(/* import() */ 4890).then(__webpack_require__.t.bind(__webpack_require__, 94890, 19)));
+ace.config.setModuleLoader('ace/mode/markdown', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(259)]).then(__webpack_require__.t.bind(__webpack_require__, 80259, 19)));
+ace.config.setModuleLoader('ace/mode/mask', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(8394)]).then(__webpack_require__.t.bind(__webpack_require__, 18394, 19)));
+ace.config.setModuleLoader('ace/mode/matlab', () => __webpack_require__.e(/* import() */ 581).then(__webpack_require__.t.bind(__webpack_require__, 80581, 19)));
+ace.config.setModuleLoader('ace/mode/maze', () => __webpack_require__.e(/* import() */ 3014).then(__webpack_require__.t.bind(__webpack_require__, 13014, 19)));
+ace.config.setModuleLoader('ace/mode/mediawiki', () => __webpack_require__.e(/* import() */ 7527).then(__webpack_require__.t.bind(__webpack_require__, 77527, 19)));
+ace.config.setModuleLoader('ace/mode/mel', () => __webpack_require__.e(/* import() */ 9242).then(__webpack_require__.t.bind(__webpack_require__, 39242, 19)));
+ace.config.setModuleLoader('ace/mode/mips', () => __webpack_require__.e(/* import() */ 1524).then(__webpack_require__.t.bind(__webpack_require__, 91524, 19)));
+ace.config.setModuleLoader('ace/mode/mixal', () => __webpack_require__.e(/* import() */ 3521).then(__webpack_require__.t.bind(__webpack_require__, 33521, 19)));
+ace.config.setModuleLoader('ace/mode/mushcode', () => __webpack_require__.e(/* import() */ 9067).then(__webpack_require__.t.bind(__webpack_require__, 69067, 19)));
+ace.config.setModuleLoader('ace/mode/mysql', () => __webpack_require__.e(/* import() */ 6789).then(__webpack_require__.t.bind(__webpack_require__, 86789, 19)));
+ace.config.setModuleLoader('ace/mode/nginx', () => __webpack_require__.e(/* import() */ 2435).then(__webpack_require__.t.bind(__webpack_require__, 32435, 19)));
+ace.config.setModuleLoader('ace/mode/nim', () => __webpack_require__.e(/* import() */ 7614).then(__webpack_require__.t.bind(__webpack_require__, 7614, 19)));
+ace.config.setModuleLoader('ace/mode/nix', () => __webpack_require__.e(/* import() */ 3645).then(__webpack_require__.t.bind(__webpack_require__, 3645, 19)));
+ace.config.setModuleLoader('ace/mode/nsis', () => __webpack_require__.e(/* import() */ 8254).then(__webpack_require__.t.bind(__webpack_require__, 8254, 19)));
+ace.config.setModuleLoader('ace/mode/nunjucks', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(9382)]).then(__webpack_require__.t.bind(__webpack_require__, 99382, 19)));
+ace.config.setModuleLoader('ace/mode/objectivec', () => __webpack_require__.e(/* import() */ 9886).then(__webpack_require__.t.bind(__webpack_require__, 69886, 19)));
+ace.config.setModuleLoader('ace/mode/ocaml', () => __webpack_require__.e(/* import() */ 6708).then(__webpack_require__.t.bind(__webpack_require__, 96708, 19)));
+ace.config.setModuleLoader('ace/mode/partiql', () => __webpack_require__.e(/* import() */ 1910).then(__webpack_require__.t.bind(__webpack_require__, 81910, 19)));
+ace.config.setModuleLoader('ace/mode/pascal', () => __webpack_require__.e(/* import() */ 8361).then(__webpack_require__.t.bind(__webpack_require__, 58361, 19)));
+ace.config.setModuleLoader('ace/mode/perl', () => __webpack_require__.e(/* import() */ 6918).then(__webpack_require__.t.bind(__webpack_require__, 26918, 19)));
+ace.config.setModuleLoader('ace/mode/pgsql', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(8374)]).then(__webpack_require__.t.bind(__webpack_require__, 38374, 19)));
+ace.config.setModuleLoader('ace/mode/php', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(8681)]).then(__webpack_require__.t.bind(__webpack_require__, 48681, 19)));
+ace.config.setModuleLoader('ace/mode/php_laravel_blade', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(8681), __webpack_require__.e(184)]).then(__webpack_require__.t.bind(__webpack_require__, 70184, 19)));
+ace.config.setModuleLoader('ace/mode/pig', () => __webpack_require__.e(/* import() */ 3114).then(__webpack_require__.t.bind(__webpack_require__, 53114, 19)));
+ace.config.setModuleLoader('ace/mode/plain_text', () => __webpack_require__.e(/* import() */ 1660).then(__webpack_require__.t.bind(__webpack_require__, 1660, 19)));
+ace.config.setModuleLoader('ace/mode/plsql', () => __webpack_require__.e(/* import() */ 1345).then(__webpack_require__.t.bind(__webpack_require__, 11345, 19)));
+ace.config.setModuleLoader('ace/mode/powershell', () => __webpack_require__.e(/* import() */ 6700).then(__webpack_require__.t.bind(__webpack_require__, 36700, 19)));
+ace.config.setModuleLoader('ace/mode/praat', () => __webpack_require__.e(/* import() */ 8142).then(__webpack_require__.t.bind(__webpack_require__, 58142, 19)));
+ace.config.setModuleLoader('ace/mode/prisma', () => __webpack_require__.e(/* import() */ 311).then(__webpack_require__.t.bind(__webpack_require__, 40311, 19)));
+ace.config.setModuleLoader('ace/mode/prolog', () => __webpack_require__.e(/* import() */ 2566).then(__webpack_require__.t.bind(__webpack_require__, 92566, 19)));
+ace.config.setModuleLoader('ace/mode/properties', () => __webpack_require__.e(/* import() */ 8435).then(__webpack_require__.t.bind(__webpack_require__, 28435, 19)));
+ace.config.setModuleLoader('ace/mode/protobuf', () => __webpack_require__.e(/* import() */ 9847).then(__webpack_require__.t.bind(__webpack_require__, 29847, 19)));
+ace.config.setModuleLoader('ace/mode/puppet', () => __webpack_require__.e(/* import() */ 2016).then(__webpack_require__.t.bind(__webpack_require__, 92016, 19)));
+ace.config.setModuleLoader('ace/mode/python', () => __webpack_require__.e(/* import() */ 9420).then(__webpack_require__.t.bind(__webpack_require__, 39420, 19)));
+ace.config.setModuleLoader('ace/mode/qml', () => __webpack_require__.e(/* import() */ 987).then(__webpack_require__.t.bind(__webpack_require__, 80987, 19)));
+ace.config.setModuleLoader('ace/mode/r', () => __webpack_require__.e(/* import() */ 2858).then(__webpack_require__.t.bind(__webpack_require__, 72858, 19)));
+ace.config.setModuleLoader('ace/mode/raku', () => __webpack_require__.e(/* import() */ 7962).then(__webpack_require__.t.bind(__webpack_require__, 47962, 19)));
+ace.config.setModuleLoader('ace/mode/razor', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(6562)]).then(__webpack_require__.t.bind(__webpack_require__, 86562, 19)));
+ace.config.setModuleLoader('ace/mode/rdoc', () => __webpack_require__.e(/* import() */ 9229).then(__webpack_require__.t.bind(__webpack_require__, 69229, 19)));
+ace.config.setModuleLoader('ace/mode/red', () => __webpack_require__.e(/* import() */ 8223).then(__webpack_require__.t.bind(__webpack_require__, 48223, 19)));
+ace.config.setModuleLoader('ace/mode/redshift', () => __webpack_require__.e(/* import() */ 8544).then(__webpack_require__.t.bind(__webpack_require__, 78544, 19)));
+ace.config.setModuleLoader('ace/mode/rhtml', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5181)]).then(__webpack_require__.t.bind(__webpack_require__, 65181, 19)));
+ace.config.setModuleLoader('ace/mode/robot', () => __webpack_require__.e(/* import() */ 9793).then(__webpack_require__.t.bind(__webpack_require__, 29793, 19)));
+ace.config.setModuleLoader('ace/mode/rst', () => __webpack_require__.e(/* import() */ 5800).then(__webpack_require__.t.bind(__webpack_require__, 25800, 19)));
+ace.config.setModuleLoader('ace/mode/ruby', () => Promise.all(/* import() */[__webpack_require__.e(5772), __webpack_require__.e(5433)]).then(__webpack_require__.t.bind(__webpack_require__, 45433, 19)));
+ace.config.setModuleLoader('ace/mode/rust', () => __webpack_require__.e(/* import() */ 5727).then(__webpack_require__.t.bind(__webpack_require__, 25727, 19)));
+ace.config.setModuleLoader('ace/mode/sac', () => __webpack_require__.e(/* import() */ 9815).then(__webpack_require__.t.bind(__webpack_require__, 29815, 19)));
+ace.config.setModuleLoader('ace/mode/sass', () => __webpack_require__.e(/* import() */ 9736).then(__webpack_require__.t.bind(__webpack_require__, 79736, 19)));
+ace.config.setModuleLoader('ace/mode/scad', () => __webpack_require__.e(/* import() */ 3057).then(__webpack_require__.t.bind(__webpack_require__, 33057, 19)));
+ace.config.setModuleLoader('ace/mode/scala', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(9445)]).then(__webpack_require__.t.bind(__webpack_require__, 19445, 19)));
+ace.config.setModuleLoader('ace/mode/scheme', () => __webpack_require__.e(/* import() */ 833).then(__webpack_require__.t.bind(__webpack_require__, 10833, 19)));
+ace.config.setModuleLoader('ace/mode/scrypt', () => __webpack_require__.e(/* import() */ 5735).then(__webpack_require__.t.bind(__webpack_require__, 25735, 19)));
+ace.config.setModuleLoader('ace/mode/scss', () => __webpack_require__.e(/* import() */ 6852).then(__webpack_require__.t.bind(__webpack_require__, 36852, 19)));
+ace.config.setModuleLoader('ace/mode/sh', () => __webpack_require__.e(/* import() */ 8887).then(__webpack_require__.t.bind(__webpack_require__, 88887, 19)));
+ace.config.setModuleLoader('ace/mode/sjs', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(4116)]).then(__webpack_require__.t.bind(__webpack_require__, 24116, 19)));
+ace.config.setModuleLoader('ace/mode/slim', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5772), __webpack_require__.e(259), __webpack_require__.e(1442)]).then(__webpack_require__.t.bind(__webpack_require__, 81442, 19)));
+ace.config.setModuleLoader('ace/mode/smarty', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(4602)]).then(__webpack_require__.t.bind(__webpack_require__, 74602, 19)));
+ace.config.setModuleLoader('ace/mode/smithy', () => __webpack_require__.e(/* import() */ 3011).then(__webpack_require__.t.bind(__webpack_require__, 33011, 19)));
+ace.config.setModuleLoader('ace/mode/snippets', () => __webpack_require__.e(/* import() */ 2942).then(__webpack_require__.t.bind(__webpack_require__, 82942, 19)));
+ace.config.setModuleLoader('ace/mode/soy_template', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(1771)]).then(__webpack_require__.t.bind(__webpack_require__, 61771, 19)));
+ace.config.setModuleLoader('ace/mode/space', () => __webpack_require__.e(/* import() */ 888).then(__webpack_require__.t.bind(__webpack_require__, 60888, 19)));
+ace.config.setModuleLoader('ace/mode/sparql', () => __webpack_require__.e(/* import() */ 3400).then(__webpack_require__.t.bind(__webpack_require__, 33400, 19)));
+ace.config.setModuleLoader('ace/mode/sql', () => __webpack_require__.e(/* import() */ 9562).then(__webpack_require__.t.bind(__webpack_require__, 99562, 19)));
+ace.config.setModuleLoader('ace/mode/sqlserver', () => __webpack_require__.e(/* import() */ 8730).then(__webpack_require__.t.bind(__webpack_require__, 63612, 19)));
+ace.config.setModuleLoader('ace/mode/stylus', () => __webpack_require__.e(/* import() */ 2420).then(__webpack_require__.t.bind(__webpack_require__, 52420, 19)));
+ace.config.setModuleLoader('ace/mode/svg', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2207), __webpack_require__.e(4589)]).then(__webpack_require__.t.bind(__webpack_require__, 24589, 19)));
+ace.config.setModuleLoader('ace/mode/swift', () => __webpack_require__.e(/* import() */ 5177).then(__webpack_require__.t.bind(__webpack_require__, 65177, 19)));
+ace.config.setModuleLoader('ace/mode/tcl', () => __webpack_require__.e(/* import() */ 678).then(__webpack_require__.t.bind(__webpack_require__, 678, 19)));
+ace.config.setModuleLoader('ace/mode/terraform', () => __webpack_require__.e(/* import() */ 2052).then(__webpack_require__.t.bind(__webpack_require__, 92052, 19)));
+ace.config.setModuleLoader('ace/mode/tex', () => __webpack_require__.e(/* import() */ 3772).then(__webpack_require__.t.bind(__webpack_require__, 33772, 19)));
+ace.config.setModuleLoader('ace/mode/text', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 98030, 19)));
+ace.config.setModuleLoader('ace/mode/textile', () => __webpack_require__.e(/* import() */ 501).then(__webpack_require__.t.bind(__webpack_require__, 90501, 19)));
+ace.config.setModuleLoader('ace/mode/toml', () => __webpack_require__.e(/* import() */ 8795).then(__webpack_require__.t.bind(__webpack_require__, 38795, 19)));
+ace.config.setModuleLoader('ace/mode/tsx', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(300)]).then(__webpack_require__.t.bind(__webpack_require__, 40300, 19)));
+ace.config.setModuleLoader('ace/mode/turtle', () => __webpack_require__.e(/* import() */ 1947).then(__webpack_require__.t.bind(__webpack_require__, 51947, 19)));
+ace.config.setModuleLoader('ace/mode/twig', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(2329)]).then(__webpack_require__.t.bind(__webpack_require__, 82329, 19)));
+ace.config.setModuleLoader('ace/mode/typescript', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(3123)]).then(__webpack_require__.t.bind(__webpack_require__, 23123, 19)));
+ace.config.setModuleLoader('ace/mode/vala', () => __webpack_require__.e(/* import() */ 5754).then(__webpack_require__.t.bind(__webpack_require__, 25754, 19)));
+ace.config.setModuleLoader('ace/mode/vbscript', () => __webpack_require__.e(/* import() */ 6389).then(__webpack_require__.t.bind(__webpack_require__, 96389, 19)));
+ace.config.setModuleLoader('ace/mode/velocity', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(5525)]).then(__webpack_require__.t.bind(__webpack_require__, 95525, 19)));
+ace.config.setModuleLoader('ace/mode/verilog', () => __webpack_require__.e(/* import() */ 6614).then(__webpack_require__.t.bind(__webpack_require__, 66614, 19)));
+ace.config.setModuleLoader('ace/mode/vhdl', () => __webpack_require__.e(/* import() */ 11).then(__webpack_require__.t.bind(__webpack_require__, 60011, 19)));
+ace.config.setModuleLoader('ace/mode/visualforce', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(2843), __webpack_require__.e(2207), __webpack_require__.e(5528), __webpack_require__.e(9160)]).then(__webpack_require__.t.bind(__webpack_require__, 61660, 19)));
+ace.config.setModuleLoader('ace/mode/wollok', () => Promise.all(/* import() */[__webpack_require__.e(3801), __webpack_require__.e(1638)]).then(__webpack_require__.t.bind(__webpack_require__, 21638, 19)));
+ace.config.setModuleLoader('ace/mode/xml', () => __webpack_require__.e(/* import() */ 4268).then(__webpack_require__.t.bind(__webpack_require__, 94268, 19)));
+ace.config.setModuleLoader('ace/mode/yaml', () => __webpack_require__.e(/* import() */ 3348).then(__webpack_require__.t.bind(__webpack_require__, 43348, 19)));
+ace.config.setModuleLoader('ace/mode/zeek', () => __webpack_require__.e(/* import() */ 6958).then(__webpack_require__.t.bind(__webpack_require__, 16958, 19)));
+ace.config.setModuleLoader('ace/snippets/abc', () => __webpack_require__.e(/* import() */ 4551).then(__webpack_require__.t.bind(__webpack_require__, 64551, 19)));
+ace.config.setModuleLoader('ace/snippets/abc.snippets', () => __webpack_require__.e(/* import() */ 4269).then(__webpack_require__.t.bind(__webpack_require__, 24269, 23)));
+ace.config.setModuleLoader('ace/snippets/actionscript', () => __webpack_require__.e(/* import() */ 6009).then(__webpack_require__.t.bind(__webpack_require__, 26009, 19)));
+ace.config.setModuleLoader('ace/snippets/actionscript.snippets', () => __webpack_require__.e(/* import() */ 1711).then(__webpack_require__.t.bind(__webpack_require__, 71711, 23)));
+ace.config.setModuleLoader('ace/snippets/c_cpp', () => __webpack_require__.e(/* import() */ 3423).then(__webpack_require__.t.bind(__webpack_require__, 73423, 19)));
+ace.config.setModuleLoader('ace/snippets/c_cpp.snippets', () => __webpack_require__.e(/* import() */ 1275).then(__webpack_require__.t.bind(__webpack_require__, 31275, 23)));
+ace.config.setModuleLoader('ace/snippets/clojure', () => __webpack_require__.e(/* import() */ 7679).then(__webpack_require__.t.bind(__webpack_require__, 87679, 19)));
+ace.config.setModuleLoader('ace/snippets/clojure.snippets', () => __webpack_require__.e(/* import() */ 614).then(__webpack_require__.t.bind(__webpack_require__, 90614, 23)));
+ace.config.setModuleLoader('ace/snippets/coffee', () => __webpack_require__.e(/* import() */ 7956).then(__webpack_require__.t.bind(__webpack_require__, 67956, 19)));
+ace.config.setModuleLoader('ace/snippets/coffee.snippets', () => __webpack_require__.e(/* import() */ 6217).then(__webpack_require__.t.bind(__webpack_require__, 56217, 23)));
+ace.config.setModuleLoader('ace/snippets/csound_document', () => __webpack_require__.e(/* import() */ 8101).then(__webpack_require__.t.bind(__webpack_require__, 28101, 19)));
+ace.config.setModuleLoader('ace/snippets/csound_document.snippets', () => __webpack_require__.e(/* import() */ 7200).then(__webpack_require__.t.bind(__webpack_require__, 17200, 23)));
+ace.config.setModuleLoader('ace/snippets/csound_orchestra', () => __webpack_require__.e(/* import() */ 4430).then(__webpack_require__.t.bind(__webpack_require__, 4430, 19)));
+ace.config.setModuleLoader('ace/snippets/csound_orchestra.snippets', () => __webpack_require__.e(/* import() */ 698).then(__webpack_require__.t.bind(__webpack_require__, 10698, 23)));
+ace.config.setModuleLoader('ace/snippets/css', () => __webpack_require__.e(/* import() */ 4968).then(__webpack_require__.t.bind(__webpack_require__, 44968, 19)));
+ace.config.setModuleLoader('ace/snippets/css.snippets', () => __webpack_require__.e(/* import() */ 507).then(__webpack_require__.t.bind(__webpack_require__, 90507, 23)));
+ace.config.setModuleLoader('ace/snippets/dart', () => __webpack_require__.e(/* import() */ 2951).then(__webpack_require__.t.bind(__webpack_require__, 92951, 19)));
+ace.config.setModuleLoader('ace/snippets/dart.snippets', () => __webpack_require__.e(/* import() */ 793).then(__webpack_require__.t.bind(__webpack_require__, 10793, 23)));
+ace.config.setModuleLoader('ace/snippets/diff', () => __webpack_require__.e(/* import() */ 7406).then(__webpack_require__.t.bind(__webpack_require__, 17406, 19)));
+ace.config.setModuleLoader('ace/snippets/diff.snippets', () => __webpack_require__.e(/* import() */ 806).then(__webpack_require__.t.bind(__webpack_require__, 10806, 23)));
+ace.config.setModuleLoader('ace/snippets/django', () => __webpack_require__.e(/* import() */ 1180).then(__webpack_require__.t.bind(__webpack_require__, 11180, 19)));
+ace.config.setModuleLoader('ace/snippets/django.snippets', () => __webpack_require__.e(/* import() */ 6104).then(__webpack_require__.t.bind(__webpack_require__, 26104, 23)));
+ace.config.setModuleLoader('ace/snippets/drools', () => __webpack_require__.e(/* import() */ 8291).then(__webpack_require__.t.bind(__webpack_require__, 58291, 19)));
+ace.config.setModuleLoader('ace/snippets/drools.snippets', () => __webpack_require__.e(/* import() */ 2966).then(__webpack_require__.t.bind(__webpack_require__, 54155, 23)));
+ace.config.setModuleLoader('ace/snippets/edifact', () => __webpack_require__.e(/* import() */ 817).then(__webpack_require__.t.bind(__webpack_require__, 70817, 19)));
+ace.config.setModuleLoader('ace/snippets/edifact.snippets', () => __webpack_require__.e(/* import() */ 4165).then(__webpack_require__.t.bind(__webpack_require__, 74165, 23)));
+ace.config.setModuleLoader('ace/snippets/erlang', () => __webpack_require__.e(/* import() */ 5598).then(__webpack_require__.t.bind(__webpack_require__, 45598, 19)));
+ace.config.setModuleLoader('ace/snippets/erlang.snippets', () => __webpack_require__.e(/* import() */ 7826).then(__webpack_require__.t.bind(__webpack_require__, 17826, 23)));
+ace.config.setModuleLoader('ace/snippets/fsl', () => __webpack_require__.e(/* import() */ 1580).then(__webpack_require__.t.bind(__webpack_require__, 81580, 19)));
+ace.config.setModuleLoader('ace/snippets/fsl.snippets', () => __webpack_require__.e(/* import() */ 5079).then(__webpack_require__.t.bind(__webpack_require__, 15079, 23)));
+ace.config.setModuleLoader('ace/snippets/gobstones', () => __webpack_require__.e(/* import() */ 1789).then(__webpack_require__.t.bind(__webpack_require__, 91789, 19)));
+ace.config.setModuleLoader('ace/snippets/gobstones.snippets', () => __webpack_require__.e(/* import() */ 9104).then(__webpack_require__.t.bind(__webpack_require__, 69104, 23)));
+ace.config.setModuleLoader('ace/snippets/graphqlschema', () => __webpack_require__.e(/* import() */ 6978).then(__webpack_require__.t.bind(__webpack_require__, 36978, 19)));
+ace.config.setModuleLoader('ace/snippets/graphqlschema.snippets', () => __webpack_require__.e(/* import() */ 1990).then(__webpack_require__.t.bind(__webpack_require__, 71990, 23)));
+ace.config.setModuleLoader('ace/snippets/haml', () => __webpack_require__.e(/* import() */ 1989).then(__webpack_require__.t.bind(__webpack_require__, 11989, 19)));
+ace.config.setModuleLoader('ace/snippets/haml.snippets', () => __webpack_require__.e(/* import() */ 5362).then(__webpack_require__.t.bind(__webpack_require__, 95362, 23)));
+ace.config.setModuleLoader('ace/snippets/haskell', () => __webpack_require__.e(/* import() */ 1895).then(__webpack_require__.t.bind(__webpack_require__, 71895, 19)));
+ace.config.setModuleLoader('ace/snippets/haskell.snippets', () => __webpack_require__.e(/* import() */ 3153).then(__webpack_require__.t.bind(__webpack_require__, 63153, 23)));
+ace.config.setModuleLoader('ace/snippets/html', () => __webpack_require__.e(/* import() */ 6663).then(__webpack_require__.t.bind(__webpack_require__, 86663, 19)));
+ace.config.setModuleLoader('ace/snippets/html.snippets', () => __webpack_require__.e(/* import() */ 7805).then(__webpack_require__.t.bind(__webpack_require__, 37805, 23)));
+ace.config.setModuleLoader('ace/snippets/io', () => __webpack_require__.e(/* import() */ 5250).then(__webpack_require__.t.bind(__webpack_require__, 25250, 19)));
+ace.config.setModuleLoader('ace/snippets/java', () => __webpack_require__.e(/* import() */ 9369).then(__webpack_require__.t.bind(__webpack_require__, 99369, 19)));
+ace.config.setModuleLoader('ace/snippets/java.snippets', () => __webpack_require__.e(/* import() */ 2944).then(__webpack_require__.t.bind(__webpack_require__, 44805, 23)));
+ace.config.setModuleLoader('ace/snippets/javascript', () => __webpack_require__.e(/* import() */ 6383).then(__webpack_require__.t.bind(__webpack_require__, 66383, 19)));
+ace.config.setModuleLoader('ace/snippets/javascript.snippets', () => __webpack_require__.e(/* import() */ 5336).then(__webpack_require__.t.bind(__webpack_require__, 95336, 23)));
+ace.config.setModuleLoader('ace/snippets/jsp', () => __webpack_require__.e(/* import() */ 8222).then(__webpack_require__.t.bind(__webpack_require__, 68222, 19)));
+ace.config.setModuleLoader('ace/snippets/jsp.snippets', () => __webpack_require__.e(/* import() */ 2018).then(__webpack_require__.t.bind(__webpack_require__, 82018, 23)));
+ace.config.setModuleLoader('ace/snippets/liquid', () => __webpack_require__.e(/* import() */ 4915).then(__webpack_require__.t.bind(__webpack_require__, 44915, 19)));
+ace.config.setModuleLoader('ace/snippets/liquid.snippets', () => __webpack_require__.e(/* import() */ 3762).then(__webpack_require__.t.bind(__webpack_require__, 23762, 23)));
+ace.config.setModuleLoader('ace/snippets/lsl', () => __webpack_require__.e(/* import() */ 3642).then(__webpack_require__.t.bind(__webpack_require__, 43642, 19)));
+ace.config.setModuleLoader('ace/snippets/lsl.snippets', () => __webpack_require__.e(/* import() */ 3449).then(__webpack_require__.t.bind(__webpack_require__, 93449, 23)));
+ace.config.setModuleLoader('ace/snippets/lua', () => __webpack_require__.e(/* import() */ 6452).then(__webpack_require__.t.bind(__webpack_require__, 56452, 19)));
+ace.config.setModuleLoader('ace/snippets/lua.snippets', () => __webpack_require__.e(/* import() */ 4801).then(__webpack_require__.t.bind(__webpack_require__, 74801, 23)));
+ace.config.setModuleLoader('ace/snippets/makefile', () => __webpack_require__.e(/* import() */ 5741).then(__webpack_require__.t.bind(__webpack_require__, 5741, 19)));
+ace.config.setModuleLoader('ace/snippets/makefile.snippets', () => __webpack_require__.e(/* import() */ 165).then(__webpack_require__.t.bind(__webpack_require__, 70165, 23)));
+ace.config.setModuleLoader('ace/snippets/markdown', () => __webpack_require__.e(/* import() */ 6745).then(__webpack_require__.t.bind(__webpack_require__, 6745, 19)));
+ace.config.setModuleLoader('ace/snippets/markdown.snippets', () => __webpack_require__.e(/* import() */ 6196).then(__webpack_require__.t.bind(__webpack_require__, 86196, 23)));
+ace.config.setModuleLoader('ace/snippets/maze', () => __webpack_require__.e(/* import() */ 7076).then(__webpack_require__.t.bind(__webpack_require__, 57076, 19)));
+ace.config.setModuleLoader('ace/snippets/maze.snippets', () => __webpack_require__.e(/* import() */ 5282).then(__webpack_require__.t.bind(__webpack_require__, 25282, 23)));
+ace.config.setModuleLoader('ace/snippets/perl', () => __webpack_require__.e(/* import() */ 6343).then(__webpack_require__.t.bind(__webpack_require__, 36343, 19)));
+ace.config.setModuleLoader('ace/snippets/perl.snippets', () => __webpack_require__.e(/* import() */ 6220).then(__webpack_require__.t.bind(__webpack_require__, 86220, 23)));
+ace.config.setModuleLoader('ace/snippets/php', () => __webpack_require__.e(/* import() */ 7038).then(__webpack_require__.t.bind(__webpack_require__, 87038, 19)));
+ace.config.setModuleLoader('ace/snippets/php.snippets', () => __webpack_require__.e(/* import() */ 5192).then(__webpack_require__.t.bind(__webpack_require__, 85192, 23)));
+ace.config.setModuleLoader('ace/snippets/python', () => __webpack_require__.e(/* import() */ 4805).then(__webpack_require__.t.bind(__webpack_require__, 94805, 19)));
+ace.config.setModuleLoader('ace/snippets/python.snippets', () => __webpack_require__.e(/* import() */ 3363).then(__webpack_require__.t.bind(__webpack_require__, 3363, 23)));
+ace.config.setModuleLoader('ace/snippets/r', () => __webpack_require__.e(/* import() */ 4386).then(__webpack_require__.t.bind(__webpack_require__, 14386, 19)));
+ace.config.setModuleLoader('ace/snippets/r.snippets', () => __webpack_require__.e(/* import() */ 7576).then(__webpack_require__.t.bind(__webpack_require__, 17576, 23)));
+ace.config.setModuleLoader('ace/snippets/razor', () => __webpack_require__.e(/* import() */ 4943).then(__webpack_require__.t.bind(__webpack_require__, 74943, 19)));
+ace.config.setModuleLoader('ace/snippets/razor.snippets', () => __webpack_require__.e(/* import() */ 5770).then(__webpack_require__.t.bind(__webpack_require__, 85770, 23)));
+ace.config.setModuleLoader('ace/snippets/robot', () => __webpack_require__.e(/* import() */ 3093).then(__webpack_require__.t.bind(__webpack_require__, 33093, 19)));
+ace.config.setModuleLoader('ace/snippets/robot.snippets', () => __webpack_require__.e(/* import() */ 6528).then(__webpack_require__.t.bind(__webpack_require__, 16528, 23)));
+ace.config.setModuleLoader('ace/snippets/rst', () => __webpack_require__.e(/* import() */ 5828).then(__webpack_require__.t.bind(__webpack_require__, 75828, 19)));
+ace.config.setModuleLoader('ace/snippets/rst.snippets', () => __webpack_require__.e(/* import() */ 4254).then(__webpack_require__.t.bind(__webpack_require__, 34254, 23)));
+ace.config.setModuleLoader('ace/snippets/ruby', () => __webpack_require__.e(/* import() */ 4391).then(__webpack_require__.t.bind(__webpack_require__, 74391, 19)));
+ace.config.setModuleLoader('ace/snippets/ruby.snippets', () => __webpack_require__.e(/* import() */ 6902).then(__webpack_require__.t.bind(__webpack_require__, 76902, 23)));
+ace.config.setModuleLoader('ace/snippets/sh', () => __webpack_require__.e(/* import() */ 6807).then(__webpack_require__.t.bind(__webpack_require__, 6807, 19)));
+ace.config.setModuleLoader('ace/snippets/sh.snippets', () => __webpack_require__.e(/* import() */ 6013).then(__webpack_require__.t.bind(__webpack_require__, 6013, 23)));
+ace.config.setModuleLoader('ace/snippets/snippets', () => __webpack_require__.e(/* import() */ 3239).then(__webpack_require__.t.bind(__webpack_require__, 23239, 19)));
+ace.config.setModuleLoader('ace/snippets/snippets.snippets', () => __webpack_require__.e(/* import() */ 488).then(__webpack_require__.t.bind(__webpack_require__, 10488, 23)));
+ace.config.setModuleLoader('ace/snippets/sql', () => __webpack_require__.e(/* import() */ 7687).then(__webpack_require__.t.bind(__webpack_require__, 57687, 19)));
+ace.config.setModuleLoader('ace/snippets/sql.snippets', () => __webpack_require__.e(/* import() */ 2782).then(__webpack_require__.t.bind(__webpack_require__, 32782, 23)));
+ace.config.setModuleLoader('ace/snippets/sqlserver', () => __webpack_require__.e(/* import() */ 2619).then(__webpack_require__.t.bind(__webpack_require__, 72619, 19)));
+ace.config.setModuleLoader('ace/snippets/sqlserver.snippets', () => __webpack_require__.e(/* import() */ 8389).then(__webpack_require__.t.bind(__webpack_require__, 68389, 23)));
+ace.config.setModuleLoader('ace/snippets/tcl', () => __webpack_require__.e(/* import() */ 2646).then(__webpack_require__.t.bind(__webpack_require__, 72646, 19)));
+ace.config.setModuleLoader('ace/snippets/tcl.snippets', () => __webpack_require__.e(/* import() */ 7483).then(__webpack_require__.t.bind(__webpack_require__, 37483, 23)));
+ace.config.setModuleLoader('ace/snippets/tex', () => __webpack_require__.e(/* import() */ 1884).then(__webpack_require__.t.bind(__webpack_require__, 51884, 19)));
+ace.config.setModuleLoader('ace/snippets/tex.snippets', () => __webpack_require__.e(/* import() */ 2526).then(__webpack_require__.t.bind(__webpack_require__, 52526, 23)));
+ace.config.setModuleLoader('ace/snippets/textile', () => __webpack_require__.e(/* import() */ 4287).then(__webpack_require__.t.bind(__webpack_require__, 84287, 19)));
+ace.config.setModuleLoader('ace/snippets/textile.snippets', () => __webpack_require__.e(/* import() */ 9094).then(__webpack_require__.t.bind(__webpack_require__, 49094, 23)));
+ace.config.setModuleLoader('ace/snippets/vala', () => __webpack_require__.e(/* import() */ 5201).then(__webpack_require__.t.bind(__webpack_require__, 85201, 19)));
+ace.config.setModuleLoader('ace/snippets/velocity', () => __webpack_require__.e(/* import() */ 1142).then(__webpack_require__.t.bind(__webpack_require__, 91142, 19)));
+ace.config.setModuleLoader('ace/snippets/velocity.snippets', () => __webpack_require__.e(/* import() */ 6373).then(__webpack_require__.t.bind(__webpack_require__, 36373, 23)));
+ace.config.setModuleLoader('ace/snippets/wollok', () => __webpack_require__.e(/* import() */ 4479).then(__webpack_require__.t.bind(__webpack_require__, 84479, 19)));
+ace.config.setModuleLoader('ace/snippets/wollok.snippets', () => __webpack_require__.e(/* import() */ 5334).then(__webpack_require__.t.bind(__webpack_require__, 15334, 23)));
+ace.config.setModuleLoader('ace/theme/ambiance', () => __webpack_require__.e(/* import() */ 7738).then(__webpack_require__.t.bind(__webpack_require__, 57738, 19)));
+ace.config.setModuleLoader('ace/theme/chaos', () => __webpack_require__.e(/* import() */ 5296).then(__webpack_require__.t.bind(__webpack_require__, 25296, 19)));
+ace.config.setModuleLoader('ace/theme/chrome', () => __webpack_require__.e(/* import() */ 1923).then(__webpack_require__.t.bind(__webpack_require__, 51923, 19)));
+ace.config.setModuleLoader('ace/theme/cloud9_day', () => __webpack_require__.e(/* import() */ 3759).then(__webpack_require__.t.bind(__webpack_require__, 23759, 19)));
+ace.config.setModuleLoader('ace/theme/cloud9_night', () => __webpack_require__.e(/* import() */ 6168).then(__webpack_require__.t.bind(__webpack_require__, 36168, 19)));
+ace.config.setModuleLoader('ace/theme/cloud9_night_low_color', () => __webpack_require__.e(/* import() */ 2139).then(__webpack_require__.t.bind(__webpack_require__, 72139, 19)));
+ace.config.setModuleLoader('ace/theme/clouds', () => __webpack_require__.e(/* import() */ 7510).then(__webpack_require__.t.bind(__webpack_require__, 97510, 19)));
+ace.config.setModuleLoader('ace/theme/clouds_midnight', () => __webpack_require__.e(/* import() */ 3251).then(__webpack_require__.t.bind(__webpack_require__, 93251, 19)));
+ace.config.setModuleLoader('ace/theme/cobalt', () => __webpack_require__.e(/* import() */ 3128).then(__webpack_require__.t.bind(__webpack_require__, 73128, 19)));
+ace.config.setModuleLoader('ace/theme/crimson_editor', () => __webpack_require__.e(/* import() */ 4270).then(__webpack_require__.t.bind(__webpack_require__, 14270, 19)));
+ace.config.setModuleLoader('ace/theme/dawn', () => __webpack_require__.e(/* import() */ 3782).then(__webpack_require__.t.bind(__webpack_require__, 13782, 19)));
+ace.config.setModuleLoader('ace/theme/dracula', () => __webpack_require__.e(/* import() */ 7482).then(__webpack_require__.t.bind(__webpack_require__, 27482, 19)));
+ace.config.setModuleLoader('ace/theme/dreamweaver', () => __webpack_require__.e(/* import() */ 8390).then(__webpack_require__.t.bind(__webpack_require__, 28390, 19)));
+ace.config.setModuleLoader('ace/theme/eclipse', () => __webpack_require__.e(/* import() */ 8385).then(__webpack_require__.t.bind(__webpack_require__, 38385, 19)));
+ace.config.setModuleLoader('ace/theme/github', () => __webpack_require__.e(/* import() */ 4103).then(__webpack_require__.t.bind(__webpack_require__, 94103, 19)));
+ace.config.setModuleLoader('ace/theme/gob', () => __webpack_require__.e(/* import() */ 1375).then(__webpack_require__.t.bind(__webpack_require__, 81375, 19)));
+ace.config.setModuleLoader('ace/theme/gruvbox', () => __webpack_require__.e(/* import() */ 8642).then(__webpack_require__.t.bind(__webpack_require__, 8642, 19)));
+ace.config.setModuleLoader('ace/theme/gruvbox_dark_hard', () => __webpack_require__.e(/* import() */ 9475).then(__webpack_require__.t.bind(__webpack_require__, 99475, 19)));
+ace.config.setModuleLoader('ace/theme/gruvbox_light_hard', () => __webpack_require__.e(/* import() */ 3553).then(__webpack_require__.t.bind(__webpack_require__, 93553, 19)));
+ace.config.setModuleLoader('ace/theme/idle_fingers', () => __webpack_require__.e(/* import() */ 6921).then(__webpack_require__.t.bind(__webpack_require__, 46921, 19)));
+ace.config.setModuleLoader('ace/theme/iplastic', () => __webpack_require__.e(/* import() */ 2261).then(__webpack_require__.t.bind(__webpack_require__, 82261, 19)));
+ace.config.setModuleLoader('ace/theme/katzenmilch', () => __webpack_require__.e(/* import() */ 8024).then(__webpack_require__.t.bind(__webpack_require__, 68024, 19)));
+ace.config.setModuleLoader('ace/theme/kr_theme', () => __webpack_require__.e(/* import() */ 9729).then(__webpack_require__.t.bind(__webpack_require__, 89729, 19)));
+ace.config.setModuleLoader('ace/theme/kuroir', () => __webpack_require__.e(/* import() */ 4747).then(__webpack_require__.t.bind(__webpack_require__, 94747, 19)));
+ace.config.setModuleLoader('ace/theme/merbivore', () => __webpack_require__.e(/* import() */ 6579).then(__webpack_require__.t.bind(__webpack_require__, 36579, 19)));
+ace.config.setModuleLoader('ace/theme/merbivore_soft', () => __webpack_require__.e(/* import() */ 7403).then(__webpack_require__.t.bind(__webpack_require__, 77403, 19)));
+ace.config.setModuleLoader('ace/theme/mono_industrial', () => __webpack_require__.e(/* import() */ 744).then(__webpack_require__.t.bind(__webpack_require__, 90744, 19)));
+ace.config.setModuleLoader('ace/theme/monokai', () => __webpack_require__.e(/* import() */ 5567).then(__webpack_require__.t.bind(__webpack_require__, 65567, 19)));
+ace.config.setModuleLoader('ace/theme/nord_dark', () => __webpack_require__.e(/* import() */ 4689).then(__webpack_require__.t.bind(__webpack_require__, 4689, 19)));
+ace.config.setModuleLoader('ace/theme/one_dark', () => __webpack_require__.e(/* import() */ 2407).then(__webpack_require__.t.bind(__webpack_require__, 2407, 19)));
+ace.config.setModuleLoader('ace/theme/pastel_on_dark', () => __webpack_require__.e(/* import() */ 599).then(__webpack_require__.t.bind(__webpack_require__, 70599, 19)));
+ace.config.setModuleLoader('ace/theme/solarized_dark', () => __webpack_require__.e(/* import() */ 1257).then(__webpack_require__.t.bind(__webpack_require__, 81257, 19)));
+ace.config.setModuleLoader('ace/theme/solarized_light', () => __webpack_require__.e(/* import() */ 3951).then(__webpack_require__.t.bind(__webpack_require__, 13951, 19)));
+ace.config.setModuleLoader('ace/theme/sqlserver', () => __webpack_require__.e(/* import() */ 7302).then(__webpack_require__.t.bind(__webpack_require__, 77302, 19)));
+ace.config.setModuleLoader('ace/theme/terminal', () => __webpack_require__.e(/* import() */ 9576).then(__webpack_require__.t.bind(__webpack_require__, 19576, 19)));
+ace.config.setModuleLoader('ace/theme/textmate', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 93687, 19)));
+ace.config.setModuleLoader('ace/theme/tomorrow', () => __webpack_require__.e(/* import() */ 9946).then(__webpack_require__.t.bind(__webpack_require__, 29946, 19)));
+ace.config.setModuleLoader('ace/theme/tomorrow_night', () => __webpack_require__.e(/* import() */ 9764).then(__webpack_require__.t.bind(__webpack_require__, 79764, 19)));
+ace.config.setModuleLoader('ace/theme/tomorrow_night_blue', () => __webpack_require__.e(/* import() */ 7342).then(__webpack_require__.t.bind(__webpack_require__, 17342, 19)));
+ace.config.setModuleLoader('ace/theme/tomorrow_night_bright', () => __webpack_require__.e(/* import() */ 672).then(__webpack_require__.t.bind(__webpack_require__, 672, 19)));
+ace.config.setModuleLoader('ace/theme/tomorrow_night_eighties', () => __webpack_require__.e(/* import() */ 9327).then(__webpack_require__.t.bind(__webpack_require__, 59327, 19)));
+ace.config.setModuleLoader('ace/theme/twilight', () => __webpack_require__.e(/* import() */ 587).then(__webpack_require__.t.bind(__webpack_require__, 40587, 19)));
+ace.config.setModuleLoader('ace/theme/vibrant_ink', () => __webpack_require__.e(/* import() */ 3200).then(__webpack_require__.t.bind(__webpack_require__, 13200, 19)));
+ace.config.setModuleLoader('ace/theme/xcode', () => __webpack_require__.e(/* import() */ 6787).then(__webpack_require__.t.bind(__webpack_require__, 96787, 19)));
+ace.config.setModuleLoader('ace/keyboard/vim', () => __webpack_require__.e(/* import() */ 2403).then(__webpack_require__.t.bind(__webpack_require__, 2403, 19)));
+ace.config.setModuleLoader('ace/keyboard/emacs', () => __webpack_require__.e(/* import() */ 6241).then(__webpack_require__.t.bind(__webpack_require__, 26241, 19)));
+ace.config.setModuleLoader('ace/keyboard/sublime', () => __webpack_require__.e(/* import() */ 4176).then(__webpack_require__.t.bind(__webpack_require__, 74176, 19)));
+ace.config.setModuleLoader('ace/keyboard/vscode', () => __webpack_require__.e(/* import() */ 8143).then(__webpack_require__.t.bind(__webpack_require__, 58143, 19)));
+ace.config.setModuleLoader('ace/ext/beautify', () => __webpack_require__.e(/* import() */ 682).then(__webpack_require__.t.bind(__webpack_require__, 50682, 19)));
+ace.config.setModuleLoader('ace/ext/code_lens', () => __webpack_require__.e(/* import() */ 2447).then(__webpack_require__.t.bind(__webpack_require__, 62447, 19)));
+ace.config.setModuleLoader('ace/ext/elastic_tabstops_lite', () => __webpack_require__.e(/* import() */ 7720).then(__webpack_require__.t.bind(__webpack_require__, 37720, 19)));
+ace.config.setModuleLoader('ace/ext/emmet', () => __webpack_require__.e(/* import() */ 4836).then(__webpack_require__.t.bind(__webpack_require__, 24836, 19)));
+ace.config.setModuleLoader('ace/ext/error_marker', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 18552, 19)));
+ace.config.setModuleLoader('ace/ext/hardwrap', () => __webpack_require__.e(/* import() */ 2165).then(__webpack_require__.t.bind(__webpack_require__, 52165, 19)));
+ace.config.setModuleLoader('ace/ext/inline_autocomplete', () => __webpack_require__.e(/* import() */ 371).then(__webpack_require__.t.bind(__webpack_require__, 90371, 19)));
+ace.config.setModuleLoader('ace/ext/keybinding_menu', () => __webpack_require__.e(/* import() */ 3228).then(__webpack_require__.t.bind(__webpack_require__, 83228, 19)));
+ace.config.setModuleLoader('ace/ext/language_tools', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 11105, 19)));
+ace.config.setModuleLoader('ace/ext/linking', () => __webpack_require__.e(/* import() */ 9044).then(__webpack_require__.t.bind(__webpack_require__, 19044, 19)));
+ace.config.setModuleLoader('ace/ext/modelist', () => Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 90352, 23)));
+ace.config.setModuleLoader('ace/ext/options', () => __webpack_require__.e(/* import() */ 3056).then(__webpack_require__.t.bind(__webpack_require__, 32814, 19)));
+ace.config.setModuleLoader('ace/ext/prompt', () => __webpack_require__.e(/* import() */ 1531).then(__webpack_require__.t.bind(__webpack_require__, 81531, 19)));
+ace.config.setModuleLoader('ace/ext/rtl', () => __webpack_require__.e(/* import() */ 1095).then(__webpack_require__.t.bind(__webpack_require__, 91095, 23)));
+ace.config.setModuleLoader('ace/ext/searchbox', () => __webpack_require__.e(/* import() */ 2892).then(__webpack_require__.t.bind(__webpack_require__, 32892, 19)));
+ace.config.setModuleLoader('ace/ext/settings_menu', () => __webpack_require__.e(/* import() */ 3275).then(__webpack_require__.t.bind(__webpack_require__, 93275, 19)));
+ace.config.setModuleLoader('ace/ext/spellcheck', () => __webpack_require__.e(/* import() */ 2093).then(__webpack_require__.t.bind(__webpack_require__, 12093, 19)));
+ace.config.setModuleLoader('ace/ext/split', () => __webpack_require__.e(/* import() */ 3877).then(__webpack_require__.t.bind(__webpack_require__, 3877, 19)));
+ace.config.setModuleLoader('ace/ext/static_highlight', () => __webpack_require__.e(/* import() */ 2841).then(__webpack_require__.t.bind(__webpack_require__, 82841, 23)));
+ace.config.setModuleLoader('ace/ext/statusbar', () => __webpack_require__.e(/* import() */ 7872).then(__webpack_require__.t.bind(__webpack_require__, 77872, 19)));
+ace.config.setModuleLoader('ace/ext/textarea', () => __webpack_require__.e(/* import() */ 4404).then(__webpack_require__.t.bind(__webpack_require__, 54404, 23)));
+ace.config.setModuleLoader('ace/ext/themelist', () => __webpack_require__.e(/* import() */ 4953).then(__webpack_require__.t.bind(__webpack_require__, 84953, 19)));
+ace.config.setModuleLoader('ace/ext/whitespace', () => __webpack_require__.e(/* import() */ 5107).then(__webpack_require__.t.bind(__webpack_require__, 85107, 19)));
+
+
+// EXTERNAL MODULE: ./node_modules/ace-code/src/editor.js
+var editor = __webpack_require__(82880);
+// EXTERNAL MODULE: ./node_modules/ace-code/src/virtual_renderer.js
+var virtual_renderer = __webpack_require__(63049);
+// EXTERNAL MODULE: ./node_modules/ace-code/src/ext/language_tools.js
+var language_tools = __webpack_require__(11105);
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/editors/aceEditor.ts
+
+
+
+const modeList = __webpack_require__(90352);
+
+class AceEditor {
+  resize() {
+    this.editor.resize();
+  }
+  focus() {
+    this.editor.focus();
+  }
+  destroy() {
+    this.editor.setSession(ace.createEditSession("", this.getMode()));
+    this.editor.destroy();
+    this.container.remove();
+  }
+  constructor() {
+    this.editor = new editor/* Editor */.M(new virtual_renderer/* VirtualRenderer */._(null));
+    this.container = this.editor.container;
+    this.container.style.position = "absolute";
+    this.editor.setOptions({
+      customScrollbar: true,
+      newLineMode: "unix",
+      enableLiveAutocompletion: true,
+      enableBasicAutocompletion: true,
+      showPrintMargin: false
+    });
+  }
+  setSession(tab, value) {
+    this.tab = tab;
+    this.initTabSession(value);
+    this.editor.setSession(this.tab.session);
+  }
+  initTabSession(value) {
+    var _a, _b;
+    if (this.tab.session && value == null)
+      return;
+    (_b = (_a = this.tab).session) != null ? _b : _a.session = ace.createEditSession(value != null ? value : "", this.getMode());
+    if (value == null) {
+      this.restoreSessionFromJson(this.tab);
+    } else {
+      this.tab.session.setValue(value);
+    }
+  }
+  getMode() {
+    if (this.tab.path !== void 0) {
+      return modeList.getModeForPath(this.tab.path).mode;
+    }
+    return null;
+  }
+  static getSessionState(tab) {
+    let session = tab.session;
+    let undoManager = session.getUndoManager();
+    return JSON.stringify({
+      selection: session.selection.toJSON(),
+      //@ts-ignore
+      undoManager: undoManager.toJSON(),
+      value: session.getValue(),
+      scroll: [
+        session.getScrollLeft(),
+        session.getScrollTop()
+      ]
+    });
+  }
+  sessionToJSON(tab) {
+    return AceEditor.getSessionState(tab);
+  }
+  restoreSessionFromJson(tab) {
+    if (!tab.session || !tab.sessionValue)
+      return;
+    let session = tab.session;
+    let json = JSON.parse(tab.sessionValue);
+    try {
+      if (typeof json.value == "string" && json.value != session.getValue())
+        session.doc.setValue(json.value);
+      if (json.selection)
+        session.selection.fromJSON(json.selection);
+      if (json.scroll) {
+        session.setScrollLeft(json.scroll[0]);
+        session.setScrollTop(json.scroll[1]);
+      }
+      tab.sessionValue = void 0;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/editors/previewEditor.ts
+class PreviewEditor {
+  resize() {
+  }
+  focus() {
+  }
+  destroy() {
+    this.container.remove();
+  }
+  constructor() {
+    this.container = document.createElement("iframe");
+    this.container.style.position = "absolute";
+  }
+  setSession(tab, value) {
+    this.tab = tab;
+    value != null ? value : value = tab.session;
+    tab.session = value;
+    this.container.setAttribute("srcdoc", value);
+  }
+  restoreSessionFromJson(tab) {
+    var _a;
+    tab.session = (_a = tab.sessionValue) != null ? _a : "";
+    tab.sessionValue = void 0;
+  }
+  sessionToJSON(tab) {
+    return tab.session;
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/tabBar.ts
+
+
+
+
+
+
+class TabBar extends TabPanelBar {
+  constructor() {
+    super(...arguments);
+    this.inverted = true;
+    this.buttonsWidth = 0;
+    this.buttons = [];
+    this.onTabMouseUp = (e) => {
+      if (e.button == 1) {
+        let tab = Utils.findHost(e.target, Tab);
+        if (tab)
+          tab.remove();
+      }
+    };
+    this.onTabMouseDown = (e) => {
+      if (e.button == 0)
+        TabbarHandler.tabbarMouseDown(e, Tab, TabBar, true);
+    };
+    this.onTabPlusClick = (e) => {
+      this.removeSelections();
+      TabManager.getInstance().addNewTab(this.parent);
+    };
+    this.onTabClick = (e) => {
+      let target = e.target;
+      let tab = Utils.findHost(target, Tab);
+      if (tab) {
+        if (e.button == 0 && target.classList.contains("tabCloseButton")) {
+          this.closeTab(tab);
+        } else if (e.button == 0 && tab.isActive && tab.editor) {
+          tab.editor.focus();
+        } else if (e.button == 1) {
+          tab.remove();
+        }
+      }
+    };
+  }
+  setBox(x, y, w, h) {
+    super.setBox(x, y, w, h);
+    this.width = w;
+    this.configure();
+  }
+  renderElement() {
+    this.element = dom.buildDom([
+      "div",
+      {
+        class: "tabbar " + this.direction,
+        onwheel: this.onMouseWheel,
+        $host: this
+      },
+      ["span", { class: "tabMenuButton" }],
+      [
+        "div",
+        {
+          class: "tabScroller"
+        },
+        ["div", {
+          class: "tabContainer",
+          ref: "tabContainer",
+          onclick: this.onTabClick,
+          onmouseup: this.onTabMouseUp,
+          onmousedown: this.onTabMouseDown
+        }]
+      ],
+      ["span", {
+        class: "tabPlusButton",
+        ref: "tabPlusButton",
+        onclick: this.onTabPlusClick
+      }, "+"],
+      ["span", {
+        class: "sizer"
+      }],
+      ["span", {
+        class: "buttons",
+        ref: "additionalButtons"
+      }]
+    ], void 0, this);
+    if (this.initTabList && this.initTabList.length) {
+      for (let i = 0; i < this.initTabList.length; i++) {
+        this.addTab(this.initTabList[i]);
+      }
+    }
+  }
+  render() {
+    if (!this.element)
+      this.renderElement();
+    return this.element;
+  }
+  computeConfig() {
+    let draggingElementSize = this.getDraggingElementSize();
+    this.plusButtonWidth = this.tabPlusButton.getBoundingClientRect().width;
+    this.containerWidth = this.width - this.plusButtonWidth - this.buttonsWidth;
+    let tabsCount = this.tabList.length;
+    if (tabsCount * this.MAX_TAB_SIZE + draggingElementSize < this.containerWidth) {
+      this.tabWidth = this.MAX_TAB_SIZE;
+      this.containerWidth = tabsCount * this.tabWidth + draggingElementSize;
+    } else if (tabsCount * this.MIN_TAB_SIZE + draggingElementSize < this.containerWidth) {
+      this.tabWidth = (this.containerWidth - draggingElementSize) / tabsCount;
+    } else {
+      this.tabWidth = this.MIN_TAB_SIZE;
+    }
+    let tabsWidth = this.tabWidth * tabsCount + draggingElementSize;
+    this.scrollLeft = Math.min(Math.max(this.scrollLeft, 0), tabsWidth - this.containerWidth);
+  }
+  configure() {
+    if (!this.width || this.freeze)
+      return;
+    let shadowWidth = 4;
+    this.computeConfig();
+    this.tabContainer.style.width = this.containerWidth + "px";
+    let draggingElementSize = this.getDraggingElementSize();
+    if (this.inverted) {
+      let zIndex = this.tabList.length;
+      let min = shadowWidth - this.tabWidth;
+      let max = this.containerWidth;
+      let maxPos = (max - this.tabWidth) / 2;
+      let i = 0;
+      for (; i < this.tabList.length; i++) {
+        let tab = this.tabList[i];
+        let el = tab.element;
+        let pos = this.tabWidth * i - this.scrollLeft;
+        if (this.tabDraggingElement && i >= this.draggingElementIndex) {
+          pos += draggingElementSize;
+        }
+        if (tab === this.activeTab) {
+          let activeMin = Math.max(min + this.tabWidth * 0.25, -this.tabWidth * 0.75);
+          if (pos < activeMin)
+            min = activeMin;
+        }
+        if (pos < min) {
+          pos = min;
+          min += shadowWidth;
+          el.classList.add("scrolledLeft");
+        } else if (pos > maxPos) {
+          break;
+        } else {
+          el.classList.remove("scrolledLeft");
+        }
+        el.style.width = this.tabWidth + "px";
+        el.style.zIndex = String(zIndex);
+        zIndex--;
+        this.transform(el, pos, 0);
+      }
+      let lastRendered = i;
+      zIndex = this.tabList.length;
+      for (let i2 = this.tabList.length - 1; i2 >= lastRendered; i2--) {
+        let tab = this.tabList[i2];
+        let el = tab.element;
+        let pos = this.tabWidth * i2 - this.scrollLeft;
+        if (this.tabDraggingElement && i2 >= this.draggingElementIndex) {
+          pos += draggingElementSize;
+        }
+        if (tab === this.activeTab) {
+          let activeMax = Math.min(max - this.tabWidth * 0.25, this.containerWidth - this.tabWidth * 0.25);
+          if (pos > activeMax)
+            max = activeMax;
+        }
+        if (pos > max) {
+          pos = max;
+          max -= shadowWidth;
+          el.classList.add("scrolledLeft");
+        } else {
+          el.classList.remove("scrolledLeft");
+        }
+        el.style.width = this.tabWidth + "px";
+        el.style.zIndex = String(zIndex);
+        zIndex--;
+        this.transform(el, pos, 0);
+      }
+    } else {
+    }
+  }
+  addButton(button) {
+    this.buttons.push(button);
+    this.setButtons(this.buttons);
+  }
+  setButtons(buttons) {
+    this.additionalButtons.innerHTML = "";
+    this.buttons = buttons;
+    buttons.forEach((button) => this.additionalButtons.appendChild(button));
+    let rect = this.additionalButtons.getBoundingClientRect();
+    this.buttonsWidth = rect.width;
+    this.configure();
+  }
+  removeButtons() {
+    if (!this.buttons.length)
+      return;
+    this.buttons = [];
+    this.additionalButtons.innerHTML = "";
+    this.buttonsWidth = 0;
+    this.configure();
+  }
+  clear() {
+    this.removeButtons();
+    this.tabList = [];
+  }
+  remove() {
+  }
+  closeTab(tab) {
+    let index = this.tabList.indexOf(tab);
+    let isActiveTab = this.activeTab === tab;
+    let isAnchorTab = this.anchorTab === tab;
+    this.removeTab(tab);
+    this.removeSelection(tab);
+    if (isActiveTab) {
+      this.activeTab = void 0;
+      this.activatePrevious(index);
+    }
+    if (isAnchorTab)
+      this.anchorTab = null;
+    if (tab.element)
+      tab.element.remove();
+    TabManager.getInstance().removeTab(tab);
+    this.configure();
+  }
+  activateTab(tab, content, removeSelections = false) {
+    removeSelections && this.removeSelections();
+    this.activeTabClicked = false;
+    this.addSelection(tab);
+    if (this.activeTab) {
+      if (this.activeTab === tab) {
+        this.activeTabClicked = true;
+        tab.activatePane();
+        return;
+      }
+      if (this.activeTabHistory.indexOf(this.activeTab) >= 0)
+        this.activeTabHistory.splice(this.activeTabHistory.indexOf(this.activeTab), 1);
+      this.activeTabHistory.push(this.activeTab);
+      this.activeTab.deactivate();
+    }
+    tab.activate(content);
+    this.activeTab = tab;
+    this.configure();
+  }
+  activatePrevious(index) {
+    if (this.tabList.length) {
+      let tab = this.tabList[index - 1] || this.tabList[this.tabList.length - 1];
+      this.activateTab(tab);
+    } else if (this.parent) {
+      this.parent.remove();
+    }
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/boxes/pane.ts
+
+
+
+
+
+
+
+class Pane extends Box {
+  constructor(options = {}) {
+    var _a;
+    let tabBar = new TabBar({
+      tabList: options.tabList
+    });
+    options.toolBars = (_a = options.toolBars) != null ? _a : {};
+    options.toolBars.top = tabBar;
+    super(options);
+    tabBar.parent = this;
+    this.tabBar = tabBar;
+  }
+  toJSON() {
+    return {
+      type: "pane",
+      tabBar: this.tabBar.toJSON()
+    };
+  }
+  render() {
+    super.render();
+    this.element.classList.add("tabPanel");
+    this.tabEditorBoxElement = dom.buildDom(["div", {
+      class: `tab-editor`
+    }]);
+    this.element.appendChild(this.tabEditorBoxElement);
+    return this.element;
+  }
+  acceptsTab(tab) {
+    return true;
+  }
+  split(far, vertical) {
+    let newPane = new Pane({});
+    let root = this.parent;
+    let wrapper = new Box({
+      [far ? 1 : 0]: this,
+      [far ? 0 : 1]: newPane,
+      vertical,
+      ratio: 0.5
+    });
+    root.addChildBox(this, wrapper);
+    if (this.isButtonHost) {
+      let buttons = this.tabBar.buttons;
+      this.removeButtons();
+      wrapper.setButtons(buttons);
+    }
+    return newPane;
+  }
+  setButtons(buttons) {
+    this.isButtonHost = true;
+    if (buttons) {
+      this.tabBar.setButtons(buttons);
+    } else {
+      this.tabBar.removeButtons();
+    }
+  }
+  addButton(button) {
+    this.isButtonHost = true;
+    this.tabBar.addButton(button);
+  }
+  $updateChildSize(x, y, w, h) {
+    this.updateToolBarSize(w, h);
+    w -= this.padding.left + this.padding.right;
+    h -= this.padding.top + this.padding.bottom;
+    x = this.padding.left;
+    y = this.padding.top;
+    if (this.editor) {
+      Utils.setBox(this.editor.container, x, y, w, h);
+      this.editor.resize();
+    }
+  }
+  removeButtons() {
+    this.tabBar.removeButtons();
+    this.isButtonHost = false;
+  }
+  remove() {
+    let wrapper = this.parent;
+    let root = wrapper.parent;
+    let paneIndex = wrapper[0] == this ? 1 : 0;
+    let pane = wrapper[paneIndex] || null;
+    let rootIndex = root[0] == wrapper ? 0 : 1;
+    if (pane) {
+      pane.parent = root;
+      root[rootIndex] = pane;
+      root.element.appendChild(pane.element);
+      if (root.fixedChild && root.fixedChild == wrapper) {
+        pane.fixedSize = wrapper.fixedSize;
+        pane.size = wrapper.size;
+        root.fixedChild = pane;
+      }
+      wrapper.element.remove();
+    } else {
+      if (wrapper.isMain) {
+        root = wrapper;
+      } else {
+        wrapper.element.remove();
+      }
+      root.ratio = 1;
+    }
+    root.recalculateAllMinSizes();
+    root.resize();
+    if (this.isButtonHost)
+      root.setButtons(this.tabBar.buttons);
+    this.clearEditors();
+    this.tabBar.clear();
+  }
+  getTopRightPane() {
+    return this;
+  }
+  createEditor() {
+    let editor = this.createEditorByType();
+    this.emit("editorAdded", editor);
+    return editor;
+  }
+  createEditorByType() {
+    switch (this.currentEditorType) {
+      case EditorType.preview:
+        return new PreviewEditor();
+      case EditorType.ace:
+      default:
+        return new AceEditor();
+    }
+  }
+  initEditor(editorType = EditorType.ace) {
+    var _a, _b, _c;
+    if (this.currentEditorType == editorType)
+      return;
+    this.hidePreviousEditor();
+    (_a = this.editors) != null ? _a : this.editors = {};
+    this.currentEditorType = editorType;
+    (_c = (_b = this.editors)[editorType]) != null ? _c : _b[editorType] = this.createEditor();
+    this.editor = this.editors[editorType];
+    this.element.appendChild(this.editor.container);
+  }
+  hidePreviousEditor() {
+    if (!this.editor)
+      return;
+    this.element.removeChild(this.editor.container);
+  }
+  getEditor(editorType = EditorType.ace) {
+    return this.editors[editorType];
+  }
+  getOrCreateEditor(editorType = EditorType.ace) {
+    this.initEditor(editorType);
+    return this.editor;
+  }
+  clearEditors() {
+    for (let i in this.editors) {
+      this.editors[i].destroy();
+    }
+    this.editors = {};
+    this.currentEditorType = void 0;
+    this.editor = void 0;
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/menu.css
+var menu = __webpack_require__(47594);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/menu.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var menu_options = {};
+
+menu_options.styleTagTransform = (styleTagTransform_default());
+menu_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      menu_options.insert = insertBySelector_default().bind(null, "head");
+    
+menu_options.domAPI = (styleDomAPI_default());
+menu_options.insertStyleElement = (insertStyleElement_default());
+
+var menu_update = injectStylesIntoStyleTag_default()(menu/* default */.Z, menu_options);
+
+
+
+
+       /* harmony default export */ const styles_menu = (menu/* default */.Z && menu/* default.locals */.Z.locals ? menu/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/menu/menu.ts
+
+
+
+dom.importCssString(menu_namespaceObject, "menu.css");
+class Menu {
+  getLastOpenPopup() {
+    return !this.menuPopup ? this : this.menuPopup.getLastOpenPopup();
+  }
+  getLastSelectedMenu() {
+    return !this.menuPopup || !this.menuPopup.selectedMenu ? this.selectedMenu : this.menuPopup.getLastSelectedMenu();
+  }
+  closeLastMenu() {
+    if (this.menuPopup && this.menuPopup.menuPopup) {
+      this.menuPopup.closeLastMenu();
+    } else {
+      this.closeMenu();
+    }
+  }
+  selectMenu(menu) {
+    menu.buttonElement.classList.add(this.selectedClass);
+    this.selectedMenu = menu;
+  }
+  unselectMenu() {
+    if (!this.selectedMenu)
+      return;
+    this.selectedMenu.buttonElement.classList.remove(this.selectedClass);
+    this.selectedMenu = void 0;
+  }
+  openMenu(direction) {
+    if (!direction && this.constructor.name === "MenuPopup")
+      direction = "right";
+    if (this.menuPopup)
+      return this.menuPopup;
+    this.menuPopup = new MenuPopup();
+    this.menuPopup.direction = direction != null ? direction : "";
+    this.menuPopup.isSubMenu = this.constructor.name === "MenuPopup";
+    this.menuPopup.menuManager = this.menuManager;
+    this.menuPopup.menu = this.selectedMenu;
+    this.menuPopup.parentMenu = this;
+    this.menuPopup.open();
+    if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen) {
+      if (!this.menuPopup.isSubMenu) {
+        this.menuManager.searchBox.setParentPopup(this.menuPopup);
+      } else {
+        this.menuManager.searchBox.addSymbol("/");
+      }
+    }
+    return this.menuPopup;
+  }
+  closeMenu() {
+    if (!this.menuPopup) {
+      return;
+    }
+    if (this.menuManager.searchBox && this.menuManager.searchBox.isOpen && this.menuPopup.isSubMenu && this.menuManager.searchBox.value.substring(this.menuManager.searchBox.value.length - 1) === "/") {
+      this.menuManager.searchBox.removeSymbol();
+    }
+    this.menuPopup.close();
+    this.menuPopup = void 0;
+  }
+  moveOnTarget(target) {
+    let host = target ? target.$host : null;
+    if (!host) {
+      return;
+    }
+    if (this.selectedMenu) {
+      if (host.path === this.selectedMenu.path) {
+        return;
+      } else {
+        this.unselectMenu();
+      }
+    }
+    if (this.menuPopup) {
+      this.closeMenu();
+    }
+    host.buttonElement = host.$buttonElement || target;
+    this.selectMenu(host);
+  }
+  openMenuByPath(path) {
+    var _a;
+    if (typeof path === "string")
+      path = path.split("/");
+    let menu = this.getMenuByPath(path.shift());
+    if (!menu)
+      return;
+    if (!menu.$host)
+      menu.$host = menu;
+    this.moveOnTarget(menu);
+    if (!menu.$host.map)
+      return;
+    this.openMenu();
+    if (path.length)
+      (_a = this.menuPopup) == null ? void 0 : _a.openMenuByPath(path);
+  }
+}
+class MenuBar extends Menu {
+  constructor() {
+    super(...arguments);
+    this.selectedClass = "menuButtonDown";
+    this.onMouseMove = (e) => {
+      let target = this.menuManager.getTarget(e.target);
+      this.moveOnTarget(target);
+    };
+  }
+  build(parent) {
+    this.element = parent;
+    let items = this.menus.map;
+    Object.keys(items).filter(Boolean).map((key) => items[key]).sort(function(item1, item2) {
+      return item1.position - item2.position;
+    }).map((item) => {
+      item.$buttonElement = dom.buildDom(["div", {
+        class: "menuButton" + (item.className ? " " + item.className : ""),
+        $host: item,
+        onmousedown: (e) => this.onMouseDown(e)
+      }, item.label + ""], this.element);
+    });
+    let rect = this.element.getBoundingClientRect();
+    this.bottom = rect.bottom;
+  }
+  activateMenu() {
+    this.element.addEventListener("mousemove", this.onMouseMove);
+  }
+  inactivateMenu() {
+    this.unselectMenu();
+    this.closeMenu();
+    this.element.removeEventListener("mousemove", this.onMouseMove);
+  }
+  /*** event handlers ***/
+  onMouseDown(e) {
+    e.preventDefault();
+    let activate = true;
+    if (this.menuManager.isActive) {
+      this.menuManager.inactivateMenu();
+    } else {
+      let target = e.target;
+      target.$host.buttonElement = target.$host.$buttonElement;
+      this.selectMenu(target.$host);
+      this.openMenu();
+      this.menuManager.activeMenu = this;
+      this.menuManager.activateMenu();
+    }
+  }
+  moveOnTarget(target) {
+    var _a;
+    super.moveOnTarget(target);
+    if ((_a = this.selectedMenu) == null ? void 0 : _a.map)
+      this.openMenu();
+  }
+  getMenuByPath(path) {
+    return this.menuManager.find(path);
+  }
+}
+class MenuPopup extends Menu {
+  constructor() {
+    super(...arguments);
+    this.selectedClass = "hover";
+    this.isSubMenu = false;
+    //handle events
+    this.onMouseMove = (e) => {
+      var _a;
+      if (e.target === this.element)
+        return;
+      if (this.menuPopup && this.isDirectedToSubMenu(e))
+        return;
+      let target = this.menuManager.getTarget(e.target);
+      if (target === this.element)
+        return;
+      this.moveOnTarget(target);
+      if ((_a = this.selectedMenu) == null ? void 0 : _a.map)
+        this.openMenu();
+    };
+    this.onMouseUp = (e) => {
+      if (e.target === this.element)
+        return;
+      let target = this.menuManager.getTarget(e.target);
+      if (!target || target === this.element)
+        return;
+      let host = target.$host;
+      if (host && host.buttonElement) {
+        e.preventDefault();
+        if (host.exec)
+          host.exec(this.menuManager.currentHost);
+      }
+      if (!host.map)
+        this.menuManager.inactivateMenu();
+    };
+  }
+  inactivateMenu() {
+    this.close();
+  }
+  activateMenu() {
+  }
+  open() {
+    this.build();
+    this.render();
+  }
+  build() {
+    if (this.element) {
+      return;
+    }
+    if (this.menu.element) {
+      this.element = this.menu.element;
+      return;
+    }
+    let result = [];
+    if (this.menu.map) {
+      let items = Object.values(this.menu.map).sort(function(item1, item2) {
+        return item1.position - item2.position;
+      });
+      let afterDivider = true;
+      result = items.map((item) => {
+        if (item.label[0] === "~") {
+          if (afterDivider)
+            return;
+          afterDivider = true;
+          return [
+            "div",
+            {
+              class: "menu_divider",
+              $host: item
+            }
+          ];
+        }
+        afterDivider = false;
+        let classList = ["menu_item"];
+        if (item.checked)
+          classList.push(item.type === "check" ? "checked" : "selected");
+        if (item.map)
+          classList.push("submenu");
+        if (item.disabled)
+          classList.push("disabled");
+        return [
+          "div",
+          {
+            class: classList.join(" "),
+            $host: item
+          },
+          ["u", " "],
+          ["a", item.label + ""],
+          [
+            "span",
+            {
+              class: "shortcut"
+            },
+            item.hotKey
+          ]
+        ];
+      }).filter(Boolean);
+      if (afterDivider)
+        result.pop();
+    }
+    this.menu.element = dom.buildDom(
+      [
+        "blockquote",
+        {
+          class: "menu",
+          style: "display:block",
+          $host: this.menu,
+          onmousemove: this.onMouseMove,
+          onmouseup: this.onMouseUp
+        },
+        result
+      ],
+      document.body
+    );
+    this.element = this.menu.element;
+  }
+  render() {
+    if (!this.element)
+      return;
+    if (this.element.style.maxWidth)
+      this.element.style.maxWidth = window.innerWidth + "px";
+    if (this.element.style.maxHeight)
+      this.element.style.maxHeight = window.innerHeight + "px";
+    let elRect = this.element.getBoundingClientRect();
+    let edge = Utils.getElementEdges(this.element);
+    let parentRect, top, left;
+    if (this.menu && this.menu.buttonElement)
+      parentRect = this.menu.buttonElement.getBoundingClientRect();
+    if (parentRect) {
+      if (this.isSubMenu) {
+        top = parentRect.top - edge.top;
+        left = parentRect.right;
+      } else {
+        top = parentRect.bottom;
+        left = parentRect.left;
+      }
+    } else {
+      top = this.position.y;
+      left = this.position.x;
+    }
+    let targetH = Math.min(elRect.height, window.innerHeight);
+    let availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
+    if (availableH < targetH && (!parentRect || this.isSubMenu)) {
+      let tmpTop = parentRect ? window.innerHeight : top;
+      top = tmpTop - targetH - edge.top;
+      top = Math.max(top, this.menuManager.menuBar.bottom);
+      availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
+    }
+    this.element.style.maxHeight = availableH - 10 + "px";
+    elRect = this.element.getBoundingClientRect();
+    let availableW = window.innerWidth - left - edge.left - edge.right - 2;
+    if (availableW < elRect.width) {
+      if (parentRect) {
+        let tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
+        if (tmpLeft > availableW) {
+          this.direction = "left";
+          left = tmpLeft - elRect.width + edge.left;
+          left = Math.max(left, 0);
+          availableW = tmpLeft + edge.left + edge.right;
+        }
+        if (availableW < elRect.width) {
+          this.element.style.maxWidth = availableW + "px";
+          this.element.style.overflowX = "auto";
+        }
+      } else {
+        left = window.innerWidth - elRect.width - edge.left - edge.right;
+      }
+    }
+    this.element.style.top = top + "px";
+    this.element.style.left = left + "px";
+    this.element.style.position = "absolute";
+    this.element.style.zIndex = String(195055);
+    this.element.style.overflowY = "auto";
+  }
+  close() {
+    if (this.menuPopup) {
+      this.closeMenu();
+    }
+    if (this.element) {
+      this.element.remove();
+      delete this.element;
+    }
+    if (this.menu.element) {
+      delete this.menu.element;
+    }
+  }
+  scrollIfNeeded() {
+    if (!this.selectedMenu)
+      return;
+    let menu = this.element;
+    let item = this.selectedMenu.buttonElement;
+    let menuRect = menu.getBoundingClientRect();
+    let itemRect = item.getBoundingClientRect();
+    if (itemRect.top < menuRect.top) {
+      item.scrollIntoView(true);
+    } else if (itemRect.bottom > menuRect.bottom) {
+      item.scrollIntoView(false);
+    }
+  }
+  moveOnTarget(target) {
+    super.moveOnTarget(target);
+  }
+  isDirectedToSubMenu(e) {
+    let currPos = { x: e.clientX, y: e.clientY };
+    let prevPos = this.menuManager.prevPos;
+    let rect = this.menuPopup.element.getBoundingClientRect();
+    let rectYTop = rect.top;
+    let rectYBottom = rect.bottom;
+    if (currPos.y < rectYTop || currPos.y > rectYBottom) {
+      return false;
+    }
+    let rectX = this.menuPopup.direction === "left" ? rect.right : rect.left;
+    let prevDiffX = Math.abs(rectX - prevPos.x);
+    let currDiffX = Math.abs(rectX - currPos.x);
+    if (prevDiffX < currDiffX) {
+      return false;
+    }
+    let directedToBottom = currPos.y > prevPos.y;
+    let prevDiffY = directedToBottom ? rectYBottom - prevPos.y : prevPos.y - rectYTop;
+    let tng = prevDiffY / prevDiffX;
+    let maxYDiff = tng * currDiffX;
+    return directedToBottom && rectYBottom - maxYDiff >= currPos.y || !directedToBottom && rectYTop + maxYDiff <= currPos.y;
+  }
+  renderRecursive() {
+    this.render();
+    if (this.menuPopup) {
+      this.menuPopup.renderRecursive();
+    }
+  }
+  getMenuByPath(path) {
+    let childNode;
+    let childNodes = this.element.childNodes;
+    for (let i = 0; i < childNodes.length; i++) {
+      childNode = childNodes[i];
+      if (childNode.$host && childNode.$host.id === path) {
+        if (childNode.classList.contains("menu_item") && !childNode.classList.contains("disabled")) {
+          return childNode;
+        }
+      }
+    }
+    return null;
+  }
+}
+class MenuSearchBox {
+  constructor() {
+    this.isOpen = false;
+    this.hideFiltered = false;
+    this.value = "";
+    this.currValue = "";
+  }
+  open() {
+    if (!this.element) {
+      this.build();
+    }
+    this.isOpen = true;
+    document.body.appendChild(this.element);
+    this.calcElementPosition();
+  }
+  close() {
+    this.isOpen = false;
+    if (this.parentPopup && this.parentPopup.element) {
+      if (this.parentPopup.prevMaxHeight) {
+        this.parentPopup.element.style.maxHeight = this.parentPopup.prevMaxHeight;
+      }
+    }
+    if (this.value.length) {
+      this.value = "";
+      this.currValue = "";
+      this.update();
+    }
+    this.parentPopup = void 0;
+    this.element.remove();
+  }
+  setParentPopup(parentPopup) {
+    var _a;
+    if (this.parentPopup && this.parentPopup.element) {
+      if (this.parentPopup.prevMaxHeight) {
+        this.parentPopup.element.style.maxHeight = this.parentPopup.prevMaxHeight;
+      }
+    }
+    this.parentPopup = parentPopup;
+    this.currPopupMenu = parentPopup;
+    if (this.isOpen) {
+      this.calcElementPosition();
+      let currPopupMenu = parentPopup;
+      let valueArr = this.value.split("/");
+      while (currPopupMenu) {
+        this.currPopupMenu = currPopupMenu;
+        this.currValue = (_a = valueArr.shift()) != null ? _a : "";
+        this.isChanged = true;
+        this.update();
+        this.isOpen = false;
+        currPopupMenu = this.currPopupMenu.selectedMenu && this.currPopupMenu.selectedMenu.map ? this.currPopupMenu.openMenu() : null;
+        this.isOpen = true;
+      }
+    }
+  }
+  calcElementPosition() {
+    if (!this.parentPopup)
+      return;
+    this.parentPopup.prevMaxHeight = null;
+    let parentRect = this.parentPopup.element.getBoundingClientRect();
+    let top = parentRect.top - 20;
+    if (top < this.menuManager.menuBar.bottom) {
+      top = parentRect.bottom;
+      if (parentRect.bottom + 20 > window.innerHeight) {
+        this.parentPopup.prevMaxHeight = this.parentPopup.element.style.maxHeight;
+        this.parentPopup.element.style.maxHeight = parseInt(this.parentPopup.element.style.maxHeight, 10) - 20 + "px";
+        top -= 20;
+      }
+    }
+    this.element.style.top = top + "px";
+    this.element.style.right = window.innerWidth - parentRect.right + "px";
+  }
+  addSymbol(symbol) {
+    var _a;
+    if (symbol === "/" && this.value.substring(this.value.length - 1) === "/") {
+      return;
+    }
+    this.value += symbol;
+    if (symbol === "/") {
+      if (((_a = this.currPopupMenu) == null ? void 0 : _a.selectedMenu) && this.currPopupMenu.selectedMenu.map) {
+        this.currPopupMenu = this.currPopupMenu.openMenu();
+        this.currValue = "";
+      }
+      this.isChanged = false;
+    } else {
+      this.currValue += symbol;
+      this.isChanged = true;
+    }
+    this.update();
+  }
+  removeSymbol() {
+    var _a, _b;
+    if (!this.isOpen) {
+      return;
+    }
+    let removed = this.value.substring(this.value.length - 1);
+    this.value = this.value.substring(0, this.value.length - 1);
+    if (removed === "/") {
+      this.currValue = (_a = this.value.split("/").pop()) != null ? _a : "";
+      this.currPopupMenu = ((_b = this.currPopupMenu) == null ? void 0 : _b.parentMenu) instanceof MenuPopup ? this.currPopupMenu.parentMenu : void 0;
+      this.isChanged = false;
+    } else {
+      this.currValue = this.currValue.substring(0, this.currValue.length - 1);
+      this.isChanged = true;
+    }
+    this.update();
+    if (!this.value.length) {
+      this.close();
+    }
+  }
+  update() {
+    this.searchField.textContent = this.value;
+    if (this.currPopupMenu && this.currPopupMenu.element && this.isChanged) {
+      this.setPopupMenuHighlights();
+      if (this.hideFiltered) {
+        this.calcElementPosition();
+      }
+    }
+  }
+  switchShowHideFiltered() {
+    this.hideFiltered = !this.hideFiltered;
+    this.update();
+    if (!this.hideFiltered) {
+      this.calcElementPosition();
+    }
+  }
+  showHideMenuNode(menu, show) {
+    var _a;
+    show = show || false;
+    if (!show && menu.classList.contains("hover") && ((_a = this.currPopupMenu) == null ? void 0 : _a.menuPopup)) {
+      show = true;
+    }
+    menu.isFiltered = !show;
+    show = show || !this.hideFiltered;
+    menu.style.display = show ? "block" : "none";
+  }
+  setPopupMenuHighlights() {
+    var _a;
+    if (!((_a = this.currPopupMenu) == null ? void 0 : _a.element))
+      return;
+    let childNode;
+    let width = 0;
+    this.selectMenu = null;
+    this.secondarySelectMenu = null;
+    if (this.hideFiltered) {
+      let rect = this.currPopupMenu.element.getBoundingClientRect();
+      let edges = Utils.getElementEdges(this.currPopupMenu.element);
+      width = rect.width - edges.left - edges.right;
+    }
+    let afterDivider = true;
+    let noResult = true;
+    for (let i = 0; i < this.currPopupMenu.element.childNodes.length; i++) {
+      childNode = this.currPopupMenu.element.childNodes[i];
+      if (childNode.classList.contains("menu_item")) {
+        this.setHighlights(childNode);
+        afterDivider = afterDivider && childNode.isFiltered;
+        if (noResult && !childNode.isFiltered) {
+          noResult = false;
+        }
+      } else if (childNode.classList.contains("menu_divider")) {
+        this.showHideMenuNode(childNode, !afterDivider);
+        afterDivider = true;
+      }
+    }
+    if (this.hideFiltered) {
+      this.currPopupMenu.element.style.width = Math.ceil(width) + "px";
+      let noResultEl = this.currPopupMenu.element.querySelector(".menu_no_result");
+      if (noResult && !noResultEl) {
+        dom.buildDom(["div", { class: "menu_no_result" }, "No matching result"], this.currPopupMenu.element);
+      } else if (!noResult && noResultEl) {
+        noResultEl.remove();
+      }
+    }
+    this.selectMenu = this.selectMenu || this.secondarySelectMenu;
+    if (this.selectMenu) {
+      this.currPopupMenu.moveOnTarget(this.selectMenu);
+      this.currPopupMenu.scrollIfNeeded();
+    }
+    if (this.hideFiltered) {
+      this.currPopupMenu.renderRecursive();
+    }
+    if (this.suggestionPopup) {
+      this.suggestionPopup.close();
+    }
+    if (noResult) {
+      this.currValue = this.value;
+      let suggestionList = {};
+      let addToSuggestionList = (menus) => {
+        Object.keys(menus).forEach((name) => {
+          let item = menus[name];
+          if (item.label && item.label[0] === "~") {
+            return;
+          }
+          if (!item.path) {
+            console.log(item);
+            return;
+          }
+          let path = item.path;
+          let tokens = this.getTokens(path);
+          if (tokens) {
+            suggestionList[path] = {
+              label: path,
+              tokens
+            };
+          }
+          if (item.map) {
+            addToSuggestionList(item.map);
+          }
+        });
+      };
+      addToSuggestionList(this.menuManager.menus.map);
+      this.suggestionPopup = new MenuPopup();
+      this.suggestionPopup.direction = "right";
+      this.suggestionPopup.isSubMenu = true;
+      this.suggestionPopup.menuManager = this.menuManager;
+      this.suggestionPopup.menu = {
+        buttonElement: this.element,
+        map: suggestionList
+      };
+      this.suggestionPopup.parentMenu = this;
+      this.suggestionPopup.open();
+      for (let i = 0; i < this.suggestionPopup.element.childNodes.length; i++) {
+        let childNode2 = this.suggestionPopup.element.childNodes[i];
+        let menuTitle = childNode2.querySelector("a");
+        let innerHtml = "";
+        for (let t = 0; t < childNode2.$host.tokens.length; t++) {
+          innerHtml += "<span class='menu-" + childNode2.$host.tokens[t].type + "'>" + childNode2.$host.tokens[t].value + "</span>";
+        }
+        menuTitle.innerHTML = innerHtml;
+      }
+    }
+  }
+  setHighlights(menu) {
+    let text = menu.$host.label;
+    let menuTitle = menu.querySelector("a");
+    if (!this.currValue || !this.currValue.length) {
+      menuTitle.innerHTML = text;
+      this.showHideMenuNode(menu, true);
+      return;
+    }
+    let tokens = this.getTokens(text);
+    let innerHtml = "";
+    let show = true;
+    if (tokens) {
+      if (menu.classList.contains("disabled")) {
+        innerHtml = text;
+      } else {
+        this.secondarySelectMenu = this.secondarySelectMenu || menu;
+        if (!this.selectMenu && tokens[0].type === "completion-highlight") {
+          this.selectMenu = menu;
+        }
+        for (let i = 0; i < tokens.length; i++) {
+          innerHtml += "<span class='menu-" + tokens[i].type + "'>" + tokens[i].value + "</span>";
+        }
+      }
+    } else {
+      innerHtml = text;
+      show = false;
+    }
+    this.showHideMenuNode(menu, show);
+    menuTitle.innerHTML = innerHtml;
+  }
+  getTokens(string) {
+    let tokens = [];
+    let caption = string.toLowerCase();
+    let lower = this.currValue.toLowerCase();
+    let upper = this.currValue.toUpperCase();
+    function addToken(value, className) {
+      value && tokens.push({
+        type: className || "",
+        value
+      });
+    }
+    let lastIndex = -1;
+    let matchMask = 0;
+    let index, distance;
+    let fullMatchIndex = caption.indexOf(lower);
+    if (fullMatchIndex === -1) {
+      for (let j = 0; j < this.currValue.length; j++) {
+        let i1 = caption.indexOf(lower[j], lastIndex + 1);
+        let i2 = caption.indexOf(upper[j], lastIndex + 1);
+        index = i1 >= 0 ? i2 < 0 || i1 < i2 ? i1 : i2 : i2;
+        if (index < 0)
+          return;
+        distance = index - lastIndex - 1;
+        if (distance > 0) {
+          matchMask = matchMask | 1 << j;
+        }
+        lastIndex = index;
+      }
+    }
+    let filterText = lower;
+    lower = caption.toLowerCase();
+    lastIndex = 0;
+    let lastI = 0;
+    for (let i = 0; i <= filterText.length; i++) {
+      if (i !== lastI && (matchMask & 1 << i || i === filterText.length)) {
+        let sub = filterText.slice(lastI, i);
+        lastI = i;
+        index = lower.indexOf(sub, lastIndex);
+        if (index === -1)
+          continue;
+        addToken(string.slice(lastIndex, index), "");
+        lastIndex = index + sub.length;
+        addToken(string.slice(index, lastIndex), "completion-highlight");
+      }
+    }
+    addToken(string.slice(lastIndex, string.length), "");
+    return tokens;
+  }
+  build() {
+    var _a, _b, _c, _d;
+    this.element = dom.buildDom([
+      "div",
+      { class: "menu_searchbox" },
+      ["span", { class: "search_field" }],
+      ["span", { class: "searchbtn_filter" }],
+      ["span", { class: "searchbtn_close" }]
+    ]);
+    this.element.$host = this;
+    this.searchField = this.element.querySelector(".search_field");
+    let _this = this;
+    (_b = (_a = this.element) == null ? void 0 : _a.querySelector(".searchbtn_close")) == null ? void 0 : _b.addEventListener("mousedown", function(e) {
+      _this.close();
+    });
+    (_d = (_c = this.element) == null ? void 0 : _c.querySelector(".searchbtn_filter")) == null ? void 0 : _d.addEventListener("mousedown", function(e) {
+      _this.switchShowHideFiltered();
+    });
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/menu/menuManager.ts
+
+
+const menuManager_event = __webpack_require__(17989);
+const keyUtil = __webpack_require__(11797);
+function getPrevSibling(node, conditionFn, parentElement) {
+  parentElement = node ? node.parentElement : parentElement;
+  let wrapped = false;
+  do {
+    node = node && node.previousSibling;
+    if (!node && !wrapped) {
+      node = parentElement == null ? void 0 : parentElement.lastChild;
+      wrapped = true;
+    }
+    if (!node)
+      return;
+  } while (!conditionFn(node));
+  return node;
+}
+function getNextSibling(node, conditionFn, parentElement) {
+  parentElement = node ? node.parentElement : parentElement;
+  let wrapped = false;
+  do {
+    node = node && node.nextSibling;
+    if (!node && !wrapped) {
+      node = parentElement == null ? void 0 : parentElement.firstChild;
+      wrapped = true;
+    }
+    if (!node)
+      return;
+  } while (!conditionFn(node));
+  return node;
+}
+class MenuManager {
+  constructor() {
+    this.menus = new MenuItems();
+    //event handlers
+    this.onMouseDown = (e) => {
+      let target = this.getTarget(e.target, (target2) => target2.$host instanceof MenuItems);
+      if (!target)
+        this.inactivateMenu();
+    };
+    this.onMouseMove = (e) => {
+      let lastPos = { x: e.clientX, y: e.clientY };
+      if (this.lastPos && this.lastPos.x === lastPos.x && this.lastPos.y === lastPos.y) {
+        return;
+      }
+      this.prevPos = this.lastPos;
+      this.lastPos = lastPos;
+    };
+    this.onWindowResize = (e) => {
+      if (!this.activeMenu) {
+        return;
+      }
+      let menuPopup = this.activeMenu instanceof MenuPopup ? this.activeMenu : this.activeMenu.menuPopup;
+      if (menuPopup) {
+        menuPopup.renderRecursive();
+      }
+    };
+    this.onContextMenuOpen = (e) => {
+      e.preventDefault();
+      let target = this.getTarget(e.target, (target2) => target2.$host.contextMenu);
+      if (!target) {
+        return;
+      }
+      let pos = { x: e.clientX + 2, y: e.clientY + 2 };
+      this.openMenuByPath("/context/" + target.$host.contextMenu, pos);
+      this.currentHost = target.$host;
+    };
+    this.add = this.addByPath;
+  }
+  static getInstance() {
+    if (!MenuManager._instance) {
+      MenuManager._instance = new MenuManager();
+    }
+    return MenuManager._instance;
+  }
+  find(path, item) {
+    if (typeof path === "string")
+      path = path.split("/");
+    item = item || this.menus;
+    path.forEach(function(part) {
+      if (!item || !item.map)
+        return;
+      item = item.map[part];
+    });
+    return item;
+  }
+  addByPath(path, options = {}) {
+    var _a, _b, _c, _d, _e;
+    if (typeof path == "string")
+      path = path.split("/");
+    let item = this.menus;
+    path.forEach(function(part) {
+      var _a2, _b2, _c2;
+      (_a2 = item.map) != null ? _a2 : item.map = {};
+      (_c2 = (_b2 = item.map)[part]) != null ? _c2 : _b2[part] = new MenuItems();
+      item = item.map[part];
+    });
+    item.path = path.join("/");
+    let name = path.pop();
+    item.id = name;
+    item.label = options.label || name;
+    item.position = (_a = options.position) != null ? _a : 0;
+    item.hotKey = options.hotKey;
+    item.type = (_b = options.type) != null ? _b : "";
+    item.checked = (_c = options.checked) != null ? _c : false;
+    item.disabled = (_d = options.disabled) != null ? _d : false;
+    item.className = (_e = options.className) != null ? _e : "";
+    item.exec = options.exec;
+  }
+  getTarget(target, callback) {
+    while (target) {
+      if (target.$host && (!callback || callback(target)))
+        return target;
+      target = target.parentElement;
+    }
+    return;
+  }
+  bindKeys() {
+    function isMenuBarItem(node) {
+      return node.classList.contains("menuButton");
+    }
+    function isMenuPopupActiveItem(node) {
+      return node.classList.contains("menu_item") && !node.classList.contains("disabled") && !node.isFiltered;
+    }
+    function menuKeyDown(menuManager) {
+      var _a;
+      let menuPopup = (_a = menuManager.activeMenu) == null ? void 0 : _a.getLastOpenPopup();
+      if (!menuPopup)
+        return;
+      let menu = menuPopup.selectedMenu ? menuPopup.selectedMenu.buttonElement : null;
+      let nextMenu = getNextSibling(menu, isMenuPopupActiveItem, menuPopup.element);
+      menuPopup.moveOnTarget(nextMenu);
+      menuPopup.scrollIfNeeded();
+    }
+    let menuKb = new hash_handler.HashHandler([
+      {
+        bindKey: "Esc",
+        name: "Esc",
+        exec: function(menuManager) {
+          if (menuManager.searchBox && menuManager.searchBox.isOpen) {
+            menuManager.searchBox.close();
+            return;
+          }
+          let activeMenu = menuManager.activeMenu;
+          if (!activeMenu.menuPopup && activeMenu !== menuManager.menuBar) {
+            activeMenu.close();
+            menuManager.inactivateMenu();
+          } else {
+            activeMenu.closeLastMenu();
+            if (!activeMenu.menuPopup && activeMenu === menuManager.menuBar) {
+              menuManager.inactivateMenu();
+            }
+          }
+        }
+      },
+      {
+        bindKey: "Left",
+        name: "Left",
+        exec: function(menuManager) {
+          let activeMenu = menuManager.activeMenu;
+          activeMenu.closeLastMenu();
+          if (!activeMenu.menuPopup) {
+            if (activeMenu === menuManager.menuBar) {
+              let prevMenu = getPrevSibling(activeMenu.selectedMenu.buttonElement, isMenuBarItem);
+              if (prevMenu) {
+                activeMenu.moveOnTarget(prevMenu);
+              }
+            } else if (!activeMenu.element) {
+              menuManager.inactivateMenu();
+            }
+          }
+        }
+      },
+      {
+        bindKey: "Right",
+        name: "Right",
+        exec: function(menuManager) {
+          function moveToNextOnBar() {
+            if (menuManager.activeMenu !== menuManager.menuBar) {
+              return;
+            }
+            let nextMenu = getNextSibling(menuManager.menuBar.selectedMenu.buttonElement, isMenuBarItem);
+            if (nextMenu) {
+              menuManager.menuBar.moveOnTarget(nextMenu);
+            }
+          }
+          let menuPopup = menuManager.activeMenu.getLastOpenPopup();
+          let menu = menuManager.activeMenu.getLastSelectedMenu();
+          if (!menu) {
+            return;
+          }
+          let moveToNext = !menu.map || menuManager.activeMenu === menuManager.menuBar && !menuManager.activeMenu.menuPopup.selectedMenu;
+          if (!moveToNext && (!menuPopup.selectedMenu && (menuManager.activeMenu.menuPopup !== menuPopup || menuManager.activeMenu !== menuPopup) || menuPopup.selectedMenu === menu)) {
+            let isNewOpened = false;
+            if (menuPopup.selectedMenu === menu) {
+              menuPopup.openMenu();
+              isNewOpened = true;
+            }
+            menuKeyDown(menuManager);
+            if (!isNewOpened && !menuPopup.selectedMenu) {
+              moveToNext = true;
+            }
+          }
+          if (moveToNext) {
+            moveToNextOnBar();
+          }
+        }
+      },
+      {
+        bindKey: "Enter",
+        name: "Enter",
+        exec: function(menuManager) {
+          let menuPopup = menuManager.activeMenu.getLastOpenPopup();
+          let menu = menuManager.activeMenu.getLastSelectedMenu();
+          if (menu && menu.map && menuPopup.selectedMenu === menu) {
+            menuPopup.openMenu();
+          }
+        }
+      },
+      {
+        bindKey: "Up",
+        name: "Up",
+        exec: function(menuManager) {
+          let menuPopup = menuManager.activeMenu.getLastOpenPopup();
+          let menu = menuPopup.selectedMenu ? menuPopup.selectedMenu.buttonElement : null;
+          let prevMenu = getPrevSibling(menu, isMenuPopupActiveItem, menuPopup.element);
+          menuPopup.moveOnTarget(prevMenu);
+          menuPopup.scrollIfNeeded();
+        }
+      },
+      {
+        bindKey: "Backspace",
+        name: "Backspace",
+        exec: function(menuManager) {
+          menuManager.searchBox.removeSymbol();
+        }
+      },
+      {
+        bindKey: "Down",
+        name: "Down",
+        exec: menuKeyDown
+      }
+    ]);
+    let _this = this;
+    menuManager_event.addCommandKeyListener(window, function(e, hashId, keyCode) {
+      if (!_this.isActive) {
+        return;
+      }
+      menuManager_event.stopEvent(e);
+      let keyString = keyUtil.keyCodeToString(keyCode);
+      let command = menuKb.findKeyCommand(hashId, keyString);
+      if (command) {
+        command.exec(_this);
+      } else if (e.key.length === 1) {
+        MenuManager.getInstance().addSymbolToSearchBox(e.key);
+      }
+    });
+  }
+  build() {
+    window.addEventListener("contextmenu", this.onContextMenuOpen);
+  }
+  buildMenuBar(parent) {
+    this.menuBar = new MenuBar();
+    this.menuBar.menus = this.menus;
+    this.menuBar.menuManager = this;
+    this.menuBar.build(parent);
+  }
+  openMenuByPath(path, position) {
+    if (typeof path === "string")
+      path = path.split("/");
+    if (path[0] && path[0].length) {
+      this.activeMenu = this.menuBar;
+    } else {
+      this.activeMenu = new MenuPopup();
+      this.activeMenu.menuManager = this;
+      this.activeMenu.position = position;
+      this.activeMenu.menu = this.find(path);
+      this.activeMenu.open();
+    }
+    this.activateMenu();
+    this.activeMenu.openMenuByPath(path);
+  }
+  activateMenu() {
+    var _a;
+    this.isActive = true;
+    window.addEventListener("mousedown", this.onMouseDown);
+    window.addEventListener("mousemove", this.onMouseMove);
+    window.addEventListener("resize", this.onWindowResize);
+    if ((_a = this.activeMenu) == null ? void 0 : _a.activateMenu)
+      this.activeMenu.activateMenu();
+  }
+  inactivateMenu() {
+    var _a;
+    this.isActive = false;
+    window.removeEventListener("mousedown", this.onMouseDown);
+    window.removeEventListener("mousemove", this.onMouseMove);
+    window.removeEventListener("resize", this.onWindowResize);
+    if ((_a = this.activeMenu) == null ? void 0 : _a.inactivateMenu)
+      this.activeMenu.inactivateMenu();
+    this.activeMenu = void 0;
+    if (this.searchBox)
+      this.searchBox.close();
+    this.currentHost = null;
+  }
+  addSymbolToSearchBox(symbol) {
+    if (!this.searchBox || !this.searchBox.isOpen) {
+      this.openSearchBox();
+    }
+    this.searchBox.addSymbol(symbol);
+  }
+  openSearchBox() {
+    var _a;
+    if (!this.searchBox) {
+      this.searchBox = new MenuSearchBox();
+      this.searchBox.menuManager = this;
+    }
+    this.searchBox.setParentPopup((_a = this.activeMenu) == null ? void 0 : _a.getLastOpenPopup());
+    this.searchBox.open();
+  }
+}
+class MenuItems {
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/commands/commandManager.ts
+const commandManager_event = __webpack_require__(17989);
+const commandManager_keyUtil = __webpack_require__(11797);
+
+class CommandManager {
+  static registerCommands(commands, context) {
+    let menuKb = new hash_handler.HashHandler(commands);
+    let _this = context;
+    commandManager_event.addCommandKeyListener(window, function(e, hashId, keyCode) {
+      let keyString = commandManager_keyUtil.keyCodeToString(keyCode);
+      let command = menuKb.findKeyCommand(hashId, keyString);
+      if (command) {
+        commandManager_event.stopEvent(e);
+        command.exec(_this);
+      }
+    });
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/tabManager.ts
+
+
+const oop = __webpack_require__(89359);
+
+const tabManager_useragent = __webpack_require__(50618);
+
+
+
+
+let newTabCounter = 1;
+class TabManager {
+  constructor(options) {
+    this.$setBoxState = (box, state) => {
+      if (!box)
+        return;
+      box.removeAllChildren();
+      this.setBoxData(box, state);
+      if (!box[0] && box.isMain)
+        this.setChildBoxData(box, [{ type: "pane" }], 0);
+    };
+    this.containers = options.containers;
+    this.tabs = {};
+    this.fileSystem = options.fileSystem;
+    this.commandsInit();
+  }
+  static getInstance(options) {
+    if (!TabManager._instance)
+      TabManager._instance = new TabManager(options);
+    return TabManager._instance;
+  }
+  commandsInit() {
+    MenuManager.getInstance().addByPath("/context/tabs");
+    let commandsKeys = [];
+    for (let command of tabCommands) {
+      if (command.exec !== void 0) {
+        MenuManager.getInstance().addByPath("/context/tabs/" + command.name, {
+          position: command.position,
+          hotKey: tabManager_useragent.isMac ? command.mac : command.win,
+          exec: command.exec
+        });
+        commandsKeys.push({
+          bindKey: {
+            win: command.win,
+            mac: command.mac
+          },
+          exec: command.exec
+        });
+      }
+    }
+    CommandManager.registerCommands(commandsKeys, this);
+  }
+  toJSON() {
+    let containers = Object.keys(this.containers);
+    return Object.fromEntries(containers.map((container) => {
+      var _a;
+      return [container, (_a = this.containers[container]) == null ? void 0 : _a.toJSON()];
+    }));
+  }
+  setChildBoxData(box, boxData, index) {
+    if (!boxData[index])
+      return;
+    let boxType = boxData[index].type;
+    if (!box[index])
+      box.addChildBox(index, boxType === "pane" ? new Pane() : new Box({ vertical: boxType === "vbox" }));
+    this.setBoxData(box[index], boxData[index]);
+  }
+  setBoxData(box, boxData) {
+    if (!boxData)
+      return;
+    if (boxData.fixedSize)
+      box.fixedSize = boxData.fixedSize;
+    if (box instanceof Pane) {
+      if (boxData.tabBar) {
+        box.tabBar.scrollLeft = boxData.tabBar.scrollLeft;
+        if (boxData.tabBar.tabList) {
+          box.tabBar.freeze = true;
+          boxData.tabBar.tabList.forEach((tabData) => {
+            let tab = box.tabBar.addTab(new Tab(tabData));
+            this.tabs[tab.path] = tab;
+            if (tab.preview)
+              this.previewTab = tab;
+          });
+          box.tabBar.freeze = false;
+          box.tabBar.configure();
+        }
+      }
+    } else {
+      box.hidden = boxData.hidden;
+      box.ratio = boxData.ratio;
+      this.setChildBoxData(box, boxData, 0);
+      this.setChildBoxData(box, boxData, 1);
+    }
+  }
+  setState(state) {
+    this.activePane = void 0;
+    this.tabs = {};
+    this.previewTab = void 0;
+    for (let container in this.containers) {
+      this.setContainerState(container, state[container]);
+    }
+  }
+  setContainerState(container, state) {
+    this.$setBoxState(this.containers[container], state);
+  }
+  clear() {
+  }
+  getPanes() {
+  }
+  getTabs() {
+    return this.tabs;
+  }
+  get activeTab() {
+    var _a;
+    return (_a = this.activePane) == null ? void 0 : _a.tabBar.activeTab;
+  }
+  open(tabOptions, container, fileContent) {
+    var _a;
+    let tab = this.tabs[tabOptions.path];
+    tabOptions.active = (_a = tabOptions.active) != null ? _a : true;
+    if (!tab || !tab.parent) {
+      let pane;
+      if (container) {
+        pane = this.getContainerPane(container);
+      } else {
+        pane = this.activePane && this.activePane.tabBar.tabList.length > 0 ? this.activePane : this.getContainerPane("main");
+      }
+      if (this.previewTab)
+        this.previewTab.remove();
+      tab = pane.tabBar.addTab(new Tab(tabOptions), void 0, fileContent);
+      if (tabOptions.preview)
+        this.previewTab = tab;
+      tab.parent.scrollTabIntoView(tab);
+      this.tabs[tab.path] = tab;
+    }
+    if (!tabOptions.preview) {
+      if (this.previewTab == tab) {
+        this.clearPreviewStatus(tab);
+      } else if (this.previewTab) {
+        this.previewTab.remove();
+      }
+    }
+    tab.parent.removeSelections();
+    tab.parent.activateTab(tab, fileContent);
+    return tab;
+  }
+  getContainerPane(container) {
+    return this.containers[container].element.querySelector(".tabPanel").$host;
+  }
+  clearPreviewStatus(tab) {
+    tab.preview = false;
+    tab.element.style.fontStyle = "";
+    if (this.previewTab == tab)
+      this.previewTab = void 0;
+  }
+  get newTabPath() {
+    return `untitled_${newTabCounter}`;
+  }
+  addNewTab(pane, options) {
+    while (this.tabs.hasOwnProperty(this.newTabPath)) {
+      newTabCounter++;
+    }
+    options != null ? options : options = { title: `Untitled ${newTabCounter}`, path: this.newTabPath };
+    options.active = true;
+    let newTab = pane.tabBar.addTab(new Tab(options));
+    this.tabs[this.newTabPath] = newTab;
+    return newTab;
+  }
+  removeTab(tab) {
+    delete this.tabs[tab.path];
+  }
+  //TODO: move to separate class
+  loadFile(tab, fileContent) {
+    let editor = tab.parent.parent.getOrCreateEditor(tab.editorType);
+    editor.setSession(tab, fileContent);
+  }
+  navigateToTab(index, tab, tabs) {
+    var _a;
+    let tabsList = tabs || this.tabs;
+    let activeTab = tab || this.activeTab;
+    if (index >= 0 && tabsList.length > index)
+      (_a = activeTab == null ? void 0 : activeTab.parent) == null ? void 0 : _a.activateTab(tabsList[index], void 0, true);
+  }
+  saveTo(storage) {
+    for (let [path, tab] of Object.entries(this.tabs)) {
+      storage["@file@" + path] = tab.session ? tab.editor.sessionToJSON(tab) : tab.sessionValue;
+    }
+  }
+  restoreFrom(storage) {
+    for (let [path, tab] of Object.entries(this.tabs)) {
+      tab.sessionValue = storage["@file@" + path];
+      if (tab.session)
+        tab.editor.restoreSessionFromJson(tab);
+    }
+  }
+  getTab(path) {
+    return this.tabs[path];
+  }
+}
+oop.implement(TabManager.prototype, event_emitter/* EventEmitter */.v);
+
+;// CONCATENATED MODULE: ./packages/demo/menu_example.ts
+
+let menuDefs = {
+  "AWS Cloud9": "50,,,,",
+  "File": "100,,,,",
+  "Edit": "200,,,,",
+  "Find": "300,,,,",
+  "View": "400,,,,",
+  "Go": "500,,,,",
+  "Tools": "700,,,,",
+  "Window": "800,,,,",
+  "File/~1000000": "1000000,,,,",
+  "View/~9999": "9999,,,,",
+  "Window/Presets": "10200,,false,, ",
+  "Window/Presets/Full IDE": "100,,false,, ",
+  "Window/Presets/Minimal Editor": "200,,false,, ",
+  "Window/Presets/Sublime Mode": "300,,false,, ",
+  "View/Menu Bar": "250,check,true,false,",
+  "Edit/~300": "300,,,,",
+  "Edit/Cut": "400,,false,false,Ctrl-X",
+  "Edit/Copy": "500,,false,false,Ctrl-C",
+  "Edit/Paste": "600,,false,false,Ctrl-V",
+  "View/Editors": "100,,false,, ",
+  "View/~200": "200,,,,",
+  "View/Tab Buttons": "300,check,true,false,",
+  "AWS Cloud9/~280": "280,,,,",
+  "AWS Cloud9/Preferences": "300,,false,false,Ctrl-,",
+  "Tools/~100000": "100000,,,,",
+  "Tools/Developer": "100100,,false,, ",
+  "Tools/Developer/Start in Debug Mode": "900,,false,, ",
+  "Window/Environment": "100,check,true,,Ctrl-I",
+  "File/~600": "600,,,,",
+  "File/Save": "700,,false,false,Ctrl-S",
+  "File/Save As...": "800,,false,false,Ctrl-Shift-S",
+  "File/Save All": "900,,false,false,",
+  "File/Revert to Saved": "1000,,false,false,Ctrl-Shift-Q",
+  "File/Revert All to Saved": "1100,,false,false,Alt-Shift-Q",
+  "View/Editors/Image Viewer": "40000,radio,false,true, ",
+  "View/Editors/Image Editor": "40000,radio,false,true, ",
+  "File/New File": "100,,false,false,Alt-N",
+  "File/New From Template": "200,,false,false, ",
+  "File/New From Template/Text File": "200,,false,false, ",
+  "File/New From Template/JavaScript File": "200,,false,false, ",
+  "File/New From Template/HTML File": "200,,false,false, ",
+  "File/New From Template/XML File": "200,,false,false, ",
+  "File/New From Template/Python File": "200,,false,false, ",
+  "File/New From Template/PHP File": "200,,false,false, ",
+  "File/New From Template/C File": "200,,false,false, ",
+  "File/New From Template/C++ File": "200,,false,false, ",
+  "File/New From Template/Go File": "200,,false,false, ",
+  "File/New From Template/Markdown": "200,,false,false, ",
+  "File/New From Template/Node.js Web Server": "200,,false,false, ",
+  "File/New From Template/Java Console Application": "200,,false,false, ",
+  "File/Open...": "400,,false,false,Ctrl-E|Ctrl-O",
+  "Edit/Undo": "100,,false,true,Ctrl-Z",
+  "Edit/Redo": "200,,false,true,Ctrl-Shift-Z|Ctrl-Y",
+  "Help": "1000,,,,",
+  "Help/Key Bindings Editor": "250,,false,,",
+  "View/Editors/Ace": "40000,radio,false,true, ",
+  "Tools/Toggle Macro Recording": "20100,,false,false,Alt-Shift-R",
+  "Tools/Play Macro": "20200,,false,false,Alt-R",
+  "Edit/~700": "700,,,,",
+  "Edit/Selection": "800,,false,, ",
+  "Edit/Line": "900,,false,, ",
+  "Edit/Text": "1000,,false,, ",
+  "Edit/Comment": "1100,,false,, ",
+  "Edit/Code Folding": "1200,,false,, ",
+  "Edit/Line/Indent": "100,,false,false,Tab",
+  "Edit/Line/Outdent": "200,,false,false,Shift-Tab",
+  "Edit/Line/Move Line Up": "300,,false,false,Alt-Up",
+  "Edit/Line/Move Line Down": "400,,false,false,Alt-Down",
+  "Edit/Line/~500": "500,,,false,",
+  "Edit/Line/Copy Lines Up": "600,,false,false,Alt-Shift-Up",
+  "Edit/Line/Copy Lines Down": "700,,false,false,Alt-Shift-Down",
+  "Edit/Line/~800": "800,,,false,",
+  "Edit/Line/Remove Line": "900,,false,false,Ctrl-D",
+  "Edit/Line/Remove to Line End": "1000,,false,false,Alt-Delete",
+  "Edit/Line/Remove to Line Start": "1100,,false,false,Alt-Backspace",
+  "Edit/Line/~1200": "1200,,,false,",
+  "Edit/Line/Split Line": "1300,,false,false,",
+  "Edit/Comment/Toggle Comment": "100,,false,false,Ctrl-/",
+  "Edit/Text/Remove Word Right": "100,,false,false,Ctrl-Delete",
+  "Edit/Text/Remove Word Left": "200,,false,false,Ctrl-Backspace",
+  "Edit/Text/~300": "300,,,false,",
+  "Edit/Text/Align": "400,,false,false,Ctrl-Alt-A",
+  "Edit/Text/Transpose Letters": "500,,false,false,Alt-Shift-X",
+  "Edit/Text/~600": "600,,,false,",
+  "Edit/Text/To Upper Case": "700,,false,false,Ctrl-U",
+  "Edit/Text/To Lower Case": "800,,false,false,Ctrl-Shift-U",
+  "Edit/Code Folding/Toggle Fold": "100,,false,false,F2",
+  "Edit/Code Folding/Unfold": "200,,false,false,Alt-Shift-L|Ctrl-Shift-F1",
+  "Edit/Code Folding/~300": "300,,,false,",
+  "Edit/Code Folding/Fold Other": "400,,false,false,Alt-0",
+  "Edit/Code Folding/Fold All": "500,,false,false,",
+  "Edit/Code Folding/Unfold All": "600,,false,false,Alt-Shift-0",
+  "Edit/Selection/Select All": "100,,false,false,Ctrl-A",
+  "Edit/Selection/Split Into Lines": "200,,false,false,Ctrl-Alt-L",
+  "Edit/Selection/Single Selection": "300,,false,true,esc",
+  "Edit/Selection/~400": "400,,,false,",
+  "Edit/Selection/Multiple Selections": "500,,false,false, ",
+  "Edit/Selection/~600": "600,,,false,",
+  "Edit/Selection/Select Word Right": "700,,false,false,Ctrl-Shift-Right",
+  "Edit/Selection/Select Word Left": "800,,false,false,Ctrl-Shift-Left",
+  "Edit/Selection/~900": "900,,,false,",
+  "Edit/Selection/Select to Line End": "1000,,false,false,Alt-Shift-Right",
+  "Edit/Selection/Select to Line Start": "1100,,false,false,Alt-Shift-Left",
+  "Edit/Selection/~1200": "1200,,,false,",
+  "Edit/Selection/Select to Document End": "1300,,false,false,Ctrl-Shift-End",
+  "Edit/Selection/Select to Document Start": "1400,,false,false,Ctrl-Shift-Home",
+  "Edit/Selection/Multiple Selections/Add Cursor Up": "100,,false,false,Ctrl-Alt-Up",
+  "Edit/Selection/Multiple Selections/Add Cursor Down": "200,,false,false,Ctrl-Alt-Down",
+  "Edit/Selection/Multiple Selections/Move Active Cursor Up": "300,,false,false,Ctrl-Alt-Shift-Up",
+  "Edit/Selection/Multiple Selections/Move Active Cursor Down": "400,,false,false,Ctrl-Alt-Shift-Down",
+  "Edit/Selection/Multiple Selections/~500": "500,,,,",
+  "Edit/Selection/Multiple Selections/Add Next Selection Match": "600,,false,false,Ctrl-Alt-Right",
+  "Edit/Selection/Multiple Selections/Add Previous Selection Match": "700,,false,false,Ctrl-Alt-Left",
+  "Edit/Selection/Multiple Selections/~800": "800,,,,",
+  "Edit/Selection/Multiple Selections/Merge Selection Range": "900,,false,false,Ctrl-Alt-L",
+  "View/~290000": "290000,,,,",
+  "View/Font Size": "290001,,false,, ",
+  "View/Font Size/Increase Font Size": "100,,false,false,Ctrl-+|Ctrl-=",
+  "View/Font Size/Decrease Font Size": "200,,false,false,Ctrl--",
+  "View/Gutter": "500,check,true,, ",
+  "File/~1400": "1400,,,,",
+  "File/Line Endings": "1500,,false,, ",
+  "File/Line Endings/Windows (CRLF)": "200,radio,false,false, ",
+  "File/Line Endings/Unix (LF)": "300,radio,false,false, ",
+  "View/Syntax": "300000,,false,, ",
+  "View/~400000": "400000,,,,",
+  "View/Wrap Lines": "500000,check,false,false, ",
+  "View/Wrap To Print Margin": "600000,check,false,false, ",
+  "Go/~399": "399,,,,",
+  "Go/Next Error": "499,,false,false,Alt-E",
+  "Go/Previous Error": "599,,false,false,Alt-Shift-E",
+  "Go/~799": "799,,,,",
+  "Go/Word Right": "899,,false,false,Ctrl-Right",
+  "Go/Word Left": "999,,false,false,Ctrl-Left",
+  "Go/~1099": "1099,,,,",
+  "Go/Line End": "1199,,false,false,Alt-Right|End",
+  "Go/Line Start": "1299,,false,false,Alt-Left|Home",
+  "Go/~1399": "1399,,,,",
+  "Go/Jump to Matching Brace": "1499,,false,false,Ctrl-P",
+  "Go/~1599": "1599,,,,",
+  "Go/Scroll to Selection": "1699,,false,false,",
+  "View/Themes": "350000,,false,false, ",
+  "Go/Go to Anything...": "100,,false,false,Ctrl-P",
+  "Go/Go to Symbol...": "110,,false,false,Ctrl-Shift-O",
+  "Go/Go to File...": "120,,false,false,Ctrl-E|Ctrl-O",
+  "Go/Go to Command...": "130,,false,false,Ctrl-.",
+  "Window/Go": "10,check,true,, ",
+  "AWS Cloud9/~300": "300,,,,",
+  "AWS Cloud9/Go To Your Dashboard": "310,,false,, ",
+  "AWS Cloud9/~350": "350,,,,",
+  "AWS Cloud9/Open Your Project Settings": "400,,false,, ",
+  "AWS Cloud9/Open Your User Settings": "400,,false,, ",
+  "AWS Cloud9/Open Your Keymap": "600,,false,, ",
+  "AWS Cloud9/Open Your Init Script": "700,,false,, ",
+  "AWS Cloud9/Open Your Stylesheet": "800,,false,, ",
+  "AWS Cloud9/Restart AWS Cloud9": "2000080,,false,false,Ctrl-R",
+  "Tools/Strip Trailing Space": "100,,false,false,",
+  "Tools/~200": "200,,,,",
+  "Go/Go to Line...": "200,,false,false,Ctrl-G",
+  "View/Status Bar": "600,check,true,, ",
+  "File/~100000": "100000,,,,",
+  "File/Close File": "110000,,false,false,Alt-W",
+  "File/Close All Files": "120000,,false,false,Alt-Shift-W",
+  "Window/Tabs": "10100,,false,, ",
+  "Window/Tabs/Close Pane": "100,,false,,Ctrl-W",
+  "Window/Tabs/Close All Tabs In All Panes": "200,,false,,Alt-Shift-W",
+  "Window/Tabs/Close All But Current Tab": "300,,false,,Ctrl-Alt-W",
+  "Window/Tabs/~1000000": "1000000,,,,",
+  "Window/Tabs/Split Pane in Two Rows": "1000100,,false,,",
+  "Window/Tabs/Split Pane in Two Columns": "1000200,,false,,",
+  "Window/Tabs/~1000300": "1000300,,,,",
+  "Window/Tabs/~1000400": "1000400,,,,",
+  "Window/~9000": "9000,,,,",
+  "Window/Navigation": "9100,,false,, ",
+  "Window/Navigation/Tab to the Right": "100,,false,true,Ctrl-]",
+  "Window/Navigation/Tab to the Left": "200,,false,true,Ctrl-[",
+  "Window/Navigation/Next Tab in History": "300,,false,true,Ctrl-Tab|Alt-`",
+  "Window/Navigation/Previous Tab in History": "400,,false,true,Ctrl-Shift-Tab|Alt-Shift-`",
+  "Window/Navigation/~500": "500,,,,",
+  "Window/Navigation/Move Tab to Right": "600,,false,false,Ctrl-Meta-Right",
+  "Window/Navigation/Move Tab to Left": "700,,false,false,Ctrl-Meta-Left",
+  "Window/Navigation/Move Tab to Up": "800,,false,false,Ctrl-Meta-Up",
+  "Window/Navigation/Move Tab to Down": "900,,false,false,Ctrl-Meta-Down",
+  "Window/Navigation/~1000": "1000,,,,",
+  "Window/Navigation/Go to Pane to Right": "1100,,false,false,Ctrl-Meta-Right",
+  "Window/Navigation/Go to Pane to Left": "1200,,false,false,Ctrl-Meta-Left",
+  "Window/Navigation/Go to Pane to Up": "1300,,false,false,Ctrl-Meta-Up",
+  "Window/Navigation/Go to Pane to Down": "1400,,false,false,Ctrl-Meta-Down",
+  "Window/Navigation/~1500": "1500,,,,",
+  "Window/Navigation/Next Pane in History": "1600,,false,false,Ctrl-`",
+  "Window/Navigation/Previous Pane in History": "1700,,false,false,Ctrl-Shift-`",
+  "Window/~10000": "10000,,,,",
+  "/context": ",,,,",
+  "/context/tree": "0,,false,,",
+  "/context/tree/Copy file path": "800,,false,false,",
+  "/context/tree/~850": "850,,,false,",
+  /*"/context/tabs": {
+      "Reveal in File Tree": "100,,false,false,Ctrl-Shift-L",
+      "~200": "200,,,,",
+      "Copy file path": "230,,false,false,",
+      "~260": "260,,,,",
+      "Close Tab": "300,,false,false,Alt-W",
+      "Close All Tabs": "450,,false,false,Ctrl-W",
+      "Close Other Tabs": "500,,false,false,Ctrl-Alt-W",
+      "Close Tabs to the Left": "600,,false,true,",
+      "Close Tabs to the Right": "700,,false,true,",
+      "~750": "750,,,,",
+      "Split Pane in Two Rows": "800,,false,false,",
+      "Split Pane in Two Columns": "900,,false,false,",
+      "~1000": "1000,,,,",
+      "Duplicate View": "1010,,false,false,",
+      "Run This File": "150,,false,false, ",
+  },*/
+  "View/~800": "800,,,,",
+  "View/Layout": "900,,false,, ",
+  "View/Layout/Single": "100,,false,false,",
+  "View/Layout/Vertical Split": "100,,false,false,",
+  "View/Layout/Horizontal Split": "200,,false,false,",
+  "View/Layout/Cross Split": "300,,false,false,",
+  "View/Layout/Split 1:2": "400,,false,false,",
+  "View/Layout/Split 2:1": "500,,false,false,",
+  "Window/Saved Layouts": "10050,,false,, ",
+  "Edit/~650": "650,,,,",
+  "Edit/Keyboard Mode": "660,,false,, ",
+  "Edit/Keyboard Mode/Default": "1100,radio,true,, ",
+  "Edit/Keyboard Mode/Vim": "1200,radio,false,, ",
+  "Edit/Keyboard Mode/Emacs": "1300,radio,false,, ",
+  "Edit/Keyboard Mode/Sublime": "1400,radio,false,, ",
+  "Find/~10000": "10000,,,,",
+  "Find/Find in Files...": "20000,,false,false,Ctrl-Shift-F",
+  "Find/Find...": "100,,false,false,Ctrl-F",
+  "Find/Find Next": "200,,false,false,Ctrl-K",
+  "Find/Find Previous": "300,,false,false,Ctrl-Shift-K",
+  "Find/~400": "400,,,,",
+  "Find/Replace...": "500,,false,false,Alt-Shift-F|Ctrl-H",
+  "Find/Replace Next": "600,,false,false,",
+  "Find/Replace Previous": "700,,false,false,",
+  "Find/Replace All": "800,,false,false,",
+  "Tools/~2000": "2000,,,,",
+  "Tools/Show Autocomplete": "2100,,false,false,Ctrl-Space|Alt-Space",
+  "Tools/~10000": "10000,,,,",
+  "Tools/Rename variable": "2100,,false,false,Ctrl-Alt-R",
+  "Go/Jump to Definition": "1450,,false,false,F3",
+  "Go/Find References": "1450,,false,false,Shift-F3",
+  "Window/Debugger": "100,check,true,,",
+  "Run": "600,,,,",
+  "Run/Run": "1100,,false,true,Alt-F5",
+  "Run/Run Last": "1200,,false,true,F5",
+  "Run/~1300": "1300,,,,",
+  "Run/Run With": "1400,,false,, ",
+  "Run/Run History": "1500,,false,true, ",
+  "Run/Run Configurations": "1600,,false,, ",
+  "Run/~2600": "2600,,,,",
+  "Run/Show Debugger at Break": "2700,check,true,, ",
+  "Run/Run Configurations/~1000": "1000,,,,",
+  "Run/Run Configurations/New Run Configuration": "1100,,false,, ",
+  "Run/Run Configurations/Manage...": "1200,,false,, ",
+  "Run/Run With/~1000": "1000,,,,",
+  "Run/Run With/New Runner": "1100,,false,, ",
+  "Run/Run With/Edit Runner": "1200,,false,, ",
+  "Window/New Terminal": "30,,false,false,Alt-T",
+  "Window/Navigation/Switch Between Editor and Terminal": "1550,,false,false,Alt-S",
+  "Run/~10100": "10100,,,,",
+  "Run/Build": "10200,,false,false,Ctrl-B",
+  "Run/Cancel Build": "10300,,false,true,Ctrl-Shift-C",
+  "Run/Build System": "10400,,false,, ",
+  "Run/Show Build Result": "10500,,false,, ",
+  "Run/~10600": "10600,,,,",
+  "Run/Automatically Build Supported Files": "10700,check,false,, ",
+  "Run/Save All on Build": "10800,check,true,, ",
+  "Run/Build System/Automatic": "100,radio,true,, ",
+  "Run/Build System/~200": "200,,,,",
+  "Run/Build System/~1200": "1200,,,,",
+  "Run/Build System/New Build System": "1300,,false,, ",
+  "Window/New Immediate Window": "31,,false,, ",
+  "View/Editors/Preview": "40000,radio,false,true, ",
+  "Tools/Preview": "1000,,false,, ",
+  "Tools/Preview/Live Preview Files": "100,,false,true, ",
+  "Tools/Preview/Preview Running Application": "200,,false,, ",
+  "Tools/Preview/~2000": "2000,,,,",
+  "Tools/Preview/~4000": "4000,,,,",
+  "Tools/Preview/Configure Preview URL...": "4200,,false,, ",
+  "Tools/Preview/Show Active Servers...": "4300,,false,, ",
+  "File/~1200": "1200,,,,",
+  "File/Upload Local Files...": "1300,,false,, ",
+  "Window/Outline": "50,check,true,,Ctrl-Shift-E",
+  "View/Open Files": "210,check,false,, ",
+  "Tools/Process List": "1100,,false,false,Ctrl-Alt-P",
+  "Window/Installer...": "38,,false,false,",
+  "Edit/Code Formatting": "1400,,false,, ",
+  "Edit/Code Formatting/Apply Code Formatting": "100,,true,,Ctrl-Shift-B",
+  "Edit/Code Formatting/Open Language & Formatting Preferences...": "200,,true,,",
+  "File/Download Project": "1300,,false,, ",
+  "File/Open Recent": "500,,false,, ",
+  "File/Open Recent/~1000000": "1000000,,,,",
+  "File/Open Recent/Clear Menu": "2000000,,false,true, ",
+  "/user_info": "600,,,,",
+  "/user_info/Go To Dashboard": "600,,false,, ",
+  "Window/~40": "40,,,,",
+  "/context/ace": "0,,false,,",
+  "/context/ace-gutter": "0,,false,,",
+  "/context/ace-gutter/Gutter Options": "1100,,false,, ",
+  "/context/ace-gutter/Gutter Options/Show Line Numbers": "100,,false,,",
+  "/context/ace-gutter/Gutter Options/Show Fold Widgets": "200,,false,,",
+  "/context/terminal": ",,false,,",
+  "/context/terminal/New Terminal Tab": "200,,false,,",
+  "/context/terminal/~300": "300,,,,",
+  "/context/terminal/Copy": "400,,false,,",
+  "/context/terminal/Paste": "500,,false,,",
+  "/context/terminal/Select All": "600,,false,,",
+  "/context/terminal/Clear Buffer": "700,,false,,",
+  "/context/terminal/~800": "800,,,,",
+  "/context/terminal/Hint: Use Alt To Toggle Mouse Mode": "900,,false,,",
+  "View/Syntax/Auto-Select": "100,radio,false,, ",
+  "View/Syntax/Plain Text": "200,radio,true,, ",
+  "View/Syntax/~300": "300,,,,",
+  "View/Syntax/C and C++": "400,radio,false,, ",
+  "View/Syntax/C#": "500,radio,false,, ",
+  "View/Syntax/Clojure": "600,radio,false,, ",
+  "View/Syntax/CoffeeScript": "700,radio,false,, ",
+  "View/Syntax/CSS": "800,radio,false,, ",
+  "View/Syntax/Dart": "900,radio,false,, ",
+  "View/Syntax/Go": "1000,radio,false,, ",
+  "View/Syntax/HTML": "1100,radio,false,, ",
+  "View/Syntax/Jade": "1200,radio,false,, ",
+  "View/Syntax/Java": "1300,radio,false,, ",
+  "View/Syntax/JavaScript": "1400,radio,false,, ",
+  "View/Syntax/JSON": "1500,radio,false,, ",
+  "View/Syntax/LESS": "1600,radio,false,, ",
+  "View/Syntax/Lua": "1700,radio,false,, ",
+  "View/Syntax/Perl": "1800,radio,false,, ",
+  "View/Syntax/PHP": "1900,radio,false,, ",
+  "View/Syntax/Python": "2000,radio,false,, ",
+  "View/Syntax/Ruby": "2100,radio,false,, ",
+  "View/Syntax/Scala": "2200,radio,false,, ",
+  "View/Syntax/SCSS": "2300,radio,false,, ",
+  "View/Syntax/SH": "2400,radio,false,, ",
+  "View/Syntax/SQL": "2500,radio,false,, ",
+  "View/Syntax/Stylus": "2600,radio,false,, ",
+  "View/Syntax/Text": "2700,radio,true,, ",
+  "View/Syntax/Typescript": "2800,radio,false,, ",
+  "View/Syntax/XML": "2900,radio,false,, ",
+  "View/Syntax/XQuery": "3000,radio,false,, ",
+  "View/Syntax/YAML": "3100,radio,false,, ",
+  "View/Syntax/~3200": "3200,,,,",
+  "View/Syntax/ABAP": "3300,radio,false,, ",
+  "View/Syntax/ABC": "3400,radio,false,, ",
+  "View/Syntax/ActionScript": "3500,radio,false,, ",
+  "View/Syntax/ADA": "3600,radio,false,, ",
+  "View/Syntax/Apache Conf": "3700,radio,false,, ",
+  "View/Syntax/Apex": "3800,radio,false,, ",
+  "View/Syntax/AQL": "3900,radio,false,, ",
+  "View/Syntax/AsciiDoc": "4000,radio,false,, ",
+  "View/Syntax/ASL": "4100,radio,false,, ",
+  "View/Syntax/Assembly x86": "4200,radio,false,, ",
+  "View/Syntax/AutoHotkey ": ",,false,,",
+  "View/Syntax/AutoHotkey / AutoIt": "4300,,false,,",
+  "View/Syntax/BatchFile": "4400,radio,false,, ",
+  "View/Syntax/C9Search": "4500,radio,false,, ",
+  "View/Syntax/Cirru": "4600,radio,false,, ",
+  "View/Syntax/Cobol": "4700,radio,false,, ",
+  "View/Syntax/ColdFusion": "4800,radio,false,, ",
+  "View/Syntax/Crystal": "4900,radio,false,, ",
+  "View/Syntax/Csound": "5000,radio,false,, ",
+  "View/Syntax/Csound Document": "5100,radio,false,, ",
+  "View/Syntax/Csound Score": "5200,radio,false,, ",
+  "View/Syntax/Curly": "5300,radio,false,, ",
+  "View/Syntax/D": "5400,radio,false,, ",
+  "View/Syntax/Diff": "5500,radio,false,, ",
+  "View/Syntax/Django": "5600,radio,false,, ",
+  "View/Syntax/Dockerfile": "5700,radio,false,, ",
+  "View/Syntax/Dot": "5800,radio,false,, ",
+  "View/Syntax/Drools": "5900,radio,false,, ",
+  "View/Syntax/Edifact": "6000,radio,false,, ",
+  "View/Syntax/Eiffel": "6100,radio,false,, ",
+  "View/Syntax/EJS": "6200,radio,false,, ",
+  "View/Syntax/Elixir": "6300,radio,false,, ",
+  "View/Syntax/Elm": "6400,radio,false,, ",
+  "View/Syntax/Erlang": "6500,radio,false,, ",
+  "View/Syntax/Forth": "6600,radio,false,, ",
+  "View/Syntax/Fortran": "6700,radio,false,, ",
+  "View/Syntax/FreeMarker": "6800,radio,false,, ",
+  "View/Syntax/FSharp": "6900,radio,false,, ",
+  "View/Syntax/FSL": "7000,radio,false,, ",
+  "View/Syntax/Gcode": "7100,radio,false,, ",
+  "View/Syntax/Gherkin": "7200,radio,false,, ",
+  "View/Syntax/Gitignore": "7300,radio,false,, ",
+  "View/Syntax/Glsl": "7400,radio,false,, ",
+  "View/Syntax/Gobstones": "7500,radio,false,, ",
+  "View/Syntax/GraphQLSchema": "7600,radio,false,, ",
+  "View/Syntax/Groovy": "7700,radio,false,, ",
+  "View/Syntax/HAML": "7800,radio,false,, ",
+  "View/Syntax/Handlebars": "7900,radio,false,, ",
+  "View/Syntax/Haskell": "8000,radio,false,, ",
+  "View/Syntax/Haskell Cabal": "8100,radio,false,, ",
+  "View/Syntax/haXe": "8200,radio,false,, ",
+  "View/Syntax/Hjson": "8300,radio,false,, ",
+  "View/Syntax/HTML (Elixir)": "8400,radio,false,, ",
+  "View/Syntax/HTML (Ruby)": "8500,radio,false,, ",
+  "View/Syntax/INI": "8600,radio,false,, ",
+  "View/Syntax/Io": "8700,radio,false,, ",
+  "View/Syntax/Jack": "8800,radio,false,, ",
+  "View/Syntax/JSONiq": "8900,radio,false,, ",
+  "View/Syntax/JSP": "9000,radio,false,, ",
+  "View/Syntax/JSSM": "9100,radio,false,, ",
+  "View/Syntax/JSX": "9200,radio,false,, ",
+  "View/Syntax/Julia": "9300,radio,false,, ",
+  "View/Syntax/Kotlin": "9400,radio,false,, ",
+  "View/Syntax/LaTeX": "9500,radio,false,, ",
+  "View/Syntax/Liquid": "9600,radio,false,, ",
+  "View/Syntax/Lisp": "9700,radio,false,, ",
+  "View/Syntax/LiveScript": "9800,radio,false,, ",
+  "View/Syntax/LogiQL": "9900,radio,false,, ",
+  "View/Syntax/LSL": "10000,radio,false,, ",
+  "View/Syntax/LuaPage": "10100,radio,false,, ",
+  "View/Syntax/Lucene": "10200,radio,false,, ",
+  "View/Syntax/Makefile": "10300,radio,false,, ",
+  "View/Syntax/Markdown": "10400,radio,false,, ",
+  "View/Syntax/Mask": "10500,radio,false,, ",
+  "View/Syntax/MATLAB": "10600,radio,false,, ",
+  "View/Syntax/Maze": "10700,radio,false,, ",
+  "View/Syntax/MEL": "10800,radio,false,, ",
+  "View/Syntax/MIXAL": "10900,radio,false,, ",
+  "View/Syntax/MUSHCode": "11000,radio,false,, ",
+  "View/Syntax/MySQL": "11100,radio,false,, ",
+  "View/Syntax/Nginx": "11200,radio,false,, ",
+  "View/Syntax/Nim": "11300,radio,false,, ",
+  "View/Syntax/Nix": "11400,radio,false,, ",
+  "View/Syntax/NSIS": "11500,radio,false,, ",
+  "View/Syntax/Objective-C": "11600,radio,false,, ",
+  "View/Syntax/OCaml": "11700,radio,false,, ",
+  "View/Syntax/Pascal": "11800,radio,false,, ",
+  "View/Syntax/Perl 6": "11900,radio,false,, ",
+  "View/Syntax/pgSQL": "12000,radio,false,, ",
+  "View/Syntax/PHP (Blade Template)": "12100,radio,false,, ",
+  "View/Syntax/Pig": "12200,radio,false,, ",
+  "View/Syntax/Powershell": "12300,radio,false,, ",
+  "View/Syntax/Praat": "12400,radio,false,, ",
+  "View/Syntax/Prolog": "12500,radio,false,, ",
+  "View/Syntax/Properties": "12600,radio,false,, ",
+  "View/Syntax/Protobuf": "12700,radio,false,, ",
+  "View/Syntax/Puppet": "12800,radio,false,, ",
+  "View/Syntax/R": "12900,radio,false,, ",
+  "View/Syntax/Razor": "13000,radio,false,, ",
+  "View/Syntax/RDoc": "13100,radio,false,, ",
+  "View/Syntax/Red": "13200,radio,false,, ",
+  "View/Syntax/RHTML": "13300,radio,false,, ",
+  "View/Syntax/RST": "13400,radio,false,, ",
+  "View/Syntax/Rust": "13500,radio,false,, ",
+  "View/Syntax/SASS": "13600,radio,false,, ",
+  "View/Syntax/SCAD": "13700,radio,false,, ",
+  "View/Syntax/Scheme": "13800,radio,false,, ",
+  "View/Syntax/SJS": "13900,radio,false,, ",
+  "View/Syntax/Slim": "14000,radio,false,, ",
+  "View/Syntax/Smarty": "14100,radio,false,, ",
+  "View/Syntax/Soy Template": "14200,radio,false,, ",
+  "View/Syntax/Space": "14300,radio,false,, ",
+  "View/Syntax/SQLServer": "14400,radio,false,, ",
+  "View/Syntax/SVG": "14500,radio,false,, ",
+  "View/Syntax/Swift": "14600,radio,false,, ",
+  "View/Syntax/Tcl": "14700,radio,false,, ",
+  "View/Syntax/Terraform": "14800,radio,false,, ",
+  "View/Syntax/Tex": "14900,radio,false,, ",
+  "View/Syntax/Textile": "15000,radio,false,, ",
+  "View/Syntax/Toml": "15100,radio,false,, ",
+  "View/Syntax/TSX": "15200,radio,false,, ",
+  "View/Syntax/Twig": "15300,radio,false,, ",
+  "View/Syntax/Vala": "15400,radio,false,, ",
+  "View/Syntax/VBScript": "15500,radio,false,, ",
+  "View/Syntax/Velocity": "15600,radio,false,, ",
+  "View/Syntax/Verilog": "15700,radio,false,, ",
+  "View/Syntax/VHDL": "15800,radio,false,, ",
+  "View/Syntax/Visualforce": "15900,radio,false,, ",
+  "View/Syntax/Wollok": "16000,radio,false,, ",
+  "View/Syntax/Zeek": "16100,radio,false,, ",
+  "View/Themes/UI Themes": "0,,false,false, ",
+  "View/Themes/~200": "200,,,false,",
+  "View/Themes/UI Themes/Classic Dark": "0,radio,false,, ",
+  "View/Themes/UI Themes/Classic Dark Gray": "0,radio,false,, ",
+  "View/Themes/UI Themes/Flat Light": "0,radio,false,, ",
+  "View/Themes/Ambiance": "200,radio,false,false, ",
+  "View/Themes/Chrome": "201,radio,false,false, ",
+  "View/Themes/Cloud9": "202,,false,false, ",
+  "View/Themes/Cloud9/Cloud9 Day": ",radio,false,, ",
+  "View/Themes/Cloud9/Cloud9 Night": ",radio,false,, ",
+  "View/Themes/Cloud9/Cloud9 Night Low-Color": ",radio,false,, ",
+  "View/Themes/Clouds": "203,,false,false, ",
+  "View/Themes/Clouds/Clouds": ",radio,false,, ",
+  "View/Themes/Clouds/Clouds Midnight": ",radio,false,, ",
+  "View/Themes/Cobalt": "204,radio,false,false, ",
+  "View/Themes/Crimson Editor": "205,radio,false,false, ",
+  "View/Themes/Dawn": "206,radio,false,false, ",
+  "View/Themes/Dreamweaver": "207,radio,false,false, ",
+  "View/Themes/Eclipse": "208,radio,false,false, ",
+  "View/Themes/GitHub": "209,radio,false,false, ",
+  "View/Themes/Idle Fingers": "210,radio,false,false, ",
+  "View/Themes/Kr Theme": "211,radio,false,false, ",
+  "View/Themes/Merbivore": "212,,false,false, ",
+  "View/Themes/Merbivore/Merbivore": ",radio,false,, ",
+  "View/Themes/Merbivore/Merbivore Soft": ",radio,false,, ",
+  "View/Themes/Mono Industrial": "213,radio,false,false, ",
+  "View/Themes/Monokai": "214,radio,false,false, ",
+  "View/Themes/Pastel On Dark": "215,radio,false,false, ",
+  "View/Themes/Solarized": "216,,false,false, ",
+  "View/Themes/Solarized/Solarized Dark": ",radio,false,, ",
+  "View/Themes/Solarized/Solarized Light": ",radio,false,, ",
+  "View/Themes/TextMate": "217,radio,false,false, ",
+  "View/Themes/Tomorrow": "218,,false,false, ",
+  "View/Themes/Tomorrow/Tomorrow": ",radio,false,, ",
+  "View/Themes/Tomorrow/Tomorrow Night": ",radio,false,, ",
+  "View/Themes/Tomorrow/Tomorrow Night Blue": ",radio,false,, ",
+  "View/Themes/Tomorrow/Tomorrow Night Bright": ",radio,false,, ",
+  "View/Themes/Tomorrow/Tomorrow Night Eighties": ",radio,false,, ",
+  "View/Themes/Twilight": "219,radio,false,false, ",
+  "View/Themes/Vibrant Ink": "220,radio,false,false, ",
+  "View/Themes/Xcode": "221,radio,false,false, ",
+  "View/Themes/Jett": "222,radio,false,false, ",
+  "Window/Saved Layouts/Save...": "100,,false,,",
+  "Window/Saved Layouts/Save And Close All...": "200,,false,,",
+  "Window/Saved Layouts/~300": "300,,,,",
+  "Window/Saved Layouts/Show Saved Layouts in File Tree": "400,,false,, ",
+  "Window/Saved Layouts/~500": "500,,,,"
+};
+function addExampleMenuItems(menuManager, root, menuDefinitions = menuDefs) {
+  let commands = [];
+  Object.keys(menuDefinitions).forEach(function(x) {
+    var _a;
+    let item = menuDefinitions[x];
+    let exec;
+    if (typeof item == "object") {
+      if (item.properties != void 0) {
+        exec = item.exec;
+        item = item.properties;
+      } else {
+        return addExampleMenuItems(menuManager, x, item);
+      }
+    }
+    let parts = (_a = /(\d*),([^,]*),([^,]*),([^,]*),(.*)/.exec(item)) != null ? _a : [];
+    let path = root ? root + "/" + x : x;
+    let hotKey = (parts[5] || "").trim();
+    if (exec && hotKey) {
+      commands.push({
+        bindKey: {
+          win: hotKey,
+          mac: hotKey
+        },
+        exec
+      });
+    }
+    menuManager.addByPath(path, {
+      className: path == "AWS Cloud9" ? "c9btn" : void 0,
+      type: parts[2],
+      checked: parts[3] == "true",
+      disabled: parts[4] == "true",
+      position: parseInt(parts[1]),
+      hotKey,
+      exec
+    });
+  });
+  CommandManager.registerCommands(commands);
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/menuToolbar.ts
+
+
+
+class MenuToolbar extends Toolbar {
+  render() {
+    if (!this.element) {
+      this.element = dom.buildDom(["div", {
+        class: "menuToolBar"
+      }, [
+        "div",
+        {
+          class: "menuBar",
+          ref: "menuBar"
+        }
+      ]], void 0, this);
+      let menuManager = MenuManager.getInstance();
+      menuManager.build();
+      menuManager.buildMenuBar(this.menuBar);
+      menuManager.bindKeys();
+    }
+    return this.element;
+  }
+  remove() {
+  }
+  toJSON() {
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/ace-code/src/lib/keys.js
+var keys = __webpack_require__(11797);
+var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
+;// CONCATENATED MODULE: ./packages/demo/layout/demo.ts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class FindBar extends Toolbar {
+  render() {
+    var _a;
+    (_a = this.element) != null ? _a : this.element = dom.buildDom(["div", {
+      class: "findbar"
+    }]);
+    return this.element;
+  }
+  close() {
+    let element = this.element;
+    let rect = element.getBoundingClientRect();
+    element.style.top = rect.top + rect.height + "px";
+  }
+  remove() {
+  }
+  toJSON() {
+  }
+}
+document.body.innerHTML = "";
+let mainBox;
+let consoleBox;
+let base = new Box({
+  vertical: false,
+  toolBars: {
+    top: new MenuToolbar(),
+    left: new PanelBar({
+      panelList: [
+        new Panel({
+          title: "Workspace",
+          panelBody: new Accordion({
+            vertical: true,
+            size: 200,
+            sections: [
+              { title: "open editors", box: new Box({ vertical: false, size: 200, color: "blue" }) },
+              { title: "project name", box: new Box({ vertical: false, size: 500, color: "red" }) },
+              { title: "outline", box: new Box({ vertical: false, size: 500, color: "green" }) },
+              { title: "timeline", box: new Box({ vertical: false, size: 500, color: "pink" }) }
+            ]
+          }),
+          location: "left"
+        }),
+        new Panel({
+          title: "Navigate",
+          panelBody: new Box({
+            size: 200,
+            color: "yellow"
+          }),
+          location: "left",
+          autoHide: true
+        }),
+        new Panel({
+          title: "Commands",
+          panelBody: new Box({
+            size: 200,
+            color: "orange"
+          }),
+          location: "left",
+          autoHide: true
+        }),
+        new Panel({
+          title: "Changes",
+          panelBody: new Box({
+            size: 200,
+            color: "violet"
+          }),
+          location: "left",
+          autoHide: true
+        })
+      ]
+    }),
+    right: new PanelBar({
+      panelList: [
+        new Panel({
+          title: "Outline",
+          panelBody: new Box({
+            size: 200,
+            color: "red"
+          }),
+          location: "right"
+        }),
+        new Panel({
+          title: "Debugger",
+          panelBody: new Box({
+            size: 200,
+            color: "yellow"
+          }),
+          location: "right"
+        })
+      ]
+    }),
+    bottom: new PanelBar({})
+  },
+  1: new Box({
+    vertical: false,
+    0: mainBox = new Box({
+      vertical: true,
+      0: new Box({
+        ratio: 1,
+        isMain: true
+      }),
+      1: consoleBox = new Box({
+        ratio: 1,
+        isMain: true,
+        size: 100
+      })
+    }),
+    toolBars: {}
+  })
+});
+new AceLayout(base);
+addExampleMenuItems(MenuManager.getInstance(), "", menuDefs);
+base.render();
+let onResize = function() {
+  base.setBox(0, 0, window.innerWidth, window.innerHeight);
+};
+window.onresize = onResize;
+document.body.appendChild(base.element);
+class SearchManager {
+  constructor(box) {
+    this.box = box;
+  }
+  addTransitioningToElement(element) {
+    Box.enableAnimation();
+    element.addEventListener("transitionend", function x() {
+      element.removeEventListener("transitionend", x);
+      Box.disableAnimation();
+    });
+  }
+  animateBox(box) {
+    this.addTransitioningToElement(box.element);
+  }
+  openFindBar() {
+    var _a;
+    this.animateBox(this.box);
+    (_a = this.findBar) != null ? _a : this.findBar = new FindBar();
+    this.box.addToolBar("bottom", this.findBar);
+    this.box.resize();
+  }
+  closeFindBar() {
+    this.animateBox(this.box);
+    this.box.removeToolBar("bottom");
+    this.findBar.close();
+    this.box.resize();
+  }
+}
+let searchManager = new SearchManager(mainBox);
+let menuKb = new hash_handler.HashHandler([
+  {
+    bindKey: "F6",
+    name: "F6",
+    exec: function() {
+      consoleBox.toggleShowHide();
+    }
+  }
+]);
+lib_event.addCommandKeyListener(window, function(e, hashId, keyCode) {
+  let keyString = keys_default().keyCodeToString(keyCode);
+  let command = menuKb.findKeyCommand(hashId, keyString);
+  if (command) {
+    lib_event.stopEvent(e);
+    command.exec();
+  }
+});
+window.onbeforeunload = function() {
+  let storage = {};
+  tabManager.saveTo(storage);
+  localStorage["layout"] = JSON.stringify(storage);
+  localStorage.layout_tabs = JSON.stringify(tabManager.toJSON());
+  localStorage.layout_panels = JSON.stringify(panelManager.toJSON());
+};
+let tabManager = TabManager.getInstance({
+  containers: {
+    main: mainBox[0],
+    console: consoleBox
+  }
+});
+let panelManager = PanelManager.getInstance({
+  layout: base,
+  locations: {
+    left: {
+      parent: base,
+      index: 0,
+      size: 200
+    },
+    right: {
+      parent: base[1],
+      index: 1,
+      size: 200
+    }
+  }
+});
+let tabState = {};
+let panelState = {};
+try {
+  if (localStorage.layout_tabs)
+    tabState = JSON.parse(localStorage.layout_tabs);
+  if (localStorage.layout_panels)
+    panelState = JSON.parse(localStorage.layout_panels);
+} catch (e) {
+}
+tabManager.setState(tabState);
+panelManager.setState(panelState);
+if (localStorage["layout"])
+  tabManager.restoreFrom(JSON.parse(localStorage["layout"]));
+onResize();
+consoleBox.renderButtons([{
+  class: "consoleCloseBtn",
+  title: "F6",
+  onclick: function() {
+    consoleBox.hide();
+  },
+  content: "x"
+}]);
+
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=bundle.layout.js.map

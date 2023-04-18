@@ -325,7 +325,7 @@ oop.inherits(FoldMode, BaseFoldMode);
 
 var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
-var VBScriptHighlightRules = (__webpack_require__(78385)/* .VBScriptHighlightRules */ .U);
+var VBScriptHighlightRules = (__webpack_require__(20682)/* .VBScriptHighlightRules */ .U);
 var FoldMode = (__webpack_require__(87205)/* .FoldMode */ .Z);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
 
@@ -466,7 +466,7 @@ exports.Mode = Mode;
 
 /***/ }),
 
-/***/ 78385:
+/***/ 20682:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 /*

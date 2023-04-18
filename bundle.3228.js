@@ -17,7 +17,7 @@
  */
 
     
-    var Editor = (__webpack_require__(82880).Editor);
+    var Editor = (__webpack_require__(82880)/* .Editor */ .M);
     /**
      * Generates a menu which displays the keyboard shortcuts.
      * @author <a href="mailto:matthewkastor@gmail.com">

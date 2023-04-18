@@ -1477,363 +1477,6 @@ function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
 
 /***/ }),
 
-/***/ 9734:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(21705);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_accordion_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 61262:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(75715);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 81982:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_dropdown_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(86800);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_dropdown_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_dropdown_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_dropdown_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_dropdown_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 77111:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(47594);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_menu_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 58659:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(52368);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_panel_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 94622:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(83619);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_switcher_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
-/***/ 63712:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93379);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7795);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90569);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3565);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19216);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(44589);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(85334);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z && _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals ? _node_modules_css_loader_dist_cjs_js_preferences_css__WEBPACK_IMPORTED_MODULE_6__/* ["default"].locals */ .Z.locals : undefined);
-
-
-/***/ }),
-
 /***/ 93379:
 /***/ ((module) => {
 
@@ -2122,3122 +1765,6 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ 18108:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.AccordionHandler = void 0;
-var box_1 = __webpack_require__(95561);
-var lib_1 = __webpack_require__(80930);
-var event = __webpack_require__(17989);
-var AccordionHandler;
-(function (AccordionHandler) {
-    AccordionHandler.toggleBarMouseDown = function (e, accordionConstructor) {
-        var toggleBlock = lib_1.Utils.findNode(e.target, "toggle-block");
-        if (!toggleBlock)
-            return;
-        var accordionBox, accordionBoxRect, toggleBlockDragging, toggleBlockRect;
-        var startIndex, changeIndex, previousIndex;
-        var toggleBar, section, splitter;
-        var startX = e.clientX, startY = e.clientY;
-        var isDragging = false;
-        var posX, posY, prevY, prevX;
-        var prevBlock, topMaxY, nextBlock, bottomMaxY;
-        function distance(dx, dy) {
-            return dx * dx + dy * dy;
-        }
-        function calculateNearbyBlocksData() {
-            if (!accordionBox)
-                return;
-            prevBlock = accordionBox.toggleBlockList[changeIndex - 1] || null;
-            nextBlock = accordionBox.toggleBlockList[changeIndex + 1] || null;
-            topMaxY = prevBlock && (parseInt(prevBlock.style.top, 10) + parseInt(prevBlock.style.height, 10) / 2 + accordionBoxRect.top);
-            bottomMaxY = nextBlock && (parseInt(nextBlock.style.top, 10) + parseInt(nextBlock.style.height, 10) / 2 + accordionBoxRect.top);
-        }
-        function startDragging() {
-            if (isDragging)
-                return;
-            accordionBox = lib_1.Utils.findHost(toggleBlock, accordionConstructor);
-            if (!accordionBox)
-                return;
-            accordionBoxRect = accordionBox.element.getBoundingClientRect();
-            startIndex = changeIndex = previousIndex = toggleBlock.$index;
-            toggleBlockRect = toggleBlock.getBoundingClientRect();
-            toggleBlockDragging = toggleBlock.cloneNode(true);
-            toggleBlockDragging.$hostAccordionBox = accordionBox;
-            toggleBlockDragging.$hostIndex = startIndex;
-            toggleBlockDragging.classList.add("toggleBlockDragging");
-            lib_1.Utils.setBox(toggleBlockDragging, toggleBlockRect.left, toggleBlockRect.top, toggleBlockRect.width, toggleBlockRect.height);
-            posX = startX - toggleBlockRect.left;
-            posY = startY - toggleBlockRect.top;
-            document.body.appendChild(toggleBlockDragging);
-            toggleBlock.style.opacity = 0;
-            calculateNearbyBlocksData();
-            isDragging = true;
-        }
-        function recalculateIndexes(arr) {
-            for (var i = 0; i < arr.length; i++) {
-                arr[i].$index = i;
-            }
-        }
-        function accordionDataChanged() {
-            if (!accordionBox)
-                return;
-            recalculateIndexes(accordionBox.sections);
-            recalculateIndexes(accordionBox.toggleBarList);
-            recalculateIndexes(accordionBox.toggleBlockList);
-            recalculateIndexes(accordionBox.splitterList);
-            accordionBox.resize();
-        }
-        function addToAccordionBox(index) {
-            if (!accordionBox)
-                return;
-            accordionBox.sections.splice(index, 0, section);
-            accordionBox.toggleBarList.splice(index, 0, toggleBar);
-            accordionBox.toggleBlockList.splice(index, 0, toggleBlock);
-            calculateNearbyBlocksData();
-            if (nextBlock) {
-                accordionBox.element.insertBefore(splitter, nextBlock);
-                accordionBox.element.insertBefore(toggleBlock, splitter);
-                accordionBox.splitterList.splice(index - 1, 0, splitter);
-            }
-            else {
-                accordionBox.element.appendChild(splitter);
-                accordionBox.element.appendChild(toggleBlock);
-                accordionBox.splitterList.push(splitter);
-            }
-            toggleBlock.$parent = accordionBox;
-            splitter.$parent = accordionBox;
-            accordionBox.calculateSectionsSizesPercents();
-            accordionBox.recalculateChildrenSizes();
-            accordionDataChanged();
-        }
-        function removeFromAccordionBox() {
-            if (!accordionBox)
-                return;
-            section = accordionBox.sections.splice(previousIndex, 1)[0];
-            toggleBar = accordionBox.toggleBarList.splice(previousIndex, 1)[0];
-            toggleBlock = accordionBox.toggleBlockList.splice(previousIndex, 1)[0];
-            var splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex - 1;
-            splitter = accordionBox.splitterList.splice(splitterIndex, 1)[0];
-            toggleBlockDragging.style.height = accordionBox.toggleBarHeight + "px";
-            toggleBlock.remove();
-            splitter.remove();
-            accordionBox.calculateSectionsSizesPercents();
-            accordionBox.recalculateChildrenSizes();
-            accordionDataChanged();
-            accordionBox = undefined;
-            toggleBlock.$parent = null;
-            splitter.$parent = null;
-        }
-        function finishDragging() {
-            if (!accordionBox) {
-                accordionBox = toggleBlockDragging.$hostAccordionBox;
-                addToAccordionBox(toggleBlockDragging.$hostIndex);
-            }
-            toggleBlockDragging.remove();
-            toggleBlock.style.opacity = 1;
-            isDragging = false;
-        }
-        var onMouseMove = function (e) {
-            if (e.type !== "mousemove")
-                return;
-            if (!isDragging) {
-                if (distance(e.clientX - startX, e.clientY - startY) < 25)
-                    return;
-                startDragging();
-            }
-            var left = e.clientX - posX;
-            var top = e.clientY - posY;
-            if (accordionBox) {
-                if (left < accordionBoxRect.left - accordionBoxRect.width || left > accordionBoxRect.left + accordionBoxRect.width) {
-                    removeFromAccordionBox();
-                }
-            }
-            if (!accordionBox) {
-                accordionBox = lib_1.Utils.findHost(e.target, accordionConstructor);
-                if (accordionBox) {
-                    accordionBoxRect = accordionBox.element.getBoundingClientRect();
-                    nextBlock = lib_1.Utils.findNode(e.target, "toggle-block");
-                    if (nextBlock) {
-                        startIndex = nextBlock.$index;
-                    }
-                    else {
-                        startIndex = accordionBox.toggleBlockList.length;
-                    }
-                    previousIndex = changeIndex = startIndex;
-                    addToAccordionBox(previousIndex);
-                    toggleBlockDragging.style.height = toggleBlock.style.height;
-                }
-            }
-            if (accordionBox) {
-                left = accordionBoxRect.left;
-                if (e.clientY < prevY && topMaxY && top < topMaxY) {
-                    changeIndex--;
-                }
-                else if (e.clientY > prevY && bottomMaxY && top + toggleBlockRect.height > bottomMaxY) {
-                    changeIndex++;
-                }
-                if (changeIndex !== previousIndex) {
-                    accordionBox.element.insertBefore(toggleBlock, accordionBox.toggleBlockList[changeIndex]);
-                    var splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex + 1;
-                    accordionBox.element.insertBefore(accordionBox.toggleBlockList[changeIndex], accordionBox.splitterList[splitterIndex]);
-                    accordionBox.sections.splice(changeIndex, 0, accordionBox.sections.splice(previousIndex, 1)[0]);
-                    accordionBox.toggleBarList.splice(changeIndex, 0, accordionBox.toggleBarList.splice(previousIndex, 1)[0]);
-                    accordionBox.toggleBlockList.splice(changeIndex, 0, accordionBox.toggleBlockList.splice(previousIndex, 1)[0]);
-                    calculateNearbyBlocksData();
-                    accordionDataChanged();
-                    previousIndex = changeIndex;
-                }
-            }
-            toggleBlockDragging.style.left = left + "px";
-            toggleBlockDragging.style.top = top + "px";
-            prevX = e.clientX;
-            prevY = e.clientY;
-        };
-        var onMouseUp = function (e) {
-            if (!isDragging)
-                return;
-            finishDragging();
-        };
-        event.capture(window, onMouseMove, onMouseUp);
-        return e.preventDefault();
-    };
-    AccordionHandler.toggleBarOnClick = function (e) {
-        var toggleBlock = lib_1.Utils.findNode(e.target, "toggle-block");
-        if (!toggleBlock)
-            return;
-        var accordionBox = toggleBlock.$parent;
-        var index = toggleBlock.$index;
-        var isOpened = accordionBox.isOpenedBlock(toggleBlock);
-        if (!isOpened) {
-            toggleBlock.classList.add("toggle-opened");
-            index = undefined;
-        }
-        else {
-            toggleBlock.classList.remove("toggle-opened");
-        }
-        accordionBox.recalculateChildrenSizes(index);
-        box_1.Box.enableAnimation();
-        var node = accordionBox.element;
-        node.addEventListener('transitionend', function handler() {
-            node.removeEventListener('transitionend', handler);
-            box_1.Box.disableAnimation();
-        });
-        accordionBox.resize();
-    };
-    AccordionHandler.splitterMouseDown = function (e) {
-        var button = e.button;
-        if (button !== 0)
-            return;
-        var splitter = lib_1.Utils.findNode(e.target, "splitter");
-        if (!splitter)
-            return;
-        var accordionBox = splitter.$parent;
-        var x = e.clientX;
-        var y = e.clientY;
-        var splitterIndex = splitter.$index + 1;
-        var prevX = x;
-        var prevY = y;
-        if (!accordionBox.hasNextOpenedBlocks(splitterIndex) || !accordionBox.hasPrevOpenedBlocks(splitterIndex))
-            return;
-        accordionBox.keepState();
-        var onMouseMove = function (e) {
-            x = e.clientX;
-            y = e.clientY;
-            var changedSize = 0;
-            if (prevY > y) {
-                changedSize = accordionBox.recalculatePreviousSectionsSize(splitterIndex, y);
-                if (changedSize === 0)
-                    return;
-                accordionBox.expandNextSections(splitterIndex, changedSize);
-            }
-            else if (prevY < y) {
-                changedSize = accordionBox.recalculateNextSectionsSize(splitterIndex, y);
-                if (changedSize === 0)
-                    return;
-                accordionBox.expandPreviousSections(splitterIndex, changedSize);
-            }
-            else {
-                return;
-            }
-            prevY = y;
-            accordionBox.resize();
-        };
-        var onResizeEnd = function (e) {
-            accordionBox.dischargeState();
-            box_1.Box.setGlobalCursor("");
-            accordionBox.calculateSectionsSizesPercents();
-        };
-        box_1.Box.setGlobalCursor("".concat(accordionBox.vertical ? "ns" : "ew", "-resize"));
-        event.capture(window, onMouseMove, onResizeEnd);
-        return e.preventDefault();
-    };
-})(AccordionHandler = exports.AccordionHandler || (exports.AccordionHandler = {}));
-
-
-/***/ }),
-
-/***/ 21649:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabbarHandler = void 0;
-var lib_1 = __webpack_require__(80930);
-var dom_1 = __webpack_require__(91444);
-var event = __webpack_require__(17989);
-var TabbarHandler;
-(function (TabbarHandler) {
-    TabbarHandler.tabbarMouseDown = function (e, tabConstructor, tabBarConstructor, showSplit) {
-        if (showSplit === void 0) { showSplit = false; }
-        var divSplit, splitPosition, pane;
-        function hideSplitPosition() {
-            if (!divSplit)
-                return;
-            divSplit.remove();
-            divSplit = splitPosition = pane = null;
-        }
-        function showSplitPosition(e) {
-            var el = e.target;
-            if (tabBar) {
-                hideSplitPosition();
-                return;
-            }
-            pane = lib_1.Utils.findHost(el);
-            // If aml is not the pane we seek, lets abort
-            if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
-                hideSplitPosition();
-                return;
-            }
-            // Cannot split pane that would be removed later
-            if (pane.tabBar.tabList.length === 0) {
-                hideSplitPosition();
-                return;
-            }
-            var dark = false; // !tab || tab.classList.constains("dark");
-            if (!divSplit) {
-                divSplit = document.createElement("div");
-                document.body.appendChild(divSplit);
-            }
-            divSplit.className = "split-area" + (dark ? " dark" : "");
-            // Find the rotated quarter that we're in
-            var rect = pane.element.getBoundingClientRect();
-            // TODO add getContentRect?
-            // Get buttons height
-            var bHeight = pane.tabBar.element.clientHeight - 1;
-            rect = {
-                left: rect.left,
-                top: rect.top + bHeight,
-                width: rect.width,
-                height: rect.height - bHeight,
-            };
-            var left = (e.clientX - rect.left) / rect.width;
-            var right = 1 - left;
-            var top = (e.clientY - rect.top) / rect.height;
-            var bottom = 1 - top;
-            // Anchor to closes side
-            var min = Math.min(left, top, right, bottom);
-            if (min == left) {
-                splitPosition = [true, false]; // Left
-                lib_1.Utils.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
-            }
-            else if (min == right) {
-                splitPosition = [false, false]; // Right
-                lib_1.Utils.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
-            }
-            else if (min == top) {
-                splitPosition = [true, true]; // Top
-                lib_1.Utils.setBox(divSplit, rect.left, rect.top, rect.width, rect.height / 2);
-            }
-            else if (min == bottom) {
-                splitPosition = [false, true]; // Bottom
-                lib_1.Utils.setBox(divSplit, rect.left, rect.top + rect.height / 2, rect.width, rect.height / 2);
-            }
-        }
-        if (e.target.classList.contains("tabCloseButton")) { //TODO not sure
-            return;
-        }
-        var tab = lib_1.Utils.findHost(e.target, tabConstructor);
-        if (!tab)
-            return;
-        var tabBar = lib_1.Utils.findHost(e.target, tabBarConstructor);
-        if (!tabBar)
-            return;
-        var isVertical = tabBar.isVertical();
-        tabBar.tabMouseDown(tab, e.shiftKey, e.ctrlKey);
-        if (e.shiftKey || e.ctrlKey)
-            return;
-        var isDragging = false;
-        var posX, posY, prevX, prevY;
-        var startX = e.clientX, startY = e.clientY;
-        var parentRect, tabElement, index, selectedTabs, hostTabBar, hostIndex;
-        var prevTab, leftMaxX, topMaxY, nextTab, rightMaxX, bottomMaxY;
-        var tabDragElementSize = 0; //TODO rename these
-        var tabDragElementLeft = 0;
-        var tabDragElementTop = 0;
-        var calculateNearbyTabsData = function () {
-            if (isVertical) {
-                topMaxY = prevTab && (parseInt(prevTab.style.top, 10) + parseInt(prevTab.style.height, 10) / 2 + parentRect.top);
-                bottomMaxY = nextTab && (parseInt(nextTab.style.top, 10) + parseInt(nextTab.style.height, 10) / 2 + parentRect.top);
-            }
-            else {
-                if (prevTab) {
-                    var prevSibling = prevTab.previousSibling;
-                    leftMaxX = prevSibling ? parseInt(prevSibling.style.left, 10) + parseInt(prevSibling.style.width, 10) + parentRect.left : parentRect.left;
-                }
-                rightMaxX = nextTab && (parseInt(nextTab.style.left, 10) + parseInt(nextTab.style.width, 10) / 2 + parentRect.left);
-            }
-        };
-        var startDragging = function () {
-            if (isDragging || !tabBar)
-                return;
-            tabElement = dom_1.dom.buildDom(["div", {
-                    class: "tabDragging"
-                }]);
-            var activeIndex = index = tabBar.tabList.indexOf(tab);
-            tabBar.tabContainer.insertBefore(tabElement, tab.element);
-            tabDragElementLeft = parseInt(tab.element.style.left, 10);
-            tabDragElementTop = parseInt(tab.element.style.top, 10);
-            selectedTabs = [];
-            var selectedTab, selectedTabElement;
-            for (var i = 0; i < tabBar.selectedTabs.length; i++) {
-                selectedTab = tabBar.selectedTabs[i];
-                selectedTab.currentIndex = tabBar.tabList.indexOf(selectedTab);
-                if (selectedTab.currentIndex < activeIndex) {
-                    index--;
-                    if (isVertical) {
-                        tabDragElementTop -= parseInt(selectedTab.element.style.top, 10);
-                    }
-                    else {
-                        tabDragElementLeft -= parseInt(selectedTab.element.style.width, 10);
-                    }
-                }
-                selectedTabs.push(selectedTab);
-            }
-            selectedTabs.sort(function (tab1, tab2) {
-                return tab1.currentIndex - tab2.currentIndex;
-            });
-            for (var i = 0; i < selectedTabs.length; i++) {
-                selectedTab = selectedTabs[i];
-                selectedTabElement = selectedTab.element;
-                tabElement.appendChild(selectedTabElement);
-                selectedTabElement.style.pointerEvents = "none";
-                if (isVertical) {
-                    selectedTabElement.style.top = tabDragElementSize + "px";
-                    tabDragElementSize += parseInt(selectedTabElement.style.height, 10);
-                }
-                else {
-                    selectedTabElement.style.left = tabDragElementSize + "px";
-                    tabDragElementSize += parseInt(selectedTabElement.style.width, 10);
-                }
-                tabBar.removeTab(selectedTab);
-            }
-            prevTab = tabElement.previousSibling;
-            nextTab = tabElement.nextSibling;
-            parentRect = tabBar.element.getBoundingClientRect();
-            if (isVertical) {
-                tabDragElementTop += parentRect.top;
-                posY = startY - tabDragElementTop;
-                posX = startX - parentRect.left;
-            }
-            else {
-                tabDragElementLeft += parentRect.left;
-                posX = startX - tabDragElementLeft;
-                posY = startY - parentRect.top;
-            }
-            prevX = e.clientX;
-            prevY = e.clientY;
-            hostTabBar = tabBar;
-            hostIndex = index;
-            calculateNearbyTabsData();
-            isDragging = true;
-            document.body.appendChild(tabElement);
-            if (isVertical) {
-                lib_1.Utils.setBox(tabElement, tabDragElementTop, parentRect.left, parentRect.width, tabDragElementSize);
-            }
-            else {
-                lib_1.Utils.setBox(tabElement, tabDragElementLeft, parentRect.top, tabDragElementSize, parentRect.height);
-            }
-            tabBar.startTabDragging(tabElement, index);
-        };
-        var finishDragging = function () {
-            if (pane && pane.split && splitPosition) {
-                var newPane = pane.split.apply(pane, splitPosition);
-                tabBar = newPane.tabBar;
-            }
-            else if (!tabBar) {
-                tabBar = hostTabBar;
-            }
-            tabBar.removeSelections();
-            tabElement.remove();
-            var selectedTab;
-            for (var i = 0; i < selectedTabs.length; i++) {
-                selectedTab = selectedTabs[i];
-                selectedTab.element.style.pointerEvents = "";
-                if (selectedTab === tab) {
-                    selectedTab.active = true;
-                }
-                tabBar.addTab(selectedTab, index++);
-                tabBar.addSelection(selectedTab);
-            }
-            if (tabBar !== hostTabBar) {
-                hostTabBar.removeSelections();
-                hostTabBar.activatePrevious(hostIndex);
-            }
-            tabBar.finishTabDragging();
-            isDragging = false;
-            hideSplitPosition();
-        };
-        function distance(dx, dy) {
-            return dx * dx + dy * dy;
-        }
-        var onMouseMove = function (e) {
-            var _a, _b;
-            if (e.type !== "mousemove")
-                return;
-            if (!isDragging) {
-                if (distance(e.clientX - startX, e.clientY - startY) < 25)
-                    return;
-                startDragging();
-            }
-            function removeTabFromBar() {
-                tabBar.finishTabDragging();
-                tabBar = undefined;
-            }
-            if (tabBar) {
-                tabBar.startTabDragging(tabElement, index);
-                if ((!isVertical && (e.clientX < parentRect.left || e.clientX > parentRect.left + parentRect.width))
-                    || (isVertical && (e.clientY < parentRect.top || e.clientY > parentRect.top + parentRect.height))) {
-                    removeTabFromBar();
-                }
-            }
-            else {
-                tabBar = lib_1.Utils.findHost(e.target, tabBarConstructor);
-                if (tabBar) {
-                    isVertical = tabBar.isVertical();
-                    var nextTabHost = lib_1.Utils.findHost(e.target, tabConstructor);
-                    if (nextTabHost) {
-                        index = tabBar.tabList.indexOf(nextTabHost);
-                        nextTab = nextTabHost.element;
-                        prevTab = nextTab.previousSibling;
-                    }
-                    else {
-                        index = tabBar.tabList.length;
-                        nextTab = null;
-                        prevTab = tabBar.tabContainer.childNodes[index - 1];
-                    }
-                    tabBar.startTabDragging(tabElement, index);
-                    parentRect = tabBar.element.getBoundingClientRect();
-                    calculateNearbyTabsData();
-                }
-            }
-            if (showSplit)
-                showSplitPosition(e);
-            var left = e.clientX - posX;
-            var top = e.clientY - posY;
-            var x = left;
-            var y = top;
-            if (tabBar) {
-                if ((isVertical && (x < parentRect.left - parentRect.width || x > parentRect.left + parentRect.width)) ||
-                    (!isVertical && (y < parentRect.top - parentRect.height || y > parentRect.top + parentRect.height))) {
-                    removeTabFromBar();
-                }
-                else {
-                    if (isVertical) {
-                        x = parentRect.left;
-                    }
-                    else {
-                        y = parentRect.top;
-                    }
-                    if ((isVertical && e.clientY < prevY && topMaxY && top < topMaxY) ||
-                        (!isVertical && e.clientX < prevX && leftMaxX && left < leftMaxX)) {
-                        if (isVertical) {
-                            prevTab.style.top = (parseInt(prevTab.style.top, 10) + tabDragElementSize) + "px";
-                        }
-                        else {
-                            prevTab.style.left = (parseInt(prevTab.style.left, 10) + tabDragElementSize) + "px";
-                        }
-                        index--;
-                        _a = [prevTab.previousSibling, prevTab], prevTab = _a[0], nextTab = _a[1];
-                        calculateNearbyTabsData();
-                    }
-                    else if ((isVertical && e.clientY > prevY && bottomMaxY && top + tabDragElementSize > bottomMaxY) ||
-                        (!isVertical && e.clientX > prevX && rightMaxX && left + tabDragElementSize > rightMaxX)) {
-                        if (isVertical) {
-                            nextTab.style.top = (parseInt(nextTab.style.top, 10) - tabDragElementSize) + "px";
-                        }
-                        else {
-                            nextTab.style.left = (parseInt(nextTab.style.left, 10) - tabDragElementSize) + "px";
-                        }
-                        index++;
-                        _b = [nextTab, nextTab.nextSibling], prevTab = _b[0], nextTab = _b[1];
-                        calculateNearbyTabsData();
-                    }
-                }
-            }
-            prevX = e.clientX;
-            prevY = e.clientY;
-            tabElement.style.left = x + "px";
-            tabElement.style.top = y + "px";
-        };
-        var onMouseUp = function (e) {
-            if (!isDragging) {
-                if (tabBar.selectedTabs.length > 1) {
-                    tabBar.removeSelections();
-                    tabBar.addSelection(tab);
-                }
-            }
-            else {
-                finishDragging();
-            }
-        };
-        event.capture(window, onMouseMove, onMouseUp);
-        return e.preventDefault();
-    };
-})(TabbarHandler = exports.TabbarHandler || (exports.TabbarHandler = {}));
-window.addEventListener("mousedown", function () {
-    document.body.classList.add("disableIframe");
-}, true);
-window.addEventListener("mouseup", function () {
-    document.body.classList.remove("disableIframe");
-}, true);
-
-
-/***/ }),
-
-/***/ 91444:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.dom = void 0;
-//Picked from ace-code 1.10
-var useragent = __webpack_require__(50618);
-var XHTML_NS = "http://www.w3.org/1999/xhtml";
-var dom;
-(function (dom) {
-    dom.buildDom = function (arr, parent, refs) {
-        if (typeof arr == "string" && arr) {
-            var txt = document.createTextNode(arr);
-            if (parent)
-                parent.appendChild(txt);
-            return txt;
-        }
-        if (!Array.isArray(arr)) {
-            if (arr && arr.appendChild && parent)
-                parent.appendChild(arr);
-            return arr;
-        }
-        if (typeof arr[0] != "string" || !arr[0]) {
-            var els = [];
-            for (var i = 0; i < arr.length; i++) {
-                var ch = dom.buildDom(arr[i], parent, refs);
-                ch && els.push(ch);
-            }
-            return els;
-        }
-        var el = document.createElement(arr[0]);
-        var options = arr[1];
-        var childIndex = 1;
-        if (options && typeof options == "object" && !Array.isArray(options))
-            childIndex = 2;
-        for (var i = childIndex; i < arr.length; i++)
-            dom.buildDom(arr[i], el, refs);
-        if (childIndex == 2) {
-            Object.keys(options).forEach(function (n) {
-                var val = options[n];
-                if (n === "class") {
-                    el.className = Array.isArray(val) ? val.join(" ") : val;
-                }
-                else if (typeof val == "function" || n == "value" || n[0] == "$") {
-                    el[n] = val;
-                }
-                else if (n === "ref") {
-                    if (refs)
-                        refs[val] = el;
-                }
-                else if (n === "style") {
-                    if (typeof val == "string")
-                        el.style.cssText = val;
-                }
-                else if (val != null) {
-                    el.setAttribute(n, val);
-                }
-            });
-        }
-        if (parent)
-            parent.appendChild(el);
-        return el;
-    };
-    dom.getDocumentHead = function (doc) {
-        if (!doc)
-            doc = document;
-        return doc.head || doc.getElementsByTagName("head")[0] || doc.documentElement;
-    };
-    dom.createElement = function (tag, ns) {
-        return document.createElementNS ?
-            document.createElementNS(ns || XHTML_NS, tag) :
-            document.createElement(tag);
-    };
-    dom.removeChildren = function (element) {
-        element.innerHTML = "";
-    };
-    dom.createTextNode = function (textContent, element) {
-        var doc = element ? element.ownerDocument : document;
-        return doc.createTextNode(textContent);
-    };
-    dom.createFragment = function (element) {
-        var doc = element ? element.ownerDocument : document;
-        return doc.createDocumentFragment();
-    };
-    dom.hasCssClass = function (el, name) {
-        var classes = (el.className + "").split(/\s+/g);
-        return classes.indexOf(name) !== -1;
-    };
-    /*
-    * Add a CSS class to the list of classes on the given node
-    */
-    dom.addCssClass = function (el, name) {
-        if (!dom.hasCssClass(el, name)) {
-            el.className += " " + name;
-        }
-    };
-    /*
-    * Remove a CSS class from the list of classes on the given node
-    */
-    dom.removeCssClass = function (el, name) {
-        var classes = el.className.split(/\s+/g);
-        while (true) {
-            var index = classes.indexOf(name);
-            if (index == -1) {
-                break;
-            }
-            classes.splice(index, 1);
-        }
-        el.className = classes.join(" ");
-    };
-    dom.toggleCssClass = function (el, name) {
-        var classes = el.className.split(/\s+/g), add = true;
-        while (true) {
-            var index = classes.indexOf(name);
-            if (index == -1) {
-                break;
-            }
-            add = false;
-            classes.splice(index, 1);
-        }
-        if (add)
-            classes.push(name);
-        el.className = classes.join(" ");
-        return add;
-    };
-    /*
-        * Add or remove a CSS class from the list of classes on the given node
-        * depending on the value of <tt>include</tt>
-        */
-    dom.setCssClass = function (node, className, include) {
-        if (include) {
-            dom.addCssClass(node, className);
-        }
-        else {
-            dom.removeCssClass(node, className);
-        }
-    };
-    dom.hasCssString = function (id, doc) {
-        var index = 0, sheets;
-        doc = doc || document;
-        if ((sheets = doc.querySelectorAll("style"))) {
-            while (index < sheets.length) {
-                if (sheets[index++].id === id) {
-                    return true;
-                }
-            }
-        }
-    };
-    dom.removeElementById = function (id, doc) {
-        doc = doc || document;
-        if (doc.getElementById(id)) {
-            doc.getElementById(id).remove();
-        }
-    };
-    var strictCSP;
-    var cssCache = [];
-    dom.useStrictCSP = function (value) {
-        strictCSP = value;
-        if (value == false)
-            insertPendingStyles();
-        else if (!cssCache)
-            cssCache = [];
-    };
-    function insertPendingStyles() {
-        var cache = cssCache;
-        cssCache = null;
-        cache && cache.forEach(function (item) {
-            importCssString(item[0], item[1]);
-        });
-    }
-    function importCssString(cssText, id, target) {
-        if (typeof document == "undefined")
-            return;
-        if (cssCache) {
-            if (target) {
-                insertPendingStyles();
-            }
-            else if (target === false) {
-                return cssCache.push([cssText, id]);
-            }
-        }
-        if (strictCSP)
-            return;
-        var container = target;
-        if (!target || !target.getRootNode) {
-            container = document;
-        }
-        else {
-            container = target.getRootNode();
-            if (!container || container == target)
-                container = document;
-        }
-        var doc = container.ownerDocument || container;
-        // If style is already imported return immediately.
-        if (id && dom.hasCssString(id, container))
-            return null;
-        if (id)
-            cssText += "\n/*# sourceURL=ace/css/" + id + " */";
-        var style = dom.createElement("style");
-        style.appendChild(doc.createTextNode(cssText));
-        if (id)
-            style.id = id;
-        if (container == doc)
-            container = dom.getDocumentHead(doc);
-        container.insertBefore(style, container.firstChild);
-    }
-    dom.importCssString = importCssString;
-    dom.importCssStylsheet = function (uri, doc) {
-        dom.buildDom(["link", { rel: "stylesheet", href: uri }], dom.getDocumentHead(doc));
-    };
-    dom.scrollbarWidth = function (document) {
-        var inner = dom.createElement("ace_inner");
-        inner.style.width = "100%";
-        inner.style.minWidth = "0px";
-        inner.style.height = "200px";
-        inner.style.display = "block";
-        var outer = dom.createElement("ace_outer");
-        var style = outer.style;
-        style.position = "absolute";
-        style.left = "-10000px";
-        style.overflow = "hidden";
-        style.width = "200px";
-        style.minWidth = "0px";
-        style.height = "150px";
-        style.display = "block";
-        outer.appendChild(inner);
-        var body = document.documentElement;
-        body.appendChild(outer);
-        var noScrollbar = inner.offsetWidth;
-        style.overflow = "scroll";
-        var withScrollbar = inner.offsetWidth;
-        if (noScrollbar == withScrollbar) {
-            withScrollbar = outer.clientWidth;
-        }
-        body.removeChild(outer);
-        return noScrollbar - withScrollbar;
-    };
-    dom.computedStyle = function (element, style) {
-        return window.getComputedStyle(element, "") || {};
-    };
-    dom.setStyle = function (styles, property, value) {
-        if (styles[property] !== value) {
-            //console.log("set style", property, styles[property], value);
-            styles[property] = value;
-        }
-    };
-    dom.HAS_CSS_ANIMATION = false;
-    dom.HAS_CSS_TRANSFORMS = false;
-    dom.HI_DPI = useragent.isWin
-        ? typeof window !== "undefined" && window.devicePixelRatio >= 1.5
-        : true;
-    if (useragent.isChromeOS)
-        dom.HI_DPI = false;
-    if (typeof document !== "undefined") {
-        // detect CSS transformation support
-        var div = document.createElement("div");
-        if (dom.HI_DPI && div.style.transform !== undefined)
-            dom.HAS_CSS_TRANSFORMS = true;
-        if (!useragent.isEdge && typeof div.style.animationName !== "undefined")
-            dom.HAS_CSS_ANIMATION = true;
-        div = null;
-    }
-    if (dom.HAS_CSS_TRANSFORMS) {
-        dom.translate = function (element, tx, ty) {
-            element.style.transform = "translate(" + Math.round(tx) + "px, " + Math.round(ty) + "px)";
-        };
-    }
-    else {
-        dom.translate = function (element, tx, ty) {
-            element.style.top = Math.round(ty) + "px";
-            element.style.left = Math.round(tx) + "px";
-        };
-    }
-})(dom = exports.dom || (exports.dom = {}));
-
-
-/***/ }),
-
-/***/ 80930:
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Utils = void 0;
-var Utils;
-(function (Utils) {
-    Utils.findHost = function (el, constructor) {
-        while (el) {
-            if (el.$host && (!constructor || el.$host.constructor === constructor))
-                return el.$host;
-            el = el.parentElement;
-        }
-    };
-    Utils.findNode = function (node, className) {
-        while (node && node.classList) {
-            if (node.classList.contains(className))
-                return node;
-            node = node.parentNode;
-        }
-        return null;
-    };
-    Utils.findHostTarget = function (target) {
-        while (target) {
-            if (target.$host)
-                return target;
-            target = target.parentElement;
-        }
-        return null;
-    };
-    Utils.setBox = function (el, x, y, w, h) {
-        if (w) {
-            w = Math.max(w, 0);
-        }
-        if (h) {
-            h = Math.max(h, 0);
-        }
-        var s = el.style;
-        s.left = x + "px";
-        s.top = y + "px";
-        s.width = w + "px";
-        s.height = h + "px";
-    };
-    function getEdge(style, dir) {
-        return parseInt(style["padding" + dir], 10) +
-            parseInt(style["margin" + dir], 10) +
-            parseInt(style["border" + dir], 10);
-    }
-    Utils.getEdge = getEdge;
-    function getElementEdges(element) {
-        var style = getComputedStyle(element);
-        return {
-            "top": getEdge(style, "Top"),
-            "bottom": getEdge(style, "Bottom"),
-            "left": getEdge(style, "Left"),
-            "right": getEdge(style, "Right")
-        };
-    }
-    Utils.getElementEdges = getElementEdges;
-})(Utils = exports.Utils || (exports.Utils = {}));
-
-
-/***/ }),
-
-/***/ 60524:
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.EditorType = exports.SizeUnit = void 0;
-var SizeUnit;
-(function (SizeUnit) {
-    SizeUnit[SizeUnit["px"] = 0] = "px";
-    SizeUnit[SizeUnit["percent"] = 1] = "percent";
-})(SizeUnit = exports.SizeUnit || (exports.SizeUnit = {}));
-var EditorType;
-(function (EditorType) {
-    EditorType["ace"] = "ace";
-    EditorType["preview"] = "preview";
-})(EditorType = exports.EditorType || (exports.EditorType = {}));
-
-
-/***/ }),
-
-/***/ 29930:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Accordion = void 0;
-var accordion_handler_1 = __webpack_require__(18108);
-var box_1 = __webpack_require__(95561);
-var lib_1 = __webpack_require__(80930);
-var dom_1 = __webpack_require__(91444);
-var accordionCSS = __webpack_require__(9734);
-dom_1.dom.importCssString(accordionCSS, "accordion.css");
-var BOX_MIN_SIZE = 80;
-var Accordion = /** @class */ (function (_super) {
-    __extends(Accordion, _super);
-    function Accordion(options) {
-        var _this = this;
-        var _a;
-        _this = _super.call(this, options) || this;
-        _this.toggleBarList = [];
-        _this.splitterList = [];
-        _this.toggleBlockList = [];
-        _this.boxMinSize = 30;
-        _this.toggleBarHeight = 20;
-        _this.splitterSize = 1;
-        _this.vertical = options.vertical || false;
-        _this.color = (_a = options.color) !== null && _a !== void 0 ? _a : "";
-        _this.sections = options.sections;
-        _this.minSize = options.minSize || BOX_MIN_SIZE;
-        _this.minVerticalSize = options.minVerticalSize || _this.minSize;
-        _this.minHorizontalSize = options.minHorizontalSize || _this.minSize;
-        _this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
-        _this.size = options.size;
-        return _this;
-    }
-    Accordion.prototype.hasNextOpenedBlocks = function (index) {
-        for (var i = index; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i))
-                return true;
-        }
-        return false;
-    };
-    Accordion.prototype.hasPrevOpenedBlocks = function (index) {
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i))
-                return true;
-        }
-        return false;
-    };
-    Accordion.prototype.isOpenedByIndex = function (index) {
-        return this.isOpenedBlock(this.toggleBlockList[index]);
-    };
-    Accordion.prototype.isOpenedBlock = function (toggleBlock) {
-        return toggleBlock.classList.contains("toggle-opened");
-    };
-    Accordion.prototype.keepState = function () {
-        this.nextChangedIndexes = [];
-        this.prevChangedIndexes = [];
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
-                var section = this.sections[i];
-                section.previousSize = section.currentSize;
-            }
-        }
-    };
-    Accordion.prototype.dischargeState = function () {
-        this.nextChangedIndexes = undefined;
-        this.prevChangedIndexes = undefined;
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i))
-                this.sections[i].previousSize = undefined;
-        }
-    };
-    Accordion.prototype.recalculatePreviousSectionsSize = function (index, top, maxChangeSize) {
-        var changedSize = 0;
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i)) {
-                var section = this.sections[i];
-                var rect = section.box.element.getBoundingClientRect();
-                var done = false;
-                var prevSize = rect.height;
-                var currentSize = Math.max(top - rect.top, this.boxMinSize);
-                top -= rect.height;
-                if (currentSize < prevSize) {
-                    if (currentSize > this.boxMinSize)
-                        done = true;
-                    if (!this.prevChangedIndexes.includes(i))
-                        this.prevChangedIndexes.unshift(i);
-                    section.currentSize = currentSize;
-                    changedSize += (prevSize - currentSize);
-                    if (done || (maxChangeSize != undefined && changedSize >= maxChangeSize))
-                        break;
-                }
-            }
-            top -= this.toggleBarHeight;
-        }
-        return changedSize;
-    };
-    Accordion.prototype.recalculateNextSectionsSize = function (index, top, maxChangeSize) {
-        var changedSize = 0;
-        for (var i = index; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
-                var section = this.sections[i];
-                var rect = section.box.element.getBoundingClientRect();
-                var done = false;
-                var prevSize = rect.height;
-                var currentSize = Math.max(rect.bottom - top - this.toggleBarHeight, this.boxMinSize);
-                top += rect.height;
-                if (currentSize < prevSize) {
-                    if (currentSize > this.boxMinSize)
-                        done = true;
-                    if (!this.nextChangedIndexes.includes(i))
-                        this.nextChangedIndexes.unshift(i);
-                    section.currentSize = currentSize;
-                    changedSize += (prevSize - currentSize);
-                    if (done || (maxChangeSize != undefined && changedSize >= maxChangeSize))
-                        break;
-                }
-            }
-            top += this.toggleBarHeight;
-            top += this.splitterSize;
-        }
-        return changedSize;
-    };
-    Accordion.prototype.restoreChangedSizes = function (size, changedIndexes) {
-        if (!changedIndexes)
-            return size;
-        while (changedIndexes.length && size > 0) {
-            var index = changedIndexes[0];
-            var section = this.sections[index];
-            var currSize = section.currentSize;
-            section.currentSize = Math.min(section.previousSize, currSize + size);
-            size -= (section.currentSize - currSize);
-            if (section.currentSize >= section.previousSize)
-                changedIndexes.shift();
-        }
-        return size;
-    };
-    Accordion.prototype.expandPreviousSections = function (index, size) {
-        size = this.restoreChangedSizes(size, this.prevChangedIndexes);
-        if (size <= 0)
-            return;
-        var openedSectionsList = [];
-        for (var i = index - 1; i >= 0; i--) {
-            if (this.isOpenedByIndex(i))
-                openedSectionsList.push(this.sections[i]);
-        }
-        this.applySizeToOpenedSections(size, openedSectionsList);
-    };
-    Accordion.prototype.expandNextSections = function (index, size) {
-        size = this.restoreChangedSizes(size, this.nextChangedIndexes);
-        if (size <= 0)
-            return;
-        var openedSectionsList = [];
-        for (var i = index; i < this.toggleBlockList.length; i++) {
-            if (this.isOpenedByIndex(i)) {
-                openedSectionsList.push(this.sections[i]);
-            }
-        }
-        this.applySizeToOpenedSections(size, openedSectionsList);
-    };
-    Accordion.prototype.applySizeToOpenedSections = function (size, openedSections) {
-        var count = openedSections.length;
-        if (!count)
-            return;
-        var remainder = size % count;
-        var addSize = (size - remainder) / count;
-        for (var i = 0; i < count; i++) {
-            openedSections[i].currentSize += addSize;
-        }
-        openedSections[0].currentSize += remainder;
-    };
-    Accordion.prototype.resize = function () {
-        this.$updateChildSize.apply(this, this.rect);
-    };
-    Accordion.prototype.render = function () {
-        var _a, _b;
-        if (this.element)
-            return this.element;
-        this.element = dom_1.dom.buildDom(["div", {
-                class: "box accordion",
-                $host: this,
-            }]);
-        var section;
-        var splitter;
-        var toggleBlock;
-        var toggleBar;
-        for (var i = 0; i < this.sections.length; i++) {
-            section = this.sections[i];
-            if (i > 0) {
-                splitter = dom_1.dom.buildDom(["div", {
-                        class: "splitter accordion-splitter splitter".concat(this.vertical ? "-v" : "-h"),
-                        $index: i - 1,
-                        $parent: this,
-                        onmousedown: function (e) {
-                            accordion_handler_1.AccordionHandler.splitterMouseDown(e);
-                        }
-                    }, ["div"]]);
-                this.element.appendChild(splitter);
-                this.splitterList.push(splitter);
-            }
-            toggleBlock = dom_1.dom.buildDom(["div", {
-                    class: "toggle-block",
-                    $index: i,
-                    $parent: this
-                }]);
-            toggleBar = dom_1.dom.buildDom(["div", {
-                    class: "toggle-bar toggle-bar".concat(this.vertical ? "-v" : "-h"),
-                    onmousedown: function (e) {
-                        accordion_handler_1.AccordionHandler.toggleBarMouseDown(e, Accordion);
-                    },
-                    onclick: function (e) {
-                        accordion_handler_1.AccordionHandler.toggleBarOnClick(e);
-                    }
-                }, ["div", { class: "title" }, section.title]]);
-            section.currentSize = section.savedSize = parseInt((_b = (_a = section.box.size) === null || _a === void 0 ? void 0 : _a.toString()) !== null && _b !== void 0 ? _b : "", 10);
-            toggleBlock.appendChild(toggleBar);
-            this.toggleBarList.push(toggleBar);
-            toggleBlock.appendChild(section.box.render());
-            this.element.appendChild(toggleBlock);
-            this.toggleBlockList.push(toggleBlock);
-        }
-        this.element.style.backgroundColor = this.color;
-        this.element.style.position = "absolute";
-        this.calculateSectionsSizesPercents();
-        return this.element;
-    };
-    Accordion.prototype.calculateSectionsSizesPercents = function () {
-        var totalSize = 0;
-        var actualSizes = [];
-        for (var i = 0; i < this.sections.length; i++) {
-            var section = this.sections[i];
-            actualSizes.push(this.isOpenedByIndex(i) ? section.currentSize : section.savedSize);
-            totalSize += actualSizes[i];
-        }
-        var minPercent = Math.floor(this.boxMinSize / totalSize * 100);
-        var maxPercent = 100 - minPercent * (this.sections.length - 1);
-        var totalPercent = 0;
-        for (var i = 0; i < this.sections.length; i++) {
-            var section = this.sections[i];
-            section.sizePercent = Math.floor(actualSizes[i] / totalSize * 100);
-            section.sizePercent = Math.min(Math.max(section.sizePercent, minPercent), maxPercent);
-            totalPercent += section.sizePercent;
-        }
-        if (totalPercent !== 100)
-            this.sections[this.sections.length - 1].sizePercent += (100 - totalPercent);
-    };
-    Accordion.prototype.setBox = function (x, y, w, h) {
-        this.rect = [x, y, w, h];
-        lib_1.Utils.setBox(this.element, x, y, w, h);
-        this.recalculateChildrenSizes();
-        this.$updateChildSize(x, y, w, h);
-    };
-    Accordion.prototype.recalculateChildrenSizes = function (index) {
-        var height = this.rect[3];
-        height -= this.toggleBarHeight * this.toggleBarList.length;
-        height -= this.splitterSize * this.splitterList.length;
-        var totalSize = 0;
-        var openedIndexes = [];
-        for (var i = 0; i < this.sections.length; i++) {
-            var section = this.sections[i];
-            section.currentSize = Math.max(Math.floor((height * section.sizePercent) / 100), this.boxMinSize);
-            if (this.isOpenedByIndex(i)) {
-                totalSize += section.currentSize;
-                openedIndexes.push(i);
-            }
-            else {
-                section.savedSize = section.currentSize;
-                section.currentSize = 0;
-            }
-        }
-        var spareSize = height - totalSize;
-        if (!spareSize)
-            return;
-        if (index !== undefined) {
-            var prevOpenedIndexes = [];
-            while (openedIndexes.length && openedIndexes[0] < index) {
-                prevOpenedIndexes.push(openedIndexes.shift());
-            }
-            if (!openedIndexes.length)
-                openedIndexes = prevOpenedIndexes;
-        }
-        var prevSize, changedSize, openedBoxesCount, remainder, addSize;
-        while (openedIndexes.length && spareSize) {
-            var changedIndexes = [];
-            openedBoxesCount = openedIndexes.length;
-            remainder = spareSize % openedBoxesCount;
-            addSize = (spareSize - remainder) / openedBoxesCount;
-            for (var i = 0; i < openedIndexes.length; i++) {
-                var section = this.sections[openedIndexes[i]];
-                prevSize = section.currentSize;
-                if (openedBoxesCount === 1)
-                    addSize += remainder;
-                section.currentSize += addSize;
-                section.currentSize = Math.max(section.currentSize, this.boxMinSize);
-                changedSize = section.currentSize - prevSize;
-                spareSize -= changedSize;
-                openedBoxesCount--;
-                if (changedSize < 0)
-                    changedIndexes.push(openedIndexes[i]);
-            }
-            openedIndexes = changedIndexes;
-        }
-    };
-    Accordion.prototype.$updateChildSize = function (x, y, w, h) {
-        x = 0;
-        y = 0;
-        for (var i = 0; i < this.toggleBlockList.length; i++) {
-            var toggleBlock = this.toggleBlockList[i];
-            var section = this.sections[i];
-            var boxSize = section.currentSize;
-            h = this.toggleBarHeight + boxSize;
-            lib_1.Utils.setBox(toggleBlock, x, y, w, h);
-            y += this.toggleBarHeight;
-            section.box.setBox(0, this.toggleBarHeight, w, boxSize);
-            y += boxSize;
-            if (this.splitterList[i]) {
-                lib_1.Utils.setBox(this.splitterList[i], x, y, w, this.splitterSize);
-                y += this.splitterSize;
-            }
-        }
-    };
-    Accordion.prototype.remove = function () {
-        if (this.element)
-            this.element.remove();
-        if (this.parent) {
-            if (this.vertical === this.parent.vertical)
-                this.parent.minSize -= this.minSize; //TODO why did we need this?
-            if (this.parent[0] == this)
-                this.parent[0] = undefined;
-            if (this.parent[1] == this)
-                this.parent[1] = undefined;
-        }
-    };
-    Accordion.prototype.toJSON = function () {
-        var sections = [];
-        var section;
-        for (var i = 0; i < this.sections.length; i++) {
-            section = this.sections[i];
-            sections.push({
-                title: section.title,
-                boxData: section.box.toJSON()
-            });
-        }
-        return {
-            type: "accordion",
-            vertical: this.vertical,
-            size: this.size,
-            sections: sections
-        };
-    };
-    return Accordion;
-}(box_1.Box));
-exports.Accordion = Accordion;
-
-
-/***/ }),
-
-/***/ 95561:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Box = void 0;
-var lib_1 = __webpack_require__(80930);
-var params_1 = __webpack_require__(60524);
-var event = __webpack_require__(17989);
-var events = __webpack_require__(17187);
-var dom_1 = __webpack_require__(91444);
-var SPLITTER_SIZE = 1;
-var BOX_MIN_SIZE = 40;
-var Box = /** @class */ (function (_super) {
-    __extends(Box, _super);
-    function Box(options) {
-        var _this = this;
-        var _a, _b, _c, _d;
-        _this = _super.call(this) || this;
-        _this.$editorAdded = function (editor) {
-            _this.emit("editorAdded", editor);
-        };
-        if (options.splitter !== false) {
-        }
-        _this.vertical = options.vertical || false;
-        _this.color = (_a = options.color) !== null && _a !== void 0 ? _a : "";
-        _this.isMain = options.isMain || false;
-        _this[0] = options[0];
-        _this[1] = options[1];
-        if (_this[0])
-            _this[0].parent = _this;
-        if (_this[1])
-            _this[1].parent = _this;
-        _this.ratio = options.ratio;
-        _this.toolBars = options.toolBars || {};
-        _this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
-        _this.size = options.size;
-        _this.sizeUnit = (_b = options.sizeUnit) !== null && _b !== void 0 ? _b : params_1.SizeUnit.px;
-        _this.minSize = options.minSize || BOX_MIN_SIZE;
-        _this.minVerticalSize = options.minVerticalSize || _this.minSize;
-        _this.minHorizontalSize = options.minHorizontalSize || _this.minSize;
-        _this.classNames = (_c = options.classNames) !== null && _c !== void 0 ? _c : "";
-        _this.hidden = (_d = options.hidden) !== null && _d !== void 0 ? _d : false;
-        _this.fixedSize = options.fixedSize;
-        return _this;
-    }
-    Box.enableAnimation = function () {
-        document.documentElement.classList.add("animateBoxes");
-    };
-    Box.disableAnimation = function () {
-        document.documentElement.classList.remove("animateBoxes");
-    };
-    Box.setGlobalCursor = function (value) {
-        if (value)
-            document.documentElement.classList.add("inheritCursor");
-        else
-            document.documentElement.classList.remove("inheritCursor");
-        document.documentElement.style.cursor = value;
-    };
-    Box.prototype.toJSON = function () {
-        return {
-            0: this[0] && this[0].toJSON(),
-            1: this[1] && this[1].toJSON(),
-            ratio: this.ratio,
-            type: this.vertical ? "vbox" : "hbox",
-            fixedSize: this.fixedSize || null,
-            hidden: this.hidden,
-            color: this.color,
-            size: this.size
-        };
-    };
-    Box.prototype.onMouseDown = function (e) {
-        var button = e.button;
-        if (button !== 0)
-            return;
-        var box = this;
-        var rect = this.element.getBoundingClientRect();
-        var x = e.clientX;
-        var y = e.clientY;
-        document.body.classList.add('dragging');
-        var onMouseMove = function (e) {
-            x = e.clientX - rect.left - box.padding.left;
-            y = e.clientY - rect.top - box.padding.top;
-            var height = rect.height - box.padding.top - box.padding.bottom;
-            var width = rect.width - box.padding.left - box.padding.right;
-            if (box.fixedChild) {
-                if (box.vertical) {
-                    box.fixedChild.fixedSize = (box.fixedChild === box[1]) ? height - y : y;
-                }
-                else {
-                    box.fixedChild.fixedSize = (box.fixedChild === box[1]) ? width - x : x;
-                }
-                box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize, box.fixedChild.minSize);
-                box.ratio = undefined;
-            }
-            else {
-                if (box.vertical) {
-                    box.ratio = y / height;
-                }
-                else {
-                    box.ratio = x / width;
-                }
-                box.ratio = Math.max(box.minRatio, Math.min(box.ratio, box.maxRatio));
-            }
-            box.resize();
-        };
-        var onResizeEnd = function (e) {
-            Box.setGlobalCursor("");
-            document.body.classList.remove('dragging');
-        };
-        Box.setGlobalCursor("".concat(box.vertical ? "ns" : "ew", "-resize"));
-        event.capture(window, onMouseMove, onResizeEnd);
-        return e.preventDefault();
-    };
-    Box.prototype.resize = function () {
-        if (!this.box)
-            return;
-        this.setBox.apply(this, this.box);
-    };
-    Box.prototype.calculateMinMaxRatio = function () {
-        if (!this.box || (!this[0] && !this[1]))
-            return;
-        var propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
-        var size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
-        this.minRatio = this[0] ? this[0][propertyName] / size : 0;
-        this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
-    };
-    Box.prototype.render = function () {
-        if (this.element)
-            return this.element;
-        this.element = dom_1.dom.buildDom(["div", {
-                class: "box" + this.classNames,
-                $host: this,
-            }]);
-        this.splitter = dom_1.dom.buildDom(["div", {
-                class: "splitter splitter".concat(this.vertical ? "-v" : "-h")
-            }, ["div"]]);
-        this.splitter.onmousedown = this.onMouseDown.bind(this);
-        this.element.appendChild(this.splitter);
-        this.element.$host = this;
-        this.element.style.backgroundColor = this.color;
-        this.element.style.position = "absolute";
-        this.renderToolBarList();
-        this.renderChildren();
-        if (!this.ratio)
-            this.calculateRatio();
-        return this.element;
-    };
-    Box.prototype.renderToolBarList = function () {
-        for (var position in this.toolBars) {
-            this.addToolBar(position, this.toolBars[position]);
-        }
-    };
-    Box.prototype.addToolBar = function (position, bar) {
-        var _a, _b;
-        if (position == "left" || position == "right")
-            bar.direction = "vertical";
-        (_b = (_a = this.toolBars[position]) === null || _a === void 0 ? void 0 : _a.element) === null || _b === void 0 ? void 0 : _b.remove();
-        bar.position = position;
-        this.padding[position] = bar.size;
-        this.element.appendChild(bar.render());
-        this.toolBars[position] = bar;
-    };
-    Box.prototype.removeToolBar = function (position) {
-        delete this.toolBars[position];
-        this.padding[position] = 0;
-    };
-    Box.prototype.renderChildren = function () {
-        this.renderChild(this[0]);
-        this.renderChild(this[1]);
-        this.calculateMinSize();
-    };
-    Box.prototype.renderChild = function (child) {
-        if (!child)
-            return;
-        child.on("editorAdded", this.$editorAdded);
-        this.element.appendChild(child.render());
-    };
-    Box.prototype.calculateMinSize = function (forceChildrenSize) {
-        var _this = this;
-        if (forceChildrenSize === void 0) { forceChildrenSize = false; }
-        var childrenMinVerticalSize = 0;
-        var childrenMinHorizontalSize = 0;
-        var calculateChildBoxMinSize = function (childBox) {
-            if (_this.vertical) {
-                childrenMinVerticalSize += childBox.minVerticalSize;
-                childrenMinHorizontalSize = Math.max(childBox.minHorizontalSize, childrenMinHorizontalSize);
-            }
-            else {
-                childrenMinVerticalSize = Math.max(childBox.minVerticalSize, childrenMinVerticalSize);
-                childrenMinHorizontalSize += childBox.minHorizontalSize;
-            }
-        };
-        if (this[0])
-            calculateChildBoxMinSize(this[0]);
-        if (this[1])
-            calculateChildBoxMinSize(this[1]);
-        if (forceChildrenSize) {
-            this.minVerticalSize = childrenMinVerticalSize;
-            this.minHorizontalSize = childrenMinHorizontalSize;
-        }
-        else {
-            this.minVerticalSize = Math.max(this.minVerticalSize, childrenMinVerticalSize);
-            this.minHorizontalSize = Math.max(this.minHorizontalSize, childrenMinHorizontalSize);
-        }
-        this.minSize = this.vertical ? this.minVerticalSize : this.minHorizontalSize;
-        this.calculateMinMaxRatio();
-    };
-    Box.prototype.calculateRatio = function () {
-        if (this[0]) {
-            this.calculateChildRatio(this[0]);
-        }
-        if (this.ratio || this.fixedChild) {
-            return;
-        }
-        if (this[1]) {
-            this.calculateChildRatio(this[1]);
-        }
-        if (!this.ratio && !this.fixedChild) {
-            this.ratio = 0.5;
-        }
-    };
-    Box.prototype.calculateChildRatio = function (childBox, isSecond) {
-        if (isSecond === void 0) { isSecond = false; }
-        if (!childBox.size) {
-            return;
-        }
-        var size = childBox.size;
-        switch (this.sizeUnit) {
-            case params_1.SizeUnit.px:
-                childBox.fixedSize = size;
-                this.fixedChild = childBox;
-                break;
-            case params_1.SizeUnit.percent:
-                if (isSecond) {
-                    size = 100 - size;
-                }
-                this.ratio = Math.min(size / 100, 1);
-                break;
-        }
-    };
-    Box.prototype.renderButtons = function (buttonList) {
-        var buttons = buttonList.map(function (button) {
-            return dom_1.dom.buildDom(["div", {
-                    class: "button " + button.class,
-                    title: button.title,
-                    onclick: button.onclick
-                }, button.content]);
-        });
-        this.setButtons(buttons);
-    };
-    /**
-     * Sets buttons of this box top-right tabBar
-     */
-    Box.prototype.setButtons = function (buttons) {
-        if (this.topRightPane)
-            this.topRightPane.removeButtons();
-        this.topRightPane = this.getTopRightPane();
-        if (this.topRightPane)
-            this.topRightPane.setButtons(buttons);
-    };
-    Box.prototype.addButton = function (button) {
-        this.topRightPane = this.getTopRightPane();
-        if (this.topRightPane)
-            this.topRightPane.addButton(button);
-    };
-    /**
-     * Finds the most top-right Pane
-     */
-    Box.prototype.getTopRightPane = function () {
-        var childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
-        if (!childBox)
-            return;
-        return childBox.getTopRightPane();
-    };
-    Box.prototype.setBox = function (x, y, w, h) {
-        this.box = [x, y, w, h];
-        if (this.isMaximized) {
-            x = 0;
-            y = 0;
-            w = window.innerWidth;
-            h = window.innerHeight;
-        }
-        lib_1.Utils.setBox(this.element, x, y, w, h);
-        this.calculateMinMaxRatio();
-        this.$updateChildSize(x, y, w, h);
-    };
-    Box.prototype.$updateChildSize = function (x, y, w, h) {
-        var _a;
-        var splitterSize = SPLITTER_SIZE;
-        if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
-            this.splitter.style.display = "none";
-            splitterSize = 0;
-        }
-        else {
-            this.splitter.style.display = "";
-        }
-        this.updateToolBarSize(w, h);
-        w -= this.padding.left + this.padding.right;
-        h -= this.padding.top + this.padding.bottom;
-        x = this.padding.left;
-        y = this.padding.top;
-        if (this.fixedChild) {
-            var size = this.fixedChild.fixedSize;
-            if (this.fixedChild === this[1]) {
-                size = this.vertical ? h - size : w - size;
-            }
-            this.ratio = this.vertical ? size / h : size / w;
-        }
-        this.ratio = Math.max(this.minRatio, Math.min((_a = this.ratio) !== null && _a !== void 0 ? _a : this.maxRatio, this.maxRatio));
-        var ratio = this.ratio;
-        if (!this[0] || this[0].hidden) {
-            ratio = 0;
-        }
-        else if (!this[1] || this[1].hidden) {
-            ratio = 1;
-        }
-        if (this.vertical) {
-            var splitY = h * ratio - splitterSize;
-            if (this.splitter)
-                lib_1.Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
-            if (this[0])
-                this[0].setBox(x, y, w, splitY);
-            //TODO: here was 5th param
-            if (this[1])
-                this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
-        }
-        else {
-            var splitX = w * ratio - splitterSize;
-            if (this.splitter)
-                lib_1.Utils.setBox(this.splitter, x + splitX, y, splitterSize, h);
-            if (this[0])
-                this[0].setBox(x, y, splitX, h);
-            if (this[1])
-                this[1].setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
-        }
-    };
-    Box.prototype.updateToolBarSize = function (width, height) {
-        var bar, x, y, w, h;
-        for (var type in this.toolBars) {
-            x = 0;
-            y = 0;
-            w = width;
-            h = height;
-            bar = this.toolBars[type];
-            switch (type) {
-                case "top":
-                case "bottom":
-                    h = bar.size;
-                    if (type === "bottom")
-                        y = height - bar.size;
-                    break;
-                case "left":
-                case "right":
-                    w = bar.size;
-                    y = this.padding.top;
-                    h -= (this.padding.top + this.padding.bottom);
-                    if (type === "right")
-                        x = width - bar.size;
-                    break;
-                default:
-                    continue;
-            }
-            bar.setBox(x, y, w, h);
-        }
-    };
-    Box.prototype.restore = function (disableAnimation) {
-        var _this = this;
-        if (disableAnimation === void 0) { disableAnimation = false; }
-        var node = this.element;
-        function rmClass(ch, cls) {
-            for (var i = 0; i < ch.length; i++) {
-                if (ch[i].classList)
-                    ch[i].classList.remove(cls);
-            }
-        }
-        var finishRestore = function () {
-            classes.forEach(function (className) {
-                rmClass(document.querySelectorAll("." + className), className);
-            });
-            _this.setBox.apply(_this, _this.box);
-        };
-        var classes = [
-            "fullScreenSibling", "fullScreenNode", "fullScreenParent"
-        ];
-        this.isMaximized = false;
-        if (disableAnimation) {
-            finishRestore();
-        }
-        else {
-            Box.enableAnimation();
-            node.addEventListener('transitionend', function handler(l) {
-                Box.disableAnimation();
-                node.removeEventListener('transitionend', handler);
-                finishRestore();
-            });
-        }
-        var parentRect = node.parentNode.getBoundingClientRect();
-        var top = parentRect.top + this.box[1];
-        var left = parentRect.left + this.box[0];
-        lib_1.Utils.setBox(node, left, top, this.box[2], this.box[3]);
-    };
-    Box.prototype.maximize = function (disableAnimation) {
-        if (disableAnimation === void 0) { disableAnimation = false; }
-        var node = this.element;
-        function addClasses() {
-            node.classList.add("fullScreenNode");
-            var parent = node.parentNode;
-            while (parent && parent !== document.body) {
-                if (parent.classList)
-                    parent.classList.add("fullScreenParent");
-                var childNodes = parent.childNodes;
-                for (var i = 0; i < childNodes.length; i++) {
-                    var childNode = childNodes[i];
-                    if (childNode != node && childNode.classList && !childNode.classList.contains("fullScreenParent"))
-                        childNode.classList.add("fullScreenSibling");
-                }
-                parent = parent.parentNode;
-            }
-        }
-        var rect = node.getBoundingClientRect();
-        lib_1.Utils.setBox(node, rect.left, rect.top, rect.width, rect.height);
-        addClasses();
-        this.isMaximized = true;
-        node.getBoundingClientRect();
-        if (!disableAnimation) {
-            Box.enableAnimation();
-            node.addEventListener('transitionend', function handler() {
-                node.removeEventListener('transitionend', handler);
-                Box.disableAnimation();
-            });
-        }
-        this.setBox.apply(this, this.box);
-    };
-    Box.prototype.toggleMaximize = function () {
-        if (this.isMaximized)
-            this.restore();
-        else
-            this.maximize();
-    };
-    Box.prototype.remove = function () {
-        this.removeAllChildren();
-        if (this.element)
-            this.element.remove();
-        if (this.parent) {
-            if (this.parent[0] == this)
-                this.parent[0] = undefined;
-            if (this.parent[1] == this)
-                this.parent[1] = undefined;
-            this.parent.recalculateAllMinSizes();
-            this.parent = undefined;
-        }
-    };
-    Box.prototype.removeAllChildren = function () {
-        this.removeChild(this[0]);
-        this.removeChild(this[1]);
-        this[0] = undefined;
-        this[1] = undefined;
-    };
-    Box.prototype.removeChild = function (child) {
-        if (!child)
-            return;
-        child.off("editorAdded", this.$editorAdded);
-        child.remove();
-        child.element.remove();
-    };
-    Box.prototype.toggleShowHide = function () {
-        var _a;
-        Box.enableAnimation();
-        this.hidden = !this.hidden;
-        (_a = this.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            var _a;
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            (_a = self.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        });
-    };
-    Box.prototype.hide = function () {
-        var _a;
-        Box.enableAnimation();
-        this.hidden = true;
-        (_a = this.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            var _a;
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            (_a = self.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        });
-    };
-    Box.prototype.show = function () {
-        var _a;
-        Box.enableAnimation();
-        this.hidden = false;
-        (_a = this.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        var node = this.element;
-        var self = this;
-        node.addEventListener('transitionend', function handler() {
-            var _a;
-            node.removeEventListener('transitionend', handler);
-            Box.disableAnimation();
-            (_a = self.parent) === null || _a === void 0 ? void 0 : _a.resize();
-        });
-    };
-    /**
-     *
-     * @param {Number} previousBoxIndex
-     * @param {Box} box
-     * @returns {Box}
-     */
-    Box.prototype.addChildBox = function (previousBoxIndex, box) {
-        var previousBox, index;
-        if (previousBoxIndex instanceof Box) {
-            previousBox = previousBoxIndex;
-            index = this[0] == previousBox ? 0 : 1;
-        }
-        else {
-            index = previousBoxIndex;
-            previousBox = this[index];
-        }
-        if (previousBox && previousBox === box)
-            return previousBox;
-        var previousParent = box.parent;
-        if (previousParent && previousParent !== this) {
-            var previousIndex = previousParent[0] === box ? 0 : 1;
-            previousParent[previousIndex] = null;
-            previousParent.ratio = 1;
-            if (previousParent.fixedChild && previousParent.fixedChild === box) {
-                previousParent.fixedChild = null;
-            }
-            previousParent.resize();
-        }
-        this[index] = box;
-        box.parent = this;
-        this.renderChild(box);
-        if (previousBox && previousBox.isMaximized) {
-            previousBox.restore(true);
-            box.maximize(true);
-        }
-        if (previousBox && previousBox.parent === this) {
-            if (this.fixedChild && this.fixedChild == previousBox) {
-                box.fixedSize = previousBox.fixedSize;
-                if (!box.size)
-                    box.size = previousBox.size;
-                previousBox.fixedSize = previousBox.size = null;
-                this.fixedChild = box;
-            }
-            previousBox.remove();
-        }
-        if (!this.fixedChild)
-            this.calculateChildRatio(box);
-        this.recalculateAllMinSizes();
-        this.resize();
-        return box;
-    };
-    Box.prototype.recalculateAllMinSizes = function () {
-        var node = this;
-        while (node) {
-            node.calculateMinSize(true);
-            node = node.parent;
-        }
-    };
-    return Box;
-}(events.EventEmitter));
-exports.Box = Box;
-
-
-/***/ }),
-
-/***/ 82478:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Button = void 0;
-var dom_1 = __webpack_require__(91444);
-var buttonCSS = __webpack_require__(61262);
-dom_1.dom.importCssString(buttonCSS, "button.css");
-var Button = /** @class */ (function () {
-    function Button(options) {
-        var disabled = options.disabled, value = options.value, className = options.className, other = __rest(options, ["disabled", "value", "className"]);
-        this.disabled = disabled;
-        this.value = value;
-        this.className = className || "blackbutton";
-        this.options = other;
-    }
-    Button.prototype.remove = function () {
-    };
-    Button.prototype.render = function () {
-        var _this = this;
-        this.element = dom_1.dom.buildDom(["div", __assign({ class: this.className + (this.disabled ? this.className + "Disabled" : ""), onmousedown: function (e) {
-                    e.preventDefault();
-                    e.target.className = _this.className + " " + _this.className + "Down";
-                }, onmouseup: function (e) {
-                    e.target.className = _this.className;
-                }, onmouseover: function (e) {
-                    e.target.className = _this.className + " " + _this.className + "Over";
-                }, onfocus: function (e) {
-                    e.target.className = _this.className + " " + _this.className + "Focus";
-                }, onunfocus: function (e) {
-                    e.target.className = _this.className;
-                }, onmouseout: function (e) {
-                    e.target.className = _this.className;
-                } }, this.options), this.value]);
-        this.element.$host = this;
-        return this.element;
-    };
-    Button.prototype.toJSON = function () {
-    };
-    return Button;
-}());
-exports.Button = Button;
-
-
-/***/ }),
-
-/***/ 11945:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Dropdown = void 0;
-var lib_1 = __webpack_require__(80930);
-var dom_1 = __webpack_require__(91444);
-var dropdownCSS = __webpack_require__(81982);
-var menuCSS = __webpack_require__(77111);
-dom_1.dom.importCssString(dropdownCSS, "dropdown.css");
-dom_1.dom.importCssString(menuCSS, "menu.css");
-var DEFAULT_WIDTH = 200;
-var Dropdown = /** @class */ (function () {
-    function Dropdown(options) {
-        var _this = this;
-        this.onMouseDown = function (e) {
-            e.preventDefault();
-            var node = lib_1.Utils.findNode(e.target, _this.className);
-            if (node && node == _this.element)
-                return;
-            node = lib_1.Utils.findNode(e.target, _this.popup.element.className);
-            if (node && node == _this.popup.element)
-                return;
-            _this.closePopup();
-        };
-        this.onMouseWheel = function (e) {
-            _this.closePopup();
-        };
-        var disabled = options.disabled, items = options.items, value = options.value, className = options.className, width = options.width, other = __rest(options, ["disabled", "items", "value", "className", "width"]);
-        this.disabled = disabled !== null && disabled !== void 0 ? disabled : false;
-        this.items = items;
-        this.value = value !== null && value !== void 0 ? value : items[0].value;
-        this.className = className || "black_dropdown";
-        this.width = width !== null && width !== void 0 ? width : DEFAULT_WIDTH;
-        this.options = other;
-    }
-    Dropdown.prototype.render = function () {
-        var _this = this;
-        this.element = dom_1.dom.buildDom(["div", __assign({ class: this.className + (this.disabled ? this.className + "Disabled" : ""), style: "width: " + this.width + "px", onmousedown: function (e) {
-                    e.preventDefault();
-                    _this.element.className = _this.className + " " + _this.className + "Down";
-                    _this.togglePopup();
-                }, onmouseup: function (e) {
-                    _this.element.className = _this.className;
-                }, onmouseover: function (e) {
-                    _this.element.className = _this.className + " " + _this.className + "Over";
-                }, onfocus: function (e) {
-                    _this.element.className = _this.className + " " + _this.className + "Focus";
-                }, onunfocus: function (e) {
-                    _this.element.className = _this.className;
-                }, onmouseout: function (e) {
-                    _this.element.className = _this.className;
-                } }, this.options), [
-                ["div", {
-                        class: "lbl",
-                        ref: "lbl"
-                    }],
-                ["div", {
-                        class: "button"
-                    }]
-            ]], undefined, this);
-        this.element.$host = this;
-        this.updateLabel();
-        return this.element;
-    };
-    Dropdown.prototype.togglePopup = function () {
-        if (this.isPopupOpen) {
-            this.closePopup();
-        }
-        else {
-            this.openPopup();
-        }
-    };
-    Dropdown.prototype.openPopup = function () {
-        var _this = this;
-        if (this.isPopupOpen)
-            return;
-        this.popup = new Popup();
-        // this.popup.direction = direction;
-        this.popup.items = this.items;
-        this.popup.selectedItem = this.value;
-        this.popup.parent = this;
-        this.popup.selectCallback = function (host) {
-            _this.select(host.value);
-            _this.closePopup();
-        };
-        this.popup.open();
-        window.addEventListener("mousedown", this.onMouseDown);
-        window.addEventListener("wheel", this.onMouseWheel);
-        this.isPopupOpen = true;
-    };
-    Dropdown.prototype.closePopup = function () {
-        if (!this.isPopupOpen)
-            return;
-        this.popup.close();
-        this.isPopupOpen = false;
-        window.removeEventListener("mousedown", this.onMouseDown);
-        window.removeEventListener("wheel", this.onMouseWheel);
-    };
-    Dropdown.prototype.select = function (value) {
-        this.setValue(value);
-    };
-    Dropdown.prototype.setValue = function (value) {
-        if (this.value !== value) {
-            this.value = value;
-            this.updateLabel();
-        }
-    };
-    Dropdown.prototype.updateLabel = function () {
-        var items = this.items;
-        for (var i = 0; i < items.length; i++) {
-            var x = items[i];
-            var itemValue = x.value;
-            if (this.value === itemValue) {
-                this.lbl.innerHTML = x.caption;
-                return;
-            }
-        }
-    };
-    Dropdown.prototype.toJSON = function () {
-    };
-    return Dropdown;
-}());
-exports.Dropdown = Dropdown;
-var Popup = /** @class */ (function () {
-    function Popup() {
-    }
-    Popup.prototype.open = function () {
-        this.build();
-        this.render();
-    };
-    Popup.prototype.build = function () {
-        var _this = this;
-        if (this.element) {
-            return;
-        }
-        var result = [];
-        if (this.items) {
-            var items = Object.values(this.items).sort(function (item1, item2) {
-                return item1.position - item2.position;
-            });
-            var afterDivider_1 = true;
-            result = items
-                .map(function (item) {
-                if (item.caption[0] === "~") {
-                    if (afterDivider_1)
-                        return;
-                    afterDivider_1 = true;
-                    return [
-                        "div",
-                        {
-                            class: "menu_divider",
-                            $host: item,
-                        },
-                    ];
-                }
-                afterDivider_1 = false;
-                var classList = ["menu_item"];
-                if (item.checked)
-                    classList.push(item.type === "check" ? "checked" : "selected");
-                if (item.map)
-                    classList.push("submenu");
-                if (item.disabled)
-                    classList.push("disabled");
-                if (item.value === _this.selectedItem)
-                    classList.push("selected");
-                return [
-                    "div",
-                    {
-                        class: classList.join(" "),
-                        $host: item,
-                    },
-                    ["u", " "],
-                    ["a", item.caption + ""],
-                    [
-                        "span",
-                        {
-                            class: "shortcut",
-                        },
-                        item.hotKey,
-                    ],
-                ];
-            })
-                .filter(Boolean);
-            if (afterDivider_1)
-                result.pop();
-        }
-        this.element = dom_1.dom.buildDom([
-            "blockquote",
-            {
-                class: "menu",
-                style: "display:block",
-                $host: this.parent,
-                onmousemove: this.onMouseMove.bind(this),
-                onclick: this.onClick.bind(this)
-            },
-            result,
-        ], document.body);
-    };
-    Popup.prototype.render = function () {
-        if (this.element.style.maxWidth) {
-            this.element.style.maxWidth = window.innerWidth + "px";
-        }
-        if (this.element.style.maxHeight) {
-            this.element.style.maxHeight = window.innerHeight + "px";
-        }
-        var elRect = this.element.getBoundingClientRect();
-        var edge = lib_1.Utils.getElementEdges(this.element);
-        var parentRect, top, left;
-        if (this.parent && this.parent.element) {
-            parentRect = this.parent.element.getBoundingClientRect();
-        }
-        if (parentRect) {
-            if (this.isSubMenu) {
-                top = parentRect.top - edge.top;
-                left = parentRect.right;
-            }
-            else {
-                top = parentRect.bottom;
-                left = parentRect.left;
-            }
-        }
-        else {
-            top = this.position.y;
-            left = this.position.x;
-        }
-        var targetH = Math.min(elRect.height, window.innerHeight);
-        var availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
-        if (availableH < targetH && (!parentRect || this.isSubMenu)) {
-            var tmpTop = parentRect ? window.innerHeight : top;
-            top = tmpTop - targetH - edge.top;
-            // top = Math.max(top, this.menuManager.menuBar.bottom);//TODO menuManager
-            availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
-        }
-        this.element.style.maxHeight = (availableH - 10) + "px";
-        elRect = this.element.getBoundingClientRect();
-        var availableW = window.innerWidth - left - edge.left - edge.right - 2;
-        if (availableW < elRect.width) {
-            if (parentRect) {
-                var tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
-                if (tmpLeft > availableW) {
-                    this.direction = "left";
-                    left = tmpLeft - elRect.width + edge.left;
-                    left = Math.max(left, 0);
-                    availableW = tmpLeft + edge.left + edge.right;
-                }
-                if (availableW < elRect.width) {
-                    this.element.style.maxWidth = availableW + "px";
-                    this.element.style.overflowX = "auto";
-                }
-            }
-            else {
-                left = window.innerWidth - elRect.width - edge.left - edge.right;
-            }
-        }
-        this.element.style.top = top + "px";
-        this.element.style.left = left + "px";
-        this.element.style.position = "absolute";
-        this.element.style.zIndex = 195055;
-        this.element.style.overflowY = "auto";
-    };
-    Popup.prototype.close = function () {
-        if (this.element) {
-            this.element.remove();
-            delete this.element;
-        }
-    };
-    Popup.prototype.scrollIfNeeded = function () {
-        if (!this.selectedMenu) {
-            return;
-        }
-        var menu = this.element;
-        var item = this.selectedMenu.buttonElement;
-        var menuRect = menu.getBoundingClientRect();
-        var itemRect = item.getBoundingClientRect();
-        if (itemRect.top < menuRect.top) {
-            item.scrollIntoView(true);
-        }
-        else if (itemRect.bottom > menuRect.bottom) {
-            item.scrollIntoView(false);
-        }
-    };
-    //handle events
-    Popup.prototype.onMouseMove = function (e) {
-        if (e.target === this.element) {
-            return;
-        }
-        var target = lib_1.Utils.findHostTarget(e.target);
-        if (target === this.element) {
-            return;
-        }
-        if (target == this.activeItem) {
-            return;
-        }
-        if (this.activeItem) {
-            this.activeItem.classList.remove("hover");
-        }
-        this.activeItem = target;
-        this.activeItem.classList.add("hover");
-    };
-    Popup.prototype.onClick = function (e) {
-        if (e.target === this.element)
-            return;
-        var target = lib_1.Utils.findHostTarget(e.target);
-        if (target === this.element)
-            return;
-        var host = target.$host;
-        this.selectCallback && this.selectCallback(host);
-    };
-    return Popup;
-}());
-
-
-/***/ }),
-
-/***/ 43717:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.SettingsSearchBox = void 0;
-var dom_1 = __webpack_require__(91444);
-var SettingsSearchBox = /** @class */ (function () {
-    function SettingsSearchBox(prefsParentNode) {
-        this.hideFiltered = false;
-        this.value = "";
-        this.currValue = "";
-        this.searchResultsCount = 0;
-        this.prefsParentNode = prefsParentNode;
-    }
-    SettingsSearchBox.prototype.filter = function () {
-        var childNode;
-        var noResult = true;
-        this.searchResultsCount = 0;
-        for (var i = 0; i < this.prefsParentNode.childNodes.length; i++) {
-            childNode = this.prefsParentNode.childNodes[i];
-            this.updateVisibility(childNode);
-            if (noResult && !childNode.isFiltered) {
-                noResult = false;
-            }
-        }
-        if (this.currValue != "") {
-            this.searchResults.innerHTML = " " + this.searchResultsCount + " Preferences Found";
-        }
-        else {
-            this.searchResults.innerHTML = "";
-        }
-    };
-    SettingsSearchBox.prototype.showHide = function (item, show) {
-        show = show || false;
-        item.isFiltered = !show;
-        item.style.display = show ? "block" : "none";
-    };
-    SettingsSearchBox.prototype.updateVisibility = function (item) {
-        var text = item.innerText;
-        var tokens = this.getTokens(text);
-        var show = true;
-        if (!tokens) {
-            show = false;
-        }
-        else {
-            this.searchResultsCount++;
-        }
-        this.showHide(item, show);
-    };
-    SettingsSearchBox.prototype.getTokens = function (string) {
-        var tokens = [];
-        var caption = string.toLowerCase();
-        var lower = this.currValue.toLowerCase();
-        var upper = this.currValue.toUpperCase();
-        function addToken(value, className) {
-            value && tokens.push({
-                type: className || "",
-                value: value
-            });
-        }
-        var lastIndex = -1;
-        var matchMask = 0;
-        var index, distance;
-        var fullMatchIndex = caption.indexOf(lower);
-        if (fullMatchIndex === -1) {
-            for (var j = 0; j < this.currValue.length; j++) {
-                var i1 = caption.indexOf(lower[j], lastIndex + 1);
-                var i2 = caption.indexOf(upper[j], lastIndex + 1);
-                index = (i1 >= 0) ? ((i2 < 0 || i1 < i2) ? i1 : i2) : i2;
-                if (index < 0)
-                    return null;
-                distance = index - lastIndex - 1;
-                if (distance > 0) {
-                    matchMask = matchMask | (1 << j);
-                }
-                lastIndex = index;
-            }
-        }
-        var filterText = lower;
-        lower = caption.toLowerCase();
-        lastIndex = 0;
-        var lastI = 0;
-        for (var i = 0; i <= filterText.length; i++) {
-            if (i !== lastI && (matchMask & (1 << i) || i === filterText.length)) {
-                var sub = filterText.slice(lastI, i);
-                lastI = i;
-                index = lower.indexOf(sub, lastIndex);
-                if (index === -1)
-                    continue;
-                addToken(string.slice(lastIndex, index), "");
-                lastIndex = index + sub.length;
-                addToken(string.slice(index, lastIndex), "completion-highlight");
-            }
-        }
-        addToken(string.slice(lastIndex, string.length), "");
-        return tokens;
-    };
-    SettingsSearchBox.prototype.build = function () {
-        this.element = dom_1.dom.buildDom(["div", {},
-            ["input", { class: "search_field tbsimple", placeholder: "Search preferences" }],
-            ["span", { class: "search_results" }],
-            ["span", { class: "searchbtn_close" }]
-        ]);
-        this.element.$host = this;
-        this.searchField = this.element.querySelector(".search_field");
-        this.searchResults = this.element.querySelector(".search_results");
-        var _this = this;
-        this.element.querySelector(".searchbtn_close").addEventListener("mousedown", function (e) {
-            _this.clear();
-        });
-        this.searchField.addEventListener("input", function (e) {
-            _this.currValue = e.target.value;
-            _this.filter();
-        });
-    };
-    SettingsSearchBox.prototype.clear = function () {
-        if (this.currValue.length) {
-            this.searchField.value = "";
-            this.currValue = "";
-            this.filter();
-        }
-    };
-    return SettingsSearchBox;
-}());
-exports.SettingsSearchBox = SettingsSearchBox;
-
-
-/***/ }),
-
-/***/ 37887:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Switcher = void 0;
-var dom_1 = __webpack_require__(91444);
-var switcherCSS = __webpack_require__(94622);
-dom_1.dom.importCssString(switcherCSS, "switcher.css");
-var Switcher = /** @class */ (function () {
-    function Switcher(options) {
-        var className = options.className, checked = options.checked, other = __rest(options, ["className", "checked"]);
-        this.className = className || "cboffline";
-        this.options = other;
-        this.checked = checked || false;
-    }
-    Switcher.prototype.render = function () {
-        var _this = this;
-        this.element = dom_1.dom.buildDom(["div", __assign({ class: this.className + (this.checked ? " " + this.className + "Checked" : ""), onmousedown: function (e) {
-                    e.preventDefault();
-                    _this.checked = !_this.checked;
-                    e.target.className = _this.className + (_this.checked ? " " + _this.className + "Down" : "");
-                }, onclick: function (e) {
-                    e.preventDefault();
-                    e.target.className = _this.className + (_this.checked ? " " + _this.className + "Checked" : "");
-                } }, this.options), ""]);
-        this.element.$host = this;
-        return this.element;
-    };
-    Switcher.prototype.toJSON = function () {
-    };
-    Switcher.prototype.remove = function () {
-    };
-    return Switcher;
-}());
-exports.Switcher = Switcher;
-
-
-/***/ }),
-
-/***/ 23429:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Panel = void 0;
-var panelManager_1 = __webpack_require__(38404);
-var dom_1 = __webpack_require__(91444);
-var panelCSS = __webpack_require__(58659);
-var tabPanel_1 = __webpack_require__(41074);
-dom_1.dom.importCssString(panelCSS, "panel.css");
-var Panel = /** @class */ (function (_super) {
-    __extends(Panel, _super);
-    function Panel(options) {
-        var _this = this;
-        var _a;
-        _this = _super.call(this, options) || this;
-        _this.location = options.location;
-        _this.panelBody = options.panelBody;
-        _this.autoHide = (_a = options.autoHide) !== null && _a !== void 0 ? _a : false;
-        _this.title = options.title;
-        return _this;
-    }
-    Panel.prototype.activate = function () {
-        _super.prototype.activate.call(this);
-        panelManager_1.PanelManager.getInstance().activatePanel(this);
-    };
-    Panel.prototype.deactivate = function () {
-        _super.prototype.deactivate.call(this);
-        panelManager_1.PanelManager.getInstance().deactivatePanel(this);
-    };
-    Panel.prototype.render = function () {
-        this.element = dom_1.dom.buildDom(["div", {
-                class: "panelButton" + (this.active ? " active" : ""),
-            }, ["span", {
-                    class: "panelTitle"
-                }, this.title]]);
-        this.element.$host = this;
-        return this.element;
-    };
-    Panel.prototype.toJSON = function () {
-        return {
-            active: this.active,
-            title: this.title,
-            autoHide: this.autoHide,
-            panelBody: this.panelBody.toJSON(),
-        };
-    };
-    Panel.prototype.remove = function () {
-    };
-    return Panel;
-}(tabPanel_1.TabPanel));
-exports.Panel = Panel;
-
-
-/***/ }),
-
-/***/ 38404:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.PanelManager = void 0;
-var box_1 = __webpack_require__(95561);
-var accordion_1 = __webpack_require__(29930);
-var panelBar_1 = __webpack_require__(44526);
-var PanelManager = /** @class */ (function () {
-    function PanelManager(options) {
-        this.layout = options.layout;
-        this.locations = options.locations;
-    }
-    PanelManager.getInstance = function (options) {
-        if (!PanelManager._instance)
-            PanelManager._instance = new PanelManager(options);
-        return PanelManager._instance;
-    };
-    PanelManager.prototype.toJSON = function () {
-        return {
-            panelBars: this.panelBarsToJSON()
-        };
-    };
-    PanelManager.prototype.panelBarsToJSON = function () {
-        var panelBars = {};
-        for (var _i = 0, _a = Object.entries(this.layout.toolBars); _i < _a.length; _i++) {
-            var _b = _a[_i], position = _b[0], panelBar = _b[1];
-            if (panelBar instanceof panelBar_1.PanelBar)
-                panelBars[position] = panelBar.toJSON();
-        }
-        return panelBars;
-    };
-    PanelManager.prototype.setState = function (state) {
-        var _a;
-        var panelBars = (_a = state.panelBars) !== null && _a !== void 0 ? _a : {};
-        var panelBar, panelList, panel;
-        var panelBody, panelBodyData;
-        for (var _i = 0, _b = Object.keys(panelBars); _i < _b.length; _i++) {
-            var position = _b[_i];
-            panelList = [];
-            var tabList = panelBars[position].tabList;
-            for (var i = 0; i < tabList.length; i++) {
-                panel = tabList[i];
-                panelBodyData = panel.panelBody;
-                if (panelBodyData.type === "accordion") { //todo
-                    var accordionSections = [];
-                    var sections = panelBodyData.sections;
-                    for (var index = 0; index < sections.length; index++) {
-                        accordionSections.push({
-                            title: sections[index].title,
-                            box: new box_1.Box(sections[index].boxData)
-                        });
-                    }
-                    panelBody = new accordion_1.Accordion({
-                        vertical: panelBodyData.vertical,
-                        size: panelBodyData.size,
-                        sections: accordionSections
-                    });
-                }
-                else {
-                    panelBody = new box_1.Box({
-                        vertical: panelBodyData.type === "vbox",
-                        color: panelBodyData.color,
-                        size: panelBodyData.size,
-                        hidden: panelBodyData.hidden,
-                        fixedSize: panelBodyData.fixedSize
-                    });
-                }
-                panelList.push({
-                    active: panel.active,
-                    title: panel.title,
-                    autoHide: panel.autoHide,
-                    panelBody: panelBody,
-                });
-            }
-            panelBar = new panelBar_1.PanelBar({ panelList: {} });
-            this.layout.addToolBar(position, panelBar);
-            panelBar.addTabList(panelList);
-        }
-    };
-    PanelManager.prototype.activatePanel = function (panel) {
-        var location = this.locations[panel.parent.position];
-        if (!location)
-            return;
-        var index = location.index;
-        var parent = location.parent;
-        panel.panelBody.size = location.size;
-        var newBox = parent.addChildBox(index, panel.panelBody);
-        if (newBox.fixedSize && !parent.fixedChild)
-            parent.fixedChild = newBox;
-        location.box = newBox;
-        newBox.show();
-    };
-    PanelManager.prototype.deactivatePanel = function (panel) {
-        var location = this.locations[panel.parent.position];
-        location === null || location === void 0 ? void 0 : location.box.hide();
-    };
-    return PanelManager;
-}());
-exports.PanelManager = PanelManager;
-
-
-/***/ }),
-
-/***/ 41074:
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabPanel = void 0;
-var TabPanel = /** @class */ (function () {
-    function TabPanel(options) {
-        var _a;
-        this.active = (_a = options.active) !== null && _a !== void 0 ? _a : false;
-        this.title = options.title;
-    }
-    TabPanel.prototype.activate = function () {
-        this.active = true;
-        this.element.classList.add("active");
-    };
-    TabPanel.prototype.deactivate = function () {
-        this.active = false;
-        this.element.classList.remove("active");
-    };
-    return TabPanel;
-}());
-exports.TabPanel = TabPanel;
-
-
-/***/ }),
-
-/***/ 44526:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.PanelBar = void 0;
-var tabPanelBar_1 = __webpack_require__(59892);
-var dom_1 = __webpack_require__(91444);
-var tabbar_handler_1 = __webpack_require__(21649);
-var panel_1 = __webpack_require__(23429);
-var PanelBar = /** @class */ (function (_super) {
-    __extends(PanelBar, _super);
-    function PanelBar() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    PanelBar.prototype.setBox = function (x, y, w, h) {
-        _super.prototype.setBox.call(this, x, y, w, h);
-        this.configure();
-    };
-    PanelBar.prototype.configure = function () {
-        var tabElement;
-        var tabSize = 30; //TODO
-        var position = 0;
-        for (var i = 0; i < this.tabList.length; i++) {
-            tabElement = this.tabList[i].element;
-            if (this.draggingElementIndex === i)
-                position += this.getDraggingElementSize();
-            if (this.isVertical()) {
-                tabElement.style.left = 0 + "px";
-                tabElement.style.height = tabSize + "px";
-                tabElement.style.top = position + "px";
-            }
-            else {
-                tabElement.style.top = 0 + "px";
-                tabElement.style.width = tabSize + "px";
-                tabElement.style.left = position + "px";
-            }
-            position += tabSize;
-        }
-    };
-    PanelBar.prototype.render = function () {
-        var _this = this;
-        if (!this.element) {
-            this.element = dom_1.dom.buildDom(["div", {
-                    class: "panelbar " + this.direction + " " + this.position,
-                }, ["div", {
-                        class: "tabContainer",
-                        ref: "tabContainer",
-                        onmousedown: function (e) {
-                            tabbar_handler_1.TabbarHandler.tabbarMouseDown(e, panel_1.Panel, PanelBar);
-                        },
-                        onmouseup: function (e) {
-                            if (_this.activeTabClicked) {
-                                var activeTab = _this.activeTab;
-                                _this.removeSelection(activeTab);
-                                activeTab.deactivate();
-                                _this.activeTab = undefined;
-                                if (_this.activeTabHistory.length && activeTab.autoHide) {
-                                    var previousTab = activeTab;
-                                    while (previousTab === activeTab && _this.activeTabHistory.length) {
-                                        previousTab = _this.activeTabHistory.pop();
-                                    }
-                                    if (previousTab !== activeTab)
-                                        _this.activateTab(previousTab);
-                                }
-                            }
-                        },
-                    }]], undefined, this);
-        }
-        if (this.initTabList && this.initTabList.length) {
-            for (var i = 0; i < this.initTabList.length; i++) {
-                this.addTab(this.initTabList[i]);
-            }
-        }
-        this.element.$host = this;
-        return this.element;
-    };
-    PanelBar.prototype.addTabList = function (tabList, index) {
-        index = index || this.tabList.length;
-        var tab;
-        for (var i = 0; i < tabList.length; i++) {
-            tab = new panel_1.Panel(tabList[i]);
-            this.addTab(tab, index++);
-        }
-    };
-    PanelBar.prototype.remove = function () {
-    };
-    return PanelBar;
-}(tabPanelBar_1.TabPanelBar));
-exports.PanelBar = PanelBar;
-
-
-/***/ }),
-
-/***/ 59892:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.TabPanelBar = void 0;
-var toolbar_1 = __webpack_require__(5527);
-var TabPanelBar = /** @class */ (function (_super) {
-    __extends(TabPanelBar, _super);
-    function TabPanelBar(options) {
-        var _this = this;
-        var _a, _b;
-        _this = _super.call(this, options) || this;
-        _this.selectedTabs = [];
-        _this.tabList = [];
-        _this.scrollLeft = 0;
-        _this.animationSteps = 0;
-        _this.MIN_TAB_SIZE = 120;
-        _this.MAX_TAB_SIZE = 150;
-        _this.activeTabHistory = [];
-        _this.onMouseWheel = function (e) {
-            var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
-            if (Math.abs(d) > 50) {
-                _this.animateScroll(d);
-            }
-            else {
-                _this.stopScrollAnimation();
-                _this.setScrollPosition((_this.scrollLeft || 0) + d);
-            }
-        };
-        _this.initTabList = (_b = (_a = options.tabList) !== null && _a !== void 0 ? _a : options.panelList) !== null && _b !== void 0 ? _b : [];
-        return _this;
-    }
-    TabPanelBar.prototype.isVertical = function () {
-        return this.direction === "vertical";
-    };
-    TabPanelBar.prototype.getDraggingElementSize = function () {
-        if (!this.tabDraggingElement)
-            return 0;
-        var draggingElementSize = this.isVertical() ? this.tabDraggingElement.style.height : this.tabDraggingElement.style.width;
-        return parseInt(draggingElementSize, 10);
-    };
-    TabPanelBar.prototype.tabMouseDown = function (tab, expand, toggle) {
-        if (expand === void 0) { expand = false; }
-        if (toggle === void 0) { toggle = false; }
-        if (expand) {
-            this.expandSelection(tab, toggle);
-        }
-        else {
-            this.anchorTab = null;
-            if (toggle) {
-                this.toggleSelection(tab);
-            }
-            else {
-                this.activateTab(tab, undefined, this.selectedTabs.indexOf(tab) < 0);
-            }
-        }
-    };
-    TabPanelBar.prototype.expandSelection = function (tab, toggle) {
-        var _a;
-        var _this = this;
-        if (toggle === void 0) { toggle = false; }
-        if (!this.anchorTab)
-            this.anchorTab = this.activeTab;
-        var prevSelectedTabs = this.selectedTabs;
-        this.selectedTabs = [];
-        var start = this.tabList.indexOf(this.anchorTab);
-        var end = this.tabList.indexOf(tab);
-        if (end < start) {
-            _a = [end, start], start = _a[0], end = _a[1];
-        }
-        for (var i = start; i <= end; i++) {
-            this.addSelection(this.tabList[i]);
-        }
-        prevSelectedTabs.forEach(function (selectedTab) {
-            if (_this.selectedTabs.indexOf(selectedTab) < 0) {
-                if (!toggle) {
-                    _this.deselectTab(selectedTab);
-                }
-                else {
-                    _this.addSelection(selectedTab);
-                }
-            }
-        });
-        this.activateTab(tab);
-    };
-    TabPanelBar.prototype.toggleSelection = function (tab) {
-        var index = this.selectedTabs.indexOf(tab);
-        if (index < 0) {
-            this.activateTab(tab);
-        }
-        else if (tab !== this.activeTab) {
-            this.removeSelection(tab);
-        }
-    };
-    TabPanelBar.prototype.addSelection = function (tab) {
-        if (this.selectedTabs.indexOf(tab) < 0) {
-            this.selectTab(tab);
-            this.selectedTabs.push(tab);
-        }
-    };
-    TabPanelBar.prototype.selectTab = function (tab) {
-        tab.element.classList.add("selected");
-    };
-    TabPanelBar.prototype.deselectTab = function (tab) {
-        tab.element.classList.remove("selected");
-    };
-    TabPanelBar.prototype.removeSelection = function (tab) {
-        if (this.selectedTabs.indexOf(tab) < 0)
-            return;
-        this.deselectTab(tab);
-        this.selectedTabs.splice(this.selectedTabs.indexOf(tab), 1);
-    };
-    TabPanelBar.prototype.removeSelections = function () {
-        var _this = this;
-        this.selectedTabs.forEach(function (selectedTab) {
-            _this.deselectTab(selectedTab);
-        });
-        this.selectedTabs = [];
-    };
-    TabPanelBar.prototype.scrollTabIntoView = function (tab) {
-        var index = this.tabList.indexOf(tab);
-        this.setScrollPosition((index + 1) * this.tabWidth);
-    };
-    TabPanelBar.prototype.activateTab = function (tab, content, removeSelections) {
-        if (removeSelections === void 0) { removeSelections = false; }
-        removeSelections && this.removeSelections();
-        this.activeTabClicked = false;
-        this.addSelection(tab);
-        if (this.activeTab) {
-            if (this.activeTab === tab) {
-                this.activeTabClicked = true;
-                return;
-            }
-            if (this.activeTabHistory.indexOf(this.activeTab) >= 0)
-                this.activeTabHistory.splice(this.activeTabHistory.indexOf(this.activeTab), 1);
-            this.activeTabHistory.push(this.activeTab);
-            this.activeTab.deactivate();
-        }
-        tab.activate();
-        this.activeTab = tab;
-        this.configure();
-    };
-    TabPanelBar.prototype.removeTab = function (tab) {
-        if (tab === this.activeTab)
-            this.activeTab = undefined;
-        var index = this.tabList.indexOf(tab);
-        if (index >= 0)
-            this.tabList.splice(index, 1);
-        tab.parent = undefined;
-    };
-    TabPanelBar.prototype.activatePrevious = function (index) {
-        if (this.tabList.length) {
-            var tab = this.tabList[index - 1] || this.tabList[this.tabList.length - 1];
-            this.activateTab(tab);
-        }
-    };
-    TabPanelBar.prototype.addTab = function (tab, index, content) {
-        if (!tab.element)
-            tab.render();
-        tab.parent = this;
-        if (index === undefined || index === null || index >= this.tabList.length) {
-            this.tabContainer.appendChild(tab.element);
-            this.tabList.push(tab);
-        }
-        else {
-            this.tabContainer.insertBefore(tab.element, this.tabContainer.childNodes[index]);
-            this.tabList.splice(index, 0, tab);
-        }
-        if (tab.active)
-            this.activateTab(tab, content, true);
-        this.configure();
-        return tab;
-    };
-    TabPanelBar.prototype.setScrollPosition = function (scrollLeft) {
-        this.scrollLeft = scrollLeft;
-        this.configure();
-    };
-    TabPanelBar.prototype.animateScroll = function (v) {
-        var _this = this;
-        this.vX = v / 80;
-        this.animationSteps += 15;
-        if (this.animationSteps > 15) {
-            this.vX *= 1.2 * this.animationSteps / 10;
-            this.animationSteps = 15 + Math.ceil((this.animationSteps - 15) * 0.75);
-        }
-        if (this.animationTimer)
-            return;
-        this.animationTimer = setInterval(function () {
-            if (_this.animationSteps-- <= 0) {
-                return _this.stopScrollAnimation();
-            }
-            var vX = _this.vX;
-            if (Math.abs(_this.vX) < 0.01)
-                vX = 0;
-            vX = 0.9 * vX;
-            var oldScrollLeft = _this.scrollLeft;
-            _this.setScrollPosition(_this.scrollLeft + 10 * vX);
-            if (oldScrollLeft == _this.scrollLeft)
-                _this.animationSteps = 0;
-            _this.vX = vX;
-        }, 10);
-    };
-    TabPanelBar.prototype.stopScrollAnimation = function () {
-        clearInterval(this.animationTimer);
-        this.animationTimer = null;
-        this.animationScrollLeft = null;
-        this.vX = 0;
-    };
-    TabPanelBar.prototype.transform = function (el, dx, dy) {
-        el.style.left = Math.round(dx) + "px";
-        el.dx = dx;
-        el.dy = dy;
-    };
-    TabPanelBar.prototype.startTabDragging = function (element, index) {
-        if (this.isDragging)
-            return;
-        this.tabDraggingElement = element;
-        this.draggingElementIndex = index;
-        this.configure();
-        this.isDragging = true;
-    };
-    TabPanelBar.prototype.finishTabDragging = function () {
-        var _this = this;
-        this.draggingElementIndex = undefined;
-        this.tabDraggingElement = undefined;
-        if (this.activeTabHistory.length) {
-            var removedHistoryTabs = [];
-            for (var i = 0; i < this.activeTabHistory.length; i++) {
-                if (this.tabList.indexOf(this.activeTabHistory[i]) < 0) {
-                    removedHistoryTabs.push(this.activeTabHistory[i]);
-                }
-            }
-            removedHistoryTabs.forEach(function (tab) {
-                var index = _this.activeTabHistory.indexOf(tab);
-                if (index >= 0) {
-                    _this.activeTabHistory.splice(index, 1);
-                }
-            });
-        }
-        this.configure();
-        this.isDragging = false;
-    };
-    TabPanelBar.prototype.toJSON = function () {
-        return {
-            tabList: this.tabList.map(function (tab) { return tab.toJSON(); }),
-            scrollLeft: this.scrollLeft
-        };
-    };
-    return TabPanelBar;
-}(toolbar_1.Toolbar));
-exports.TabPanelBar = TabPanelBar;
-
-
-/***/ }),
-
-/***/ 5527:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Toolbar = void 0;
-var lib_1 = __webpack_require__(80930);
-var Toolbar = /** @class */ (function () {
-    function Toolbar(options) {
-        this.direction = (options === null || options === void 0 ? void 0 : options.direction) || "horizontal";
-        this.size = (options === null || options === void 0 ? void 0 : options.size) || 27; //TODO
-        this.position = options === null || options === void 0 ? void 0 : options.position;
-    }
-    Toolbar.prototype.setBox = function (x, y, w, h) {
-        lib_1.Utils.setBox(this.element, x, y, w, h);
-    };
-    return Toolbar;
-}());
-exports.Toolbar = Toolbar;
-
-
-/***/ }),
-
 /***/ 21527:
 /***/ ((module) => {
 
@@ -5307,7 +1834,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -5392,1198 +1919,4272 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABR
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-var exports = __webpack_exports__;
-var __webpack_unused_export__;
 
-__webpack_unused_export__ = ({ value: true });
-var box_1 = __webpack_require__(95561);
-var search_1 = __webpack_require__(43717);
-var switcher_1 = __webpack_require__(37887);
-var button_1 = __webpack_require__(82478);
-var dropdown_1 = __webpack_require__(11945);
-var dom_1 = __webpack_require__(91444);
-var preferencesCSS = __webpack_require__(63712);
-var panelBar_1 = __webpack_require__(44526);
-dom_1.dom.importCssString(preferencesCSS, "preferences.css");
-var navigation;
-var app;
-var demo = new box_1.Box({
-    classNames: "bar-preferences",
-    toolBars: {
-        top: new panelBar_1.PanelBar({ size: 31 }),
-    },
-    0: navigation = new box_1.Box({
-        size: 200,
-    }),
-    1: app = new box_1.Box({}),
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/switcher.css
+var switcher_namespaceObject = {};
+__webpack_require__.r(switcher_namespaceObject);
+__webpack_require__.d(switcher_namespaceObject, {
+  "default": () => (styles_switcher)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/button.css
+var button_namespaceObject = {};
+__webpack_require__.r(button_namespaceObject);
+__webpack_require__.d(button_namespaceObject, {
+  "default": () => (ace_layout_styles_button)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/dropdown.css
+var dropdown_namespaceObject = {};
+__webpack_require__.r(dropdown_namespaceObject);
+__webpack_require__.d(dropdown_namespaceObject, {
+  "default": () => (styles_dropdown)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/menu.css
+var menu_namespaceObject = {};
+__webpack_require__.r(menu_namespaceObject);
+__webpack_require__.d(menu_namespaceObject, {
+  "default": () => (styles_menu)
+});
+
+// NAMESPACE OBJECT: ./packages/demo/preferences/preferences.css
+var preferences_namespaceObject = {};
+__webpack_require__.r(preferences_namespaceObject);
+__webpack_require__.d(preferences_namespaceObject, {
+  "default": () => (preferences_preferences)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/accordion.css
+var accordion_namespaceObject = {};
+__webpack_require__.r(accordion_namespaceObject);
+__webpack_require__.d(accordion_namespaceObject, {
+  "default": () => (styles_accordion)
+});
+
+// NAMESPACE OBJECT: ./packages/ace-layout/styles/panel.css
+var panel_namespaceObject = {};
+__webpack_require__.r(panel_namespaceObject);
+__webpack_require__.d(panel_namespaceObject, {
+  "default": () => (styles_panel)
+});
+
+;// CONCATENATED MODULE: ./packages/ace-layout/utils/lib.ts
+var Utils;
+((Utils2) => {
+  Utils2.findHost = function(el, constructor) {
+    while (el) {
+      if (el.$host && (!constructor || el.$host.constructor === constructor))
+        return el.$host;
+      el = el.parentElement;
+    }
+  };
+  Utils2.findNode = function(node, className) {
+    while (node && node.classList) {
+      if (node.classList.contains(className))
+        return node;
+      node = node.parentNode;
+    }
+    return null;
+  };
+  Utils2.findHostTarget = function(target) {
+    while (target) {
+      if (target.$host)
+        return target;
+      target = target.parentElement;
+    }
+    return null;
+  };
+  Utils2.setBox = function(el, x, y, w, h) {
+    if (w) {
+      w = Math.max(w, 0);
+    }
+    if (h) {
+      h = Math.max(h, 0);
+    }
+    let s = el.style;
+    s.left = x + "px";
+    s.top = y + "px";
+    s.width = w + "px";
+    s.height = h + "px";
+  };
+  function getEdge(style, dir) {
+    return parseInt(style["padding" + dir], 10) + parseInt(style["margin" + dir], 10) + parseInt(style["border" + dir], 10);
+  }
+  Utils2.getEdge = getEdge;
+  function getElementEdges(element) {
+    let style = getComputedStyle(element);
+    return {
+      "top": getEdge(style, "Top"),
+      "bottom": getEdge(style, "Bottom"),
+      "left": getEdge(style, "Left"),
+      "right": getEdge(style, "Right")
+    };
+  }
+  Utils2.getElementEdges = getElementEdges;
+})(Utils || (Utils = {}));
+
+;// CONCATENATED MODULE: ./packages/ace-layout/utils/params.ts
+var SizeUnit = /* @__PURE__ */ ((SizeUnit2) => {
+  SizeUnit2[SizeUnit2["px"] = 0] = "px";
+  SizeUnit2[SizeUnit2["percent"] = 1] = "percent";
+  return SizeUnit2;
+})(SizeUnit || {});
+var EditorType = /* @__PURE__ */ ((EditorType2) => {
+  EditorType2["ace"] = "ace";
+  EditorType2["preview"] = "preview";
+  return EditorType2;
+})(EditorType || {});
+
+// EXTERNAL MODULE: ./node_modules/ace-code/src/lib/event.js
+var lib_event = __webpack_require__(17989);
+// EXTERNAL MODULE: ./node_modules/events/events.js
+var events = __webpack_require__(17187);
+// EXTERNAL MODULE: ./node_modules/ace-code/src/lib/useragent.js
+var useragent = __webpack_require__(50618);
+;// CONCATENATED MODULE: ./packages/ace-layout/utils/dom.ts
+
+
+var XHTML_NS = "http://www.w3.org/1999/xhtml";
+var dom;
+((dom2) => {
+  dom2.buildDom = function(arr, parent, refs) {
+    if (typeof arr == "string" && arr) {
+      var txt = document.createTextNode(arr);
+      if (parent)
+        parent.appendChild(txt);
+      return txt;
+    }
+    if (!Array.isArray(arr)) {
+      if (arr && arr.appendChild && parent)
+        parent.appendChild(arr);
+      return arr;
+    }
+    if (typeof arr[0] != "string" || !arr[0]) {
+      var els = [];
+      for (var i = 0; i < arr.length; i++) {
+        var ch = (0, dom2.buildDom)(arr[i], parent, refs);
+        ch && els.push(ch);
+      }
+      return els;
+    }
+    var el = document.createElement(arr[0]);
+    var options = arr[1];
+    var childIndex = 1;
+    if (options && typeof options == "object" && !Array.isArray(options))
+      childIndex = 2;
+    for (var i = childIndex; i < arr.length; i++)
+      (0, dom2.buildDom)(arr[i], el, refs);
+    if (childIndex == 2) {
+      Object.keys(options).forEach(function(n) {
+        var val = options[n];
+        if (n === "class") {
+          el.className = Array.isArray(val) ? val.join(" ") : val;
+        } else if (typeof val == "function" || n == "value" || n[0] == "$") {
+          el[n] = val;
+        } else if (n === "ref") {
+          if (refs)
+            refs[val] = el;
+        } else if (n === "style") {
+          if (typeof val == "string")
+            el.style.cssText = val;
+        } else if (val != null) {
+          el.setAttribute(n, val);
+        }
+      });
+    }
+    if (parent)
+      parent.appendChild(el);
+    return el;
+  };
+  dom2.getDocumentHead = function(doc) {
+    if (!doc)
+      doc = document;
+    return doc.head || doc.getElementsByTagName("head")[0] || doc.documentElement;
+  };
+  dom2.createElement = function(tag, ns) {
+    return document.createElementNS ? document.createElementNS(ns || XHTML_NS, tag) : document.createElement(tag);
+  };
+  dom2.removeChildren = function(element) {
+    element.innerHTML = "";
+  };
+  dom2.createTextNode = function(textContent, element) {
+    var doc = element ? element.ownerDocument : document;
+    return doc.createTextNode(textContent);
+  };
+  dom2.createFragment = function(element) {
+    var doc = element ? element.ownerDocument : document;
+    return doc.createDocumentFragment();
+  };
+  dom2.hasCssClass = function(el, name) {
+    var classes = (el.className + "").split(/\s+/g);
+    return classes.indexOf(name) !== -1;
+  };
+  dom2.addCssClass = function(el, name) {
+    if (!(0, dom2.hasCssClass)(el, name)) {
+      el.className += " " + name;
+    }
+  };
+  dom2.removeCssClass = function(el, name) {
+    var classes = el.className.split(/\s+/g);
+    while (true) {
+      var index = classes.indexOf(name);
+      if (index == -1) {
+        break;
+      }
+      classes.splice(index, 1);
+    }
+    el.className = classes.join(" ");
+  };
+  dom2.toggleCssClass = function(el, name) {
+    var classes = el.className.split(/\s+/g), add = true;
+    while (true) {
+      var index = classes.indexOf(name);
+      if (index == -1) {
+        break;
+      }
+      add = false;
+      classes.splice(index, 1);
+    }
+    if (add)
+      classes.push(name);
+    el.className = classes.join(" ");
+    return add;
+  };
+  dom2.setCssClass = function(node, className, include) {
+    if (include) {
+      (0, dom2.addCssClass)(node, className);
+    } else {
+      (0, dom2.removeCssClass)(node, className);
+    }
+  };
+  dom2.hasCssString = function(id, doc) {
+    var index = 0, sheets;
+    doc = doc || document;
+    if (sheets = doc.querySelectorAll("style")) {
+      while (index < sheets.length) {
+        if (sheets[index++].id === id) {
+          return true;
+        }
+      }
+    }
+  };
+  dom2.removeElementById = function(id, doc) {
+    doc = doc || document;
+    if (doc.getElementById(id)) {
+      doc.getElementById(id).remove();
+    }
+  };
+  var strictCSP;
+  var cssCache = [];
+  dom2.useStrictCSP = function(value) {
+    strictCSP = value;
+    if (value == false)
+      insertPendingStyles();
+    else if (!cssCache)
+      cssCache = [];
+  };
+  function insertPendingStyles() {
+    var cache = cssCache;
+    cssCache = null;
+    cache && cache.forEach(function(item) {
+      importCssString(item[0], item[1]);
+    });
+  }
+  function importCssString(cssText, id, target) {
+    if (typeof document == "undefined")
+      return;
+    if (cssCache) {
+      if (target) {
+        insertPendingStyles();
+      } else if (target === false) {
+        return cssCache.push([cssText, id]);
+      }
+    }
+    if (strictCSP)
+      return;
+    var container = target;
+    if (!target || !target.getRootNode) {
+      container = document;
+    } else {
+      container = target.getRootNode();
+      if (!container || container == target)
+        container = document;
+    }
+    var doc = container.ownerDocument || container;
+    if (id && (0, dom2.hasCssString)(id, container))
+      return null;
+    if (id)
+      cssText += "\n/*# sourceURL=ace/css/" + id + " */";
+    var style = (0, dom2.createElement)("style");
+    style.appendChild(doc.createTextNode(cssText));
+    if (id)
+      style.id = id;
+    if (container == doc)
+      container = (0, dom2.getDocumentHead)(doc);
+    container.insertBefore(style, container.firstChild);
+  }
+  dom2.importCssString = importCssString;
+  dom2.importCssStylsheet = function(uri, doc) {
+    (0, dom2.buildDom)(["link", { rel: "stylesheet", href: uri }], (0, dom2.getDocumentHead)(doc));
+  };
+  dom2.scrollbarWidth = function(document2) {
+    var inner = (0, dom2.createElement)("ace_inner");
+    inner.style.width = "100%";
+    inner.style.minWidth = "0px";
+    inner.style.height = "200px";
+    inner.style.display = "block";
+    var outer = (0, dom2.createElement)("ace_outer");
+    var style = outer.style;
+    style.position = "absolute";
+    style.left = "-10000px";
+    style.overflow = "hidden";
+    style.width = "200px";
+    style.minWidth = "0px";
+    style.height = "150px";
+    style.display = "block";
+    outer.appendChild(inner);
+    var body = document2.documentElement;
+    body.appendChild(outer);
+    var noScrollbar = inner.offsetWidth;
+    style.overflow = "scroll";
+    var withScrollbar = inner.offsetWidth;
+    if (noScrollbar == withScrollbar) {
+      withScrollbar = outer.clientWidth;
+    }
+    body.removeChild(outer);
+    return noScrollbar - withScrollbar;
+  };
+  dom2.computedStyle = function(element, style) {
+    return window.getComputedStyle(element, "") || {};
+  };
+  dom2.setStyle = function(styles, property, value) {
+    if (styles[property] !== value) {
+      styles[property] = value;
+    }
+  };
+  dom2.HAS_CSS_ANIMATION = false;
+  dom2.HAS_CSS_TRANSFORMS = false;
+  dom2.HI_DPI = useragent.isWin ? typeof window !== "undefined" && window.devicePixelRatio >= 1.5 : true;
+  if (useragent.isChromeOS)
+    dom2.HI_DPI = false;
+  if (typeof document !== "undefined") {
+    var div = document.createElement("div");
+    if (dom2.HI_DPI && div.style.transform !== void 0)
+      dom2.HAS_CSS_TRANSFORMS = true;
+    if (!useragent.isEdge && typeof div.style.animationName !== "undefined")
+      dom2.HAS_CSS_ANIMATION = true;
+    div = null;
+  }
+  if (dom2.HAS_CSS_TRANSFORMS) {
+    dom2.translate = function(element, tx, ty) {
+      element.style.transform = "translate(" + Math.round(tx) + "px, " + Math.round(ty) + "px)";
+    };
+  } else {
+    dom2.translate = function(element, tx, ty) {
+      element.style.top = Math.round(ty) + "px";
+      element.style.left = Math.round(tx) + "px";
+    };
+  }
+})(dom || (dom = {}));
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/boxes/box.ts
+
+
+
+
+
+const SPLITTER_SIZE = 1;
+const BOX_MIN_SIZE = 40;
+class Box extends events.EventEmitter {
+  constructor(options) {
+    var _a, _b, _c, _d;
+    super();
+    this.$editorAdded = (editor) => {
+      this.emit("editorAdded", editor);
+    };
+    if (options.splitter !== false) {
+    }
+    this.vertical = options.vertical || false;
+    this.color = (_a = options.color) != null ? _a : "";
+    this.isMain = options.isMain || false;
+    this[0] = options[0];
+    this[1] = options[1];
+    if (this[0])
+      this[0].parent = this;
+    if (this[1])
+      this[1].parent = this;
+    this.ratio = options.ratio;
+    this.toolBars = options.toolBars || {};
+    this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
+    this.size = options.size;
+    this.sizeUnit = (_b = options.sizeUnit) != null ? _b : SizeUnit.px;
+    this.minSize = options.minSize || BOX_MIN_SIZE;
+    this.minVerticalSize = options.minVerticalSize || this.minSize;
+    this.minHorizontalSize = options.minHorizontalSize || this.minSize;
+    this.classNames = (_c = options.classNames) != null ? _c : "";
+    this.hidden = (_d = options.hidden) != null ? _d : false;
+    this.fixedSize = options.fixedSize;
+  }
+  static enableAnimation() {
+    document.documentElement.classList.add("animateBoxes");
+  }
+  static disableAnimation() {
+    document.documentElement.classList.remove("animateBoxes");
+  }
+  static setGlobalCursor(value) {
+    if (value)
+      document.documentElement.classList.add("inheritCursor");
+    else
+      document.documentElement.classList.remove("inheritCursor");
+    document.documentElement.style.cursor = value;
+  }
+  toJSON() {
+    return {
+      0: this[0] && this[0].toJSON(),
+      1: this[1] && this[1].toJSON(),
+      ratio: this.ratio,
+      type: this.vertical ? "vbox" : "hbox",
+      fixedSize: this.fixedSize || null,
+      hidden: this.hidden,
+      color: this.color,
+      size: this.size
+    };
+  }
+  onMouseDown(e) {
+    let button = e.button;
+    if (button !== 0)
+      return;
+    let box = this;
+    let rect = this.element.getBoundingClientRect();
+    let x = e.clientX;
+    let y = e.clientY;
+    document.body.classList.add("dragging");
+    let onMouseMove = function(e2) {
+      x = e2.clientX - rect.left - box.padding.left;
+      y = e2.clientY - rect.top - box.padding.top;
+      let height = rect.height - box.padding.top - box.padding.bottom;
+      let width = rect.width - box.padding.left - box.padding.right;
+      if (box.fixedChild) {
+        if (box.vertical) {
+          box.fixedChild.fixedSize = box.fixedChild === box[1] ? height - y : y;
+        } else {
+          box.fixedChild.fixedSize = box.fixedChild === box[1] ? width - x : x;
+        }
+        box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize, box.fixedChild.minSize);
+        box.ratio = void 0;
+      } else {
+        if (box.vertical) {
+          box.ratio = y / height;
+        } else {
+          box.ratio = x / width;
+        }
+        box.ratio = Math.max(box.minRatio, Math.min(box.ratio, box.maxRatio));
+      }
+      box.resize();
+    };
+    let onResizeEnd = function(e2) {
+      Box.setGlobalCursor("");
+      document.body.classList.remove("dragging");
+    };
+    Box.setGlobalCursor(`${box.vertical ? "ns" : "ew"}-resize`);
+    lib_event.capture(window, onMouseMove, onResizeEnd);
+    return e.preventDefault();
+  }
+  resize() {
+    if (!this.box)
+      return;
+    this.setBox(...this.box);
+  }
+  calculateMinMaxRatio() {
+    if (!this.box || !this[0] && !this[1])
+      return;
+    let propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
+    let size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
+    this.minRatio = this[0] ? this[0][propertyName] / size : 0;
+    this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
+  }
+  render() {
+    if (this.element)
+      return this.element;
+    this.element = dom.buildDom(["div", {
+      class: "box" + this.classNames,
+      $host: this
+    }]);
+    this.splitter = dom.buildDom(["div", {
+      class: `splitter splitter${this.vertical ? "-v" : "-h"}`
+    }, ["div"]]);
+    this.splitter.onmousedown = this.onMouseDown.bind(this);
+    this.element.appendChild(this.splitter);
+    this.element.$host = this;
+    this.element.style.backgroundColor = this.color;
+    this.element.style.position = "absolute";
+    this.renderToolBarList();
+    this.renderChildren();
+    if (!this.ratio)
+      this.calculateRatio();
+    return this.element;
+  }
+  renderToolBarList() {
+    for (let position in this.toolBars) {
+      this.addToolBar(position, this.toolBars[position]);
+    }
+  }
+  addToolBar(position, bar) {
+    var _a, _b;
+    if (position == "left" || position == "right")
+      bar.direction = "vertical";
+    (_b = (_a = this.toolBars[position]) == null ? void 0 : _a.element) == null ? void 0 : _b.remove();
+    bar.position = position;
+    this.padding[position] = bar.size;
+    this.element.appendChild(bar.render());
+    this.toolBars[position] = bar;
+  }
+  removeToolBar(position) {
+    delete this.toolBars[position];
+    this.padding[position] = 0;
+  }
+  renderChildren() {
+    this.renderChild(this[0]);
+    this.renderChild(this[1]);
+    this.calculateMinSize();
+  }
+  renderChild(child) {
+    if (!child)
+      return;
+    child.on("editorAdded", this.$editorAdded);
+    this.element.appendChild(child.render());
+  }
+  calculateMinSize(forceChildrenSize = false) {
+    let childrenMinVerticalSize = 0;
+    let childrenMinHorizontalSize = 0;
+    let calculateChildBoxMinSize = (childBox) => {
+      if (this.vertical) {
+        childrenMinVerticalSize += childBox.minVerticalSize;
+        childrenMinHorizontalSize = Math.max(childBox.minHorizontalSize, childrenMinHorizontalSize);
+      } else {
+        childrenMinVerticalSize = Math.max(childBox.minVerticalSize, childrenMinVerticalSize);
+        childrenMinHorizontalSize += childBox.minHorizontalSize;
+      }
+    };
+    if (this[0])
+      calculateChildBoxMinSize(this[0]);
+    if (this[1])
+      calculateChildBoxMinSize(this[1]);
+    if (forceChildrenSize) {
+      this.minVerticalSize = childrenMinVerticalSize;
+      this.minHorizontalSize = childrenMinHorizontalSize;
+    } else {
+      this.minVerticalSize = Math.max(this.minVerticalSize, childrenMinVerticalSize);
+      this.minHorizontalSize = Math.max(this.minHorizontalSize, childrenMinHorizontalSize);
+    }
+    this.minSize = this.vertical ? this.minVerticalSize : this.minHorizontalSize;
+    this.calculateMinMaxRatio();
+  }
+  calculateRatio() {
+    if (this[0]) {
+      this.calculateChildRatio(this[0]);
+    }
+    if (this.ratio || this.fixedChild) {
+      return;
+    }
+    if (this[1]) {
+      this.calculateChildRatio(this[1]);
+    }
+    if (!this.ratio && !this.fixedChild) {
+      this.ratio = 0.5;
+    }
+  }
+  calculateChildRatio(childBox, isSecond = false) {
+    if (!childBox.size) {
+      return;
+    }
+    let size = childBox.size;
+    switch (this.sizeUnit) {
+      case SizeUnit.px:
+        childBox.fixedSize = size;
+        this.fixedChild = childBox;
+        break;
+      case SizeUnit.percent:
+        if (isSecond) {
+          size = 100 - size;
+        }
+        this.ratio = Math.min(size / 100, 1);
+        break;
+    }
+  }
+  renderButtons(buttonList) {
+    let buttons = buttonList.map((button) => {
+      return dom.buildDom(["div", {
+        class: "button " + button.class,
+        title: button.title,
+        onclick: button.onclick
+      }, button.content]);
+    });
+    this.setButtons(buttons);
+  }
+  /**
+   * Sets buttons of this box top-right tabBar
+   */
+  setButtons(buttons) {
+    if (this.topRightPane)
+      this.topRightPane.removeButtons();
+    this.topRightPane = this.getTopRightPane();
+    if (this.topRightPane)
+      this.topRightPane.setButtons(buttons);
+  }
+  addButton(button) {
+    this.topRightPane = this.getTopRightPane();
+    if (this.topRightPane)
+      this.topRightPane.addButton(button);
+  }
+  /**
+   * Finds the most top-right Pane
+   */
+  getTopRightPane() {
+    let childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
+    if (!childBox)
+      return;
+    return childBox.getTopRightPane();
+  }
+  setBox(x, y, w, h) {
+    this.box = [x, y, w, h];
+    if (this.isMaximized) {
+      x = 0;
+      y = 0;
+      w = window.innerWidth;
+      h = window.innerHeight;
+    }
+    Utils.setBox(this.element, x, y, w, h);
+    this.calculateMinMaxRatio();
+    this.$updateChildSize(x, y, w, h);
+  }
+  $updateChildSize(x, y, w, h) {
+    var _a;
+    let splitterSize = SPLITTER_SIZE;
+    if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
+      this.splitter.style.display = "none";
+      splitterSize = 0;
+    } else {
+      this.splitter.style.display = "";
+    }
+    this.updateToolBarSize(w, h);
+    w -= this.padding.left + this.padding.right;
+    h -= this.padding.top + this.padding.bottom;
+    x = this.padding.left;
+    y = this.padding.top;
+    if (this.fixedChild) {
+      let size = this.fixedChild.fixedSize;
+      if (this.fixedChild === this[1]) {
+        size = this.vertical ? h - size : w - size;
+      }
+      this.ratio = this.vertical ? size / h : size / w;
+    }
+    this.ratio = Math.max(this.minRatio, Math.min((_a = this.ratio) != null ? _a : this.maxRatio, this.maxRatio));
+    let ratio = this.ratio;
+    if (!this[0] || this[0].hidden) {
+      ratio = 0;
+    } else if (!this[1] || this[1].hidden) {
+      ratio = 1;
+    }
+    if (this.vertical) {
+      let splitY = h * ratio - splitterSize;
+      if (this.splitter)
+        Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
+      if (this[0])
+        this[0].setBox(x, y, w, splitY);
+      if (this[1])
+        this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
+    } else {
+      let splitX = w * ratio - splitterSize;
+      if (this.splitter)
+        Utils.setBox(this.splitter, x + splitX, y, splitterSize, h);
+      if (this[0])
+        this[0].setBox(x, y, splitX, h);
+      if (this[1])
+        this[1].setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
+    }
+  }
+  updateToolBarSize(width, height) {
+    let bar, x, y, w, h;
+    for (let type in this.toolBars) {
+      x = 0;
+      y = 0;
+      w = width;
+      h = height;
+      bar = this.toolBars[type];
+      switch (type) {
+        case "top":
+        case "bottom":
+          h = bar.size;
+          if (type === "bottom")
+            y = height - bar.size;
+          break;
+        case "left":
+        case "right":
+          w = bar.size;
+          y = this.padding.top;
+          h -= this.padding.top + this.padding.bottom;
+          if (type === "right")
+            x = width - bar.size;
+          break;
+        default:
+          continue;
+      }
+      bar.setBox(x, y, w, h);
+    }
+  }
+  restore(disableAnimation = false) {
+    let node = this.element;
+    function rmClass(ch, cls) {
+      for (let i = 0; i < ch.length; i++) {
+        if (ch[i].classList)
+          ch[i].classList.remove(cls);
+      }
+    }
+    let finishRestore = () => {
+      classes.forEach(function(className) {
+        rmClass(document.querySelectorAll("." + className), className);
+      });
+      this.setBox(...this.box);
+    };
+    let classes = [
+      "fullScreenSibling",
+      "fullScreenNode",
+      "fullScreenParent"
+    ];
+    this.isMaximized = false;
+    if (disableAnimation) {
+      finishRestore();
+    } else {
+      Box.enableAnimation();
+      node.addEventListener("transitionend", function handler(l) {
+        Box.disableAnimation();
+        node.removeEventListener("transitionend", handler);
+        finishRestore();
+      });
+    }
+    let parentRect = node.parentNode.getBoundingClientRect();
+    let top = parentRect.top + this.box[1];
+    let left = parentRect.left + this.box[0];
+    Utils.setBox(node, left, top, this.box[2], this.box[3]);
+  }
+  maximize(disableAnimation = false) {
+    let node = this.element;
+    function addClasses() {
+      node.classList.add("fullScreenNode");
+      let parent = node.parentNode;
+      while (parent && parent !== document.body) {
+        if (parent.classList)
+          parent.classList.add("fullScreenParent");
+        let childNodes = parent.childNodes;
+        for (let i = 0; i < childNodes.length; i++) {
+          let childNode = childNodes[i];
+          if (childNode != node && childNode.classList && !childNode.classList.contains("fullScreenParent"))
+            childNode.classList.add("fullScreenSibling");
+        }
+        parent = parent.parentNode;
+      }
+    }
+    let rect = node.getBoundingClientRect();
+    Utils.setBox(node, rect.left, rect.top, rect.width, rect.height);
+    addClasses();
+    this.isMaximized = true;
+    node.getBoundingClientRect();
+    if (!disableAnimation) {
+      Box.enableAnimation();
+      node.addEventListener("transitionend", function handler() {
+        node.removeEventListener("transitionend", handler);
+        Box.disableAnimation();
+      });
+    }
+    this.setBox(...this.box);
+  }
+  toggleMaximize() {
+    if (this.isMaximized)
+      this.restore();
+    else
+      this.maximize();
+  }
+  remove() {
+    this.removeAllChildren();
+    if (this.element)
+      this.element.remove();
+    if (this.parent) {
+      if (this.parent[0] == this)
+        this.parent[0] = void 0;
+      if (this.parent[1] == this)
+        this.parent[1] = void 0;
+      this.parent.recalculateAllMinSizes();
+      this.parent = void 0;
+    }
+  }
+  removeAllChildren() {
+    this.removeChild(this[0]);
+    this.removeChild(this[1]);
+    this[0] = void 0;
+    this[1] = void 0;
+  }
+  removeChild(child) {
+    if (!child)
+      return;
+    child.off("editorAdded", this.$editorAdded);
+    child.remove();
+    child.element.remove();
+  }
+  toggleShowHide() {
+    var _a;
+    Box.enableAnimation();
+    this.hidden = !this.hidden;
+    (_a = this.parent) == null ? void 0 : _a.resize();
+    let node = this.element;
+    let self = this;
+    node.addEventListener("transitionend", function handler() {
+      var _a2;
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+      (_a2 = self.parent) == null ? void 0 : _a2.resize();
+    });
+  }
+  hide() {
+    var _a;
+    Box.enableAnimation();
+    this.hidden = true;
+    (_a = this.parent) == null ? void 0 : _a.resize();
+    let node = this.element;
+    let self = this;
+    node.addEventListener("transitionend", function handler() {
+      var _a2;
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+      (_a2 = self.parent) == null ? void 0 : _a2.resize();
+    });
+  }
+  show() {
+    var _a;
+    Box.enableAnimation();
+    this.hidden = false;
+    (_a = this.parent) == null ? void 0 : _a.resize();
+    let node = this.element;
+    let self = this;
+    node.addEventListener("transitionend", function handler() {
+      var _a2;
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+      (_a2 = self.parent) == null ? void 0 : _a2.resize();
+    });
+  }
+  /**
+   *
+   * @param {Number} previousBoxIndex
+   * @param {Box} box
+   * @returns {Box}
+   */
+  addChildBox(previousBoxIndex, box) {
+    let previousBox, index;
+    if (previousBoxIndex instanceof Box) {
+      previousBox = previousBoxIndex;
+      index = this[0] == previousBox ? 0 : 1;
+    } else {
+      index = previousBoxIndex;
+      previousBox = this[index];
+    }
+    if (previousBox && previousBox === box)
+      return previousBox;
+    let previousParent = box.parent;
+    if (previousParent && previousParent !== this) {
+      let previousIndex = previousParent[0] === box ? 0 : 1;
+      previousParent[previousIndex] = null;
+      previousParent.ratio = 1;
+      if (previousParent.fixedChild && previousParent.fixedChild === box) {
+        previousParent.fixedChild = null;
+      }
+      previousParent.resize();
+    }
+    this[index] = box;
+    box.parent = this;
+    this.renderChild(box);
+    if (previousBox && previousBox.isMaximized) {
+      previousBox.restore(true);
+      box.maximize(true);
+    }
+    if (previousBox && previousBox.parent === this) {
+      if (this.fixedChild && this.fixedChild == previousBox) {
+        box.fixedSize = previousBox.fixedSize;
+        if (!box.size)
+          box.size = previousBox.size;
+        previousBox.fixedSize = previousBox.size = null;
+        this.fixedChild = box;
+      }
+      previousBox.remove();
+    }
+    if (!this.fixedChild)
+      this.calculateChildRatio(box);
+    this.recalculateAllMinSizes();
+    this.resize();
+    return box;
+  }
+  recalculateAllMinSizes() {
+    let node = this;
+    while (node) {
+      node.calculateMinSize(true);
+      node = node.parent;
+    }
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/elements/search.ts
+
+class SettingsSearchBox {
+  constructor(prefsParentNode) {
+    this.hideFiltered = false;
+    this.value = "";
+    this.currValue = "";
+    this.searchResultsCount = 0;
+    this.prefsParentNode = prefsParentNode;
+  }
+  filter() {
+    let childNode;
+    let noResult = true;
+    this.searchResultsCount = 0;
+    for (let i = 0; i < this.prefsParentNode.childNodes.length; i++) {
+      childNode = this.prefsParentNode.childNodes[i];
+      this.updateVisibility(childNode);
+      if (noResult && !childNode.isFiltered) {
+        noResult = false;
+      }
+    }
+    if (this.currValue != "") {
+      this.searchResults.innerHTML = " " + this.searchResultsCount + " Preferences Found";
+    } else {
+      this.searchResults.innerHTML = "";
+    }
+  }
+  showHide(item, show) {
+    show = show || false;
+    item.isFiltered = !show;
+    item.style.display = show ? "block" : "none";
+  }
+  updateVisibility(item) {
+    let text = item.innerText;
+    let tokens = this.getTokens(text);
+    let show = true;
+    if (!tokens) {
+      show = false;
+    } else {
+      this.searchResultsCount++;
+    }
+    this.showHide(item, show);
+  }
+  getTokens(string) {
+    let tokens = [];
+    let caption = string.toLowerCase();
+    let lower = this.currValue.toLowerCase();
+    let upper = this.currValue.toUpperCase();
+    function addToken(value, className) {
+      value && tokens.push({
+        type: className || "",
+        value
+      });
+    }
+    let lastIndex = -1;
+    let matchMask = 0;
+    let index, distance;
+    let fullMatchIndex = caption.indexOf(lower);
+    if (fullMatchIndex === -1) {
+      for (let j = 0; j < this.currValue.length; j++) {
+        let i1 = caption.indexOf(lower[j], lastIndex + 1);
+        let i2 = caption.indexOf(upper[j], lastIndex + 1);
+        index = i1 >= 0 ? i2 < 0 || i1 < i2 ? i1 : i2 : i2;
+        if (index < 0)
+          return null;
+        distance = index - lastIndex - 1;
+        if (distance > 0) {
+          matchMask = matchMask | 1 << j;
+        }
+        lastIndex = index;
+      }
+    }
+    let filterText = lower;
+    lower = caption.toLowerCase();
+    lastIndex = 0;
+    let lastI = 0;
+    for (let i = 0; i <= filterText.length; i++) {
+      if (i !== lastI && (matchMask & 1 << i || i === filterText.length)) {
+        let sub = filterText.slice(lastI, i);
+        lastI = i;
+        index = lower.indexOf(sub, lastIndex);
+        if (index === -1)
+          continue;
+        addToken(string.slice(lastIndex, index), "");
+        lastIndex = index + sub.length;
+        addToken(string.slice(index, lastIndex), "completion-highlight");
+      }
+    }
+    addToken(string.slice(lastIndex, string.length), "");
+    return tokens;
+  }
+  build() {
+    this.element = dom.buildDom([
+      "div",
+      {},
+      ["input", { class: "search_field tbsimple", placeholder: "Search preferences" }],
+      ["span", { class: "search_results" }],
+      ["span", { class: "searchbtn_close" }]
+    ]);
+    this.element.$host = this;
+    this.searchField = this.element.querySelector(".search_field");
+    this.searchResults = this.element.querySelector(".search_results");
+    let _this = this;
+    this.element.querySelector(".searchbtn_close").addEventListener("mousedown", function(e) {
+      _this.clear();
+    });
+    this.searchField.addEventListener("input", function(e) {
+      _this.currValue = e.target.value;
+      _this.filter();
+    });
+  }
+  clear() {
+    if (this.currValue.length) {
+      this.searchField.value = "";
+      this.currValue = "";
+      this.filter();
+    }
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(93379);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(7795);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(90569);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(3565);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(19216);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(44589);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/switcher.css
+var switcher = __webpack_require__(83619);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/switcher.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(switcher/* default */.Z, options);
+
+
+
+
+       /* harmony default export */ const styles_switcher = (switcher/* default */.Z && switcher/* default.locals */.Z.locals ? switcher/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/elements/switcher.ts
+var __defProp = Object.defineProperty;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __objRest = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+
+
+dom.importCssString(switcher_namespaceObject, "switcher.css");
+class Switcher {
+  constructor(options) {
+    let _a = options, { className, checked } = _a, other = __objRest(_a, ["className", "checked"]);
+    this.className = className || "cboffline";
+    this.options = other;
+    this.checked = checked || false;
+  }
+  render() {
+    this.element = dom.buildDom(["div", __spreadValues({
+      class: this.className + (this.checked ? " " + this.className + "Checked" : ""),
+      onmousedown: (e) => {
+        e.preventDefault();
+        this.checked = !this.checked;
+        e.target.className = this.className + (this.checked ? " " + this.className + "Down" : "");
+      },
+      onclick: (e) => {
+        e.preventDefault();
+        e.target.className = this.className + (this.checked ? " " + this.className + "Checked" : "");
+      }
+    }, this.options), ""]);
+    this.element.$host = this;
+    return this.element;
+  }
+  toJSON() {
+  }
+  remove() {
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/button.css
+var styles_button = __webpack_require__(75715);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/button.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var button_options = {};
+
+button_options.styleTagTransform = (styleTagTransform_default());
+button_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      button_options.insert = insertBySelector_default().bind(null, "head");
+    
+button_options.domAPI = (styleDomAPI_default());
+button_options.insertStyleElement = (insertStyleElement_default());
+
+var button_update = injectStylesIntoStyleTag_default()(styles_button/* default */.Z, button_options);
+
+
+
+
+       /* harmony default export */ const ace_layout_styles_button = (styles_button/* default */.Z && styles_button/* default.locals */.Z.locals ? styles_button/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/elements/button.ts
+var button_defProp = Object.defineProperty;
+var button_getOwnPropSymbols = Object.getOwnPropertySymbols;
+var button_hasOwnProp = Object.prototype.hasOwnProperty;
+var button_propIsEnum = Object.prototype.propertyIsEnumerable;
+var button_defNormalProp = (obj, key, value) => key in obj ? button_defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var button_spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (button_hasOwnProp.call(b, prop))
+      button_defNormalProp(a, prop, b[prop]);
+  if (button_getOwnPropSymbols)
+    for (var prop of button_getOwnPropSymbols(b)) {
+      if (button_propIsEnum.call(b, prop))
+        button_defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var button_objRest = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (button_hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && button_getOwnPropSymbols)
+    for (var prop of button_getOwnPropSymbols(source)) {
+      if (exclude.indexOf(prop) < 0 && button_propIsEnum.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+
+
+dom.importCssString(button_namespaceObject, "button.css");
+class Button {
+  constructor(options) {
+    let _a = options, { disabled, value, className } = _a, other = button_objRest(_a, ["disabled", "value", "className"]);
+    this.disabled = disabled;
+    this.value = value;
+    this.className = className || "blackbutton";
+    this.options = other;
+  }
+  remove() {
+  }
+  render() {
+    this.element = dom.buildDom(["div", button_spreadValues({
+      class: this.className + (this.disabled ? this.className + "Disabled" : ""),
+      onmousedown: (e) => {
+        e.preventDefault();
+        e.target.className = this.className + " " + this.className + "Down";
+      },
+      onmouseup: (e) => {
+        e.target.className = this.className;
+      },
+      onmouseover: (e) => {
+        e.target.className = this.className + " " + this.className + "Over";
+      },
+      onfocus: (e) => {
+        e.target.className = this.className + " " + this.className + "Focus";
+      },
+      onunfocus: (e) => {
+        e.target.className = this.className;
+      },
+      onmouseout: (e) => {
+        e.target.className = this.className;
+      }
+    }, this.options), this.value]);
+    this.element.$host = this;
+    return this.element;
+  }
+  toJSON() {
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/dropdown.css
+var dropdown = __webpack_require__(86800);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/dropdown.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var dropdown_options = {};
+
+dropdown_options.styleTagTransform = (styleTagTransform_default());
+dropdown_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      dropdown_options.insert = insertBySelector_default().bind(null, "head");
+    
+dropdown_options.domAPI = (styleDomAPI_default());
+dropdown_options.insertStyleElement = (insertStyleElement_default());
+
+var dropdown_update = injectStylesIntoStyleTag_default()(dropdown/* default */.Z, dropdown_options);
+
+
+
+
+       /* harmony default export */ const styles_dropdown = (dropdown/* default */.Z && dropdown/* default.locals */.Z.locals ? dropdown/* default.locals */.Z.locals : undefined);
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/menu.css
+var menu = __webpack_require__(47594);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/menu.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var menu_options = {};
+
+menu_options.styleTagTransform = (styleTagTransform_default());
+menu_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      menu_options.insert = insertBySelector_default().bind(null, "head");
+    
+menu_options.domAPI = (styleDomAPI_default());
+menu_options.insertStyleElement = (insertStyleElement_default());
+
+var menu_update = injectStylesIntoStyleTag_default()(menu/* default */.Z, menu_options);
+
+
+
+
+       /* harmony default export */ const styles_menu = (menu/* default */.Z && menu/* default.locals */.Z.locals ? menu/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/elements/dropdown.ts
+var dropdown_defProp = Object.defineProperty;
+var dropdown_getOwnPropSymbols = Object.getOwnPropertySymbols;
+var dropdown_hasOwnProp = Object.prototype.hasOwnProperty;
+var dropdown_propIsEnum = Object.prototype.propertyIsEnumerable;
+var dropdown_defNormalProp = (obj, key, value) => key in obj ? dropdown_defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var dropdown_spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (dropdown_hasOwnProp.call(b, prop))
+      dropdown_defNormalProp(a, prop, b[prop]);
+  if (dropdown_getOwnPropSymbols)
+    for (var prop of dropdown_getOwnPropSymbols(b)) {
+      if (dropdown_propIsEnum.call(b, prop))
+        dropdown_defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var dropdown_objRest = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (dropdown_hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && dropdown_getOwnPropSymbols)
+    for (var prop of dropdown_getOwnPropSymbols(source)) {
+      if (exclude.indexOf(prop) < 0 && dropdown_propIsEnum.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+
+
+
+
+dom.importCssString(dropdown_namespaceObject, "dropdown.css");
+dom.importCssString(menu_namespaceObject, "menu.css");
+const DEFAULT_WIDTH = 200;
+class Dropdown {
+  constructor(options) {
+    this.onMouseDown = (e) => {
+      e.preventDefault();
+      let node = Utils.findNode(e.target, this.className);
+      if (node && node == this.element)
+        return;
+      node = Utils.findNode(e.target, this.popup.element.className);
+      if (node && node == this.popup.element)
+        return;
+      this.closePopup();
+    };
+    this.onMouseWheel = (e) => {
+      this.closePopup();
+    };
+    let _a = options, { disabled, items, value, className, width } = _a, other = dropdown_objRest(_a, ["disabled", "items", "value", "className", "width"]);
+    this.disabled = disabled != null ? disabled : false;
+    this.items = items;
+    this.value = value != null ? value : items[0].value;
+    this.className = className || "black_dropdown";
+    this.width = width != null ? width : DEFAULT_WIDTH;
+    this.options = other;
+  }
+  render() {
+    this.element = dom.buildDom(["div", dropdown_spreadValues({
+      class: this.className + (this.disabled ? this.className + "Disabled" : ""),
+      style: "width: " + this.width + "px",
+      onmousedown: (e) => {
+        e.preventDefault();
+        this.element.className = this.className + " " + this.className + "Down";
+        this.togglePopup();
+      },
+      onmouseup: (e) => {
+        this.element.className = this.className;
+      },
+      onmouseover: (e) => {
+        this.element.className = this.className + " " + this.className + "Over";
+      },
+      onfocus: (e) => {
+        this.element.className = this.className + " " + this.className + "Focus";
+      },
+      onunfocus: (e) => {
+        this.element.className = this.className;
+      },
+      onmouseout: (e) => {
+        this.element.className = this.className;
+      }
+    }, this.options), [
+      ["div", {
+        class: "lbl",
+        ref: "lbl"
+      }],
+      ["div", {
+        class: "button"
+      }]
+    ]], void 0, this);
+    this.element.$host = this;
+    this.updateLabel();
+    return this.element;
+  }
+  togglePopup() {
+    if (this.isPopupOpen) {
+      this.closePopup();
+    } else {
+      this.openPopup();
+    }
+  }
+  openPopup() {
+    if (this.isPopupOpen)
+      return;
+    this.popup = new Popup();
+    this.popup.items = this.items;
+    this.popup.selectedItem = this.value;
+    this.popup.parent = this;
+    this.popup.selectCallback = (host) => {
+      this.select(host.value);
+      this.closePopup();
+    };
+    this.popup.open();
+    window.addEventListener("mousedown", this.onMouseDown);
+    window.addEventListener("wheel", this.onMouseWheel);
+    this.isPopupOpen = true;
+  }
+  closePopup() {
+    if (!this.isPopupOpen)
+      return;
+    this.popup.close();
+    this.isPopupOpen = false;
+    window.removeEventListener("mousedown", this.onMouseDown);
+    window.removeEventListener("wheel", this.onMouseWheel);
+  }
+  select(value) {
+    this.setValue(value);
+  }
+  setValue(value) {
+    if (this.value !== value) {
+      this.value = value;
+      this.updateLabel();
+    }
+  }
+  updateLabel() {
+    let items = this.items;
+    for (let i = 0; i < items.length; i++) {
+      let x = items[i];
+      let itemValue = x.value;
+      if (this.value === itemValue) {
+        this.lbl.innerHTML = x.caption;
+        return;
+      }
+    }
+  }
+  toJSON() {
+  }
+}
+class Popup {
+  open() {
+    this.build();
+    this.render();
+  }
+  build() {
+    if (this.element) {
+      return;
+    }
+    let result = [];
+    if (this.items) {
+      let items = Object.values(this.items).sort(function(item1, item2) {
+        return item1.position - item2.position;
+      });
+      let afterDivider = true;
+      result = items.map((item) => {
+        if (item.caption[0] === "~") {
+          if (afterDivider)
+            return;
+          afterDivider = true;
+          return [
+            "div",
+            {
+              class: "menu_divider",
+              $host: item
+            }
+          ];
+        }
+        afterDivider = false;
+        let classList = ["menu_item"];
+        if (item.checked)
+          classList.push(item.type === "check" ? "checked" : "selected");
+        if (item.map)
+          classList.push("submenu");
+        if (item.disabled)
+          classList.push("disabled");
+        if (item.value === this.selectedItem)
+          classList.push("selected");
+        return [
+          "div",
+          {
+            class: classList.join(" "),
+            $host: item
+          },
+          ["u", " "],
+          ["a", item.caption + ""],
+          [
+            "span",
+            {
+              class: "shortcut"
+            },
+            item.hotKey
+          ]
+        ];
+      }).filter(Boolean);
+      if (afterDivider)
+        result.pop();
+    }
+    this.element = dom.buildDom(
+      [
+        "blockquote",
+        {
+          class: "menu",
+          style: "display:block",
+          $host: this.parent,
+          onmousemove: this.onMouseMove.bind(this),
+          onclick: this.onClick.bind(this)
+        },
+        result
+      ],
+      document.body
+    );
+  }
+  render() {
+    if (this.element.style.maxWidth) {
+      this.element.style.maxWidth = window.innerWidth + "px";
+    }
+    if (this.element.style.maxHeight) {
+      this.element.style.maxHeight = window.innerHeight + "px";
+    }
+    let elRect = this.element.getBoundingClientRect();
+    let edge = Utils.getElementEdges(this.element);
+    let parentRect, top, left;
+    if (this.parent && this.parent.element) {
+      parentRect = this.parent.element.getBoundingClientRect();
+    }
+    if (parentRect) {
+      if (this.isSubMenu) {
+        top = parentRect.top - edge.top;
+        left = parentRect.right;
+      } else {
+        top = parentRect.bottom;
+        left = parentRect.left;
+      }
+    } else {
+      top = this.position.y;
+      left = this.position.x;
+    }
+    let targetH = Math.min(elRect.height, window.innerHeight);
+    let availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
+    if (availableH < targetH && (!parentRect || this.isSubMenu)) {
+      let tmpTop = parentRect ? window.innerHeight : top;
+      top = tmpTop - targetH - edge.top;
+      availableH = window.innerHeight - top - edge.top - edge.bottom - 2;
+    }
+    this.element.style.maxHeight = availableH - 10 + "px";
+    elRect = this.element.getBoundingClientRect();
+    let availableW = window.innerWidth - left - edge.left - edge.right - 2;
+    if (availableW < elRect.width) {
+      if (parentRect) {
+        let tmpLeft = this.isSubMenu ? parentRect.left : parentRect.right;
+        if (tmpLeft > availableW) {
+          this.direction = "left";
+          left = tmpLeft - elRect.width + edge.left;
+          left = Math.max(left, 0);
+          availableW = tmpLeft + edge.left + edge.right;
+        }
+        if (availableW < elRect.width) {
+          this.element.style.maxWidth = availableW + "px";
+          this.element.style.overflowX = "auto";
+        }
+      } else {
+        left = window.innerWidth - elRect.width - edge.left - edge.right;
+      }
+    }
+    this.element.style.top = top + "px";
+    this.element.style.left = left + "px";
+    this.element.style.position = "absolute";
+    this.element.style.zIndex = 195055;
+    this.element.style.overflowY = "auto";
+  }
+  close() {
+    if (this.element) {
+      this.element.remove();
+      delete this.element;
+    }
+  }
+  scrollIfNeeded() {
+    if (!this.selectedMenu) {
+      return;
+    }
+    let menu = this.element;
+    let item = this.selectedMenu.buttonElement;
+    let menuRect = menu.getBoundingClientRect();
+    let itemRect = item.getBoundingClientRect();
+    if (itemRect.top < menuRect.top) {
+      item.scrollIntoView(true);
+    } else if (itemRect.bottom > menuRect.bottom) {
+      item.scrollIntoView(false);
+    }
+  }
+  //handle events
+  onMouseMove(e) {
+    if (e.target === this.element) {
+      return;
+    }
+    let target = Utils.findHostTarget(e.target);
+    if (target === this.element) {
+      return;
+    }
+    if (target == this.activeItem) {
+      return;
+    }
+    if (this.activeItem) {
+      this.activeItem.classList.remove("hover");
+    }
+    this.activeItem = target;
+    this.activeItem.classList.add("hover");
+  }
+  onClick(e) {
+    if (e.target === this.element)
+      return;
+    let target = Utils.findHostTarget(e.target);
+    if (target === this.element)
+      return;
+    let host = target.$host;
+    this.selectCallback && this.selectCallback(host);
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/demo/preferences/preferences.css
+var preferences = __webpack_require__(85334);
+;// CONCATENATED MODULE: ./packages/demo/preferences/preferences.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var preferences_options = {};
+
+preferences_options.styleTagTransform = (styleTagTransform_default());
+preferences_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      preferences_options.insert = insertBySelector_default().bind(null, "head");
+    
+preferences_options.domAPI = (styleDomAPI_default());
+preferences_options.insertStyleElement = (insertStyleElement_default());
+
+var preferences_update = injectStylesIntoStyleTag_default()(preferences/* default */.Z, preferences_options);
+
+
+
+
+       /* harmony default export */ const preferences_preferences = (preferences/* default */.Z && preferences/* default.locals */.Z.locals ? preferences/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/toolbar.ts
+
+class Toolbar {
+  setBox(x, y, w, h) {
+    Utils.setBox(this.element, x, y, w, h);
+  }
+  constructor(options) {
+    this.direction = (options == null ? void 0 : options.direction) || "horizontal";
+    this.size = (options == null ? void 0 : options.size) || 27;
+    this.position = options == null ? void 0 : options.position;
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/tabPanelBar.ts
+
+class TabPanelBar extends Toolbar {
+  constructor(options) {
+    var _a, _b;
+    super(options);
+    this.selectedTabs = [];
+    this.tabList = [];
+    this.scrollLeft = 0;
+    this.animationSteps = 0;
+    this.MIN_TAB_SIZE = 120;
+    this.MAX_TAB_SIZE = 150;
+    this.activeTabHistory = [];
+    this.onMouseWheel = (e) => {
+      let d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (Math.abs(d) > 50) {
+        this.animateScroll(d);
+      } else {
+        this.stopScrollAnimation();
+        this.setScrollPosition((this.scrollLeft || 0) + d);
+      }
+    };
+    this.initTabList = (_b = (_a = options.tabList) != null ? _a : options.panelList) != null ? _b : [];
+  }
+  isVertical() {
+    return this.direction === "vertical";
+  }
+  getDraggingElementSize() {
+    if (!this.tabDraggingElement)
+      return 0;
+    let draggingElementSize = this.isVertical() ? this.tabDraggingElement.style.height : this.tabDraggingElement.style.width;
+    return parseInt(draggingElementSize, 10);
+  }
+  tabMouseDown(tab, expand = false, toggle = false) {
+    if (expand) {
+      this.expandSelection(tab, toggle);
+    } else {
+      this.anchorTab = null;
+      if (toggle) {
+        this.toggleSelection(tab);
+      } else {
+        this.activateTab(tab, void 0, this.selectedTabs.indexOf(tab) < 0);
+      }
+    }
+  }
+  expandSelection(tab, toggle = false) {
+    if (!this.anchorTab)
+      this.anchorTab = this.activeTab;
+    let prevSelectedTabs = this.selectedTabs;
+    this.selectedTabs = [];
+    let start = this.tabList.indexOf(this.anchorTab);
+    let end = this.tabList.indexOf(tab);
+    if (end < start) {
+      [start, end] = [end, start];
+    }
+    for (let i = start; i <= end; i++) {
+      this.addSelection(this.tabList[i]);
+    }
+    prevSelectedTabs.forEach((selectedTab) => {
+      if (this.selectedTabs.indexOf(selectedTab) < 0) {
+        if (!toggle) {
+          this.deselectTab(selectedTab);
+        } else {
+          this.addSelection(selectedTab);
+        }
+      }
+    });
+    this.activateTab(tab);
+  }
+  toggleSelection(tab) {
+    let index = this.selectedTabs.indexOf(tab);
+    if (index < 0) {
+      this.activateTab(tab);
+    } else if (tab !== this.activeTab) {
+      this.removeSelection(tab);
+    }
+  }
+  addSelection(tab) {
+    if (this.selectedTabs.indexOf(tab) < 0) {
+      this.selectTab(tab);
+      this.selectedTabs.push(tab);
+    }
+  }
+  selectTab(tab) {
+    tab.element.classList.add("selected");
+  }
+  deselectTab(tab) {
+    tab.element.classList.remove("selected");
+  }
+  removeSelection(tab) {
+    if (this.selectedTabs.indexOf(tab) < 0)
+      return;
+    this.deselectTab(tab);
+    this.selectedTabs.splice(this.selectedTabs.indexOf(tab), 1);
+  }
+  removeSelections() {
+    this.selectedTabs.forEach((selectedTab) => {
+      this.deselectTab(selectedTab);
+    });
+    this.selectedTabs = [];
+  }
+  scrollTabIntoView(tab) {
+    let index = this.tabList.indexOf(tab);
+    this.setScrollPosition((index + 1) * this.tabWidth);
+  }
+  activateTab(tab, content, removeSelections = false) {
+    removeSelections && this.removeSelections();
+    this.activeTabClicked = false;
+    this.addSelection(tab);
+    if (this.activeTab) {
+      if (this.activeTab === tab) {
+        this.activeTabClicked = true;
+        return;
+      }
+      if (this.activeTabHistory.indexOf(this.activeTab) >= 0)
+        this.activeTabHistory.splice(this.activeTabHistory.indexOf(this.activeTab), 1);
+      this.activeTabHistory.push(this.activeTab);
+      this.activeTab.deactivate();
+    }
+    tab.activate();
+    this.activeTab = tab;
+    this.configure();
+  }
+  removeTab(tab) {
+    if (tab === this.activeTab)
+      this.activeTab = void 0;
+    let index = this.tabList.indexOf(tab);
+    if (index >= 0)
+      this.tabList.splice(index, 1);
+    tab.parent = void 0;
+  }
+  activatePrevious(index) {
+    if (this.tabList.length) {
+      let tab = this.tabList[index - 1] || this.tabList[this.tabList.length - 1];
+      this.activateTab(tab);
+    }
+  }
+  addTab(tab, index, content) {
+    if (!tab.element)
+      tab.render();
+    tab.parent = this;
+    if (index === void 0 || index === null || index >= this.tabList.length) {
+      this.tabContainer.appendChild(tab.element);
+      this.tabList.push(tab);
+    } else {
+      this.tabContainer.insertBefore(tab.element, this.tabContainer.childNodes[index]);
+      this.tabList.splice(index, 0, tab);
+    }
+    if (tab.active)
+      this.activateTab(tab, content, true);
+    this.configure();
+    return tab;
+  }
+  setScrollPosition(scrollLeft) {
+    this.scrollLeft = scrollLeft;
+    this.configure();
+  }
+  animateScroll(v) {
+    this.vX = v / 80;
+    this.animationSteps += 15;
+    if (this.animationSteps > 15) {
+      this.vX *= 1.2 * this.animationSteps / 10;
+      this.animationSteps = 15 + Math.ceil((this.animationSteps - 15) * 0.75);
+    }
+    if (this.animationTimer)
+      return;
+    this.animationTimer = setInterval(() => {
+      if (this.animationSteps-- <= 0) {
+        return this.stopScrollAnimation();
+      }
+      let vX = this.vX;
+      if (Math.abs(this.vX) < 0.01)
+        vX = 0;
+      vX = 0.9 * vX;
+      let oldScrollLeft = this.scrollLeft;
+      this.setScrollPosition(this.scrollLeft + 10 * vX);
+      if (oldScrollLeft == this.scrollLeft)
+        this.animationSteps = 0;
+      this.vX = vX;
+    }, 10);
+  }
+  stopScrollAnimation() {
+    clearInterval(this.animationTimer);
+    this.animationTimer = null;
+    this.animationScrollLeft = null;
+    this.vX = 0;
+  }
+  transform(el, dx, dy) {
+    el.style.left = Math.round(dx) + "px";
+    el.dx = dx;
+    el.dy = dy;
+  }
+  startTabDragging(element, index) {
+    if (this.isDragging)
+      return;
+    this.tabDraggingElement = element;
+    this.draggingElementIndex = index;
+    this.configure();
+    this.isDragging = true;
+  }
+  finishTabDragging() {
+    this.draggingElementIndex = void 0;
+    this.tabDraggingElement = void 0;
+    if (this.activeTabHistory.length) {
+      let removedHistoryTabs = [];
+      for (let i = 0; i < this.activeTabHistory.length; i++) {
+        if (this.tabList.indexOf(this.activeTabHistory[i]) < 0) {
+          removedHistoryTabs.push(this.activeTabHistory[i]);
+        }
+      }
+      removedHistoryTabs.forEach((tab) => {
+        let index = this.activeTabHistory.indexOf(tab);
+        if (index >= 0) {
+          this.activeTabHistory.splice(index, 1);
+        }
+      });
+    }
+    this.configure();
+    this.isDragging = false;
+  }
+  toJSON() {
+    return {
+      tabList: this.tabList.map((tab) => tab.toJSON()),
+      scrollLeft: this.scrollLeft
+    };
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/mouse/tabbar_handler.ts
+
+
+let tabbar_handler_event = __webpack_require__(17989);
+var TabbarHandler;
+((TabbarHandler2) => {
+  TabbarHandler2.tabbarMouseDown = function(e, tabConstructor, tabBarConstructor, showSplit = false) {
+    let divSplit, splitPosition, pane;
+    function hideSplitPosition() {
+      if (!divSplit)
+        return;
+      divSplit.remove();
+      divSplit = splitPosition = pane = null;
+    }
+    function showSplitPosition(e2) {
+      let el = e2.target;
+      if (tabBar) {
+        hideSplitPosition();
+        return;
+      }
+      pane = Utils.findHost(el);
+      if (!pane || !pane.acceptsTab || !pane.acceptsTab(tab)) {
+        hideSplitPosition();
+        return;
+      }
+      if (pane.tabBar.tabList.length === 0) {
+        hideSplitPosition();
+        return;
+      }
+      let dark = false;
+      if (!divSplit) {
+        divSplit = document.createElement("div");
+        document.body.appendChild(divSplit);
+      }
+      divSplit.className = "split-area" + (dark ? " dark" : "");
+      let rect = pane.element.getBoundingClientRect();
+      let bHeight = pane.tabBar.element.clientHeight - 1;
+      rect = {
+        left: rect.left,
+        top: rect.top + bHeight,
+        width: rect.width,
+        height: rect.height - bHeight
+      };
+      let left = (e2.clientX - rect.left) / rect.width;
+      let right = 1 - left;
+      let top = (e2.clientY - rect.top) / rect.height;
+      let bottom = 1 - top;
+      let min = Math.min(left, top, right, bottom);
+      if (min == left) {
+        splitPosition = [true, false];
+        Utils.setBox(divSplit, rect.left, rect.top, rect.width / 2, rect.height);
+      } else if (min == right) {
+        splitPosition = [false, false];
+        Utils.setBox(divSplit, rect.left + rect.width / 2, rect.top, rect.width / 2, rect.height);
+      } else if (min == top) {
+        splitPosition = [true, true];
+        Utils.setBox(divSplit, rect.left, rect.top, rect.width, rect.height / 2);
+      } else if (min == bottom) {
+        splitPosition = [false, true];
+        Utils.setBox(divSplit, rect.left, rect.top + rect.height / 2, rect.width, rect.height / 2);
+      }
+    }
+    if (e.target.classList.contains("tabCloseButton")) {
+      return;
+    }
+    let tab = Utils.findHost(e.target, tabConstructor);
+    if (!tab)
+      return;
+    let tabBar = Utils.findHost(e.target, tabBarConstructor);
+    if (!tabBar)
+      return;
+    let isVertical = tabBar.isVertical();
+    tabBar.tabMouseDown(tab, e.shiftKey, e.ctrlKey);
+    if (e.shiftKey || e.ctrlKey)
+      return;
+    let isDragging = false;
+    let posX, posY, prevX, prevY;
+    let startX = e.clientX, startY = e.clientY;
+    let parentRect, tabElement, index, selectedTabs, hostTabBar, hostIndex;
+    let prevTab, leftMaxX, topMaxY, nextTab, rightMaxX, bottomMaxY;
+    let tabDragElementSize = 0;
+    let tabDragElementLeft = 0;
+    let tabDragElementTop = 0;
+    let calculateNearbyTabsData = function() {
+      if (isVertical) {
+        topMaxY = prevTab && parseInt(prevTab.style.top, 10) + parseInt(prevTab.style.height, 10) / 2 + parentRect.top;
+        bottomMaxY = nextTab && parseInt(nextTab.style.top, 10) + parseInt(nextTab.style.height, 10) / 2 + parentRect.top;
+      } else {
+        if (prevTab) {
+          let prevSibling = prevTab.previousSibling;
+          leftMaxX = prevSibling ? parseInt(prevSibling.style.left, 10) + parseInt(prevSibling.style.width, 10) + parentRect.left : parentRect.left;
+        }
+        rightMaxX = nextTab && parseInt(nextTab.style.left, 10) + parseInt(nextTab.style.width, 10) / 2 + parentRect.left;
+      }
+    };
+    let startDragging = function() {
+      if (isDragging || !tabBar)
+        return;
+      tabElement = dom.buildDom(["div", {
+        class: "tabDragging"
+      }]);
+      let activeIndex = index = tabBar.tabList.indexOf(tab);
+      tabBar.tabContainer.insertBefore(tabElement, tab.element);
+      tabDragElementLeft = parseInt(tab.element.style.left, 10);
+      tabDragElementTop = parseInt(tab.element.style.top, 10);
+      selectedTabs = [];
+      let selectedTab, selectedTabElement;
+      for (let i = 0; i < tabBar.selectedTabs.length; i++) {
+        selectedTab = tabBar.selectedTabs[i];
+        selectedTab.currentIndex = tabBar.tabList.indexOf(selectedTab);
+        if (selectedTab.currentIndex < activeIndex) {
+          index--;
+          if (isVertical) {
+            tabDragElementTop -= parseInt(selectedTab.element.style.top, 10);
+          } else {
+            tabDragElementLeft -= parseInt(selectedTab.element.style.width, 10);
+          }
+        }
+        selectedTabs.push(selectedTab);
+      }
+      selectedTabs.sort(function(tab1, tab2) {
+        return tab1.currentIndex - tab2.currentIndex;
+      });
+      for (let i = 0; i < selectedTabs.length; i++) {
+        selectedTab = selectedTabs[i];
+        selectedTabElement = selectedTab.element;
+        tabElement.appendChild(selectedTabElement);
+        selectedTabElement.style.pointerEvents = "none";
+        if (isVertical) {
+          selectedTabElement.style.top = tabDragElementSize + "px";
+          tabDragElementSize += parseInt(selectedTabElement.style.height, 10);
+        } else {
+          selectedTabElement.style.left = tabDragElementSize + "px";
+          tabDragElementSize += parseInt(selectedTabElement.style.width, 10);
+        }
+        tabBar.removeTab(selectedTab);
+      }
+      prevTab = tabElement.previousSibling;
+      nextTab = tabElement.nextSibling;
+      parentRect = tabBar.element.getBoundingClientRect();
+      if (isVertical) {
+        tabDragElementTop += parentRect.top;
+        posY = startY - tabDragElementTop;
+        posX = startX - parentRect.left;
+      } else {
+        tabDragElementLeft += parentRect.left;
+        posX = startX - tabDragElementLeft;
+        posY = startY - parentRect.top;
+      }
+      prevX = e.clientX;
+      prevY = e.clientY;
+      hostTabBar = tabBar;
+      hostIndex = index;
+      calculateNearbyTabsData();
+      isDragging = true;
+      document.body.appendChild(tabElement);
+      if (isVertical) {
+        Utils.setBox(tabElement, tabDragElementTop, parentRect.left, parentRect.width, tabDragElementSize);
+      } else {
+        Utils.setBox(tabElement, tabDragElementLeft, parentRect.top, tabDragElementSize, parentRect.height);
+      }
+      tabBar.startTabDragging(tabElement, index);
+    };
+    let finishDragging = function() {
+      if (pane && pane.split && splitPosition) {
+        let newPane = pane.split(...splitPosition);
+        tabBar = newPane.tabBar;
+      } else if (!tabBar) {
+        tabBar = hostTabBar;
+      }
+      tabBar.removeSelections();
+      tabElement.remove();
+      let selectedTab;
+      for (let i = 0; i < selectedTabs.length; i++) {
+        selectedTab = selectedTabs[i];
+        selectedTab.element.style.pointerEvents = "";
+        if (selectedTab === tab) {
+          selectedTab.active = true;
+        }
+        tabBar.addTab(selectedTab, index++);
+        tabBar.addSelection(selectedTab);
+      }
+      if (tabBar !== hostTabBar) {
+        hostTabBar.removeSelections();
+        hostTabBar.activatePrevious(hostIndex);
+      }
+      tabBar.finishTabDragging();
+      isDragging = false;
+      hideSplitPosition();
+    };
+    function distance(dx, dy) {
+      return dx * dx + dy * dy;
+    }
+    let onMouseMove = function(e2) {
+      if (e2.type !== "mousemove")
+        return;
+      if (!isDragging) {
+        if (distance(e2.clientX - startX, e2.clientY - startY) < 25)
+          return;
+        startDragging();
+      }
+      function removeTabFromBar() {
+        tabBar.finishTabDragging();
+        tabBar = void 0;
+      }
+      if (tabBar) {
+        tabBar.startTabDragging(tabElement, index);
+        if (!isVertical && (e2.clientX < parentRect.left || e2.clientX > parentRect.left + parentRect.width) || isVertical && (e2.clientY < parentRect.top || e2.clientY > parentRect.top + parentRect.height)) {
+          removeTabFromBar();
+        }
+      } else {
+        tabBar = Utils.findHost(e2.target, tabBarConstructor);
+        if (tabBar) {
+          isVertical = tabBar.isVertical();
+          let nextTabHost = Utils.findHost(e2.target, tabConstructor);
+          if (nextTabHost) {
+            index = tabBar.tabList.indexOf(nextTabHost);
+            nextTab = nextTabHost.element;
+            prevTab = nextTab.previousSibling;
+          } else {
+            index = tabBar.tabList.length;
+            nextTab = null;
+            prevTab = tabBar.tabContainer.childNodes[index - 1];
+          }
+          tabBar.startTabDragging(tabElement, index);
+          parentRect = tabBar.element.getBoundingClientRect();
+          calculateNearbyTabsData();
+        }
+      }
+      if (showSplit)
+        showSplitPosition(e2);
+      let left = e2.clientX - posX;
+      let top = e2.clientY - posY;
+      let x = left;
+      let y = top;
+      if (tabBar) {
+        if (isVertical && (x < parentRect.left - parentRect.width || x > parentRect.left + parentRect.width) || !isVertical && (y < parentRect.top - parentRect.height || y > parentRect.top + parentRect.height)) {
+          removeTabFromBar();
+        } else {
+          if (isVertical) {
+            x = parentRect.left;
+          } else {
+            y = parentRect.top;
+          }
+          if (isVertical && e2.clientY < prevY && topMaxY && top < topMaxY || !isVertical && e2.clientX < prevX && leftMaxX && left < leftMaxX) {
+            if (isVertical) {
+              prevTab.style.top = parseInt(prevTab.style.top, 10) + tabDragElementSize + "px";
+            } else {
+              prevTab.style.left = parseInt(prevTab.style.left, 10) + tabDragElementSize + "px";
+            }
+            index--;
+            [prevTab, nextTab] = [prevTab.previousSibling, prevTab];
+            calculateNearbyTabsData();
+          } else if (isVertical && e2.clientY > prevY && bottomMaxY && top + tabDragElementSize > bottomMaxY || !isVertical && e2.clientX > prevX && rightMaxX && left + tabDragElementSize > rightMaxX) {
+            if (isVertical) {
+              nextTab.style.top = parseInt(nextTab.style.top, 10) - tabDragElementSize + "px";
+            } else {
+              nextTab.style.left = parseInt(nextTab.style.left, 10) - tabDragElementSize + "px";
+            }
+            index++;
+            [prevTab, nextTab] = [nextTab, nextTab.nextSibling];
+            calculateNearbyTabsData();
+          }
+        }
+      }
+      prevX = e2.clientX;
+      prevY = e2.clientY;
+      tabElement.style.left = x + "px";
+      tabElement.style.top = y + "px";
+    };
+    let onMouseUp = function(e2) {
+      if (!isDragging) {
+        if (tabBar.selectedTabs.length > 1) {
+          tabBar.removeSelections();
+          tabBar.addSelection(tab);
+        }
+      } else {
+        finishDragging();
+      }
+    };
+    tabbar_handler_event.capture(window, onMouseMove, onMouseUp);
+    return e.preventDefault();
+  };
+})(TabbarHandler || (TabbarHandler = {}));
+window.addEventListener("mousedown", function() {
+  document.body.classList.add("disableIframe");
+}, true);
+window.addEventListener("mouseup", function() {
+  document.body.classList.remove("disableIframe");
+}, true);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/mouse/accordion_handler.ts
+
+
+let accordion_handler_event = __webpack_require__(17989);
+var AccordionHandler;
+((AccordionHandler2) => {
+  AccordionHandler2.toggleBarMouseDown = function(e, accordionConstructor) {
+    let toggleBlock = Utils.findNode(e.target, "toggle-block");
+    if (!toggleBlock)
+      return;
+    let accordionBox, accordionBoxRect, toggleBlockDragging, toggleBlockRect;
+    let startIndex, changeIndex, previousIndex;
+    let toggleBar, section, splitter;
+    let startX = e.clientX, startY = e.clientY;
+    let isDragging = false;
+    let posX, posY, prevY, prevX;
+    let prevBlock, topMaxY, nextBlock, bottomMaxY;
+    function distance(dx, dy) {
+      return dx * dx + dy * dy;
+    }
+    function calculateNearbyBlocksData() {
+      if (!accordionBox)
+        return;
+      prevBlock = accordionBox.toggleBlockList[changeIndex - 1] || null;
+      nextBlock = accordionBox.toggleBlockList[changeIndex + 1] || null;
+      topMaxY = prevBlock && parseInt(prevBlock.style.top, 10) + parseInt(prevBlock.style.height, 10) / 2 + accordionBoxRect.top;
+      bottomMaxY = nextBlock && parseInt(nextBlock.style.top, 10) + parseInt(nextBlock.style.height, 10) / 2 + accordionBoxRect.top;
+    }
+    function startDragging() {
+      if (isDragging)
+        return;
+      accordionBox = Utils.findHost(toggleBlock, accordionConstructor);
+      if (!accordionBox)
+        return;
+      accordionBoxRect = accordionBox.element.getBoundingClientRect();
+      startIndex = changeIndex = previousIndex = toggleBlock.$index;
+      toggleBlockRect = toggleBlock.getBoundingClientRect();
+      toggleBlockDragging = toggleBlock.cloneNode(true);
+      toggleBlockDragging.$hostAccordionBox = accordionBox;
+      toggleBlockDragging.$hostIndex = startIndex;
+      toggleBlockDragging.classList.add("toggleBlockDragging");
+      Utils.setBox(toggleBlockDragging, toggleBlockRect.left, toggleBlockRect.top, toggleBlockRect.width, toggleBlockRect.height);
+      posX = startX - toggleBlockRect.left;
+      posY = startY - toggleBlockRect.top;
+      document.body.appendChild(toggleBlockDragging);
+      toggleBlock.style.opacity = 0;
+      calculateNearbyBlocksData();
+      isDragging = true;
+    }
+    function recalculateIndexes(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        arr[i].$index = i;
+      }
+    }
+    function accordionDataChanged() {
+      if (!accordionBox)
+        return;
+      recalculateIndexes(accordionBox.sections);
+      recalculateIndexes(accordionBox.toggleBarList);
+      recalculateIndexes(accordionBox.toggleBlockList);
+      recalculateIndexes(accordionBox.splitterList);
+      accordionBox.resize();
+    }
+    function addToAccordionBox(index) {
+      if (!accordionBox)
+        return;
+      accordionBox.sections.splice(index, 0, section);
+      accordionBox.toggleBarList.splice(index, 0, toggleBar);
+      accordionBox.toggleBlockList.splice(index, 0, toggleBlock);
+      calculateNearbyBlocksData();
+      if (nextBlock) {
+        accordionBox.element.insertBefore(splitter, nextBlock);
+        accordionBox.element.insertBefore(toggleBlock, splitter);
+        accordionBox.splitterList.splice(index - 1, 0, splitter);
+      } else {
+        accordionBox.element.appendChild(splitter);
+        accordionBox.element.appendChild(toggleBlock);
+        accordionBox.splitterList.push(splitter);
+      }
+      toggleBlock.$parent = accordionBox;
+      splitter.$parent = accordionBox;
+      accordionBox.calculateSectionsSizesPercents();
+      accordionBox.recalculateChildrenSizes();
+      accordionDataChanged();
+    }
+    function removeFromAccordionBox() {
+      if (!accordionBox)
+        return;
+      section = accordionBox.sections.splice(previousIndex, 1)[0];
+      toggleBar = accordionBox.toggleBarList.splice(previousIndex, 1)[0];
+      toggleBlock = accordionBox.toggleBlockList.splice(previousIndex, 1)[0];
+      let splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex - 1;
+      splitter = accordionBox.splitterList.splice(splitterIndex, 1)[0];
+      toggleBlockDragging.style.height = accordionBox.toggleBarHeight + "px";
+      toggleBlock.remove();
+      splitter.remove();
+      accordionBox.calculateSectionsSizesPercents();
+      accordionBox.recalculateChildrenSizes();
+      accordionDataChanged();
+      accordionBox = void 0;
+      toggleBlock.$parent = null;
+      splitter.$parent = null;
+    }
+    function finishDragging() {
+      if (!accordionBox) {
+        accordionBox = toggleBlockDragging.$hostAccordionBox;
+        addToAccordionBox(toggleBlockDragging.$hostIndex);
+      }
+      toggleBlockDragging.remove();
+      toggleBlock.style.opacity = 1;
+      isDragging = false;
+    }
+    let onMouseMove = function(e2) {
+      if (e2.type !== "mousemove")
+        return;
+      if (!isDragging) {
+        if (distance(e2.clientX - startX, e2.clientY - startY) < 25)
+          return;
+        startDragging();
+      }
+      let left = e2.clientX - posX;
+      let top = e2.clientY - posY;
+      if (accordionBox) {
+        if (left < accordionBoxRect.left - accordionBoxRect.width || left > accordionBoxRect.left + accordionBoxRect.width) {
+          removeFromAccordionBox();
+        }
+      }
+      if (!accordionBox) {
+        accordionBox = Utils.findHost(e2.target, accordionConstructor);
+        if (accordionBox) {
+          accordionBoxRect = accordionBox.element.getBoundingClientRect();
+          nextBlock = Utils.findNode(e2.target, "toggle-block");
+          if (nextBlock) {
+            startIndex = nextBlock.$index;
+          } else {
+            startIndex = accordionBox.toggleBlockList.length;
+          }
+          previousIndex = changeIndex = startIndex;
+          addToAccordionBox(previousIndex);
+          toggleBlockDragging.style.height = toggleBlock.style.height;
+        }
+      }
+      if (accordionBox) {
+        left = accordionBoxRect.left;
+        if (e2.clientY < prevY && topMaxY && top < topMaxY) {
+          changeIndex--;
+        } else if (e2.clientY > prevY && bottomMaxY && top + toggleBlockRect.height > bottomMaxY) {
+          changeIndex++;
+        }
+        if (changeIndex !== previousIndex) {
+          accordionBox.element.insertBefore(toggleBlock, accordionBox.toggleBlockList[changeIndex]);
+          let splitterIndex = accordionBox.splitterList[previousIndex] ? previousIndex : previousIndex + 1;
+          accordionBox.element.insertBefore(accordionBox.toggleBlockList[changeIndex], accordionBox.splitterList[splitterIndex]);
+          accordionBox.sections.splice(changeIndex, 0, accordionBox.sections.splice(previousIndex, 1)[0]);
+          accordionBox.toggleBarList.splice(changeIndex, 0, accordionBox.toggleBarList.splice(previousIndex, 1)[0]);
+          accordionBox.toggleBlockList.splice(changeIndex, 0, accordionBox.toggleBlockList.splice(previousIndex, 1)[0]);
+          calculateNearbyBlocksData();
+          accordionDataChanged();
+          previousIndex = changeIndex;
+        }
+      }
+      toggleBlockDragging.style.left = left + "px";
+      toggleBlockDragging.style.top = top + "px";
+      prevX = e2.clientX;
+      prevY = e2.clientY;
+    };
+    let onMouseUp = function(e2) {
+      if (!isDragging)
+        return;
+      finishDragging();
+    };
+    accordion_handler_event.capture(window, onMouseMove, onMouseUp);
+    return e.preventDefault();
+  };
+  AccordionHandler2.toggleBarOnClick = function(e) {
+    let toggleBlock = Utils.findNode(e.target, "toggle-block");
+    if (!toggleBlock)
+      return;
+    let accordionBox = toggleBlock.$parent;
+    let index = toggleBlock.$index;
+    let isOpened = accordionBox.isOpenedBlock(toggleBlock);
+    if (!isOpened) {
+      toggleBlock.classList.add("toggle-opened");
+      index = void 0;
+    } else {
+      toggleBlock.classList.remove("toggle-opened");
+    }
+    accordionBox.recalculateChildrenSizes(index);
+    Box.enableAnimation();
+    let node = accordionBox.element;
+    node.addEventListener("transitionend", function handler() {
+      node.removeEventListener("transitionend", handler);
+      Box.disableAnimation();
+    });
+    accordionBox.resize();
+  };
+  AccordionHandler2.splitterMouseDown = function(e) {
+    let button = e.button;
+    if (button !== 0)
+      return;
+    let splitter = Utils.findNode(e.target, "splitter");
+    if (!splitter)
+      return;
+    let accordionBox = splitter.$parent;
+    let x = e.clientX;
+    let y = e.clientY;
+    let splitterIndex = splitter.$index + 1;
+    let prevX = x;
+    let prevY = y;
+    if (!accordionBox.hasNextOpenedBlocks(splitterIndex) || !accordionBox.hasPrevOpenedBlocks(splitterIndex))
+      return;
+    accordionBox.keepState();
+    let onMouseMove = function(e2) {
+      x = e2.clientX;
+      y = e2.clientY;
+      let changedSize = 0;
+      if (prevY > y) {
+        changedSize = accordionBox.recalculatePreviousSectionsSize(splitterIndex, y);
+        if (changedSize === 0)
+          return;
+        accordionBox.expandNextSections(splitterIndex, changedSize);
+      } else if (prevY < y) {
+        changedSize = accordionBox.recalculateNextSectionsSize(splitterIndex, y);
+        if (changedSize === 0)
+          return;
+        accordionBox.expandPreviousSections(splitterIndex, changedSize);
+      } else {
+        return;
+      }
+      prevY = y;
+      accordionBox.resize();
+    };
+    let onResizeEnd = function(e2) {
+      accordionBox.dischargeState();
+      Box.setGlobalCursor("");
+      accordionBox.calculateSectionsSizesPercents();
+    };
+    Box.setGlobalCursor(`${accordionBox.vertical ? "ns" : "ew"}-resize`);
+    accordion_handler_event.capture(window, onMouseMove, onResizeEnd);
+    return e.preventDefault();
+  };
+})(AccordionHandler || (AccordionHandler = {}));
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/accordion.css
+var accordion = __webpack_require__(21705);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/accordion.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var accordion_options = {};
+
+accordion_options.styleTagTransform = (styleTagTransform_default());
+accordion_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      accordion_options.insert = insertBySelector_default().bind(null, "head");
+    
+accordion_options.domAPI = (styleDomAPI_default());
+accordion_options.insertStyleElement = (insertStyleElement_default());
+
+var accordion_update = injectStylesIntoStyleTag_default()(accordion/* default */.Z, accordion_options);
+
+
+
+
+       /* harmony default export */ const styles_accordion = (accordion/* default */.Z && accordion/* default.locals */.Z.locals ? accordion/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/boxes/accordion.ts
+
+
+
+
+
+dom.importCssString(accordion_namespaceObject, "accordion.css");
+const accordion_BOX_MIN_SIZE = 80;
+class Accordion extends Box {
+  constructor(options) {
+    var _a;
+    super(options);
+    //TODO extending from Box isn't right
+    this.toggleBarList = [];
+    this.splitterList = [];
+    this.toggleBlockList = [];
+    this.boxMinSize = 30;
+    this.toggleBarHeight = 20;
+    this.splitterSize = 1;
+    this.vertical = options.vertical || false;
+    this.color = (_a = options.color) != null ? _a : "";
+    this.sections = options.sections;
+    this.minSize = options.minSize || accordion_BOX_MIN_SIZE;
+    this.minVerticalSize = options.minVerticalSize || this.minSize;
+    this.minHorizontalSize = options.minHorizontalSize || this.minSize;
+    this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
+    this.size = options.size;
+  }
+  hasNextOpenedBlocks(index) {
+    for (let i = index; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i))
+        return true;
+    }
+    return false;
+  }
+  hasPrevOpenedBlocks(index) {
+    for (let i = index - 1; i >= 0; i--) {
+      if (this.isOpenedByIndex(i))
+        return true;
+    }
+    return false;
+  }
+  isOpenedByIndex(index) {
+    return this.isOpenedBlock(this.toggleBlockList[index]);
+  }
+  isOpenedBlock(toggleBlock) {
+    return toggleBlock.classList.contains("toggle-opened");
+  }
+  keepState() {
+    this.nextChangedIndexes = [];
+    this.prevChangedIndexes = [];
+    for (let i = 0; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i)) {
+        let section = this.sections[i];
+        section.previousSize = section.currentSize;
+      }
+    }
+  }
+  dischargeState() {
+    this.nextChangedIndexes = void 0;
+    this.prevChangedIndexes = void 0;
+    for (let i = 0; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i))
+        this.sections[i].previousSize = void 0;
+    }
+  }
+  recalculatePreviousSectionsSize(index, top, maxChangeSize) {
+    let changedSize = 0;
+    for (let i = index - 1; i >= 0; i--) {
+      if (this.isOpenedByIndex(i)) {
+        let section = this.sections[i];
+        let rect = section.box.element.getBoundingClientRect();
+        let done = false;
+        let prevSize = rect.height;
+        let currentSize = Math.max(top - rect.top, this.boxMinSize);
+        top -= rect.height;
+        if (currentSize < prevSize) {
+          if (currentSize > this.boxMinSize)
+            done = true;
+          if (!this.prevChangedIndexes.includes(i))
+            this.prevChangedIndexes.unshift(i);
+          section.currentSize = currentSize;
+          changedSize += prevSize - currentSize;
+          if (done || maxChangeSize != void 0 && changedSize >= maxChangeSize)
+            break;
+        }
+      }
+      top -= this.toggleBarHeight;
+    }
+    return changedSize;
+  }
+  recalculateNextSectionsSize(index, top, maxChangeSize) {
+    let changedSize = 0;
+    for (let i = index; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i)) {
+        let section = this.sections[i];
+        let rect = section.box.element.getBoundingClientRect();
+        let done = false;
+        let prevSize = rect.height;
+        let currentSize = Math.max(rect.bottom - top - this.toggleBarHeight, this.boxMinSize);
+        top += rect.height;
+        if (currentSize < prevSize) {
+          if (currentSize > this.boxMinSize)
+            done = true;
+          if (!this.nextChangedIndexes.includes(i))
+            this.nextChangedIndexes.unshift(i);
+          section.currentSize = currentSize;
+          changedSize += prevSize - currentSize;
+          if (done || maxChangeSize != void 0 && changedSize >= maxChangeSize)
+            break;
+        }
+      }
+      top += this.toggleBarHeight;
+      top += this.splitterSize;
+    }
+    return changedSize;
+  }
+  restoreChangedSizes(size, changedIndexes) {
+    if (!changedIndexes)
+      return size;
+    while (changedIndexes.length && size > 0) {
+      let index = changedIndexes[0];
+      let section = this.sections[index];
+      let currSize = section.currentSize;
+      section.currentSize = Math.min(section.previousSize, currSize + size);
+      size -= section.currentSize - currSize;
+      if (section.currentSize >= section.previousSize)
+        changedIndexes.shift();
+    }
+    return size;
+  }
+  expandPreviousSections(index, size) {
+    size = this.restoreChangedSizes(size, this.prevChangedIndexes);
+    if (size <= 0)
+      return;
+    let openedSectionsList = [];
+    for (let i = index - 1; i >= 0; i--) {
+      if (this.isOpenedByIndex(i))
+        openedSectionsList.push(this.sections[i]);
+    }
+    this.applySizeToOpenedSections(size, openedSectionsList);
+  }
+  expandNextSections(index, size) {
+    size = this.restoreChangedSizes(size, this.nextChangedIndexes);
+    if (size <= 0)
+      return;
+    let openedSectionsList = [];
+    for (let i = index; i < this.toggleBlockList.length; i++) {
+      if (this.isOpenedByIndex(i)) {
+        openedSectionsList.push(this.sections[i]);
+      }
+    }
+    this.applySizeToOpenedSections(size, openedSectionsList);
+  }
+  applySizeToOpenedSections(size, openedSections) {
+    let count = openedSections.length;
+    if (!count)
+      return;
+    let remainder = size % count;
+    let addSize = (size - remainder) / count;
+    for (let i = 0; i < count; i++) {
+      openedSections[i].currentSize += addSize;
+    }
+    openedSections[0].currentSize += remainder;
+  }
+  resize() {
+    this.$updateChildSize(...this.rect);
+  }
+  render() {
+    var _a, _b;
+    if (this.element)
+      return this.element;
+    this.element = dom.buildDom(["div", {
+      class: "box accordion",
+      $host: this
+    }]);
+    let section;
+    let splitter;
+    let toggleBlock;
+    let toggleBar;
+    for (let i = 0; i < this.sections.length; i++) {
+      section = this.sections[i];
+      if (i > 0) {
+        splitter = dom.buildDom(["div", {
+          class: `splitter accordion-splitter splitter${this.vertical ? "-v" : "-h"}`,
+          $index: i - 1,
+          $parent: this,
+          onmousedown: function(e) {
+            AccordionHandler.splitterMouseDown(e);
+          }
+        }, ["div"]]);
+        this.element.appendChild(splitter);
+        this.splitterList.push(splitter);
+      }
+      toggleBlock = dom.buildDom(["div", {
+        class: `toggle-block`,
+        $index: i,
+        $parent: this
+      }]);
+      toggleBar = dom.buildDom(["div", {
+        class: `toggle-bar toggle-bar${this.vertical ? "-v" : "-h"}`,
+        onmousedown: function(e) {
+          AccordionHandler.toggleBarMouseDown(e, Accordion);
+        },
+        onclick: function(e) {
+          AccordionHandler.toggleBarOnClick(e);
+        }
+      }, ["div", { class: "title" }, section.title]]);
+      section.currentSize = section.savedSize = parseInt((_b = (_a = section.box.size) == null ? void 0 : _a.toString()) != null ? _b : "", 10);
+      toggleBlock.appendChild(toggleBar);
+      this.toggleBarList.push(toggleBar);
+      toggleBlock.appendChild(section.box.render());
+      this.element.appendChild(toggleBlock);
+      this.toggleBlockList.push(toggleBlock);
+    }
+    this.element.style.backgroundColor = this.color;
+    this.element.style.position = "absolute";
+    this.calculateSectionsSizesPercents();
+    return this.element;
+  }
+  calculateSectionsSizesPercents() {
+    let totalSize = 0;
+    let actualSizes = [];
+    for (let i = 0; i < this.sections.length; i++) {
+      let section = this.sections[i];
+      actualSizes.push(this.isOpenedByIndex(i) ? section.currentSize : section.savedSize);
+      totalSize += actualSizes[i];
+    }
+    let minPercent = Math.floor(this.boxMinSize / totalSize * 100);
+    let maxPercent = 100 - minPercent * (this.sections.length - 1);
+    let totalPercent = 0;
+    for (let i = 0; i < this.sections.length; i++) {
+      let section = this.sections[i];
+      section.sizePercent = Math.floor(actualSizes[i] / totalSize * 100);
+      section.sizePercent = Math.min(Math.max(section.sizePercent, minPercent), maxPercent);
+      totalPercent += section.sizePercent;
+    }
+    if (totalPercent !== 100)
+      this.sections[this.sections.length - 1].sizePercent += 100 - totalPercent;
+  }
+  setBox(x, y, w, h) {
+    this.rect = [x, y, w, h];
+    Utils.setBox(this.element, x, y, w, h);
+    this.recalculateChildrenSizes();
+    this.$updateChildSize(x, y, w, h);
+  }
+  recalculateChildrenSizes(index) {
+    let height = this.rect[3];
+    height -= this.toggleBarHeight * this.toggleBarList.length;
+    height -= this.splitterSize * this.splitterList.length;
+    let totalSize = 0;
+    let openedIndexes = [];
+    for (let i = 0; i < this.sections.length; i++) {
+      let section = this.sections[i];
+      section.currentSize = Math.max(Math.floor(height * section.sizePercent / 100), this.boxMinSize);
+      if (this.isOpenedByIndex(i)) {
+        totalSize += section.currentSize;
+        openedIndexes.push(i);
+      } else {
+        section.savedSize = section.currentSize;
+        section.currentSize = 0;
+      }
+    }
+    let spareSize = height - totalSize;
+    if (!spareSize)
+      return;
+    if (index !== void 0) {
+      let prevOpenedIndexes = [];
+      while (openedIndexes.length && openedIndexes[0] < index) {
+        prevOpenedIndexes.push(openedIndexes.shift());
+      }
+      if (!openedIndexes.length)
+        openedIndexes = prevOpenedIndexes;
+    }
+    let prevSize, changedSize, openedBoxesCount, remainder, addSize;
+    while (openedIndexes.length && spareSize) {
+      let changedIndexes = [];
+      openedBoxesCount = openedIndexes.length;
+      remainder = spareSize % openedBoxesCount;
+      addSize = (spareSize - remainder) / openedBoxesCount;
+      for (let i = 0; i < openedIndexes.length; i++) {
+        let section = this.sections[openedIndexes[i]];
+        prevSize = section.currentSize;
+        if (openedBoxesCount === 1)
+          addSize += remainder;
+        section.currentSize += addSize;
+        section.currentSize = Math.max(section.currentSize, this.boxMinSize);
+        changedSize = section.currentSize - prevSize;
+        spareSize -= changedSize;
+        openedBoxesCount--;
+        if (changedSize < 0)
+          changedIndexes.push(openedIndexes[i]);
+      }
+      openedIndexes = changedIndexes;
+    }
+  }
+  $updateChildSize(x, y, w, h) {
+    x = 0;
+    y = 0;
+    for (let i = 0; i < this.toggleBlockList.length; i++) {
+      let toggleBlock = this.toggleBlockList[i];
+      let section = this.sections[i];
+      let boxSize = section.currentSize;
+      h = this.toggleBarHeight + boxSize;
+      Utils.setBox(toggleBlock, x, y, w, h);
+      y += this.toggleBarHeight;
+      section.box.setBox(0, this.toggleBarHeight, w, boxSize);
+      y += boxSize;
+      if (this.splitterList[i]) {
+        Utils.setBox(this.splitterList[i], x, y, w, this.splitterSize);
+        y += this.splitterSize;
+      }
+    }
+  }
+  remove() {
+    if (this.element)
+      this.element.remove();
+    if (this.parent) {
+      if (this.vertical === this.parent.vertical)
+        this.parent.minSize -= this.minSize;
+      if (this.parent[0] == this)
+        this.parent[0] = void 0;
+      if (this.parent[1] == this)
+        this.parent[1] = void 0;
+    }
+  }
+  toJSON() {
+    let sections = [];
+    let section;
+    for (let i = 0; i < this.sections.length; i++) {
+      section = this.sections[i];
+      sections.push({
+        title: section.title,
+        boxData: section.box.toJSON()
+      });
+    }
+    return {
+      type: "accordion",
+      vertical: this.vertical,
+      size: this.size,
+      sections
+    };
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/panelManager.ts
+
+
+
+class PanelManager {
+  constructor(options) {
+    this.layout = options.layout;
+    this.locations = options.locations;
+  }
+  static getInstance(options) {
+    if (!PanelManager._instance)
+      PanelManager._instance = new PanelManager(options);
+    return PanelManager._instance;
+  }
+  toJSON() {
+    return {
+      panelBars: this.panelBarsToJSON()
+    };
+  }
+  panelBarsToJSON() {
+    let panelBars = {};
+    for (let [position, panelBar] of Object.entries(this.layout.toolBars)) {
+      if (panelBar instanceof PanelBar)
+        panelBars[position] = panelBar.toJSON();
+    }
+    return panelBars;
+  }
+  setState(state) {
+    var _a;
+    let panelBars = (_a = state.panelBars) != null ? _a : {};
+    let panelBar, panelList, panel;
+    let panelBody, panelBodyData;
+    for (let position of Object.keys(panelBars)) {
+      panelList = [];
+      let tabList = panelBars[position].tabList;
+      for (let i = 0; i < tabList.length; i++) {
+        panel = tabList[i];
+        panelBodyData = panel.panelBody;
+        if (panelBodyData.type === "accordion") {
+          let accordionSections = [];
+          let sections = panelBodyData.sections;
+          for (let index = 0; index < sections.length; index++) {
+            accordionSections.push({
+              title: sections[index].title,
+              box: new Box(sections[index].boxData)
+            });
+          }
+          panelBody = new Accordion({
+            vertical: panelBodyData.vertical,
+            size: panelBodyData.size,
+            sections: accordionSections
+          });
+        } else {
+          panelBody = new Box({
+            vertical: panelBodyData.type === "vbox",
+            color: panelBodyData.color,
+            size: panelBodyData.size,
+            hidden: panelBodyData.hidden,
+            fixedSize: panelBodyData.fixedSize
+          });
+        }
+        panelList.push({
+          active: panel.active,
+          title: panel.title,
+          autoHide: panel.autoHide,
+          panelBody
+        });
+      }
+      panelBar = new PanelBar({ panelList: {} });
+      this.layout.addToolBar(position, panelBar);
+      panelBar.addTabList(panelList);
+    }
+  }
+  activatePanel(panel) {
+    let location = this.locations[panel.parent.position];
+    if (!location)
+      return;
+    let index = location.index;
+    let parent = location.parent;
+    panel.panelBody.size = location.size;
+    let newBox = parent.addChildBox(index, panel.panelBody);
+    if (newBox.fixedSize && !parent.fixedChild)
+      parent.fixedChild = newBox;
+    location.box = newBox;
+    newBox.show();
+  }
+  deactivatePanel(panel) {
+    let location = this.locations[panel.parent.position];
+    location == null ? void 0 : location.box.hide();
+  }
+}
+
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./packages/ace-layout/styles/panel.css
+var panel = __webpack_require__(52368);
+;// CONCATENATED MODULE: ./packages/ace-layout/styles/panel.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var panel_options = {};
+
+panel_options.styleTagTransform = (styleTagTransform_default());
+panel_options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      panel_options.insert = insertBySelector_default().bind(null, "head");
+    
+panel_options.domAPI = (styleDomAPI_default());
+panel_options.insertStyleElement = (insertStyleElement_default());
+
+var panel_update = injectStylesIntoStyleTag_default()(panel/* default */.Z, panel_options);
+
+
+
+
+       /* harmony default export */ const styles_panel = (panel/* default */.Z && panel/* default.locals */.Z.locals ? panel/* default.locals */.Z.locals : undefined);
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/tabPanel.ts
+class TabPanel {
+  constructor(options) {
+    var _a;
+    this.active = (_a = options.active) != null ? _a : false;
+    this.title = options.title;
+  }
+  activate() {
+    this.active = true;
+    this.element.classList.add("active");
+  }
+  deactivate() {
+    this.active = false;
+    this.element.classList.remove("active");
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/tabs/panel.ts
+
+
+
+
+dom.importCssString(panel_namespaceObject, "panel.css");
+class Panel extends TabPanel {
+  constructor(options) {
+    var _a;
+    super(options);
+    this.location = options.location;
+    this.panelBody = options.panelBody;
+    this.autoHide = (_a = options.autoHide) != null ? _a : false;
+    this.title = options.title;
+  }
+  activate() {
+    super.activate();
+    PanelManager.getInstance().activatePanel(this);
+  }
+  deactivate() {
+    super.deactivate();
+    PanelManager.getInstance().deactivatePanel(this);
+  }
+  render() {
+    this.element = dom.buildDom(["div", {
+      class: "panelButton" + (this.active ? " active" : "")
+    }, ["span", {
+      class: "panelTitle"
+    }, this.title]]);
+    this.element.$host = this;
+    return this.element;
+  }
+  toJSON() {
+    return {
+      active: this.active,
+      title: this.title,
+      autoHide: this.autoHide,
+      panelBody: this.panelBody.toJSON()
+    };
+  }
+  remove() {
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/ace-layout/widgets/toolbars/panelBar.ts
+
+
+
+
+class PanelBar extends TabPanelBar {
+  setBox(x, y, w, h) {
+    super.setBox(x, y, w, h);
+    this.configure();
+  }
+  configure() {
+    let tabElement;
+    let tabSize = 30;
+    let position = 0;
+    for (let i = 0; i < this.tabList.length; i++) {
+      tabElement = this.tabList[i].element;
+      if (this.draggingElementIndex === i)
+        position += this.getDraggingElementSize();
+      if (this.isVertical()) {
+        tabElement.style.left = "0px";
+        tabElement.style.height = tabSize + "px";
+        tabElement.style.top = position + "px";
+      } else {
+        tabElement.style.top = "0px";
+        tabElement.style.width = tabSize + "px";
+        tabElement.style.left = position + "px";
+      }
+      position += tabSize;
+    }
+  }
+  render() {
+    if (!this.element) {
+      this.element = dom.buildDom(["div", {
+        class: "panelbar " + this.direction + " " + this.position
+      }, ["div", {
+        class: "tabContainer",
+        ref: "tabContainer",
+        onmousedown: function(e) {
+          TabbarHandler.tabbarMouseDown(e, Panel, PanelBar);
+        },
+        onmouseup: (e) => {
+          if (this.activeTabClicked) {
+            let activeTab = this.activeTab;
+            this.removeSelection(activeTab);
+            activeTab.deactivate();
+            this.activeTab = void 0;
+            if (this.activeTabHistory.length && activeTab.autoHide) {
+              let previousTab = activeTab;
+              while (previousTab === activeTab && this.activeTabHistory.length) {
+                previousTab = this.activeTabHistory.pop();
+              }
+              if (previousTab !== activeTab)
+                this.activateTab(previousTab);
+            }
+          }
+        }
+      }]], void 0, this);
+    }
+    if (this.initTabList && this.initTabList.length) {
+      for (let i = 0; i < this.initTabList.length; i++) {
+        this.addTab(this.initTabList[i]);
+      }
+    }
+    this.element.$host = this;
+    return this.element;
+  }
+  addTabList(tabList, index) {
+    index = index || this.tabList.length;
+    let tab;
+    for (let i = 0; i < tabList.length; i++) {
+      tab = new Panel(tabList[i]);
+      this.addTab(tab, index++);
+    }
+  }
+  remove() {
+  }
+}
+
+;// CONCATENATED MODULE: ./packages/demo/preferences/demo.ts
+
+
+
+
+
+
+
+
+dom.importCssString(preferences_namespaceObject, "preferences.css");
+let navigation;
+let app;
+let demo = new Box({
+  classNames: "bar-preferences",
+  toolBars: {
+    top: new PanelBar({ size: 31 })
+  },
+  0: navigation = new Box({
+    size: 200
+  }),
+  1: app = new Box({})
 });
 document.body.appendChild(demo.render());
-var resultPreferences = {};
+let resultPreferences = {};
 function addState(state, prefModel) {
-    // First Level
-    for (var name in state) {
-        if (!prefModel[name]) {
-            prefModel[name] = { groupName: name };
-        }
-        if (state[name]["position"]) {
-            prefModel[name]["position"] = state[name]["position"];
-            delete state[name]["position"];
-        }
-        if (state[name]["type"]) {
-            prefModel[name]["groupData"] = state[name];
-        }
-        else if (typeof state[name] === "object") {
-            if (!prefModel[name]["subGroups"]) {
-                prefModel[name]["subGroups"] = {};
-            }
-            addState(state[name], prefModel[name]["subGroups"]);
-        }
-        else {
-            prefModel[name] = state[name];
-        }
+  for (let name in state) {
+    if (!prefModel[name]) {
+      prefModel[name] = { groupName: name };
     }
+    if (state[name]["position"]) {
+      prefModel[name]["position"] = state[name]["position"];
+      delete state[name]["position"];
+    }
+    if (state[name]["type"]) {
+      prefModel[name]["groupData"] = state[name];
+    } else if (typeof state[name] === "object") {
+      if (!prefModel[name]["subGroups"]) {
+        prefModel[name]["subGroups"] = {};
+      }
+      addState(state[name], prefModel[name]["subGroups"]);
+    } else {
+      prefModel[name] = state[name];
+    }
+  }
 }
-var $prefs = [
-    {
-        "Experimental": {
-            "type": "custom",
-            "title": "Introduction",
-            "position": 1,
-            "node": [
-                "apf",
-                "bar",
-                "<h1>Experimental Features</h1><p style=\"white-space:normal\">AWS Cloud9 is continuously in development. New features in alpha or beta are first hidden and can be enabled via this page. <i>Use at your own risk</i>.</p>"
-            ]
-        },
-        "User Settings": {
-            "type": "custom",
-            "title": "Introduction",
-            "position": 1,
-            "node": [
-                "apf",
-                "bar",
-                "<h1>User Settings</h1><p>Manually edit these settings by clicking on this link: <a href=\"javascript:void(0)\">user.settings</a>.</p><p class=\"hint\">These settings are synced across all your environments.</p>"
-            ]
-        },
-        "Project": {
-            "type": "custom",
-            "title": "Introduction",
-            "position": 1,
-            "node": [
-                "apf",
-                "bar",
-                "<h1>Project Settings</h1><p>These settings are specific to this project. They are saved at: <span style=\"padding:5px 0 5px 0px\"><a href=\"javascript:void(0)\">&lt;project&gt;/.c9/project.settings</a>.</span></p><p class=\"hint\">Hint: Add the .c9 folder to your repository to share these settings with your collaborators.</p>"
-            ]
-        }
+let $prefs = [
+  {
+    "Experimental": {
+      "type": "custom",
+      "title": "Introduction",
+      "position": 1,
+      "node": [
+        "apf",
+        "bar",
+        '<h1>Experimental Features</h1><p style="white-space:normal">AWS Cloud9 is continuously in development. New features in alpha or beta are first hidden and can be enabled via this page. <i>Use at your own risk</i>.</p>'
+      ]
     },
-    {
-        "General": {
-            "Tree and Go Panel": {
-                "position": 25,
-                "Enable Preview on Tree Selection": {
-                    "type": "checkbox",
-                    "position": 3000,
-                    "path": "user/general/@preview-tree"
-                },
-                "Hidden File Pattern": {
-                    "type": "textbox",
-                    "path": "user/projecttree/@hiddenFilePattern",
-                    "position": 4000
-                }
-            },
-            "User Interface": {
-                "Environment Files Icon and Selection Style": {
-                    "type": "dropdown",
-                    "position": 3000,
-                    "path": "user/general/@treestyle",
-                    "items": [
-                        {
-                            "value": "default",
-                            "caption": "Default"
-                        },
-                        {
-                            "value": "alternative",
-                            "caption": "Alternative"
-                        }
-                    ]
-                }
-            }
-        }
+    "User Settings": {
+      "type": "custom",
+      "title": "Introduction",
+      "position": 1,
+      "node": [
+        "apf",
+        "bar",
+        '<h1>User Settings</h1><p>Manually edit these settings by clicking on this link: <a href="javascript:void(0)">user.settings</a>.</p><p class="hint">These settings are synced across all your environments.</p>'
+      ]
     },
-    {
-        "File": {
-            "position": 150,
-            "Meta Data": {
-                "position": 200,
-                "Maximum of Undo Stack Items in Meta Data": {
-                    "type": "spinner",
-                    "path": "user/metadata/@undolimit",
-                    "position": 200,
-                    "min": 10,
-                    "max": 10000
-                }
-            }
-        }
-    },
-    {
-        "General": {
-            "General": {
-                "Warn Before Exiting": {
-                    "type": "checkbox",
-                    "position": 8000,
-                    "path": "user/general/@confirmexit"
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "position": 10,
-            "Code Editor (Ace)": {
-                "position": "10100",
-                "Soft Tabs": {
-                    "type": "checked-spinner",
-                    "checkboxPath": "project/ace/@useSoftTabs",
-                    "path": "project/ace/@tabSize",
-                    "min": "1",
-                    "max": "64",
-                    "position": 100
-                },
-                "Autodetect Tab Size on Load": {
-                    "type": "checkbox",
-                    "path": "project/ace/@guessTabSize",
-                    "position": 150
-                },
-                "New File Line Endings": {
-                    "type": "dropdown",
-                    "path": "project/ace/@newLineMode",
-                    "width": 130,
-                    "items": [
-                        {
-                            "caption": "Windows (CRLF)",
-                            "value": "windows"
-                        },
-                        {
-                            "caption": "Unix (LF)",
-                            "value": "unix"
-                        }
-                    ],
-                    "position": 200
-                }
-            }
-        }
-    },
-    {
-        "Editors": {
-            "position": 400,
-            "Code Editor (Ace)": {
-                "position": 200,
-                "Auto-pair Brackets, Quotes, etc.": {
-                    "type": "checkbox",
-                    "position": 1000,
-                    "path": "user/ace/@behavioursEnabled"
-                },
-                "Wrap Selection with Brackets, Quotes, etc.": {
-                    "type": "checkbox",
-                    "position": 1001,
-                    "path": "user/ace/@wrapBehavioursEnabled"
-                },
-                "Code Folding": {
-                    "type": "checkbox",
-                    "position": 2000,
-                    "path": "user/ace/@showFoldWidgets"
-                },
-                "Fade Fold Widgets": {
-                    "type": "checkbox",
-                    "position": 2500,
-                    "path": "user/ace/@fadeFoldWidgets"
-                },
-                "Copy With Empty Selection": {
-                    "type": "checkbox",
-                    "position": 2550,
-                    "path": "user/ace/@copyWithEmptySelection"
-                },
-                "Full Line Selection": {
-                    "type": "checkbox",
-                    "position": 3000,
-                    "path": "user/ace/@selectionStyle",
-                    "values": "line|text"
-                },
-                "Highlight Active Line": {
-                    "type": "checkbox",
-                    "position": 4000,
-                    "path": "user/ace/@highlightActiveLine"
-                },
-                "Highlight Gutter Line": {
-                    "type": "checkbox",
-                    "position": 4000,
-                    "path": "user/ace/@highlightGutterLine"
-                },
-                "Show Invisible Characters": {
-                    "type": "checkbox",
-                    "position": 5000,
-                    "path": "user/ace/@showInvisibles"
-                },
-                "Show Gutter": {
-                    "type": "checkbox",
-                    "position": 6000,
-                    "path": "user/ace/@showGutter"
-                },
-                "Show Line Numbers": {
-                    "type": "dropdown",
-                    "width": 150,
-                    "path": "user/ace/@showLineNumbers",
-                    "items": [
-                        {
-                            "caption": "Normal",
-                            "value": true
-                        },
-                        {
-                            "caption": "Relative",
-                            "value": "relative"
-                        },
-                        {
-                            "caption": "None",
-                            "value": false
-                        }
-                    ],
-                    "position": 6250
-                },
-                "Show Indent Guides": {
-                    "type": "checkbox",
-                    "position": 6500,
-                    "path": "user/ace/@displayIndentGuides"
-                },
-                "Highlight Selected Word": {
-                    "type": "checkbox",
-                    "position": 7000,
-                    "path": "user/ace/@highlightSelectedWord"
-                },
-                "Scroll Past the End of the Document": {
-                    "type": "dropdown",
-                    "width": 150,
-                    "path": "user/ace/@scrollPastEnd",
-                    "items": [
-                        {
-                            "caption": "Off",
-                            "value": "0"
-                        },
-                        {
-                            "caption": "Half Editor Height",
-                            "value": "0.5"
-                        },
-                        {
-                            "caption": "Full Editor Height",
-                            "value": "1"
-                        }
-                    ],
-                    "position": 8000
-                },
-                "Animate Scrolling": {
-                    "type": "checkbox",
-                    "path": "user/ace/@animatedScroll",
-                    "position": 9000
-                },
-                "Font Family": {
-                    "type": "textbox",
-                    "path": "user/ace/@fontFamily",
-                    "position": 10000
-                },
-                "Font Size": {
-                    "type": "spinner",
-                    "path": "user/ace/@fontSize",
-                    "min": "1",
-                    "max": "72",
-                    "position": 10500
-                },
-                "Antialiased Fonts": {
-                    "type": "checkbox",
-                    "path": "user/ace/@antialiasedfonts",
-                    "position": 10600
-                },
-                "Show Print Margin": {
-                    "type": "checked-spinner",
-                    "checkboxPath": "user/ace/@showPrintMargin",
-                    "path": "user/ace/@printMarginColumn",
-                    "min": "1",
-                    "max": "200",
-                    "position": 11000
-                },
-                "Mouse Scroll Speed": {
-                    "type": "spinner",
-                    "path": "user/ace/@scrollSpeed",
-                    "min": "1",
-                    "max": "8",
-                    "position": 13000
-                },
-                "Cursor Style": {
-                    "type": "dropdown",
-                    "path": "user/ace/@cursorStyle",
-                    "items": [
-                        {
-                            "caption": "Ace",
-                            "value": "ace"
-                        },
-                        {
-                            "caption": "Slim",
-                            "value": "slim"
-                        },
-                        {
-                            "caption": "Smooth",
-                            "value": "smooth"
-                        },
-                        {
-                            "caption": "Smooth And Slim",
-                            "value": "smooth slim"
-                        },
-                        {
-                            "caption": "Wide",
-                            "value": "wide"
-                        }
-                    ],
-                    "position": 13500
-                },
-                "Merge Undo Deltas": {
-                    "type": "dropdown",
-                    "path": "user/ace/@mergeUndoDeltas",
-                    "items": [
-                        {
-                            "caption": "Always",
-                            "value": "always"
-                        },
-                        {
-                            "caption": "Never",
-                            "value": "off"
-                        },
-                        {
-                            "caption": "Timed",
-                            "value": "true"
-                        }
-                    ],
-                    "position": 14000
-                },
-                "Enable Wrapping For New Documents": {
-                    "type": "checkbox",
-                    "path": "user/ace/@useWrapMode"
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "Find in Files": {
-                "position": "10300",
-                "Ignore these files": {
-                    "name": "txtPref",
-                    "type": "textarea",
-                    "width": 150,
-                    "height": 130,
-                    "rowheight": 155,
-                    "position": 1000
-                },
-                "Maximum number of files to search (in 1000)": {
-                    "type": "spinner",
-                    "path": "project/find.nak/@searchLimit",
-                    "min": "20",
-                    "max": "500",
-                    "position": 10500
-                }
-            }
-        }
-    },
-    {
-        "General": {
-            "Tree and Go Panel": {
-                "Scope Go to Anything To Favorites": {
-                    "type": "checkbox",
-                    "position": 1000,
-                    "path": "user/projecttree/@scope"
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "position": 150,
-            "Code Editor (Ace)": {
-                "On Save, Strip Whitespace": {
-                    "type": "checkbox",
-                    "position": 900,
-                    "path": "project/general/@stripws"
-                }
-            }
-        }
-    },
-    {
-        "General": {
-            "Tree and Go Panel": {
-                "Reveal Active File in Project Tree": {
-                    "type": "checkbox",
-                    "position": 4000,
-                    "path": "user/general/@revealfile"
-                }
-            }
-        }
-    },
-    {
-        "General": {
-            "Find in Files": {
-                "position": 30,
-                "Search In This Path When 'Project' Is Selected": {
-                    "type": "textbox",
-                    "position": 100,
-                    "path": "user/findinfiles/@project"
-                },
-                "Show Full Path in Results": {
-                    "type": "checkbox",
-                    "position": 100,
-                    "path": "user/findinfiles/@fullpath"
-                },
-                "Clear Results Before Each Search": {
-                    "type": "checkbox",
-                    "position": 100,
-                    "path": "user/findinfiles/@clear"
-                },
-                "Scroll Down as Search Results Come In": {
-                    "type": "checkbox",
-                    "position": 100,
-                    "path": "user/findinfiles/@scrolldown"
-                },
-                "Open Files when Navigating Results with ↓ ↑": {
-                    "type": "checkbox",
-                    "position": 100,
-                    "path": "user/findinfiles/@consolelaunch"
-                }
-            }
-        }
-    },
-    {
-        "File": {
-            "position": 150,
-            "Watchers": {
-                "position": 300,
-                "Auto-Merge Files When a Conflict Occurs": {
-                    "type": "checkbox",
-                    "path": "user/general/@automerge",
-                    "min": "1",
-                    "max": "64",
-                    "tooltip": "Whenever the file watcher detects a file change on disk, 'auto merge' will fetch the contents from disc and merges it with the version in the editor.",
-                    "position": 2200
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "Hints & Warnings": {
-                "position": "10700",
-                "Warning Level": {
-                    "type": "dropdown",
-                    "path": "project/language/@warnLevel",
-                    "items": [
-                        {
-                            "caption": "Error",
-                            "value": "error"
-                        },
-                        {
-                            "caption": "Warning",
-                            "value": "warning"
-                        },
-                        {
-                            "caption": "Info",
-                            "value": "info"
-                        }
-                    ],
-                    "position": 5000
-                },
-                "Mark Missing Optional Semicolons": {
-                    "type": "checkbox",
-                    "path": "project/language/@semi",
-                    "position": 7000
-                },
-                "Mark Undeclared Variables": {
-                    "type": "checkbox",
-                    "path": "project/language/@undeclaredVars",
-                    "position": 8000
-                },
-                "Mark Unused Function Arguments": {
-                    "type": "checkbox",
-                    "path": "project/language/@unusedFunctionArgs",
-                    "position": 9000
-                },
-                "Ignore Messages Matching Regex": {
-                    "title": [
-                        null,
-                        "Ignore Messages Matching ",
-                        [
-                            "a",
-                            {
-                                "href": "http://en.wikipedia.org/wiki/Regular_expression",
-                                "target": "blank"
-                            },
-                            "Regex"
-                        ]
-                    ],
-                    "type": "textbox",
-                    "path": "project/language/@ignoredMarkers",
-                    "width": 300,
-                    "position": 11000
-                }
-            },
-            "JavaScript Support": {
-                "position": "101100",
-                "Customize JavaScript Warnings With .eslintrc": {
-                    "title": [
-                        null,
-                        "Customize JavaScript Warnings With ",
-                        [
-                            "a",
-                            {
-                                "href": "http://eslint.org/docs/user-guide/configuring",
-                                "target": "blank"
-                            },
-                            ".eslintrc"
-                        ]
-                    ],
-                    "position": 210,
-                    "type": "checkbox",
-                    "path": "project/language/@eslintrc"
-                }
-            }
-        }
-    },
-    {
-        "Language": {
-            "position": 500,
-            "Input": {
-                "position": 100,
-                "Complete As You Type": {
-                    "type": "checkbox",
-                    "path": "user/language/@continuousCompletion",
-                    "position": 4000
-                },
-                "Complete On Enter": {
-                    "type": "checkbox",
-                    "path": "user/language/@enterCompletion",
-                    "position": 5000
-                },
-                "Highlight Variable Under Cursor": {
-                    "type": "checkbox",
-                    "path": "user/language/@instanceHighlight",
-                    "position": 6000
-                }
-            },
-            "Hints & Warnings": {
-                "position": 200,
-                "Enable Hints and Warnings": {
-                    "type": "checkbox",
-                    "path": "user/language/@hints",
-                    "position": 1000
-                },
-                "Ignore Messages Matching Regex": {
-                    "title": [
-                        null,
-                        "Ignore Messages Matching ",
-                        [
-                            "a",
-                            {
-                                "href": "http://en.wikipedia.org/wiki/Regular_expression",
-                                "target": "blank"
-                            },
-                            "Regex"
-                        ]
-                    ],
-                    "type": "textbox",
-                    "path": "user/language/@ignoredMarkers",
-                    "position": 3000
-                }
-            }
-        }
-    },
-    {
-        "Language": {
-            "Hints & Warnings": {
-                "Show Available Quick Fixes On Click": {
-                    "type": "checkbox",
-                    "position": 1000,
-                    "path": "user/language/@quickfixes"
-                }
-            }
-        }
-    },
-    {
-        "Language": {
-            "Input": {
-                "Use Cmd-Click for Jump to Definition": {
-                    "type": "checkbox",
-                    "path": "user/language/@overrideMultiselectShortcuts",
-                    "position": 6000
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "JavaScript Support": {
-                "position": "101100",
-                "Format Code on Save": {
-                    "position": 320,
-                    "type": "checkbox",
-                    "path": "project/javascript/@formatOnSave"
-                },
-                "Custom Code Formatter": {
-                    "position": 340,
-                    "type": "textbox",
-                    "path": "project/javascript/@formatter",
-                    "realtime": true
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "JavaScript Support": {
-                "position": "101100",
-                "Tern Completions": {
-                    "position": 220,
-                    "type": "custom",
-                    "name": "ternCompletions",
-                    "node": [
-                        "apf",
-                        "bar",
-                        "\n            <div><div class=\" ace_tree blackdg ace-tree-datagrid\" style=\"height: 253px;\"><textarea class=\"ace_text-input\" wrap=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\" style=\"opacity: 0; font-size: 1px;\"></textarea><div class=\"ace_tree_scroller\" style=\"inset: 23px 16px 0px 0px;\"><div class=\"ace_tree_cells\" style=\"margin-top: 0px; margin-left: 0px; width: 637px; height: 253px;\"><div class=\"ace_tree_layer ace_tree_selection-layer\"></div><div class=\"ace_tree_layer ace_tree_cell-layer\"><div style=\"height:23px;padding-right:0px\" class=\"tree-row  even\"><span class=\"tree-column \" style=\"width:100%;\"><span class=\"toggler open\"></span><span class=\"caption\" style=\"width: auto; height: 23px\">Experimental</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  odd\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">accounting</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  even\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">ace</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  odd\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">add2home</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  even\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">alertify</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  odd\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">amcharts</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  even\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">angularfire</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  odd\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">appframework</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  even\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">appletvjs</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  odd\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">applicationinsights</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  even\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">arbiter</span></span></div><div style=\"height:23px;padding-right:0px\" class=\"tree-row  odd\"><span class=\"tree-column \" style=\"width:100%;\"><span style=\"width:10px\" class=\"tree-indent\"></span><span class=\"toggler empty\"></span><span class=\"checkbox \"></span><span class=\"caption\" style=\"width: auto; height: 23px\">argparse</span></span></div></div></div></div><div class=\"tree-headings\" style=\"height: 23px; right: 16px; padding-right: 0px;\"><span class=\"tree-column \" style=\"width:100%;height:\">JavaScript Library Code Completion</span><span class=\"tree-column-resizer\"></span></div><div class=\"ace_scrollbar ace_scrollbar-v\" style=\"width: 21px; top: 23px; bottom: 0px;\"><div class=\"ace_scrollbar-inner\" style=\"width: 21px; height: 9361px;\">&nbsp;</div></div><div class=\"ace_scrollbar ace_scrollbar-h\" style=\"display: none; height: 21px; left: 0px; right: 16px;\"><div class=\"ace_scrollbar-inner\" style=\"height: 21px; width: 0px;\">&nbsp;</div></div></div></div>"
-                    ]
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "Python Support": {
-                "position": "101300",
-                "Enable advanced (jedi) Python code completion": {
-                    "position": 310,
-                    "type": "checkbox",
-                    "path": "project/python/@completion"
-                },
-                "Python Version": {
-                    "position": 320,
-                    "type": "dropdown",
-                    "path": "project/python/@version",
-                    "items": [
-                        {
-                            "caption": "Python 2",
-                            "value": "python2"
-                        },
-                        {
-                            "caption": "Python 3",
-                            "value": "python3"
-                        }
-                    ]
-                },
-                "Pylint command-line options": {
-                    "position": 330,
-                    "type": "textbox",
-                    "width": 300,
-                    "message": "-d all -e E -e F",
-                    "path": "project/python/@pylintFlags"
-                },
-                "PYTHONPATH": {
-                    "position": 340,
-                    "type": "textbox",
-                    "width": 300,
-                    "path": "project/python/@path"
-                },
-                "Format Code on Save": {
-                    "position": 350,
-                    "type": "checkbox",
-                    "path": "project/python/@formatOnSave"
-                },
-                "Custom Code Formatter": {
-                    "position": 360,
-                    "type": "textbox",
-                    "path": "project/python/@formatter"
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "Go Support": {
-                "position": "101400",
-                "Enable Go code completion": {
-                    "position": 510,
-                    "type": "checkbox",
-                    "path": "project/golang/@completion"
-                },
-                "Format Code on Save": {
-                    "position": 520,
-                    "type": "checkbox",
-                    "path": "project/golang/@formatOnSave"
-                },
-                "Custom Code Formatter": {
-                    "position": 530,
-                    "type": "textbox",
-                    "path": "project/golang/@formatter"
-                }
-            }
-        }
-    },
-    {
-        "Run": {
-            "position": 600,
-            "Run & Debug": {
-                "position": 100,
-                "Save All Unsaved Tabs Before Running": {
-                    "type": "checkbox",
-                    "path": "user/runconfig/@saveallbeforerun",
-                    "position": 100
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "Run & Debug": {
-                "position": "10300",
-                "Runner Path in Environment": {
-                    "type": "textbox",
-                    "path": "project/run/@path",
-                    "position": 1000
-                }
-            },
-            "Run Configurations": {
-                "position": "10200",
-                "Run Configurations": {
-                    "type": "custom",
-                    "name": "runcfg",
-                    "title": "Run Configurations",
-                    "position": 120,
-                    "node": [
-                        "apf",
-                        "bar",
-                        "\n            <div class=\" ace_tree blackdg\" style=\"width: 600px; margin-bottom: 30px; height: 36px;\"><textarea class=\"ace_text-input\" wrap=\"off\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"false\" style=\"opacity: 0; font-size: 1px;\"></textarea><div class=\"ace_tree_scroller\" style=\"inset: 18px 0px 0px;\"><div class=\"ace_tree_cells\" style=\"margin-top: 0px; margin-left: 0px; width: 600px; height: 36px;\"><div class=\"ace_tree_layer ace_tree_selection-layer\"></div><div class=\"ace_tree_layer ace_tree_cell-layer\"><div class=\"message empty\">No run configurations</div></div></div></div><div class=\"tree-headings\" style=\"height: 18px; right: 0px; padding-right: 0px;\"><span class=\"tree-column \" style=\"width:15%;height:\">Name</span><span class=\"tree-column-resizer\"></span><span class=\"tree-column \" style=\"width:30%;height:\">Command</span><span class=\"tree-column-resizer\"></span><span class=\"tree-column \" style=\"width:15%;height:\">CWD</span><span class=\"tree-column-resizer\"></span><span class=\"tree-column \" style=\"width:10%;height:\">Debug</span><span class=\"tree-column-resizer\"></span><span class=\"tree-column \" style=\"width:20%;height:\">Runner</span><span class=\"tree-column-resizer\"></span><span class=\"tree-column \" style=\"width:10%;height:\">Default</span><span class=\"tree-column-resizer\"></span></div><div class=\"ace_scrollbar ace_scrollbar-v\" style=\"width: 21px; top: 18px; bottom: 0px; display: none;\"><div class=\"ace_scrollbar-inner\" style=\"width: 21px; height: 0px;\">&nbsp;</div></div><div class=\"ace_scrollbar ace_scrollbar-h\" style=\"display: none; height: 21px; left: 0px; right: 0px;\"><div class=\"ace_scrollbar-inner\" style=\"height: 21px; width: 0px;\">&nbsp;</div></div></div><div style=\"position: absolute; left: 10px; bottom: 10px; display: flex; align-items: stretch; padding: 0px; justify-content: flex-start;\" class=\"hbox\"><div class=\"c9-toolbarbutton-glossy \" style=\"box-sizing: border-box; margin: 0px;\">\n                <div class=\"c9-icon\"> </div>\n                <div class=\"c9-label\">Remove Selected Configs</div>\n            </div><div class=\"c9-toolbarbutton-glossy \" style=\"box-sizing: border-box; margin: 0px;\">\n                <div class=\"c9-icon\"> </div>\n                <div class=\"c9-label\">Add New Config</div>\n            </div><div class=\"c9-toolbarbutton-glossy \" style=\"box-sizing: border-box; margin: 0px;\">\n                <div class=\"c9-icon\"> </div>\n                <div class=\"c9-label\">Set As Default</div>\n            </div></div>"
-                    ]
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "Build": {
-                "position": "10400",
-                "Builder Path in Environment": {
-                    "type": "textbox",
-                    "path": "project/build/@path",
-                    "position": 1000
-                }
-            }
-        }
-    },
-    {
-        "Run": {
-            "position": 600,
-            "Build": {
-                "position": 400,
-                "Automatically Build Supported Files": {
-                    "type": "checkbox",
-                    "path": "user/build/@autobuild",
-                    "position": 100
-                }
-            }
-        }
-    },
-    {
-        "Editors": {
-            "Terminal": {
-                "position": 100,
-                "Text Color": {
-                    "type": "colorbox",
-                    "path": "user/terminal/@foregroundColor",
-                    "position": 10100
-                },
-                "Background Color": {
-                    "type": "colorbox",
-                    "path": "user/terminal/@backgroundColor",
-                    "position": 10200
-                },
-                "Selection Color": {
-                    "type": "colorbox",
-                    "path": "user/terminal/@selectionColor",
-                    "position": 10250
-                },
-                "Font Family": {
-                    "type": "textbox",
-                    "path": "user/terminal/@fontfamily",
-                    "position": 10300
-                },
-                "Font Size": {
-                    "type": "spinner",
-                    "path": "user/terminal/@fontsize",
-                    "min": "1",
-                    "max": "72",
-                    "position": 11000
-                },
-                "Antialiased Fonts": {
-                    "type": "checkbox",
-                    "path": "user/terminal/@antialiasedfonts",
-                    "position": 12000
-                },
-                "Blinking Cursor": {
-                    "type": "checkbox",
-                    "path": "user/terminal/@blinking",
-                    "position": 12000
-                },
-                "Scrollback": {
-                    "type": "spinner",
-                    "path": "user/terminal/@scrollback",
-                    "min": "1",
-                    "max": "100000",
-                    "position": 13000
-                }
-            }
-        }
-    },
-    {
-        "Editors": {
-            "Output": {
-                "position": 130,
-                "Text Color": {
-                    "type": "colorbox",
-                    "path": "user/output/@foregroundColor",
-                    "position": 10100
-                },
-                "Background Color": {
-                    "type": "colorbox",
-                    "path": "user/output/@backgroundColor",
-                    "position": 10200
-                },
-                "Selection Color": {
-                    "type": "colorbox",
-                    "path": "user/output/@selectionColor",
-                    "position": 10250
-                },
-                "Warn Before Closing Unnamed Configuration": {
-                    "type": "checkbox",
-                    "path": "user/output/@nosavequestion",
-                    "position": 10300
-                },
-                "Preserve log between runs": {
-                    "type": "checkbox",
-                    "path": "user/output/@keepOutput",
-                    "position": 10300
-                }
-            }
-        }
-    },
-    {
-        "General": {
-            "Collaboration": {
-                "Show Notification Bubbles": {
-                    "type": "checkbox",
-                    "position": 1000,
-                    "path": "user/collab/@showbubbles"
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "position": 100,
-            "Run & Debug": {
-                "position": "10300",
-                "Preview URL": {
-                    "type": "textbox",
-                    "path": "project/preview/@url"
-                }
-            }
-        }
-    },
-    {
-        "Run": {
-            "position": 600,
-            "Preview": {
-                "position": 200,
-                "Preview Running Apps": {
-                    "type": "checkbox",
-                    "path": "user/preview/@running_app",
-                    "position": 400
-                },
-                "Default Previewer": {
-                    "type": "dropdown",
-                    "path": "user/preview/@default",
-                    "position": 500,
-                    "items": [
-                        {
-                            "caption": "Raw",
-                            "value": "preview.raw"
-                        },
-                        {
-                            "caption": "Browser",
-                            "value": "preview.browser"
-                        }
-                    ]
-                },
-                "When Saving Reload Preview": {
-                    "type": "dropdown",
-                    "path": "user/preview/@onSave",
-                    "position": 600,
-                    "items": [
-                        {
-                            "caption": "Only on Ctrl-Enter",
-                            "value": "false"
-                        },
-                        {
-                            "caption": "Always",
-                            "value": "true"
-                        }
-                    ]
-                }
-            }
-        }
-    },
-    {
-        "Project": {
-            "Code Formatters": {
-                "position": "10900",
-                "JSBeautify": {
-                    "type": "label",
-                    "caption": "JSBeautify settings:"
-                },
-                "Format Code on Save": {
-                    "position": 320,
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@formatOnSave"
-                },
-                "Use JSBeautify for JavaScript": {
-                    "position": 340,
-                    "type": "checkbox",
-                    "path": "project/javascript/@use_jsbeautify"
-                },
-                "Preserve Empty Lines": {
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@preserveempty",
-                    "position": 350
-                },
-                "Keep Array Indentation": {
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@keeparrayindentation",
-                    "position": 351
-                },
-                "JSLint Strict Whitespace": {
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@jslinthappy",
-                    "position": 352
-                },
-                "Braces": {
-                    "type": "dropdown",
-                    "path": "project/format/jsbeautify/@braces",
-                    "width": "185",
-                    "position": 353,
-                    "items": [
-                        {
-                            "value": "collapse",
-                            "caption": "Braces with control statement"
-                        },
-                        {
-                            "value": "expand",
-                            "caption": "Braces on own line"
-                        },
-                        {
-                            "value": "end-expand",
-                            "caption": "End braces on own line"
-                        }
-                    ]
-                },
-                "Preserve Inline Blocks": {
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@preserve-inline",
-                    "position": 353.5
-                },
-                "Space Before Conditionals": {
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@space_before_conditional",
-                    "position": 354
-                },
-                "Unescape Strings": {
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@unescape_strings",
-                    "position": 355
-                },
-                "Indent Inner Html": {
-                    "type": "checkbox",
-                    "path": "project/format/jsbeautify/@indent_inner_html",
-                    "position": 356
-                }
-            },
-            "JavaScript Support": {
-                "position": "101100",
-                "Use Built-in JSBeautify as Code Formatter": {
-                    "position": 320,
-                    "type": "checkbox",
-                    "path": "project/javascript/@use_jsbeautify"
-                }
-            }
-        }
-    },
-    {
-        "General": {
-            "Tree and Go Panel": {
-                "Download Files As": {
-                    "type": "dropdown",
-                    "path": "user/general/@downloadFilesAs",
-                    "items": [
-                        {
-                            "caption": "auto",
-                            "value": "auto"
-                        },
-                        {
-                            "caption": "tar.gz",
-                            "value": "tar.gz"
-                        },
-                        {
-                            "caption": "zip",
-                            "value": "zip"
-                        }
-                    ],
-                    "position": 5000
-                }
-            }
-        }
-    },
-    {
-        "Editors": {
-            "Terminal": {
-                "Use AWS Cloud9 as the default editor": {
-                    "type": "checkbox",
-                    "path": "user/terminal/@defaultEnvEditor",
-                    "position": 14000
-                }
-            }
-        }
-    },
-    {
-        "Experimental": {
-            "File": {
-                "position": 150,
-                "Save": {
-                    "position": 100,
-                    "Auto-Save Files": {
-                        "type": "dropdown",
-                        "position": 100,
-                        "path": "user/general/@autosave",
-                        "width": 130,
-                        "items": [
-                            {
-                                "caption": "Off",
-                                "value": false
-                            },
-                            {
-                                "caption": "On Focus Change",
-                                "value": "onFocusChange"
-                            },
-                            {
-                                "caption": "After Delay",
-                                "value": "afterDelay"
-                            }
-                        ]
-                    }
-                }
-            }
-        }
-    },
-    {
-        "General": {
-            "User Interface": {
-                "position": 20,
-                "Automatically Close Empty Panes": {
-                    "type": "checkbox",
-                    "path": "user/tabs/@autoclosepanes",
-                    "position": 1150
-                }
-            }
-        }
+    "Project": {
+      "type": "custom",
+      "title": "Introduction",
+      "position": 1,
+      "node": [
+        "apf",
+        "bar",
+        '<h1>Project Settings</h1><p>These settings are specific to this project. They are saved at: <span style="padding:5px 0 5px 0px"><a href="javascript:void(0)">&lt;project&gt;/.c9/project.settings</a>.</span></p><p class="hint">Hint: Add the .c9 folder to your repository to share these settings with your collaborators.</p>'
+      ]
     }
+  },
+  {
+    "General": {
+      "Tree and Go Panel": {
+        "position": 25,
+        "Enable Preview on Tree Selection": {
+          "type": "checkbox",
+          "position": 3e3,
+          "path": "user/general/@preview-tree"
+        },
+        "Hidden File Pattern": {
+          "type": "textbox",
+          "path": "user/projecttree/@hiddenFilePattern",
+          "position": 4e3
+        }
+      },
+      "User Interface": {
+        "Environment Files Icon and Selection Style": {
+          "type": "dropdown",
+          "position": 3e3,
+          "path": "user/general/@treestyle",
+          "items": [
+            {
+              "value": "default",
+              "caption": "Default"
+            },
+            {
+              "value": "alternative",
+              "caption": "Alternative"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "File": {
+      "position": 150,
+      "Meta Data": {
+        "position": 200,
+        "Maximum of Undo Stack Items in Meta Data": {
+          "type": "spinner",
+          "path": "user/metadata/@undolimit",
+          "position": 200,
+          "min": 10,
+          "max": 1e4
+        }
+      }
+    }
+  },
+  {
+    "General": {
+      "General": {
+        "Warn Before Exiting": {
+          "type": "checkbox",
+          "position": 8e3,
+          "path": "user/general/@confirmexit"
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "position": 10,
+      "Code Editor (Ace)": {
+        "position": "10100",
+        "Soft Tabs": {
+          "type": "checked-spinner",
+          "checkboxPath": "project/ace/@useSoftTabs",
+          "path": "project/ace/@tabSize",
+          "min": "1",
+          "max": "64",
+          "position": 100
+        },
+        "Autodetect Tab Size on Load": {
+          "type": "checkbox",
+          "path": "project/ace/@guessTabSize",
+          "position": 150
+        },
+        "New File Line Endings": {
+          "type": "dropdown",
+          "path": "project/ace/@newLineMode",
+          "width": 130,
+          "items": [
+            {
+              "caption": "Windows (CRLF)",
+              "value": "windows"
+            },
+            {
+              "caption": "Unix (LF)",
+              "value": "unix"
+            }
+          ],
+          "position": 200
+        }
+      }
+    }
+  },
+  {
+    "Editors": {
+      "position": 400,
+      "Code Editor (Ace)": {
+        "position": 200,
+        "Auto-pair Brackets, Quotes, etc.": {
+          "type": "checkbox",
+          "position": 1e3,
+          "path": "user/ace/@behavioursEnabled"
+        },
+        "Wrap Selection with Brackets, Quotes, etc.": {
+          "type": "checkbox",
+          "position": 1001,
+          "path": "user/ace/@wrapBehavioursEnabled"
+        },
+        "Code Folding": {
+          "type": "checkbox",
+          "position": 2e3,
+          "path": "user/ace/@showFoldWidgets"
+        },
+        "Fade Fold Widgets": {
+          "type": "checkbox",
+          "position": 2500,
+          "path": "user/ace/@fadeFoldWidgets"
+        },
+        "Copy With Empty Selection": {
+          "type": "checkbox",
+          "position": 2550,
+          "path": "user/ace/@copyWithEmptySelection"
+        },
+        "Full Line Selection": {
+          "type": "checkbox",
+          "position": 3e3,
+          "path": "user/ace/@selectionStyle",
+          "values": "line|text"
+        },
+        "Highlight Active Line": {
+          "type": "checkbox",
+          "position": 4e3,
+          "path": "user/ace/@highlightActiveLine"
+        },
+        "Highlight Gutter Line": {
+          "type": "checkbox",
+          "position": 4e3,
+          "path": "user/ace/@highlightGutterLine"
+        },
+        "Show Invisible Characters": {
+          "type": "checkbox",
+          "position": 5e3,
+          "path": "user/ace/@showInvisibles"
+        },
+        "Show Gutter": {
+          "type": "checkbox",
+          "position": 6e3,
+          "path": "user/ace/@showGutter"
+        },
+        "Show Line Numbers": {
+          "type": "dropdown",
+          "width": 150,
+          "path": "user/ace/@showLineNumbers",
+          "items": [
+            {
+              "caption": "Normal",
+              "value": true
+            },
+            {
+              "caption": "Relative",
+              "value": "relative"
+            },
+            {
+              "caption": "None",
+              "value": false
+            }
+          ],
+          "position": 6250
+        },
+        "Show Indent Guides": {
+          "type": "checkbox",
+          "position": 6500,
+          "path": "user/ace/@displayIndentGuides"
+        },
+        "Highlight Selected Word": {
+          "type": "checkbox",
+          "position": 7e3,
+          "path": "user/ace/@highlightSelectedWord"
+        },
+        "Scroll Past the End of the Document": {
+          "type": "dropdown",
+          "width": 150,
+          "path": "user/ace/@scrollPastEnd",
+          "items": [
+            {
+              "caption": "Off",
+              "value": "0"
+            },
+            {
+              "caption": "Half Editor Height",
+              "value": "0.5"
+            },
+            {
+              "caption": "Full Editor Height",
+              "value": "1"
+            }
+          ],
+          "position": 8e3
+        },
+        "Animate Scrolling": {
+          "type": "checkbox",
+          "path": "user/ace/@animatedScroll",
+          "position": 9e3
+        },
+        "Font Family": {
+          "type": "textbox",
+          "path": "user/ace/@fontFamily",
+          "position": 1e4
+        },
+        "Font Size": {
+          "type": "spinner",
+          "path": "user/ace/@fontSize",
+          "min": "1",
+          "max": "72",
+          "position": 10500
+        },
+        "Antialiased Fonts": {
+          "type": "checkbox",
+          "path": "user/ace/@antialiasedfonts",
+          "position": 10600
+        },
+        "Show Print Margin": {
+          "type": "checked-spinner",
+          "checkboxPath": "user/ace/@showPrintMargin",
+          "path": "user/ace/@printMarginColumn",
+          "min": "1",
+          "max": "200",
+          "position": 11e3
+        },
+        "Mouse Scroll Speed": {
+          "type": "spinner",
+          "path": "user/ace/@scrollSpeed",
+          "min": "1",
+          "max": "8",
+          "position": 13e3
+        },
+        "Cursor Style": {
+          "type": "dropdown",
+          "path": "user/ace/@cursorStyle",
+          "items": [
+            {
+              "caption": "Ace",
+              "value": "ace"
+            },
+            {
+              "caption": "Slim",
+              "value": "slim"
+            },
+            {
+              "caption": "Smooth",
+              "value": "smooth"
+            },
+            {
+              "caption": "Smooth And Slim",
+              "value": "smooth slim"
+            },
+            {
+              "caption": "Wide",
+              "value": "wide"
+            }
+          ],
+          "position": 13500
+        },
+        "Merge Undo Deltas": {
+          "type": "dropdown",
+          "path": "user/ace/@mergeUndoDeltas",
+          "items": [
+            {
+              "caption": "Always",
+              "value": "always"
+            },
+            {
+              "caption": "Never",
+              "value": "off"
+            },
+            {
+              "caption": "Timed",
+              "value": "true"
+            }
+          ],
+          "position": 14e3
+        },
+        "Enable Wrapping For New Documents": {
+          "type": "checkbox",
+          "path": "user/ace/@useWrapMode"
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "Find in Files": {
+        "position": "10300",
+        "Ignore these files": {
+          "name": "txtPref",
+          "type": "textarea",
+          "width": 150,
+          "height": 130,
+          "rowheight": 155,
+          "position": 1e3
+        },
+        "Maximum number of files to search (in 1000)": {
+          "type": "spinner",
+          "path": "project/find.nak/@searchLimit",
+          "min": "20",
+          "max": "500",
+          "position": 10500
+        }
+      }
+    }
+  },
+  {
+    "General": {
+      "Tree and Go Panel": {
+        "Scope Go to Anything To Favorites": {
+          "type": "checkbox",
+          "position": 1e3,
+          "path": "user/projecttree/@scope"
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "position": 150,
+      "Code Editor (Ace)": {
+        "On Save, Strip Whitespace": {
+          "type": "checkbox",
+          "position": 900,
+          "path": "project/general/@stripws"
+        }
+      }
+    }
+  },
+  {
+    "General": {
+      "Tree and Go Panel": {
+        "Reveal Active File in Project Tree": {
+          "type": "checkbox",
+          "position": 4e3,
+          "path": "user/general/@revealfile"
+        }
+      }
+    }
+  },
+  {
+    "General": {
+      "Find in Files": {
+        "position": 30,
+        "Search In This Path When 'Project' Is Selected": {
+          "type": "textbox",
+          "position": 100,
+          "path": "user/findinfiles/@project"
+        },
+        "Show Full Path in Results": {
+          "type": "checkbox",
+          "position": 100,
+          "path": "user/findinfiles/@fullpath"
+        },
+        "Clear Results Before Each Search": {
+          "type": "checkbox",
+          "position": 100,
+          "path": "user/findinfiles/@clear"
+        },
+        "Scroll Down as Search Results Come In": {
+          "type": "checkbox",
+          "position": 100,
+          "path": "user/findinfiles/@scrolldown"
+        },
+        "Open Files when Navigating Results with \u2193 \u2191": {
+          "type": "checkbox",
+          "position": 100,
+          "path": "user/findinfiles/@consolelaunch"
+        }
+      }
+    }
+  },
+  {
+    "File": {
+      "position": 150,
+      "Watchers": {
+        "position": 300,
+        "Auto-Merge Files When a Conflict Occurs": {
+          "type": "checkbox",
+          "path": "user/general/@automerge",
+          "min": "1",
+          "max": "64",
+          "tooltip": "Whenever the file watcher detects a file change on disk, 'auto merge' will fetch the contents from disc and merges it with the version in the editor.",
+          "position": 2200
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "Hints & Warnings": {
+        "position": "10700",
+        "Warning Level": {
+          "type": "dropdown",
+          "path": "project/language/@warnLevel",
+          "items": [
+            {
+              "caption": "Error",
+              "value": "error"
+            },
+            {
+              "caption": "Warning",
+              "value": "warning"
+            },
+            {
+              "caption": "Info",
+              "value": "info"
+            }
+          ],
+          "position": 5e3
+        },
+        "Mark Missing Optional Semicolons": {
+          "type": "checkbox",
+          "path": "project/language/@semi",
+          "position": 7e3
+        },
+        "Mark Undeclared Variables": {
+          "type": "checkbox",
+          "path": "project/language/@undeclaredVars",
+          "position": 8e3
+        },
+        "Mark Unused Function Arguments": {
+          "type": "checkbox",
+          "path": "project/language/@unusedFunctionArgs",
+          "position": 9e3
+        },
+        "Ignore Messages Matching Regex": {
+          "title": [
+            null,
+            "Ignore Messages Matching ",
+            [
+              "a",
+              {
+                "href": "http://en.wikipedia.org/wiki/Regular_expression",
+                "target": "blank"
+              },
+              "Regex"
+            ]
+          ],
+          "type": "textbox",
+          "path": "project/language/@ignoredMarkers",
+          "width": 300,
+          "position": 11e3
+        }
+      },
+      "JavaScript Support": {
+        "position": "101100",
+        "Customize JavaScript Warnings With .eslintrc": {
+          "title": [
+            null,
+            "Customize JavaScript Warnings With ",
+            [
+              "a",
+              {
+                "href": "http://eslint.org/docs/user-guide/configuring",
+                "target": "blank"
+              },
+              ".eslintrc"
+            ]
+          ],
+          "position": 210,
+          "type": "checkbox",
+          "path": "project/language/@eslintrc"
+        }
+      }
+    }
+  },
+  {
+    "Language": {
+      "position": 500,
+      "Input": {
+        "position": 100,
+        "Complete As You Type": {
+          "type": "checkbox",
+          "path": "user/language/@continuousCompletion",
+          "position": 4e3
+        },
+        "Complete On Enter": {
+          "type": "checkbox",
+          "path": "user/language/@enterCompletion",
+          "position": 5e3
+        },
+        "Highlight Variable Under Cursor": {
+          "type": "checkbox",
+          "path": "user/language/@instanceHighlight",
+          "position": 6e3
+        }
+      },
+      "Hints & Warnings": {
+        "position": 200,
+        "Enable Hints and Warnings": {
+          "type": "checkbox",
+          "path": "user/language/@hints",
+          "position": 1e3
+        },
+        "Ignore Messages Matching Regex": {
+          "title": [
+            null,
+            "Ignore Messages Matching ",
+            [
+              "a",
+              {
+                "href": "http://en.wikipedia.org/wiki/Regular_expression",
+                "target": "blank"
+              },
+              "Regex"
+            ]
+          ],
+          "type": "textbox",
+          "path": "user/language/@ignoredMarkers",
+          "position": 3e3
+        }
+      }
+    }
+  },
+  {
+    "Language": {
+      "Hints & Warnings": {
+        "Show Available Quick Fixes On Click": {
+          "type": "checkbox",
+          "position": 1e3,
+          "path": "user/language/@quickfixes"
+        }
+      }
+    }
+  },
+  {
+    "Language": {
+      "Input": {
+        "Use Cmd-Click for Jump to Definition": {
+          "type": "checkbox",
+          "path": "user/language/@overrideMultiselectShortcuts",
+          "position": 6e3
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "JavaScript Support": {
+        "position": "101100",
+        "Format Code on Save": {
+          "position": 320,
+          "type": "checkbox",
+          "path": "project/javascript/@formatOnSave"
+        },
+        "Custom Code Formatter": {
+          "position": 340,
+          "type": "textbox",
+          "path": "project/javascript/@formatter",
+          "realtime": true
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "JavaScript Support": {
+        "position": "101100",
+        "Tern Completions": {
+          "position": 220,
+          "type": "custom",
+          "name": "ternCompletions",
+          "node": [
+            "apf",
+            "bar",
+            '\n            <div><div class=" ace_tree blackdg ace-tree-datagrid" style="height: 253px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px;"></textarea><div class="ace_tree_scroller" style="inset: 23px 16px 0px 0px;"><div class="ace_tree_cells" style="margin-top: 0px; margin-left: 0px; width: 637px; height: 253px;"><div class="ace_tree_layer ace_tree_selection-layer"></div><div class="ace_tree_layer ace_tree_cell-layer"><div style="height:23px;padding-right:0px" class="tree-row  even"><span class="tree-column " style="width:100%;"><span class="toggler open"></span><span class="caption" style="width: auto; height: 23px">Experimental</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  odd"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">accounting</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  even"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">ace</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  odd"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">add2home</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  even"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">alertify</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  odd"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">amcharts</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  even"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">angularfire</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  odd"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">appframework</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  even"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">appletvjs</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  odd"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">applicationinsights</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  even"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">arbiter</span></span></div><div style="height:23px;padding-right:0px" class="tree-row  odd"><span class="tree-column " style="width:100%;"><span style="width:10px" class="tree-indent"></span><span class="toggler empty"></span><span class="checkbox "></span><span class="caption" style="width: auto; height: 23px">argparse</span></span></div></div></div></div><div class="tree-headings" style="height: 23px; right: 16px; padding-right: 0px;"><span class="tree-column " style="width:100%;height:">JavaScript Library Code Completion</span><span class="tree-column-resizer"></span></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 21px; top: 23px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 21px; height: 9361px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 21px; left: 0px; right: 16px;"><div class="ace_scrollbar-inner" style="height: 21px; width: 0px;">&nbsp;</div></div></div></div>'
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "Python Support": {
+        "position": "101300",
+        "Enable advanced (jedi) Python code completion": {
+          "position": 310,
+          "type": "checkbox",
+          "path": "project/python/@completion"
+        },
+        "Python Version": {
+          "position": 320,
+          "type": "dropdown",
+          "path": "project/python/@version",
+          "items": [
+            {
+              "caption": "Python 2",
+              "value": "python2"
+            },
+            {
+              "caption": "Python 3",
+              "value": "python3"
+            }
+          ]
+        },
+        "Pylint command-line options": {
+          "position": 330,
+          "type": "textbox",
+          "width": 300,
+          "message": "-d all -e E -e F",
+          "path": "project/python/@pylintFlags"
+        },
+        "PYTHONPATH": {
+          "position": 340,
+          "type": "textbox",
+          "width": 300,
+          "path": "project/python/@path"
+        },
+        "Format Code on Save": {
+          "position": 350,
+          "type": "checkbox",
+          "path": "project/python/@formatOnSave"
+        },
+        "Custom Code Formatter": {
+          "position": 360,
+          "type": "textbox",
+          "path": "project/python/@formatter"
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "Go Support": {
+        "position": "101400",
+        "Enable Go code completion": {
+          "position": 510,
+          "type": "checkbox",
+          "path": "project/golang/@completion"
+        },
+        "Format Code on Save": {
+          "position": 520,
+          "type": "checkbox",
+          "path": "project/golang/@formatOnSave"
+        },
+        "Custom Code Formatter": {
+          "position": 530,
+          "type": "textbox",
+          "path": "project/golang/@formatter"
+        }
+      }
+    }
+  },
+  {
+    "Run": {
+      "position": 600,
+      "Run & Debug": {
+        "position": 100,
+        "Save All Unsaved Tabs Before Running": {
+          "type": "checkbox",
+          "path": "user/runconfig/@saveallbeforerun",
+          "position": 100
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "Run & Debug": {
+        "position": "10300",
+        "Runner Path in Environment": {
+          "type": "textbox",
+          "path": "project/run/@path",
+          "position": 1e3
+        }
+      },
+      "Run Configurations": {
+        "position": "10200",
+        "Run Configurations": {
+          "type": "custom",
+          "name": "runcfg",
+          "title": "Run Configurations",
+          "position": 120,
+          "node": [
+            "apf",
+            "bar",
+            '\n            <div class=" ace_tree blackdg" style="width: 600px; margin-bottom: 30px; height: 36px;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; font-size: 1px;"></textarea><div class="ace_tree_scroller" style="inset: 18px 0px 0px;"><div class="ace_tree_cells" style="margin-top: 0px; margin-left: 0px; width: 600px; height: 36px;"><div class="ace_tree_layer ace_tree_selection-layer"></div><div class="ace_tree_layer ace_tree_cell-layer"><div class="message empty">No run configurations</div></div></div></div><div class="tree-headings" style="height: 18px; right: 0px; padding-right: 0px;"><span class="tree-column " style="width:15%;height:">Name</span><span class="tree-column-resizer"></span><span class="tree-column " style="width:30%;height:">Command</span><span class="tree-column-resizer"></span><span class="tree-column " style="width:15%;height:">CWD</span><span class="tree-column-resizer"></span><span class="tree-column " style="width:10%;height:">Debug</span><span class="tree-column-resizer"></span><span class="tree-column " style="width:20%;height:">Runner</span><span class="tree-column-resizer"></span><span class="tree-column " style="width:10%;height:">Default</span><span class="tree-column-resizer"></span></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 21px; top: 18px; bottom: 0px; display: none;"><div class="ace_scrollbar-inner" style="width: 21px; height: 0px;">&nbsp;</div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 21px; left: 0px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 21px; width: 0px;">&nbsp;</div></div></div><div style="position: absolute; left: 10px; bottom: 10px; display: flex; align-items: stretch; padding: 0px; justify-content: flex-start;" class="hbox"><div class="c9-toolbarbutton-glossy " style="box-sizing: border-box; margin: 0px;">\n                <div class="c9-icon"> </div>\n                <div class="c9-label">Remove Selected Configs</div>\n            </div><div class="c9-toolbarbutton-glossy " style="box-sizing: border-box; margin: 0px;">\n                <div class="c9-icon"> </div>\n                <div class="c9-label">Add New Config</div>\n            </div><div class="c9-toolbarbutton-glossy " style="box-sizing: border-box; margin: 0px;">\n                <div class="c9-icon"> </div>\n                <div class="c9-label">Set As Default</div>\n            </div></div>'
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "Build": {
+        "position": "10400",
+        "Builder Path in Environment": {
+          "type": "textbox",
+          "path": "project/build/@path",
+          "position": 1e3
+        }
+      }
+    }
+  },
+  {
+    "Run": {
+      "position": 600,
+      "Build": {
+        "position": 400,
+        "Automatically Build Supported Files": {
+          "type": "checkbox",
+          "path": "user/build/@autobuild",
+          "position": 100
+        }
+      }
+    }
+  },
+  {
+    "Editors": {
+      "Terminal": {
+        "position": 100,
+        "Text Color": {
+          "type": "colorbox",
+          "path": "user/terminal/@foregroundColor",
+          "position": 10100
+        },
+        "Background Color": {
+          "type": "colorbox",
+          "path": "user/terminal/@backgroundColor",
+          "position": 10200
+        },
+        "Selection Color": {
+          "type": "colorbox",
+          "path": "user/terminal/@selectionColor",
+          "position": 10250
+        },
+        "Font Family": {
+          "type": "textbox",
+          "path": "user/terminal/@fontfamily",
+          "position": 10300
+        },
+        "Font Size": {
+          "type": "spinner",
+          "path": "user/terminal/@fontsize",
+          "min": "1",
+          "max": "72",
+          "position": 11e3
+        },
+        "Antialiased Fonts": {
+          "type": "checkbox",
+          "path": "user/terminal/@antialiasedfonts",
+          "position": 12e3
+        },
+        "Blinking Cursor": {
+          "type": "checkbox",
+          "path": "user/terminal/@blinking",
+          "position": 12e3
+        },
+        "Scrollback": {
+          "type": "spinner",
+          "path": "user/terminal/@scrollback",
+          "min": "1",
+          "max": "100000",
+          "position": 13e3
+        }
+      }
+    }
+  },
+  {
+    "Editors": {
+      "Output": {
+        "position": 130,
+        "Text Color": {
+          "type": "colorbox",
+          "path": "user/output/@foregroundColor",
+          "position": 10100
+        },
+        "Background Color": {
+          "type": "colorbox",
+          "path": "user/output/@backgroundColor",
+          "position": 10200
+        },
+        "Selection Color": {
+          "type": "colorbox",
+          "path": "user/output/@selectionColor",
+          "position": 10250
+        },
+        "Warn Before Closing Unnamed Configuration": {
+          "type": "checkbox",
+          "path": "user/output/@nosavequestion",
+          "position": 10300
+        },
+        "Preserve log between runs": {
+          "type": "checkbox",
+          "path": "user/output/@keepOutput",
+          "position": 10300
+        }
+      }
+    }
+  },
+  {
+    "General": {
+      "Collaboration": {
+        "Show Notification Bubbles": {
+          "type": "checkbox",
+          "position": 1e3,
+          "path": "user/collab/@showbubbles"
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "position": 100,
+      "Run & Debug": {
+        "position": "10300",
+        "Preview URL": {
+          "type": "textbox",
+          "path": "project/preview/@url"
+        }
+      }
+    }
+  },
+  {
+    "Run": {
+      "position": 600,
+      "Preview": {
+        "position": 200,
+        "Preview Running Apps": {
+          "type": "checkbox",
+          "path": "user/preview/@running_app",
+          "position": 400
+        },
+        "Default Previewer": {
+          "type": "dropdown",
+          "path": "user/preview/@default",
+          "position": 500,
+          "items": [
+            {
+              "caption": "Raw",
+              "value": "preview.raw"
+            },
+            {
+              "caption": "Browser",
+              "value": "preview.browser"
+            }
+          ]
+        },
+        "When Saving Reload Preview": {
+          "type": "dropdown",
+          "path": "user/preview/@onSave",
+          "position": 600,
+          "items": [
+            {
+              "caption": "Only on Ctrl-Enter",
+              "value": "false"
+            },
+            {
+              "caption": "Always",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Project": {
+      "Code Formatters": {
+        "position": "10900",
+        "JSBeautify": {
+          "type": "label",
+          "caption": "JSBeautify settings:"
+        },
+        "Format Code on Save": {
+          "position": 320,
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@formatOnSave"
+        },
+        "Use JSBeautify for JavaScript": {
+          "position": 340,
+          "type": "checkbox",
+          "path": "project/javascript/@use_jsbeautify"
+        },
+        "Preserve Empty Lines": {
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@preserveempty",
+          "position": 350
+        },
+        "Keep Array Indentation": {
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@keeparrayindentation",
+          "position": 351
+        },
+        "JSLint Strict Whitespace": {
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@jslinthappy",
+          "position": 352
+        },
+        "Braces": {
+          "type": "dropdown",
+          "path": "project/format/jsbeautify/@braces",
+          "width": "185",
+          "position": 353,
+          "items": [
+            {
+              "value": "collapse",
+              "caption": "Braces with control statement"
+            },
+            {
+              "value": "expand",
+              "caption": "Braces on own line"
+            },
+            {
+              "value": "end-expand",
+              "caption": "End braces on own line"
+            }
+          ]
+        },
+        "Preserve Inline Blocks": {
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@preserve-inline",
+          "position": 353.5
+        },
+        "Space Before Conditionals": {
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@space_before_conditional",
+          "position": 354
+        },
+        "Unescape Strings": {
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@unescape_strings",
+          "position": 355
+        },
+        "Indent Inner Html": {
+          "type": "checkbox",
+          "path": "project/format/jsbeautify/@indent_inner_html",
+          "position": 356
+        }
+      },
+      "JavaScript Support": {
+        "position": "101100",
+        "Use Built-in JSBeautify as Code Formatter": {
+          "position": 320,
+          "type": "checkbox",
+          "path": "project/javascript/@use_jsbeautify"
+        }
+      }
+    }
+  },
+  {
+    "General": {
+      "Tree and Go Panel": {
+        "Download Files As": {
+          "type": "dropdown",
+          "path": "user/general/@downloadFilesAs",
+          "items": [
+            {
+              "caption": "auto",
+              "value": "auto"
+            },
+            {
+              "caption": "tar.gz",
+              "value": "tar.gz"
+            },
+            {
+              "caption": "zip",
+              "value": "zip"
+            }
+          ],
+          "position": 5e3
+        }
+      }
+    }
+  },
+  {
+    "Editors": {
+      "Terminal": {
+        "Use AWS Cloud9 as the default editor": {
+          "type": "checkbox",
+          "path": "user/terminal/@defaultEnvEditor",
+          "position": 14e3
+        }
+      }
+    }
+  },
+  {
+    "Experimental": {
+      "File": {
+        "position": 150,
+        "Save": {
+          "position": 100,
+          "Auto-Save Files": {
+            "type": "dropdown",
+            "position": 100,
+            "path": "user/general/@autosave",
+            "width": 130,
+            "items": [
+              {
+                "caption": "Off",
+                "value": false
+              },
+              {
+                "caption": "On Focus Change",
+                "value": "onFocusChange"
+              },
+              {
+                "caption": "After Delay",
+                "value": "afterDelay"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "General": {
+      "User Interface": {
+        "position": 20,
+        "Automatically Close Empty Panes": {
+          "type": "checkbox",
+          "path": "user/tabs/@autoclosepanes",
+          "position": 1150
+        }
+      }
+    }
+  }
 ];
-$prefs.forEach(function (state) {
-    addState(state, resultPreferences);
+$prefs.forEach(function(state) {
+  addState(state, resultPreferences);
 });
 function sortPreferences(preferences) {
-    preferences = Object.values(preferences).map(function (preference) {
-        if (preference["subGroups"]) {
-            preference["subGroups"] = sortPreferences(preference["subGroups"]);
-        }
-        return preference;
-    }).sort(function (item1, item2) {
-        return item1["position"] - item2["position"];
-    });
-    return preferences;
+  preferences = Object.values(preferences).map((preference) => {
+    if (preference["subGroups"]) {
+      preference["subGroups"] = sortPreferences(preference["subGroups"]);
+    }
+    return preference;
+  }).sort(function(item1, item2) {
+    return item1["position"] - item2["position"];
+  });
+  return preferences;
 }
 resultPreferences = sortPreferences(resultPreferences);
-var navigationHtml = [];
-var appHtml = [];
+let navigationHtml = [];
+let appHtml = [];
 function render() {
-    renderGroup(resultPreferences);
-    dom_1.dom.buildDom(["div", { style: "overflow-y: scroll; height: 100%" }, navigationHtml], navigation.element);
-    var preferencesNode = dom_1.dom.buildDom(["div", { style: "overflow-y: scroll; height: 100%" }, appHtml], app.element);
-    var searchBox = new search_1.SettingsSearchBox(preferencesNode);
-    searchBox.build();
-    dom_1.dom.buildDom([searchBox.element], demo.toolBars.top.element);
+  renderGroup(resultPreferences);
+  dom.buildDom(["div", { style: "overflow-y: scroll; height: 100%" }, navigationHtml], navigation.element);
+  let preferencesNode = dom.buildDom(["div", { style: "overflow-y: scroll; height: 100%" }, appHtml], app.element);
+  let searchBox = new SettingsSearchBox(preferencesNode);
+  searchBox.build();
+  dom.buildDom([searchBox.element], demo.toolBars.top.element);
 }
 function renderGroup(preferences) {
-    preferences.forEach(function (item) {
-        if (item["groupData"]) {
-            appHtml.push(renderItem(item["groupName"], item["groupData"]));
-        }
-        if (item["subGroups"]) {
-            if (item["subGroups"].length > 0 && item["subGroups"][0]["groupData"])
-                appHtml.push(renderItem(item["groupName"]));
-            navigationHtml.push(["div", {}, item["groupName"]]);
-            renderGroup(item["subGroups"]);
-        }
-    });
+  preferences.forEach(function(item) {
+    if (item["groupData"]) {
+      appHtml.push(renderItem(item["groupName"], item["groupData"]));
+    }
+    if (item["subGroups"]) {
+      if (item["subGroups"].length > 0 && item["subGroups"][0]["groupData"])
+        appHtml.push(renderItem(item["groupName"]));
+      navigationHtml.push(["div", {}, item["groupName"]]);
+      renderGroup(item["subGroups"]);
+    }
+  });
 }
 function renderItem(title, item) {
-    if (item) {
-        switch (item["type"]) {
-            case "checkbox":
-                return ["div", { class: "preferenceItem" }, ["span", {}, title], new switcher_1.Switcher({}).render()];
-            case "textbox":
-                return ["div", { class: "preferenceItem" }, ["span", {}, title], ["input", { class: "tbsimple" }]];
-            case "spinner":
-                return ["div", { class: "preferenceItem" }, ["span", {}, title], ["div", { class: "spinner" }, ["input", {
-                                type: "number",
-                                min: item["min"],
-                                max: item["max"]
-                            }]]];
-            case "checked-spinner":
-                return ["div", { class: "preferenceItem" }, ["div", { class: "label" }, new switcher_1.Switcher({ className: "checkbox" }).render(), ["span", {}, title]], ["div", { class: "spinner" }, ["input", {
-                                type: "number",
-                                min: item["min"],
-                                max: item["max"]
-                            }]]];
-            case "button":
-                //TODO:
-                return ["div", { class: "preferenceItem" }, new button_1.Button({}).render()];
-            case "dropdown":
-                //TODO:
-                return ["div", { class: "preferenceItem" }, ["span", {}, title], new dropdown_1.Dropdown({
-                        items: item["items"],
-                        width: item["width"]
-                    }).render()];
-            case "custom":
-                return ["div", { class: "preferenceItem" }, item["node"][2]];
-            default:
-                return [];
-        }
+  if (item) {
+    switch (item["type"]) {
+      case "checkbox":
+        return ["div", { class: "preferenceItem" }, ["span", {}, title], new Switcher({}).render()];
+      case "textbox":
+        return ["div", { class: "preferenceItem" }, ["span", {}, title], ["input", { class: "tbsimple" }]];
+      case "spinner":
+        return ["div", { class: "preferenceItem" }, ["span", {}, title], ["div", { class: "spinner" }, ["input", {
+          type: "number",
+          min: item["min"],
+          max: item["max"]
+        }]]];
+      case "checked-spinner":
+        return ["div", { class: "preferenceItem" }, ["div", { class: "label" }, new Switcher({ className: "checkbox" }).render(), ["span", {}, title]], ["div", { class: "spinner" }, ["input", {
+          type: "number",
+          min: item["min"],
+          max: item["max"]
+        }]]];
+      case "button":
+        return ["div", { class: "preferenceItem" }, new Button({}).render()];
+      case "dropdown":
+        return ["div", { class: "preferenceItem" }, ["span", {}, title], new Dropdown({
+          items: item["items"],
+          width: item["width"]
+        }).render()];
+      case "custom":
+        return ["div", { class: "preferenceItem" }, item["node"][2]];
+      default:
+        return [];
     }
-    else {
-        return ["div", { class: "preferenceItem header" }, ["div", {}, title]];
-    }
+  } else {
+    return ["div", { class: "preferenceItem header" }, ["div", {}, title]];
+  }
 }
 render();
 function onResize() {
-    demo.setBox(0, 0, window.innerWidth, window.innerHeight);
+  demo.setBox(0, 0, window.innerWidth, window.innerHeight);
 }
 window.onresize = onResize;
 onResize();

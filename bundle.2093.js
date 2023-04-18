@@ -54,7 +54,7 @@ exports.contextMenuHandler = function(e){
     });
 };
 // todo support highlighting with typo.js
-var Editor = (__webpack_require__(82880).Editor);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 (__webpack_require__(13188).defineOptions)(Editor.prototype, "editor", {
     spellcheck: {
         set: function(val) {

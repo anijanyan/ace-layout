@@ -178,7 +178,7 @@ __webpack_require__(9613);
 var dom = __webpack_require__(6359);
 var oop = __webpack_require__(89359);
 var config = __webpack_require__(13188);
-var EventEmitter = (__webpack_require__(23056).EventEmitter);
+var EventEmitter = (__webpack_require__(23056)/* .EventEmitter */ .v);
 var buildDom = dom.buildDom;
 
 var modelist = __webpack_require__(90352);
@@ -593,7 +593,7 @@ function showSettingsMenu(editor) {
  * @param {ace.Editor} editor An instance of the Editor.
  */
 module.exports.init = function() {
-    var Editor = (__webpack_require__(82880).Editor);
+    var Editor = (__webpack_require__(82880)/* .Editor */ .M);
     Editor.prototype.showSettingsMenu = function() {
         showSettingsMenu(this);
     };

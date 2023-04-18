@@ -202,7 +202,7 @@ exports.clear = function(session) {
     exports.setLenses(session, null);
 };
 
-var Editor = (__webpack_require__(82880).Editor);
+var Editor = (__webpack_require__(82880)/* .Editor */ .M);
 (__webpack_require__(13188).defineOptions)(Editor.prototype, "editor", {
     enableCodeLens: {
         set: function(val) {
