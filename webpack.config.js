@@ -5,10 +5,7 @@ module.exports = (env, argv) => {
     loader = {
         test: /\.(t|j)sx?$/,
         use: {
-            loader: 'ts-loader',
-            options: {
-                transpileOnly: true
-            }
+            loader: 'esbuild-loader'
         },
         exclude: /node_modules/
     };
