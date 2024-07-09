@@ -14,12 +14,7 @@ var FoldMode = exports.Z = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var range = this.indentationBlock(session, row);
-        if (range)
-            return range;
-
+    this.commentBlock = function(session, row) {
         var re = /\S/;
         var line = session.getLine(row);
         var startLevel = line.search(re);
@@ -48,6 +43,16 @@ oop.inherits(FoldMode, BaseFoldMode);
             var endColumn = session.getLine(endRow).length;
             return new Range(startRow, startColumn, endRow, endColumn);
         }
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var range = this.indentationBlock(session, row);
+        if (range)
+            return range;
+
+        range = this.commentBlock(session, row);
+        if (range)
+            return range;
     };
 
     // must return "" if there's no fold, to enable caching
@@ -104,16 +109,15 @@ var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
 var LogiQLHighlightRules = (__webpack_require__(57975)/* .LogiQLHighlightRules */ .j);
 var FoldMode = (__webpack_require__(35090)/* .FoldMode */ .Z);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
 
 var Mode = function() {
     this.HighlightRules = LogiQLHighlightRules;
     this.foldingRules = new FoldMode();
     this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
 };
 oop.inherits(Mode, TextMode);
 

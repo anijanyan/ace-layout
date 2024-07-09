@@ -165,7 +165,7 @@ var modes = (__webpack_require__(13188).$modes);
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 var escaped = function(ch) {
     return "(?:[^" + lang.escapeRegExp(ch) + "\\\\]|\\\\.)*";
@@ -361,12 +361,11 @@ var TextMode = (__webpack_require__(98030).Mode);
 var ShHighlightRules = (__webpack_require__(87808).ShHighlightRules);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
 var CStyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
 
 var Mode = function() {
     this.HighlightRules = ShHighlightRules;
     this.foldingRules = new CStyleFoldMode();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
 };
 oop.inherits(Mode, TextMode);
 
@@ -676,7 +675,7 @@ var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextMode = (__webpack_require__(98030).Mode);
 var XmlHighlightRules = (__webpack_require__(75239)/* .XmlHighlightRules */ .U);
-var XmlBehaviour = (__webpack_require__(67809)/* .XmlBehaviour */ .D);
+var XmlBehaviour = (__webpack_require__(67809).XmlBehaviour);
 var XmlFoldMode = (__webpack_require__(64631)/* .FoldMode */ .Z);
 var WorkerClient = (__webpack_require__(91451).WorkerClient);
 

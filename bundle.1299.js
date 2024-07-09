@@ -9,7 +9,7 @@
 var oop = __webpack_require__(89359);
 var BaseFoldMode = (__webpack_require__(15369).FoldMode);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 
 var FoldMode = exports.Z = function() {};
@@ -389,7 +389,7 @@ var LuaHighlightRules = function() {
                     regex : /\]=*\]/,
                     next  : "start"
                 }, {
-                    defaultToken : "comment"
+                    defaultToken: "comment.body"
                 }
             ]
         },
@@ -503,7 +503,7 @@ exports.Mode = Mode;
 
 
 var oop = __webpack_require__(89359);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 var LuaHighlightRules = (__webpack_require__(98092)/* .LuaHighlightRules */ .Q);
 
 var LuaPageHighlightRules = function() {

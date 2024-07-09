@@ -136,7 +136,7 @@ exports.Mode = Mode;
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 var VelocityHighlightRules = function() {
     HtmlHighlightRules.call(this);

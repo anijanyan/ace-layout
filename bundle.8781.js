@@ -7,8 +7,8 @@
 
 
 var oop = __webpack_require__(89359);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
-var JavaScriptHighlightRules = (__webpack_require__(33801)/* .JavaScriptHighlightRules */ ._);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
+var JavaScriptHighlightRules = (__webpack_require__(33801).JavaScriptHighlightRules);
 
 var EjsHighlightRules = function(start, end) {
     HtmlHighlightRules.call(this);
@@ -80,7 +80,7 @@ exports.Mode = Mode;
 var oop = __webpack_require__(89359);
 var BaseFoldMode = (__webpack_require__(15369).FoldMode);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 
 var FoldMode = exports.Z = function () {
@@ -349,13 +349,12 @@ var TextMode = (__webpack_require__(98030).Mode);
 var RubyHighlightRules = (__webpack_require__(35772).RubyHighlightRules);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
 var FoldMode = (__webpack_require__(48636)/* .FoldMode */ .Z);
 
 var Mode = function() {
     this.HighlightRules = RubyHighlightRules;
     this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
     this.foldingRules = new FoldMode();
     this.indentKeywords = this.foldingRules.indentKeywords;
 };

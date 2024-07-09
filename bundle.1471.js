@@ -455,12 +455,7 @@ var FoldMode = exports.Z = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var range = this.indentationBlock(session, row);
-        if (range)
-            return range;
-
+    this.commentBlock = function(session, row) {
         var re = /\S/;
         var line = session.getLine(row);
         var startLevel = line.search(re);
@@ -489,6 +484,16 @@ oop.inherits(FoldMode, BaseFoldMode);
             var endColumn = session.getLine(endRow).length;
             return new Range(startRow, startColumn, endRow, endColumn);
         }
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var range = this.indentationBlock(session, row);
+        if (range)
+            return range;
+
+        range = this.commentBlock(session, row);
+        if (range)
+            return range;
     };
 
     // must return "" if there's no fold, to enable caching
@@ -575,7 +580,7 @@ exports.Mode = Mode;
 
 
     var oop = __webpack_require__(89359);
-    var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+    var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
     var ElixirHighlightRules = (__webpack_require__(5566)/* .ElixirHighlightRules */ .M);
 
     var HtmlElixirHighlightRules = function() {

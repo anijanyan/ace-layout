@@ -7,7 +7,7 @@
 
 
 var oop = __webpack_require__(89359);
-var XmlBehaviour = (__webpack_require__(67809)/* .XmlBehaviour */ .D);
+var XmlBehaviour = (__webpack_require__(67809).XmlBehaviour);
 
 var HtmlBehaviour = function () {
 
@@ -33,7 +33,7 @@ var oop = __webpack_require__(89359);
 var HtmlMode = (__webpack_require__(75528).Mode);
 var HandlebarsHighlightRules = (__webpack_require__(1335)/* .HandlebarsHighlightRules */ .V);
 var HtmlBehaviour = (__webpack_require__(76135)/* .HtmlBehaviour */ .k);
-var HtmlFoldMode = (__webpack_require__(74505)/* .FoldMode */ .Z);
+var HtmlFoldMode = (__webpack_require__(74505).FoldMode);
 
 var Mode = function() {
     HtmlMode.call(this);
@@ -61,7 +61,7 @@ exports.Mode = Mode;
 
 
 var oop = __webpack_require__(89359);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 function pop2(currentState, stack) {
     stack.splice(0, 3);

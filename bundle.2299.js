@@ -11,13 +11,12 @@ var TextMode = (__webpack_require__(98030).Mode);
 var CrystalHighlightRules = (__webpack_require__(55497)/* .CrystalHighlightRules */ .A);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
 var FoldMode = (__webpack_require__(35090)/* .FoldMode */ .Z);
 
 var Mode = function() {
     this.HighlightRules = CrystalHighlightRules;
     this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
     this.foldingRules = new FoldMode();
 };
 oop.inherits(Mode, TextMode);
@@ -533,12 +532,7 @@ var FoldMode = exports.Z = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var range = this.indentationBlock(session, row);
-        if (range)
-            return range;
-
+    this.commentBlock = function(session, row) {
         var re = /\S/;
         var line = session.getLine(row);
         var startLevel = line.search(re);
@@ -567,6 +561,16 @@ oop.inherits(FoldMode, BaseFoldMode);
             var endColumn = session.getLine(endRow).length;
             return new Range(startRow, startColumn, endRow, endColumn);
         }
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var range = this.indentationBlock(session, row);
+        if (range)
+            return range;
+
+        range = this.commentBlock(session, row);
+        if (range)
+            return range;
     };
 
     // must return "" if there's no fold, to enable caching

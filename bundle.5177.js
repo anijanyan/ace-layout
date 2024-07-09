@@ -9,17 +9,17 @@
 var oop = __webpack_require__(89359);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
 
-var DocCommentHighlightRules = function() {
+var DocCommentHighlightRules = function () {
     this.$rules = {
-        "start" : [ {
-            token : "comment.doc.tag",
-            regex : "@[\\w\\d_]+" // TODO: fix email addresses
-        }, 
-        DocCommentHighlightRules.getTagRule(),
-        {
-            defaultToken : "comment.doc",
-            caseInsensitive: true
-        }]
+        "start": [
+            {
+                token: "comment.doc.tag",
+                regex: "@\\w+(?=\\s|$)"
+            }, DocCommentHighlightRules.getTagRule(), {
+                defaultToken: "comment.doc.body",
+                caseInsensitive: true
+            }
+        ]
     };
 };
 
@@ -35,7 +35,7 @@ DocCommentHighlightRules.getTagRule = function(start) {
 DocCommentHighlightRules.getStartRule = function(start) {
     return {
         token : "comment.doc", // doc comment
-        regex : "\\/\\*(?=\\*)",
+        regex: /\/\*\*(?!\/)/,
         next  : start
     };
 };
@@ -232,14 +232,12 @@ oop.inherits(FoldMode, BaseFoldMode);
 var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
 var HighlightRules = (__webpack_require__(50491)/* .HighlightRules */ .R);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
 // TODO: pick appropriate fold mode
 var FoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
 
 var Mode = function() {
     this.HighlightRules = HighlightRules;
     this.foldingRules = new FoldMode();
-    this.$behaviour = new CstyleBehaviour();
     this.$behaviour = this.$defaultBehaviour;
 };
 oop.inherits(Mode, TextMode);
@@ -259,6 +257,7 @@ exports.Mode = Mode;
 /***/ 50491:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+var __webpack_unused_export__;
 
 
 var oop = __webpack_require__(89359);
@@ -350,7 +349,7 @@ var SwiftHighlightRules = function() {
     function comments() {
         return [{
                 token : "comment",
-                regex : "\\/\\/(?=.)",
+                regex : /\/\//,
                 next : [
                     DocCommentHighlightRules.getTagRule(),
                     {token : "comment", regex : "$|^", next: "start"},
@@ -428,6 +427,7 @@ var SwiftHighlightRules = function() {
 oop.inherits(SwiftHighlightRules, TextHighlightRules);
 
 exports.R = SwiftHighlightRules;
+__webpack_unused_export__ = SwiftHighlightRules;
 
 
 /***/ })

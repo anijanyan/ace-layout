@@ -6,7 +6,7 @@
 
 
 
-var Rules = (__webpack_require__(7678)/* .CoffeeHighlightRules */ .s);
+var Rules = (__webpack_require__(7678).CoffeeHighlightRules);
 var Outdent = (__webpack_require__(1164).MatchingBraceOutdent);
 var FoldMode = (__webpack_require__(35090)/* .FoldMode */ .Z);
 var Range = (__webpack_require__(59082)/* .Range */ .e);
@@ -294,7 +294,7 @@ exports.Mode = Mode;
         this.normalizeRules();
     }
 
-    exports.s = CoffeeHighlightRules;
+    exports.CoffeeHighlightRules = CoffeeHighlightRules;
 
 
 /***/ }),
@@ -312,12 +312,7 @@ var FoldMode = exports.Z = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var range = this.indentationBlock(session, row);
-        if (range)
-            return range;
-
+    this.commentBlock = function(session, row) {
         var re = /\S/;
         var line = session.getLine(row);
         var startLevel = line.search(re);
@@ -346,6 +341,16 @@ oop.inherits(FoldMode, BaseFoldMode);
             var endColumn = session.getLine(endRow).length;
             return new Range(startRow, startColumn, endRow, endColumn);
         }
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var range = this.indentationBlock(session, row);
+        if (range)
+            return range;
+
+        range = this.commentBlock(session, row);
+        if (range)
+            return range;
     };
 
     // must return "" if there's no fold, to enable caching

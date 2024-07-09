@@ -1,6 +1,6 @@
 (self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[1257],{
 
-/***/ 38924:
+/***/ 15312:
 /***/ ((module) => {
 
 module.exports = `.ace-solarized-dark .ace_gutter {
@@ -15,12 +15,12 @@ module.exports = `.ace-solarized-dark .ace_gutter {
 
 .ace-solarized-dark {
   background-color: #002B36;
-  color: #93A1A1
+  color: #839496
 }
 
 .ace-solarized-dark .ace_entity.ace_other.ace_attribute-name,
 .ace-solarized-dark .ace_storage {
-  color: #93A1A1
+  color: #839496
 }
 
 .ace-solarized-dark .ace_cursor,
@@ -117,7 +117,7 @@ module.exports = `.ace-solarized-dark .ace_gutter {
 
 exports.isDark = true;
 exports.cssClass = "ace-solarized-dark";
-exports.cssText = __webpack_require__(38924);
+exports.cssText = __webpack_require__(15312);
 
 var dom = __webpack_require__(6359);
 dom.importCssString(exports.cssText, exports.cssClass, false);

@@ -104,6 +104,59 @@ exports.f = CSharpHighlightRules;
 
 /***/ }),
 
+/***/ 62718:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(89359);
+var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
+
+var DocCommentHighlightRules = function () {
+    this.$rules = {
+        "start": [
+            {
+                token: "comment.doc.tag",
+                regex: "@\\w+(?=\\s|$)"
+            }, DocCommentHighlightRules.getTagRule(), {
+                defaultToken: "comment.doc.body",
+                caseInsensitive: true
+            }
+        ]
+    };
+};
+
+oop.inherits(DocCommentHighlightRules, TextHighlightRules);
+
+DocCommentHighlightRules.getTagRule = function(start) {
+    return {
+        token : "comment.doc.tag.storage.type",
+        regex : "\\b(?:TODO|FIXME|XXX|HACK)\\b"
+    };
+};
+
+DocCommentHighlightRules.getStartRule = function(start) {
+    return {
+        token : "comment.doc", // doc comment
+        regex: /\/\*\*(?!\/)/,
+        next  : start
+    };
+};
+
+DocCommentHighlightRules.getEndRule = function (start) {
+    return {
+        token : "comment.doc", // closing comment
+        regex : "\\*\\/",
+        next  : start
+    };
+};
+
+
+exports.c = DocCommentHighlightRules;
+
+
+/***/ }),
+
 /***/ 86562:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -113,7 +166,7 @@ var oop = __webpack_require__(89359);
 var HtmlMode = (__webpack_require__(75528).Mode);
 var RazorHighlightRules = (__webpack_require__(65792)/* .RazorHighlightRules */ .h);
 var RazorCompletions = (__webpack_require__(9102)/* .RazorCompletions */ .Z);
-var HtmlCompletions = (__webpack_require__(18439)/* .HtmlCompletions */ .A);
+var HtmlCompletions = (__webpack_require__(18439).HtmlCompletions);
 
 var Mode = function() {
     HtmlMode.call(this);
@@ -148,7 +201,7 @@ exports.Mode = Mode;
 
 
 
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 var keywords = [
     "abstract", "as", "base", "bool",
@@ -238,7 +291,7 @@ var __webpack_unused_export__;
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var DocCommentHighlightRules = (__webpack_require__(62718)/* .DocCommentHighlightRules */ .c);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 var CSharpHighlightRules = (__webpack_require__(58885)/* .CSharpHighlightRules */ .f);
 
 var blockPrefix = 'razor-block-';

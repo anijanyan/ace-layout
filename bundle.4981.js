@@ -1,6 +1,59 @@
 "use strict";
 (self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[4981],{
 
+/***/ 62718:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(89359);
+var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
+
+var DocCommentHighlightRules = function () {
+    this.$rules = {
+        "start": [
+            {
+                token: "comment.doc.tag",
+                regex: "@\\w+(?=\\s|$)"
+            }, DocCommentHighlightRules.getTagRule(), {
+                defaultToken: "comment.doc.body",
+                caseInsensitive: true
+            }
+        ]
+    };
+};
+
+oop.inherits(DocCommentHighlightRules, TextHighlightRules);
+
+DocCommentHighlightRules.getTagRule = function(start) {
+    return {
+        token : "comment.doc.tag.storage.type",
+        regex : "\\b(?:TODO|FIXME|XXX|HACK)\\b"
+    };
+};
+
+DocCommentHighlightRules.getStartRule = function(start) {
+    return {
+        token : "comment.doc", // doc comment
+        regex: /\/\*\*(?!\/)/,
+        next  : start
+    };
+};
+
+DocCommentHighlightRules.getEndRule = function (start) {
+    return {
+        token : "comment.doc", // closing comment
+        regex : "\\*\\/",
+        next  : start
+    };
+};
+
+
+exports.c = DocCommentHighlightRules;
+
+
+/***/ }),
+
 /***/ 12764:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -177,6 +230,7 @@ var DocCommentHighlightRules = (__webpack_require__(62718)/* .DocCommentHighligh
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
 
 var JavaHighlightRules = function() {
+    var identifierRe = "[a-zA-Z_$][a-zA-Z0-9_$]*";
 
     // taken from http://download.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
     var keywords = (
@@ -190,7 +244,10 @@ var JavaHighlightRules = function() {
     "char|final|interface|static|void|" +
     "class|finally|long|strictfp|volatile|" +
     "const|float|native|super|while|" +
-    "var"
+    "var|exports|opens|requires|uses|yield|" +
+    "module|permits|(?:non\\-)?sealed|var|" +
+    "provides|to|when|" +
+    "open|record|transitive|with"    
     );
 
     var buildinConstants = ("null|Infinity|NaN|undefined");
@@ -225,7 +282,6 @@ var JavaHighlightRules = function() {
 
     var keywordMapper = this.createKeywordMapper({
         "variable.language": "this",
-        "keyword": keywords,
         "constant.language": buildinConstants,
         "support.function": langClasses
     }, "identifier");
@@ -244,22 +300,11 @@ var JavaHighlightRules = function() {
                 token : "comment", // multi line comment
                 regex : "\\/\\*",
                 next : "comment"
-            }, {
-                token : "string", // single line
-                regex : '["](?:(?:\\\\.)|(?:[^"\\\\]))*?["]'
-            }, {
-                token : "string", // single line
-                regex : "['](?:(?:\\\\.)|(?:[^'\\\\]))*?[']"
-            }, {
-                token : "constant.numeric", // hex
-                regex : /0(?:[xX][0-9a-fA-F][0-9a-fA-F_]*|[bB][01][01_]*)[LlSsDdFfYy]?\b/
-            }, {
-                token : "constant.numeric", // float
-                regex : /[+-]?\d[\d_]*(?:(?:\.[\d_]*)?(?:[eE][+-]?[\d_]+)?)?[LlSsDdFfYy]?\b/
-            }, {
-                token : "constant.language.boolean",
-                regex : "(?:true|false)\\b"
-            }, {
+            },
+            {include: "multiline-strings"},
+            {include: "strings"},
+            {include: "constants"},
+            {
                 regex: "(open(?:\\s+))?module(?=\\s*\\w)",
                 token: "keyword",
                 next: [{
@@ -290,24 +335,8 @@ var JavaHighlightRules = function() {
                     regex: "", // exit if there is anything else
                     next: "start"
                 }]
-            }, {
-                token : keywordMapper,
-                // TODO: Unicode escape sequences
-                // TODO: Unicode identifiers
-                regex : "[a-zA-Z_$][a-zA-Z0-9_$]*\\b"
-            }, {
-                token : "keyword.operator",
-                regex : "!|\\$|%|&|\\||\\^|\\*|\\/|\\-\\-|\\-|\\+\\+|\\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?|\\:|\\*=|\\/=|%=|\\+=|\\-=|&=|\\|=|\\^=|\\b(?:in|instanceof|new|delete|typeof|void)"
-            }, {
-                token : "lparen",
-                regex : "[[({]"
-            }, {
-                token : "rparen",
-                regex : "[\\])}]"
-            }, {
-                token : "text",
-                regex : "\\s+"
-            }
+            },
+            {include: "statements"}
         ],
         "comment" : [
             {
@@ -316,6 +345,147 @@ var JavaHighlightRules = function() {
                 next : "start"
             }, {
                 defaultToken : "comment"
+            }
+        ],
+        "strings": [
+            {
+                token: ["punctuation", "string"],
+                regex: /(\.)(")/,
+                push: [
+                    {
+                        token: "lparen",
+                        regex: /\\\{/,
+                        push: [
+                            {
+                                token: "text",
+                                regex: /$/,
+                                next: "start"
+                            }, {
+                                token: "rparen",
+                                regex: /}/,
+                                next: "pop"
+                            }, {
+                                include: "strings"
+                            }, {
+                                include: "constants"
+                            }, {
+                                include: "statements"
+                            }
+                        ]
+                    }, {
+                        token: "string",
+                        regex: /"/,
+                        next: "pop"
+                    }, {
+                        defaultToken: "string"
+                    }
+                ]
+            },  {
+                token : "string", // single line
+                regex : '["](?:(?:\\\\.)|(?:[^"\\\\]))*?["]'
+            }, {
+                token : "string", // single line
+                regex : "['](?:(?:\\\\.)|(?:[^'\\\\]))*?[']"
+            }
+        ],
+        "multiline-strings": [
+            {
+                token: ["punctuation", "string"],
+                regex: /(\.)(""")/,
+                push: [
+                    {
+                        token: "string",
+                        regex: '"""',
+                        next: "pop"
+                    }, {
+                        token: "lparen",
+                        regex: /\\\{/,
+                        push: [
+                            {
+                                token: "text",
+                                regex: /$/,
+                                next: "start"
+                            }, {
+                                token: "rparen",
+                                regex: /}/,
+                                next: "pop"
+                            }, {
+                                include: "multiline-strings"
+                            }, {
+                                include: "strings"
+                            }, {
+                                include: "constants"
+                            }, {
+                                include: "statements"
+                            }
+                        ]
+                    }, {
+                        token: "constant.language.escape",
+                        regex: /\\./
+                    }, {
+                        defaultToken: "string"
+                    }
+                ]
+            },
+            {
+                token: "string",
+                regex: '"""',
+                push: [
+                    {
+                        token: "string",
+                        regex: '"""',
+                        next: "pop"
+                    }, {
+                        token : "constant.language.escape",
+                        regex : /\\./
+                    }, {
+                        defaultToken: "string"
+                    }
+                ]
+            }
+        ],
+        "constants": [
+            {
+                token: "constant.numeric", // hex
+                regex: /0(?:[xX][0-9a-fA-F][0-9a-fA-F_]*|[bB][01][01_]*)[LlSsDdFfYy]?\b/
+            }, {
+                token: "constant.numeric", // float
+                regex: /[+-]?\d[\d_]*(?:(?:\.[\d_]*)?(?:[eE][+-]?[\d_]+)?)?[LlSsDdFfYy]?\b/
+            }, {
+                token: "constant.language.boolean",
+                regex: "(?:true|false)\\b"
+            }
+        ],
+        "statements": [
+            {
+                token: ["keyword", "text", "identifier"],
+                regex: "(record)(\\s+)("+identifierRe+")\\b"
+            },
+            {
+                token: "keyword",
+                regex: "(?:" + keywords + ")\\b"
+            }, {//annotations
+                token: "storage.type.annotation",
+                regex: "@" + identifierRe + "\\b"
+            }, {
+                token: "entity.name.function",
+                regex: identifierRe + "(?=\\()"
+            }, {
+                token: keywordMapper, // TODO: Unicode escape sequences
+                // TODO: Unicode identifiers
+                regex: identifierRe + "\\b"
+            }, {
+                token: "keyword.operator",
+                regex: "!|\\$|%|&|\\||\\^|\\*|\\/|\\-\\-|\\-|\\+\\+|\\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?|\\:|\\*=|\\/=|%=|\\+=|\\-=|&=|\\|=|\\^=|\\b(?:in|instanceof|new|delete|typeof|void)"
+            }, {
+                token: "lparen",
+                regex: "[[({]"
+            }, {
+                token: "rparen",
+                regex: "[\\])}]"
+            }, {
+                token: "text",
+                regex: "\\s+"
             }
         ]
     };
@@ -342,13 +512,12 @@ var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
 var JspHighlightRules = (__webpack_require__(6817)/* .JspHighlightRules */ .w);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
 var CStyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
 
 var Mode = function() {
     this.HighlightRules = JspHighlightRules;
     this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
     this.foldingRules = new CStyleFoldMode();
 };
 oop.inherits(Mode, TextMode);
@@ -370,7 +539,7 @@ exports.Mode = Mode;
 
 
 var oop = __webpack_require__(89359);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 var JavaHighlightRules = (__webpack_require__(24194)/* .JavaHighlightRules */ .x);
 
 var JspHighlightRules = function() {

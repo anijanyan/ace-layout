@@ -352,7 +352,7 @@ exports.Mode = Mode;
 
 var oop = __webpack_require__(89359);
 var RHighlightRules = (__webpack_require__(48858)/* .RHighlightRules */ .c);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
 
 var RHtmlHighlightRules = function() {

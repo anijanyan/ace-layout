@@ -10,14 +10,13 @@ var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
 var HighlightRules = (__webpack_require__(89467)/* .JsonHighlightRules */ .h);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
 var CStyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
 var WorkerClient = (__webpack_require__(91451).WorkerClient);
 
 var Mode = function() {
     this.HighlightRules = HighlightRules;
     this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
     this.foldingRules = new CStyleFoldMode();
 };
 oop.inherits(Mode, TextMode);
@@ -248,9 +247,9 @@ var oop = __webpack_require__(89359);
 
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
 var CssHighlightRules = (__webpack_require__(99301).CssHighlightRules);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 var JsonHighlightRules = (__webpack_require__(89467)/* .JsonHighlightRules */ .h);
-var JavaScriptHighlightRules =  (__webpack_require__(33801)/* .JavaScriptHighlightRules */ ._);
+var JavaScriptHighlightRules =  (__webpack_require__(33801).JavaScriptHighlightRules);
 
 var LiquidHighlightRules = function () {
 

@@ -8,12 +8,11 @@
 
 var event = __webpack_require__(17989);
 var UA = __webpack_require__(50618);
-var net = __webpack_require__(42634);
 var ace = __webpack_require__(59100);
 
 module.exports = exports = ace;
 
-/*
+/**
  * Returns the CSS property of element.
  *   1) If the CSS property is on the style object of the element, use it, OR
  *   2) Compute the CSS property
@@ -21,6 +20,9 @@ module.exports = exports = ace;
  * If the property can't get computed, is 'auto' or 'intrinsic', the former
  * calculated property is used (this can happen in cases where the textarea
  * is hidden and has no dimension styles).
+ * @param {HTMLElement} element
+ * @param {HTMLElement} container
+ * @param {string} property
  */
 var getCSSProperty = function(element, container, property) {
     var ret = element.style[property];
@@ -29,6 +31,7 @@ var getCSSProperty = function(element, container, property) {
         if (window.getComputedStyle) {
             ret = window.getComputedStyle(element, '').getPropertyValue(property);
         } else {
+            // @ts-ignore
             ret = element.currentStyle[property];
         }
     }
@@ -39,6 +42,10 @@ var getCSSProperty = function(element, container, property) {
     return ret;
 };
 
+/**
+ * @param {HTMLElement} elm
+ * @param {Object} styles
+ */
 function applyStyles(elm, styles) {
     for (var style in styles) {
         elm.style[style] = styles[style];
@@ -96,7 +103,7 @@ function setupContainer(element, getValue) {
 
         // Set the display property to 'inline-block'.
         style += 'display:inline-block;';
-        container.setAttribute('style', style);
+        container.style.cssText = style;
     };
     event.addListener(window, 'resize', resizeEvent);
 
@@ -223,7 +230,7 @@ exports.transformTextarea = function(element, options) {
             editor.setDisplaySettings();
             return;
         }
-        container.style.zIndex = 100000;
+        container.style.zIndex = "100000";
         var rect = container.getBoundingClientRect();
         var startX = rect.width  + rect.left - e.clientX;
         var startY = rect.height  + rect.top - e.clientY;
@@ -237,16 +244,7 @@ exports.transformTextarea = function(element, options) {
     return editor;
 };
 
-function load(url, module, callback) {
-    net.loadScript(url, function() {
-        __webpack_require__.e(/* AMD require */ 7880).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(77880)(module)]; (callback).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__);}.bind(this))['catch'](__webpack_require__.oe);
-    });
-}
-
 function setupApi(editor, editorDiv, settingDiv, ace, options) {
-    var session = editor.getSession();
-    var renderer = editor.renderer;
-
     function toBool(value) {
         return value === "true" || value == true;
     }

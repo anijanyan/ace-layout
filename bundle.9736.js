@@ -140,6 +140,9 @@ var CssHighlightRules = function() {
             token : keywordMapper,
             regex : "\\-?[a-zA-Z_][a-zA-Z0-9_\\-]*"
         }, {
+            token: "paren.lparen",
+            regex: "\\{"
+        }, {
             caseInsensitive: true
         }],
 
@@ -218,12 +221,7 @@ var FoldMode = exports.Z = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var range = this.indentationBlock(session, row);
-        if (range)
-            return range;
-
+    this.commentBlock = function(session, row) {
         var re = /\S/;
         var line = session.getLine(row);
         var startLevel = line.search(re);
@@ -252,6 +250,16 @@ oop.inherits(FoldMode, BaseFoldMode);
             var endColumn = session.getLine(endRow).length;
             return new Range(startRow, startColumn, endRow, endColumn);
         }
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var range = this.indentationBlock(session, row);
+        if (range)
+            return range;
+
+        range = this.commentBlock(session, row);
+        if (range)
+            return range;
     };
 
     // must return "" if there's no fold, to enable caching
@@ -306,7 +314,7 @@ oop.inherits(FoldMode, BaseFoldMode);
 
 var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
-var SassHighlightRules = (__webpack_require__(32475)/* .SassHighlightRules */ .o);
+var SassHighlightRules = (__webpack_require__(32475).SassHighlightRules);
 var FoldMode = (__webpack_require__(35090)/* .FoldMode */ .Z);
 
 var Mode = function() {
@@ -333,7 +341,7 @@ exports.Mode = Mode;
 
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
-var ScssHighlightRules = (__webpack_require__(71690)/* .ScssHighlightRules */ .m);
+var ScssHighlightRules = (__webpack_require__(71690).ScssHighlightRules);
 
 var SassHighlightRules = function() {
     ScssHighlightRules.call(this);
@@ -374,7 +382,7 @@ var SassHighlightRules = function() {
 
 oop.inherits(SassHighlightRules, ScssHighlightRules);
 
-exports.o = SassHighlightRules;
+exports.SassHighlightRules = SassHighlightRules;
 
 
 /***/ }),
@@ -551,7 +559,7 @@ var ScssHighlightRules = function() {
 
 oop.inherits(ScssHighlightRules, TextHighlightRules);
 
-exports.m = ScssHighlightRules;
+exports.ScssHighlightRules = ScssHighlightRules;
 
 
 /***/ })

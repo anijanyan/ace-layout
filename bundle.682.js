@@ -7,7 +7,7 @@
 // [WIP]
 
 
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 function is(token, type) {
     return token.type.lastIndexOf(type + ".xml") > -1;
@@ -19,10 +19,18 @@ exports.singletonTags = ["area", "base", "br", "col", "command", "embed", "hr", 
 // insert a line break after block level tags
 exports.blockTags = ["article", "aside", "blockquote", "body", "div", "dl", "fieldset", "footer", "form", "head", "header", "html", "nav", "ol", "p", "script", "section", "style", "table", "tbody", "tfoot", "thead", "ul"];
 
+/**
+ * 
+ * @type {{lineBreaksAfterCommasInCurlyBlock?: boolean}}
+ */
 exports.formatOptions = {
     lineBreaksAfterCommasInCurlyBlock: true
 };
 
+/**
+ * 
+ * @param {import("../edit_session").EditSession} session
+ */
 exports.beautify = function(session) {
     var iterator = new TokenIterator(session, 0, 0);
     var token = iterator.getCurrentToken();

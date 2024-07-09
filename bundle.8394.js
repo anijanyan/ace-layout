@@ -9,7 +9,7 @@
 var oop = __webpack_require__(89359);
 var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
 var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 var CssBehaviour = function () {
 
@@ -274,7 +274,7 @@ var modes = (__webpack_require__(13188).$modes);
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 var escaped = function(ch) {
     return "(?:[^" + lang.escapeRegExp(ch) + "\\\\]|\\\\.)*";
@@ -528,10 +528,10 @@ exports.r = MaskHighlightRules;
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextRules   = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-var JSRules     = (__webpack_require__(33801)/* .JavaScriptHighlightRules */ ._);
+var JSRules     = (__webpack_require__(33801).JavaScriptHighlightRules);
 var CssRules    = (__webpack_require__(99301).CssHighlightRules);
 var MDRules     = (__webpack_require__(92884)/* .MarkdownHighlightRules */ .B);
-var HTMLRules   = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HTMLRules   = (__webpack_require__(72843).HtmlHighlightRules);
 
 var token_TAG       = "keyword.support.constant.language",
     token_COMPO     = "support.function.markup.bold",

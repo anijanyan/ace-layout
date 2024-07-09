@@ -11,8 +11,8 @@
 var oop = __webpack_require__(89359);
 var HtmlMode = (__webpack_require__(75528).Mode);
 var VisualforceHighlightRules = (__webpack_require__(24672)/* .VisualforceHighlightRules */ .l);
-var XmlBehaviour = (__webpack_require__(67809)/* .XmlBehaviour */ .D);
-var HtmlFoldMode = (__webpack_require__(74505)/* .FoldMode */ .Z);
+var XmlBehaviour = (__webpack_require__(67809).XmlBehaviour);
+var HtmlFoldMode = (__webpack_require__(74505).FoldMode);
 
 function VisualforceMode() {
     HtmlMode.call(this);
@@ -41,7 +41,7 @@ exports.Mode = VisualforceMode;
 
 
 var oop = __webpack_require__(89359);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 function string(options) {
     return {

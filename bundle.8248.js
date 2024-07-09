@@ -34,7 +34,7 @@ var oop = __webpack_require__(89359);
 
 var CsoundOrchestraHighlightRules = (__webpack_require__(70163)/* .CsoundOrchestraHighlightRules */ .e);
 var CsoundScoreHighlightRules = (__webpack_require__(53112)/* .CsoundScoreHighlightRules */ .U);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
 
 var CsoundDocumentHighlightRules = function() {

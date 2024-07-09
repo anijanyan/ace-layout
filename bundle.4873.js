@@ -43,8 +43,8 @@ exports.Mode = Mode;
 
 
 var oop = __webpack_require__(89359);
-var JavaScriptHighlightRules = (__webpack_require__(33801)/* .JavaScriptHighlightRules */ ._);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var JavaScriptHighlightRules = (__webpack_require__(33801).JavaScriptHighlightRules);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 var ColdfusionHighlightRules = function() {
     HtmlHighlightRules.call(this);

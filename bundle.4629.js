@@ -9,7 +9,7 @@
 var oop = __webpack_require__(89359);
 var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
 var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 var CssBehaviour = function () {
 
@@ -426,6 +426,9 @@ var CssHighlightRules = function() {
             token : keywordMapper,
             regex : "\\-?[a-zA-Z_][a-zA-Z0-9_\\-]*"
         }, {
+            token: "paren.lparen",
+            regex: "\\{"
+        }, {
             caseInsensitive: true
         }],
 
@@ -664,7 +667,7 @@ oop.inherits(FoldMode, BaseFoldMode);
 
 var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
-var LessHighlightRules = (__webpack_require__(16761)/* .LessHighlightRules */ .q);
+var LessHighlightRules = (__webpack_require__(16761).LessHighlightRules);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
 var CssBehaviour = (__webpack_require__(47853)/* .CssBehaviour */ .K);
 var CssCompletions = (__webpack_require__(37237)/* .CssCompletions */ .A);
@@ -862,7 +865,7 @@ var LessHighlightRules = function() {
 
 oop.inherits(LessHighlightRules, TextHighlightRules);
 
-exports.q = LessHighlightRules;
+exports.LessHighlightRules = LessHighlightRules;
 
 
 /***/ }),

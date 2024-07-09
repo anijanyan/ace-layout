@@ -10,7 +10,7 @@ var oop = __webpack_require__(89359);
 // defines the parent mode
 var HtmlMode = (__webpack_require__(75528).Mode);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
-var HtmlFoldMode = (__webpack_require__(74505)/* .FoldMode */ .Z);
+var HtmlFoldMode = (__webpack_require__(74505).FoldMode);
 
 // defines the language specific highlighters and folding rules
 var CurlyHighlightRules = (__webpack_require__(32726)/* .CurlyHighlightRules */ .b);
@@ -38,7 +38,7 @@ exports.Mode = Mode;
 
 
 var oop = __webpack_require__(89359);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 
 var CurlyHighlightRules = function() {

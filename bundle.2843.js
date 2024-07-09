@@ -140,6 +140,9 @@ var CssHighlightRules = function() {
             token : keywordMapper,
             regex : "\\-?[a-zA-Z_][a-zA-Z0-9_\\-]*"
         }, {
+            token: "paren.lparen",
+            regex: "\\{"
+        }, {
             caseInsensitive: true
         }],
 
@@ -213,7 +216,7 @@ exports.CssHighlightRules = CssHighlightRules;
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var CssHighlightRules = (__webpack_require__(99301).CssHighlightRules);
-var JavaScriptHighlightRules = (__webpack_require__(33801)/* .JavaScriptHighlightRules */ ._);
+var JavaScriptHighlightRules = (__webpack_require__(33801).JavaScriptHighlightRules);
 var XmlHighlightRules = (__webpack_require__(75239)/* .XmlHighlightRules */ .U);
 
 var tagMap = lang.createMap({
@@ -286,7 +289,7 @@ var HtmlHighlightRules = function() {
 
 oop.inherits(HtmlHighlightRules, XmlHighlightRules);
 
-exports.V = HtmlHighlightRules;
+exports.HtmlHighlightRules = HtmlHighlightRules;
 
 
 /***/ }),

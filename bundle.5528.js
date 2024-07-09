@@ -9,7 +9,7 @@
 var oop = __webpack_require__(89359);
 var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
 var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 var CssBehaviour = function () {
 
@@ -378,7 +378,7 @@ var MixedFoldMode = (__webpack_require__(92974)/* .FoldMode */ .Z);
 var XmlFoldMode = (__webpack_require__(64631)/* .FoldMode */ .Z);
 var CStyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
 
-var FoldMode = exports.Z = function(voidElements, optionalTags) {
+var FoldMode = exports.FoldMode = function(voidElements, optionalTags) {
     MixedFoldMode.call(this, new XmlFoldMode(voidElements, optionalTags), {
         "js-": new CStyleFoldMode(),
         "css-": new CStyleFoldMode()
@@ -386,6 +386,63 @@ var FoldMode = exports.Z = function(voidElements, optionalTags) {
 };
 
 oop.inherits(FoldMode, MixedFoldMode);
+
+
+/***/ }),
+
+/***/ 92974:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(89359);
+var BaseFoldMode = (__webpack_require__(15369).FoldMode);
+
+var FoldMode = exports.Z = function(defaultMode, subModes) {
+    this.defaultMode = defaultMode;
+    this.subModes = subModes;
+};
+oop.inherits(FoldMode, BaseFoldMode);
+
+(function() {
+
+
+    this.$getMode = function(state) {
+        if (typeof state != "string") 
+            state = state[0];
+        for (var key in this.subModes) {
+            if (state.indexOf(key) === 0)
+                return this.subModes[key];
+        }
+        return null;
+    };
+    
+    this.$tryMode = function(state, session, foldStyle, row) {
+        var mode = this.$getMode(state);
+        return (mode ? mode.getFoldWidget(session, foldStyle, row) : "");
+    };
+
+    this.getFoldWidget = function(session, foldStyle, row) {
+        return (
+            this.$tryMode(session.getState(row-1), session, foldStyle, row) ||
+            this.$tryMode(session.getState(row), session, foldStyle, row) ||
+            this.defaultMode.getFoldWidget(session, foldStyle, row)
+        );
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var mode = this.$getMode(session.getState(row-1));
+        
+        if (!mode || !mode.getFoldWidget(session, foldStyle, row))
+            mode = this.$getMode(session.getState(row));
+        
+        if (!mode || !mode.getFoldWidget(session, foldStyle, row))
+            mode = this.defaultMode;
+        
+        return mode.getFoldWidgetRange(session, foldStyle, row);
+    };
+
+}).call(FoldMode.prototype);
 
 
 /***/ }),
@@ -400,10 +457,10 @@ var lang = __webpack_require__(20124);
 var TextMode = (__webpack_require__(98030).Mode);
 var JavaScriptMode = (__webpack_require__(88057).Mode);
 var CssMode = (__webpack_require__(98771).Mode);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
-var XmlBehaviour = (__webpack_require__(67809)/* .XmlBehaviour */ .D);
-var HtmlFoldMode = (__webpack_require__(74505)/* .FoldMode */ .Z);
-var HtmlCompletions = (__webpack_require__(18439)/* .HtmlCompletions */ .A);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
+var XmlBehaviour = (__webpack_require__(67809).XmlBehaviour);
+var HtmlFoldMode = (__webpack_require__(74505).FoldMode);
+var HtmlCompletions = (__webpack_require__(18439).HtmlCompletions);
 var WorkerClient = (__webpack_require__(91451).WorkerClient);
 
 // http://www.w3.org/TR/html5/syntax.html#void-elements
@@ -477,7 +534,7 @@ exports.Mode = Mode;
 
 
 
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 var commonAttributes = [
     "accesskey",
@@ -801,7 +858,7 @@ var HtmlCompletions = function() {
 
 }).call(HtmlCompletions.prototype);
 
-exports.A = HtmlCompletions;
+exports.HtmlCompletions = HtmlCompletions;
 
 
 /***/ })

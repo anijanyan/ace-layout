@@ -1,6 +1,63 @@
 "use strict";
 (self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[4589],{
 
+/***/ 92974:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(89359);
+var BaseFoldMode = (__webpack_require__(15369).FoldMode);
+
+var FoldMode = exports.Z = function(defaultMode, subModes) {
+    this.defaultMode = defaultMode;
+    this.subModes = subModes;
+};
+oop.inherits(FoldMode, BaseFoldMode);
+
+(function() {
+
+
+    this.$getMode = function(state) {
+        if (typeof state != "string") 
+            state = state[0];
+        for (var key in this.subModes) {
+            if (state.indexOf(key) === 0)
+                return this.subModes[key];
+        }
+        return null;
+    };
+    
+    this.$tryMode = function(state, session, foldStyle, row) {
+        var mode = this.$getMode(state);
+        return (mode ? mode.getFoldWidget(session, foldStyle, row) : "");
+    };
+
+    this.getFoldWidget = function(session, foldStyle, row) {
+        return (
+            this.$tryMode(session.getState(row-1), session, foldStyle, row) ||
+            this.$tryMode(session.getState(row), session, foldStyle, row) ||
+            this.defaultMode.getFoldWidget(session, foldStyle, row)
+        );
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var mode = this.$getMode(session.getState(row-1));
+        
+        if (!mode || !mode.getFoldWidget(session, foldStyle, row))
+            mode = this.$getMode(session.getState(row));
+        
+        if (!mode || !mode.getFoldWidget(session, foldStyle, row))
+            mode = this.defaultMode;
+        
+        return mode.getFoldWidgetRange(session, foldStyle, row);
+    };
+
+}).call(FoldMode.prototype);
+
+
+/***/ }),
+
 /***/ 24589:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -51,7 +108,7 @@ exports.Mode = Mode;
 
 
 var oop = __webpack_require__(89359);
-var JavaScriptHighlightRules = (__webpack_require__(33801)/* .JavaScriptHighlightRules */ ._);
+var JavaScriptHighlightRules = (__webpack_require__(33801).JavaScriptHighlightRules);
 var XmlHighlightRules = (__webpack_require__(75239)/* .XmlHighlightRules */ .U);
 
 var SvgHighlightRules = function() {
@@ -78,7 +135,7 @@ var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextMode = (__webpack_require__(98030).Mode);
 var XmlHighlightRules = (__webpack_require__(75239)/* .XmlHighlightRules */ .U);
-var XmlBehaviour = (__webpack_require__(67809)/* .XmlBehaviour */ .D);
+var XmlBehaviour = (__webpack_require__(67809).XmlBehaviour);
 var XmlFoldMode = (__webpack_require__(64631)/* .FoldMode */ .Z);
 var WorkerClient = (__webpack_require__(91451).WorkerClient);
 

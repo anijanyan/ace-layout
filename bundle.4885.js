@@ -203,7 +203,7 @@
         this.normalizeRules();
     }
 
-    exports.s = CoffeeHighlightRules;
+    exports.CoffeeHighlightRules = CoffeeHighlightRules;
 
 
 /***/ }),
@@ -221,12 +221,7 @@ var FoldMode = exports.Z = function() {};
 oop.inherits(FoldMode, BaseFoldMode);
 
 (function() {
-
-    this.getFoldWidgetRange = function(session, foldStyle, row) {
-        var range = this.indentationBlock(session, row);
-        if (range)
-            return range;
-
+    this.commentBlock = function(session, row) {
         var re = /\S/;
         var line = session.getLine(row);
         var startLevel = line.search(re);
@@ -255,6 +250,16 @@ oop.inherits(FoldMode, BaseFoldMode);
             var endColumn = session.getLine(endRow).length;
             return new Range(startRow, startColumn, endRow, endColumn);
         }
+    };
+
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var range = this.indentationBlock(session, row);
+        if (range)
+            return range;
+
+        range = this.commentBlock(session, row);
+        if (range)
+            return range;
     };
 
     // must return "" if there's no fold, to enable caching
@@ -309,7 +314,7 @@ oop.inherits(FoldMode, BaseFoldMode);
 
 var oop = __webpack_require__(89359);
 var TextMode = (__webpack_require__(98030).Mode);
-var JadeHighlightRules = (__webpack_require__(80774)/* .JadeHighlightRules */ .J);
+var JadeHighlightRules = (__webpack_require__(80774).JadeHighlightRules);
 var FoldMode = (__webpack_require__(35090)/* .FoldMode */ .Z);
 
 var Mode = function() {
@@ -341,10 +346,10 @@ exports.Mode = Mode;
 var oop = __webpack_require__(89359);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
 var MarkdownHighlightRules = (__webpack_require__(92884)/* .MarkdownHighlightRules */ .B);
-var SassHighlightRules = (__webpack_require__(71690)/* .ScssHighlightRules */ .m);
-var LessHighlightRules = (__webpack_require__(16761)/* .LessHighlightRules */ .q);
-var CoffeeHighlightRules = (__webpack_require__(7678)/* .CoffeeHighlightRules */ .s);
-var JavaScriptHighlightRules = (__webpack_require__(33801)/* .JavaScriptHighlightRules */ ._);
+var SassHighlightRules = (__webpack_require__(71690).ScssHighlightRules);
+var LessHighlightRules = (__webpack_require__(16761).LessHighlightRules);
+var CoffeeHighlightRules = (__webpack_require__(7678).CoffeeHighlightRules);
+var JavaScriptHighlightRules = (__webpack_require__(33801).JavaScriptHighlightRules);
 
 function mixin_embed(tag, prefix) {
     return { 
@@ -637,7 +642,7 @@ var JadeHighlightRules = function() {
 
 oop.inherits(JadeHighlightRules, TextHighlightRules);
 
-exports.J = JadeHighlightRules;
+exports.JadeHighlightRules = JadeHighlightRules;
 
 
 /***/ }),
@@ -781,7 +786,7 @@ var LessHighlightRules = function() {
 
 oop.inherits(LessHighlightRules, TextHighlightRules);
 
-exports.q = LessHighlightRules;
+exports.LessHighlightRules = LessHighlightRules;
 
 
 /***/ }),
@@ -796,7 +801,7 @@ var modes = (__webpack_require__(13188).$modes);
 var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 var escaped = function(ch) {
     return "(?:[^" + lang.escapeRegExp(ch) + "\\\\]|\\\\.)*";
@@ -1154,7 +1159,7 @@ var ScssHighlightRules = function() {
 
 oop.inherits(ScssHighlightRules, TextHighlightRules);
 
-exports.m = ScssHighlightRules;
+exports.ScssHighlightRules = ScssHighlightRules;
 
 
 /***/ })

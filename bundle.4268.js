@@ -8,8 +8,7 @@
 
 var oop = __webpack_require__(89359);
 var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
-var lang = __webpack_require__(20124);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 function is(token, type) {
     return token && token.type.lastIndexOf(type + ".xml") > -1;
@@ -122,7 +121,7 @@ var XmlBehaviour = function () {
             if (tokenRow == position.row)
                 element = element.substring(0, position.column - tokenColumn);
 
-            if (this.voidElements.hasOwnProperty(element.toLowerCase()))
+            if (this.voidElements && this.voidElements.hasOwnProperty(element.toLowerCase()))
                  return;
 
             return {
@@ -139,7 +138,7 @@ var XmlBehaviour = function () {
             var iterator = new TokenIterator(session, cursor.row, cursor.column);
             var token = iterator.getCurrentToken();
 
-            if (token && token.type.indexOf("tag-close") !== -1) {
+            if (is(token, "") && token.type.indexOf("tag-close") !== -1) {
                 if (token.value == "/>")
                     return;
                 //get tag name
@@ -160,7 +159,7 @@ var XmlBehaviour = function () {
                     return;
                 }
 
-                if (this.voidElements && !this.voidElements[tag]) {
+                if (this.voidElements && !this.voidElements[tag] || !this.voidElements) {
                     var nextToken = session.getTokenAt(cursor.row, cursor.column+1);
                     var line = session.getLine(row);
                     var nextIndent = this.$getIndent(line);
@@ -185,7 +184,7 @@ var XmlBehaviour = function () {
 
 oop.inherits(XmlBehaviour, Behaviour);
 
-exports.D = XmlBehaviour;
+exports.XmlBehaviour = XmlBehaviour;
 
 
 /***/ }),
@@ -263,6 +262,11 @@ function is(token, type) {
                 if (!token)
                     return null;
                 tag.tagName = token.value;
+                if (token.value === "") { //skip empty tag name token for fragment
+                    token = tokens[++i];
+                    if (!token) return null;
+                    tag.tagName = token.value;
+                }
                 tag.end.column += token.value.length;
                 for (i++; i < tokens.length; i++) {
                     token = tokens[i];
@@ -289,10 +293,13 @@ function is(token, type) {
         for (var i = 0; i < tokens.length; i++) {
             var token = tokens[i];
             column += token.value.length;
-            if (column < startColumn)
+            if (column < startColumn - 1)
                 continue;
             if (is(token, "end-tag-open")) {
                 token = tokens[i + 1];
+                if (is(token, "tag-name") && token.value === "") {
+                    token = tokens[i + 2];
+                }
                 if (token && token.value == tagName)
                     return true;
             }
@@ -301,13 +308,15 @@ function is(token, type) {
     };
 
     this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var firstTag = this._getFirstTagInLine(session, row);
+        if (!firstTag) {
+            return this.getCommentFoldWidget(session, row) && session.getCommentFoldRange(
+                row, session.getLine(row).length);
+        }
         var tags = session.getMatchingTags({row: row, column: 0});
         if (tags) {
             return new Range(
                 tags.openTag.end.row, tags.openTag.end.column, tags.closeTag.start.row, tags.closeTag.start.column);
-        } else {
-            return this.getCommentFoldWidget(session, row)
-                && session.getCommentFoldRange(row, session.getLine(row).length);
         }
     };
 
@@ -325,7 +334,7 @@ var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var TextMode = (__webpack_require__(98030).Mode);
 var XmlHighlightRules = (__webpack_require__(75239)/* .XmlHighlightRules */ .U);
-var XmlBehaviour = (__webpack_require__(67809)/* .XmlBehaviour */ .D);
+var XmlBehaviour = (__webpack_require__(67809).XmlBehaviour);
 var XmlFoldMode = (__webpack_require__(64631)/* .FoldMode */ .Z);
 var WorkerClient = (__webpack_require__(91451).WorkerClient);
 

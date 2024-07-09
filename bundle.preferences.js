@@ -7,7 +7,7 @@
 
 
 
-var keys = __webpack_require__(11797);
+/** @type {any} */var keys = __webpack_require__(11797);
 var useragent = __webpack_require__(50618);
 
 var pressedKeys = null;
@@ -20,6 +20,7 @@ function detectListenerOptionsSupport() {
         document.createComment("").addEventListener("test", function() {}, { 
             get passive() { 
                 activeListenerOptions = {passive: false};
+                return true;
             }
         });
     } catch(e) {}
@@ -41,7 +42,7 @@ EventListener.prototype.destroy = function() {
     this.elem = this.type = this.callback = undefined;
 };
 
-var addListener = exports.addListener = function(elem, type, callback, destroyer) {
+var addListener = exports.addListener = function(elem, type, callback, /**@type{any?}*/destroyer) {
     elem.addEventListener(type, callback, getListenerOptions());
     if (destroyer)
         destroyer.$toDestroy.push(new EventListener(elem, type, callback));
@@ -101,6 +102,11 @@ exports.capture = function(el, eventHandler, releaseCaptureHandler) {
     return onMouseUp;
 };
 
+/**
+ * @param el
+ * @param callback
+ * @param [destroyer]
+ */
 exports.addMouseWheelListener = function(el, callback, destroyer) {
     addListener(el, "wheel",  function(e) {
         var factor = 0.15;
@@ -127,6 +133,13 @@ exports.addMouseWheelListener = function(el, callback, destroyer) {
     }, destroyer);
 };
 
+/**
+ * @param elements
+ * @param timeouts
+ * @param eventHandler
+ * @param callbackName
+ * @param [destroyer]
+ */
 exports.addMultiMouseDownListener = function(elements, timeouts, eventHandler, callbackName, destroyer) {
     var clicks = 0;
     var startX, startY, timer; 
@@ -176,16 +189,30 @@ exports.addMultiMouseDownListener = function(elements, timeouts, eventHandler, c
     });
 };
 
-var getModifierHash = function(e) {
+/** @param {KeyboardEvent|MouseEvent} e */
+function getModifierHash(e) {
     return 0 | (e.ctrlKey ? 1 : 0) | (e.altKey ? 2 : 0) | (e.shiftKey ? 4 : 0) | (e.metaKey ? 8 : 0);
-};
+}
 
+/**
+ * @param {KeyboardEvent|MouseEvent} e
+ * @returns string
+ */
 exports.getModifierString = function(e) {
     return keys.KEY_MODS[getModifierHash(e)];
 };
 
+/**
+ * @param {(e: KeyboardEvent, hashId: number, keyCode: number)=> void } callback
+ * @param {KeyboardEvent} e
+ * @param {number} keyCode
+ */
 function normalizeCommandKeys(callback, e, keyCode) {
     var hashId = getModifierHash(e);
+
+    if (!keyCode && e.code) {
+        keyCode = keys.$codeToKeyCode[e.code] || keyCode;
+    }
 
     if (!useragent.isMac && pressedKeys) {
         if (e.getModifierState && (e.getModifierState("OS") || e.getModifierState("Win")))
@@ -197,7 +224,7 @@ function normalizeCommandKeys(callback, e, keyCode) {
                 return;
         }
         if (keyCode === 18 || keyCode === 17) {
-            var location = "location" in e ? e.location : e.keyLocation;
+            var location = e.location;
             if (keyCode === 17 && location === 1) {
                 if (pressedKeys[keyCode] == 1)
                     ts = e.timeStamp;
@@ -214,8 +241,7 @@ function normalizeCommandKeys(callback, e, keyCode) {
     }
     
     if (!hashId && keyCode === 13) {
-        var location = "location" in e ? e.location : e.keyLocation;
-        if (location === 3) {
+        if (e.location === 3) {
             callback(e, hashId, -keyCode);
             if (e.defaultPrevented)
                 return;
@@ -240,47 +266,35 @@ function normalizeCommandKeys(callback, e, keyCode) {
     return callback(e, hashId, keyCode);
 }
 
-
+/**
+ * @param {EventTarget} el
+ * @param {(e: KeyboardEvent, hashId: number, keyCode: number)=>void} callback
+ * @param [destroyer]
+ */
 exports.addCommandKeyListener = function(el, callback, destroyer) {
-    if (useragent.isOldGecko || (useragent.isOpera && !("KeyboardEvent" in window))) {
-        // Old versions of Gecko aka. Firefox < 4.0 didn't repeat the keydown
-        // event if the user pressed the key for a longer time. Instead, the
-        // keydown event was fired once and later on only the keypress event.
-        // To emulate the 'right' keydown behavior, the keyCode of the initial
-        // keyDown event is stored and in the following keypress events the
-        // stores keyCode is used to emulate a keyDown event.
-        var lastKeyDownKeyCode = null;
-        addListener(el, "keydown", function(e) {
-            lastKeyDownKeyCode = e.keyCode;
-        }, destroyer);
-        addListener(el, "keypress", function(e) {
-            return normalizeCommandKeys(callback, e, lastKeyDownKeyCode);
-        }, destroyer);
-    } else {
-        var lastDefaultPrevented = null;
+    var lastDefaultPrevented = null;
 
-        addListener(el, "keydown", function(e) {
-            pressedKeys[e.keyCode] = (pressedKeys[e.keyCode] || 0) + 1;
-            var result = normalizeCommandKeys(callback, e, e.keyCode);
-            lastDefaultPrevented = e.defaultPrevented;
-            return result;
-        }, destroyer);
+    addListener(el, "keydown", function(e) {
+        pressedKeys[e.keyCode] = (pressedKeys[e.keyCode] || 0) + 1;
+        var result = normalizeCommandKeys(callback, e, e.keyCode);
+        lastDefaultPrevented = e.defaultPrevented;
+        return result;
+    }, destroyer);
 
-        addListener(el, "keypress", function(e) {
-            if (lastDefaultPrevented && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey)) {
-                exports.stopEvent(e);
-                lastDefaultPrevented = null;
-            }
-        }, destroyer);
-
-        addListener(el, "keyup", function(e) {
-            pressedKeys[e.keyCode] = null;
-        }, destroyer);
-
-        if (!pressedKeys) {
-            resetPressedKeys();
-            addListener(window, "focus", resetPressedKeys);
+    addListener(el, "keypress", function(e) {
+        if (lastDefaultPrevented && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey)) {
+            exports.stopEvent(e);
+            lastDefaultPrevented = null;
         }
+    }, destroyer);
+
+    addListener(el, "keyup", function(e) {
+        pressedKeys[e.keyCode] = null;
+    }, destroyer);
+
+    if (!pressedKeys) {
+        resetPressedKeys();
+        addListener(window, "focus", resetPressedKeys);
     }
 };
 function resetPressedKeys() {
@@ -329,10 +343,10 @@ exports.blockIdle = function(delay) {
 };
 
 exports.nextFrame = typeof window == "object" && (window.requestAnimationFrame
-    || window.mozRequestAnimationFrame
-    || window.webkitRequestAnimationFrame
-    || window.msRequestAnimationFrame
-    || window.oRequestAnimationFrame);
+    || window["mozRequestAnimationFrame"]
+    || window["webkitRequestAnimationFrame"]
+    || window["msRequestAnimationFrame"]
+    || window["oRequestAnimationFrame"]);
 
 if (exports.nextFrame)
     exports.nextFrame = exports.nextFrame.bind(window);
@@ -347,159 +361,161 @@ else
 /***/ 11797:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-/*! @license
-==========================================================================
-SproutCore -- JavaScript Application Framework
-copyright 2006-2009, Sprout Systems Inc., Apple Inc. and contributors.
-
-Permission is hereby granted, free of charge, to any person obtaining a
-copy of this software and associated documentation files (the "Software"),
-to deal in the Software without restriction, including without limitation
-the rights to use, copy, modify, merge, publish, distribute, sublicense,
-and/or sell copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
-
-SproutCore and the SproutCore logo are trademarks of Sprout Systems, Inc.
-
-For more information about SproutCore, visit http://www.sproutcore.com
-
-
-==========================================================================
-@license */
-
-// Most of the following code is taken from SproutCore with a few changes.
-
 
 
 var oop = __webpack_require__(89359);
 
-/*
- * Helper functions and hashes for key handling.
- */
-var Keys = (function() {
-    var ret = {
-        MODIFIER_KEYS: {
-            16: 'Shift', 17: 'Ctrl', 18: 'Alt', 224: 'Meta',
-            91: 'MetaLeft', 92: 'MetaRight', 93: 'ContextMenu'
-        },
 
-        KEY_MODS: {
-            "ctrl": 1, "alt": 2, "option" : 2, "shift": 4,
-            "super": 8, "meta": 8, "command": 8, "cmd": 8, 
-            "control": 1
-        },
+var Keys = {
+    MODIFIER_KEYS: {
+        16: 'Shift', 17: 'Ctrl', 18: 'Alt', 224: 'Meta',
+        91: 'MetaLeft', 92: 'MetaRight', 93: 'ContextMenu'
+    },
 
-        FUNCTION_KEYS : {
-            8  : "Backspace",
-            9  : "Tab",
-            13 : "Return",
-            19 : "Pause",
-            27 : "Esc",
-            32 : "Space",
-            33 : "PageUp",
-            34 : "PageDown",
-            35 : "End",
-            36 : "Home",
-            37 : "Left",
-            38 : "Up",
-            39 : "Right",
-            40 : "Down",
-            44 : "Print",
-            45 : "Insert",
-            46 : "Delete",
-            96 : "Numpad0",
-            97 : "Numpad1",
-            98 : "Numpad2",
-            99 : "Numpad3",
-            100: "Numpad4",
-            101: "Numpad5",
-            102: "Numpad6",
-            103: "Numpad7",
-            104: "Numpad8",
-            105: "Numpad9",
-            '-13': "NumpadEnter",
-            112: "F1",
-            113: "F2",
-            114: "F3",
-            115: "F4",
-            116: "F5",
-            117: "F6",
-            118: "F7",
-            119: "F8",
-            120: "F9",
-            121: "F10",
-            122: "F11",
-            123: "F12",
-            144: "Numlock",
-            145: "Scrolllock"
-        },
+    KEY_MODS: {
+        "ctrl": 1, "alt": 2, "option" : 2, "shift": 4,
+        "super": 8, "meta": 8, "command": 8, "cmd": 8, 
+        "control": 1
+    },
 
-        PRINTABLE_KEYS: {
-           32: ' ',  48: '0',  49: '1',  50: '2',  51: '3',  52: '4', 53:  '5',
-           54: '6',  55: '7',  56: '8',  57: '9',  59: ';',  61: '=', 65:  'a',
-           66: 'b',  67: 'c',  68: 'd',  69: 'e',  70: 'f',  71: 'g', 72:  'h',
-           73: 'i',  74: 'j',  75: 'k',  76: 'l',  77: 'm',  78: 'n', 79:  'o',
-           80: 'p',  81: 'q',  82: 'r',  83: 's',  84: 't',  85: 'u', 86:  'v',
-           87: 'w',  88: 'x',  89: 'y',  90: 'z', 107: '+', 109: '-', 110: '.',
-          186: ';', 187: '=', 188: ',', 189: '-', 190: '.', 191: '/', 192: '`',
-          219: '[', 220: '\\',221: ']', 222: "'", 111: '/', 106: '*'
-        }
-    };
+    FUNCTION_KEYS : {
+        8  : "Backspace",
+        9  : "Tab",
+        13 : "Return",
+        19 : "Pause",
+        27 : "Esc",
+        32 : "Space",
+        33 : "PageUp",
+        34 : "PageDown",
+        35 : "End",
+        36 : "Home",
+        37 : "Left",
+        38 : "Up",
+        39 : "Right",
+        40 : "Down",
+        44 : "Print",
+        45 : "Insert",
+        46 : "Delete",
+        '-13': "NumpadEnter",
+        144: "Numlock",
+        145: "Scrolllock"
+    },
 
-    // workaround for firefox bug
-    ret.PRINTABLE_KEYS[173] = '-';
-
-    // A reverse map of FUNCTION_KEYS
-    var name, i;
-    for (i in ret.FUNCTION_KEYS) {
-        name = ret.FUNCTION_KEYS[i].toLowerCase();
-        ret[name] = parseInt(i, 10);
+    PRINTABLE_KEYS: {
+        32: ' ',  59: ';',  61: '=', 107: '+', 109: '-', 110: '.',
+        186: ';', 187: '=', 188: ',', 189: '-', 190: '.', 191: '/', 192: '`',
+        219: '[', 220: '\\',221: ']', 222: "'", 111: '/', 106: '*'
     }
+};
 
-    // A reverse map of PRINTABLE_KEYS
-    for (i in ret.PRINTABLE_KEYS) {
-        name = ret.PRINTABLE_KEYS[i].toLowerCase();
-        ret[name] = parseInt(i, 10);
+var codeToKeyCode = {
+    Command: 224,
+    Backspace: 8,
+    Tab: 9,
+    Return: 13,
+    Enter: 13,
+    Pause: 19,
+    Escape: 27,
+    PageUp: 33,
+    PageDown: 34,
+    End: 35,
+    Home: 36,
+    Insert: 45,
+    Delete: 46,
+    ArrowLeft: 37,
+    ArrowUp: 38,
+    ArrowRight: 39,
+    ArrowDown: 40,
+    // special keys
+    Backquote: 192,
+    Minus: 189,
+    Equal: 187,
+    BracketLeft: 219,
+    Backslash: 220,
+    BracketRight: 221,
+    Semicolon: 186,
+    Quote: 222,
+    Comma: 188,
+    Period: 190,
+    Slash: 191,
+    Space: 32,
+    NumpadAdd: 107,
+    NumpadDecimal: 110,
+    NumpadSubtract: 109,
+    NumpadDivide: 111,
+    NumpadMultiply: 106
+};
+for (var i = 0; i < 10; i++) {
+    codeToKeyCode["Digit" + i] = 48 + i;
+    codeToKeyCode["Numpad" + i] = 96 + i;
+    Keys.PRINTABLE_KEYS[48 + i] = "" + i;
+    Keys.FUNCTION_KEYS[96 + i] = "Numpad" + i;
+}
+for (var i = 65; i < 91; i++) {
+    var chr = String.fromCharCode(i + 32);
+    codeToKeyCode["Key" + chr.toUpperCase()] = i;
+    Keys.PRINTABLE_KEYS[i] = chr;
+}
+for (var i = 1; i < 13; i++) {
+    codeToKeyCode["F" + i] = 111 + i;
+    Keys.FUNCTION_KEYS[111 + i] = "F" + i;
+}
+var modifiers = { 
+    Shift: 16,
+    Control: 17,
+    Alt: 18,
+    Meta: 224
+};
+for (var mod in modifiers) {
+    codeToKeyCode[mod] = codeToKeyCode[mod + "Left"]
+        = codeToKeyCode[mod + "Right"] = modifiers[mod];
+}
+exports.$codeToKeyCode = codeToKeyCode;
+
+// workaround for firefox bug
+Keys.PRINTABLE_KEYS[173] = '-';
+
+// A reverse map of FUNCTION_KEYS
+for (var j in Keys.FUNCTION_KEYS) {
+    var name = Keys.FUNCTION_KEYS[j].toLowerCase();
+    Keys[name] = parseInt(j, 10);
+}
+
+// A reverse map of PRINTABLE_KEYS
+for (var j in Keys.PRINTABLE_KEYS) {
+    var name = Keys.PRINTABLE_KEYS[j].toLowerCase();
+    Keys[name] = parseInt(j, 10);
+}
+
+// Add the MODIFIER_KEYS, FUNCTION_KEYS and PRINTABLE_KEYS to the KEY
+// variables as well.
+oop.mixin(Keys, Keys.MODIFIER_KEYS);
+oop.mixin(Keys, Keys.PRINTABLE_KEYS);
+oop.mixin(Keys, Keys.FUNCTION_KEYS);
+
+// aliases
+Keys.enter = Keys["return"];
+Keys.escape = Keys.esc;
+Keys.del = Keys["delete"];
+
+(function() {
+    var mods = ["cmd", "ctrl", "alt", "shift"];
+    for (var i = Math.pow(2, mods.length); i--;) {
+        Keys.KEY_MODS[i] = mods.filter(function(x) {
+            return i & Keys.KEY_MODS[x];
+        }).join("-") + "-";
     }
-
-    // Add the MODIFIER_KEYS, FUNCTION_KEYS and PRINTABLE_KEYS to the KEY
-    // variables as well.
-    oop.mixin(ret, ret.MODIFIER_KEYS);
-    oop.mixin(ret, ret.PRINTABLE_KEYS);
-    oop.mixin(ret, ret.FUNCTION_KEYS);
-
-    // aliases
-    ret.enter = ret["return"];
-    ret.escape = ret.esc;
-    ret.del = ret["delete"];
-    
-    (function() {
-        var mods = ["cmd", "ctrl", "alt", "shift"];
-        for (var i = Math.pow(2, mods.length); i--;) {            
-            ret.KEY_MODS[i] = mods.filter(function(x) {
-                return i & ret.KEY_MODS[x];
-            }).join("-") + "-";
-        }
-    })();
-
-    ret.KEY_MODS[0] = "";
-    ret.KEY_MODS[-1] = "input-";
-
-    return ret;
 })();
+
+Keys.KEY_MODS[0] = "";
+Keys.KEY_MODS[-1] = "input-";
+
+
 oop.mixin(exports, Keys);
 
+exports["default"] = exports;
+
+// @ts-ignore
 exports.keyCodeToString = function(keyCode) {
     // Language-switching keystroke in Chrome/Linux emits keyCode 0.
     var keyString = Keys[keyCode];
@@ -528,6 +544,13 @@ exports.inherits = function(ctor, superCtor) {
     });
 };
 
+/**
+ * Implements mixin properties into the prototype of an object.
+ * @template T
+ * @param {T} obj - The prototype of the target object.
+ * @param {Object} mixin - The source object.
+ * @returns {T & Object} The merged prototype.
+ */
 exports.mixin = function(obj, mixin) {
     for (var key in mixin) {
         obj[key] = mixin[key];
@@ -535,6 +558,13 @@ exports.mixin = function(obj, mixin) {
     return obj;
 };
 
+/**
+ * Implements mixin properties into the prototype of an object.
+ * @template T
+ * @param {T} proto - The prototype of the target object.
+ * @param {Object} mixin - The source object.
+ * @returns {T & Object} The merged prototype.
+ */
 exports.implement = function(proto, mixin) {
     exports.mixin(proto, mixin);
 };
@@ -601,12 +631,15 @@ exports.isOldIE = exports.isIE && exports.isIE < 9;
 exports.isGecko = exports.isMozilla = ua.match(/ Gecko\/\d+/);
 
 // Is this Opera 
-exports.isOpera = typeof opera == "object" && Object.prototype.toString.call(window.opera) == "[object Opera]";
+// @ts-expect-error
+exports.isOpera = typeof opera == "object" && Object.prototype.toString.call(window["opera"]) == "[object Opera]";
 
 // Is the user using a browser that identifies itself as WebKit 
 exports.isWebKit = parseFloat(ua.split("WebKit/")[1]) || undefined;
 
 exports.isChrome = parseFloat(ua.split(" Chrome/")[1]) || undefined;
+
+exports.isSafari = parseFloat(ua.split(" Safari/")[1]) && !exports.isChrome || undefined;
 
 exports.isEdge = parseFloat(ua.split(" Edge/")[1]) || undefined;
 
@@ -616,7 +649,7 @@ exports.isAndroid = ua.indexOf("Android") >= 0;
 
 exports.isChromeOS = ua.indexOf(" CrOS ") >= 0;
 
-exports.isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+exports.isIOS = /iPad|iPhone|iPod/.test(ua) && !window["MSStream"];
 
 if (exports.isIOS) exports.isMac = true;
 

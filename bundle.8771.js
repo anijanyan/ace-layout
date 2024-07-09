@@ -9,7 +9,7 @@
 var oop = __webpack_require__(89359);
 var Behaviour = (__webpack_require__(4708)/* .Behaviour */ .T);
 var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
-var TokenIterator = (__webpack_require__(39216)/* .TokenIterator */ .N);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
 
 var CssBehaviour = function () {
 
@@ -506,6 +506,9 @@ var CssHighlightRules = function() {
         }, {
             token : keywordMapper,
             regex : "\\-?[a-zA-Z_][a-zA-Z0-9_\\-]*"
+        }, {
+            token: "paren.lparen",
+            regex: "\\{"
         }, {
             caseInsensitive: true
         }],

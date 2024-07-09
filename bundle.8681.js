@@ -1,6 +1,189 @@
 "use strict";
 (self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[8681],{
 
+/***/ 62718:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(89359);
+var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
+
+var DocCommentHighlightRules = function () {
+    this.$rules = {
+        "start": [
+            {
+                token: "comment.doc.tag",
+                regex: "@\\w+(?=\\s|$)"
+            }, DocCommentHighlightRules.getTagRule(), {
+                defaultToken: "comment.doc.body",
+                caseInsensitive: true
+            }
+        ]
+    };
+};
+
+oop.inherits(DocCommentHighlightRules, TextHighlightRules);
+
+DocCommentHighlightRules.getTagRule = function(start) {
+    return {
+        token : "comment.doc.tag.storage.type",
+        regex : "\\b(?:TODO|FIXME|XXX|HACK)\\b"
+    };
+};
+
+DocCommentHighlightRules.getStartRule = function(start) {
+    return {
+        token : "comment.doc", // doc comment
+        regex: /\/\*\*(?!\/)/,
+        next  : start
+    };
+};
+
+DocCommentHighlightRules.getEndRule = function (start) {
+    return {
+        token : "comment.doc", // closing comment
+        regex : "\\*\\/",
+        next  : start
+    };
+};
+
+
+exports.c = DocCommentHighlightRules;
+
+
+/***/ }),
+
+/***/ 21457:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(89359);
+var CstyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
+var Range = (__webpack_require__(59082)/* .Range */ .e);
+var TokenIterator = (__webpack_require__(39216).TokenIterator);
+
+
+var FoldMode = exports.Z = function () {
+};
+
+oop.inherits(FoldMode, CstyleFoldMode);
+
+(function () {
+    this.getFoldWidgetRangeBase = this.getFoldWidgetRange;
+    this.getFoldWidgetBase = this.getFoldWidget;
+    
+    this.indentKeywords = {
+        "if": 1,
+        "while": 1,
+        "for": 1,
+        "foreach": 1,
+        "switch": 1,
+        "else": 0,
+        "elseif": 0,
+        "endif": -1,
+        "endwhile": -1,
+        "endfor": -1,
+        "endforeach": -1,
+        "endswitch": -1
+    };
+
+    this.foldingStartMarkerPhp = /(?:\s|^)(if|else|elseif|while|for|foreach|switch).*\:/i;
+    this.foldingStopMarkerPhp = /(?:\s|^)(endif|endwhile|endfor|endforeach|endswitch)\;/i;
+
+    this.getFoldWidgetRange = function (session, foldStyle, row) {
+        var line = session.doc.getLine(row);
+        var match = this.foldingStartMarkerPhp.exec(line);
+        if (match) {
+            return this.phpBlock(session, row, match.index + 2);
+        }
+
+        var match = this.foldingStopMarkerPhp.exec(line);
+        if (match) {
+            return this.phpBlock(session, row, match.index + 2);
+        }
+        return this.getFoldWidgetRangeBase(session, foldStyle, row);
+    };
+
+
+    // must return "" if there's no fold, to enable caching
+    this.getFoldWidget = function (session, foldStyle, row) {
+        var line = session.getLine(row);
+        var isStart = this.foldingStartMarkerPhp.test(line);
+        var isEnd = this.foldingStopMarkerPhp.test(line);
+        if (isStart && !isEnd) {
+            var match = this.foldingStartMarkerPhp.exec(line);
+            var keyword = match && match[1].toLowerCase();
+            if (keyword) {
+                var type = session.getTokenAt(row, match.index + 2).type;
+                if (type == "keyword") {
+                    return "start";
+                }
+            }
+        }
+        if (isEnd && foldStyle === "markbeginend") {
+            var match = this.foldingStopMarkerPhp.exec(line);
+            var keyword = match && match[1].toLowerCase();
+            if (keyword) {
+                var type = session.getTokenAt(row, match.index + 2).type;
+                if (type == "keyword") {
+                    return "end";
+                }
+            }
+        }
+        return this.getFoldWidgetBase(session, foldStyle, row);
+    };
+
+    this.phpBlock = function (session, row, column, tokenRange) {
+        var stream = new TokenIterator(session, row, column);
+
+        var token = stream.getCurrentToken();
+        if (!token || token.type != "keyword") return;
+
+        var val = token.value;
+        var stack = [val];
+        var dir = this.indentKeywords[val];
+
+        if (val === "else" || val === "elseif") {
+            dir = 1;
+        }
+
+        if (!dir) return;
+
+        var startColumn = dir === -1 ? stream.getCurrentTokenColumn() : session.getLine(row).length;
+        var startRow = row;
+
+        stream.step = dir === -1 ? stream.stepBackward : stream.stepForward;
+        while (token = stream.step()) {
+            if (token.type !== "keyword") continue;
+            var level = dir * this.indentKeywords[token.value];
+
+            if (level > 0) {
+                stack.unshift(token.value);
+            }
+            else if (level <= 0) {
+                stack.shift();
+                if (!stack.length) break;
+                if (level === 0) stack.unshift(token.value);
+            }
+        }
+
+        if (!token) return null;
+
+        if (tokenRange) return stream.getCurrentTokenRange();
+
+        var row = stream.getCurrentTokenRow();
+        if (dir === -1) return new Range(
+            row, session.getLine(row).length, startRow, startColumn); else return new Range(
+            startRow, startColumn, row, stream.getCurrentTokenColumn());
+    };
+
+}).call(FoldMode.prototype);
+
+
+/***/ }),
+
 /***/ 48681:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -11,12 +194,13 @@ var TextMode = (__webpack_require__(98030).Mode);
 var PhpHighlightRules = (__webpack_require__(63857)/* .PhpHighlightRules */ .l);
 var PhpLangHighlightRules = (__webpack_require__(63857)/* .PhpLangHighlightRules */ .g);
 var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
-var Range = (__webpack_require__(59082)/* .Range */ .e);
 var WorkerClient = (__webpack_require__(91451).WorkerClient);
 var PhpCompletions = (__webpack_require__(76707)/* .PhpCompletions */ .K);
-var CstyleBehaviour = (__webpack_require__(19414)/* .CstyleBehaviour */ .B);
-var CStyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
+var PhpFoldMode = (__webpack_require__(21457)/* .FoldMode */ .Z);
 var unicode = __webpack_require__(99740);
+var MixedFoldMode = (__webpack_require__(92974)/* .FoldMode */ .Z);
+var HtmlFoldMode = (__webpack_require__(74505).FoldMode);
+var CstyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
 var HtmlMode = (__webpack_require__(75528).Mode);
 var JavaScriptMode = (__webpack_require__(88057).Mode);
 var CssMode = (__webpack_require__(98771).Mode);
@@ -24,9 +208,13 @@ var CssMode = (__webpack_require__(98771).Mode);
 var PhpMode = function(opts) {
     this.HighlightRules = PhpLangHighlightRules;
     this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
     this.$completer = new PhpCompletions();
-    this.foldingRules = new CStyleFoldMode();
+    this.foldingRules = new MixedFoldMode(new HtmlFoldMode(), {
+        "js-": new CstyleFoldMode(),
+        "css-": new CstyleFoldMode(),
+        "php-": new PhpFoldMode()
+    });
 };
 oop.inherits(PhpMode, TextMode);
 
@@ -99,7 +287,11 @@ var Mode = function(opts) {
         "css-": CssMode,
         "php-": PhpMode
     });
-    this.foldingRules.subModes["php-"] = new CStyleFoldMode();
+    this.foldingRules = new MixedFoldMode(new HtmlFoldMode(), {
+        "js-": new CstyleFoldMode(),
+        "css-": new CstyleFoldMode(),
+        "php-": new PhpFoldMode()
+    });
 };
 oop.inherits(Mode, HtmlMode);
 
@@ -10606,7 +10798,7 @@ var oop = __webpack_require__(89359);
 var lang = __webpack_require__(20124);
 var DocCommentHighlightRules = (__webpack_require__(62718)/* .DocCommentHighlightRules */ .c);
 var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-var HtmlHighlightRules = (__webpack_require__(72843)/* .HtmlHighlightRules */ .V);
+var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
 
 var PhpLangHighlightRules = function() {
     var docComment = DocCommentHighlightRules;
@@ -10619,7 +10811,7 @@ apache_reset_timeout|apache_response_headers|apache_setenv|apc_add|apc_bin_dump|
 apc_cache_info|apc_cas|apc_clear_cache|apc_compile_file|apc_dec|apc_define_constants|apc_delete|apc_delete_file|apc_exists|apc_fetch|\
 apc_inc|apc_load_constants|apc_sma_info|apc_store|apciterator|apd_breakpoint|apd_callstack|apd_clunk|apd_continue|apd_croak|\
 apd_dump_function_table|apd_dump_persistent_resources|apd_dump_regular_resources|apd_echo|apd_get_active_symbols|apd_set_pprof_trace|\
-apd_set_session|apd_set_session_trace|apd_set_session_trace_socket|appenditerator|array|array_change_key_case|array_chunk|array_combine|\
+apd_set_session|apd_set_session_trace|apd_set_session_trace_socket|appenditerator|array|array_change_key_case|array_chunk|array_column|array_combine|\
 array_count_values|array_diff|array_diff_assoc|array_diff_key|array_diff_uassoc|array_diff_ukey|array_fill|array_fill_keys|array_filter|\
 array_flip|array_intersect|array_intersect_assoc|array_intersect_key|array_intersect_uassoc|array_intersect_ukey|array_key_exists|\
 array_keys|array_map|array_merge|array_merge_recursive|array_multisort|array_pad|array_pop|array_product|array_push|array_rand|\
