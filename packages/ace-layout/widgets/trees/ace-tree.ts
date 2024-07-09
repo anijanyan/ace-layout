@@ -1,5 +1,4 @@
-import Tree = require("ace-tree/src/tree");
-import DataProvider = require("ace-tree/src/data_provider");
+import {Tree, DataProvider} from "./ace-tree-lib";
 import {LayoutHTMLElement} from "../widget";
 import {dom} from "../../utils/dom";
 import oop = require("ace-code/src/lib/oop");
@@ -60,6 +59,7 @@ export class AceTreeWrapper {
             model.setRoot(treeNodes);
 
             tree.on("afterChoose", () => {
+                //@ts-ignore
                 const fsNode = tree.selection.getCursor()?.fsNode;
 
                 if (fsNode && fsNode.kind != "directory") {
