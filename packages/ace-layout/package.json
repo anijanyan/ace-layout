@@ -6,7 +6,7 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "ace-code": "^1.17.0",
+    "ace-code": "^1.35.2",
     "events": "^3.3.0",
     "text-loader": "latest",
     "typescript": "latest",

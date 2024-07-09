@@ -7,8 +7,7 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "ace-code": "^1.17.0",
-    "ace-tree": "mkslanc/ace-tree",
+    "ace-code": "^1.35.2",
     "browser-fs-access": "latest"
   },
   "devDependencies": {

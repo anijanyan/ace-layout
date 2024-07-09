@@ -19,4 +19,6 @@ export * from './widgets/tabs/panelManager';
 export * from './widgets/tabs/tab';
 export * from './widgets/tabs/tabManager';
 export * from './widgets/layout';
+export * from './widgets/trees/ace-tree';
+export * from './file-system/file-system-web';
 export {Ace} from 'ace-code';
