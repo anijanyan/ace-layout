@@ -45236,11 +45236,21 @@ class TabManager {
     this.tabs = {};
     this.fileSystem = options.fileSystem;
     this.commandsInit();
+    this.initFileSystem();
   }
   static getInstance(options) {
     if (!TabManager._instance)
       TabManager._instance = new TabManager(options);
     return TabManager._instance;
+  }
+  initFileSystem() {
+    var _a;
+    (_a = this.fileSystem) == null ? void 0 : _a.on("openFile", (treeNode, fileContent) => {
+      this.open({
+        path: treeNode.path,
+        title: treeNode.path.split("/").pop()
+      }, void 0, fileContent);
+    });
   }
   commandsInit() {
     MenuManager.getInstance().addByPath("/context/tabs");
@@ -47456,7 +47466,6 @@ var demo_async = (__this, __arguments, generator) => {
     step((generator = generator.apply(__this, __arguments)).next());
   });
 };
-var _a;
 
 
 
@@ -47531,12 +47540,6 @@ let tabManager = TabManager.getInstance({
     console: consoleBox
   },
   fileSystem
-});
-(_a = tabManager.fileSystem) == null ? void 0 : _a.on("openFile", (treeNode, fileContent) => {
-  tabManager.open({
-    path: treeNode.path,
-    title: treeNode.path.split("/").pop()
-  }, void 0, fileContent);
 });
 let panelManager = PanelManager.getInstance({
   layout: base,
