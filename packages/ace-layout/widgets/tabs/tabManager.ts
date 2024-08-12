@@ -35,6 +35,16 @@ export class TabManager {
         this.tabs = {};
         this.fileSystem = options.fileSystem;
         this.commandsInit();
+        this.initFileSystem();
+    }
+
+    private initFileSystem() {
+        this.fileSystem?.on("openFile", (treeNode, fileContent) => {
+            this.open({
+                path: treeNode.path,
+                title: treeNode.path.split('/').pop()
+            }, undefined, fileContent);
+        });
     }
 
     commandsInit() {
