@@ -26,7 +26,7 @@ export class Pane extends Box {
         this.tabBar = tabBar;
     }
 
-    toJSON() {
+    toJSON(): object {
         return {
             type: "pane",
             tabBar: this.tabBar.toJSON()

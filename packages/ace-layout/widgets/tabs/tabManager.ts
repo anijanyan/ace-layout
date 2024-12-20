@@ -228,7 +228,7 @@ export class TabManager {
     };
 
     navigateToTab(index: number, tab?: Tab, tabs?: Tab[]) {
-        let tabsList = tabs || this.tabs;
+        let tabsList = tabs || Object.values(this.tabs);
         let activeTab = tab || this.activeTab;
         //TODO: seems we need better `activate` method for Tab
         if (index >= 0 && tabsList.length > index)

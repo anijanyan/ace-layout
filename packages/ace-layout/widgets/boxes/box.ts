@@ -84,7 +84,7 @@ export class Box extends events.EventEmitter implements Widget {
         this.emit("editorAdded", editor);
     }
 
-    toJSON() {
+    toJSON(): object {
         return {
             0: this[0] && this[0].toJSON(),
             1: this[1] && this[1].toJSON(),
