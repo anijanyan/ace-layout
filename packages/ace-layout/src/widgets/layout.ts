@@ -1,4 +1,4 @@
-import * as layoutCSS from "../styles/layout.css";
+import * as layoutCSS from "../../assets/styles/layout.css";
 import {dom} from "../utils/dom";
 import {Box} from "./boxes/box";
 

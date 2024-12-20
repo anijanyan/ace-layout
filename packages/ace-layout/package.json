@@ -6,7 +6,7 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "ace-code": "^1.35.2",
+    "ace-code": "^1.37.0",
     "events": "^3.3.0",
     "text-loader": "latest",
     "typescript": "latest",
@@ -17,5 +17,5 @@
   },
   "license": "MIT",
   "main": "build/bundle.index.js",
-  "types": "index.d.ts"
+  "types": "src/index.d.ts"
 }

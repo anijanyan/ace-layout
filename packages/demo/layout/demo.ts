@@ -1,19 +1,18 @@
-import {AceLayout} from "ace-layout/widgets/layout";
-import {HashHandler} from "ace-code/src/keyboard/hash_handler";
-import {Box} from "ace-layout/widgets/boxes/box";
-import {Panel} from "ace-layout/widgets/tabs/panel";
-import {Accordion} from "ace-layout/widgets/boxes/accordion";
-import {TabManager} from "ace-layout/widgets/tabs/tabManager";
-import {PanelManager} from "ace-layout/widgets/tabs/panelManager";
-import {addExampleMenuItems, menuDefs} from "../menu_example";
-import {MenuManager} from "ace-layout/widgets/menu/menuManager";
-import {Toolbar} from "ace-layout/widgets/toolbars/toolbar";
-import {MenuToolbar} from "ace-layout/widgets/toolbars/menuToolbar";
-import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
+"use strict";
 
-import {dom} from "ace-layout/utils/dom";
+import {
+    Accordion,
+    AceLayout,
+    Box,
+    dom,
+    MenuManager,
+    MenuToolbar, Panel,
+    PanelBar, PanelManager, TabManager, Toolbar
+} from "ace-layout";
+import {addExampleMenuItems, menuDefs} from "../menu_example";
 
 import keyUtil from "ace-code/src/lib/keys";
+import {HashHandler} from "ace-code/src/keyboard/hash_handler";
 
 import * as event from "ace-code/src/lib/event";
 
