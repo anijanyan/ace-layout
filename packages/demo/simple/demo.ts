@@ -14,7 +14,7 @@ import {MenuToolbar} from "ace-layout/widgets/toolbars/menuToolbar";
 import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
 
 let mainBox: Box, outerBox: Box, consoleBox: Box;
-let fileTree
+let fileTree;
 document.body.innerHTML = "";
 let base = new Box({
     vertical: false,
@@ -45,7 +45,6 @@ let base = new Box({
 
 new AceLayout(base);
 
-window["fileTreeWrapper"] = fileTree;
 let fileSystem = new FileSystemWeb();
 
 function renderFileTree() {
