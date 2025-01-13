@@ -223,6 +223,8 @@ export class Box extends events.EventEmitter implements Widget {
     renderChild(child?: Box) {
         if (!child)
             return;
+        if (!this.element)
+            this.render();
         child.on("editorAdded", this.$editorAdded);
         this.element.appendChild(child.render());
     }

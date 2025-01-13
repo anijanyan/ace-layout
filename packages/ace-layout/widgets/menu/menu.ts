@@ -129,7 +129,7 @@ export class MenuBar extends Menu {
 
     build(parent: LayoutHTMLElement) {
         this.element = parent;
-        let items = this.menus.map;
+        let items = this.menus.map || {};
         Object.keys(items).filter(Boolean).map(key => items[key]).sort(function (item1, item2) {
             return item1.position - item2.position;
         }).map(item => {
