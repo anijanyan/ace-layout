@@ -9,7 +9,7 @@
     "strictNullChecks": true,
     "allowJs": true,
     "checkJs": true,
-    "skipLibCheck": true
+    "jsx": "react"
   },
   "include": [
     "./packages/**/*"
