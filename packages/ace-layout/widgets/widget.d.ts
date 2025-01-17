@@ -140,8 +140,10 @@ export type ToolbarDirection = "vertical" | "horizontal";
 
 interface ButtonOptions {
     disabled?: boolean;
+    title?: string;
     value?: string;
     className?: string;
+    onClick?: VoidFunction;
 }
 
 interface DropdownOptions {

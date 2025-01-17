@@ -8,14 +8,22 @@ export class Button implements Widget {
     disabled?: boolean;
     value?: string;
     className: string;
+    onClick?: VoidFunction;
     options: any;
     element: LayoutHTMLElement;
 
     constructor(options: ButtonOptions) {
-        let {disabled, value, className, ...other} = options;
+        let {
+            disabled,
+            value,
+            className,
+            onClick,
+            ...other
+        } = options;
         this.disabled = disabled;
         this.value = value;
         this.className = className || "blackbutton";
+        this.onClick = onClick;
         this.options = other;
     }
 
@@ -44,6 +52,7 @@ export class Button implements Widget {
             onmouseout: (e) => {
                 e.target.className = this.className;
             },
+            onclick: this.onClick,
             ...this.options
         }, this.value]);
 
