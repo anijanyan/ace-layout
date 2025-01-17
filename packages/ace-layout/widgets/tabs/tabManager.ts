@@ -114,6 +114,7 @@ export class TabManager {
             box.ratio = boxData.ratio;
             this.setChildBoxData(box, boxData, 0);
             this.setChildBoxData(box, boxData, 1);
+            box.buttons && box.setButtons(box.buttons);//TODO
         }
     }
 

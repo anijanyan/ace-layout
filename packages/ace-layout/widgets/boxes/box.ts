@@ -37,6 +37,7 @@ export class Box extends events.EventEmitter implements Widget {
     isMaximized: boolean;
     0?: Box;
     1?: Box;
+    buttons?: HTMLElement[];//TODO
 
     static enableAnimation() {
         document.documentElement.classList.add("animateBoxes");
@@ -308,6 +309,7 @@ export class Box extends events.EventEmitter implements Widget {
      * Sets buttons of this box top-right tabBar
      */
     setButtons(buttons: HTMLElement[]) {
+        this.buttons = buttons;
         if (this.topRightPane)
             this.topRightPane.removeButtons();
 
