@@ -1,7 +1,7 @@
 "use strict";
 
 import React from 'react';
-import App from "./widgets/App";
+import App from "./App";
 import {createRoot} from "react-dom/client";
 
 const rootElement = document.getElementById("root");
