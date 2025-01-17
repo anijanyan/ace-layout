@@ -1,4 +1,5 @@
 import React, {
+    ReactElement,
     createContext,
     useRef,
     useMemo,
@@ -8,19 +9,22 @@ import React, {
     forwardRef,
     useImperativeHandle
 } from "react";
-import { Box } from "ace-layout";
+import {createRoot} from "react-dom/client";
+import { Box as AceBox } from "ace-layout";
 import {BoxOptions} from "ace-layout/widgets/widget";
-export interface ReactBoxHandle {
-    boxInstance: Box | null;
+import {Button} from "./Button";
+export interface BoxHandler {
+    boxInstance: AceBox | null;
 }
 
-export interface ReactBoxProps extends BoxOptions{
+export interface BoxProps extends BoxOptions {
     isRoot?: boolean;
+    buttons?: ReactElement<typeof Button>[],
     children?: React.ReactNode;
 }
 
 interface BoxContextValue {
-    parentBox: Box | null;
+    parentBox: AceBox | null;
     childIndexRef: React.MutableRefObject<number>;
 }
 
@@ -29,15 +33,16 @@ const BoxContext = createContext<BoxContextValue>({
     childIndexRef: { current: 0 }
 });
 
-export const ReactBox = forwardRef<ReactBoxHandle, ReactBoxProps>((props, ref) => {
+export const Box = forwardRef<BoxHandler, BoxProps>((props: BoxProps, ref: React.Ref<BoxHandler>) => {
     const {
         isRoot = false,
+        buttons = [],
         children,
         ...boxOptions
     } = props;
 
-    const boxRef = useRef<Box>(
-        new Box(boxOptions)
+    const boxRef = useRef<AceBox>(
+        new AceBox(boxOptions)
     );
 
     const containerRef = useRef<HTMLDivElement>(null);
@@ -49,6 +54,12 @@ export const ReactBox = forwardRef<ReactBoxHandle, ReactBoxProps>((props, ref) =
             const domNode = boxRef.current.render();
             containerRef.current.appendChild(domNode);
         }
+        boxRef.current.setButtons(buttons.map((button) => {
+            const buttonDomNode = document.createElement("div");
+            const root = createRoot(buttonDomNode);
+            root.render(button);
+            return buttonDomNode;//TODO try to get rid of extra div
+        }))
     }, [isRoot]);
 
     useLayoutEffect(() => {
