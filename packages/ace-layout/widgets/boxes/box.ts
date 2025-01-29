@@ -164,13 +164,11 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     render() {
-        if (this.element)
+        if (this.element?.$host)
             return this.element;
 
-        this.element = dom.buildDom(["div", {
-            class: "box" + this.classNames,
-            $host: this,
-        }]);
+        this.renderElement();
+
         this.splitter = dom.buildDom(["div", {
             class: `splitter splitter${this.vertical ? "-v" : "-h"}`
         }, ["div"]]);
@@ -189,6 +187,12 @@ export class Box extends events.EventEmitter implements Widget {
             this.calculateRatio();
 
         return this.element;
+    }
+
+    renderElement() {
+        this.element ??= dom.buildDom(["div", {
+            class: "box" + this.classNames,
+        }]);
     }
 
     renderToolBarList() {
