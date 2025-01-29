@@ -1,9 +1,6 @@
 import React, {useRef, useEffect} from 'react';
-import {Box, BoxHandler, Button} from "react-ace-layout";
+import {Box, BoxHandler, Button, AceTree, AceTreeHandler} from "react-ace-layout";
 import {
-    AceTreeWrapper,
-    Button as AceButton,
-    dom,
     FileSystemWeb,
     MenuManager,
     MenuToolbar,
@@ -19,6 +16,19 @@ const App = () => {
     const mainRef = useRef<BoxHandler>(null);
     const consoleRef = useRef<BoxHandler>(null);
 
+    const aceTreeRef = useRef<AceTreeHandler>(null);
+
+    const fileSystem = new FileSystemWeb();
+
+    const openFolder = async (e) => {
+        const nodes = await fileSystem.open();
+        const aceTree = aceTreeRef.current.aceTreeInstance;
+        aceTree.updateTreeData(nodes);
+        aceTree.element.addEventListener("item-click", (evt: CustomEvent) => {
+            fileSystem.openFile(evt.detail);
+        });
+    }
+
     if (!menuDefs["View/Console"]) {
         menuDefs["View/Console"] = {
             properties: "700,check,false,false,F6",
@@ -28,25 +38,6 @@ const App = () => {
     }
 
     useEffect(() => {
-        const fileSystem = new FileSystemWeb();
-
-        const renderFileTree = () => {
-            let button = new AceButton({value: "Open Folder"});
-            let buttonWrapper = ["div", {}, button.render()];
-            let aceTree = new AceTreeWrapper();
-            let aceTreeWrapper = ["div", {style: "height: 100%"}, aceTree.element];
-            button.element.addEventListener("mousedown", async (e) => {
-                let nodes = await fileSystem.open();
-                aceTree.updateTreeData(nodes);
-                aceTree.element.addEventListener("item-click", (evt: CustomEvent) => {
-                    fileSystem.openFile(evt.detail);
-                });
-            })
-            dom.buildDom(["div", {style: "height: 100%"}, buttonWrapper, aceTreeWrapper], fileRef.current.boxInstance!.element);
-        };
-
-        renderFileTree();
-
         const handleResize = () => {
             boxRef.current?.boxInstance.setBox(0, 0, window.innerWidth, window.innerHeight);
         };
@@ -96,19 +87,26 @@ const App = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    return <Box isRoot ref={boxRef} vertical={false} toolBars={{
+    return <Box ref={boxRef} vertical={false} toolBars={{
         top: new MenuToolbar(),
         bottom: new PanelBar({})
     }}>
-        <Box vertical={true} toolBars={{}}>
+        <Box vertical={true}>
             <Box vertical={false}>
-                <Box ref={fileRef} size={200}/>
+                <Box ref={fileRef} size={200}>
+                    <Button onClick={openFolder}>
+                        {"Open Folder"}
+                    </Button>
+                    <AceTree ref={aceTreeRef}/>
+                </Box>
                 <Box ref={mainRef} isMain={true}/>
             </Box>
             <Box ref={consoleRef} isMain={true} ratio={1} size={100} buttons={[
-                <Button title="F6" value="x" className="consoleCloseBtn" onClick={() => {
+                <Button title="F6" className="consoleCloseBtn" onClick={() => {
                     consoleRef.current.boxInstance!.hide();
-                }}/>
+                }}>
+                    {"x"}
+                </Button>
             ]}/>
         </Box>
     </Box>;
