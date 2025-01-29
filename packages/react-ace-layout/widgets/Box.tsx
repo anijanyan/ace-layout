@@ -1,26 +1,18 @@
 import React, {
-    ReactElement,
     createContext,
     useRef,
     useMemo,
     useLayoutEffect,
-    useEffect,
     useContext,
     forwardRef,
-    useImperativeHandle
+    useImperativeHandle,
+    useEffect
 } from "react";
 import {createRoot} from "react-dom/client";
 import { Box as AceBox } from "ace-layout";
 import {BoxOptions} from "ace-layout/widgets/widget";
-import {Button} from "./Button";
 export interface BoxHandler {
     boxInstance: AceBox | null;
-}
-
-export interface BoxProps extends BoxOptions {
-    isRoot?: boolean;
-    buttons?: ReactElement<typeof Button>[],
-    children?: React.ReactNode;
 }
 
 interface BoxContextValue {
@@ -33,9 +25,18 @@ const BoxContext = createContext<BoxContextValue>({
     childIndexRef: { current: 0 }
 });
 
-export const Box = forwardRef<BoxHandler, BoxProps>((props: BoxProps, ref: React.Ref<BoxHandler>) => {
+import { ReactNode, ReactElement } from 'react';
+
+type BoxElement = ReactElement<BoxProps, typeof Box>;
+
+type AllowedChildren = BoxElement | ReactElement;
+
+interface BoxProps extends BoxOptions{
+    buttons?: ReactNode[];
+    children?: AllowedChildren;
+}
+export const Box = forwardRef((props: BoxProps, ref: React.Ref<BoxHandler>) => {
     const {
-        isRoot = false,
         buttons = [],
         children,
         ...boxOptions
@@ -45,42 +46,43 @@ export const Box = forwardRef<BoxHandler, BoxProps>((props: BoxProps, ref: React
         new AceBox(boxOptions)
     );
 
-    const containerRef = useRef<HTMLDivElement>(null);
-
+    const boxElement = useRef<HTMLDivElement>(null);
     const { parentBox, childIndexRef } = useContext(BoxContext);
 
-    useEffect(() => {
-        if (isRoot && containerRef.current) {
-            const domNode = boxRef.current.render();
-            containerRef.current.appendChild(domNode);
-        }
+    function render() {
+        boxRef.current.element = boxElement.current;
+        boxRef.current.render();
+    }
+
+    function setButtons() {
         boxRef.current.setButtons(buttons.map((button) => {
             const buttonDomNode = document.createElement("div");
             const root = createRoot(buttonDomNode);
             root.render(button);
             return buttonDomNode;//TODO try to get rid of extra div
         }))
-    }, [isRoot]);
+    }
+
+    function addToParent() {
+        const i = childIndexRef.current;
+        childIndexRef.current = i + 1;
+
+        parentBox.addChildBox(i, boxRef.current);
+    }
 
     useLayoutEffect(() => {
-        if (!isRoot && parentBox) {
-            const i = childIndexRef.current;
-            childIndexRef.current = i + 1;
-
-            parentBox.addChildBox(i, boxRef.current);
-            parentBox.resize();
-
-            return () => {
-                boxRef.current.remove();
-            };
-        }
+        render();
+        setButtons();
+        parentBox && addToParent();
 
         return () => {
-            if (isRoot) {
-                boxRef.current.remove();
-            }
+            boxRef.current.remove();
         };
-    }, [isRoot, parentBox]);
+    }, [parentBox]);
+
+    useEffect(() => {
+        //TODO update props
+    }, [props]);
 
     const myContextValue = useMemo<BoxContextValue>(() => {
         return {
@@ -95,10 +97,9 @@ export const Box = forwardRef<BoxHandler, BoxProps>((props: BoxProps, ref: React
 
     return (
         <BoxContext.Provider value={myContextValue}>
-            {isRoot && (
-                <div ref={containerRef} />
-            )}
-            {children}
+            <div ref={boxElement} className={"box"}>
+                {children}
+            </div>
         </BoxContext.Provider>
     );
 });
