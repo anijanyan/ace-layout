@@ -11,7 +11,7 @@ module.exports = (env, argv) => {
     return {
         devtool: 'source-map',
         entry: {
-            index: './index.ts'
+            index: './src/index.ts'
         },
         mode: "production",
         externals: /ace-code/,

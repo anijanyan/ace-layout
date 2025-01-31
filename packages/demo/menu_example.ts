@@ -1,5 +1,5 @@
 import {Ace} from "ace-code";
-import {CommandManager} from "ace-layout/commands/commandManager";
+import {CommandManager} from "ace-layout";
 
 export let menuDefs = {
     "AWS Cloud9": "50,,,,",

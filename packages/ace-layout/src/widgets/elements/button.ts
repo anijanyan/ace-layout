@@ -1,6 +1,6 @@
 import {ButtonOptions, LayoutHTMLElement, Widget} from "../widget";
 import {dom} from "../../utils/dom";
-import * as buttonCSS from "../../styles/button.css";
+import * as buttonCSS from "../../../assets/styles/button.css";
 
 dom.importCssString(buttonCSS, "button.css");
 

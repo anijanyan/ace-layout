@@ -3,7 +3,7 @@ import {Utils} from "../../utils/lib";
 import {LayoutHTMLElement, Position} from "../widget";
 import {dom} from "../../utils/dom";
 import {MenuItems, MenuManager} from "./menuManager";
-import * as menuCSS from "../../styles/menu.css";
+import * as menuCSS from "../../../assets/styles/menu.css";
 
 dom.importCssString(menuCSS, "menu.css");
 

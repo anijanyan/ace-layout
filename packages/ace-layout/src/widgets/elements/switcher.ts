@@ -1,6 +1,6 @@
 import {LayoutHTMLElement, SwitcherOptions, Widget} from "../widget";
 import {dom} from "../../utils/dom";
-import * as switcherCSS from "../../styles/switcher.css";
+import * as switcherCSS from "../../../assets/styles/switcher.css";
 
 dom.importCssString(switcherCSS, "switcher.css");
 

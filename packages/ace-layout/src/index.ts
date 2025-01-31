@@ -21,4 +21,5 @@ export * from './widgets/tabs/tabManager';
 export * from './widgets/layout';
 export * from './widgets/trees/ace-tree';
 export * from './file-system/file-system-web';
-export {Ace} from 'ace-code';
+export * from './widgets/toolbars/panelBar';
+export * from './widgets/toolbars/toolbar';
