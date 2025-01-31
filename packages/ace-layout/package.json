@@ -3,7 +3,8 @@
   "version": "1.4.2",
   "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build-rollup": "pkgroll"
   },
   "devDependencies": {
     "ace-code": "^1.37.0",
@@ -13,6 +14,7 @@
     "webpack": "^5.79.0",
     "webpack-cli": "^4.10.0",
     "css-loader": "^6.7.1",
+    "pkgroll": "^2.5.1",
     "style-loader": "^3.3.1"
   },
   "license": "MIT",

@@ -4,10 +4,11 @@
   "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "check": "tsc"
   },
   "dependencies": {
-    "ace-code": "^1.35.2",
+    "ace-code": "^1.37.5",
     "browser-fs-access": "latest"
   },
   "devDependencies": {

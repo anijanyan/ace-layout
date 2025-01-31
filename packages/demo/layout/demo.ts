@@ -192,9 +192,10 @@ let menuKb = new HashHandler([
 ]);
 
 event.addCommandKeyListener(window, function (e, hashId, keyCode) {
+    // @ts-expect-error fix, when types woulld work for this file
     let keyString = keyUtil.keyCodeToString(keyCode);
     let command = menuKb.findKeyCommand(hashId, keyString);
-    if (command) {
+    if (command && command.exec) {
         event.stopEvent(e);
         command.exec();
     }
