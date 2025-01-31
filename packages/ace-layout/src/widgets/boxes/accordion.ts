@@ -1,3 +1,4 @@
+/// <reference path="../../Globals.d.ts" />
 import {AccordionHandler} from "../../mouse/accordion_handler";
 import {Box} from "./box";
 import {Utils} from "../../utils/lib";

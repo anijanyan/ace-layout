@@ -4,20 +4,22 @@
   "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
     "build": "webpack",
-    "build-rollup": "pkgroll"
+    "check": "tsc"
   },
   "devDependencies": {
     "ace-code": "^1.37.0",
+    "css-loader": "^6.7.1",
     "events": "^3.3.0",
+    "style-loader": "^3.3.1",
     "text-loader": "latest",
-    "typescript": "latest",
     "webpack": "^5.79.0",
     "webpack-cli": "^4.10.0",
-    "css-loader": "^6.7.1",
-    "pkgroll": "^2.5.1",
-    "style-loader": "^3.3.1"
+    "dts-bundle-generator": "^9.5.1"
   },
   "license": "MIT",
   "main": "build/bundle.index.js",
-  "types": "src/index.d.ts"
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ]
 }
