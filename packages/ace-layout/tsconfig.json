@@ -7,9 +7,12 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "skipDefaultLibCheck": true,
+    "noEmit": true
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "include": ["assets", "src", "src/Globals.d.ts"]
 }

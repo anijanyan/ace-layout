@@ -1,6 +1,6 @@
 import {Ace} from "ace-code";
 
-export class Tree implements Ace.EventEmitter {
+export class Tree implements Ace.EventEmitter<any> {
     selection: Ace.Selection;
 
     constructor(element: HTMLElement, cellWidth?: number, cellHeight?: number);
@@ -307,23 +307,23 @@ export class Tree implements Ace.EventEmitter {
 
     disable()
 
-    addEventListener(name: string, callback: Function, capturing?: boolean): void;
-
-    off(name: string, callback: Function): void;
-
-    on(name: string, callback: Function, capturing?: boolean): void;
-
-    once(name: string, callback: Function): void;
-
     removeAllListeners(name?: string): void;
 
     removeDefaultHandler(name: string, callback: Function): void;
 
-    removeEventListener(name: string, callback: Function): void;
-
-    removeListener(name: string, callback: Function): void;
-
     setDefaultHandler(name: string, callback: Function): void;
+
+    addEventListener<K>(name: K, callback: any, capturing: boolean | undefined): any;
+
+    off<K>(name: K, callback: any): void;
+
+    on<K>(name: K, callback: any, capturing?: boolean): any;
+
+    once<K>(name: K, callback: any): void;
+
+    removeEventListener<K>(name: K, callback: any): void;
+
+    removeListener<K>(name: K, callback: any): void;
 }
 
 export class DataProvider {

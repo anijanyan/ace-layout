@@ -19,19 +19,19 @@ export class ListBox extends Box {
         popup.container.style.boxShadow = "none";
         popup.renderer.setScrollMargin(2, 2, 0, 0);
         popup.autoSelect = false;
-        popup.renderer.$maxLines = null;
+        popup.renderer["$maxLines"] = null;
         popup.setRow(-1);
         popup.on("click", (e) => {
             e.stop();
             let data = popup.getData(popup.getRow());
-            //@ts-ignore
-            this._signal("select", data);
+            //TODO: fix this
+            //this._signal("select", data);
         });
         popup.on("dblclick", (e) => {
             e.stop();
             let data = popup.getData(popup.getRow());
-            //@ts-ignore
-            this._signal("choose", data);
+            //TODO: fix this
+            //this._signal("choose", data);
         });
         popup.on("tripleclick", (e) => {
             e.stop();
@@ -41,6 +41,7 @@ export class ListBox extends Box {
         });
         this.element.appendChild(popup.container);
         this.popup = popup;
+        // @ts-ignore
         delete popup.focus
         return this.element;
     }
