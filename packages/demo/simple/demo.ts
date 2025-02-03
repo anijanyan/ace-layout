@@ -45,13 +45,13 @@ let base = new Box({
 
 new AceLayout(base);
 
-window["fileTreeWrapper"] = fileTree;
 let fileSystem = new FileSystemWeb();
 
 function renderFileTree() {
     let button = new Button({value: "Open Folder"});
     let buttonWrapper = ["div", {}, button.render()];
     let aceTree = new AceTreeWrapper();
+    aceTree.render();
     let aceTreeWrapper = ["div", {style: "height: 100%"}, aceTree.element];
     button.element.addEventListener("mousedown", async (e) => {
         let nodes = await fileSystem.open();

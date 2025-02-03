@@ -1,0 +1,14 @@
+{
+  "name": "react-ace-layout",
+  "version": "0.0.1",
+  "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "react-dom": "^19.0.0"
+  },
+  "license": "MIT",
+  "main": "build/bundle.index.js",
+  "types": "index.d.ts"
+}

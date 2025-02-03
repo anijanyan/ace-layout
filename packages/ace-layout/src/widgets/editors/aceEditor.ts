@@ -32,7 +32,7 @@ export class AceEditor implements LayoutEditor<Ace.EditSession> {
         this.container.style.position = "absolute";
 
         this.editor.setOptions({
-            customScrollbar: true,
+            customScrollbar: false,
             newLineMode: "unix",
             enableLiveAutocompletion: true,
             enableBasicAutocompletion: true,

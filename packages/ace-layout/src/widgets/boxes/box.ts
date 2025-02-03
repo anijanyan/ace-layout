@@ -37,6 +37,7 @@ export class Box extends events.EventEmitter implements Widget {
     isMaximized: boolean;
     0?: Box;
     1?: Box;
+    buttons?: HTMLElement[];//TODO
 
     static enableAnimation() {
         document.documentElement.classList.add("animateBoxes");
@@ -163,13 +164,11 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     render() {
-        if (this.element)
+        if (this.element?.$host)
             return this.element;
 
-        this.element = dom.buildDom(["div", {
-            class: "box" + this.classNames,
-            $host: this,
-        }]);
+        this.renderElement();
+
         this.splitter = dom.buildDom(["div", {
             class: `splitter splitter${this.vertical ? "-v" : "-h"}`
         }, ["div"]]);
@@ -188,6 +187,12 @@ export class Box extends events.EventEmitter implements Widget {
             this.calculateRatio();
 
         return this.element;
+    }
+
+    renderElement() {
+        this.element ??= dom.buildDom(["div", {
+            class: "box" + this.classNames,
+        }]);
     }
 
     renderToolBarList() {
@@ -223,6 +228,8 @@ export class Box extends events.EventEmitter implements Widget {
     renderChild(child?: Box) {
         if (!child)
             return;
+        if (!this.element)
+            this.render();
         child.on("editorAdded", this.$editorAdded);
         this.element.appendChild(child.render());
     }
@@ -306,6 +313,7 @@ export class Box extends events.EventEmitter implements Widget {
      * Sets buttons of this box top-right tabBar
      */
     setButtons(buttons: HTMLElement[]) {
+        this.buttons = buttons;
         if (this.topRightPane)
             this.topRightPane.removeButtons();
 

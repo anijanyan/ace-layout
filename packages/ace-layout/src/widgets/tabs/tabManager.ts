@@ -114,6 +114,7 @@ export class TabManager {
             box.ratio = boxData.ratio;
             this.setChildBoxData(box, boxData, 0);
             this.setChildBoxData(box, boxData, 1);
+            box.buttons && box.setButtons(box.buttons);//TODO
         }
     }
 
@@ -228,11 +229,10 @@ export class TabManager {
     };
 
     navigateToTab(index: number, tab?: Tab, tabs?: Tab[]) {
-        let tabsList = tabs || this.tabs;
+        let tabsList = tabs || Object.values(this.tabs);
         let activeTab = tab || this.activeTab;
         //TODO: seems we need better `activate` method for Tab
-        //TODO: this seems wrong somehow
-        if (index >= 0 && Array.isArray(tabsList) && tabsList.length > index)
+        if (index >= 0 && tabsList.length > index)
             activeTab?.parent?.activateTab(tabsList[index], undefined, true);
     }
 

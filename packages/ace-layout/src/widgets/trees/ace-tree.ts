@@ -1,5 +1,5 @@
 import {Tree, DataProvider} from "./ace-tree-lib";
-import {LayoutHTMLElement} from "../widget";
+import {LayoutHTMLElement, Widget} from "../widget";
 import {dom} from "../../utils/dom";
 import oop = require("ace-code/src/lib/oop");
 import {EventEmitter} from "ace-code/src/lib/event_emitter";
@@ -21,17 +21,26 @@ function transform(node) {
     };
 }
 
-export class AceTreeWrapper {
+export class AceTreeWrapper implements Widget{
     tree: Tree;
     private model: DataProvider;
     element: LayoutHTMLElement;
 
-    constructor() {
-        this.element = dom.createElement("div");
+    render() {
+        if (this.tree) {
+            return;
+        }
+        this.element ??= dom.createElement("div");
         this.element.className = "ace-tree-wrapper";
         this.tree = new Tree(this.element);
         this.model = new DataProvider({});
         this.setupAceTree();
+    }
+    remove() {
+        this.element.remove();
+    }
+    toJSON() {
+        return {};
     }
 
     private setupAceTree() {

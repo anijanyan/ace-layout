@@ -14,7 +14,8 @@ module.exports = (env, argv) => {
         entry: {
             simple: './packages/demo/simple/demo.ts',
             preferences: './packages/demo/preferences/demo.ts',
-            layout: './packages/demo/layout/demo.ts'
+            layout: './packages/demo/layout/demo.ts',
+            jsx: './packages/demo/jsx/demo.tsx'
         },
         mode: "production",
         module: {
@@ -71,6 +72,9 @@ module.exports = (env, argv) => {
                     }, {
                         from: "packages/demo/layout/index.html",
                         to: "layout"
+                    }, {
+                        from: "packages/demo/jsx/index.html",
+                        to: "jsx"
                     }
                 ]
             })
