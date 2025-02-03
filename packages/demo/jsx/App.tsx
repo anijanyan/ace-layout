@@ -7,7 +7,7 @@ import {
     PanelManager,
     TabManager
 } from "ace-layout";
-import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
+import {PanelBar} from "ace-layout";
 import {addExampleMenuItems, menuDefs} from "../menu_example";
 
 const App = () => {

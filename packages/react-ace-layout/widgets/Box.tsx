@@ -10,7 +10,7 @@ import React, {
 } from "react";
 import {createRoot} from "react-dom/client";
 import { Box as AceBox } from "ace-layout";
-import {BoxOptions} from "ace-layout/widgets/widget";
+import {BoxOptions} from "ace-layout";
 export interface BoxHandler {
     boxInstance: AceBox | null;
 }

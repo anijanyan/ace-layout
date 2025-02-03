@@ -12,10 +12,6 @@ import {
     PanelBar, PanelManager, TabManager
 } from "ace-layout";
 import {addExampleMenuItems, menuDefs} from "../menu_example";
-import {MenuManager} from "ace-layout/widgets/menu/menuManager";
-import {AceLayout} from "ace-layout/widgets/layout";
-import {MenuToolbar} from "ace-layout/widgets/toolbars/menuToolbar";
-import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
 
 let mainBox: Box, outerBox: Box, consoleBox: Box;
 let fileTree: Box;

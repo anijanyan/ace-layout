@@ -1,6 +1,6 @@
 import React, { useRef, useLayoutEffect, PropsWithChildren } from "react";
 import { Button as AceButton } from "ace-layout";
-import { ButtonOptions } from "ace-layout/widgets/widget";
+import { ButtonOptions } from "ace-layout";
 
 export const Button = (props: PropsWithChildren<ButtonOptions>) => {
     const {children, ...buttonOptions} = props;
