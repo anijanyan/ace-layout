@@ -2,8 +2,8 @@ import {Utils} from "../../utils/lib";
 
 import {DropdownElement, DropdownOptions} from "../widget";
 import {dom} from "../../utils/dom";
-import * as dropdownCSS from "../../styles/dropdown.css";
-import * as menuCSS from "../../styles/menu.css";
+import * as dropdownCSS from "../../../assets/styles/dropdown.css";
+import * as menuCSS from "../../../assets/styles/menu.css";
 
 dom.importCssString(dropdownCSS, "dropdown.css");
 dom.importCssString(menuCSS, "menu.css");

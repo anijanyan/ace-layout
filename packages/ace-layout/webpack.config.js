@@ -1,4 +1,6 @@
 "use strict";
+const { writeFileSync } = require("fs");
+const { generateDtsBundle } = require("dts-bundle-generator");
 module.exports = (env, argv) => {
     let loader;
     loader = {
@@ -11,7 +13,7 @@ module.exports = (env, argv) => {
     return {
         devtool: 'source-map',
         entry: {
-            index: './index.ts'
+            index: './src/index.ts'
         },
         mode: "production",
         externals: /ace-code/,
@@ -53,6 +55,29 @@ module.exports = (env, argv) => {
             client: {
                 overlay: false
             }
-        }
+        },
+        plugins: [
+            {
+                apply: (compiler) => {
+                    compiler.hooks.afterEmit.tap("GenerateDeclarations", () => {
+                        try {
+                            const dtsContent = generateDtsBundle([
+                                {
+                                    filePath: "./src/index.ts",
+                                    output: {
+                                        noBanner: true,
+                                        exportReferencedTypes: true,
+                                        sortNodes: true
+                                    },
+                                }
+                            ]);
+                            writeFileSync("./build/index.d.ts", dtsContent.join("\n"), "utf-8");
+                        } catch (error) {
+                            console.error("⚠️ Declaration generation failed:", error);
+                        }
+                    });
+                }
+            }
+        ]
     };
 };

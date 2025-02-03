@@ -229,10 +229,10 @@ export class MenuManager {
                 return;
             }
             event.stopEvent(e);
-
+            //@ts-expect-error fix, when types would be exposed
             let keyString = keyUtil.keyCodeToString(keyCode);
             let command = menuKb.findKeyCommand(hashId, keyString);
-            if (command) {
+            if (command && command.exec) {
                 command.exec(_this);
             } else if (e.key.length === 1) {
                 MenuManager.getInstance().addSymbolToSearchBox(e.key);

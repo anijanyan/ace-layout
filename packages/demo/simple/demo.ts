@@ -1,12 +1,16 @@
 "use strict";
 
-import {Box} from "ace-layout/widgets/boxes/box";
-import {TabManager} from "ace-layout/widgets/tabs/tabManager";
-import {PanelManager} from "ace-layout/widgets/tabs/panelManager";
-import {Button} from "ace-layout/widgets/elements/button";
-import {FileSystemWeb} from "ace-layout/file-system/file-system-web";
-import {AceTreeWrapper} from "ace-layout/widgets/trees/ace-tree";
-import {dom} from "ace-layout/utils/dom";
+import {
+    AceLayout,
+    AceTreeWrapper,
+    Box,
+    Button,
+    dom,
+    FileSystemWeb,
+    MenuManager,
+    MenuToolbar,
+    PanelBar, PanelManager, TabManager
+} from "ace-layout";
 import {addExampleMenuItems, menuDefs} from "../menu_example";
 import {MenuManager} from "ace-layout/widgets/menu/menuManager";
 import {AceLayout} from "ace-layout/widgets/layout";
@@ -14,7 +18,7 @@ import {MenuToolbar} from "ace-layout/widgets/toolbars/menuToolbar";
 import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
 
 let mainBox: Box, outerBox: Box, consoleBox: Box;
-let fileTree;
+let fileTree: Box;
 document.body.innerHTML = "";
 let base = new Box({
     vertical: false,

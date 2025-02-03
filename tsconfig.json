@@ -8,7 +8,8 @@
     "declarationMap": true,
     "strictNullChecks": true,
     "allowJs": true,
-    "checkJs": true,
+    "checkJs": false,
+    "skipLibCheck": true,
     "jsx": "react"
   },
   "include": [

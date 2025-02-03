@@ -1,11 +1,10 @@
-import {Box} from "ace-layout/widgets/boxes/box";
-import {SettingsSearchBox} from "ace-layout/widgets/elements/search";
-import {Switcher} from "ace-layout/widgets/elements/switcher";
-import {Button} from "ace-layout/widgets/elements/button";
-import {Dropdown} from "ace-layout/widgets/elements/dropdown";
-import {dom} from "ace-layout/utils/dom";
 import * as preferencesCSS from "./preferences.css";
-import {PanelBar} from "ace-layout/widgets/toolbars/panelBar";
+
+import {
+    Box, Button,
+    dom, Dropdown,
+    PanelBar, SettingsSearchBox, Switcher
+} from "ace-layout";
 
 dom.importCssString(preferencesCSS, "preferences.css");
 

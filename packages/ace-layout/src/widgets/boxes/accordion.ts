@@ -1,10 +1,11 @@
+/// <reference path="../../Globals.d.ts" />
 import {AccordionHandler} from "../../mouse/accordion_handler";
 import {Box} from "./box";
 import {Utils} from "../../utils/lib";
 
 import {AccordionOptions, AccordionSection, Widget} from "../widget";
 import {dom} from "../../utils/dom";
-import * as accordionCSS from "../../styles/accordion.css";
+import * as accordionCSS from "../../../assets/styles/accordion.css";
 
 dom.importCssString(accordionCSS, "accordion.css");
 
