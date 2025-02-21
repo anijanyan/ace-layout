@@ -25,11 +25,11 @@ export type EditSession = Ace.EditSession | String;
  *
  */
 export interface Widget {
-    render()
+    render(): LayoutHTMLElement
 
-    remove()
+    remove(): void
 
-    toJSON()
+    toJSON(): object
 }
 
 /**
@@ -46,10 +46,10 @@ interface PanelLocation {
 interface AccordionSection {
     title: string,
     box: Box,
-    currentSize?: number,
+    currentSize: number,
     previousSize?: number,
     savedSize?: number,
-    sizePercent?: number
+    sizePercent: number
 }
 
 interface AccordionOptions {
@@ -100,6 +100,13 @@ export interface TabOptions extends TabPanelOptions{
     preview?: boolean;
     path: string;
     editorType?: EditorType;
+}
+
+export interface TabCommand extends Ace.Command{
+    mac: string,
+    win: string,
+    desc: string,
+    position?: number,
 }
 
 export interface PanelOptions extends TabPanelOptions {
