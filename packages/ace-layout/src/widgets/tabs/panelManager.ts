@@ -55,6 +55,8 @@ export class PanelManager {
 
                     for (let index = 0; index < sections.length; index++) {
                         accordionSections.push({
+                            sizePercent: 0,
+                            currentSize: 0,
                             title: sections[index].title,
                             box: new Box(sections[index].boxData)
                         })
