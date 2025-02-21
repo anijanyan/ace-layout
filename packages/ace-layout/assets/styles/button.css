@@ -9,19 +9,19 @@
     line-height: 27px;
     padding: 0 11px;
     text-align: center;
-    cursor: default;
+    cursor: pointer;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
 }
-.blackbuttonDisabled {
+.blackbutton.disabled {
     color: rgba(220, 235, 219, 0.5);
 }
-.blackbuttonFocus {
+.blackbutton.focus {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;
 }
-.blackbuttonOver {
+.blackbutton.over {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;
 }
-.blackbuttonDown {
+.blackbutton.down {
     box-shadow: 0 0 3px 2px #343434 inset;
 }
