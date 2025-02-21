@@ -1,8 +1,6 @@
 import {tabCommands} from "../../commands/tabCommands";
 import {Box} from "../boxes/box";
 
-import oop = require("ace-code/src/lib/oop");
-import {EventEmitter} from "ace-code/src/lib/event_emitter";
 import useragent = require("ace-code/src/lib/useragent");
 
 import {EditSession, LayoutHTMLElement, TabManagerOptions, TabOptions} from "../widget";
@@ -254,5 +252,3 @@ export class TabManager {
         return this.tabs[path];
     }
 }
-
-oop.implement(TabManager.prototype, EventEmitter);
