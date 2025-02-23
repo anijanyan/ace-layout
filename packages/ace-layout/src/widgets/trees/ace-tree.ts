@@ -28,13 +28,14 @@ export class AceTreeWrapper implements Widget{
 
     render() {
         if (this.tree) {
-            return;
+            return this.element;
         }
-        this.element ??= dom.createElement("div");
+        this.element ??= dom.buildDom(["div"]);
         this.element.className = "ace-tree-wrapper";
         this.tree = new Tree(this.element);
         this.model = new DataProvider({});
         this.setupAceTree();
+        return this.element;
     }
     remove() {
         this.element.remove();
