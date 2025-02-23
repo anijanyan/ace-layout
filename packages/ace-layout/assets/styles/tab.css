@@ -1,6 +1,5 @@
 .tabContainer {
     align-items: stretch;
-    justify-content: stretch;
     height: 30px;
 }
 
@@ -44,7 +43,6 @@
     background: var(--toolbar-background);
     color: #333;
     align-items: stretch;
-    justify-content: stretch;
     overflow: hidden;
     position: absolute;
     user-select: none;

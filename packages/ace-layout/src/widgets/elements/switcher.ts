@@ -37,6 +37,7 @@ export class Switcher implements Widget {
     }
 
     toJSON() {
+        return {};
     }
 
     remove() {

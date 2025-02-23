@@ -50,7 +50,7 @@ export class Panel extends TabPanel {
             title: this.title,
             autoHide: this.autoHide,
             panelBody: this.panelBody.toJSON(),
-        };
+        } as PanelOptions;
     }
 
     remove() {
