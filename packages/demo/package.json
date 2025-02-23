@@ -1,3 +1,6 @@
 {
-  "name": "@ace-layout/demo"
+  "name": "@ace-layout/demo",
+  "scripts": {
+    "build": ""
+  }
 }
