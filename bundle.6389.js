@@ -1,669 +1,988 @@
+(self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[1329,6389],{
+
+/***/ 16389:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
 "use strict";
-(self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[6389],{
-
-/***/ 87205:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
-
-var oop = __webpack_require__(89359);
-var BaseFoldMode = (__webpack_require__(15369).FoldMode);
-var Range = (__webpack_require__(59082)/* .Range */ .e);
-var TokenIterator = (__webpack_require__(39216).TokenIterator);
-
-
-var FoldMode = exports.Z = function() {};
-
-oop.inherits(FoldMode, BaseFoldMode);
-
-(function() {
-    this.indentKeywords = {
-        "class": 1,
-        "function": 1,
-        "sub": 1,
-        "if": 1,
-        "select": 1,
-        "do": 1,
-        "for": 1,
-        "while": 1,
-        "with": 1,
-        "property": 1,
-        "else": 1,
-        "elseif": 1,
-        "end": -1,
-        "loop": -1,
-        "next": -1,
-        "wend": -1
-    };
-
-    this.foldingStartMarker = /(?:\s|^)(class|function|sub|if|select|do|for|while|with|property|else|elseif)\b/i;
-    this.foldingStopMarker = /\b(end|loop|next|wend)\b/i;
-
-    this.getFoldWidgetRange = function (session, foldStyle, row) {
-        var line = session.getLine(row);
-        var isStart = this.foldingStartMarker.test(line);
-        var isEnd = this.foldingStopMarker.test(line);
-        if (isStart || isEnd) {
-            var match = (isEnd) ? this.foldingStopMarker.exec(line) : this.foldingStartMarker.exec(line);
-            var keyword = match && match[1].toLowerCase();
-            if (keyword) {
-                var type = session.getTokenAt(row, match.index + 2).type;
-                if (type === "keyword.control.asp" || type === "storage.type.function.asp")
-                    return this.vbsBlock(session, row, match.index + 2);
-            }
-        }
-    };
-
-
-    // must return "" if there's no fold, to enable caching
-    this.getFoldWidget = function(session, foldStyle, row) {
-        var line = session.getLine(row);
-        var isStart = this.foldingStartMarker.test(line);
-        var isEnd = this.foldingStopMarker.test(line);
-        if (isStart && !isEnd) {
-            var match = this.foldingStartMarker.exec(line);
-            var keyword = match && match[1].toLowerCase();
-            if (keyword) {
-                var type = session.getTokenAt(row, match.index + 2).type;
-                if (type == "keyword.control.asp" || type == "storage.type.function.asp") {
-                    if (keyword == "if" && !/then\s*('|$)/i.test(line))
-                        return "";
-                    return "start";
-                }
-            }
-        }
-        return "";
-    };
-
-    this.vbsBlock = function(session, row, column, tokenRange) {
-        var stream = new TokenIterator(session, row, column);
-
-        var endOpenings = {
-            "class": 1,
-            "function": 1,
-            "sub": 1,
-            "if": 1,
-            "select": 1,
-            "with": 1,
-            "property": 1,
-            "else": 1,
-            "elseif": 1
-        };
-
-        var token = stream.getCurrentToken();
-        if (!token || (token.type != "keyword.control.asp" && token.type != "storage.type.function.asp"))
-            return;
-
-        var startTokenValue = token.value.toLowerCase();
-        var val = token.value.toLowerCase();
-
-        var stack = [val];
-        var dir = this.indentKeywords[val];
-
-        if (!dir)
-            return;
-
-        var firstRange = stream.getCurrentTokenRange();
-        switch (val) {
-            case "property":
-            case "sub":
-            case "function":
-            case "if":
-            case "select":
-            case "do":
-            case "for":
-            case "class":
-            case "while":
-            case "with":
-                var line = session.getLine(row);
-                var singleLineCondition = /^\s*If\s+.*\s+Then(?!')\s+(?!')\S/i.test(line);
-                if (singleLineCondition)
-                    return;
-                var checkToken = new RegExp("(?:^|\\s)" + val, "i");
-                var endTest = /^\s*End\s(If|Sub|Select|Function|Class|With|Property)\s*/i.test(line);
-                if (!checkToken.test(line) && !endTest) {
-                    return;
-                }
-                if (endTest) {
-                    var tokenRange = stream.getCurrentTokenRange();
-                    stream.step = stream.stepBackward;
-                    stream.step();
-                    stream.step();
-                    token = stream.getCurrentToken();
-                    if (token) {
-                        val = token.value.toLowerCase();
-                        if (val == "end") {
-                            firstRange = stream.getCurrentTokenRange();
-                            firstRange = new Range(firstRange.start.row, firstRange.start.column, tokenRange.start.row, tokenRange.end.column);
-                        }
-                    }
-                    dir = -1;
-                }
-                break;
-            case "end":
-                var tokenPos = stream.getCurrentTokenPosition();
-                firstRange = stream.getCurrentTokenRange();
-                stream.step = stream.stepForward;
-                stream.step();
-                stream.step();
-                token = stream.getCurrentToken();
-                if (token) {
-                    val = token.value.toLowerCase();
-                    if (val in endOpenings) {
-                        startTokenValue = val;
-                        var nextTokenPos = stream.getCurrentTokenPosition();
-                        var endColumn = nextTokenPos.column + val.length;
-                        firstRange = new Range(tokenPos.row, tokenPos.column, nextTokenPos.row, endColumn);
-                    }
-                }
-                stream.step = stream.stepBackward;
-                stream.step();
-                stream.step();
-                break;
-        }
-        var startColumn = dir === -1 ? session.getLine(row - 1).length : session.getLine(row).length;
-        var startRow = row;
-        var ranges = [];
-        ranges.push(firstRange);
-
-        stream.step = dir === -1 ? stream.stepBackward : stream.stepForward;
-        while(token = stream.step()) {
-            var outputRange = null;
-            var ignore = false;
-            if (token.type != "keyword.control.asp" && token.type != "storage.type.function.asp")
-                continue;
-            val = token.value.toLowerCase();
-            var level = dir * this.indentKeywords[val];
-
-            switch (val) {
-                case "property":
-                case "sub":
-                case "function":
-                case "if":
-                case "select":
-                case "do":
-                case "for":
-                case "class":
-                case "while":
-                case "with":
-                    var line = session.getLine(stream.getCurrentTokenRow());
-                    var singleLineCondition = /^\s*If\s+.*\s+Then(?!')\s+(?!')\S/i.test(line);
-                    if (singleLineCondition) {
-                        level = 0;
-                        ignore = true;
-                    }
-                    var checkToken = new RegExp("^\\s* end\\s+" + val, "i");
-                    if (checkToken.test(line)) {
-                        level = 0;
-                        ignore = true;
-                    }
-                    break;
-                case "elseif":
-                case "else":
-                    level = 0;
-                    if (startTokenValue != "elseif") {
-                        ignore = true;
-                    }
-                    break;
-            }
-
-            if (level > 0) {
-                stack.unshift(val);
-            } else if (level <= 0 && ignore === false) {
-                stack.shift();
-                if (!stack.length) {
-                        switch (val) {
-                            case "end":
-                                var tokenPos = stream.getCurrentTokenPosition();
-                                outputRange = stream.getCurrentTokenRange();
-                                stream.step();
-                                stream.step();
-                                token = stream.getCurrentToken();
-                                if (token) {
-                                    val = token.value.toLowerCase();
-                                    if (val in endOpenings) {
-                                        if ((startTokenValue == "else" || startTokenValue == "elseif")) {
-                                            if (val !== "if") {
-                                                ranges.shift();
-                                            }
-                                        } else {
-                                            if (val != startTokenValue)
-                                                ranges.shift();
-                                        }
-                                        var nextTokenPos = stream.getCurrentTokenPosition();
-                                        var endColumn = nextTokenPos.column + val.length;
-                                        outputRange = new Range(tokenPos.row, tokenPos.column, nextTokenPos.row, endColumn);
-                                    } else {
-                                        ranges.shift();
-                                    }
-                                } else {
-                                    ranges.shift();
-                                }
-                                stream.step = stream.stepBackward;
-                                stream.step();
-                                stream.step();
-                                token = stream.getCurrentToken();
-                                val = token.value.toLowerCase();
-                                break;
-                            case "select":
-                            case "sub":
-                            case "if":
-                            case "function":
-                            case "class":
-                            case "with":
-                            case "property":
-                                if (val != startTokenValue)
-                                    ranges.shift();
-                                break;
-                            case "do":
-                                if (startTokenValue != "loop")
-                                    ranges.shift();
-                                break;
-                            case "loop":
-                                if (startTokenValue != "do")
-                                    ranges.shift();
-                                break;
-                            case "for":
-                                if (startTokenValue != "next")
-                                    ranges.shift();
-                                break;
-                            case "next":
-                                if (startTokenValue != "for")
-                                    ranges.shift();
-                                break;
-                            case "while":
-                                if (startTokenValue != "wend")
-                                    ranges.shift();
-                                break;
-                            case "wend":
-                                if (startTokenValue != "while")
-                                    ranges.shift();
-                                break;
-                        }
-                        break;
-                }
-
-                if (level === 0){
-                    stack.unshift(val);
-                }
-            }
-        }
-
-        if (!token)
-            return null;
-
-        if (tokenRange) {
-            if (!outputRange) {
-                ranges.push(stream.getCurrentTokenRange());
-            } else {
-                ranges.push(outputRange);
-            }
-            return ranges;
-        }
-
-        var row = stream.getCurrentTokenRow();
-        if (dir === -1) {
-            var endColumn = session.getLine(row).length;
-            return new Range(row, endColumn, startRow - 1, startColumn);
-        } else
-            return new Range(startRow, startColumn, row - 1, session.getLine(row - 1).length);
-    };
-
-}).call(FoldMode.prototype);
+exports.snippetText = __webpack_require__(81329);
+exports.scope = "css";
 
 
 /***/ }),
 
-/***/ 96389:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ 81329:
+/***/ ((module) => {
 
-/*
-  THIS FILE WAS AUTOGENERATED BY mode.tmpl.js
-*/
-
-
-
-var oop = __webpack_require__(89359);
-var TextMode = (__webpack_require__(98030).Mode);
-var VBScriptHighlightRules = (__webpack_require__(20682)/* .VBScriptHighlightRules */ .U);
-var FoldMode = (__webpack_require__(87205)/* .FoldMode */ .Z);
-var Range = (__webpack_require__(59082)/* .Range */ .e);
-
-var Mode = function() {
-    this.HighlightRules = VBScriptHighlightRules;
-    this.foldingRules = new FoldMode();
-    this.$behaviour = this.$defaultBehaviour;
-    this.indentKeywords = this.foldingRules.indentKeywords;
-};
-oop.inherits(Mode, TextMode);
-
-(function() {
-
-    this.lineCommentStart = ["'", "REM"];
-
-    var outdentKeywords = [
-        "else",
-        "elseif",
-        "end",
-        "loop",
-        "next",
-        "wend"
-    ];
-
-    function getNetIndentLevel(tokens, line, indentKeywords) {
-        var level = 0;
-        // Support single-line blocks by decrementing the indent level if
-        // an ending token is found
-        for (var i = 0; i < tokens.length; i++) {
-            var token = tokens[i];
-            if (token.type == "keyword.control.asp" || token.type == "storage.type.function.asp") {
-                var val = token.value.toLowerCase();
-                if (val in indentKeywords) {
-                    switch (val) {
-                        case "property":
-                        case "sub":
-                        case "function":
-                        case "select":
-                        case "do":
-                        case "for":
-                        case "class":
-                        case "while":
-                        case "with":
-                        case "if":
-                            var checkToken = new RegExp("^\\s* end\\s+" + val, "i");
-                            var singleLineCondition = /^\s*If\s+.*\s+Then(?!')\s+(?!')\S/i.test(line);
-                            if (!singleLineCondition && !checkToken.test(line))
-                                level += indentKeywords[val];
-                            break;
-                        default:
-                            level += indentKeywords[val];
-                            break;
-                    }
-                }
-            }
-        }
-        // Limit the level to +/- 1 since usually users only indent one level
-        // at a time regardless of the logical nesting level
-        if (level < 0) {
-            return -1;
-        } else if (level > 0) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-
-    this.getNextLineIndent = function(state, line, tab) {
-        var indent = this.$getIndent(line);
-        var level = 0;
-
-        var tokenizedLine = this.getTokenizer().getLineTokens(line, state);
-        var tokens = tokenizedLine.tokens;
-
-        if (state == "start") {
-            level = getNetIndentLevel(tokens, line, this.indentKeywords);
-        }
-        if (level > 0) {
-            return indent + tab;
-        } else if (level < 0 && indent.substr(indent.length - tab.length) == tab) {
-            // Don't do a next-line outdent if we're going to do a real outdent of this line
-            if (!this.checkOutdent(state, line, "\n")) {
-                return indent.substr(0, indent.length - tab.length);
-            }
-        }
-        return indent;
-    };
-
-    this.checkOutdent = function(state, line, input) {
-        if (input != "\n" && input != "\r" && input != "\r\n")
-            return false;
-
-        var tokens = this.getTokenizer().getLineTokens(line.trim(), state).tokens;
-
-        if (!tokens || !tokens.length)
-            return false;
-        var val = tokens[0].value.toLowerCase();
-        return ((tokens[0].type == "keyword.control.asp" || tokens[0].type == "storage.type.function.asp") && outdentKeywords.indexOf(val) != -1);
-    };
-
-    this.getMatching = function(session, row, column, tokenRange) {
-        if (row == undefined) {
-            var pos = session.selection.lead;
-            column = pos.column;
-            row = pos.row;
-        }
-        if (tokenRange == undefined)
-            tokenRange = true;
-
-        var startToken = session.getTokenAt(row, column);
-        if (startToken) {
-            var val = startToken.value.toLowerCase();
-            if (val in this.indentKeywords)
-                return this.foldingRules.vbsBlock(session, row, column, tokenRange);
-        }
-    };
-
-    this.autoOutdent = function(state, session, row) {
-        var line = session.getLine(row);
-        var column = line.match(/^\s*/)[0].length;
-        if (!column || !row) return;
-
-        var startRange = this.getMatching(session, row, column + 1, false);
-        if (!startRange || startRange.start.row == row)
-            return;
-        var indent = this.$getIndent(session.getLine(startRange.start.row));
-        if (indent.length != column) {
-            session.replace(new Range(row, 0, row, column), indent);
-            session.outdentRows(new Range(row + 1, 0, row + 1, 0));
-        }
-    };
-
-    this.$id = "ace/mode/vbscript";
-}).call(Mode.prototype);
-
-exports.Mode = Mode;
-
-
-/***/ }),
-
-/***/ 20682:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-/*
-  THIS FILE WAS AUTOGENERATED BY mode_highlight_rules.tmpl.js (UUID: 7F9C9343-D48E-4E7D-BFE8-F680714DCD3E) */
-
-
-
-var oop = __webpack_require__(89359);
-var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-
-var VBScriptHighlightRules = function() {
-
-    var keywordMapper = this.createKeywordMapper({
-        "keyword.control.asp":  "If|Then|Else|ElseIf|End|While|Wend|For|To|Each|Case|Select|Return"
-            + "|Continue|Do|Until|Loop|Next|With|Exit|Function|Property|Type|Enum|Sub|IIf|Class",
-        "storage.type.asp": "Dim|Call|Const|Redim|Set|Let|Get|New|Randomize|Option|Explicit|Preserve|Erase|Execute|ExecuteGlobal",
-        "storage.modifier.asp": "Private|Public|Default",
-        "keyword.operator.asp": "Mod|And|Not|Or|Xor|As|Eqv|Imp|Is",
-        "constant.language.asp": "Empty|False|Nothing|Null|True",
-        "variable.language.vb.asp": "Me",
-        "support.class.vb.asp": "RegExp",
-        "support.class.asp": "Application|ObjectContext|Request|Response|Server|Session",
-        "support.class.collection.asp": "Contents|StaticObjects|ClientCertificate|Cookies|Form|QueryString|ServerVariables",
-        "support.constant.asp": "TotalBytes|Buffer|CacheControl|Charset|ContentType|Expires|ExpiresAbsolute"
-            + "|IsClientConnected|PICS|Status|ScriptTimeout|CodePage|LCID|SessionID|Timeout",
-        "support.function.asp": "Lock|Unlock|SetAbort|SetComplete|BinaryRead|AddHeader|AppendToLog"
-            + "|BinaryWrite|Clear|Flush|Redirect|Write|CreateObject|HTMLEncode|MapPath|URLEncode|Abandon|Convert|Regex",
-        "support.function.event.asp": "Application_OnEnd|Application_OnStart"
-            + "|OnTransactionAbort|OnTransactionCommit|Session_OnEnd|Session_OnStart",
-        "support.function.vb.asp": "Array|Add|Asc|Atn|CBool|CByte|CCur|CDate|CDbl|Chr|CInt|CLng"
-            + "|Conversions|Cos|CreateObject|CSng|CStr|Date|DateAdd|DateDiff|DatePart|DateSerial"
-            + "|DateValue|Day|Derived|Math|Escape|Eval|Exists|Exp|Filter|FormatCurrency"
-            + "|FormatDateTime|FormatNumber|FormatPercent|GetLocale|GetObject|GetRef|Hex"
-            + "|Hour|InputBox|InStr|InStrRev|Int|Fix|IsArray|IsDate|IsEmpty|IsNull|IsNumeric"
-            + "|IsObject|Item|Items|Join|Keys|LBound|LCase|Left|Len|LoadPicture|Log|LTrim|RTrim"
-            + "|Trim|Maths|Mid|Minute|Month|MonthName|MsgBox|Now|Oct|Remove|RemoveAll|Replace"
-            + "|RGB|Right|Rnd|Round|ScriptEngine|ScriptEngineBuildVersion|ScriptEngineMajorVersion"
-            + "|ScriptEngineMinorVersion|Second|SetLocale|Sgn|Sin|Space|Split|Sqr|StrComp|String|StrReverse"
-            + "|Tan|Time|Timer|TimeSerial|TimeValue|TypeName|UBound|UCase|Unescape|VarType|Weekday|WeekdayName|Year"
-            + "|AscB|AscW|ChrB|ChrW|InStrB|LeftB|LenB|MidB|RightB|Abs|GetUILanguage",
-        "support.type.vb.asp": "vbTrue|vbFalse|vbCr|vbCrLf|vbFormFeed|vbLf|vbNewLine|vbNullChar|vbNullString"
-            + "|vbTab|vbVerticalTab|vbBinaryCompare|vbTextCompare|vbSunday|vbMonday|vbTuesday|vbWednesday"
-            + "|vbThursday|vbFriday|vbSaturday|vbUseSystemDayOfWeek|vbFirstJan1|vbFirstFourDays|vbFirstFullWeek"
-            + "|vbGeneralDate|vbLongDate|vbShortDate|vbLongTime|vbShortTime|vbObjectError|vbEmpty|vbNull|vbInteger"
-            + "|vbLong|vbSingle|vbDouble|vbCurrency|vbDate|vbString|vbObject|vbError|vbBoolean|vbVariant"
-            + "|vbDataObject|vbDecimal|vbByte|vbArray|vbOKOnly|vbOKCancel|vbAbortRetryIgnore|vbYesNoCancel|vbYesNo"
-            + "|vbRetryCancel|vbCritical|vbQuestion|vbExclamation|vbInformation|vbDefaultButton1|vbDefaultButton2"
-            + "|vbDefaultButton3|vbDefaultButton4|vbApplicationModal|vbSystemModal|vbOK|vbCancel|vbAbort|vbRetry|vbIgnore|vbYes|vbNo"
-            + "|vbUseDefault"
-    }, "identifier", true);
-
-    this.$rules = {
-    "start": [
-        {
-            token: [
-                "meta.ending-space"
-            ],
-            regex: "$"
-        },
-        {
-            token: [null],
-            regex: "^(?=\\t)",
-            next: "state_3"
-        },
-        {
-            token: [null],
-            regex: "^(?= )",
-            next: "state_4"
-        },
-        {
-            token: [
-                "text",
-                "storage.type.function.asp",
-                "text",
-                "entity.name.function.asp",
-                "text",
-                "punctuation.definition.parameters.asp",
-                "variable.parameter.function.asp",
-                "punctuation.definition.parameters.asp"
-            ],
-            regex: "^(\\s*)(Function|Sub)(\\s+)([a-zA-Z_]\\w*)(\\s*)(\\()([^)]*)(\\))"
-        },
-        {
-            token: "punctuation.definition.comment.asp",
-            regex: "'|REM(?=\\s|$)",
-            next: "comment",
-            caseInsensitive: true
-        },
-        {
-            token: "storage.type.asp",
-            regex: "On\\s+Error\\s+(?:Resume\\s+Next|GoTo)\\b",
-            caseInsensitive: true
-        },
-        {
-            token: "punctuation.definition.string.begin.asp",
-            regex: '"',
-            next: "string"
-        },
-        {
-            token: [
-                "punctuation.definition.variable.asp"
-            ],
-            regex: "(\\$)[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b\\s*"
-        },
-//        {
-//            token: [
-//                "support.type.vb.asp"
-//            ],
-//            regex: "(?:(?<=as )(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b))", // ERROR: This contains a lookbehind, which JS does not support :("
-//        },
-        {
-            token: "constant.numeric.asp",
-            regex: "-?\\b(?:(?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)(?:L|l|UL|ul|u|U|F|f)?\\b"
-        },
-        {
-            regex: "\\w+",
-            token: keywordMapper
-        },
-        {
-            token: ["entity.name.function.asp"],
-            regex: "(?:(\\b[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\\b)(?=\\(\\)?))"
-        },
-//        {
-//            token: [
-//                "variable.other.asp"
-//            ],
-//            regex: "(?:((?<=(\\+|=|-|\\&|\\\\|/|<|>|\\(|,))\\s*\\b([a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?)\\b(?!(\\(|\\.))|\\b([a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?)\\b(?=\\s*(\\+|=|-|\\&|\\\\|/|<|>|\\(|\\)))))", // ERROR: This contains a lookbehind, which JS does not support :("
-//        },
-        {
-            token: ["keyword.operator.asp"],
-            regex: "\\-|\\+|\\*|\\/|\\>|\\<|\\=|\\&|\\\\|\\^"
-        }
-    ],
-    "state_3": [
-        {
-            token: [
-                "meta.odd-tab.tabs",
-                "meta.even-tab.tabs"
-            ],
-            regex: "(\\t)(\\t)?"
-        },
-        {
-            token: "meta.leading-space",
-            regex: "(?=[^\\t])",
-            next: "start"
-        },
-        {
-            token: "meta.leading-space",
-            regex: ".",
-            next: "state_3"
-        }
-    ],
-    "state_4": [
-        {
-            token: ["meta.odd-tab.spaces", "meta.even-tab.spaces"],
-            regex: "(  )(  )?"
-        },
-        {
-            token: "meta.leading-space",
-            regex: "(?=[^ ])",
-            next: "start"
-        },
-        {
-            defaultToken: "meta.leading-space"
-        }
-    ],
-    "comment": [
-        {
-            token: "comment.line.apostrophe.asp",
-            regex: "$",
-            next: "start"
-        },
-        {
-            defaultToken: "comment.line.apostrophe.asp"
-        }
-    ],
-    "string": [
-        {
-            token: "constant.character.escape.apostrophe.asp",
-            regex: '""'
-        },
-        {
-            token: "string.quoted.double.asp",
-            regex: '"',
-            next: "start"
-        },
-        {
-            defaultToken: "string.quoted.double.asp"
-        }
-    ]
-};
-
-};
-
-oop.inherits(VBScriptHighlightRules, TextHighlightRules);
-
-exports.U = VBScriptHighlightRules;
+module.exports = `snippet .
+	\${1} {
+		\${2}
+	}
+snippet !
+	 !important
+snippet bdi:m+
+	-moz-border-image: url(\${1}) \${2:0} \${3:0} \${4:0} \${5:0} \${6:stretch} \${7:stretch};
+snippet bdi:m
+	-moz-border-image: \${1};
+snippet bdrz:m
+	-moz-border-radius: \${1};
+snippet bxsh:m+
+	-moz-box-shadow: \${1:0} \${2:0} \${3:0} #\${4:000};
+snippet bxsh:m
+	-moz-box-shadow: \${1};
+snippet bdi:w+
+	-webkit-border-image: url(\${1}) \${2:0} \${3:0} \${4:0} \${5:0} \${6:stretch} \${7:stretch};
+snippet bdi:w
+	-webkit-border-image: \${1};
+snippet bdrz:w
+	-webkit-border-radius: \${1};
+snippet bxsh:w+
+	-webkit-box-shadow: \${1:0} \${2:0} \${3:0} #\${4:000};
+snippet bxsh:w
+	-webkit-box-shadow: \${1};
+snippet @f
+	@font-face {
+		font-family: \${1};
+		src: url(\${2});
+	}
+snippet @i
+	@import url(\${1});
+snippet @m
+	@media \${1:print} {
+		\${2}
+	}
+snippet bg+
+	background: #\${1:FFF} url(\${2}) \${3:0} \${4:0} \${5:no-repeat};
+snippet bga
+	background-attachment: \${1};
+snippet bga:f
+	background-attachment: fixed;
+snippet bga:s
+	background-attachment: scroll;
+snippet bgbk
+	background-break: \${1};
+snippet bgbk:bb
+	background-break: bounding-box;
+snippet bgbk:c
+	background-break: continuous;
+snippet bgbk:eb
+	background-break: each-box;
+snippet bgcp
+	background-clip: \${1};
+snippet bgcp:bb
+	background-clip: border-box;
+snippet bgcp:cb
+	background-clip: content-box;
+snippet bgcp:nc
+	background-clip: no-clip;
+snippet bgcp:pb
+	background-clip: padding-box;
+snippet bgc
+	background-color: #\${1:FFF};
+snippet bgc:t
+	background-color: transparent;
+snippet bgi
+	background-image: url(\${1});
+snippet bgi:n
+	background-image: none;
+snippet bgo
+	background-origin: \${1};
+snippet bgo:bb
+	background-origin: border-box;
+snippet bgo:cb
+	background-origin: content-box;
+snippet bgo:pb
+	background-origin: padding-box;
+snippet bgpx
+	background-position-x: \${1};
+snippet bgpy
+	background-position-y: \${1};
+snippet bgp
+	background-position: \${1:0} \${2:0};
+snippet bgr
+	background-repeat: \${1};
+snippet bgr:n
+	background-repeat: no-repeat;
+snippet bgr:x
+	background-repeat: repeat-x;
+snippet bgr:y
+	background-repeat: repeat-y;
+snippet bgr:r
+	background-repeat: repeat;
+snippet bgz
+	background-size: \${1};
+snippet bgz:a
+	background-size: auto;
+snippet bgz:ct
+	background-size: contain;
+snippet bgz:cv
+	background-size: cover;
+snippet bg
+	background: \${1};
+snippet bg:ie
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='\${1}',sizingMethod='\${2:crop}');
+snippet bg:n
+	background: none;
+snippet bd+
+	border: \${1:1px} \${2:solid} #\${3:000};
+snippet bdb+
+	border-bottom: \${1:1px} \${2:solid} #\${3:000};
+snippet bdbc
+	border-bottom-color: #\${1:000};
+snippet bdbi
+	border-bottom-image: url(\${1});
+snippet bdbi:n
+	border-bottom-image: none;
+snippet bdbli
+	border-bottom-left-image: url(\${1});
+snippet bdbli:c
+	border-bottom-left-image: continue;
+snippet bdbli:n
+	border-bottom-left-image: none;
+snippet bdblrz
+	border-bottom-left-radius: \${1};
+snippet bdbri
+	border-bottom-right-image: url(\${1});
+snippet bdbri:c
+	border-bottom-right-image: continue;
+snippet bdbri:n
+	border-bottom-right-image: none;
+snippet bdbrrz
+	border-bottom-right-radius: \${1};
+snippet bdbs
+	border-bottom-style: \${1};
+snippet bdbs:n
+	border-bottom-style: none;
+snippet bdbw
+	border-bottom-width: \${1};
+snippet bdb
+	border-bottom: \${1};
+snippet bdb:n
+	border-bottom: none;
+snippet bdbk
+	border-break: \${1};
+snippet bdbk:c
+	border-break: close;
+snippet bdcl
+	border-collapse: \${1};
+snippet bdcl:c
+	border-collapse: collapse;
+snippet bdcl:s
+	border-collapse: separate;
+snippet bdc
+	border-color: #\${1:000};
+snippet bdci
+	border-corner-image: url(\${1});
+snippet bdci:c
+	border-corner-image: continue;
+snippet bdci:n
+	border-corner-image: none;
+snippet bdf
+	border-fit: \${1};
+snippet bdf:c
+	border-fit: clip;
+snippet bdf:of
+	border-fit: overwrite;
+snippet bdf:ow
+	border-fit: overwrite;
+snippet bdf:r
+	border-fit: repeat;
+snippet bdf:sc
+	border-fit: scale;
+snippet bdf:sp
+	border-fit: space;
+snippet bdf:st
+	border-fit: stretch;
+snippet bdi
+	border-image: url(\${1}) \${2:0} \${3:0} \${4:0} \${5:0} \${6:stretch} \${7:stretch};
+snippet bdi:n
+	border-image: none;
+snippet bdl+
+	border-left: \${1:1px} \${2:solid} #\${3:000};
+snippet bdlc
+	border-left-color: #\${1:000};
+snippet bdli
+	border-left-image: url(\${1});
+snippet bdli:n
+	border-left-image: none;
+snippet bdls
+	border-left-style: \${1};
+snippet bdls:n
+	border-left-style: none;
+snippet bdlw
+	border-left-width: \${1};
+snippet bdl
+	border-left: \${1};
+snippet bdl:n
+	border-left: none;
+snippet bdlt
+	border-length: \${1};
+snippet bdlt:a
+	border-length: auto;
+snippet bdrz
+	border-radius: \${1};
+snippet bdr+
+	border-right: \${1:1px} \${2:solid} #\${3:000};
+snippet bdrc
+	border-right-color: #\${1:000};
+snippet bdri
+	border-right-image: url(\${1});
+snippet bdri:n
+	border-right-image: none;
+snippet bdrs
+	border-right-style: \${1};
+snippet bdrs:n
+	border-right-style: none;
+snippet bdrw
+	border-right-width: \${1};
+snippet bdr
+	border-right: \${1};
+snippet bdr:n
+	border-right: none;
+snippet bdsp
+	border-spacing: \${1};
+snippet bds
+	border-style: \${1};
+snippet bds:ds
+	border-style: dashed;
+snippet bds:dtds
+	border-style: dot-dash;
+snippet bds:dtdtds
+	border-style: dot-dot-dash;
+snippet bds:dt
+	border-style: dotted;
+snippet bds:db
+	border-style: double;
+snippet bds:g
+	border-style: groove;
+snippet bds:h
+	border-style: hidden;
+snippet bds:i
+	border-style: inset;
+snippet bds:n
+	border-style: none;
+snippet bds:o
+	border-style: outset;
+snippet bds:r
+	border-style: ridge;
+snippet bds:s
+	border-style: solid;
+snippet bds:w
+	border-style: wave;
+snippet bdt+
+	border-top: \${1:1px} \${2:solid} #\${3:000};
+snippet bdtc
+	border-top-color: #\${1:000};
+snippet bdti
+	border-top-image: url(\${1});
+snippet bdti:n
+	border-top-image: none;
+snippet bdtli
+	border-top-left-image: url(\${1});
+snippet bdtli:c
+	border-corner-image: continue;
+snippet bdtli:n
+	border-corner-image: none;
+snippet bdtlrz
+	border-top-left-radius: \${1};
+snippet bdtri
+	border-top-right-image: url(\${1});
+snippet bdtri:c
+	border-top-right-image: continue;
+snippet bdtri:n
+	border-top-right-image: none;
+snippet bdtrrz
+	border-top-right-radius: \${1};
+snippet bdts
+	border-top-style: \${1};
+snippet bdts:n
+	border-top-style: none;
+snippet bdtw
+	border-top-width: \${1};
+snippet bdt
+	border-top: \${1};
+snippet bdt:n
+	border-top: none;
+snippet bdw
+	border-width: \${1};
+snippet bd
+	border: \${1};
+snippet bd:n
+	border: none;
+snippet b
+	bottom: \${1};
+snippet b:a
+	bottom: auto;
+snippet bxsh+
+	box-shadow: \${1:0} \${2:0} \${3:0} #\${4:000};
+snippet bxsh
+	box-shadow: \${1};
+snippet bxsh:n
+	box-shadow: none;
+snippet bxz
+	box-sizing: \${1};
+snippet bxz:bb
+	box-sizing: border-box;
+snippet bxz:cb
+	box-sizing: content-box;
+snippet cps
+	caption-side: \${1};
+snippet cps:b
+	caption-side: bottom;
+snippet cps:t
+	caption-side: top;
+snippet cl
+	clear: \${1};
+snippet cl:b
+	clear: both;
+snippet cl:l
+	clear: left;
+snippet cl:n
+	clear: none;
+snippet cl:r
+	clear: right;
+snippet cp
+	clip: \${1};
+snippet cp:a
+	clip: auto;
+snippet cp:r
+	clip: rect(\${1:0} \${2:0} \${3:0} \${4:0});
+snippet c
+	color: #\${1:000};
+snippet ct
+	content: \${1};
+snippet ct:a
+	content: attr(\${1});
+snippet ct:cq
+	content: close-quote;
+snippet ct:c
+	content: counter(\${1});
+snippet ct:cs
+	content: counters(\${1});
+snippet ct:ncq
+	content: no-close-quote;
+snippet ct:noq
+	content: no-open-quote;
+snippet ct:n
+	content: normal;
+snippet ct:oq
+	content: open-quote;
+snippet coi
+	counter-increment: \${1};
+snippet cor
+	counter-reset: \${1};
+snippet cur
+	cursor: \${1};
+snippet cur:a
+	cursor: auto;
+snippet cur:c
+	cursor: crosshair;
+snippet cur:d
+	cursor: default;
+snippet cur:ha
+	cursor: hand;
+snippet cur:he
+	cursor: help;
+snippet cur:m
+	cursor: move;
+snippet cur:p
+	cursor: pointer;
+snippet cur:t
+	cursor: text;
+snippet d
+	display: \${1};
+snippet d:mib
+	display: -moz-inline-box;
+snippet d:mis
+	display: -moz-inline-stack;
+snippet d:b
+	display: block;
+snippet d:cp
+	display: compact;
+snippet d:ib
+	display: inline-block;
+snippet d:itb
+	display: inline-table;
+snippet d:i
+	display: inline;
+snippet d:li
+	display: list-item;
+snippet d:n
+	display: none;
+snippet d:ri
+	display: run-in;
+snippet d:tbcp
+	display: table-caption;
+snippet d:tbc
+	display: table-cell;
+snippet d:tbclg
+	display: table-column-group;
+snippet d:tbcl
+	display: table-column;
+snippet d:tbfg
+	display: table-footer-group;
+snippet d:tbhg
+	display: table-header-group;
+snippet d:tbrg
+	display: table-row-group;
+snippet d:tbr
+	display: table-row;
+snippet d:tb
+	display: table;
+snippet ec
+	empty-cells: \${1};
+snippet ec:h
+	empty-cells: hide;
+snippet ec:s
+	empty-cells: show;
+snippet exp
+	expression()
+snippet fl
+	float: \${1};
+snippet fl:l
+	float: left;
+snippet fl:n
+	float: none;
+snippet fl:r
+	float: right;
+snippet f+
+	font: \${1:1em} \${2:Arial},\${3:sans-serif};
+snippet fef
+	font-effect: \${1};
+snippet fef:eb
+	font-effect: emboss;
+snippet fef:eg
+	font-effect: engrave;
+snippet fef:n
+	font-effect: none;
+snippet fef:o
+	font-effect: outline;
+snippet femp
+	font-emphasize-position: \${1};
+snippet femp:a
+	font-emphasize-position: after;
+snippet femp:b
+	font-emphasize-position: before;
+snippet fems
+	font-emphasize-style: \${1};
+snippet fems:ac
+	font-emphasize-style: accent;
+snippet fems:c
+	font-emphasize-style: circle;
+snippet fems:ds
+	font-emphasize-style: disc;
+snippet fems:dt
+	font-emphasize-style: dot;
+snippet fems:n
+	font-emphasize-style: none;
+snippet fem
+	font-emphasize: \${1};
+snippet ff
+	font-family: \${1};
+snippet ff:c
+	font-family: \${1:'Monotype Corsiva','Comic Sans MS'},cursive;
+snippet ff:f
+	font-family: \${1:Capitals,Impact},fantasy;
+snippet ff:m
+	font-family: \${1:Monaco,'Courier New'},monospace;
+snippet ff:ss
+	font-family: \${1:Helvetica,Arial},sans-serif;
+snippet ff:s
+	font-family: \${1:Georgia,'Times New Roman'},serif;
+snippet fza
+	font-size-adjust: \${1};
+snippet fza:n
+	font-size-adjust: none;
+snippet fz
+	font-size: \${1};
+snippet fsm
+	font-smooth: \${1};
+snippet fsm:aw
+	font-smooth: always;
+snippet fsm:a
+	font-smooth: auto;
+snippet fsm:n
+	font-smooth: never;
+snippet fst
+	font-stretch: \${1};
+snippet fst:c
+	font-stretch: condensed;
+snippet fst:e
+	font-stretch: expanded;
+snippet fst:ec
+	font-stretch: extra-condensed;
+snippet fst:ee
+	font-stretch: extra-expanded;
+snippet fst:n
+	font-stretch: normal;
+snippet fst:sc
+	font-stretch: semi-condensed;
+snippet fst:se
+	font-stretch: semi-expanded;
+snippet fst:uc
+	font-stretch: ultra-condensed;
+snippet fst:ue
+	font-stretch: ultra-expanded;
+snippet fs
+	font-style: \${1};
+snippet fs:i
+	font-style: italic;
+snippet fs:n
+	font-style: normal;
+snippet fs:o
+	font-style: oblique;
+snippet fv
+	font-variant: \${1};
+snippet fv:n
+	font-variant: normal;
+snippet fv:sc
+	font-variant: small-caps;
+snippet fw
+	font-weight: \${1};
+snippet fw:b
+	font-weight: bold;
+snippet fw:br
+	font-weight: bolder;
+snippet fw:lr
+	font-weight: lighter;
+snippet fw:n
+	font-weight: normal;
+snippet f
+	font: \${1};
+snippet h
+	height: \${1};
+snippet h:a
+	height: auto;
+snippet l
+	left: \${1};
+snippet l:a
+	left: auto;
+snippet lts
+	letter-spacing: \${1};
+snippet lh
+	line-height: \${1};
+snippet lisi
+	list-style-image: url(\${1});
+snippet lisi:n
+	list-style-image: none;
+snippet lisp
+	list-style-position: \${1};
+snippet lisp:i
+	list-style-position: inside;
+snippet lisp:o
+	list-style-position: outside;
+snippet list
+	list-style-type: \${1};
+snippet list:c
+	list-style-type: circle;
+snippet list:dclz
+	list-style-type: decimal-leading-zero;
+snippet list:dc
+	list-style-type: decimal;
+snippet list:d
+	list-style-type: disc;
+snippet list:lr
+	list-style-type: lower-roman;
+snippet list:n
+	list-style-type: none;
+snippet list:s
+	list-style-type: square;
+snippet list:ur
+	list-style-type: upper-roman;
+snippet lis
+	list-style: \${1};
+snippet lis:n
+	list-style: none;
+snippet mb
+	margin-bottom: \${1};
+snippet mb:a
+	margin-bottom: auto;
+snippet ml
+	margin-left: \${1};
+snippet ml:a
+	margin-left: auto;
+snippet mr
+	margin-right: \${1};
+snippet mr:a
+	margin-right: auto;
+snippet mt
+	margin-top: \${1};
+snippet mt:a
+	margin-top: auto;
+snippet m
+	margin: \${1};
+snippet m:4
+	margin: \${1:0} \${2:0} \${3:0} \${4:0};
+snippet m:3
+	margin: \${1:0} \${2:0} \${3:0};
+snippet m:2
+	margin: \${1:0} \${2:0};
+snippet m:0
+	margin: 0;
+snippet m:a
+	margin: auto;
+snippet mah
+	max-height: \${1};
+snippet mah:n
+	max-height: none;
+snippet maw
+	max-width: \${1};
+snippet maw:n
+	max-width: none;
+snippet mih
+	min-height: \${1};
+snippet miw
+	min-width: \${1};
+snippet op
+	opacity: \${1};
+snippet op:ie
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=\${1:100});
+snippet op:ms
+	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=\${1:100})';
+snippet orp
+	orphans: \${1};
+snippet o+
+	outline: \${1:1px} \${2:solid} #\${3:000};
+snippet oc
+	outline-color: \${1:#000};
+snippet oc:i
+	outline-color: invert;
+snippet oo
+	outline-offset: \${1};
+snippet os
+	outline-style: \${1};
+snippet ow
+	outline-width: \${1};
+snippet o
+	outline: \${1};
+snippet o:n
+	outline: none;
+snippet ovs
+	overflow-style: \${1};
+snippet ovs:a
+	overflow-style: auto;
+snippet ovs:mq
+	overflow-style: marquee;
+snippet ovs:mv
+	overflow-style: move;
+snippet ovs:p
+	overflow-style: panner;
+snippet ovs:s
+	overflow-style: scrollbar;
+snippet ovx
+	overflow-x: \${1};
+snippet ovx:a
+	overflow-x: auto;
+snippet ovx:h
+	overflow-x: hidden;
+snippet ovx:s
+	overflow-x: scroll;
+snippet ovx:v
+	overflow-x: visible;
+snippet ovy
+	overflow-y: \${1};
+snippet ovy:a
+	overflow-y: auto;
+snippet ovy:h
+	overflow-y: hidden;
+snippet ovy:s
+	overflow-y: scroll;
+snippet ovy:v
+	overflow-y: visible;
+snippet ov
+	overflow: \${1};
+snippet ov:a
+	overflow: auto;
+snippet ov:h
+	overflow: hidden;
+snippet ov:s
+	overflow: scroll;
+snippet ov:v
+	overflow: visible;
+snippet pb
+	padding-bottom: \${1};
+snippet pl
+	padding-left: \${1};
+snippet pr
+	padding-right: \${1};
+snippet pt
+	padding-top: \${1};
+snippet p
+	padding: \${1};
+snippet p:4
+	padding: \${1:0} \${2:0} \${3:0} \${4:0};
+snippet p:3
+	padding: \${1:0} \${2:0} \${3:0};
+snippet p:2
+	padding: \${1:0} \${2:0};
+snippet p:0
+	padding: 0;
+snippet pgba
+	page-break-after: \${1};
+snippet pgba:aw
+	page-break-after: always;
+snippet pgba:a
+	page-break-after: auto;
+snippet pgba:l
+	page-break-after: left;
+snippet pgba:r
+	page-break-after: right;
+snippet pgbb
+	page-break-before: \${1};
+snippet pgbb:aw
+	page-break-before: always;
+snippet pgbb:a
+	page-break-before: auto;
+snippet pgbb:l
+	page-break-before: left;
+snippet pgbb:r
+	page-break-before: right;
+snippet pgbi
+	page-break-inside: \${1};
+snippet pgbi:a
+	page-break-inside: auto;
+snippet pgbi:av
+	page-break-inside: avoid;
+snippet pos
+	position: \${1};
+snippet pos:a
+	position: absolute;
+snippet pos:f
+	position: fixed;
+snippet pos:r
+	position: relative;
+snippet pos:s
+	position: static;
+snippet q
+	quotes: \${1};
+snippet q:en
+	quotes: '\\201C' '\\201D' '\\2018' '\\2019';
+snippet q:n
+	quotes: none;
+snippet q:ru
+	quotes: '\\00AB' '\\00BB' '\\201E' '\\201C';
+snippet rz
+	resize: \${1};
+snippet rz:b
+	resize: both;
+snippet rz:h
+	resize: horizontal;
+snippet rz:n
+	resize: none;
+snippet rz:v
+	resize: vertical;
+snippet r
+	right: \${1};
+snippet r:a
+	right: auto;
+snippet tbl
+	table-layout: \${1};
+snippet tbl:a
+	table-layout: auto;
+snippet tbl:f
+	table-layout: fixed;
+snippet tal
+	text-align-last: \${1};
+snippet tal:a
+	text-align-last: auto;
+snippet tal:c
+	text-align-last: center;
+snippet tal:l
+	text-align-last: left;
+snippet tal:r
+	text-align-last: right;
+snippet ta
+	text-align: \${1};
+snippet ta:c
+	text-align: center;
+snippet ta:l
+	text-align: left;
+snippet ta:r
+	text-align: right;
+snippet td
+	text-decoration: \${1};
+snippet td:l
+	text-decoration: line-through;
+snippet td:n
+	text-decoration: none;
+snippet td:o
+	text-decoration: overline;
+snippet td:u
+	text-decoration: underline;
+snippet te
+	text-emphasis: \${1};
+snippet te:ac
+	text-emphasis: accent;
+snippet te:a
+	text-emphasis: after;
+snippet te:b
+	text-emphasis: before;
+snippet te:c
+	text-emphasis: circle;
+snippet te:ds
+	text-emphasis: disc;
+snippet te:dt
+	text-emphasis: dot;
+snippet te:n
+	text-emphasis: none;
+snippet th
+	text-height: \${1};
+snippet th:a
+	text-height: auto;
+snippet th:f
+	text-height: font-size;
+snippet th:m
+	text-height: max-size;
+snippet th:t
+	text-height: text-size;
+snippet ti
+	text-indent: \${1};
+snippet ti:-
+	text-indent: -9999px;
+snippet tj
+	text-justify: \${1};
+snippet tj:a
+	text-justify: auto;
+snippet tj:d
+	text-justify: distribute;
+snippet tj:ic
+	text-justify: inter-cluster;
+snippet tj:ii
+	text-justify: inter-ideograph;
+snippet tj:iw
+	text-justify: inter-word;
+snippet tj:k
+	text-justify: kashida;
+snippet tj:t
+	text-justify: tibetan;
+snippet to+
+	text-outline: \${1:0} \${2:0} #\${3:000};
+snippet to
+	text-outline: \${1};
+snippet to:n
+	text-outline: none;
+snippet tr
+	text-replace: \${1};
+snippet tr:n
+	text-replace: none;
+snippet tsh+
+	text-shadow: \${1:0} \${2:0} \${3:0} #\${4:000};
+snippet tsh
+	text-shadow: \${1};
+snippet tsh:n
+	text-shadow: none;
+snippet tt
+	text-transform: \${1};
+snippet tt:c
+	text-transform: capitalize;
+snippet tt:l
+	text-transform: lowercase;
+snippet tt:n
+	text-transform: none;
+snippet tt:u
+	text-transform: uppercase;
+snippet tw
+	text-wrap: \${1};
+snippet tw:no
+	text-wrap: none;
+snippet tw:n
+	text-wrap: normal;
+snippet tw:s
+	text-wrap: suppress;
+snippet tw:u
+	text-wrap: unrestricted;
+snippet t
+	top: \${1};
+snippet t:a
+	top: auto;
+snippet va
+	vertical-align: \${1};
+snippet va:bl
+	vertical-align: baseline;
+snippet va:b
+	vertical-align: bottom;
+snippet va:m
+	vertical-align: middle;
+snippet va:sub
+	vertical-align: sub;
+snippet va:sup
+	vertical-align: super;
+snippet va:tb
+	vertical-align: text-bottom;
+snippet va:tt
+	vertical-align: text-top;
+snippet va:t
+	vertical-align: top;
+snippet v
+	visibility: \${1};
+snippet v:c
+	visibility: collapse;
+snippet v:h
+	visibility: hidden;
+snippet v:v
+	visibility: visible;
+snippet whsc
+	white-space-collapse: \${1};
+snippet whsc:ba
+	white-space-collapse: break-all;
+snippet whsc:bs
+	white-space-collapse: break-strict;
+snippet whsc:k
+	white-space-collapse: keep-all;
+snippet whsc:l
+	white-space-collapse: loose;
+snippet whsc:n
+	white-space-collapse: normal;
+snippet whs
+	white-space: \${1};
+snippet whs:n
+	white-space: normal;
+snippet whs:nw
+	white-space: nowrap;
+snippet whs:pl
+	white-space: pre-line;
+snippet whs:pw
+	white-space: pre-wrap;
+snippet whs:p
+	white-space: pre;
+snippet wid
+	widows: \${1};
+snippet w
+	width: \${1};
+snippet w:a
+	width: auto;
+snippet wob
+	word-break: \${1};
+snippet wob:ba
+	word-break: break-all;
+snippet wob:bs
+	word-break: break-strict;
+snippet wob:k
+	word-break: keep-all;
+snippet wob:l
+	word-break: loose;
+snippet wob:n
+	word-break: normal;
+snippet wos
+	word-spacing: \${1};
+snippet wow
+	word-wrap: \${1};
+snippet wow:no
+	word-wrap: none;
+snippet wow:n
+	word-wrap: normal;
+snippet wow:s
+	word-wrap: suppress;
+snippet wow:u
+	word-wrap: unrestricted;
+snippet z
+	z-index: \${1};
+snippet z:a
+	z-index: auto;
+snippet zoo
+	zoom: 1;
+`;
 
 
 /***/ })

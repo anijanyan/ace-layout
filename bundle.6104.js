@@ -1,117 +1,155 @@
+"use strict";
 (self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[6104],{
 
-/***/ 26104:
-/***/ ((module) => {
+/***/ 56104:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-module.exports = `# Model Fields
 
-# Note: Optional arguments are using defaults that match what Django will use
-# as a default, e.g. with max_length fields.  Doing this as a form of self
-# documentation and to make it easy to know whether you should override the
-# default or not.
 
-# Note: Optional arguments that are booleans will use the opposite since you
-# can either not specify them, or override them, e.g. auto_now_add=False.
+var oop = __webpack_require__(2645);
+var TextMode = (__webpack_require__(49432).Mode);
+var HighlightRules = (__webpack_require__(62867)/* .DiffHighlightRules */ .l);
+var FoldMode = (__webpack_require__(55606)/* .FoldMode */ .l);
 
-snippet auto
-	\${1:FIELDNAME} = models.AutoField(\${2})
-snippet bool
-	\${1:FIELDNAME} = models.BooleanField(\${2:default=True})
-snippet char
-	\${1:FIELDNAME} = models.CharField(max_length=\${2}\${3:, blank=True})
-snippet comma
-	\${1:FIELDNAME} = models.CommaSeparatedIntegerField(max_length=\${2}\${3:, blank=True})
-snippet date
-	\${1:FIELDNAME} = models.DateField(\${2:auto_now_add=True, auto_now=True}\${3:, blank=True, null=True})
-snippet datetime
-	\${1:FIELDNAME} = models.DateTimeField(\${2:auto_now_add=True, auto_now=True}\${3:, blank=True, null=True})
-snippet decimal
-	\${1:FIELDNAME} = models.DecimalField(max_digits=\${2}, decimal_places=\${3})
-snippet email
-	\${1:FIELDNAME} = models.EmailField(max_length=\${2:75}\${3:, blank=True})
-snippet file
-	\${1:FIELDNAME} = models.FileField(upload_to=\${2:path/for/upload}\${3:, max_length=100})
-snippet filepath
-	\${1:FIELDNAME} = models.FilePathField(path=\${2:"/abs/path/to/dir"}\${3:, max_length=100}\${4:, match="*.ext"}\${5:, recursive=True}\${6:, blank=True, })
-snippet float
-	\${1:FIELDNAME} = models.FloatField(\${2})
-snippet image
-	\${1:FIELDNAME} = models.ImageField(upload_to=\${2:path/for/upload}\${3:, height_field=height, width_field=width}\${4:, max_length=100})
-snippet int
-	\${1:FIELDNAME} = models.IntegerField(\${2})
-snippet ip
-	\${1:FIELDNAME} = models.IPAddressField(\${2})
-snippet nullbool
-	\${1:FIELDNAME} = models.NullBooleanField(\${2})
-snippet posint
-	\${1:FIELDNAME} = models.PositiveIntegerField(\${2})
-snippet possmallint
-	\${1:FIELDNAME} = models.PositiveSmallIntegerField(\${2})
-snippet slug
-	\${1:FIELDNAME} = models.SlugField(max_length=\${2:50}\${3:, blank=True})
-snippet smallint
-	\${1:FIELDNAME} = models.SmallIntegerField(\${2})
-snippet text
-	\${1:FIELDNAME} = models.TextField(\${2:blank=True})
-snippet time
-	\${1:FIELDNAME} = models.TimeField(\${2:auto_now_add=True, auto_now=True}\${3:, blank=True, null=True})
-snippet url
-	\${1:FIELDNAME} = models.URLField(\${2:verify_exists=False}\${3:, max_length=200}\${4:, blank=True})
-snippet xml
-	\${1:FIELDNAME} = models.XMLField(schema_path=\${2:None}\${3:, blank=True})
-# Relational Fields
-snippet fk
-	\${1:FIELDNAME} = models.ForeignKey(\${2:OtherModel}\${3:, related_name=''}\${4:, limit_choices_to=}\${5:, to_field=''})
-snippet m2m
-	\${1:FIELDNAME} = models.ManyToManyField(\${2:OtherModel}\${3:, related_name=''}\${4:, limit_choices_to=}\${5:, symmetrical=False}\${6:, through=''}\${7:, db_table=''})
-snippet o2o
-	\${1:FIELDNAME} = models.OneToOneField(\${2:OtherModel}\${3:, parent_link=True}\${4:, related_name=''}\${5:, limit_choices_to=}\${6:, to_field=''})
+var Mode = function() {
+    this.HighlightRules = HighlightRules;
+    this.foldingRules = new FoldMode(["diff", "@@|\\*{5}"], "i");
+};
+oop.inherits(Mode, TextMode);
 
-# Code Skeletons
+(function() {
 
-snippet form
-	class \${1:FormName}(forms.Form):
-		"""\${2:docstring}"""
-		\${3}
+    this.$id = "ace/mode/diff";
+    this.snippetFileId = "ace/snippets/diff";
+}).call(Mode.prototype);
 
-snippet model
-	class \${1:ModelName}(models.Model):
-		"""\${2:docstring}"""
-		\${3}
-		
-		class Meta:
-			\${4}
-		
-		def __unicode__(self):
-			\${5}
-		
-		def save(self, force_insert=False, force_update=False):
-			\${6}
-		
-		@models.permalink
-		def get_absolute_url(self):
-			return ('\${7:view_or_url_name}' \${8})
+exports.Mode = Mode;
 
-snippet modeladmin
-	class \${1:ModelName}Admin(admin.ModelAdmin):
-		\${2}
-	
-	admin.site.register(\$1, \$1Admin)
-	
-snippet tabularinline
-	class \${1:ModelName}Inline(admin.TabularInline):
-		model = \$1
 
-snippet stackedinline
-	class \${1:ModelName}Inline(admin.StackedInline):
-		model = \$1
+/***/ }),
 
-snippet r2r
-	return render_to_response('\${1:template.html}', {
-			\${2}
-		}\${3:, context_instance=RequestContext(request)}
-	)
-`;
+/***/ 62867:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(2645);
+var TextHighlightRules = (__webpack_require__(16387)/* .TextHighlightRules */ .r);
+
+var DiffHighlightRules = function() {
+    // regexp must not have capturing parentheses. Use (?:) instead.
+    // regexps are ordered -> the first match is used
+
+    this.$rules = {
+        "start" : [{
+                regex: "^(?:\\*{15}|={67}|-{3}|\\+{3})$",
+                token: "punctuation.definition.separator.diff",
+                "name": "keyword"
+            }, { //diff.range.unified
+                regex: "^(@@)(\\s*.+?\\s*)(@@)(.*)$",
+                token: [
+                    "constant",
+                    "constant.numeric",
+                    "constant",
+                    "comment.doc.tag"
+                ]
+            }, { //diff.range.normal
+                regex: "^(\\d+)([,\\d]+)(a|d|c)(\\d+)([,\\d]+)(.*)$",
+                token: [
+                    "constant.numeric",
+                    "punctuation.definition.range.diff",
+                    "constant.function",
+                    "constant.numeric",
+                    "punctuation.definition.range.diff",
+                    "invalid"
+                ],
+                "name": "meta."
+            }, {
+                regex: "^(\\-{3}|\\+{3}|\\*{3})( .+)$",
+                token: [
+                    "constant.numeric",
+                    "meta.tag"
+                ]
+            }, { // added
+                regex: "^([!+>])(.*?)(\\s*)$",
+                token: [
+                    "support.constant",
+                    "text",
+                    "invalid"
+                ]
+            }, { // removed
+                regex: "^([<\\-])(.*?)(\\s*)$",
+                token: [
+                    "support.function",
+                    "string",
+                    "invalid"
+                ]
+            }, {
+                regex: "^(diff)(\\s+--\\w+)?(.+?)( .+)?$",
+                token: ["variable", "variable", "keyword", "variable"]
+            }, {
+                regex: "^Index.+$",
+                token: "variable"
+            }, {
+                regex: "^\\s+$",
+                token: "text"
+            }, {
+                regex: "\\s*$",
+                token: "invalid"
+            }, {
+                defaultToken: "invisible",
+                caseInsensitive: true
+            }
+        ]
+    };
+};
+
+oop.inherits(DiffHighlightRules, TextHighlightRules);
+
+exports.l = DiffHighlightRules;
+
+
+/***/ }),
+
+/***/ 55606:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var oop = __webpack_require__(2645);
+var BaseFoldMode = (__webpack_require__(51358).FoldMode);
+var Range = (__webpack_require__(91902)/* .Range */ .Q);
+
+var FoldMode = exports.l = function(levels, flag) {
+	this.regExpList = levels;
+	this.flag = flag;
+	this.foldingStartMarker = RegExp("^(" + levels.join("|") + ")", this.flag);
+};
+oop.inherits(FoldMode, BaseFoldMode);
+
+(function() {
+    this.getFoldWidgetRange = function(session, foldStyle, row) {
+        var line = session.getLine(row);
+        var start = {row: row, column: line.length};
+
+        var regList = this.regExpList;
+        for (var i = 1; i <= regList.length; i++) {
+            var re = RegExp("^(" + regList.slice(0, i).join("|") + ")", this.flag);
+            if (re.test(line))
+                break;
+        }
+
+        for (var l = session.getLength(); ++row < l; ) {
+            line = session.getLine(row);
+            if (re.test(line))
+                break;
+        }
+        if (row == start.row + 1)
+            return;
+        return new Range(start.row, start.column, row - 1, line.length);
+    };
+
+}).call(FoldMode.prototype);
 
 
 /***/ })

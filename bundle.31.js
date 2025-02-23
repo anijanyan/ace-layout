@@ -1,69 +1,70 @@
+"use strict";
 (self["webpackChunkace_layout_root"] = self["webpackChunkace_layout_root"] || []).push([[31],{
 
-/***/ 35654:
+/***/ 30031:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 
-var oop = __webpack_require__(89359);
-var TextMode = (__webpack_require__(98030).Mode);
-var HighlightRules = (__webpack_require__(89467)/* .JsonHighlightRules */ .h);
-var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
-var CStyleFoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
-var WorkerClient = (__webpack_require__(91451).WorkerClient);
+var oop = __webpack_require__(2645);
+var HtmlHighlightRules = (__webpack_require__(10413).HtmlHighlightRules);
+var JavaScriptHighlightRules = (__webpack_require__(15903).JavaScriptHighlightRules);
+
+var EjsHighlightRules = function(start, end) {
+    HtmlHighlightRules.call(this);
+    
+    if (!start)
+        start = "(?:<%|<\\?|{{)";
+    if (!end)
+        end = "(?:%>|\\?>|}})";
+
+    for (var i in this.$rules) {
+        this.$rules[i].unshift({
+            token : "markup.list.meta.tag",
+            regex : start + "(?![>}])[-=]?",
+            push  : "ejs-start"
+        });
+    }
+    
+    this.embedRules(new JavaScriptHighlightRules({jsx: false}).getRules(), "ejs-", [{
+        token : "markup.list.meta.tag",
+        regex : "-?" + end,
+        next  : "pop"
+    }, {
+        token: "comment",
+        regex: "//.*?" + end,
+        next: "pop"
+    }]);
+    
+    this.normalizeRules();
+};
+
+
+oop.inherits(EjsHighlightRules, HtmlHighlightRules);
+
+exports.EjsHighlightRules = EjsHighlightRules;
+
+
+var oop = __webpack_require__(2645);
+var HtmlMode = (__webpack_require__(32234).Mode);
+var JavaScriptMode = (__webpack_require__(93388).Mode);
+var CssMode = (__webpack_require__(41080).Mode);
+var RubyMode = (__webpack_require__(11067).Mode);
 
 var Mode = function() {
-    this.HighlightRules = HighlightRules;
-    this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = this.$defaultBehaviour;
-    this.foldingRules = new CStyleFoldMode();
+    HtmlMode.call(this);
+    this.HighlightRules = EjsHighlightRules;    
+    this.createModeDelegates({
+        "js-": JavaScriptMode,
+        "css-": CssMode,
+        "ejs-": JavaScriptMode
+    });
 };
-oop.inherits(Mode, TextMode);
+oop.inherits(Mode, HtmlMode);
 
 (function() {
 
-    this.lineCommentStart = "//";
-    this.blockComment = {start: "/*", end: "*/"};
-    
-    this.getNextLineIndent = function(state, line, tab) {
-        var indent = this.$getIndent(line);
-
-        if (state == "start") {
-            var match = line.match(/^.*[\{\(\[]\s*$/);
-            if (match) {
-                indent += tab;
-            }
-        }
-
-        return indent;
-    };
-
-    this.checkOutdent = function(state, line, input) {
-        return this.$outdent.checkOutdent(line, input);
-    };
-
-    this.autoOutdent = function(state, doc, row) {
-        this.$outdent.autoOutdent(doc, row);
-    };
-
-    this.createWorker = function(session) {
-        var worker = new WorkerClient(["ace"], "ace/mode/json_worker", "JsonWorker");
-        worker.attachToDocument(session.getDocument());
-
-        worker.on("annotate", function(e) {
-            session.setAnnotations(e.data);
-        });
-
-        worker.on("terminate", function() {
-            session.clearAnnotations();
-        });
-
-        return worker;
-    };
-
-
-    this.$id = "ace/mode/json";
+    this.$id = "ace/mode/ejs";
 }).call(Mode.prototype);
 
 exports.Mode = Mode;
@@ -71,147 +72,315 @@ exports.Mode = Mode;
 
 /***/ }),
 
-/***/ 89467:
+/***/ 50625:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 
-var oop = __webpack_require__(89359);
-var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
+var oop = __webpack_require__(2645);
+var BaseFoldMode = (__webpack_require__(51358).FoldMode);
+var Range = (__webpack_require__(91902)/* .Range */ .Q);
+var TokenIterator = (__webpack_require__(99339).TokenIterator);
 
-var JsonHighlightRules = function() {
 
-    // regexp must not have capturing parentheses. Use (?:) instead.
-    // regexps are ordered -> the first match is used
-    this.$rules = {
-        "start" : [
-            {
-                token : "variable", // single line
-                regex : '["](?:(?:\\\\.)|(?:[^"\\\\]))*?["]\\s*(?=:)'
-            }, {
-                token : "string", // single line
-                regex : '"',
-                next  : "string"
-            }, {
-                token : "constant.numeric", // hex
-                regex : "0[xX][0-9a-fA-F]+\\b"
-            }, {
-                token : "constant.numeric", // float
-                regex : "[+-]?\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"
-            }, {
-                token : "constant.language.boolean",
-                regex : "(?:true|false)\\b"
-            }, {
-                token : "text", // single quoted strings are not allowed
-                regex : "['](?:(?:\\\\.)|(?:[^'\\\\]))*?[']"
-            }, {
-                token : "comment", // comments are not allowed, but who cares?
-                regex : "\\/\\/.*$"
-            }, {
-                token : "comment.start", // comments are not allowed, but who cares?
-                regex : "\\/\\*",
-                next  : "comment"
-            }, {
-                token : "paren.lparen",
-                regex : "[[({]"
-            }, {
-                token : "paren.rparen",
-                regex : "[\\])}]"
-            }, {
-                token : "punctuation.operator",
-                regex : /[,]/
-            }, {
-                token : "text",
-                regex : "\\s+"
-            }
-        ],
-        "string" : [
-            {
-                token : "constant.language.escape",
-                regex : /\\(?:x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|["\\\/bfnrt])/
-            }, {
-                token : "string",
-                regex : '"|$',
-                next  : "start"
-            }, {
-                defaultToken : "string"
-            }
-        ],
-        "comment" : [
-            {
-                token : "comment.end", // comments are not allowed, but who cares?
-                regex : "\\*\\/",
-                next  : "start"
-            }, {
-                defaultToken: "comment"
-            }
-        ]
-    };
-    
+var FoldMode = exports.l = function () {
 };
 
-oop.inherits(JsonHighlightRules, TextHighlightRules);
+oop.inherits(FoldMode, BaseFoldMode);
 
-exports.h = JsonHighlightRules;
+(function () {
+    this.indentKeywords = {
+        "class": 1,
+        "def": 1,
+        "module": 1,
+        "do": 1,
+        "unless": 1,
+        "if": 1,
+        "while": 1,
+        "for": 1,
+        "until": 1,
+        "begin": 1,
+        "else": 0,
+        "elsif": 0,
+        "rescue": 0,
+        "ensure": 0,
+        "when": 0,
+        "end": -1,
+        "case": 1,
+        "=begin": 1,
+        "=end": -1
+    };
+
+    this.foldingStartMarker = /(?:\s|^)(def|do|while|class|unless|module|if|for|until|begin|else|elsif|case|rescue|ensure|when)\b|({\s*$)|(=begin)/;
+    this.foldingStopMarker = /(=end(?=$|\s.*$))|(^\s*})|\b(end)\b/;
+
+    this.getFoldWidget = function (session, foldStyle, row) {
+        var line = session.getLine(row);
+        var isStart = this.foldingStartMarker.test(line);
+        var isEnd = this.foldingStopMarker.test(line);
+
+        if (isStart && !isEnd) {
+            var match = line.match(this.foldingStartMarker);
+            if (match[1]) {
+                if (match[1] == "if" || match[1] == "else" || match[1] == "while" || match[1] == "until" || match[1] == "unless") {
+                    if (match[1] == "else" && /^\s*else\s*$/.test(line) === false) {
+                        return;
+                    }
+                    if (/^\s*(?:if|else|while|until|unless)\s*/.test(line) === false) {
+                        return;
+                    }
+                }
+
+                if (match[1] == "when") {
+                    if (/\sthen\s/.test(line) === true) {
+                        return;
+                    }
+                }
+                if (session.getTokenAt(row, match.index + 2).type === "keyword")
+                    return "start";
+            } else if (match[3]) {
+                if (session.getTokenAt(row, match.index + 1).type === "comment.multiline")
+                    return "start";
+            } else {
+                return "start";
+            }
+        }
+        if (foldStyle != "markbeginend" || !isEnd || isStart && isEnd)
+            return "";
+
+        var match = line.match(this.foldingStopMarker);
+        if (match[3] === "end") {
+            if (session.getTokenAt(row, match.index + 1).type === "keyword")
+                return "end";
+        } else if (match[1]) {
+            if (session.getTokenAt(row, match.index + 1).type === "comment.multiline")
+                return "end";
+        } else
+            return "end";
+    };
+
+    this.getFoldWidgetRange = function (session, foldStyle, row) {
+        var line = session.doc.getLine(row);
+        var match = this.foldingStartMarker.exec(line);
+        if (match) {
+            if (match[1] || match[3])
+                return this.rubyBlock(session, row, match.index + 2);
+
+            return this.openingBracketBlock(session, "{", row, match.index);
+        }
+
+        var match = this.foldingStopMarker.exec(line);
+        if (match) {
+            if (match[3] === "end") {
+                if (session.getTokenAt(row, match.index + 1).type === "keyword")
+                    return this.rubyBlock(session, row, match.index + 1);
+            }
+
+            if (match[1] === "=end") {
+                if (session.getTokenAt(row, match.index + 1).type === "comment.multiline")
+                    return this.rubyBlock(session, row, match.index + 1);
+            }
+
+            return this.closingBracketBlock(session, "}", row, match.index + match[0].length);
+        }
+    };
+
+    this.rubyBlock = function (session, row, column, tokenRange) {
+        var stream = new TokenIterator(session, row, column);
+
+        var token = stream.getCurrentToken();
+        if (!token || (token.type != "keyword" && token.type != "comment.multiline"))
+            return;
+
+        var val = token.value;
+        var line = session.getLine(row);
+        switch (token.value) {
+            case "if":
+            case "unless":
+            case "while":
+            case "until":
+                var checkToken = new RegExp("^\\s*" + token.value);
+                if (!checkToken.test(line)) {
+                    return;
+                }
+                var dir = this.indentKeywords[val];
+                break;
+            case "when":
+                if (/\sthen\s/.test(line)) {
+                    return;
+                }
+            case "elsif":
+            case "rescue":
+            case "ensure":
+                var dir = 1;
+                break;
+            case "else":
+                var checkToken = new RegExp("^\\s*" + token.value + "\\s*$");
+                if (!checkToken.test(line)) {
+                    return;
+                }
+                var dir = 1;
+                break;
+            default:
+                var dir = this.indentKeywords[val];
+                break;
+        }
+
+        var stack = [val];
+        if (!dir)
+            return;
+
+        var startColumn = dir === -1 ? session.getLine(row - 1).length : session.getLine(row).length;
+        var startRow = row;
+        var ranges = [];
+        ranges.push(stream.getCurrentTokenRange());
+
+        stream.step = dir === -1 ? stream.stepBackward : stream.stepForward;
+        if (token.type == "comment.multiline") {
+            while (token = stream.step()) {
+                if (token.type !== "comment.multiline")
+                    continue;
+                if (dir == 1) {
+                    startColumn = 6;
+                    if (token.value == "=end") {
+                        break;
+                    }
+                } else {
+                    if (token.value == "=begin") {
+                        break;
+                    }
+                }
+            }
+        } else {
+            while (token = stream.step()) {
+                var ignore = false;
+                if (token.type !== "keyword")
+                    continue;
+                var level = dir * this.indentKeywords[token.value];
+                line = session.getLine(stream.getCurrentTokenRow());
+                switch (token.value) {
+                    case "do":
+                        for (var i = stream.$tokenIndex - 1; i >= 0; i--) {
+                            var prevToken = stream.$rowTokens[i];
+                            if (prevToken && (prevToken.value == "while" || prevToken.value == "until" || prevToken.value == "for")) {
+                                level = 0;
+                                break;
+                            }
+                        }
+                        break;
+                    case "else":
+                        var checkToken = new RegExp("^\\s*" + token.value + "\\s*$");
+                        if (!checkToken.test(line) || val == "case") {
+                            level = 0;
+                            ignore = true;
+                        }
+                        break;
+                    case "if":
+                    case "unless":
+                    case "while":
+                    case "until":
+                        var checkToken = new RegExp("^\\s*" + token.value);
+                        if (!checkToken.test(line)) {
+                            level = 0;
+                            ignore = true;
+                        }
+                        break;
+                    case "when":
+                        if (/\sthen\s/.test(line) || val == "case") {
+                            level = 0;
+                            ignore = true;
+                        }
+                        break;
+                }
+
+                if (level > 0) {
+                    stack.unshift(token.value);
+                } else if (level <= 0 && ignore === false) {
+                    stack.shift();
+                    if (!stack.length) {
+                        if ((val == "while" || val == "until" || val == "for") && token.value != "do") {
+                            break;
+                        }
+                        if (token.value == "do" && dir == -1 && level != 0)
+                            break;
+                        if (token.value != "do")
+                            break;
+                    }
+
+                    if (level === 0) {
+                        stack.unshift(token.value);
+                    }
+                }
+            }
+        }
+
+        if (!token)
+            return null;
+
+        if (tokenRange) {
+            ranges.push(stream.getCurrentTokenRange());
+            return ranges;
+        }
+
+        var row = stream.getCurrentTokenRow();
+        if (dir === -1) {
+            if (token.type === "comment.multiline") {
+                var endColumn = 6;
+            } else {
+                var endColumn = session.getLine(row).length;
+            }
+            return new Range(row, endColumn, startRow - 1, startColumn);
+        } else
+            return new Range(startRow, startColumn, row - 1, session.getLine(row - 1).length);
+    };
+
+}).call(FoldMode.prototype);
 
 
 /***/ }),
 
-/***/ 20031:
+/***/ 11067:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-var oop = __webpack_require__(89359);
-var TextMode = (__webpack_require__(98030).Mode);
-var HtmlMode = (__webpack_require__(75528).Mode);
-var JavascriptMode = (__webpack_require__(88057).Mode);
-var JsonMode = (__webpack_require__(35654).Mode);
-var CssMode = (__webpack_require__(98771).Mode);
-var LiquidHighlightRules = (__webpack_require__(71377)/* .LiquidHighlightRules */ .x);
-var MatchingBraceOutdent = (__webpack_require__(1164).MatchingBraceOutdent);
 
-/* -------------------------------------------- */
-/* FOLDS                                        */
-/* -------------------------------------------- */
 
-var FoldMode = (__webpack_require__(12764)/* .FoldMode */ .Z);
+var oop = __webpack_require__(2645);
+var TextMode = (__webpack_require__(49432).Mode);
+var RubyHighlightRules = (__webpack_require__(54848).RubyHighlightRules);
+var MatchingBraceOutdent = (__webpack_require__(28670).MatchingBraceOutdent);
+var Range = (__webpack_require__(91902)/* .Range */ .Q);
+var FoldMode = (__webpack_require__(50625)/* .FoldMode */ .l);
 
-/* -------------------------------------------- */
-/* MODE                                         */
-/* -------------------------------------------- */
-
-var Mode = function () {
-
-  JsonMode.call(this);
-  HtmlMode.call(this);
-  CssMode.call(this);
-  JavascriptMode.call(this);
-  this.HighlightRules = LiquidHighlightRules;
-  this.foldingRules = new FoldMode();
-
+var Mode = function() {
+    this.HighlightRules = RubyHighlightRules;
+    this.$outdent = new MatchingBraceOutdent();
+    this.$behaviour = this.$defaultBehaviour;
+    this.foldingRules = new FoldMode();
+    this.indentKeywords = this.foldingRules.indentKeywords;
 };
-
 oop.inherits(Mode, TextMode);
 
-(function () {
+(function() {
 
-    this.blockComment = {start: "<!--", end: "-->"};
-    this.voidElements = new HtmlMode().voidElements;
+
+    this.lineCommentStart = "#";
 
     this.getNextLineIndent = function(state, line, tab) {
         var indent = this.$getIndent(line);
 
         var tokenizedLine = this.getTokenizer().getLineTokens(line, state);
         var tokens = tokenizedLine.tokens;
-        var endState = tokenizedLine.state;
 
-        if (tokens.length && tokens[tokens.length-1].type == "comment") {
+        if (tokens.length && tokens[tokens.length - 1].type == "comment") {
             return indent;
         }
 
         if (state == "start") {
             var match = line.match(/^.*[\{\(\[]\s*$/);
-            if (match) {
+            var startingClassOrMethod = line.match(/^\s*(class|def|module)\s.*$/);
+            var startingDoBlock = line.match(/.*do(\s*|\s+\|.*\|\s*)$/);
+            var startingConditional = line.match(/^\s*(if|else|when|elsif|unless|while|for|begin|rescue|ensure)\s*/);
+            if (match || startingClassOrMethod || startingDoBlock || startingConditional) {
                 indent += tab;
             }
         }
@@ -220,301 +389,40 @@ oop.inherits(Mode, TextMode);
     };
 
     this.checkOutdent = function(state, line, input) {
-        return this.$outdent.checkOutdent(line, input);
+        return /^\s+(end|else|rescue|ensure)$/.test(line + input) || this.$outdent.checkOutdent(line, input);
     };
 
-    this.autoOutdent = function(state, doc, row) {
-        this.$outdent.autoOutdent(doc, row);
+    this.autoOutdent = function(state, session, row) {
+        var line = session.getLine(row);
+        if (/}/.test(line))
+            return this.$outdent.autoOutdent(session, row);
+        var indent = this.$getIndent(line);
+        var prevLine = session.getLine(row - 1);
+        var prevIndent = this.$getIndent(prevLine);
+        var tab = session.getTabString();
+        if (prevIndent.length <= indent.length) {
+            if (indent.slice(-tab.length) == tab)
+                session.remove(new Range(row, indent.length - tab.length, row, indent.length));
+        }
     };
 
-    this.$id = "ace/mode/liquid";
-    this.snippetFileId = "ace/snippets/liquid";
+    this.getMatching = function(session, row, column) {
+        if (row == undefined) {
+            var pos = session.selection.lead;
+            column = pos.column;
+            row = pos.row;
+        }
 
-}.call(Mode.prototype));
+        var startToken = session.getTokenAt(row, column);
+        if (startToken && startToken.value in this.indentKeywords)
+            return this.foldingRules.rubyBlock(session, row, column, true);
+    };
+
+    this.$id = "ace/mode/ruby";
+    this.snippetFileId = "ace/snippets/ruby";
+}).call(Mode.prototype);
 
 exports.Mode = Mode;
-
-
-/***/ }),
-
-/***/ 71377:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var oop = __webpack_require__(89359);
-
-var TextHighlightRules = (__webpack_require__(28053)/* .TextHighlightRules */ .K);
-var CssHighlightRules = (__webpack_require__(99301).CssHighlightRules);
-var HtmlHighlightRules = (__webpack_require__(72843).HtmlHighlightRules);
-var JsonHighlightRules = (__webpack_require__(89467)/* .JsonHighlightRules */ .h);
-var JavaScriptHighlightRules =  (__webpack_require__(33801).JavaScriptHighlightRules);
-
-var LiquidHighlightRules = function () {
-
-  HtmlHighlightRules.call(this);
-
-  /**
-   * Embedded Matches
-   *
-   * Handles `onMatch` tokens and correct parses the
-   * inner contents of the tag.
-   */
-  function onMatchEmbedded(name) {
-
-    const length = name.length;
-
-    return function (value) {
-
-      const idx = value.indexOf(name);
-
-      const x = [
-        {
-          type: "meta.tag.punctuation.tag-open",
-          value: "{%"
-        },
-        {
-          type: "text",
-          value: value.slice(2, idx)
-        },
-        {
-          type: "keyword.tag" + name + ".tag-name",
-          value: value.slice(idx, idx + length)
-        },
-        {
-          type: "text",
-          value: value.slice(idx + length, value.indexOf("%}"))
-        },
-        {
-          type: "meta.tag.punctuation.tag-close",
-          value: "%}"
-        }
-      ];
-
-      return x;
-    };
-  }
-
-
-  for (var rule in this.$rules) {
-
-    this.$rules[rule].unshift(
-      {
-        token: "comment.block",
-        regex: /{%-?\s*comment\s*-?%}/,
-        next: [
-          {
-            token: "comment.block",
-            regex: /{%-?\s*endcomment\s*-?%}/,
-            next: "pop"
-          },
-          {
-            defaultToken: "comment",
-            caseInsensitive: false
-          }
-        ]
-      },
-      {
-        token: "comment.line",
-        regex: /{%-?\s*#/,
-        next: [
-          {
-            token: "comment.line",
-            regex: /-?%}/,
-            next: "pop"
-          },
-          {
-            defaultToken: "comment",
-            caseInsensitive: false
-          }
-        ]
-      },
-      {
-        token: 'style.embedded.start',
-        regex: /({%-?\s*\bstyle\b\s*-?%})/,
-        next: "style-start",
-        onMatch: onMatchEmbedded("style")
-      },
-      {
-        regex: /({%-?\s*\bstylesheet\b\s*-?%})/,
-        next: "stylesheet-start",
-        onMatch: onMatchEmbedded("stylesheet")
-      },
-      {
-        regex: /({%-?\s*\bschema\b\s*-?%})/,
-        next: "schema-start",
-        onMatch: onMatchEmbedded("schema")
-      },
-      {
-        regex: /({%-?\s*\bjavascript\b\s*-?%})/,
-        next: "javascript-start",
-        onMatch: onMatchEmbedded("javascript")
-      },
-      {
-        token: "meta.tag.punctuation.tag-open",
-        regex: /({%)/,
-        next: [
-          {
-              token: "keyword.block",
-              regex: /-?\s*[a-zA-Z_$][a-zA-Z0-9_$]+\b/,
-              next: 'liquid-start'
-          },
-          {
-            token: "meta.tag.punctuation.tag-close",
-            regex: /(-?)(%})/,
-            next: "pop"
-          }
-        ]
-      },
-      {
-        token: "meta.tag.punctuation.ouput-open",
-        regex: /({{)/,
-        push: "liquid-start"
-      }
-    );
-  }
-
-  /* -------------------------------------------- */
-  /* EMBEDDED REGIONS                             */
-  /* -------------------------------------------- */
-
-  this.embedRules(JsonHighlightRules, "schema-", [
-    {
-      token: "schema-start",
-      next: "pop",
-      regex: /({%-?\s*\bendschema\b\s*-?%})/,
-      onMatch: onMatchEmbedded("endschema")
-    }
-  ]);
-
-  this.embedRules(JavaScriptHighlightRules, "javascript-", [
-    {
-      token: "javascript-start",
-      next: "pop",
-      regex: /({%-?\s*\bendjavascript\b\s*-?%})/,
-      onMatch: onMatchEmbedded("endjavascript")
-    }
-  ]);
-
-
-
-  this.embedRules(CssHighlightRules, "style-", [
-    {
-      token: "style-start",
-      next: "pop",
-      regex: /({%-?\s*\bendstyle\b\s*-?%})/,
-      onMatch: onMatchEmbedded("endstyle")
-    }
-  ]);
-
-  this.embedRules(CssHighlightRules, "stylesheet-", [
-    {
-      token: "stylesheet-start",
-      next: "pop",
-      regex: /({%-?\s*\bendstylesheet\b\s*-?%})/,
-      onMatch: onMatchEmbedded("endstylesheet")
-    }
-  ]);
-
-  /* -------------------------------------------- */
-  /* LIQUID GRAMMARS                              */
-  /* -------------------------------------------- */
-
-  this.addRules({
-    "liquid-start": [
-      {
-        token: "meta.tag.punctuation.ouput-close",
-        regex: /}}/,
-        next: "pop"
-      },
-      {
-        token: "meta.tag.punctuation.tag-close",
-        regex: /%}/,
-        next: "pop"
-      },
-      {
-        token: "string",
-        regex: /['](?:(?:\\.)|(?:[^'\\]))*?[']/
-      },
-      {
-        token: "string",
-        regex: /["](?:(?:\\.)|(?:[^'\\]))*?["]/
-      },
-      {
-        token: "constant.numeric",
-        regex: /0[xX][0-9a-fA-F]+\b/
-      },
-      {
-        token: "constant.numeric",
-        regex: /[+-]?\d+(?:(?:\.\d*)?(?:[eE][+-]?\d+)?)?\b/
-      },
-      {
-        token: "keyword.operator",
-        regex: /\*|\-|\+|=|!=|\?\|\:/
-      },
-      {
-        token: "constant.language.boolean",
-        regex: /(?:true|false|nil|empty)\b/
-      },
-      {
-        token: "keyword.operator",
-        regex: /\s+(?:and|contains|in|with)\b\s+/
-      },
-      {
-        token: ["keyword.operator", "support.function"],
-        regex: /(\|\s*)([a-zA-Z_]+)/
-
-      },
-      {
-        token: "support.function",
-        regex: /\s*([a-zA-Z_]+\b)(?=:)/
-      },
-      {
-        token: "keyword.operator",
-        regex:
-          /(:)\s*(?=[a-zA-Z_])/
-      },
-      {
-        token: [
-          "support.class",
-          "keyword.operator",
-          "support.object",
-          "keyword.operator",
-          "variable.parameter"
-        ],
-        regex: /(\w+)(\.)(\w+)(\.)?(\w+)?/
-      },
-      {
-        token: "variable.parameter",
-        regex: /\.([a-zA-Z_$][a-zA-Z0-9_$]*\b)$/
-      },
-      {
-        token: "support.class",
-        regex: /(?:additional_checkout_buttons|content_for_additional_checkout_buttons)\b/
-      },
-      {
-        token: "paren.lparen",
-        regex: /[\[\({]/
-      },
-      {
-        token: "paren.rparen",
-        regex: /[\])}]/
-      },
-      {
-        token: "text",
-        regex: /\s+/
-      }
-    ]
-  });
-
-  this.normalizeRules();
-
-};
-
-oop.inherits(LiquidHighlightRules, TextHighlightRules);
-
-exports.x = LiquidHighlightRules;
 
 
 /***/ })
