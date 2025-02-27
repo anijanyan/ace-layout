@@ -73,19 +73,26 @@ export class TabManager {
         return Object.fromEntries(containers.map(container => [container, this.containers[container]?.toJSON()]));
     }
 
-    setChildBoxData(box: Box, boxData, index: number) {
-        if (!boxData[index])
+    createBox(boxType: string): Box | Pane {
+        if (boxType === "pane") {
+            return new Pane();
+        } else {
+            return new Box({vertical: boxType === "vbox"});
+        }
+    }
+
+    setChildBoxData(parentBox: Box, boxData?: object, far: boolean = false) {
+        if (!boxData)
             return;
 
-        let boxType = boxData[index].type;
-        if (!box[index])
-            box.addChildBox(index, boxType === "pane" ? new Pane() : new Box({vertical: boxType === "vbox"}))
+        let boxType = boxData.type;
+        let childBox = parentBox.getChildBox(far) ?? parentBox.addChildBox(this.createBox(boxType), far);
 
-        this.setBoxData(box[index], boxData[index]);
+        this.setBoxData(childBox, boxData);
 
     }
 
-    setBoxData(box: Box | Pane, boxData) {
+    setBoxData(box: Box | Pane, boxData?: object) {
         if (!boxData)
             return;
 
@@ -110,8 +117,9 @@ export class TabManager {
         } else {
             box.hidden = boxData.hidden;
             box.ratio = boxData.ratio;
-            this.setChildBoxData(box, boxData, 0);
-            this.setChildBoxData(box, boxData, 1);
+            //TODO 0, 1 is deprecated
+            this.setChildBoxData(box, boxData.childBox1 ?? boxData[0], );
+            this.setChildBoxData(box, boxData.childBox2 ?? boxData[1], true);
             box.buttons && box.setButtons(box.buttons);//TODO
         }
     }
@@ -135,8 +143,8 @@ export class TabManager {
             return;
         box.removeAllChildren();
         this.setBoxData(box, state);
-        if (!box[0] && box.isMain)
-            this.setChildBoxData(box, [{type: "pane"}], 0);
+        if (!box.childBox1 && box.isMain)
+            this.setChildBoxData(box, {type: "pane"});
     };
 
     clear() {

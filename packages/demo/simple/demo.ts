@@ -22,21 +22,20 @@ let base = new Box({
         top: new MenuToolbar(),
         bottom: new PanelBar({})
     },
-    0: outerBox = new Box({
+    childBox1: outerBox = new Box({
         vertical: true,
-        0: new Box({
+        childBox1: new Box({
             vertical: false,
-            0: fileTree = new Box({
+            childBox1: fileTree = new Box({
                 size: 200,
             }),
-            1: mainBox = new Box({
+            childBox2: mainBox = new Box({
                 isMain: true,
             }),
 
         }),
-        1: consoleBox = new Box({
-            ratio: 1,
-            size: 100,
+        childBox2: consoleBox = new Box({
+            size: 300,
             isMain: true
         }),
         toolBars: {},

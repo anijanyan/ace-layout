@@ -4,6 +4,7 @@
   "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
     "build": "webpack",
+    "watch": "webpack --watch",
     "check": "tsc"
   },
   "devDependencies": {

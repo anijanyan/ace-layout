@@ -6,6 +6,7 @@ import {FileSystemWeb} from "../file-system/file-system-web";
 import {EditorType} from "../utils/params";
 import {Ace} from "ace-code";
 import {Toolbar} from "./toolbars/toolbar";
+import {Pane} from "./boxes/pane";
 
 export interface LayoutEditor<SessionType extends EditSession = EditSession> {
     container: HTMLElement;
@@ -77,8 +78,12 @@ interface BoxOptions {
     size?: number;
     sizeUnit?: SizeUnit;
     classNames?: string;
-    0?: Box;
-    1?: Box;
+    childBox1?: Box | Pane;
+    childBox2?: Box | Pane;
+    /** @deprecated */
+    0?: Box | Pane;
+    /** @deprecated */
+    1?: Box | Pane;
 }
 
 interface PaneOptions extends BoxOptions {

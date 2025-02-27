@@ -99,7 +99,7 @@ export class PanelManager {
         let parent = location.parent;
         panel.panelBody.size = location.size;
 
-        let newBox = parent.addChildBox(index, panel.panelBody);
+        let newBox = parent.addChildBox(panel.panelBody, index === 1);
 
         if (newBox.fixedSize && !parent.fixedChild)
             parent.fixedChild = newBox;

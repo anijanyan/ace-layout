@@ -26,17 +26,16 @@ export class Box extends events.EventEmitter implements Widget {
     minHorizontalSize: number;
     classNames: string;
     element: LayoutHTMLElement;
-    fixedChild: any;
+    fixedChild?: Box;
     box: [number, number, number, number];
-    splitter: any;
-    topRightPane?: Pane;
+    splitter: LayoutHTMLElement;
     parent?: Box;
     hidden: boolean;
     minRatio: number;
     maxRatio: number;
     isMaximized: boolean;
-    0?: Box;
-    1?: Box;
+    childBox1?: Box | Pane;
+    childBox2?: Box | Pane;
     buttons?: HTMLElement[];//TODO
 
     static enableAnimation() {
@@ -55,18 +54,19 @@ export class Box extends events.EventEmitter implements Widget {
         document.documentElement.style.cursor = value;
     }
 
-    constructor(options: BoxOptions) {
+    constructor(options?: BoxOptions) {
         super();
+        options ??= {};
         if (options.splitter !== false) {
         }
         this.vertical = options.vertical || false;
         this.color = options.color ?? "";
         this.isMain = options.isMain || false;
-        this[0] = options[0];
-        this[1] = options[1];
+        this.childBox1 = options.childBox1 || options[0];
+        this.childBox2 = options.childBox2 || options[1];
 
-        if (this[0]) this[0].parent = this;
-        if (this[1]) this[1].parent = this;
+        if (this.childBox1) this.childBox1.parent = this;
+        if (this.childBox2) this.childBox2.parent = this;
 
         this.ratio = options.ratio;
         this.toolBars = options.toolBars || {};
@@ -87,8 +87,8 @@ export class Box extends events.EventEmitter implements Widget {
 
     toJSON(): object {
         return {
-            0: this[0] && this[0]!.toJSON(),
-            1: this[1] && this[1]!.toJSON(),
+            childBox1: this.childBox1?.toJSON(),
+            childBox2: this.childBox2?.toJSON(),
             ratio: this.ratio,
             type: this.vertical ? "vbox" : "hbox",
             fixedSize: this.fixedSize || null,
@@ -117,12 +117,13 @@ export class Box extends events.EventEmitter implements Widget {
             let width = rect.width - box.padding.left - box.padding.right;
 
             if (box.fixedChild) {
+                let isFarChildFixed = box.isFixedChild(box.childBox2);
                 if (box.vertical) {
-                    box.fixedChild.fixedSize = (box.fixedChild === box[1]) ? height - y : y;
+                    box.fixedChild.fixedSize = isFarChildFixed ? height - y : y;
                 } else {
-                    box.fixedChild.fixedSize = (box.fixedChild === box[1]) ? width - x : x;
+                    box.fixedChild.fixedSize = isFarChildFixed ? width - x : x;
                 }
-                box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize, box.fixedChild.minSize);
+                box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize ?? 0, box.fixedChild.minSize);
                 box.ratio = undefined;
             } else {
                 if (box.vertical) {
@@ -153,14 +154,14 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     calculateMinMaxRatio() {
-        if (!this.box || (!this[0] && !this[1]))
+        if (!this.box || (!this.childBox1 && !this.childBox2))
             return;
 
         let propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
 
         let size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
-        this.minRatio = this[0] ? this[0][propertyName] / size : 0;
-        this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
+        this.minRatio = this.childBox1 ? this.childBox1[propertyName] / size : 0;
+        this.maxRatio = this.childBox2 ? (size - this.childBox2[propertyName]) / size : 1;
     }
 
     render() {
@@ -219,8 +220,8 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     renderChildren() {
-        this.renderChild(this[0]);
-        this.renderChild(this[1]);
+        this.renderChild(this.childBox1);
+        this.renderChild(this.childBox2);
 
         this.calculateMinSize();
     }
@@ -238,7 +239,8 @@ export class Box extends events.EventEmitter implements Widget {
         let childrenMinVerticalSize = 0;
         let childrenMinHorizontalSize = 0;
 
-        let calculateChildBoxMinSize = (childBox) => {
+        let calculateChildBoxMinSize = (childBox?: Box) => {
+            if (!childBox) return;
             if (this.vertical) {
                 childrenMinVerticalSize += childBox.minVerticalSize;
                 childrenMinHorizontalSize = Math.max(childBox.minHorizontalSize, childrenMinHorizontalSize);
@@ -248,8 +250,8 @@ export class Box extends events.EventEmitter implements Widget {
             }
         };
 
-        if (this[0]) calculateChildBoxMinSize(this[0]);
-        if (this[1]) calculateChildBoxMinSize(this[1]);
+        calculateChildBoxMinSize(this.childBox1);
+        calculateChildBoxMinSize(this.childBox2);
 
         if (forceChildrenSize) {
             this.minVerticalSize = childrenMinVerticalSize;
@@ -264,22 +266,18 @@ export class Box extends events.EventEmitter implements Widget {
     }
 
     calculateRatio() {
-        if (this[0]) {
-            this.calculateChildRatio(this[0]);
-        }
+        this.calculateChildRatio(this.childBox1);
         if (this.ratio || this.fixedChild) {
             return;
         }
-        if (this[1]) {
-            this.calculateChildRatio(this[1]);
-        }
+        this.calculateChildRatio(this.childBox2, true);
         if (!this.ratio && !this.fixedChild) {
             this.ratio = 0.5;
         }
     }
 
-    calculateChildRatio(childBox: Box, isSecond = false) {
-        if (!childBox.size) {
+    calculateChildRatio(childBox?: Box, isSecond = false) {
+        if (!childBox?.size) {
             return;
         }
         let size = childBox.size;
@@ -314,25 +312,18 @@ export class Box extends events.EventEmitter implements Widget {
      */
     setButtons(buttons: HTMLElement[]) {
         this.buttons = buttons;
-        if (this.topRightPane)
-            this.topRightPane.removeButtons();
-
-        this.topRightPane = this.getTopRightPane();
-        if (this.topRightPane)
-            this.topRightPane.setButtons(buttons);
+        this.getTopRightPane()?.setButtons(buttons);
     }
 
     addButton(button: HTMLElement) {
-        this.topRightPane = this.getTopRightPane();
-        if (this.topRightPane)
-            this.topRightPane.addButton(button);
+        this.getTopRightPane()?.addButton(button);
     }
 
     /**
      * Finds the most top-right Pane
      */
-    getTopRightPane(): Pane | undefined{
-        let childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
+    getTopRightPane(): Pane | undefined {
+        let childBox = this.vertical ? this.childBox1 || this.childBox2 : this.childBox2 || this.childBox1;
         if (!childBox)
             return;
 
@@ -354,7 +345,7 @@ export class Box extends events.EventEmitter implements Widget {
 
     $updateChildSize(x, y, w, h) {
         let splitterSize = SPLITTER_SIZE;
-        if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
+        if (!this.childBox1 || this.childBox1.hidden || !this.childBox2 || this.childBox2.hidden) {
             this.splitter.style.display = "none";
             splitterSize = 0;
         } else {
@@ -368,7 +359,7 @@ export class Box extends events.EventEmitter implements Widget {
 
         if (this.fixedChild) {
             let size = this.fixedChild.fixedSize;
-            if (this.fixedChild === this[1]) {
+            if (this.isFixedChild(this.childBox2)) {
                 size = this.vertical ? h - size : w - size;
             }
             this.ratio = this.vertical ? size / h : size / w;
@@ -376,9 +367,9 @@ export class Box extends events.EventEmitter implements Widget {
         this.ratio = Math.max(this.minRatio, Math.min(this.ratio ?? this.maxRatio, this.maxRatio));
 
         let ratio = this.ratio;
-        if (!this[0] || this[0].hidden) {
+        if (!this.childBox1 || this.childBox1.hidden) {
             ratio = 0;
-        } else if (!this[1] || this[1].hidden) {
+        } else if (!this.childBox2 || this.childBox2.hidden) {
             ratio = 1;
         }
 
@@ -386,19 +377,14 @@ export class Box extends events.EventEmitter implements Widget {
             let splitY = h * ratio - splitterSize;
             if (this.splitter)
                 Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
-            if (this[0])
-                this[0].setBox(x, y, w, splitY);
-            //TODO: here was 5th param
-            if (this[1])
-                this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
+            this.childBox1?.setBox(x, y, w, splitY);
+            this.childBox2?.setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
         } else {
             let splitX = w * ratio - splitterSize;
             if (this.splitter)
                 Utils.setBox(this.splitter, x + splitX, y, splitterSize, h);
-            if (this[0])
-                this[0].setBox(x, y, splitX, h);
-            if (this[1])
-                this[1].setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
+            this.childBox1?.setBox(x, y, splitX, h);
+            this.childBox2?.setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
         }
     }
 
@@ -468,10 +454,11 @@ export class Box extends events.EventEmitter implements Widget {
         }
 
         let parentRect = (node.parentNode as HTMLElement).getBoundingClientRect();
-        let top = parentRect.top + this.box[1];
-        let left = parentRect.left + this.box[0];
+        let [x, y, w, h] = this.box;
+        let top = parentRect.top + y;
+        let left = parentRect.left + x;
 
-        Utils.setBox(node, left, top, this.box[2], this.box[3]);
+        Utils.setBox(node, left, top, w, h);
     }
 
     maximize(disableAnimation = false) {
@@ -522,28 +509,41 @@ export class Box extends events.EventEmitter implements Widget {
 
     remove() {
         this.removeAllChildren();
-        if (this.element) this.element.remove();
-        if (this.parent) {
-            if (this.parent[0] == this) this.parent[0] = undefined;
-            if (this.parent[1] == this) this.parent[1] = undefined;
-            this.parent.recalculateAllMinSizes();
-            this.parent = undefined;
-        }
+        this.parent?.disconnectChildBox(this);
+        this.element.remove();
     }
 
     removeAllChildren() {
-        this.removeChild(this[0]);
-        this.removeChild(this[1]);
-        this[0] = undefined;
-        this[1] = undefined;
+        this.removeChildBox(this.childBox1);
+        this.removeChildBox(this.childBox2);
     }
 
-    removeChild(child?: Box) {
-        if (!child)
+    removeChildBox(childBox?: Box | Pane) {
+        if (!childBox)
             return;
-        child.off("editorAdded", this.$editorAdded);
-        child.remove();
-        child.element.remove();
+        this.disconnectChildBox(childBox);
+        childBox.remove();
+    }
+
+    disconnectChildBox(childBox?: Box | Pane) {
+        if (!childBox)
+            return;
+        if (childBox.parent === this)
+            childBox.parent = undefined;
+
+        if (this.childBox1 === childBox) {
+            this.childBox1 = undefined;
+        } else if (this.childBox2 === childBox) {
+            this.childBox2 = undefined;
+        } else {
+            console.log("tried to disconnect missing child box");
+            return;
+        }
+        if (this.isFixedChild(childBox)) {
+            this.fixedChild = undefined;
+        }
+        childBox.off("editorAdded", this.$editorAdded);
+        this.recalculateAllMinSizes();
     }
 
     toggleShowHide() {
@@ -585,56 +585,59 @@ export class Box extends events.EventEmitter implements Widget {
         });
     }
 
+    isFixedChild(box?: Box | Pane): boolean {
+        return box !== undefined && this.fixedChild === box;
+    }
+
+    getChildBox(far: boolean = false): Box |undefined {
+        return far ? this.childBox2 : this.childBox1;
+    }
+
+    getChildBoxSibling(box: Box): Box | undefined {
+        return box === this.childBox1 ? this.childBox2 : this.childBox1;
+    }
+
+    replaceChildBox(previousBox: Box | Pane, newBox: Box) {
+        if (previousBox === newBox)
+            return previousBox;
+
+        let far = this.getChildBox(true) === previousBox;
+        let fix = this.isFixedChild(previousBox);
+        let fixedSize = previousBox.fixedSize;
+
+        if (previousBox.isMaximized) {
+            previousBox.restore(true);
+            newBox.maximize(true);
+        }
+        newBox.parent?.disconnectChildBox(newBox);
+        this.disconnectChildBox(previousBox);
+
+        this.addChildBox(newBox, far, fix, fixedSize);
+        let buttons = previousBox.buttons ?? [];
+        previousBox.setButtons([]);
+        newBox.setButtons(buttons);
+    }
+
     /**
      *
-     * @param {Number} previousBoxIndex
      * @param {Box} box
+     * @param {boolean} far
+     * @param {boolean} fix
+     * @param {number?} fixedSize
      * @returns {Box}
      */
-    addChildBox(previousBoxIndex: number | Box, box: Box): Box {
-        let previousBox, index;
-        if (previousBoxIndex instanceof Box) {
-            previousBox = previousBoxIndex;
-            index = this[0] == previousBox ? 0 : 1;
-        } else {
-            index = previousBoxIndex;
-            previousBox = this[index];
-        }
-        if (previousBox && previousBox === box) return previousBox;
-
-        let previousParent = box.parent;
-        if (previousParent && previousParent !== this) {
-            let previousIndex = previousParent[0] === box ? 0 : 1;
-            previousParent[previousIndex] = null;
-            previousParent.ratio = 1;
-            if (previousParent.fixedChild && previousParent.fixedChild === box) {
-                previousParent.fixedChild = null;
-            }
-            previousParent.resize();
-        }
-
-        this[index] = box;
+    addChildBox(box: Box, far: boolean, fix: boolean = false, fixedSize?): Box {
+        far ? this.childBox2 = box : this.childBox1 = box;
         box.parent = this;
+
         this.renderChild(box);
 
-        if (previousBox && previousBox.isMaximized) {
-            previousBox.restore(true);
-            box.maximize(true);
-        }
+        if (fix) {
+            box.fixedSize = fixedSize;
+            this.fixedChild = box;
 
-        if (previousBox && previousBox.parent === this) {
-            if (this.fixedChild && this.fixedChild == previousBox) {
-                box.fixedSize = previousBox.fixedSize;
-                if (!box.size) box.size = previousBox.size;
-                previousBox.fixedSize = previousBox.size = null;
-                this.fixedChild = box;
-            }
-
-            previousBox.remove();
-        }
-
-        if (!this.fixedChild)
             this.calculateChildRatio(box);
+        }
 
         this.recalculateAllMinSizes();
         this.resize();
