@@ -81,7 +81,7 @@ export class TabManager {
         }
     }
 
-    setChildBoxData(parentBox: Box, boxData?: object, far: boolean = false) {
+    setChildBoxData(parentBox: Box, boxData?: any, far: boolean = false) {
         if (!boxData)
             return;
 
@@ -92,7 +92,7 @@ export class TabManager {
 
     }
 
-    setBoxData(box: Box | Pane, boxData?: object) {
+    setBoxData(box: Box | Pane, boxData?: any) {
         if (!boxData)
             return;
 

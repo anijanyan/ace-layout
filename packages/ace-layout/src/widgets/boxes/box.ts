@@ -346,10 +346,7 @@ export class Box extends events.EventEmitter implements Widget {
     $updateChildSize(x, y, w, h) {
         let splitterSize = SPLITTER_SIZE;
         if (!this.childBox1 || this.childBox1.hidden || !this.childBox2 || this.childBox2.hidden) {
-            this.splitter.style.display = "none";
             splitterSize = 0;
-        } else {
-            this.splitter.style.display = "";
         }
         this.updateToolBarSize(w, h);
         w -= this.padding.left + this.padding.right;
@@ -358,7 +355,7 @@ export class Box extends events.EventEmitter implements Widget {
         y = this.padding.top;
 
         if (this.fixedChild) {
-            let size = this.fixedChild.fixedSize;
+            let size = this.fixedChild.fixedSize!;
             if (this.isFixedChild(this.childBox2)) {
                 size = this.vertical ? h - size : w - size;
             }
