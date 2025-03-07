@@ -226,7 +226,7 @@ let panelManager = PanelManager.getInstance({
             size: 200
         },
         right: {
-            parent: base[1]!,
+            parent: base.childBox2!,
             index: 1,
             size: 200
         }
