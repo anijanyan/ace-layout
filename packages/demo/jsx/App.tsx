@@ -20,9 +20,9 @@ const App = () => {
 
     const fileSystem = new FileSystemWeb();
 
-    const openFolder = async (e) => {
+    const openFolder = async () => {
         const nodes = await fileSystem.open();
-        const aceTree = aceTreeRef.current.aceTreeInstance;
+        const aceTree = aceTreeRef.current!.aceTreeInstance!;
         aceTree.updateTreeData(nodes);
         aceTree.element.addEventListener("item-click", (evt: CustomEvent) => {
             fileSystem.openFile(evt.detail);
@@ -32,30 +32,30 @@ const App = () => {
     if (!menuDefs["View/Console"]) {
         menuDefs["View/Console"] = {
             properties: "700,check,false,false,F6",
-            exec: () => consoleRef.current.boxInstance!.toggleShowHide()
+            exec: () => consoleRef.current!.boxInstance!.toggleShowHide()
         };
         addExampleMenuItems(MenuManager.getInstance(), "", menuDefs);
     }
 
     useEffect(() => {
         const handleResize = () => {
-            boxRef.current?.boxInstance.setBox(0, 0, window.innerWidth, window.innerHeight);
+            boxRef.current!.boxInstance!.setBox(0, 0, window.innerWidth, window.innerHeight);
         };
         window.addEventListener('resize', handleResize);
 
         const tabManager = TabManager.getInstance({
             containers: {
-                main: mainRef.current.boxInstance,
-                console: consoleRef.current.boxInstance
+                main: mainRef.current!.boxInstance!,
+                console: consoleRef.current!.boxInstance!
             },
             fileSystem: fileSystem
         });
 
         const panelManager = PanelManager.getInstance({
-            layout: boxRef.current.boxInstance,
+            layout: boxRef.current!.boxInstance!,
             locations: {
                 left: {
-                    parent: boxRef.current.boxInstance,
+                    parent: boxRef.current!.boxInstance!,
                     index: 0,
                     size: 200
                 }
@@ -103,7 +103,7 @@ const App = () => {
             </Box>
             <Box ref={consoleRef} isMain={true} ratio={1} size={100} buttons={[
                 <Button title="F6" className="consoleCloseBtn" onClick={() => {
-                    consoleRef.current.boxInstance!.hide();
+                    consoleRef.current!.boxInstance!.hide();
                 }}>
                     {"x"}
                 </Button>

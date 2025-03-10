@@ -53,10 +53,11 @@ let base = new Box({
                         vertical: true,
                         size: 200,
                         sections: [
-                            {title: "open editors", box: new Box({vertical: false, size: 200, color: "blue"})},
-                            {title: "project name", box: new Box({vertical: false, size: 500, color: "red"})},
-                            {title: "outline", box: new Box({vertical: false, size: 500, color: "green"})},
-                            {title: "timeline", box: new Box({vertical: false, size: 500, color: "pink"})}
+                            //TODO currentSize and sizePercent should be calculated by the accordion
+                            {title: "open editors", currentSize: 0, sizePercent: 0, box: new Box({vertical: false, size: 200, color: "blue"})},
+                            {title: "project name", currentSize: 0, sizePercent: 0, box: new Box({vertical: false, size: 500, color: "red"})},
+                            {title: "outline", currentSize: 0, sizePercent: 0, box: new Box({vertical: false, size: 500, color: "green"})},
+                            {title: "timeline", currentSize: 0, sizePercent: 0, box: new Box({vertical: false, size: 500, color: "pink"})}
                         ]
                     }),
                     location: "left"
@@ -226,7 +227,7 @@ let panelManager = PanelManager.getInstance({
             size: 200
         },
         right: {
-            parent: base[1]!,
+            parent: base.childBox2!,
             index: 1,
             size: 200
         }

@@ -1,5 +1,6 @@
 import {Tab} from "../widgets/tabs/tab";
 import {TabManager} from "../widgets/tabs/tabManager";
+import {TabCommand} from "../widgets/widget";
 
 function getCurrentPaneTabs(element: Tab | TabManager): { tabs: Tab[], activeTab: Tab } {
     if (element instanceof Tab) {
@@ -23,7 +24,7 @@ function goToTab(el: Tab | TabManager, tabNum?: number) {
     TabManager.getInstance().navigateToTab(index, activeTab, tabs);
 }
 
-export let tabCommands = [
+export let tabCommands: TabCommand[] = [
     {
         name: "clonetab",
         mac: "",

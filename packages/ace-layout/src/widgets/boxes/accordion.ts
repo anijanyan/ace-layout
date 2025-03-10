@@ -206,9 +206,9 @@ export class Accordion extends Box implements Widget {//TODO extending from Box 
         let addSize = (size - remainder) / count;
 
         for (let i = 0; i < count; i++) {
-            openedSections[i].currentSize! += addSize;
+            openedSections[i].currentSize += addSize;
         }
-        openedSections[0].currentSize! += remainder;
+        openedSections[0].currentSize += remainder;
     }
 
     resize() {
@@ -305,7 +305,7 @@ export class Accordion extends Box implements Widget {//TODO extending from Box 
         }
 
         if (totalPercent !== 100)
-            this.sections[this.sections.length - 1].sizePercent! += (100 - totalPercent);
+            this.sections[this.sections.length - 1].sizePercent += (100 - totalPercent);
     }
 
     setBox(x, y, w, h) {
@@ -325,7 +325,7 @@ export class Accordion extends Box implements Widget {//TODO extending from Box 
         for (let i = 0; i < this.sections.length; i++) {
             let section = this.sections[i];
 
-            section.currentSize = Math.max(Math.floor((height * section.sizePercent!) / 100), this.boxMinSize);
+            section.currentSize = Math.max(Math.floor((height * section.sizePercent) / 100), this.boxMinSize);
             if (this.isOpenedByIndex(i)) {
                 totalSize += section.currentSize;
                 openedIndexes.push(i);

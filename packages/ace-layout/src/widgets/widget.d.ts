@@ -6,6 +6,7 @@ import {FileSystemWeb} from "../file-system/file-system-web";
 import {EditorType} from "../utils/params";
 import {Ace} from "ace-code";
 import {Toolbar} from "./toolbars/toolbar";
+import {Pane} from "./boxes/pane";
 
 export interface LayoutEditor<SessionType extends EditSession = EditSession> {
     container: HTMLElement;
@@ -25,11 +26,11 @@ export type EditSession = Ace.EditSession | String;
  *
  */
 export interface Widget {
-    render()
+    render(): LayoutHTMLElement
 
-    remove()
+    remove(): void
 
-    toJSON()
+    toJSON(): object
 }
 
 /**
@@ -46,10 +47,10 @@ interface PanelLocation {
 interface AccordionSection {
     title: string,
     box: Box,
-    currentSize?: number,
+    currentSize: number,
     previousSize?: number,
     savedSize?: number,
-    sizePercent?: number
+    sizePercent: number
 }
 
 interface AccordionOptions {
@@ -77,8 +78,12 @@ interface BoxOptions {
     size?: number;
     sizeUnit?: SizeUnit;
     classNames?: string;
-    0?: Box;
-    1?: Box;
+    childBox1?: Box | Pane;
+    childBox2?: Box | Pane;
+    /** @deprecated */
+    0?: Box | Pane;
+    /** @deprecated */
+    1?: Box | Pane;
 }
 
 interface PaneOptions extends BoxOptions {
@@ -102,6 +107,13 @@ export interface TabOptions extends TabPanelOptions{
     editorType?: EditorType;
 }
 
+export interface TabCommand extends Ace.Command{
+    mac: string,
+    win: string,
+    desc: string,
+    position?: number,
+}
+
 export interface PanelOptions extends TabPanelOptions {
     panelBody: Accordion | Box;
     location?: string;
@@ -117,7 +129,7 @@ export type LocationList = {
     [location in ToolbarPosition]?: PanelLocation;
 };
 
-export interface LayoutHTMLElement extends HTMLElement {
+export interface LayoutHTMLElement extends HTMLDivElement {
     dx?: number;
     dy?: number;
     $host: any;  //TODO:

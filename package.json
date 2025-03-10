@@ -1,6 +1,6 @@
 {
   "name": "ace-layout-root",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "author": "Ani Amirjanyan <amirjanyanani@gmail.com>",
   "scripts": {
     "build:parts": "npm run build -ws",
@@ -14,16 +14,17 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@types/node": "^22.12.0",
     "copy-webpack-plugin": "9.1.0",
+    "css-loader": "^6.7.1",
+    "esbuild-loader": "^3.0.1",
+    "style-loader": "^3.3.1",
     "text-loader": "latest",
-    "typescript": "^5.7.3",
+    "typescript": "^5.8.2",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0",
-    "css-loader": "^6.7.1",
-    "style-loader": "^3.3.1",
-    "esbuild-loader": "^3.0.1",
-    "@types/node": "^22.12.0"
+    "react": "^19.0.0"
   },
   "license": "MIT",
   "workspaces": [

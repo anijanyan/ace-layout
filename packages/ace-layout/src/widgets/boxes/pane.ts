@@ -10,7 +10,6 @@ import {TabBar} from "../toolbars/tabBar";
 export class Pane extends Box {
     tabBar: TabBar;
     private tabEditorBoxElement: LayoutHTMLElement;
-    isButtonHost: boolean;
     editors: { [editorName: string]: LayoutEditor }
     currentEditorType?: EditorType;
     editor?: LayoutEditor;
@@ -50,37 +49,16 @@ export class Pane extends Box {
         return true;
     }
 
-    split(far, vertical?: boolean) {
-        let newPane = new Pane({});
-        let root = this.parent!;
-        let wrapper = new Box({
-            [far ? 1 : 0]: this,
-            [far ? 0 : 1]: newPane,
-            vertical: vertical,
-            ratio: 0.5
-        });
-
-        root.addChildBox(this, wrapper);
-
-        if (this.isButtonHost) {
-            let buttons = this.tabBar.buttons;
-            this.removeButtons();
-            wrapper.setButtons(buttons);
-        }
-        return newPane;
+    setButtons(buttons: HTMLElement[]) {
+        this.buttons = buttons;
+        this.tabBar.setButtons(buttons);
     }
 
-    setButtons(buttons: HTMLElement[]) {
-        this.isButtonHost = true;
-        if (buttons) {
-            this.tabBar.setButtons(buttons);
-        } else {
-            this.tabBar.removeButtons();
-        }
+    removeButtons() {
+        this.tabBar.removeButtons();
     }
 
     addButton(button: HTMLElement) {
-        this.isButtonHost = true;
         this.tabBar.addButton(button);
     }
 
@@ -99,45 +77,34 @@ export class Pane extends Box {
         }
     }
 
-    removeButtons() {
-        this.tabBar.removeButtons();
-        this.isButtonHost = false;
+    split(far, vertical?: boolean) {
+        let newPane = new Pane({});
+        let root = this.parent!;
+        let [childBox1, childBox2] = far ? [newPane, this] : [this, newPane];
+        let wrapper = new Box({
+            childBox1,
+            childBox2,
+            vertical,
+        });
+
+        root.replaceChildBox(this, wrapper);
+        return newPane;
     }
 
     remove() {
-        let wrapper = this.parent!;
-        let root = wrapper.parent!;
-        let paneIndex = wrapper[0] == this ? 1 : 0;
-        let pane = wrapper[paneIndex] || null;
-        let rootIndex = root[0] == wrapper ? 0 : 1;
-
-        if (pane) {
-            pane.parent = root;
-            root[rootIndex] = pane;
-            root.element.appendChild(pane.element);
-
-            if (root.fixedChild && root.fixedChild == wrapper) {
-                pane.fixedSize = wrapper.fixedSize;
-                pane.size = wrapper.size;
-                root.fixedChild = pane;
-            }
-            wrapper.element.remove();
-        } else {
-            if (wrapper.isMain) {
-                root = wrapper;
-            } else {
-                wrapper.element.remove();
-            }
-            root.ratio = 1;
-        }
-
-        root.recalculateAllMinSizes();
-        root.resize();
-
-        if (this.isButtonHost)
-            root.setButtons(this.tabBar.buttons);
-
         this.clearEditors();
+        let parentBox = this.parent;
+        if (!parentBox)
+            return;
+        let root = parentBox.parent!;
+        let siblingBox = parentBox.getChildBoxSibling(this);
+        if (parentBox.isMain && !siblingBox)
+            return;
+        if (siblingBox)
+            root.replaceChildBox(parentBox, siblingBox);
+        this.element.remove();
+        parentBox.remove();
+
         this.tabBar.clear();
     }
 

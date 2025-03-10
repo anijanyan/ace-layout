@@ -18,7 +18,7 @@ body.disableIframe iframe {pointer-events: none;}
 .splitter-v {
     height: 1px;
     cursor: ns-resize;
-    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);
+    box-shadow: 1px 1px 0 rgba(143, 143, 143, 0.14);
 }
 .splitter-h div {
     margin-left: -2px;
@@ -56,7 +56,6 @@ body.disableIframe iframe {pointer-events: none;}
 .findbar {
     display:flex;
     height:30px;
-    background: #665a82;
     background: #cecece;
     color: #111;
     align-items: stretch;
@@ -98,10 +97,10 @@ div.consoleCloseBtn:hover {
     align-items: center;
     justify-content: flex-end;
     z-index: 1000;
-    padding: 0px;
+    padding: 0;
     position: absolute;
     right: 3px;
-    top: 0px;
+    top: 0;
     height: 24px;
 }
 
@@ -201,7 +200,6 @@ iframe {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }

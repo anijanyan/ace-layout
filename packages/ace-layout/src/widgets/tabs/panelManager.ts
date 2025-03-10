@@ -55,6 +55,8 @@ export class PanelManager {
 
                     for (let index = 0; index < sections.length; index++) {
                         accordionSections.push({
+                            sizePercent: 0,
+                            currentSize: 0,
                             title: sections[index].title,
                             box: new Box(sections[index].boxData)
                         })
@@ -97,7 +99,7 @@ export class PanelManager {
         let parent = location.parent;
         panel.panelBody.size = location.size;
 
-        let newBox = parent.addChildBox(index, panel.panelBody);
+        let newBox = parent.addChildBox(panel.panelBody, index === 1);
 
         if (newBox.fixedSize && !parent.fixedChild)
             parent.fixedChild = newBox;

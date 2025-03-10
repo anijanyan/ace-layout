@@ -6,30 +6,29 @@ import React, {
     useContext,
     forwardRef,
     useImperativeHandle,
-    useEffect
+    useEffect,
 } from "react";
 import {createRoot} from "react-dom/client";
-import { Box as AceBox } from "ace-layout";
-import {BoxOptions} from "ace-layout";
+import { Box as AceBox, BoxOptions, LayoutHTMLElement } from "ace-layout";
 export interface BoxHandler {
     boxInstance: AceBox | null;
 }
 
 interface BoxContextValue {
     parentBox: AceBox | null;
-    childIndexRef: React.MutableRefObject<number>;
+    childPlacementRef: React.RefObject<boolean>;
 }
 
 const BoxContext = createContext<BoxContextValue>({
     parentBox: null,
-    childIndexRef: { current: 0 }
+    childPlacementRef: { current: false }
 });
 
 import { ReactNode, ReactElement } from 'react';
 
 type BoxElement = ReactElement<BoxProps, typeof Box>;
 
-type AllowedChildren = BoxElement | ReactElement;
+type AllowedChildren = BoxElement[] | ReactElement;
 
 interface BoxProps extends BoxOptions{
     buttons?: ReactNode[];
@@ -46,11 +45,11 @@ export const Box = forwardRef((props: BoxProps, ref: React.Ref<BoxHandler>) => {
         new AceBox(boxOptions)
     );
 
-    const boxElement = useRef<HTMLDivElement>(null);
-    const { parentBox, childIndexRef } = useContext(BoxContext);
+    const boxElement = useRef<LayoutHTMLElement>(null);
+    const { parentBox, childPlacementRef } = useContext(BoxContext);
 
     function render() {
-        boxRef.current.element = boxElement.current;
+        boxRef.current.element = boxElement.current!;
         boxRef.current.render();
     }
 
@@ -64,10 +63,10 @@ export const Box = forwardRef((props: BoxProps, ref: React.Ref<BoxHandler>) => {
     }
 
     function addToParent() {
-        const i = childIndexRef.current;
-        childIndexRef.current = i + 1;
+        const far = childPlacementRef.current;
+        childPlacementRef.current = !far;
 
-        parentBox.addChildBox(i, boxRef.current);
+        (parentBox as AceBox).addChildBox(boxRef.current, far);
     }
 
     useLayoutEffect(() => {
@@ -87,7 +86,7 @@ export const Box = forwardRef((props: BoxProps, ref: React.Ref<BoxHandler>) => {
     const myContextValue = useMemo<BoxContextValue>(() => {
         return {
             parentBox: boxRef.current,
-            childIndexRef: { current: 0 }
+            childPlacementRef: { current: false }
         };
     }, []);
 

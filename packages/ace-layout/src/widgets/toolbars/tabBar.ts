@@ -243,20 +243,21 @@ export class TabBar extends TabPanelBar<Tab> implements Widget {
     setButtons(buttons: HTMLElement[]) {
         this.additionalButtons.innerHTML = "";
         this.buttons = buttons;
-        buttons.forEach((button) => this.additionalButtons.appendChild(button));
-        let rect = this.additionalButtons.getBoundingClientRect();
-        this.buttonsWidth = rect.width;
+        if (buttons.length) {
+            buttons.forEach((button) => this.additionalButtons.appendChild(button));
+            let rect = this.additionalButtons.getBoundingClientRect();
+            this.buttonsWidth = rect.width;
+        } else {
+            this.buttonsWidth = 0;
+        }
+
         this.configure();
     }
 
     removeButtons() {
         if (!this.buttons.length)
             return;
-
-        this.buttons = [];
-        this.additionalButtons.innerHTML = "";
-        this.buttonsWidth = 0;
-        this.configure();
+        this.setButtons([]);
     }
 
     clear() {

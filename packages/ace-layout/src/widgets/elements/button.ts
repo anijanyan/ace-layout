@@ -33,19 +33,21 @@ export class Button implements Widget {
     render() {
         this.renderElement();
         this.element.$host = this;
+
+        this.element.setAttribute('role', 'button');
         this.element.onclick = this.onClick ?? null;
 
-        this.disabled && this.element.classList.add("Disabled");
+        this.disabled && this.element.classList.add("disabled");
         this.onClick && this.element.addEventListener('click', this.onClick);
 
-        this.element.addEventListener('mousedown', (e) => this.addClass(e, "Down"));
-        this.element.addEventListener('mouseup', (e) => this.removeClass(e, "Down"));
+        this.element.addEventListener('mousedown', (e) => this.addClass(e, "down"));
+        this.element.addEventListener('mouseup', (e) => this.removeClass(e, "down"));
 
-        this.element.addEventListener('mouseover', (e) => this.addClass(e, "Over"));
-        this.element.addEventListener('mouseout', (e) => this.removeClass(e, "Over"));
+        this.element.addEventListener('mouseover', (e) => this.addClass(e, "over"));
+        this.element.addEventListener('mouseout', (e) => this.removeClass(e, "over"));
 
-        this.element.addEventListener('focus', (e) => this.addClass(e, "Focus"));
-        this.element.addEventListener('unfocus', (e) => this.removeClass(e, "Focus"));
+        this.element.addEventListener('focus', (e) => this.addClass(e, "focus"));
+        this.element.addEventListener('unfocus', (e) => this.removeClass(e, "focus"));
 
         return this.element;
     }
@@ -68,5 +70,6 @@ export class Button implements Widget {
     }
 
     toJSON() {
+        return {};
     }
 }
