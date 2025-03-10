@@ -5,7 +5,7 @@ import React, {
   forwardRef,
   useImperativeHandle,
 } from "react";
-import {AceTreeWrapper} from "ace-layout";
+import {AceTreeWrapper, LayoutHTMLElement} from "ace-layout";
 
 export interface AceTreeHandler {
     aceTreeInstance: AceTreeWrapper | null;
@@ -15,10 +15,10 @@ export const AceTree = forwardRef<AceTreeHandler, PropsWithChildren>(
   (props, ref) => {
     const {children} = props;
     const treeRef = useRef<AceTreeWrapper>(new AceTreeWrapper());
-    const treeElementRef = useRef<HTMLDivElement>(null);
+    const treeElementRef = useRef<LayoutHTMLElement>(null);
 
     useLayoutEffect(() => {
-        treeRef.current.element = treeElementRef.current;
+        treeRef.current.element = treeElementRef.current!;
         treeRef.current.render();
         return () => {
             treeRef.current.remove();

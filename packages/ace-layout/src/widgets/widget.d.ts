@@ -129,7 +129,7 @@ export type LocationList = {
     [location in ToolbarPosition]?: PanelLocation;
 };
 
-export interface LayoutHTMLElement extends HTMLElement {
+export interface LayoutHTMLElement extends HTMLDivElement {
     dx?: number;
     dy?: number;
     $host: any;  //TODO:
