@@ -34653,22 +34653,22 @@ exports.WorkerClient = WorkerClient;
     line-height: 27px;
     padding: 0 11px;
     text-align: center;
-    cursor: default;
+    cursor: pointer;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;
 }
-.blackbuttonDisabled {
+.blackbutton.disabled {
     color: rgba(220, 235, 219, 0.5);
 }
-.blackbuttonFocus {
+.blackbutton.focus {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;
 }
-.blackbuttonOver {
+.blackbutton.over {
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;
 }
-.blackbuttonDown {
+.blackbutton.down {
     box-shadow: 0 0 3px 2px #343434 inset;
-}`, "", { "version": 3, "sources": ["webpack://./assets/styles/button.css"], "names": [], "mappings": "AAAA;IACI,gGAAgG;IAChG,wFAAwF;IACxF,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,+BAA+B;AACnC;AACA;IACI,oIAAoI;AACxI;AACA;IACI,sIAAsI;AAC1I;AACA;IACI,qCAAqC;AACzC", "sourcesContent": [".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: default;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbuttonDisabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbuttonFocus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbuttonOver {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbuttonDown {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}"], "sourceRoot": "" }]);
+}`, "", { "version": 3, "sources": ["webpack://./assets/styles/button.css"], "names": [], "mappings": "AAAA;IACI,gGAAgG;IAChG,wFAAwF;IACxF,yBAAyB;IACzB,kBAAkB;IAClB,cAAc;IACd,cAAc;IACd,YAAY;IACZ,iBAAiB;IACjB,eAAe;IACf,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,mCAAmC,CAAC,kCAAkC;AAC1E;AACA;IACI,+BAA+B;AACnC;AACA;IACI,oIAAoI;AACxI;AACA;IACI,sIAAsI;AAC1I;AACA;IACI,qCAAqC;AACzC", "sourcesContent": [".blackbutton {\n    background-image: linear-gradient(to bottom, #4c4c4c 0%, #434343 52%, #333333 52%, #454545 100%);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125);\n    border: 1px solid #042440;\n    border-radius: 3px;\n    color: #d0e3ce;\n    text-shadow: 0;\n    height: 27px;\n    line-height: 27px;\n    padding: 0 11px;\n    text-align: center;\n    cursor: pointer;\n    font-weight: normal;\n    -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;\n}\n.blackbutton.disabled {\n    color: rgba(220, 235, 219, 0.5);\n}\n.blackbutton.focus {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 6px 1px rgba(255, 255, 255, 0.1) inset;\n}\n.blackbutton.over {\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.125) inset, 0px 1px rgba(255, 255, 255, 0.125), 0 0 0 1000px rgba(158, 169, 156, 0.08) inset;\n}\n.blackbutton.down {\n    box-shadow: 0 0 3px 2px #343434 inset;\n}"], "sourceRoot": "" }]);
             const __WEBPACK_DEFAULT_EXPORT__ = ___CSS_LOADER_EXPORT___;
           }
         ),
@@ -34778,7 +34778,7 @@ body.disableIframe iframe {pointer-events: none;}
 .splitter-v {
     height: 1px;
     cursor: ns-resize;
-    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);
+    box-shadow: 1px 1px 0 rgba(143, 143, 143, 0.14);
 }
 .splitter-h div {
     margin-left: -2px;
@@ -34816,7 +34816,6 @@ body.disableIframe iframe {pointer-events: none;}
 .findbar {
     display:flex;
     height:30px;
-    background: #665a82;
     background: #cecece;
     color: #111;
     align-items: stretch;
@@ -34858,10 +34857,10 @@ div.consoleCloseBtn:hover {
     align-items: center;
     justify-content: flex-end;
     z-index: 1000;
-    padding: 0px;
+    padding: 0;
     position: absolute;
     right: 3px;
-    top: 0px;
+    top: 0;
     height: 24px;
 }
 
@@ -34961,10 +34960,9 @@ iframe {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-}`, "", { "version": 3, "sources": ["webpack://./assets/styles/layout.css"], "names": [], "mappings": "AAAA;IACI,+BAA+B;AACnC;;AAEA,2BAA2B,oBAAoB,CAAC;;AAEhD;IACI,iCAAiC;IACjC,UAAU;IACV,kBAAkB;AACtB;;AAEA;IACI,UAAU;IACV,iBAAiB;AACrB;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,iDAAiD;AACrD;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA;AACA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;;AAGA,mBAAmB,iBAAiB;AACpC;IACI,yBAAyB;IACzB,oBAAoB;AACxB;AACA;IACI,oBAAoB;AACxB;;;AAGA;IACI,0BAA0B;IAC1B,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,4BAA4B;IAC5B,0BAA0B;IAC1B,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,yBAAyB;IACzB,aAAa;IACb,YAAY;IACZ,kBAAkB;IAClB,UAAU;IACV,QAAQ;IACR,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,wDAAwD;IACxD,4DAA4D;AAChE;;;AAGA;IACI,4BAA4B;IAC5B,wDAAwD;IACxD,mCAAmC;AACvC;;;AAGA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,2CAA2C;IAC3C,kBAAkB;IAClB,sBAAsB;AAC1B;AACA;IACI,8CAA8C;IAC9C,sBAAsB;AAC1B;AACA;IACI,2CAA2C;AAC/C;;AAEA;IACI,6BAA6B;IAC7B,yBAAyB;IACzB,2BAA2B;AAC/B;;AAEA;IACI;AACJ;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,YAAY;AAChB;AACA;IACI;AACJ;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ;AACJ;AACA;;IAEI,4BAA4B;IAC5B;AACJ;AACA;IACI,uBAAuB;IACvB,cAAc;AAClB;AACA;IACI,mCAAmC;IACnC;AACJ;AACA;IACI,oBAAoB;IACpB,qBAAqB;AACzB;;AAEA;IACI,+CAA+C;IAC/C,oBAAoB;IACpB,YAAY;AAChB;;;AAGA;IACI,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,SAAS;IACT,eAAe;IACf,aAAa;IACb,wBAAwB;AAC5B", "sourcesContent": ["body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0px rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #665a82;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0px;\n    position: absolute;\n    right: 3px;\n    top: 0px;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline;\n}"], "sourceRoot": "" }]);
+}`, "", { "version": 3, "sources": ["webpack://./assets/styles/layout.css"], "names": [], "mappings": "AAAA;IACI,+BAA+B;AACnC;;AAEA,2BAA2B,oBAAoB,CAAC;;AAEhD;IACI,iCAAiC;IACjC,UAAU;IACV,kBAAkB;AACtB;;AAEA;IACI,UAAU;IACV,iBAAiB;AACrB;;AAEA;IACI,WAAW;IACX,iBAAiB;IACjB,+CAA+C;AACnD;AACA;IACI,iBAAiB;IACjB,UAAU;IACV;AACJ;AACA;IACI,gBAAgB;IAChB,WAAW;AACf;AACA;;AAEA;AACA;;AAEA;AACA;;AAEA;AACA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,mBAAmB;IACnB,WAAW;IACX,oBAAoB;IACpB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;;AAGA,mBAAmB,iBAAiB;AACpC;IACI,yBAAyB;IACzB,oBAAoB;AACxB;AACA;IACI,oBAAoB;AACxB;;;AAGA;IACI,0BAA0B;IAC1B,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,4BAA4B;IAC5B,0BAA0B;IAC1B,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,yBAAyB;IACzB,aAAa;IACb,UAAU;IACV,kBAAkB;IAClB,UAAU;IACV,MAAM;IACN,YAAY;AAChB;;AAEA;IACI,0BAA0B;IAC1B,wDAAwD;IACxD,4DAA4D;AAChE;;;AAGA;IACI,4BAA4B;IAC5B,wDAAwD;IACxD,mCAAmC;AACvC;;;AAGA;IACI,sBAAsB;AAC1B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,2CAA2C;IAC3C,kBAAkB;IAClB,sBAAsB;AAC1B;AACA;IACI,8CAA8C;IAC9C,sBAAsB;AAC1B;AACA;IACI,2CAA2C;AAC/C;;AAEA;IACI,6BAA6B;IAC7B,yBAAyB;IACzB,2BAA2B;AAC/B;;AAEA;IACI;AACJ;AACA;IACI,aAAa;IACb,mBAAmB;IACnB,YAAY;AAChB;AACA;IACI;AACJ;AACA;IACI,YAAY;AAChB;AACA;IACI,YAAY;IACZ;AACJ;AACA;;IAEI,4BAA4B;IAC5B;AACJ;AACA;IACI,uBAAuB;IACvB,cAAc;AAClB;AACA;IACI,mCAAmC;IACnC;AACJ;AACA;IACI,oBAAoB;IACpB,qBAAqB;AACzB;;AAEA;IACI,+CAA+C;IAC/C,oBAAoB;IACpB,YAAY;AAChB;;;AAGA;IACI,gBAAgB;AACpB;AACA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,SAAS;IACT,UAAU;IACV,SAAS;IACT,aAAa;IACb,wBAAwB;AAC5B", "sourcesContent": ["body {\n    font-family: Tahoma, sans-serif;\n}\n\nbody.disableIframe iframe {pointer-events: none;}\n\n.splitter {\n    background: var(--splitter-color);\n    z-index:10;\n    position: absolute;\n}\n\n.splitter-h {\n    width: 1px;\n    cursor: ew-resize;\n}\n\n.splitter-v {\n    height: 1px;\n    cursor: ns-resize;\n    box-shadow: 1px 1px 0 rgba(143, 143, 143, 0.14);\n}\n.splitter-h div {\n    margin-left: -2px;\n    width: 5px;\n    height: 100%\n}\n.splitter-v div {\n    margin-top: -2px;\n    height: 5px;\n}\n.splitter-h:hover {\n\n}\n.splitter-v:hover {\n\n}\n.splitter:hover {\n\n}\n.box {\n    overflow: hidden;\n}\n\n.menuToolBar {\n    display: flex;\n    height: 30px;\n    background: #787878;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n.findbar {\n    display:flex;\n    height:30px;\n    background: #cecece;\n    color: #111;\n    align-items: stretch;\n    justify-content: stretch;\n    overflow: hidden;\n    position: absolute;\n}\n\n\n.fullScreenParent {overflow: visible}\n.fullScreenNode {\n    position: fixed!important;\n    z-index: 1!important;\n}\n.fullScreenSibling {\n    z-index: 0!important;\n}\n\n\nbody {\n    overflow: hidden!important;\n    width: 100%;\n    height: 100%;\n}\n\n.consoleCloseBtn {\n    background-repeat: no-repeat;\n    background-size: 22px 66px;\n    cursor: pointer;\n    padding-right: 5px;\n}\n\ndiv.consoleCloseBtn:hover {\n    color: #35cc95;\n}\n\n.buttons {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    z-index: 1000;\n    padding: 0;\n    position: absolute;\n    right: 3px;\n    top: 0;\n    height: 24px;\n}\n\n.animateBoxes {\n    transition-duration: 0.15s;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: cubic-bezier(.10, .10, .25, .90);\n}\n\n\n.animateBoxes * {\n    transition-duration: inherit;\n    transition-property: top, left, width, height, transform;\n    transition-timing-function: inherit;\n}\n\n\n.tabPanel {\n    background: whitesmoke;\n}\n\n.inheritCursor *{\n    cursor: inherit;\n}\n\n.panelbar {\n    background-color: var(--toolbar-background);\n    position: absolute;\n    box-sizing: border-box;\n}\n.panelbar.top, .tabbar {\n    border-bottom: 1px solid var(--splitter-color);\n    box-sizing: border-box;\n}\n.panelbar.bottom {\n    border-top: 1px solid var(--splitter-color);\n}\n\nbody {\n    --toolbar-background: #f3f3f3;\n    --splitter-color: #d0d0d0;\n    --hover-background: #eaeaea;\n}\n\n.spacer {\n    flex: 1\n}\n.panelbar {\n    display: flex;\n    align-items: center;\n    padding: 4px;\n}\n.panelbar>* {\n    margin: 0 4px\n}\n.panelbar> button {\n    padding: 5px;\n}\n.panelbar> button, .panelbar> input  {\n    border: none;\n    color: #333\n}\n.panelbar> *:active,\n.panelbar> *:focus {\n    outline: 1px solid lightblue;\n    outline-offset: 1px\n}\n.panelbar> button {\n    background: transparent;\n    color: #0da6ff;\n}\n.panelbar> button:hover  {\n    background: var(--hover-background);\n    color: black\n}\n.panelbar> button[disabled] {\n    pointer-events: none;\n    color: gray!important;\n}\n\n.ace_editor.ace_listBox {\n    background: var(--toolbar-background)!important;\n    font-family: inherit;\n    border: none;\n}\n\n\n.ace_listBox .ace_ {\n    margin-left: 1em;\n}\n.ace_listBox .ace_header {\n    font-weight: bold;\n    margin-left: 0;\n}\n\niframe {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font: inherit;\n    vertical-align: baseline;\n}"], "sourceRoot": "" }]);
             const __WEBPACK_DEFAULT_EXPORT__ = ___CSS_LOADER_EXPORT___;
           }
         ),
@@ -42377,7 +42375,7 @@ iframe {
         /******/
       };
       var __webpack_module_cache__ = {};
-      function __nested_webpack_require_440138__(moduleId) {
+      function __nested_webpack_require_440017__(moduleId) {
         var cachedModule = __webpack_module_cache__[moduleId];
         if (cachedModule !== void 0) {
           return cachedModule.exports;
@@ -42391,12 +42389,12 @@ iframe {
           exports: {}
           /******/
         };
-        __webpack_modules__[moduleId].call(module2.exports, module2, module2.exports, __nested_webpack_require_440138__);
+        __webpack_modules__[moduleId].call(module2.exports, module2, module2.exports, __nested_webpack_require_440017__);
         return module2.exports;
       }
-      __nested_webpack_require_440138__.m = __webpack_modules__;
+      __nested_webpack_require_440017__.m = __webpack_modules__;
       (() => {
-        __nested_webpack_require_440138__.n = (module2) => {
+        __nested_webpack_require_440017__.n = (module2) => {
           var getter = module2 && module2.__esModule ? (
             /******/
             () => module2["default"]
@@ -42404,24 +42402,24 @@ iframe {
             /******/
             () => module2
           );
-          __nested_webpack_require_440138__.d(getter, { a: getter });
+          __nested_webpack_require_440017__.d(getter, { a: getter });
           return getter;
         };
       })();
       (() => {
-        __nested_webpack_require_440138__.d = (exports2, definition) => {
+        __nested_webpack_require_440017__.d = (exports2, definition) => {
           for (var key in definition) {
-            if (__nested_webpack_require_440138__.o(definition, key) && !__nested_webpack_require_440138__.o(exports2, key)) {
+            if (__nested_webpack_require_440017__.o(definition, key) && !__nested_webpack_require_440017__.o(exports2, key)) {
               Object.defineProperty(exports2, key, { enumerable: true, get: definition[key] });
             }
           }
         };
       })();
       (() => {
-        __nested_webpack_require_440138__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop);
+        __nested_webpack_require_440017__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop);
       })();
       (() => {
-        __nested_webpack_require_440138__.r = (exports2) => {
+        __nested_webpack_require_440017__.r = (exports2) => {
           if (typeof Symbol !== "undefined" && Symbol.toStringTag) {
             Object.defineProperty(exports2, Symbol.toStringTag, { value: "Module" });
           }
@@ -42429,7 +42427,7 @@ iframe {
         };
       })();
       (() => {
-        __nested_webpack_require_440138__.b = document.baseURI || self.location.href;
+        __nested_webpack_require_440017__.b = document.baseURI || self.location.href;
         var installedChunks = {
           /******/
           57: 0
@@ -42437,13 +42435,13 @@ iframe {
         };
       })();
       (() => {
-        __nested_webpack_require_440138__.nc = void 0;
+        __nested_webpack_require_440017__.nc = void 0;
       })();
       var __nested_webpack_exports__ = {};
       (() => {
         "use strict";
-        __nested_webpack_require_440138__.r(__nested_webpack_exports__);
-        __nested_webpack_require_440138__.d(__nested_webpack_exports__, {
+        __nested_webpack_require_440017__.r(__nested_webpack_exports__);
+        __nested_webpack_require_440017__.d(__nested_webpack_exports__, {
           Accordion: () => (
             /* reexport */
             Accordion
@@ -42566,54 +42564,54 @@ iframe {
           )
         });
         var accordion_namespaceObject = {};
-        __nested_webpack_require_440138__.r(accordion_namespaceObject);
-        __nested_webpack_require_440138__.d(accordion_namespaceObject, {
+        __nested_webpack_require_440017__.r(accordion_namespaceObject);
+        __nested_webpack_require_440017__.d(accordion_namespaceObject, {
           "default": () => styles_accordion
         });
         var tab_namespaceObject = {};
-        __nested_webpack_require_440138__.r(tab_namespaceObject);
-        __nested_webpack_require_440138__.d(tab_namespaceObject, {
+        __nested_webpack_require_440017__.r(tab_namespaceObject);
+        __nested_webpack_require_440017__.d(tab_namespaceObject, {
           "default": () => styles_tab
         });
         var menu_namespaceObject = {};
-        __nested_webpack_require_440138__.r(menu_namespaceObject);
-        __nested_webpack_require_440138__.d(menu_namespaceObject, {
+        __nested_webpack_require_440017__.r(menu_namespaceObject);
+        __nested_webpack_require_440017__.d(menu_namespaceObject, {
           "default": () => styles_menu
         });
         var button_namespaceObject = {};
-        __nested_webpack_require_440138__.r(button_namespaceObject);
-        __nested_webpack_require_440138__.d(button_namespaceObject, {
+        __nested_webpack_require_440017__.r(button_namespaceObject);
+        __nested_webpack_require_440017__.d(button_namespaceObject, {
           "default": () => assets_styles_button
         });
         var dropdown_namespaceObject = {};
-        __nested_webpack_require_440138__.r(dropdown_namespaceObject);
-        __nested_webpack_require_440138__.d(dropdown_namespaceObject, {
+        __nested_webpack_require_440017__.r(dropdown_namespaceObject);
+        __nested_webpack_require_440017__.d(dropdown_namespaceObject, {
           "default": () => styles_dropdown
         });
         var switcher_namespaceObject = {};
-        __nested_webpack_require_440138__.r(switcher_namespaceObject);
-        __nested_webpack_require_440138__.d(switcher_namespaceObject, {
+        __nested_webpack_require_440017__.r(switcher_namespaceObject);
+        __nested_webpack_require_440017__.d(switcher_namespaceObject, {
           "default": () => styles_switcher
         });
         var panel_namespaceObject = {};
-        __nested_webpack_require_440138__.r(panel_namespaceObject);
-        __nested_webpack_require_440138__.d(panel_namespaceObject, {
+        __nested_webpack_require_440017__.r(panel_namespaceObject);
+        __nested_webpack_require_440017__.d(panel_namespaceObject, {
           "default": () => styles_panel
         });
         var layout_namespaceObject = {};
-        __nested_webpack_require_440138__.r(layout_namespaceObject);
-        __nested_webpack_require_440138__.d(layout_namespaceObject, {
+        __nested_webpack_require_440017__.r(layout_namespaceObject);
+        __nested_webpack_require_440017__.d(layout_namespaceObject, {
           "default": () => styles_layout
         });
         var ace_tree_namespaceObject = {};
-        __nested_webpack_require_440138__.r(ace_tree_namespaceObject);
-        __nested_webpack_require_440138__.d(ace_tree_namespaceObject, {
+        __nested_webpack_require_440017__.r(ace_tree_namespaceObject);
+        __nested_webpack_require_440017__.d(ace_tree_namespaceObject, {
           "default": () => styles_ace_tree
         });
-        var hash_handler_ = __nested_webpack_require_440138__(736);
+        var hash_handler_ = __nested_webpack_require_440017__(736);
         ;
-        const commandManager_event = __nested_webpack_require_440138__(517);
-        const keyUtil = __nested_webpack_require_440138__(863);
+        const commandManager_event = __nested_webpack_require_440017__(517);
+        const keyUtil = __nested_webpack_require_440017__(863);
         class CommandManager {
           static registerCommands(commands, context) {
             let menuKb = new hash_handler_.HashHandler(commands);
@@ -42628,7 +42626,7 @@ iframe {
             });
           }
         }
-        var useragent_ = __nested_webpack_require_440138__(493);
+        var useragent_ = __nested_webpack_require_440017__(493);
         ;
         var XHTML_NS = "http://www.w3.org/1999/xhtml";
         var dom;
@@ -42937,8 +42935,8 @@ iframe {
           }
           Utils2.getElementEdges = getElementEdges;
         })(Utils || (Utils = {}));
-        var event_ = __nested_webpack_require_440138__(517);
-        var events = __nested_webpack_require_440138__(46);
+        var event_ = __nested_webpack_require_440017__(517);
+        var events = __nested_webpack_require_440017__(46);
         ;
         const SPLITTER_SIZE = 1;
         const BOX_MIN_SIZE = 40;
@@ -42949,17 +42947,18 @@ iframe {
             this.$editorAdded = (editor) => {
               this.emit("editorAdded", editor);
             };
+            options2 != null ? options2 : options2 = {};
             if (options2.splitter !== false) {
             }
             this.vertical = options2.vertical || false;
             this.color = (_a = options2.color) != null ? _a : "";
             this.isMain = options2.isMain || false;
-            this[0] = options2[0];
-            this[1] = options2[1];
-            if (this[0])
-              this[0].parent = this;
-            if (this[1])
-              this[1].parent = this;
+            this.childBox1 = options2.childBox1 || options2[0];
+            this.childBox2 = options2.childBox2 || options2[1];
+            if (this.childBox1)
+              this.childBox1.parent = this;
+            if (this.childBox2)
+              this.childBox2.parent = this;
             this.ratio = options2.ratio;
             this.toolBars = options2.toolBars || {};
             this.padding = { top: 0, right: 0, bottom: 0, left: 0 };
@@ -42987,9 +42986,10 @@ iframe {
             document.documentElement.style.cursor = value;
           }
           toJSON() {
+            var _a, _b;
             return {
-              0: this[0] && this[0].toJSON(),
-              1: this[1] && this[1].toJSON(),
+              childBox1: (_a = this.childBox1) == null ? void 0 : _a.toJSON(),
+              childBox2: (_b = this.childBox2) == null ? void 0 : _b.toJSON(),
               ratio: this.ratio,
               type: this.vertical ? "vbox" : "hbox",
               fixedSize: this.fixedSize || null,
@@ -43008,17 +43008,19 @@ iframe {
             let y = e.clientY;
             document.body.classList.add("dragging");
             let onMouseMove = function(e2) {
+              var _a;
               x = e2.clientX - rect.left - box.padding.left;
               y = e2.clientY - rect.top - box.padding.top;
               let height = rect.height - box.padding.top - box.padding.bottom;
               let width = rect.width - box.padding.left - box.padding.right;
               if (box.fixedChild) {
+                let isFarChildFixed = box.isFixedChild(box.childBox2);
                 if (box.vertical) {
-                  box.fixedChild.fixedSize = box.fixedChild === box[1] ? height - y : y;
+                  box.fixedChild.fixedSize = isFarChildFixed ? height - y : y;
                 } else {
-                  box.fixedChild.fixedSize = box.fixedChild === box[1] ? width - x : x;
+                  box.fixedChild.fixedSize = isFarChildFixed ? width - x : x;
                 }
-                box.fixedChild.fixedSize = Math.max(box.fixedChild.fixedSize, box.fixedChild.minSize);
+                box.fixedChild.fixedSize = Math.max((_a = box.fixedChild.fixedSize) != null ? _a : 0, box.fixedChild.minSize);
                 box.ratio = void 0;
               } else {
                 if (box.vertical) {
@@ -43044,12 +43046,12 @@ iframe {
             this.setBox(...this.box);
           }
           calculateMinMaxRatio() {
-            if (!this.box || !this[0] && !this[1])
+            if (!this.box || !this.childBox1 && !this.childBox2)
               return;
             let propertyName = this.vertical ? "minVerticalSize" : "minHorizontalSize";
             let size = this.vertical ? this.box[3] - this.padding.top - this.padding.bottom : this.box[2] - this.padding.left - this.padding.right;
-            this.minRatio = this[0] ? this[0][propertyName] / size : 0;
-            this.maxRatio = this[1] ? (size - this[1][propertyName]) / size : 1;
+            this.minRatio = this.childBox1 ? this.childBox1[propertyName] / size : 0;
+            this.maxRatio = this.childBox2 ? (size - this.childBox2[propertyName]) / size : 1;
           }
           render() {
             var _a;
@@ -43096,8 +43098,8 @@ iframe {
             this.padding[position] = 0;
           }
           renderChildren() {
-            this.renderChild(this[0]);
-            this.renderChild(this[1]);
+            this.renderChild(this.childBox1);
+            this.renderChild(this.childBox2);
             this.calculateMinSize();
           }
           renderChild(child) {
@@ -43112,6 +43114,8 @@ iframe {
             let childrenMinVerticalSize = 0;
             let childrenMinHorizontalSize = 0;
             let calculateChildBoxMinSize = (childBox) => {
+              if (!childBox)
+                return;
               if (this.vertical) {
                 childrenMinVerticalSize += childBox.minVerticalSize;
                 childrenMinHorizontalSize = Math.max(childBox.minHorizontalSize, childrenMinHorizontalSize);
@@ -43120,10 +43124,8 @@ iframe {
                 childrenMinHorizontalSize += childBox.minHorizontalSize;
               }
             };
-            if (this[0])
-              calculateChildBoxMinSize(this[0]);
-            if (this[1])
-              calculateChildBoxMinSize(this[1]);
+            calculateChildBoxMinSize(this.childBox1);
+            calculateChildBoxMinSize(this.childBox2);
             if (forceChildrenSize) {
               this.minVerticalSize = childrenMinVerticalSize;
               this.minHorizontalSize = childrenMinHorizontalSize;
@@ -43135,21 +43137,17 @@ iframe {
             this.calculateMinMaxRatio();
           }
           calculateRatio() {
-            if (this[0]) {
-              this.calculateChildRatio(this[0]);
-            }
+            this.calculateChildRatio(this.childBox1);
             if (this.ratio || this.fixedChild) {
               return;
             }
-            if (this[1]) {
-              this.calculateChildRatio(this[1]);
-            }
+            this.calculateChildRatio(this.childBox2, true);
             if (!this.ratio && !this.fixedChild) {
               this.ratio = 0.5;
             }
           }
           calculateChildRatio(childBox, isSecond = false) {
-            if (!childBox.size) {
+            if (!(childBox == null ? void 0 : childBox.size)) {
               return;
             }
             let size = childBox.size;
@@ -43180,23 +43178,19 @@ iframe {
            * Sets buttons of this box top-right tabBar
            */
           setButtons(buttons) {
+            var _a;
             this.buttons = buttons;
-            if (this.topRightPane)
-              this.topRightPane.removeButtons();
-            this.topRightPane = this.getTopRightPane();
-            if (this.topRightPane)
-              this.topRightPane.setButtons(buttons);
+            (_a = this.getTopRightPane()) == null ? void 0 : _a.setButtons(buttons);
           }
           addButton(button) {
-            this.topRightPane = this.getTopRightPane();
-            if (this.topRightPane)
-              this.topRightPane.addButton(button);
+            var _a;
+            (_a = this.getTopRightPane()) == null ? void 0 : _a.addButton(button);
           }
           /**
            * Finds the most top-right Pane
            */
           getTopRightPane() {
-            let childBox = this.vertical ? this[0] || this[1] : this[1] || this[0];
+            let childBox = this.vertical ? this.childBox1 || this.childBox2 : this.childBox2 || this.childBox1;
             if (!childBox)
               return;
             return childBox.getTopRightPane();
@@ -43214,13 +43208,10 @@ iframe {
             this.$updateChildSize(x, y, w, h);
           }
           $updateChildSize(x, y, w, h) {
-            var _a;
+            var _a, _b, _c, _d, _e;
             let splitterSize = SPLITTER_SIZE;
-            if (!this[0] || this[0].hidden || !this[1] || this[1].hidden) {
-              this.splitter.style.display = "none";
+            if (!this.childBox1 || this.childBox1.hidden || !this.childBox2 || this.childBox2.hidden) {
               splitterSize = 0;
-            } else {
-              this.splitter.style.display = "";
             }
             this.updateToolBarSize(w, h);
             w -= this.padding.left + this.padding.right;
@@ -43229,34 +43220,30 @@ iframe {
             y = this.padding.top;
             if (this.fixedChild) {
               let size = this.fixedChild.fixedSize;
-              if (this.fixedChild === this[1]) {
+              if (this.isFixedChild(this.childBox2)) {
                 size = this.vertical ? h - size : w - size;
               }
               this.ratio = this.vertical ? size / h : size / w;
             }
             this.ratio = Math.max(this.minRatio, Math.min((_a = this.ratio) != null ? _a : this.maxRatio, this.maxRatio));
             let ratio = this.ratio;
-            if (!this[0] || this[0].hidden) {
+            if (!this.childBox1 || this.childBox1.hidden) {
               ratio = 0;
-            } else if (!this[1] || this[1].hidden) {
+            } else if (!this.childBox2 || this.childBox2.hidden) {
               ratio = 1;
             }
             if (this.vertical) {
               let splitY = h * ratio - splitterSize;
               if (this.splitter)
                 Utils.setBox(this.splitter, x, y + splitY, w, splitterSize);
-              if (this[0])
-                this[0].setBox(x, y, w, splitY);
-              if (this[1])
-                this[1].setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
+              (_b = this.childBox1) == null ? void 0 : _b.setBox(x, y, w, splitY);
+              (_c = this.childBox2) == null ? void 0 : _c.setBox(x, y + splitY + splitterSize, w, h - splitY - splitterSize);
             } else {
               let splitX = w * ratio - splitterSize;
               if (this.splitter)
                 Utils.setBox(this.splitter, x + splitX, y, splitterSize, h);
-              if (this[0])
-                this[0].setBox(x, y, splitX, h);
-              if (this[1])
-                this[1].setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
+              (_d = this.childBox1) == null ? void 0 : _d.setBox(x, y, splitX, h);
+              (_e = this.childBox2) == null ? void 0 : _e.setBox(x + splitX + splitterSize, y, w - splitX - splitterSize, h);
             }
           }
           updateToolBarSize(width, height) {
@@ -43319,9 +43306,10 @@ iframe {
               });
             }
             let parentRect = node.parentNode.getBoundingClientRect();
-            let top = parentRect.top + this.box[1];
-            let left = parentRect.left + this.box[0];
-            Utils.setBox(node, left, top, this.box[2], this.box[3]);
+            let [x, y, w, h] = this.box;
+            let top = parentRect.top + y;
+            let left = parentRect.left + x;
+            Utils.setBox(node, left, top, w, h);
           }
           maximize(disableAnimation = false) {
             let node = this.element;
@@ -43361,30 +43349,39 @@ iframe {
               this.maximize();
           }
           remove() {
+            var _a;
             this.removeAllChildren();
-            if (this.element)
-              this.element.remove();
-            if (this.parent) {
-              if (this.parent[0] == this)
-                this.parent[0] = void 0;
-              if (this.parent[1] == this)
-                this.parent[1] = void 0;
-              this.parent.recalculateAllMinSizes();
-              this.parent = void 0;
-            }
+            (_a = this.parent) == null ? void 0 : _a.disconnectChildBox(this);
+            this.element.remove();
           }
           removeAllChildren() {
-            this.removeChild(this[0]);
-            this.removeChild(this[1]);
-            this[0] = void 0;
-            this[1] = void 0;
+            this.removeChildBox(this.childBox1);
+            this.removeChildBox(this.childBox2);
           }
-          removeChild(child) {
-            if (!child)
+          removeChildBox(childBox) {
+            if (!childBox)
               return;
-            child.off("editorAdded", this.$editorAdded);
-            child.remove();
-            child.element.remove();
+            this.disconnectChildBox(childBox);
+            childBox.remove();
+          }
+          disconnectChildBox(childBox) {
+            if (!childBox)
+              return;
+            if (childBox.parent === this)
+              childBox.parent = void 0;
+            if (this.childBox1 === childBox) {
+              this.childBox1 = void 0;
+            } else if (this.childBox2 === childBox) {
+              this.childBox2 = void 0;
+            } else {
+              console.log("tried to disconnect missing child box");
+              return;
+            }
+            if (this.isFixedChild(childBox)) {
+              this.fixedChild = void 0;
+            }
+            childBox.off("editorAdded", this.$editorAdded);
+            this.recalculateAllMinSizes();
           }
           toggleShowHide() {
             var _a;
@@ -43428,52 +43425,50 @@ iframe {
               (_a2 = self2.parent) == null ? void 0 : _a2.resize();
             });
           }
+          isFixedChild(box) {
+            return box !== void 0 && this.fixedChild === box;
+          }
+          getChildBox(far = false) {
+            return far ? this.childBox2 : this.childBox1;
+          }
+          getChildBoxSibling(box) {
+            return box === this.childBox1 ? this.childBox2 : this.childBox1;
+          }
+          replaceChildBox(previousBox, newBox) {
+            var _a, _b;
+            if (previousBox === newBox)
+              return previousBox;
+            let far = this.getChildBox(true) === previousBox;
+            let fix = this.isFixedChild(previousBox);
+            let fixedSize = previousBox.fixedSize;
+            if (previousBox.isMaximized) {
+              previousBox.restore(true);
+              newBox.maximize(true);
+            }
+            (_a = newBox.parent) == null ? void 0 : _a.disconnectChildBox(newBox);
+            this.disconnectChildBox(previousBox);
+            this.addChildBox(newBox, far, fix, fixedSize);
+            let buttons = (_b = previousBox.buttons) != null ? _b : [];
+            previousBox.setButtons([]);
+            newBox.setButtons(buttons);
+          }
           /**
            *
-           * @param {Number} previousBoxIndex
            * @param {Box} box
+           * @param {boolean} far
+           * @param {boolean} fix
+           * @param {number?} fixedSize
            * @returns {Box}
            */
-          addChildBox(previousBoxIndex, box) {
-            let previousBox, index;
-            if (previousBoxIndex instanceof Box) {
-              previousBox = previousBoxIndex;
-              index = this[0] == previousBox ? 0 : 1;
-            } else {
-              index = previousBoxIndex;
-              previousBox = this[index];
-            }
-            if (previousBox && previousBox === box)
-              return previousBox;
-            let previousParent = box.parent;
-            if (previousParent && previousParent !== this) {
-              let previousIndex = previousParent[0] === box ? 0 : 1;
-              previousParent[previousIndex] = null;
-              previousParent.ratio = 1;
-              if (previousParent.fixedChild && previousParent.fixedChild === box) {
-                previousParent.fixedChild = null;
-              }
-              previousParent.resize();
-            }
-            this[index] = box;
+          addChildBox(box, far, fix = false, fixedSize) {
+            far ? this.childBox2 = box : this.childBox1 = box;
             box.parent = this;
             this.renderChild(box);
-            if (previousBox && previousBox.isMaximized) {
-              previousBox.restore(true);
-              box.maximize(true);
-            }
-            if (previousBox && previousBox.parent === this) {
-              if (this.fixedChild && this.fixedChild == previousBox) {
-                box.fixedSize = previousBox.fixedSize;
-                if (!box.size)
-                  box.size = previousBox.size;
-                previousBox.fixedSize = previousBox.size = null;
-                this.fixedChild = box;
-              }
-              previousBox.remove();
-            }
-            if (!this.fixedChild)
+            if (fix) {
+              box.fixedSize = fixedSize;
+              this.fixedChild = box;
               this.calculateChildRatio(box);
+            }
             this.recalculateAllMinSizes();
             this.resize();
             return box;
@@ -43487,7 +43482,7 @@ iframe {
           }
         }
         ;
-        let accordion_handler_event = __nested_webpack_require_440138__(517);
+        let accordion_handler_event = __nested_webpack_require_440017__(517);
         var AccordionHandler;
         ((AccordionHandler2) => {
           AccordionHandler2.toggleBarMouseDown = function(e, accordionConstructor) {
@@ -43726,19 +43721,19 @@ iframe {
             return e.preventDefault();
           };
         })(AccordionHandler || (AccordionHandler = {}));
-        var injectStylesIntoStyleTag = __nested_webpack_require_440138__(591);
-        var injectStylesIntoStyleTag_default = /* @__PURE__ */ __nested_webpack_require_440138__.n(injectStylesIntoStyleTag);
-        var styleDomAPI = __nested_webpack_require_440138__(740);
-        var styleDomAPI_default = /* @__PURE__ */ __nested_webpack_require_440138__.n(styleDomAPI);
-        var insertBySelector = __nested_webpack_require_440138__(128);
-        var insertBySelector_default = /* @__PURE__ */ __nested_webpack_require_440138__.n(insertBySelector);
-        var setAttributesWithoutAttributes = __nested_webpack_require_440138__(855);
-        var setAttributesWithoutAttributes_default = /* @__PURE__ */ __nested_webpack_require_440138__.n(setAttributesWithoutAttributes);
-        var insertStyleElement = __nested_webpack_require_440138__(51);
-        var insertStyleElement_default = /* @__PURE__ */ __nested_webpack_require_440138__.n(insertStyleElement);
-        var styleTagTransform = __nested_webpack_require_440138__(656);
-        var styleTagTransform_default = /* @__PURE__ */ __nested_webpack_require_440138__.n(styleTagTransform);
-        var accordion = __nested_webpack_require_440138__(286);
+        var injectStylesIntoStyleTag = __nested_webpack_require_440017__(591);
+        var injectStylesIntoStyleTag_default = /* @__PURE__ */ __nested_webpack_require_440017__.n(injectStylesIntoStyleTag);
+        var styleDomAPI = __nested_webpack_require_440017__(740);
+        var styleDomAPI_default = /* @__PURE__ */ __nested_webpack_require_440017__.n(styleDomAPI);
+        var insertBySelector = __nested_webpack_require_440017__(128);
+        var insertBySelector_default = /* @__PURE__ */ __nested_webpack_require_440017__.n(insertBySelector);
+        var setAttributesWithoutAttributes = __nested_webpack_require_440017__(855);
+        var setAttributesWithoutAttributes_default = /* @__PURE__ */ __nested_webpack_require_440017__.n(setAttributesWithoutAttributes);
+        var insertStyleElement = __nested_webpack_require_440017__(51);
+        var insertStyleElement_default = /* @__PURE__ */ __nested_webpack_require_440017__.n(insertStyleElement);
+        var styleTagTransform = __nested_webpack_require_440017__(656);
+        var styleTagTransform_default = /* @__PURE__ */ __nested_webpack_require_440017__.n(styleTagTransform);
+        var accordion = __nested_webpack_require_440017__(286);
         ;
         var options = {};
         options.styleTagTransform = styleTagTransform_default();
@@ -44086,7 +44081,7 @@ iframe {
             };
           }
         }
-        var popup_ = __nested_webpack_require_440138__(910);
+        var popup_ = __nested_webpack_require_440017__(910);
         ;
         class ListBox extends Box {
           render() {
@@ -44127,13 +44122,13 @@ iframe {
             this.popup.resize(true);
           }
         }
-        var esm_resolver_ = __nested_webpack_require_440138__(444);
-        var esm_resolver_default = /* @__PURE__ */ __nested_webpack_require_440138__.n(esm_resolver_);
-        var editor_ = __nested_webpack_require_440138__(254);
-        var virtual_renderer_ = __nested_webpack_require_440138__(748);
-        var language_tools_ = __nested_webpack_require_440138__(685);
+        var esm_resolver_ = __nested_webpack_require_440017__(444);
+        var esm_resolver_default = /* @__PURE__ */ __nested_webpack_require_440017__.n(esm_resolver_);
+        var editor_ = __nested_webpack_require_440017__(254);
+        var virtual_renderer_ = __nested_webpack_require_440017__(748);
+        var language_tools_ = __nested_webpack_require_440017__(685);
         ;
-        const modeList = __nested_webpack_require_440138__(292);
+        const modeList = __nested_webpack_require_440017__(292);
         class AceEditor {
           resize() {
             this.editor.resize();
@@ -44246,7 +44241,7 @@ iframe {
           }
         }
         ;
-        let tabbar_handler_event = __nested_webpack_require_440138__(517);
+        let tabbar_handler_event = __nested_webpack_require_440017__(517);
         var TabbarHandler;
         ((TabbarHandler2) => {
           TabbarHandler2.tabbarMouseDown = function(e, tabConstructor, tabBarConstructor, showSplit = false) {
@@ -44533,7 +44528,7 @@ iframe {
         window.addEventListener("mouseup", function() {
           document.body.classList.remove("disableIframe");
         }, true);
-        var tab = __nested_webpack_require_440138__(129);
+        var tab = __nested_webpack_require_440017__(129);
         ;
         var tab_options = {};
         tab_options.styleTagTransform = styleTagTransform_default();
@@ -45052,8 +45047,7 @@ iframe {
             desc: "create a three pane layout with the stack on the right side"
           }
         ];
-        var event_emitter_ = __nested_webpack_require_440138__(540);
-        var menu = __nested_webpack_require_440138__(807);
+        var menu = __nested_webpack_require_440017__(807);
         ;
         var menu_options = {};
         menu_options.styleTagTransform = styleTagTransform_default();
@@ -45783,8 +45777,8 @@ iframe {
           }
         }
         ;
-        const menuManager_event = __nested_webpack_require_440138__(517);
-        const menuManager_keyUtil = __nested_webpack_require_440138__(863);
+        const menuManager_event = __nested_webpack_require_440017__(517);
+        const menuManager_keyUtil = __nested_webpack_require_440017__(863);
         function getPrevSibling(node, conditionFn, parentElement) {
           parentElement = node ? node.parentElement : parentElement;
           let wrapped = false;
@@ -46104,8 +46098,7 @@ iframe {
         class MenuItems {
         }
         ;
-        const oop = __nested_webpack_require_440138__(387);
-        const useragent = __nested_webpack_require_440138__(493);
+        const useragent = __nested_webpack_require_440017__(493);
         let newTabCounter = 1;
         class TabManager {
           constructor(options2) {
@@ -46114,8 +46107,8 @@ iframe {
                 return;
               box.removeAllChildren();
               this.setBoxData(box, state);
-              if (!box[0] && box.isMain)
-                this.setChildBoxData(box, [{ type: "pane" }], 0);
+              if (!box.childBox1 && box.isMain)
+                this.setChildBoxData(box, { type: "pane" });
             };
             this.containers = options2.containers;
             this.tabs = {};
@@ -46165,15 +46158,23 @@ iframe {
               return [container, (_a = this.containers[container]) == null ? void 0 : _a.toJSON()];
             }));
           }
-          setChildBoxData(box, boxData, index) {
-            if (!boxData[index])
+          createBox(boxType) {
+            if (boxType === "pane") {
+              return new Pane();
+            } else {
+              return new Box({ vertical: boxType === "vbox" });
+            }
+          }
+          setChildBoxData(parentBox, boxData, far = false) {
+            var _a;
+            if (!boxData)
               return;
-            let boxType = boxData[index].type;
-            if (!box[index])
-              box.addChildBox(index, boxType === "pane" ? new Pane() : new Box({ vertical: boxType === "vbox" }));
-            this.setBoxData(box[index], boxData[index]);
+            let boxType = boxData.type;
+            let childBox = (_a = parentBox.getChildBox(far)) != null ? _a : parentBox.addChildBox(this.createBox(boxType), far);
+            this.setBoxData(childBox, boxData);
           }
           setBoxData(box, boxData) {
+            var _a, _b;
             if (!boxData)
               return;
             if (boxData.fixedSize)
@@ -46196,8 +46197,8 @@ iframe {
             } else {
               box.hidden = boxData.hidden;
               box.ratio = boxData.ratio;
-              this.setChildBoxData(box, boxData, 0);
-              this.setChildBoxData(box, boxData, 1);
+              this.setChildBoxData(box, (_a = boxData.childBox1) != null ? _a : boxData[0]);
+              this.setChildBoxData(box, (_b = boxData.childBox2) != null ? _b : boxData[1], true);
               box.buttons && box.setButtons(box.buttons);
             }
           }
@@ -46306,7 +46307,6 @@ iframe {
             return this.tabs[path];
           }
         }
-        oop.implement(TabManager.prototype, event_emitter_.EventEmitter);
         ;
         class Toolbar {
           setBox(x, y, w, h) {
@@ -46722,18 +46722,19 @@ iframe {
           setButtons(buttons) {
             this.additionalButtons.innerHTML = "";
             this.buttons = buttons;
-            buttons.forEach((button) => this.additionalButtons.appendChild(button));
-            let rect = this.additionalButtons.getBoundingClientRect();
-            this.buttonsWidth = rect.width;
+            if (buttons.length) {
+              buttons.forEach((button) => this.additionalButtons.appendChild(button));
+              let rect = this.additionalButtons.getBoundingClientRect();
+              this.buttonsWidth = rect.width;
+            } else {
+              this.buttonsWidth = 0;
+            }
             this.configure();
           }
           removeButtons() {
             if (!this.buttons.length)
               return;
-            this.buttons = [];
-            this.additionalButtons.innerHTML = "";
-            this.buttonsWidth = 0;
-            this.configure();
+            this.setButtons([]);
           }
           clear() {
             this.removeButtons();
@@ -46817,33 +46818,14 @@ iframe {
           acceptsTab(tab2) {
             return true;
           }
-          split(far, vertical) {
-            let newPane = new Pane({});
-            let root = this.parent;
-            let wrapper = new Box({
-              [far ? 1 : 0]: this,
-              [far ? 0 : 1]: newPane,
-              vertical,
-              ratio: 0.5
-            });
-            root.addChildBox(this, wrapper);
-            if (this.isButtonHost) {
-              let buttons = this.tabBar.buttons;
-              this.removeButtons();
-              wrapper.setButtons(buttons);
-            }
-            return newPane;
-          }
           setButtons(buttons) {
-            this.isButtonHost = true;
-            if (buttons) {
-              this.tabBar.setButtons(buttons);
-            } else {
-              this.tabBar.removeButtons();
-            }
+            this.buttons = buttons;
+            this.tabBar.setButtons(buttons);
+          }
+          removeButtons() {
+            this.tabBar.removeButtons();
           }
           addButton(button) {
-            this.isButtonHost = true;
             this.tabBar.addButton(button);
           }
           $updateChildSize(x, y, w, h) {
@@ -46857,39 +46839,31 @@ iframe {
               this.editor.resize();
             }
           }
-          removeButtons() {
-            this.tabBar.removeButtons();
-            this.isButtonHost = false;
+          split(far, vertical) {
+            let newPane = new Pane({});
+            let root = this.parent;
+            let [childBox1, childBox2] = far ? [newPane, this] : [this, newPane];
+            let wrapper = new Box({
+              childBox1,
+              childBox2,
+              vertical
+            });
+            root.replaceChildBox(this, wrapper);
+            return newPane;
           }
           remove() {
-            let wrapper = this.parent;
-            let root = wrapper.parent;
-            let paneIndex = wrapper[0] == this ? 1 : 0;
-            let pane = wrapper[paneIndex] || null;
-            let rootIndex = root[0] == wrapper ? 0 : 1;
-            if (pane) {
-              pane.parent = root;
-              root[rootIndex] = pane;
-              root.element.appendChild(pane.element);
-              if (root.fixedChild && root.fixedChild == wrapper) {
-                pane.fixedSize = wrapper.fixedSize;
-                pane.size = wrapper.size;
-                root.fixedChild = pane;
-              }
-              wrapper.element.remove();
-            } else {
-              if (wrapper.isMain) {
-                root = wrapper;
-              } else {
-                wrapper.element.remove();
-              }
-              root.ratio = 1;
-            }
-            root.recalculateAllMinSizes();
-            root.resize();
-            if (this.isButtonHost)
-              root.setButtons(this.tabBar.buttons);
             this.clearEditors();
+            let parentBox = this.parent;
+            if (!parentBox)
+              return;
+            let root = parentBox.parent;
+            let siblingBox = parentBox.getChildBoxSibling(this);
+            if (parentBox.isMain && !siblingBox)
+              return;
+            if (siblingBox)
+              root.replaceChildBox(parentBox, siblingBox);
+            this.element.remove();
+            parentBox.remove();
             this.tabBar.clear();
           }
           getTopRightPane() {
@@ -46941,7 +46915,7 @@ iframe {
             this.editor = void 0;
           }
         }
-        var styles_button = __nested_webpack_require_440138__(382);
+        var styles_button = __nested_webpack_require_440017__(382);
         ;
         var button_options = {};
         button_options.styleTagTransform = styleTagTransform_default();
@@ -47006,15 +46980,16 @@ iframe {
             var _a;
             this.renderElement();
             this.element.$host = this;
+            this.element.setAttribute("role", "button");
             this.element.onclick = (_a = this.onClick) != null ? _a : null;
-            this.disabled && this.element.classList.add("Disabled");
+            this.disabled && this.element.classList.add("disabled");
             this.onClick && this.element.addEventListener("click", this.onClick);
-            this.element.addEventListener("mousedown", (e) => this.addClass(e, "Down"));
-            this.element.addEventListener("mouseup", (e) => this.removeClass(e, "Down"));
-            this.element.addEventListener("mouseover", (e) => this.addClass(e, "Over"));
-            this.element.addEventListener("mouseout", (e) => this.removeClass(e, "Over"));
-            this.element.addEventListener("focus", (e) => this.addClass(e, "Focus"));
-            this.element.addEventListener("unfocus", (e) => this.removeClass(e, "Focus"));
+            this.element.addEventListener("mousedown", (e) => this.addClass(e, "down"));
+            this.element.addEventListener("mouseup", (e) => this.removeClass(e, "down"));
+            this.element.addEventListener("mouseover", (e) => this.addClass(e, "over"));
+            this.element.addEventListener("mouseout", (e) => this.removeClass(e, "over"));
+            this.element.addEventListener("focus", (e) => this.addClass(e, "focus"));
+            this.element.addEventListener("unfocus", (e) => this.removeClass(e, "focus"));
             return this.element;
           }
           addClass(e, className) {
@@ -47030,9 +47005,10 @@ iframe {
             this.element.classList.add(this.className);
           }
           toJSON() {
+            return {};
           }
         }
-        var dropdown = __nested_webpack_require_440138__(593);
+        var dropdown = __nested_webpack_require_440017__(593);
         ;
         var dropdown_options = {};
         dropdown_options.styleTagTransform = styleTagTransform_default();
@@ -47485,7 +47461,7 @@ iframe {
             }
           }
         }
-        var switcher = __nested_webpack_require_440138__(915);
+        var switcher = __nested_webpack_require_440017__(915);
         ;
         var switcher_options = {};
         switcher_options.styleTagTransform = styleTagTransform_default();
@@ -47692,6 +47668,8 @@ iframe {
                   let sections = panelBodyData.sections;
                   for (let index = 0; index < sections.length; index++) {
                     accordionSections.push({
+                      sizePercent: 0,
+                      currentSize: 0,
                       title: sections[index].title,
                       box: new Box(sections[index].boxData)
                     });
@@ -47729,7 +47707,7 @@ iframe {
             let index = location.index;
             let parent = location.parent;
             panel2.panelBody.size = location.size;
-            let newBox = parent.addChildBox(index, panel2.panelBody);
+            let newBox = parent.addChildBox(panel2.panelBody, index === 1);
             if (newBox.fixedSize && !parent.fixedChild)
               parent.fixedChild = newBox;
             location.box = newBox;
@@ -47740,7 +47718,7 @@ iframe {
             location == null ? void 0 : location.box.hide();
           }
         }
-        var panel = __nested_webpack_require_440138__(174);
+        var panel = __nested_webpack_require_440017__(174);
         ;
         var panel_options = {};
         panel_options.styleTagTransform = styleTagTransform_default();
@@ -47789,7 +47767,7 @@ iframe {
           remove() {
           }
         }
-        var layout = __nested_webpack_require_440138__(0);
+        var layout = __nested_webpack_require_440017__(0);
         ;
         var layout_options = {};
         layout_options.styleTagTransform = styleTagTransform_default();
@@ -47806,7 +47784,8 @@ iframe {
             this.box = startBox;
           }
         }
-        var ace_tree_lib = __nested_webpack_require_440138__(532);
+        var ace_tree_lib = __nested_webpack_require_440017__(532);
+        var event_emitter_ = __nested_webpack_require_440017__(540);
         ;
         const getIconUrl = (path, isDir) => {
           return `https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/${getIconName(
@@ -47903,7 +47882,7 @@ iframe {
               return null;
           }
         }
-        var ace_tree = __nested_webpack_require_440138__(216);
+        var ace_tree = __nested_webpack_require_440017__(216);
         ;
         var ace_tree_options = {};
         ace_tree_options.styleTagTransform = styleTagTransform_default();
@@ -47914,7 +47893,7 @@ iframe {
         var ace_tree_update = injectStylesIntoStyleTag_default()(ace_tree.A, ace_tree_options);
         const styles_ace_tree = ace_tree.A && ace_tree.A.locals ? ace_tree.A.locals : void 0;
         ;
-        const ace_tree_oop = __nested_webpack_require_440138__(387);
+        const oop = __nested_webpack_require_440017__(387);
         dom.importCssString(ace_tree_namespaceObject, "ace-tree.css");
         function transform(node) {
           const path = node["path"] || "";
@@ -47992,7 +47971,7 @@ iframe {
             };
           }
         }
-        ace_tree_oop.implement(AceTreeWrapper.prototype, event_emitter_.EventEmitter);
+        oop.implement(AceTreeWrapper.prototype, event_emitter_.EventEmitter);
         ;
         var __knownSymbol = (name, symbol) => {
           return (symbol = Symbol[name]) ? symbol : Symbol.for("Symbol." + name);
@@ -49134,10 +49113,11 @@ let base = new bundle_index.Box({
             vertical: true,
             size: 200,
             sections: [
-              { title: "open editors", box: new bundle_index.Box({ vertical: false, size: 200, color: "blue" }) },
-              { title: "project name", box: new bundle_index.Box({ vertical: false, size: 500, color: "red" }) },
-              { title: "outline", box: new bundle_index.Box({ vertical: false, size: 500, color: "green" }) },
-              { title: "timeline", box: new bundle_index.Box({ vertical: false, size: 500, color: "pink" }) }
+              //TODO currentSize and sizePercent should be calculated by the accordion
+              { title: "open editors", currentSize: 0, sizePercent: 0, box: new bundle_index.Box({ vertical: false, size: 200, color: "blue" }) },
+              { title: "project name", currentSize: 0, sizePercent: 0, box: new bundle_index.Box({ vertical: false, size: 500, color: "red" }) },
+              { title: "outline", currentSize: 0, sizePercent: 0, box: new bundle_index.Box({ vertical: false, size: 500, color: "green" }) },
+              { title: "timeline", currentSize: 0, sizePercent: 0, box: new bundle_index.Box({ vertical: false, size: 500, color: "pink" }) }
             ]
           }),
           location: "left"
@@ -49286,7 +49266,7 @@ let panelManager = bundle_index.PanelManager.getInstance({
       size: 200
     },
     right: {
-      parent: base[1],
+      parent: base.childBox2,
       index: 1,
       size: 200
     }
